@@ -6,7 +6,7 @@
 
 ---
 
-# GRUNDIDEE
+# GRUNDidee
 
 ## Projektname
 **Multiverse of Choices**
@@ -45,7 +45,7 @@ Je nach Karma verändern sich:
 
 ---
 
-# MECHANIKEN
+# Mechaniken
 
 ## Gewinn- und Verlustbedingungen
 
@@ -113,7 +113,7 @@ Beispiele:
 - Fortschrittsspeicherung via LocalStorage  
 ---
 
-# ZIELGRUPPE
+# Zielgruppe
 
 ## Altersgruppe
 12–20 Jahre
