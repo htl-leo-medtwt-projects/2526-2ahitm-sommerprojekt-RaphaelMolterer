@@ -6,7 +6,7 @@
 
 ---
 
-# GRUNDidee
+# Grundidee
 
 ## Projektname
 **Multiverse of Choices**
