@@ -72,3 +72,31 @@ body {
     text-align: center;
     font-size: 1.75rem;
 }
+
+#title {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1% 4%;
+}
+
+h1 {
+    margin: 0;
+    color: white;
+    font-size: clamp(18px, 3vw, 36px);
+}
+
+#back-btn {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 8%;
+    width: auto;
+    cursor: pointer;
+}
+
+#back-btn:hover {
+    transform: scale(1.05);
+}
