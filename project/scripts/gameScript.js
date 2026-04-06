@@ -1,15 +1,15 @@
 let slides = [
     {
         img: "./images/Bild_1.png",
-        text: "Du bist ein Weltenwaechter..."
+        text: "Du bist ein Weltenwaechter. Deine Aufgabe ist es, das Gleichgewicht zwischen den Dimensionen zu bewahren. Wenn Chaos entsteht, bist du derjenige, der eingreift."
     },
     {
         img: "./images/Bild_2.png",
-        text: "Die Dimensionen sind durcheinander geraten..."
+        text: "Waehrend deiner Abwesenheit in einem Urlaub hat sich etwas veraendert. Viele Dimensionen sind von Ungerechtigkeit und Chaos erfuellt. Irgendetwas bringt das Gleichgewicht der Welten ins Wanken."
     },
     {
         img: "./images/Bild_3.png",
-        text: "Du musst die Dimensionen bereisen und helfen."
+        text: "Du musst die Dimensionen bereisen und helfen. Doch sei vorsichtig: Nicht jeder, der Hilfe will, ist wirklich gut."
     }
 ];
 
