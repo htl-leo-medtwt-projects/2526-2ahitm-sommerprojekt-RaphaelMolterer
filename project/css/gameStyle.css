@@ -40,3 +40,30 @@ body {
     align-items: center;
     gap: 2vw;
 }
+
+#text {
+    flex: 1;
+    padding: 2vh 6vw;
+    color: white;
+    font-size: 2rem;
+    background: url("../images/Background_Text_WoodenSIgn.jpg");
+    background-position: center;
+    background-repeat: cover;
+    background-repeat: no-repeat;
+}
+
+#next-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#next-btn img {
+    height: 30vh;
+    transition: transform 0.15s ease;
+}
+
+#next-btn:hover img {
+    transform: scale(1.15);
+}
