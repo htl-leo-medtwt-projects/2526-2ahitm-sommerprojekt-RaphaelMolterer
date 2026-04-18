@@ -46,10 +46,8 @@ body {
     padding: 2vh 6vw;
     color: white;
     font-size: 2rem;
-    background: url("../images/Background_Text_WoodenSIgn.jpg");
-    background-position: center;
-    background-repeat: cover;
-    background-repeat: no-repeat;
+    background: rgba(255, 255, 255, 0.8);
+    border: 3px solid black;
 }
 
 #next-btn {

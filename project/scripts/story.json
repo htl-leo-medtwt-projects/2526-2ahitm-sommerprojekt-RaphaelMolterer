@@ -1,0 +1,70 @@
+{
+    "player": {
+        "karma": 0,
+        "inventory": []
+    },
+    "start": {
+        "text": "Du landest in einem Wald, umgeben von hohen Bäumen und dem Zwitschern der Vögel. Vor dir liegt ein Pfad, der in zwei Richtungen führt.",
+        "background": "../game_images/background_forest.png",
+        "character": "../game_images/character_wegweiser.png",
+        "choices": [
+            {
+                "text": "Links (Tiefer in den Wald)",
+                "next": "dark_forest",
+                "gain_item": "donut"
+            },
+            {
+                "text": "Rechts (Raus aus den Wald)",
+                "next": "city"
+            }
+        ]
+    },
+    "dark_forest": {
+        "text": "'Hallo, ich bin Wirt, ich kenn dich gar nicht, aber wenn ich du wäre würde ich schenll aus diesem Wald raus, denn hier ist ein Monster. Was, du hast noch nicht von dem Monster gehört? Ist auch egal, renn so lange du noch kannst! Ich muss für meinen Bruder hier bleiben. Aber ich kann dir was mit auf dem Weg geben, hier.'*Du erhältst einen Donut*",
+        "background": "../game_images/background_dark_forest.png",
+        "character": "../game_images/character_Wirt.png",
+        "choices": [
+            {
+                "text": "Trotzdem im Wald weitergehen",
+                "next": "monster1",
+                "karma": -3
+            },
+            {
+                "text": "Schnell den Wald verlassen",
+                "next": "city"
+            }
+        ]
+    },
+    "city": {
+        "text": "Du kommst in eine sehr belebte Stadt mit einigen seltsamen Gestalten. Was möchtest du als erstest nach Bösen erkunden?",
+        "background": "../game_images/background_city.png",
+        "choices": [
+            {
+                "text": "Schule",
+                "next": "school"
+            },
+            {
+                "text": "Bibliothek",
+                "next": "library"
+            }
+        ]
+    },
+    "library": {
+        "text": "Du betrittst die Bibliothek und siehst einen hungrigen pinken Hasen, dieser stellt sich sofort vor: 'Hallo, ich bin Richard, meine Tochter Annaise hat mich hier her gebracht damit ich auch ein Buch lese, aber ich bin so hungrig... wenn ich doch nur nach Hause damit ich etwas essen könnte... Hast du etwas für mich das ich essen kann?'",
+        "background": "../game_images/background_library.png",
+        "character": "../game_images/character_old_man.png",
+        "choices": [    
+            {
+                "text": "Leider nicht *du verlässt wieder die Bibliothek und gehst weiter*",
+                "next": "school",
+                "karma": -2
+            },
+            {
+                "text": "Ja, hier hast du einen Donut *du gibst Richard den Donut*",
+                "next": "secret_room",
+                "karma": 2,
+                "required_item": "donut"
+            }
+        ]
+    }
+}
