@@ -25,7 +25,6 @@ function next() {
         document.getElementById("choices").style.display = "flex";
 
         showScene(currentScene);
-        return;
     }
     else {
         showSlide();
