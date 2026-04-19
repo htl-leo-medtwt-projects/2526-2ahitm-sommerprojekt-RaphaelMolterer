@@ -57,3 +57,5 @@ function showScene(scene) {
 }
 
 /*not used yet charaktere: jake, darwin, gumball, annaise, eiskönig, pb_uncle, pb_uncle_reveal, finn*/
+/*not used yet backgrounds: school, adventureTime_flatlands, regularShow_house, stevenUniverse_beach, desert, sewers, vulcan, hell_labyrinth, hell, water, jungle, ruins, castle*/
+/*not used yet items: burningSkull*/
