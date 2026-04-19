@@ -20,7 +20,12 @@ function next() {
     currentSlide++;
     if (currentSlide >= slides.length) {
         phase = "game";
-        document.getElementById("choices").style.display = "block";
+
+        document.getElementById("next-btn").style.display = "none";
+        document.getElementById("choices").style.display = "flex";
+
+        showScene(currentScene);
+        return;
     }
     else {
         showSlide();
@@ -46,3 +51,9 @@ fetch("./game.json")
         gameData = data;
         showSlide();
     });
+
+function showScene(scene) {
+    let sceneData = gameData[scene];
+}
+
+/*not used yet charaktere: jake, darwin, gumball, annaise, eiskönig, pb_uncle, pb_uncle_reveal, finn*/
