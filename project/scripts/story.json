@@ -52,7 +52,7 @@
     "library": {
         "text": "Du betrittst die Bibliothek und siehst einen hungrigen pinken Hasen, dieser stellt sich sofort vor: 'Hallo, ich bin Richard, meine Tochter Annaise hat mich hier her gebracht damit ich auch ein Buch lese, aber ich bin so hungrig... wenn ich doch nur nach Hause damit ich etwas essen könnte... Hast du etwas für mich das ich essen kann?'",
         "background": "../game_images/background_library.png",
-        "character": "../game_images/character_old_man.png",
+        "character": "../game_images/character_Richard.png",
         "choices": [    
             {
                 "text": "Leider nicht *du verlässt wieder die Bibliothek und gehst weiter*",
@@ -61,10 +61,22 @@
             },
             {
                 "text": "Ja, hier hast du einen Donut *du gibst Richard den Donut*",
-                "next": "secret_room",
+                "next": "richard_thanks",
                 "karma": 2,
                 "required_item": "donut"
             }
         ]
+    },
+    "richard_thanks": {
+        "text": "Richard dankt dir herzlich für den Donut und sagt: 'Das war sehr nett von dir! Ich fühle mich jetzt viel besser... Ich sollte jetzt schlafen gehen, viel Spaß dir noch!'",
+        "background": "../game_images/background_library.png",
+        "character": "../game_images/character_Richard.png",
+        "choices": [
+            {
+                "text": "Weiter in die Schule gehen",
+                "next": "school"
+            }
+        ]
     }
+
 }

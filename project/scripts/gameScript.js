@@ -13,14 +13,18 @@ let slides = [
     }
 ];
 
+let phase = "intro";
 let currentSlide = 0;
 
 function next() {
     currentSlide++;
-    if (currentSlide >= slides.length){ 
-        currentSlide = 0;
+    if (currentSlide >= slides.length) {
+        phase = "game";
+        document.getElementById("choices").style.display = "block";
     }
-    showSlide();
+    else {
+        showSlide();
+    }
 }
 
 function showSlide() {
@@ -32,3 +36,13 @@ function showSlide() {
 }
 
 showSlide();
+
+let gameData;
+let currentScene = "start";
+
+fetch("./game.json")
+    .then(res => res.json())
+    .then(data => {
+        gameData = data;
+        showSlide();
+    });
