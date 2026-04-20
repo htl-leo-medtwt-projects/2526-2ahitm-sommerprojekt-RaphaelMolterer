@@ -68,7 +68,7 @@ let gameData = {
     "dark_forest": {
         "text": "'Hallo, ich bin Wirt, ich kenn dich gar nicht, aber wenn ich du waere wuerde ich schnell aus diesem Wald raus, denn hier ist ein Monster. Was, du hast noch nicht von dem Monster gehoert? Ist auch egal, renn so lange du noch kannst! Ich muss fuer meinen Bruder hier bleiben. Aber ich kann dir was mit auf dem Weg geben, hier.'*Du erhaelst einen Donut*",
         "background": "./game_images/background_dark_forest.jpg",
-        "character": "./game_images/character_Wirt.png",
+        "character": "./game_images/character_btgw_Wirt.png",
         "choices": [
             {
                 "text": "Trotzdem im Wald weitergehen",
@@ -98,7 +98,7 @@ let gameData = {
     "library": {
         "text": "Du betrittst die Bibliothek und siehst einen hungrigen pinken Hasen, dieser stellt sich sofort vor: 'Hallo, ich bin Richard, meine Tochter Annaise hat mich hier her gebracht damit ich auch ein Buch lese, aber ich bin so hungrig... wenn ich doch nur nach Hause damit ich etwas essen koennte... Hast du etwas fuer mich das ich essen kann?'",
         "background": "./game_images/background_library.jpg",
-        "character": "./game_images/character_Richard.png",
+        "character": "./game_images/character_gb_Richard.png",
         "choices": [
             {
                 "text": "Leider nicht *du verlaesst wieder die Bibliothek und gehst weiter*",
@@ -116,7 +116,7 @@ let gameData = {
     "richard_thanks": {
         "text": "Richard dankt dir herzlich fuer den Donut und sagt: 'Das war sehr nett von dir! Ich fuehle mich jetzt viel besser... Ich sollte jetzt schlafen gehen, viel Spass dir noch!'",
         "background": "./game_images/background_library.jpg",
-        "character": "./game_images/character_Richard.png",
+        "character": "./game_images/character_gb_Richard.png",
         "choices": [
             {
                 "text": "Weiter in die Schule gehen",
@@ -186,6 +186,6 @@ function showScene(scene) {
     }
 }
 
-/*not used yet charaktere: jake, darwin, gumball, annaise, eiskönig, pb_uncle, pb_uncle_reveal, finn*/
+/*not used yet charaktere: jake, darwin, gumball, annaise, eiskönig, pb_uncle, pb_uncle_reveal, finn, blossom, bubbles, buttercup, mojo, him, ashi, jack*/
 /*not used yet backgrounds: school, adventureTime_flatlands, regularShow_house, stevenUniverse_beach, desert, sewers, vulcan, hell_labyrinth, hell, water, jungle, ruins, castle, factory, laboratory, space_station, fair*/
-/*not used yet items: burningSkull, infinity_gauntlet, omnitrix, enchirodon, gumball_luckyHat, weBareBears_Miki-chan*/
+/*not used yet items: burningSkull, infinity_gauntlet, omnitrix, enchirodon, gumball_luckyHat, weBareBears_Miki-chan, chemicalX*/
