@@ -93,23 +93,23 @@ body {
     height: 100vh;
     overflow: hidden;
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
 #game-character {
     position: absolute;
-    bottom: 18%;
+    bottom: 25%;
     left: 50%;
     transform: translateX(-50%);
-    max-height: 95vh;
+    max-height: 100vh;
     width: auto;
     pointer-events: none;
 }
 
 #dialog {
     position: absolute;
-    bottom: 18%;
+    bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;

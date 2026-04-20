@@ -101,7 +101,7 @@ let gameData = {
         "character": "./game_images/character_Richard.png",
         "choices": [
             {
-                "text": "Leider nicht *du verlässt wieder die Bibliothek und gehst weiter*",
+                "text": "Leider nicht *du verlaesst wieder die Bibliothek und gehst weiter*",
                 "next": "school",
                 "karma": -2
             },
@@ -163,11 +163,7 @@ function showScene(scene) {
     if (sceneData.background) {
         let backgroundUrl = `url(${sceneData.background})`;
         gameContainer.style.backgroundImage = backgroundUrl;
-        document.body.style.backgroundImage = backgroundUrl;
-        document.body.style.backgroundSize = "cover";
-    } 
-    else {
-        gameContainer.style.backgroundImage = "none";
+        document.body.style.backgroundImage = "none";
         document.body.style.backgroundImage = "none";
     }
 
