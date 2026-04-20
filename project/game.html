@@ -11,18 +11,26 @@
 </head>
 
 <body>
-    <div id="frame">
-        <div id="image" class="image"></div>
-        <img id="character" style="display:none;">
+    <div id="intro-container">
+        <div id="frame">
+            <div id="image" class="image"></div>
 
-        <div id="bottom-ui">
-            <div id="text" class="text"></div>
-            <div id="choices" style="display:none;"></div>
-            <div id="next-btn" onclick="next()">
-                <img src="./images/Button_Weiter.png" alt="WEITER">
+            <div id="bottom-ui">
+                <div id="text" class="text"></div>
+                <div id="choices" style="display:none;"></div>
+                <div id="next-btn" onclick="next()">
+                    <img src="./images/Button_Weiter.png" alt="WEITER">
+                </div>
             </div>
-
         </div>
+    </div>
+
+    <div id="game-container">
+        <img id="game-character" style="display:none;" alt="Character">
+        <div id="dialog">
+            <p id="dialog-text"></p>
+        </div>
+        <div id="game-choices"></div>
     </div>
 </body>
 
