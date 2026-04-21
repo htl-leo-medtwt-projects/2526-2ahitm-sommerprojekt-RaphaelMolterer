@@ -148,12 +148,14 @@ function handleChoice(next, karma, gainItem, requiredItem) {
 
 function showScene(scene) {
     let sceneData = gameData[scene];
-    if (!sceneData) return;
+    if (!sceneData) {
+        return;
+    }
 
     document.getElementById("intro-container").style.display = "none";
 
     let gameContainer = document.getElementById("game-container");
-    
+
     gameContainer.style.display = "flex";
 
     let gameCharacter = document.getElementById("game-character");
@@ -170,7 +172,7 @@ function showScene(scene) {
     if (sceneData.character) {
         gameCharacter.src = sceneData.character;
         gameCharacter.style.display = "block";
-    } 
+    }
     else {
         gameCharacter.style.display = "none";
     }
@@ -178,7 +180,7 @@ function showScene(scene) {
     dialogText.innerText = sceneData.text;
 
     choicesDiv.innerHTML = "";
-    
+
     for (let i = 0; i < sceneData.choices.length; i++) {
         let choice = sceneData.choices[i];
         let btnHtml = `<button onclick="handleChoice('${choice.next}', ${choice.karma || 0}, '${choice.gain_item || ''}', '${choice.required_item || ''}')">${choice.text}</button>`;
@@ -186,6 +188,6 @@ function showScene(scene) {
     }
 }
 
-/*not used yet charaktere: jake, darwin, gumball, annaise, eiskönig, pb_uncle, pb_uncle_reveal, finn, blossom, bubbles, buttercup, mojo, him, ashi, jack*/
+/*not used yet charaktere: jake, darwin, gumball, annaise, eiskönig, pb_uncle, pb_uncle_reveal, finn, blossom, bubbles, buttercup, mojo, him, ashi, jack, orange, farmer*/
 /*not used yet backgrounds: school, adventureTime_flatlands, regularShow_house, stevenUniverse_beach, desert, sewers, vulcan, hell_labyrinth, hell, water, jungle, ruins, castle, factory, laboratory, space_station, fair*/
 /*not used yet items: burningSkull, infinity_gauntlet, omnitrix, enchirodon, gumball_luckyHat, weBareBears_Miki-chan, chemicalX*/
