@@ -1,15 +1,27 @@
 let slides = [
     {
         img: "./images/Bild_1.png",
-        text: "Du bist ein Weltenwaechter. Deine Aufgabe ist es, das Gleichgewicht zwischen den Dimensionen zu bewahren. Wenn Chaos entsteht, bist du derjenige, der eingreift."
+        text: "Vor tausenden Jahren erschufen die ersten Weltenwaechter die Portale zwischen den Dimensionen. Ihre Aufgabe war es, Frieden zwischen allen Universen zu bewahren."
     },
     {
         img: "./images/Bild_2.png",
-        text: "Waehrend deiner Abwesenheit in einem Urlaub hat sich etwas veraendert. Viele Dimensionen sind von Ungerechtigkeit und Chaos erfuellt. Irgendetwas bringt das Gleichgewicht der Welten ins Wanken."
+        text: "Doch jetzt kollidieren die Welten. Helden verschwinden. Boesewichte werden staerker. Ganze Realitaeten beginnen zu zerfallen."
     },
     {
         img: "./images/Bild_3.png",
-        text: "Du musst die Dimensionen bereisen und helfen. Doch sei vorsichtig: Nicht jeder, der Hilfe will, ist wirklich gut."
+        text: "Der legendaere Nullkern ist erwacht. Eine uralte Macht zwischen allen Universen, die Raum und Zeit verschlingt."
+    },
+    {
+        img: "./images/Bild_4.png",
+        text: "Du bist der letzte aktive Weltenwaechter. Nur du kannst durch die Dimensionen reisen und die Splitter des Gleichgewichts finden."
+    },
+    {
+        img: "./images/Bild_5.png",
+        text: "Doch Vorsicht... nicht jeder Held sagt die Wahrheit. Manche Verbuendete sind gefaehrlicher als die Monster selbst."
+    },
+    {
+        img: "./images/Bild_6.png",
+        text: "Deine Entscheidungen veraendern alles. Jeder Weg ist endgueltig. Jede Tat beeinflusst dein Karma. Und dein Karma bestimmt das Schicksal aller Welten."
     }
 ];
 
@@ -47,84 +59,472 @@ showSlide();
 let gameData = {
     "player": {
         "karma": 0,
-        "inventory": []
+        "inventory": [],
+        "visited": []
     },
+
+    // START
+
     "start": {
-        "text": "Du landest in einem Wald, umgeben von hohen Baeumen und dem Zwitschern der Voegel. Vor dir liegt ein Pfad, der in zwei Richtungen fuehrt.",
-        "background": "./game_images/background_forest.jpg",
-        "character": "./game_images/character_wegweiser.png",
+        "text": "Du wachst in einer zerfallenen Zwischenwelt auf. Riesige Portale fuehren in verschiedene Cartoon-Universen. Eine Stimme hallt durch die Leere: 'Weltenwaechter... waehle deine Wege mit Bedacht. Jede Entscheidung ist permanent.'",
+        "background": "./game_images/background_void.jpg",
         "choices": [
             {
-                "text": "Links (Tiefer in den Wald)",
-                "next": "dark_forest",
-                "gain_item": "donut"
+                "text": "Das dunkle Waldportal betreten",
+                "next": "forest_world"
             },
             {
-                "text": "Rechts (Raus aus den Wald)",
-                "next": "city"
+                "text": "Das futuristische Laborportal betreten",
+                "next": "dexter_lab"
+            },
+            {
+                "text": "Das chaotische Cartoon-Stadt Portal betreten",
+                "next": "elmore_city"
             }
         ]
     },
-    "dark_forest": {
-        "text": "'Hallo, ich bin Wirt, ich kenn dich gar nicht, aber wenn ich du waere wuerde ich schnell aus diesem Wald raus, denn hier ist ein Monster. Was, du hast noch nicht von dem Monster gehoert? Ist auch egal, renn so lange du noch kannst! Ich muss fuer meinen Bruder hier bleiben. Aber ich kann dir was mit auf dem Weg geben, hier.'*Du erhaelst einen Donut*",
+
+    // OVER THE GARDEN WALL
+
+    "forest_world": {
+        "text": "Du betrittst einen dunklen Wald. Wirt sitzt an einem Baumstumpf und sieht nervoes aus. Courage versteckt sich zitternd hinter ihm.",
         "background": "./game_images/background_dark_forest.jpg",
         "character": "./game_images/character_btgw_Wirt.png",
         "choices": [
             {
-                "text": "Trotzdem im Wald weitergehen",
-                "next": "monster1",
-                "karma": -3
+                "text": "Mit Wirt reden",
+                "next": "wirt_warning",
+                "karma": 1
             },
             {
-                "text": "Schnell den Wald verlassen",
-                "next": "city"
-            }
-        ]
-    },
-    "city": {
-        "text": "Du kommst in eine sehr belebte Stadt mit einigen seltsamen Gestalten. Was moechtest du als erstes nach Boesen erkunden?",
-        "background": "./game_images/background_city.jpg",
-        "choices": [
-            {
-                "text": "Schule",
-                "next": "school"
-            },
-            {
-                "text": "Bibliothek",
-                "next": "library"
-            }
-        ]
-    },
-    "library": {
-        "text": "Du betrittst die Bibliothek und siehst einen hungrigen pinken Hasen, dieser stellt sich sofort vor: 'Hallo, ich bin Richard, meine Tochter Annaise hat mich hier her gebracht damit ich auch ein Buch lese, aber ich bin so hungrig... wenn ich doch nur nach Hause damit ich etwas essen koennte... Hast du etwas fuer mich das ich essen kann?'",
-        "background": "./game_images/background_library.jpg",
-        "character": "./game_images/character_gb_Richard.png",
-        "choices": [
-            {
-                "text": "Leider nicht *du verlaesst wieder die Bibliothek und gehst weiter*",
-                "next": "school",
+                "text": "Alleine tiefer in den Wald gehen",
+                "next": "beast_path",
                 "karma": -2
-            },
-            {
-                "text": "Ja, hier hast du einen Donut *du gibst Richard den Donut*",
-                "next": "richard_thanks",
-                "karma": 2,
-                "required_item": "donut"
             }
         ]
     },
-    "richard_thanks": {
-        "text": "Richard dankt dir herzlich fuer den Donut und sagt: 'Das war sehr nett von dir! Ich fuehle mich jetzt viel besser... Ich sollte jetzt schlafen gehen, viel Spass dir noch!'",
-        "background": "./game_images/background_library.jpg",
-        "character": "./game_images/character_gb_Richard.png",
+
+    "wirt_warning": {
+        "text": "'Das Beast kontrolliert den Wald...' fluestert Wirt. Courage gibt dir eine Taschenlampe.",
+        "background": "./game_images/background_dark_path.jpg",
+        "character": "./game_images/character_courage.png",
         "choices": [
             {
-                "text": "Weiter in die Schule gehen",
-                "next": "school"
+                "text": "Dem Licht folgen",
+                "next": "hidden_cabin",
+                "gain_item": "taschenlampe"
+            },
+            {
+                "text": "Wirt alleine lassen",
+                "next": "beast_path",
+                "karma": -2
             }
         ]
+    },
+
+    "hidden_cabin": {
+        "text": "In einer alten Huette sitzt Billy aus Abenteuerzeit. Er wirkt freundlich. Doch seine Augen leuchten kurz gruen.",
+        "background": "./game_images/background_cabin.jpg",
+        "character": "./game_images/character_billy.png",
+        "choices": [
+            {
+                "text": "Billy vertrauen",
+                "next": "forest_exit",
+                "karma": 1
+            },
+            {
+                "text": "Billy misstrauen",
+                "next": "lich_hint",
+                "karma": 3
+            }
+        ]
+    },
+
+    "lich_hint": {
+        "text": "Du bemerkst ein verborgenes Buch voller dunkler Symbole. Auf einer Seite steht: 'Der Lich nimmt viele Gesichter an.'",
+        "background": "./game_images/background_secret_room.jpg",
+        "choices": [
+            {
+                "text": "Das Buch mitnehmen",
+                "next": "forest_exit",
+                "gain_item": "dunkles_buch"
+            }
+        ]
+    },
+
+    "beast_path": {
+        "text": "Das Beast erscheint aus dem Nebel. Seine Augen starren direkt in deine Seele.",
+        "background": "./game_images/background_beast.jpg",
+        "character": "./game_images/character_beast.png",
+        "choices": [
+            {
+                "text": "Kaempfen",
+                "next": "forest_escape",
+                "karma": -1
+            },
+            {
+                "text": "Fliehen",
+                "next": "forest_escape"
+            }
+        ]
+    },
+
+    "forest_escape": {
+        "text": "Du entkommst knapp aus dem Wald und erreichst ein neues Portal.",
+        "background": "./game_images/background_escape.jpg",
+        "choices": [
+            {
+                "text": "Weiterreisen",
+                "next": "townsville"
+            }
+        ]
+    },
+
+    "forest_exit": {
+        "text": "Ein Portal erscheint zwischen den Baeumen.",
+        "background": "./game_images/background_portal.jpg",
+        "choices": [
+            {
+                "text": "Nach Townsville reisen",
+                "next": "townsville"
+            }
+        ]
+    },
+
+    // POWERPUFF GIRLS
+
+    "townsville": {
+        "text": "Townsville steht unter Angriff. Mojo Jojo kaempft gegen riesige Schattenmonster waehrend Blossom Befehle schreit.",
+        "background": "./game_images/background_townsville.jpg",
+        "character": "./game_images/character_powerpuffs.png",
+        "choices": [
+            {
+                "text": "Den Powerpuff Girls helfen",
+                "next": "chemical_x_lab",
+                "karma": 3
+            },
+            {
+                "text": "Mojo Jojo helfen",
+                "next": "mojo_alliance",
+                "karma": -3
+            }
+        ]
+    },
+
+    "chemical_x_lab": {
+        "text": "Professor Utonium erklaert dir, dass Chemical X gestohlen wurde. Bubbles weint weil Octi verschwunden ist.",
+        "background": "./game_images/background_powerpuff_lab.jpg",
+        "character": "./game_images/character_bubbles.png",
+        "choices": [
+            {
+                "text": "Octi suchen",
+                "next": "octi_found",
+                "karma": 2
+            },
+            {
+                "text": "Direkt den Dieb jagen",
+                "next": "him_dimension"
+            }
+        ]
+    },
+
+    "octi_found": {
+        "text": "Du findest Octi zwischen Truemmern. Bubbles umarmt dich gluecklich.",
+        "background": "./game_images/background_ruins.jpg",
+        "choices": [
+            {
+                "text": "Octi zurueckgeben",
+                "next": "him_dimension",
+                "gain_item": "octi",
+                "karma": 3
+            }
+        ]
+    },
+
+    "mojo_alliance": {
+        "text": "Mojo Jojo fuehrt dich in sein Labor. 'ICH WEISS WER HINTER DEM NULLKERN STECKT!'",
+        "background": "./game_images/background_mojo_lab.jpg",
+        "character": "./game_images/character_mojojojo.png",
+        "choices": [
+            {
+                "text": "Mojo glauben",
+                "next": "him_dimension"
+            },
+            {
+                "text": "Mojo verraten",
+                "next": "chemical_x_steal",
+                "karma": -2
+            }
+        ]
+    },
+
+    "chemical_x_steal": {
+        "text": "Du stiehlst heimlich Chemical X aus dem Labor.",
+        "background": "./game_images/background_lab_storage.jpg",
+        "choices": [
+            {
+                "text": "Chemical X nehmen",
+                "next": "him_dimension",
+                "gain_item": "chemical_x"
+            }
+        ]
+    },
+
+    "him_dimension": {
+        "text": "HIM erscheint aus einem roten Portal. Seine Stimme hallt durch die Dimension.",
+        "background": "./game_images/background_him.jpg",
+        "character": "./game_images/character_him.png",
+        "choices": [
+            {
+                "text": "Gegen HIM kaempfen",
+                "next": "dexter_lab",
+                "karma": 4
+            },
+            {
+                "text": "Mit HIM einen Deal machen",
+                "next": "evil_mark",
+                "karma": -5
+            }
+        ]
+    },
+
+    "evil_mark": {
+        "text": "HIM markiert deine Hand mit dunkler Energie.",
+        "background": "./game_images/background_dark_magic.jpg",
+        "choices": [
+            {
+                "text": "Weitergehen",
+                "next": "dexter_lab"
+            }
+        ]
+    },
+
+    // DEXTER
+
+    "dexter_lab": {
+        "text": "Dexter und Mandark liefern sich einen gigantischen Kampf mit Robotern.",
+        "background": "./game_images/background_dexter_lab.jpg",
+        "character": "./game_images/character_dexter.png",
+        "choices": [
+            {
+                "text": "Dexter helfen",
+                "next": "portal_machine",
+                "karma": 2
+            },
+            {
+                "text": "Mandark helfen",
+                "next": "dark_science",
+                "karma": -3
+            }
+        ]
+    },
+
+    "portal_machine": {
+        "text": "Dexter zeigt dir eine Maschine die den Nullkern orten kann.",
+        "background": "./game_images/background_machine.jpg",
+        "choices": [
+            {
+                "text": "Maschine aktivieren",
+                "next": "ben10_world",
+                "gain_item": "portal_scanner"
+            }
+        ]
+    },
+
+    "dark_science": {
+        "text": "Mandark gibt dir experimentelle Waffen.",
+        "background": "./game_images/background_dark_lab.jpg",
+        "choices": [
+            {
+                "text": "Waffen nehmen",
+                "next": "ben10_world",
+                "gain_item": "laserkanone"
+            }
+        ]
+    },
+
+    // BEN 10
+
+    "ben10_world": {
+        "text": "Ben Tennyson kaempft gegen Dr. Animo und mutierte Monster.",
+        "background": "./game_images/background_ben10_city.jpg",
+        "character": "./game_images/character_ben10.png",
+        "choices": [
+            {
+                "text": "Ben helfen",
+                "next": "omnitrix_scene",
+                "karma": 3
+            },
+            {
+                "text": "Dr. Animo helfen",
+                "next": "mutant_route",
+                "karma": -4
+            }
+        ]
+    },
+
+    "omnitrix_scene": {
+        "text": "Ben vertraut dir den Omnitrix fuer eine Mission an.",
+        "background": "./game_images/background_omnitrix.jpg",
+        "choices": [
+            {
+                "text": "Omnitrix erhalten",
+                "next": "teen_titans",
+                "gain_item": "omnitrix"
+            }
+        ]
+    },
+
+    "mutant_route": {
+        "text": "Dr. Animo verwandelt mehrere Tiere in Monster.",
+        "background": "./game_images/background_mutants.jpg",
+        "choices": [
+            {
+                "text": "Die Mutation akzeptieren",
+                "next": "teen_titans",
+                "karma": -2
+            }
+        ]
+    },
+
+    // TEEN TITANS
+
+    "teen_titans": {
+        "text": "Robin und die Teen Titans verteidigen ihren Turm gegen Deathstroke.",
+        "background": "./game_images/background_titans_tower.jpg",
+        "character": "./game_images/character_robin.png",
+        "choices": [
+            {
+                "text": "Den Titans helfen",
+                "next": "raven_book",
+                "karma": 3
+            },
+            {
+                "text": "Mit Deathstroke arbeiten",
+                "next": "deathstroke_route",
+                "karma": -5
+            }
+        ]
+    },
+
+    "raven_book": {
+        "text": "Raven uebergibt dir ein verbotenes Zauberbuch.",
+        "background": "./game_images/background_magic_room.jpg",
+        "character": "./game_images/character_raven.png",
+        "choices": [
+            {
+                "text": "Zauberbuch nehmen",
+                "next": "adventure_time",
+                "gain_item": "zauberbuch_von_raven"
+            }
+        ]
+    },
+
+    "deathstroke_route": {
+        "text": "Deathstroke bietet dir Macht gegen Loyalitaet an.",
+        "background": "./game_images/background_dark_city.jpg",
+        "choices": [
+            {
+                "text": "Deal akzeptieren",
+                "next": "adventure_time",
+                "gain_item": "dark_blade"
+            }
+        ]
+    },
+
+    // ADVENTURE TIME
+
+    "adventure_time": {
+        "text": "Finn und Jake reisen mit dir durch die zerstoerten Laender von Ooo. Billy fuehrt angeblich die letzten Helden an.",
+        "background": "./game_images/background_ooo.jpg",
+        "character": "./game_images/character_finn_jake.png",
+        "choices": [
+            {
+                "text": "Billy vertrauen",
+                "next": "lich_reveal"
+            },
+            {
+                "text": "Billy hinterfragen",
+                "next": "secret_truth",
+                "karma": 4
+            }
+        ]
+    },
+
+    "secret_truth": {
+        "text": "Marceline zeigt dir versteckte Aufzeichnungen. Billy wurde vor langer Zeit vom Lich ersetzt.",
+        "background": "./game_images/background_cave.jpg",
+        "character": "./game_images/character_marceline.png",
+        "choices": [
+            {
+                "text": "Finn warnen",
+                "next": "lich_reveal",
+                "karma": 3
+            }
+        ]
+    },
+
+    "lich_reveal": {
+        "text": "Billy beginnt zu lachen. Seine Haut zerfaellt. Der Lich erscheint in seiner wahren Form.",
+        "background": "./game_images/background_lich.jpg",
+        "character": "./game_images/character_lich.png",
+        "choices": [
+            {
+                "text": "Den Lich bekaempfen",
+                "next": "final_gate",
+                "karma": 6
+            },
+            {
+                "text": "Dem Lich beitreten",
+                "next": "final_gate",
+                "karma": -10
+            }
+        ]
+    },
+
+    // FINAL
+
+    "final_gate": {
+        "text": "Du erreichst den Nullkern. Alle deine Entscheidungen bestimmen nun das Schicksal des Multiversums.",
+        "background": "./game_images/background_final_gate.jpg",
+        "choices": [
+            {
+                "text": "Den Nullkern betreten",
+                "next": "karma_check"
+            }
+        ]
+    },
+
+    // ENDINGS
+
+    "ending_good": {
+        "text": "Du wirst zum legendaeren Helden aller Universen. Finn, Batman, Blossom, Samurai Jack und viele andere feiern deinen Sieg. Die Welten werden gerettet.",
+        "background": "./game_images/background_good_ending.jpg",
+        "character": "./game_images/character_heroes.png",
+        "choices": []
+    },
+
+    "ending_neutral": {
+        "text": "Der Nullkern wird versiegelt, doch viele Welten bleiben beschaedigt. Manche Helden vertrauen dir noch immer nicht.",
+        "background": "./game_images/background_neutral_ending.jpg",
+        "choices": []
+    },
+
+    "ending_chaos": {
+        "text": "Die Realitaet zerbricht teilweise. Portale bleiben offen und Chaos breitet sich weiter aus.",
+        "background": "./game_images/background_chaos.jpg",
+        "character": "./game_images/character_billcipher.png",
+        "choices": []
+    },
+
+    "ending_evil": {
+        "text": "Gemeinsam mit dem Lich, HIM, Aku und Darkseid kontrollierst du die zerfallenden Dimensionen.",
+        "background": "./game_images/background_evil_ending.jpg",
+        "character": "./game_images/character_villains.png",
+        "choices": []
     }
-}; 
+};
+
 
 let currentScene = "start";
 
