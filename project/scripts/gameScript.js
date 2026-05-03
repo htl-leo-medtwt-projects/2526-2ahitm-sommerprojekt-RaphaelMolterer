@@ -68,7 +68,7 @@ let gameData = {
         "choices": [
             { "text": "Adventure Time", "next": "c1_ooa_start" },
             { "text": "Gumball", "next": "c1_gb_start" },
-            { "text": "Dexter", "next": "c1_dx_start" },
+            { "text": "Dexters Labor", "next": "c1_dx_start" },
             { "text": "Powerpuff Girls", "next": "c1_ppg_start" },
             { "text": "Gravity Falls", "next": "c1_gf_start" }
         ]
@@ -76,6 +76,8 @@ let gameData = {
 
     "c1_ooa_start": {
         "text": "Der Nexus stabilisiert fünf getrennte Cartoon-Realitäten. Ooo wirkt instabil, als würde es zwischen Versionen wechseln. Finn, Jake und Marceline sind da – aber etwas stimmt mit ihnen nicht.",
+        "background": "./game_images/background_at_ooo.png",
+        "character": "./game_images/character_question.png",
         "choices": [
             { "text": "Finn folgen", "next": "at_1", "karma": 1 },
             { "text": "Jake folgen", "next": "at_2" },
@@ -86,6 +88,8 @@ let gameData = {
 
     "at_1": {
         "text": "Finn wirkt angespannt. 'Ich hatte schon Träume von dir... aber du warst anders darin.'",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_finn.png",
         "choices": [
             { "text": "Nach Details fragen", "next": "at_5" },
             { "text": "Ignorieren", "next": "at_6", "karma": -1 },
@@ -95,6 +99,8 @@ let gameData = {
 
     "at_2": {
         "text": "Jake: 'Die Realität riecht heute wie ein Fehler.'",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_jake.png",
         "choices": [
             { "text": "Vertrauen", "next": "at_7", "karma": 2 },
             { "text": "Weggehen", "next": "at_6", "karma": -1 },
@@ -104,6 +110,8 @@ let gameData = {
 
     "at_3": {
         "text": "Marceline spielt eine schiefe Melodie. 'Das hier ist nicht Ooo wie es sein sollte.'",
+        "background": "./game_images/background_at_cave.png",
+        "character": "./game_images/character_at_marceline.png",
         "choices": [
             { "text": "Zuhören", "next": "at_9", "karma": 1 },
             { "text": "Gehen", "next": "at_6", "karma": -1 },
@@ -1293,11 +1301,11 @@ let gameData = {
     "c2_start": {
         "text": "Der Nexus öffnet sich vollständig. Die fünf ersten Welten verschwinden hinter dir, doch neue Signale erscheinen sofort. Einige Dimensionen kollidieren bereits miteinander. Stimmen, Erinnerungen und ganze Orte werden vermischt. Eine unbekannte Entität beobachtet jede deiner Entscheidungen.",
         "choices": [
-            { "text": "Teen Titans Dimension betreten", "next": "c2_tt_start" },
-            { "text": "Ben 10 Dimension betreten", "next": "c2_b10_start" },
-            { "text": "Samurai Jack Dimension betreten", "next": "c2_sj_start" },
-            { "text": "Regular Show Dimension betreten", "next": "c2_rs_start" },
-            { "text": "Ninjago Dimension betreten", "next": "c2_nj_start" }
+            { "text": "Teen Titans", "next": "c2_tt_start" },
+            { "text": "Ben 10", "next": "c2_b10_start" },
+            { "text": "Samurai Jack", "next": "c2_sj_start" },
+            { "text": "Regular Show", "next": "c2_rs_start" },
+            { "text": "Ninjago", "next": "c2_nj_start" }
         ]
     },
 
