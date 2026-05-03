@@ -124,7 +124,7 @@ let gameData = {
             }
         ]
     }
-};
+}; 
 
 let currentScene = "start";
 
