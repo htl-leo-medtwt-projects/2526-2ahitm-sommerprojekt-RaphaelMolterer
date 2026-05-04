@@ -1133,244 +1133,402 @@ let gameData = {
     },
 
     "c1_gf_start": {
-        "text": "Gravity Falls fuehlt sich heute falsch an – als haette jemand die Realitaet leicht verschoben. Schilder wiederholen sich, der Wald wirkt tiefer als sonst, und das Mystery Shack knarzt, obwohl kein Wind geht. Dipper haelt das Journal fest. 'Das passiert normalerweise nur, wenn etwas das Muster stoert.'",
+        "text": "Mitten in der Nacht beginnt der Mystery Shack gleichzeitig alle Radiosender in Gravity Falls zu empfangen. Alte Kinderlieder laufen rückwärts, Glühbirnen flackern in Symbolmustern und draußen tauchen plötzlich Bäume auf, die gestern noch nicht existierten. Dipper steht mit Journal 3 vor einer Wand voller neuer Zeichen. Mabel hat bereits mehreren der Bäume Namen gegeben.",
         "choices": [
-            { "text": "Dipper folgen", "next": "gf_1", "karma": 1 },
-            { "text": "Mabel helfen", "next": "gf_2", "karma": 2 },
-            { "text": "Mystery Shack untersuchen", "next": "gf_3" }
+            { "text": "Mit Dipper die Symbole untersuchen", "next": "gf_1", "karma": 2 },
+            { "text": "Mabel bei den Bäumen helfen", "next": "gf_2" },
+            { "text": "Den Radiosignalen folgen", "next": "gf_3", "karma": -1 },
+            { "text": "Stan misstrauisch beobachten", "next": "gf_4" }
         ]
     },
 
     "gf_1": {
-        "text": "Dipper schlaegt das Journal auf. Mehrere Seiten ueber 'anormale Risse in der Realitaet' wurden teilweise geloescht.",
+        "text": "Dipper entdeckt, dass die neuen Symbole nicht im Journal stehen. Einige verändern ihre Form, sobald man sie direkt ansieht.",
         "choices": [
-            { "text": "Seiten suchen", "next": "gf_4", "gain_item": "journal_page" },
-            { "text": "Ignorieren", "next": "gf_5", "karma": -1 }
+            { "text": "Die Symbole abzeichnen", "next": "gf_5", "gain_item": "cipher_sketches" },
+            { "text": "Ein Symbol berühren", "next": "gf_6", "karma": -2 },
+            { "text": "Ford suchen", "next": "gf_7" }
         ]
     },
 
     "gf_2": {
-        "text": "Mabel zeigt dir einen Pullover, der ploetzlich Symbole zeigt, die vorher nicht da waren. 'Das ist irgendwie gruselig, aber auch irgendwie cool?'",
+        "text": "Mabel zeigt dir einen Baum mit Pullovermustern in der Rinde. Darunter liegen dutzende verlorene Gegenstände aus Gravity Falls.",
         "choices": [
-            { "text": "Untersuchen", "next": "gf_4", "karma": 2 },
-            { "text": "Ablehnen", "next": "gf_5" }
+            { "text": "Die Gegenstände durchsuchen", "next": "gf_8" },
+            { "text": "Den Baum fällen", "next": "gf_9", "karma": -4 },
+            { "text": "Mabels Theorie anhören", "next": "gf_10", "karma": 1 }
         ]
     },
 
     "gf_3": {
-        "text": "Im Keller des Shack findest du Ford’s alte Geraete. Eines davon laeuft noch… obwohl es eigentlich ausgeschaltet sein sollte.",
+        "text": "Die Radiosignale führen dich tief in den Wald zu einer Lichtung voller alter Fernseher. Alle zeigen dieselbe Aufnahme: den Mystery Shack — aber leer und verlassen.",
         "choices": [
-            { "text": "Geraet aktivieren", "next": "gf_6", "gain_item": "machine_core" },
-            { "text": "Finger weg", "next": "gf_5" }
+            { "text": "Einen Fernseher einschalten", "next": "gf_11" },
+            { "text": "Die Kabel verfolgen", "next": "gf_12" },
+            { "text": "Zurücklaufen", "next": "gf_7", "karma": 1 }
         ]
     },
 
     "gf_4": {
-        "text": "Dipper zeigt auf den Wald. Alte Warnsymbole tauchen in den Baeumen auf – sie scheinen frisch eingebrannt.",
+        "text": "Stan versteckt hektisch mehrere Kisten im Keller des Mystery Shack. Auf einer steht: 'NICHT ÖFFNEN WENN DER WALD ATMET.'",
         "choices": [
-            { "text": "Symbole analysieren", "next": "gf_7", "karma": 2 },
-            { "text": "Ignorieren", "next": "gf_8", "karma": -1 }
+            { "text": "Die Kiste öffnen", "next": "gf_13" },
+            { "text": "Stan direkt fragen", "next": "gf_14" },
+            { "text": "Stan heimlich folgen", "next": "gf_15", "karma": -1 }
         ]
     },
 
     "gf_5": {
-        "text": "Fuer einen Moment wird alles still. Selbst der Wind stoppt. Dann ist es wieder normal – zu normal.",
+        "text": "Die Zeichnungen verändern sich im Notizbuch von selbst. Dipper erkennt plötzlich versteckte Koordinaten im Wald.",
         "choices": [
-            { "text": "Weiter", "next": "gf_8" }
+            { "text": "Den Koordinaten folgen", "next": "gf_16" },
+            { "text": "Die Seiten verbrennen", "next": "gf_17", "karma": -2 },
+            { "text": "Ford informieren", "next": "gf_7", "karma": 2 }
         ]
     },
 
     "gf_6": {
-        "text": "Das Geraet aktiviert sich und spielt eine Nachricht von Ford ab: 'Wenn das hier laeuft, hat Bill wieder begonnen, durch Traeume zu greifen.'",
+        "text": "Das Symbol bewegt sich unter deiner Haut weiter und verschwindet erst nach einigen Sekunden.",
         "choices": [
-            { "text": "Nachricht anhoeren", "next": "gf_7", "karma": 1 },
-            { "text": "Ausschalten", "next": "gf_8" }
+            { "text": "Es geheim halten", "next": "gf_18", "karma": -2 },
+            { "text": "Dipper davon erzählen", "next": "gf_19" }
         ]
     },
 
     "gf_7": {
-        "text": "Ford erscheint kurz ueber das Geraet. 'Bill Cipher beeinflusst wieder die Traumebene. Und er nutzt Gravity Falls als Zugang.'",
+        "text": "Ford untersucht alte Karten von Gravity Falls. 'Diese Muster stammen nicht von Bill Cipher... sie sind älter.'",
         "choices": [
-            { "text": "Glauben", "next": "gf_9", "karma": 2 },
-            { "text": "Zweifeln", "next": "gf_10", "karma": -2 }
+            { "text": "Ford helfen", "next": "gf_20", "gain_item": "fords_map" },
+            { "text": "Nach Bill Cipher fragen", "next": "gf_21" },
+            { "text": "Alleine weitersuchen", "next": "gf_16", "karma": -1 }
         ]
     },
 
     "gf_8": {
-        "text": "Wendy warnt dich im Wald. 'Da draussen sind Dinge, die sich falsch anfuehlen. Und ich meine nicht normal falsch.'",
+        "text": "Zwischen den Gegenständen findest du eine alte Kassette mit der Aufschrift: 'Für den Fall, dass ER zurückkommt.'",
         "choices": [
-            { "text": "Mit Wendy gehen", "next": "gf_9" },
-            { "text": "Alleine gehen", "next": "gf_10", "karma": -1 }
+            { "text": "Anhören", "next": "gf_22", "gain_item": "static_tape" },
+            { "text": "Stan geben", "next": "gf_14", "karma": 1 },
+            { "text": "Verstecken", "next": "gf_18", "karma": -2 }
         ]
     },
 
     "gf_9": {
-        "text": "Zwischen den Baeumen siehst du ein pulsierendes Auge im Holz eines alten Baumes.",
+        "text": "Als der Baum fällt, schreien plötzlich alle Radios im Mystery Shack gleichzeitig auf.",
         "choices": [
-            { "text": "Untersuchen", "next": "gf_11", "gain_item": "cipher_eye" },
-            { "text": "Zerstoeren", "next": "gf_12", "karma": 1 }
+            { "text": "Zum Shack zurückrennen", "next": "gf_23" },
+            { "text": "Den Baum untersuchen", "next": "gf_24", "karma": -2 }
         ]
     },
 
     "gf_10": {
-        "text": "Gideon taucht ploetzlich auf. 'Du bist genau da, wo du sein sollst.'",
+        "text": "Mabel glaubt, dass die neuen Bäume Erinnerungen speichern. Einige Gegenstände stammen von Menschen, die verschwunden sind.",
         "choices": [
-            { "text": "Gideon konfrontieren", "next": "gf_12", "karma": -2 },
-            { "text": "Fragen stellen", "next": "gf_11" }
+            { "text": "Mabel glauben", "next": "gf_24", "karma": 2 },
+            { "text": "Daran zweifeln", "next": "gf_16", "karma": -1 }
         ]
     },
 
     "gf_11": {
-        "text": "Das Auge reagiert auf das Journalfragment und oeffnet eine kleine Verzerrung in der Luft.",
+        "text": "Im Fernseher siehst du dich selbst durch den Wald laufen — obwohl du stillstehst.",
         "choices": [
-            { "text": "Kombinieren", "next": "gf_13", "required_item": "journal_page" },
-            { "text": "Nicht riskieren", "next": "gf_14" }
+            { "text": "Weiter beobachten", "next": "gf_25" },
+            { "text": "Den Fernseher zerstören", "next": "gf_17", "karma": -2 }
         ]
     },
 
     "gf_12": {
-        "text": "Der Wald beginnt sich leicht zu falten, als wuerde er dieselbe Szene erneut abspielen.",
+        "text": "Die Kabel führen zu einem unterirdischen Raum voller alter Regierungsgeräte und kryptischer Warnungen.",
         "choices": [
-            { "text": "Weiterlaufen", "next": "gf_14" }
+            { "text": "Den Computer aktivieren", "next": "gf_26" },
+            { "text": "Alles fotografieren", "next": "gf_20", "gain_item": "facility_photos" }
         ]
     },
 
     "gf_13": {
-        "text": "Ein versteckter Pfad oeffnet sich. Die Realitaet wirkt dahinter instabil.",
+        "text": "In der Kiste befindet sich eine mechanische Hand mit einem Auge in der Mitte. Sie beginnt sofort auf die neuen Symbole zu reagieren.",
         "choices": [
-            { "text": "Betreten", "next": "gf_15", "karma": 2 },
-            { "text": "Warten", "next": "gf_14" }
+            { "text": "Die Hand mitnehmen", "next": "gf_27", "gain_item": "oracle_hand" },
+            { "text": "Die Hand zerstören", "next": "gf_23", "karma": -3 }
         ]
     },
 
     "gf_14": {
-        "text": "Mabel findet einen Kristall, der leise pulsiert, wenn sie ihn beruehrt.",
+        "text": "Stan wirkt ungewöhnlich ernst. 'Vor Jahren haben wir etwas im Wald eingeschlossen. Es sollte nie wieder aufwachen.'",
         "choices": [
-            { "text": "Kristall nehmen", "next": "gf_15", "gain_item": "rift_crystal" },
-            { "text": "Lassen", "next": "gf_15" }
+            { "text": "Mehr erfahren wollen", "next": "gf_28" },
+            { "text": "Stan misstrauen", "next": "gf_15", "karma": -2 }
         ]
     },
 
     "gf_15": {
-        "text": "Ford erklaert erneut: 'Bill greift durch Traeume an. Wir muessen ihn dort treffen.'",
+        "text": "Stan trifft sich heimlich mit Old Man McGucket an einer verlassenen Mine außerhalb der Stadt.",
         "choices": [
-            { "text": "Traummaschine aktivieren", "next": "gf_16", "required_item": "machine_core" },
-            { "text": "Ablehnen", "next": "gf_17", "karma": -1 }
+            { "text": "Lauschen", "next": "gf_29" },
+            { "text": "Sich zeigen", "next": "gf_28", "karma": 1 }
         ]
     },
 
     "gf_16": {
-        "text": "Du betrittst eine Traumwelt voller schwebender Symbole und verzerrter Realitaet.",
+        "text": "Die Koordinaten führen zu einem Kreis aus verdrehten Bäumen. In der Mitte steht eine Tür mitten im Wald — ohne Wände.",
         "choices": [
-            { "text": "Symbol beruehren", "next": "gf_18", "karma": 1 },
-            { "text": "Abstand halten", "next": "gf_17" }
+            { "text": "Die Tür öffnen", "next": "gf_30" },
+            { "text": "Die Tür untersuchen", "next": "gf_31" },
+            { "text": "Nicht näherkommen", "next": "gf_23", "karma": 1 }
         ]
     },
 
     "gf_17": {
-        "text": "Eine Stimme fluestert: 'Ich sehe dich, Dipper Pines…'",
+        "text": "Die verbrannten Seiten formen in der Asche ein neues Symbol.",
         "choices": [
-            { "text": "Antworten", "next": "gf_18", "karma": -1 },
-            { "text": "Ignorieren", "next": "gf_19", "karma": 1 }
+            { "text": "Das Symbol kopieren", "next": "gf_31", "gain_item": "ash_symbol" },
+            { "text": "Die Asche wegwerfen", "next": "gf_23", "karma": -1 }
         ]
     },
 
     "gf_18": {
-        "text": "Bill Cipher erscheint laechelnd im Traumraum. 'Endlich treffen wir uns richtig.'",
+        "text": "Seit dem Vorfall hörst du nachts Flüstern aus den Wänden des Mystery Shack.",
         "choices": [
-            { "text": "Mit Bill reden", "next": "gf_20", "karma": -2 },
-            { "text": "Ford warnen", "next": "gf_19", "karma": 2 }
+            { "text": "Dem Flüstern folgen", "next": "gf_32", "karma": -2 },
+            { "text": "Dipper informieren", "next": "gf_19", "karma": 2 }
         ]
     },
 
     "gf_19": {
-        "text": "Ford aktiviert Schutzrunen im Shack. Die Realitaet beginnt sich kurz zu stabilisieren.",
+        "text": "Dipper erkennt das Symbol sofort. 'Das gehört zu einer alten Entität namens The Watcher.'",
         "choices": [
-            { "text": "Runen verstaerken", "next": "gf_21", "required_item": "rift_crystal" },
-            { "text": "Nur beobachten", "next": "gf_21" }
+            { "text": "Mehr herausfinden", "next": "gf_33" },
+            { "text": "Das ignorieren", "next": "gf_32", "karma": -2 }
         ]
     },
 
     "gf_20": {
-        "text": "Bill bietet dir Kontrolle ueber alle Realitaeten an. 'Stell dir vor, du koenntest alles schreiben.'",
+        "text": "Ford entdeckt auf der Karte ein verstecktes Tunnelsystem unter Gravity Falls.",
         "choices": [
-            { "text": "Annehmen", "next": "gf_22", "karma": -5 },
-            { "text": "Ablehnen", "next": "gf_21", "karma": 3 }
+            { "text": "Die Tunnel betreten", "next": "gf_34" },
+            { "text": "Zuerst Ausrüstung sammeln", "next": "gf_35", "gain_item": "gravity_gear" },
+            { "text": "Stan mitnehmen", "next": "gf_28" }
         ]
     },
 
     "gf_21": {
-        "text": "Soos bringt eine Kiste voller alter Ford-Artefakte. 'Ich hab einfach alles gesammelt, was gefaehrlich aussah!'",
+        "text": "Ford wird still. 'Bill wollte Chaos. The Watcher will Kontrolle.'",
         "choices": [
-            { "text": "Durchsuchen", "next": "gf_23", "gain_item": "gravity_orb" },
-            { "text": "Ignorieren", "next": "gf_24" }
+            { "text": "Das ernst nehmen", "next": "gf_33", "karma": 3 },
+            { "text": "Bill war schlimmer", "next": "gf_32", "karma": -2 }
         ]
     },
 
     "gf_22": {
-        "text": "Bills Auge beginnt sich in deiner Schattenform zu spiegeln.",
+        "text": "Auf der Kassette spricht McGucket panisch über 'Augen im Wald, die Erinnerungen stehlen'.",
         "choices": [
-            { "text": "Weiter", "next": "gf_24" }
+            { "text": "McGucket suchen", "next": "gf_29" },
+            { "text": "Die Kassette verstecken", "next": "gf_18", "karma": -1 }
         ]
     },
 
     "gf_23": {
-        "text": "Dipper erkennt ein altes Symbol, das speziell gegen Bill Cipher wirkt.",
+        "text": "In ganz Gravity Falls verschwinden plötzlich Schatten von Menschen unabhängig von ihren Besitzern.",
         "choices": [
-            { "text": "Aktivieren", "next": "gf_25", "required_item": "cipher_eye" },
-            { "text": "Nicht riskieren", "next": "gf_24" }
+            { "text": "Den Menschen helfen", "next": "gf_36", "karma": 4 },
+            { "text": "Einen Schatten verfolgen", "next": "gf_37", "karma": -2 }
         ]
     },
 
     "gf_24": {
-        "text": "Der Himmel ueber Gravity Falls reisst auf und zeigt den Nexus dahinter.",
+        "text": "Im Inneren des Baumes findest du hunderte eingravierte Namen verschwundener Einwohner.",
         "choices": [
-            { "text": "Zum Portal", "next": "gf_26" }
+            { "text": "Die Namen dokumentieren", "next": "gf_35", "karma": 2 },
+            { "text": "Einen Namen entfernen", "next": "gf_37", "karma": -3 }
         ]
     },
 
     "gf_25": {
-        "text": "Bill schreit kurz auf. Die Traumwelt stabilisiert sich.",
+        "text": "Die Fernseher zeigen nun eine Version von Gravity Falls ohne Menschen.",
         "choices": [
-            { "text": "Weiter", "next": "gf_26", "karma": 3 }
+            { "text": "Nach Hinweisen suchen", "next": "gf_26" },
+            { "text": "Die Fernseher ausschalten", "next": "gf_23", "karma": 1 }
         ]
     },
 
     "gf_26": {
-        "text": "Ford sagt ernst: 'Nur jemand ausserhalb dieses Systems kann es wirklich schliessen.'",
+        "text": "Der Computer aktiviert ein altes Warnsystem: 'ENTITY OBSERVING. DO NOT OPEN THE DOOR.'",
         "choices": [
-            { "text": "Helfen", "next": "gf_27", "karma": 2 },
-            { "text": "Ablehnen", "next": "gf_27", "karma": -2 }
+            { "text": "Die Warnung ernst nehmen", "next": "gf_34", "karma": 2 },
+            { "text": "Die Warnung ignorieren", "next": "gf_30", "karma": -3 }
         ]
     },
 
     "gf_27": {
-        "text": "Bill uebernimmt kurz Gideons Koerper und verzerrt die Realitaet um ihn herum.",
+        "text": "Die mechanische Hand beginnt plötzlich Richtung Wald zu zeigen.",
         "choices": [
-            { "text": "Angreifen", "next": "gf_28", "required_item": "gravity_orb" },
-            { "text": "Zurueckweichen", "next": "gf_29", "karma": -1 }
+            { "text": "Ihr folgen", "next": "gf_34" },
+            { "text": "Sie deaktivieren", "next": "gf_36", "karma": -1 }
         ]
     },
 
     "gf_28": {
-        "text": "Das Gravity Orb stoesst Bill aus dem Koerper und schwaecht ihn.",
+        "text": "Stan gesteht, dass Ford und McGucket die Tür im Wald einst absichtlich erschaffen haben.",
         "choices": [
-            { "text": "Versiegeln", "next": "gf_30", "required_item": "mystery_key" },
-            { "text": "Entkommen lassen", "next": "gf_29", "karma": -5 }
+            { "text": "Warum?", "next": "gf_33" },
+            { "text": "Die Tür sofort zerstören", "next": "gf_38", "karma": -3 }
         ]
     },
 
     "gf_29": {
-        "text": "Die Realitaet beginnt zu kollabieren, aber Ford oeffnet einen letzten stabilen Ausgang.",
+        "text": "McGucket trägt mehrere Hüte übereinander und murmelt: 'Es sieht durch Spiegel und Erinnerungen.'",
         "choices": [
-            { "text": "Durchgehen", "next": "gf_30" }
+            { "text": "McGucket vertrauen", "next": "gf_35", "gain_item": "memory_lens" },
+            { "text": "Seine Worte ignorieren", "next": "gf_32", "karma": -2 }
         ]
     },
 
     "gf_30": {
-        "text": "Gravity Falls stabilisiert sich kurz – aber der Nexus verbindet sich bereits mit anderen Welten.",
+        "text": "Hinter der Tür befindet sich kein Raum — sondern ein endloser Wald voller schwebender Augen.",
         "choices": [
-            { "text": "Kapitel 2 starten", "next": "c2_start" }
+            { "text": "Weitergehen", "next": "gf_39", "karma": -2 },
+            { "text": "Die Tür schließen", "next": "gf_40", "karma": 3 }
+        ]
+    },
+
+    "gf_31": {
+        "text": "In die Tür sind dieselben Symbole eingeritzt wie in deinen Zeichnungen.",
+        "choices": [
+            { "text": "Mit den Zeichnungen vergleichen", "next": "gf_33", "required_item": "cipher_sketches" },
+            { "text": "Die Tür markieren", "next": "gf_40" }
+        ]
+    },
+
+    "gf_32": {
+        "text": "In der Nacht verschwindet plötzlich ein Teil des Mystery Shack. Niemand erinnert sich daran, dass dort jemals ein Raum war.",
+        "choices": [
+            { "text": "Die Erinnerung rekonstruieren", "next": "gf_41", "required_item": "memory_lens" },
+            { "text": "Es ignorieren", "next": "gf_39", "karma": -4 }
+        ]
+    },
+
+    "gf_33": {
+        "text": "Ford erkennt die Wahrheit: The Watcher löscht Dinge aus der Realität, indem es Menschen dazu bringt, sie zu vergessen.",
+        "choices": [
+            { "text": "Die Stadt warnen", "next": "gf_42", "karma": 4 },
+            { "text": "Die Informationen geheim halten", "next": "gf_39", "karma": -3 }
+        ]
+    },
+
+    "gf_34": {
+        "text": "Unter Gravity Falls findest du ein riesiges Observatorium voller Augen-Symbole und alter Tonaufnahmen.",
+        "choices": [
+            { "text": "Die Aufnahmen anhören", "next": "gf_43" },
+            { "text": "Das Observatorium sabotieren", "next": "gf_38", "karma": -2 }
+        ]
+    },
+
+    "gf_35": {
+        "text": "Mit der gesammelten Ausrüstung kannst du verborgene Spuren im Wald sichtbar machen.",
+        "choices": [
+            { "text": "Den Spuren folgen", "next": "gf_43" },
+            { "text": "Die Ausrüstung Dipper geben", "next": "gf_42", "karma": 2 }
+        ]
+    },
+
+    "gf_36": {
+        "text": "Mehrere Bewohner beginnen ihre eigenen Namen zu vergessen.",
+        "choices": [
+            { "text": "Die Erinnerungen retten", "next": "gf_41", "karma": 5 },
+            { "text": "Nur dich selbst schützen", "next": "gf_39", "karma": -4 }
+        ]
+    },
+
+    "gf_37": {
+        "text": "Der verfolgte Schatten führt dich direkt zu The Watcher — einer riesigen Gestalt aus Augen und flüsternden Stimmen.",
+        "choices": [
+            { "text": "Mit ihm sprechen", "next": "gf_44" },
+            { "text": "Angreifen", "next": "gf_45", "karma": -5 }
+        ]
+    },
+
+    "gf_38": {
+        "text": "Durch die Zerstörung destabilisiert sich der Wald selbst. Wege verändern sich jede Minute.",
+        "choices": [
+            { "text": "Ford helfen", "next": "gf_42", "karma": 2 },
+            { "text": "Alleine weiter", "next": "gf_45", "karma": -2 }
+        ]
+    },
+
+    "gf_39": {
+        "text": "Immer mehr Menschen vergessen Gravity Falls vollständig. Straßenschilder verschwinden und Gebäude verändern ihre Form.",
+        "choices": [
+            { "text": "Die Tür endgültig schließen", "next": "gf_46", "required_item": "oracle_hand" },
+            { "text": "The Watcher beobachten", "next": "gf_44", "karma": -2 }
+        ]
+    },
+
+    "gf_40": {
+        "text": "Die Tür beginnt sich zu versiegeln, aber etwas versucht von innen herauszukommen.",
+        "choices": [
+            { "text": "Dagegenhalten", "next": "gf_46", "karma": 4 },
+            { "text": "Loslassen", "next": "gf_45", "karma": -3 }
+        ]
+    },
+
+    "gf_41": {
+        "text": "Mit der Linse kannst du verlorene Erinnerungen sichtbar machen. Die verschwundenen Räume des Mystery Shack erscheinen kurz wieder.",
+        "choices": [
+            { "text": "Die Erinnerungen stabilisieren", "next": "gf_46", "karma": 5 },
+            { "text": "Nur eine Erinnerung retten", "next": "gf_44", "karma": -1 }
+        ]
+    },
+
+    "gf_42": {
+        "text": "Die Bewohner von Gravity Falls beginnen gemeinsam, sich gegen The Watcher zu erinnern.",
+        "choices": [
+            { "text": "Die Erinnerungen bündeln", "next": "gf_46", "karma": 5 },
+            { "text": "Die Stadt evakuieren", "next": "gf_45", "karma": -1 }
+        ]
+    },
+
+    "gf_43": {
+        "text": "Die Tonaufnahmen stammen von Ford selbst. 'Wenn jemand das hört: Vergiss niemals diesen Ort.'",
+        "choices": [
+            { "text": "Die Nachricht verbreiten", "next": "gf_42", "karma": 4 },
+            { "text": "Die Aufnahmen zerstören", "next": "gf_45", "karma": -4 }
+        ]
+    },
+
+    "gf_44": {
+        "text": "The Watcher bietet dir einen Handel an: Niemand in Gravity Falls wird verschwinden — solange die Stadt niemals verlassen darf.",
+        "choices": [
+            { "text": "Annehmen", "next": "gf_47", "karma": -5 },
+            { "text": "Ablehnen", "next": "gf_46", "karma": 4 }
+        ]
+    },
+
+    "gf_45": {
+        "text": "Der Wald beginnt Gravity Falls vollständig zu verschlingen. Straßen enden plötzlich im Nichts.",
+        "choices": [
+            { "text": "Zum Mystery Shack zurückkehren", "next": "gf_46" }
+        ]
+    },
+
+    "gf_46": {
+        "text": "Gemeinsam gelingt es euch, die Tür tief im Wald zu versiegeln. Die Radios verstummen langsam wieder.",
+        "choices": [
+            { "text": "Mit Dipper reden", "next": "gf_48" },
+            { "text": "Alleine in den Wald schauen", "next": "gf_48", "karma": -1 }
+        ]
+    },
+
+    "gf_47": {
+        "text": "Gravity Falls bleibt bestehen — aber niemand kann die Stadt jemals wieder verlassen.",
+        "choices": [
+            { "text": "Das akzeptieren", "next": "gf_48" }
+        ]
+    },
+
+    "gf_48": {
+        "text": "Dipper schließt Journal 3 langsam. 'Gravity Falls hatte schon immer Geheimnisse... aber manche sollten vielleicht geheim bleiben.'",
+        "choices": [
+            { "text": "Kapitel beenden", "next": "c3_start" }
         ]
     },
 
@@ -1379,746 +1537,954 @@ let gameData = {
         "choices": [
             { "text": "Teen Titans", "next": "c2_tt_start" },
             { "text": "Ben 10", "next": "c2_b10_start" },
-            { "text": "Samurai Jack", "next": "c2_sj_start" },
+            { "text": "Samurai Jack", "next": "sj_01" },
             { "text": "Regular Show", "next": "c2_rs_start" },
             { "text": "Ninjago", "next": "c2_nj_start" }
         ]
     },
-
     "c2_tt_start": {
-        "text": "Im Titans Tower herrscht ungewohnte Stille. Kein Training, keine Streitereien – nur die leisen Alarme der ueberwachungssysteme. Robin ueberprueft Protokolle, waehrend Raven sich sofort an den Kopf fasst. 'Etwas drueckt gegen diese Realitaet... aber es ist subtil.'",
+        "text": "Der Titans Tower driftet mitten in der Nacht langsam durch dichten roten Nebel im Hafen von Jump City. Kein Alarm läuft, keine Systeme reagieren. Nur ein einziges Signal blinkt dauerhaft im Hauptcomputer: \"DON'T LET HIM WAKE UP\". Robin steht bereits bewaffnet im Kontrollraum, während Raven ungewöhnlich nervös wirkt.",
         "choices": [
-            { "text": "Robin helfen", "next": "tt_1", "karma": 2 },
-            { "text": "Raven folgen", "next": "tt_2", "karma": 2 },
-            { "text": "Tower-Systeme pruefen", "next": "tt_3" }
+            { "text": "Robin beim Kontrollraum helfen", "next": "tt_1", "karma": 3 },
+            { "text": "Raven folgen", "next": "tt_2" },
+            { "text": "Alleine den Tower untersuchen", "next": "tt_3", "karma": -2 },
+            { "text": "Beast Boy und Cyborg suchen", "next": "tt_4" }
         ]
     },
 
     "tt_1": {
-        "text": "Robin zeigt dir Sicherheitsaufnahmen. Mehrere Systeme wurden manipuliert – aber ohne sichtbaren Eindringling. 'Das ist kein normaler Angriff. Das ist gezielt.'",
+        "text": "Robin zeigt dir Sicherheitsaufnahmen. Alle Kameras zeigen dieselbe Gestalt mit weißer Maske, obwohl niemand den Tower betreten hat.",
         "choices": [
-            { "text": "Spur verfolgen", "next": "tt_4", "karma": 1 },
-            { "text": "Tower sichern", "next": "tt_5", "karma": 2 }
+            { "text": "Die Aufnahmen analysieren", "next": "tt_5", "gain_item": "security_override" },
+            { "text": "Robin warnen, dass es eine Falle sein könnte", "next": "tt_6", "karma": 4 }
         ]
     },
 
     "tt_2": {
-        "text": "Raven spuert eine dunkle, vertraute Energie im unteren Bereich des Towers. Sie wirkt unruhig. 'Das ist nicht nur jemand... das ist etwas aelteres.'",
+        "text": "Raven führt dich in den Meditationsraum. Dort schweben schwarze Symbole an den Wänden. 'Etwas versucht, Erinnerungen aus dem Tower zu ziehen', sagt sie leise.",
         "choices": [
-            { "text": "Mit Raven gehen", "next": "tt_6", "karma": 2 },
-            { "text": "Team warnen", "next": "tt_5" }
+            { "text": "Raven helfen", "next": "tt_7", "karma": 3 },
+            { "text": "Die Symbole berühren", "next": "tt_8", "gain_item": "shadow_mark" }
         ]
     },
 
     "tt_3": {
-        "text": "Im Trainingsbereich findest du beschaedigte Ausruestung. Es sieht aus, als haette jemand gezielt nur die Schwachstellen sabotiert.",
+        "text": "Die unteren Ebenen des Towers wirken verlassen. In der Trainingshalle bewegen sich die Übungsroboter plötzlich alleine und greifen alles an, was sich bewegt.",
         "choices": [
-            { "text": "Untersuchen", "next": "tt_5", "karma": 2 },
-            { "text": "Weitergehen", "next": "tt_4", "karma": -1 }
+            { "text": "Die Roboter abschalten", "next": "tt_9", "karma": 2 },
+            { "text": "Durch die Halle sprinten", "next": "tt_10", "karma": -4 }
         ]
     },
 
     "tt_4": {
-        "text": "Robin entdeckt eine verschluesselte Nachricht im System. Sie stammt von Deathstroke – aber sie ist aelter als sein aktueller Aufenthaltsort.",
+        "text": "Cyborg und Beast Boy sitzen in der Küche und diskutieren mit dem Kühlschrank. Der Kühlschrank behauptet, er sei der neue Tower-Administrator.",
         "choices": [
-            { "text": "Codes entschluesseln", "next": "tt_7", "gain_item": "deathstroke_codes" },
-            { "text": "Robin informieren", "next": "tt_5" }
+            { "text": "Cyborg unterstützen", "next": "tt_11" },
+            { "text": "Beast Boys Idee folgen", "next": "tt_12", "karma": -3 }
         ]
     },
 
     "tt_5": {
-        "text": "Cyborg meldet Ausfaelle im Tower-System. Energiefluktuationen breiten sich aus, ohne klare Quelle.",
+        "text": "Die Aufnahmen zeigen plötzlich Slade, aber Robin erkennt sofort, dass etwas nicht stimmt. Die Bewegungen passen nicht zu ihm.",
         "choices": [
-            { "text": "Cyborg helfen", "next": "tt_8", "karma": 2 },
-            { "text": "Beast Boy suchen", "next": "tt_9" }
+            { "text": "Weiter analysieren", "next": "tt_13", "gain_item": "slade_frequency" },
+            { "text": "Sofort Alarm auslösen", "next": "tt_14", "karma": -3 }
         ]
     },
 
     "tt_6": {
-        "text": "Im Keller des Towers verdichtet sich die dunkle Energie. Raven bleibt stehen. 'Das ist kein Portal... es ist eine Verbindung.'",
+        "text": "Robin stoppt den Alarmprozess. Sekunden später explodiert genau dort eine versteckte Mine im Kontrollraum.",
         "choices": [
-            { "text": "Portal versiegeln", "next": "tt_10", "required_item": "deathstroke_codes" },
-            { "text": "Untersuchen", "next": "tt_11", "karma": -1 }
+            { "text": "Die Quelle der Mine suchen", "next": "tt_15" },
+            { "text": "Den Tower evakuieren", "next": "tt_16", "karma": 5 }
         ]
     },
 
     "tt_7": {
-        "text": "Die entschluesselten Daten zeigen geplante Angriffe auf mehrere Staedte. Aber einige Signaturen sind nicht menschlich.",
+        "text": "Raven öffnet kurz ein magisches Fenster in eine dunkle Dimension. Für einen Moment siehst du jemanden im Nebel stehen: Trigon lächelt.",
         "choices": [
-            { "text": "Staedte warnen", "next": "tt_12", "karma": 3 },
-            { "text": "Nur Titans informieren", "next": "tt_8" }
+            { "text": "Das Portal schließen", "next": "tt_17", "karma": 4 },
+            { "text": "Genauer hinsehen", "next": "tt_18", "gain_item": "trigon_fragment" }
         ]
     },
 
     "tt_8": {
-        "text": "Cyborg stabilisiert die Energieversorgung teilweise. 'Jemand versucht, unsere Systeme gegen uns zu verwenden.'",
+        "text": "Die Symbole brennen sich kurz in deine Hand ein. Plötzlich hörst du Stimmen aus den Wänden des Towers.",
         "choices": [
-            { "text": "Energiekern nehmen", "next": "tt_13", "gain_item": "tower_core" },
-            { "text": "Ablehnen", "next": "tt_13" }
+            { "text": "Den Stimmen folgen", "next": "tt_18" },
+            { "text": "Raven davon erzählen", "next": "tt_17", "karma": 2 }
         ]
     },
 
     "tt_9": {
-        "text": "Beast Boy berichtet von Schattenbewegungen im unteren Stockwerk. Keine klaren Formen.",
+        "text": "Einer der Roboter zeigt vor dem Abschalten eine Nachricht: 'ER IST BEREITS IM TOWER'.",
         "choices": [
-            { "text": "Nachsehen", "next": "tt_13", "karma": 3 },
-            { "text": "Verfolgen", "next": "tt_14", "karma": -1 }
+            { "text": "Nach Eindringlingen suchen", "next": "tt_15" },
+            { "text": "Robin informieren", "next": "tt_14", "karma": 2 }
         ]
     },
 
     "tt_10": {
-        "text": "Das Portal reagiert auf Raven. Stimmen fluestern aus der anderen Seite – aber keine klare Identitaet.",
+        "text": "Du entkommst knapp, aber die Roboter verfolgen jetzt andere Bewohner des Towers.",
         "choices": [
-            { "text": "Versiegeln", "next": "tt_15", "karma": 2 },
-            { "text": "Kontakt halten", "next": "tt_14", "karma": -2 }
+            { "text": "Zurückgehen und helfen", "next": "tt_9", "karma": 3 },
+            { "text": "Weiterlaufen", "next": "tt_19", "karma": -5 }
         ]
     },
 
     "tt_11": {
-        "text": "Ein Schattenwesen bricht kurz durch das Portal und verschwindet wieder. Raven wird blass.",
+        "text": "Cyborg entdeckt versteckte Codes im Tower-System. Jemand manipuliert die KI von innen.",
         "choices": [
-            { "text": "Raven schuetzen", "next": "tt_15", "karma": 3 },
-            { "text": "Zurueckweichen", "next": "tt_14", "karma": -2 }
+            { "text": "Codes entschlüsseln", "next": "tt_20", "gain_item": "tower_code" },
+            { "text": "Die Hauptenergie trennen", "next": "tt_21", "karma": -4 }
         ]
     },
 
     "tt_12": {
-        "text": "Jump City beginnt Sicherheitsmassnahmen zu aktivieren. Die Situation eskaliert langsam in der oeffentlichkeit.",
+        "text": "Beast Boy verwandelt sich in einen T-Rex, um den Kühlschrank einzuschüchtern. Dabei zerstört er die halbe Küche.",
         "choices": [
-            { "text": "Zivilisten helfen", "next": "tt_16", "karma": 4 },
-            { "text": "Deathstroke verfolgen", "next": "tt_17", "karma": -1 }
+            { "text": "Mitlachen", "next": "tt_19", "karma": -2 },
+            { "text": "Nachsehen, was der Kühlschrank versteckt hat", "next": "tt_20" }
         ]
     },
 
     "tt_13": {
-        "text": "Starfire empfaengt ein fremdes Signal aus dem Orbit. Es ist nicht Tamaranean.",
+        "text": "Die Frequenz stammt nicht von Slade, sondern von Mad Mod. Der ganze Tower scheint manipulierte Wahrnehmungen zu erzeugen.",
         "choices": [
-            { "text": "Untersuchen mit Starfire", "next": "tt_16", "karma": 2 },
-            { "text": "Im Tower bleiben", "next": "tt_17" }
+            { "text": "Mad Mods Signal stören", "next": "tt_22", "required_item": "security_override" },
+            { "text": "Robin allein informieren", "next": "tt_23" }
         ]
     },
 
     "tt_14": {
-        "text": "Die Energie im Tower faellt teilweise aus. Notstrom aktiviert sich automatisch.",
+        "text": "Während des Alarms tauchen plötzlich dutzende falsche Titans im Tower auf. Jeder behauptet, der echte zu sein.",
         "choices": [
-            { "text": "System stabilisieren", "next": "tt_18", "required_item": "tower_core" },
-            { "text": "Ignorieren", "next": "tt_17", "karma": -2 }
+            { "text": "Raven vertrauen", "next": "tt_24", "karma": 4 },
+            { "text": "Robin folgen", "next": "tt_23", "karma": -2 }
         ]
     },
 
     "tt_15": {
-        "text": "Raven erschafft ein Siegel. 'Das wird ihn nicht stoppen... aber verlangsamen.'",
+        "text": "Im alten Trophäenraum findest du eine versteckte Maske von Slade. Sie ist noch warm.",
         "choices": [
-            { "text": "Siegel nehmen", "next": "tt_16", "gain_item": "raven_seal" }
+            { "text": "Die Maske mitnehmen", "next": "tt_25", "gain_item": "slade_mask" },
+            { "text": "Die Maske zerstören", "next": "tt_24", "karma": 3 }
         ]
     },
 
     "tt_16": {
-        "text": "Blackfire erscheint ueber Jump City. Keine Invasion – eine gezielte militaerische Operation.",
+        "text": "Während Bewohner den Tower verlassen, bleibt Starfire zurück, um nach vermissten Haustieren zu suchen.",
         "choices": [
-            { "text": "Stadt verteidigen", "next": "tt_19", "karma": 3 },
-            { "text": "Blackfire angreifen", "next": "tt_20", "karma": 1 }
+            { "text": "Starfire helfen", "next": "tt_26", "karma": 5 },
+            { "text": "Die Evakuierung fortsetzen", "next": "tt_21", "karma": -3 }
         ]
     },
 
     "tt_17": {
-        "text": "Deathstroke lockt Robin in eine isolierte Situation ausserhalb des Towers.",
+        "text": "Raven erkennt, dass jemand versucht, Trigons Energie mit Technologie zu verbinden.",
         "choices": [
-            { "text": "Robin retten", "next": "tt_21", "karma": 3 },
-            { "text": "Spur verfolgen", "next": "tt_20", "karma": -1 }
+            { "text": "Cyborg warnen", "next": "tt_20" },
+            { "text": "Das Ritual heimlich beobachten", "next": "tt_27", "gain_item": "dark_rune" }
         ]
     },
 
     "tt_18": {
-        "text": "Die Stromversorgung stabilisiert sich. Doch die Systeme zeigen weiterhin Fremdzugriffe.",
+        "text": "Die Stimmen locken dich in einen stillgelegten Bereich des Towers. Dort sitzt Red X auf einem Thron aus gestohlenen Titan-Technologien.",
         "choices": [
-            { "text": "Zurueck zur Mission", "next": "tt_19", "karma": 2 }
+            { "text": "Mit Red X verhandeln", "next": "tt_28" },
+            { "text": "Angreifen", "next": "tt_29", "karma": -4 }
         ]
     },
 
     "tt_19": {
-        "text": "Die Titans koordinieren die Verteidigung gegen Blackfires Kraefte in der Stadt.",
+        "text": "Der Tower verliert langsam die Kontrolle über seine Verteidigungssysteme.",
         "choices": [
-            { "text": "Zivilisten schuetzen", "next": "tt_22", "karma": 4 },
-            { "text": "Direkter Kampf", "next": "tt_23", "karma": 1 }
+            { "text": "Zum Kontrollraum zurück", "next": "tt_23" },
+            { "text": "Die Systeme sabotieren", "next": "tt_30", "karma": -5 }
         ]
     },
 
     "tt_20": {
-        "text": "Deathstroke aktiviert eine versteckte Zerstoerungssequenz im Tower-System.",
+        "text": "Cyborg entdeckt ein verborgenes Programm namens PROJECT H.I.V.E. Es aktiviert sich bereits.",
         "choices": [
-            { "text": "System stoppen", "next": "tt_24", "required_item": "deathstroke_codes" },
-            { "text": "Angreifen", "next": "tt_25", "karma": -1 }
+            { "text": "Programm löschen", "next": "tt_31", "required_item": "tower_code" },
+            { "text": "Programm isolieren", "next": "tt_32", "karma": 3 }
         ]
     },
 
     "tt_21": {
-        "text": "Robin ist angeschlagen, aber bewusst. 'Er wollte uns nicht nur schlagen... er wollte uns testen.'",
+        "text": "Der Tower fällt teilweise aus. Die Aufzüge stürzen ab und Wasser dringt in die unteren Ebenen ein.",
         "choices": [
-            { "text": "Helfen", "next": "tt_22", "karma": 3 },
-            { "text": "Weiterkaempfen", "next": "tt_23" }
+            { "text": "Menschen retten", "next": "tt_26", "karma": 6 },
+            { "text": "Nur die Titans suchen", "next": "tt_32", "karma": -4 }
         ]
     },
 
     "tt_22": {
-        "text": "Raven reagiert ploetzlich auf eine zweite, staerkere dunkle Praesenz ausserhalb der Dimension.",
+        "text": "Mad Mods Illusionen brechen zusammen. Kurz siehst du den echten Feind: Brother Blood kontrolliert den Tower aus dem Hauptreaktor.",
         "choices": [
-            { "text": "Ihr vertrauen", "next": "tt_26", "karma": 2 },
-            { "text": "Ignorieren", "next": "tt_23", "karma": -2 }
+            { "text": "Robin informieren", "next": "tt_33" },
+            { "text": "Alleine hingehen", "next": "tt_34", "karma": -3 }
         ]
     },
 
     "tt_23": {
-        "text": "Blackfire setzt gezielten Angriff auf Starfire. Kein Chaos – strategisch.",
+        "text": "Robin wird immer misstrauischer. Er glaubt inzwischen, dass einer der Titans manipuliert wurde.",
         "choices": [
-            { "text": "Starfire schuetzen", "next": "tt_27", "karma": 3 },
-            { "text": "Gegenangriff", "next": "tt_25", "karma": -2 }
+            { "text": "Robin beruhigen", "next": "tt_35", "karma": 4 },
+            { "text": "Seinem Verdacht zustimmen", "next": "tt_34", "karma": -5 }
         ]
     },
 
     "tt_24": {
-        "text": "Die Zerstoerungssequenz wird gestoppt. Der Tower bleibt funktionsfaehig.",
+        "text": "Raven nutzt ihre Kräfte, um die falschen Titans aufzudecken. Einer davon verwandelt sich plötzlich in Blackfire.",
         "choices": [
-            { "text": "Zurueckkehren", "next": "tt_27", "karma": 3 }
+            { "text": "Starfire holen", "next": "tt_26" },
+            { "text": "Blackfire verfolgen", "next": "tt_36" }
         ]
     },
 
     "tt_25": {
-        "text": "Deathstroke entkommt ueber ein vorbereitetes Fluchtportal.",
+        "text": "Die Slade-Maske enthält versteckte Koordinaten zum alten Unterwasserdock der Titans.",
         "choices": [
-            { "text": "Verfolgen", "next": "tt_28", "karma": -1 },
-            { "text": "Zurueck zu Titans", "next": "tt_27", "karma": 2 }
+            { "text": "Zum Dock reisen", "next": "tt_36" },
+            { "text": "Robin die Maske geben", "next": "tt_35", "karma": 3 }
         ]
     },
 
     "tt_26": {
-        "text": "Raven neutralisiert Teile der dunklen Energie. 'Das ist groesser als wir dachten.'",
+        "text": "Starfire findet die Haustiere des Towers in einem versiegelten Wartungsschacht. Sie wurden absichtlich dort eingesperrt.",
         "choices": [
-            { "text": "Siegel aktivieren", "next": "tt_29", "required_item": "raven_seal" },
-            { "text": "Zoegern", "next": "tt_28", "karma": -2 }
+            { "text": "Die Tiere befreien", "next": "tt_37", "karma": 5 },
+            { "text": "Weiter zum Reaktor", "next": "tt_33", "karma": -3 }
         ]
     },
 
     "tt_27": {
-        "text": "Die Titans formieren sich fuer den finalen Kampf gegen Blackfire.",
+        "text": "Das Ritual zeigt dir eine Vision: Brother Blood will Raven benutzen, um Trigons Macht zu kontrollieren.",
         "choices": [
-            { "text": "Unterstuetzen", "next": "tt_29", "karma": 2 },
-            { "text": "Evakuierung helfen", "next": "tt_29", "karma": 4 }
+            { "text": "Raven warnen", "next": "tt_38", "karma": 5 },
+            { "text": "Die Information geheim halten", "next": "tt_34", "karma": -6 }
         ]
     },
 
     "tt_28": {
-        "text": "Die Situation in Jump City stabilisiert sich nicht vollstaendig – etwas bleibt im Hintergrund aktiv.",
+        "text": "Red X behauptet, er habe Brother Blood bereits gesehen. Aber er will die gestohlene Technologie behalten.",
         "choices": [
-            { "text": "Letzte Verteidigung", "next": "tt_29" }
+            { "text": "Deal eingehen", "next": "tt_39" },
+            { "text": "Die Technologie zurückfordern", "next": "tt_29", "karma": 2 }
         ]
     },
 
     "tt_29": {
-        "text": "Blackfire wird zurueckgedraengt. Doch Raven spuert weiterhin eine groessere dunkle Instanz ausserhalb dieser Realitaet.",
+        "text": "Der Kampf beschädigt Teile des Towers schwer. Red X entkommt trotzdem.",
         "choices": [
-            { "text": "Nexus untersuchen", "next": "tt_30", "karma": 2 }
+            { "text": "Ihn verfolgen", "next": "tt_36" },
+            { "text": "Zum Tower zurück", "next": "tt_33", "karma": 2 }
         ]
     },
 
     "tt_30": {
-        "text": "Der Himmel reisst kurz auf. Fuer einen Moment spuert jeder Titan eine Verbindung zu anderen Realitaeten – und etwas dahinter beobachtet sie.",
+        "text": "Die Sabotage stoppt zwar einige Systeme, aber jetzt aktiviert sich der Selbstzerstörungsmodus.",
+        "choices": [
+            { "text": "Cyborg suchen", "next": "tt_32" },
+            { "text": "Fluchtkapseln vorbereiten", "next": "tt_40", "karma": -4 }
+        ]
+    },
+
+    "tt_31": {
+        "text": "PROJECT H.I.V.E wird gelöscht, doch Brother Blood erkennt sofort euren Standort.",
+        "choices": [
+            { "text": "Sich vorbereiten", "next": "tt_41", "karma": 4 },
+            { "text": "Den Reaktor abschalten", "next": "tt_42" }
+        ]
+    },
+
+    "tt_32": {
+        "text": "Cyborg stabilisiert den Tower notdürftig. Trotzdem nähert sich etwas Großes aus dem Hafen.",
+        "choices": [
+            { "text": "Nachsehen", "next": "tt_41" },
+            { "text": "Im Tower bleiben", "next": "tt_42", "karma": -2 }
+        ]
+    },
+
+    "tt_33": {
+        "text": "Im Hauptreaktor wartet Brother Blood bereits mit einer Armee aus H.I.V.E.-Drohnen.",
+        "choices": [
+            { "text": "Direkt angreifen", "next": "tt_43", "karma": -3 },
+            { "text": "Die Energiequelle suchen", "next": "tt_44" }
+        ]
+    },
+
+    "tt_34": {
+        "text": "Allein gegen Brother Blood zu gehen war ein Fehler. Die Drohnen umzingeln dich sofort.",
+        "choices": [
+            { "text": "Kämpfen", "next": "tt_43" },
+            { "text": "Auf Hilfe warten", "next": "tt_41", "karma": 2 }
+        ]
+    },
+
+    "tt_35": {
+        "text": "Robin vertraut dir schließlich und gibt dir Zugriff auf geheime Tower-Protokolle.",
+        "choices": [
+            { "text": "Protokolle analysieren", "next": "tt_44", "gain_item": "tower_protocols" },
+            { "text": "Sofort handeln", "next": "tt_41" }
+        ]
+    },
+
+    "tt_36": {
+        "text": "Im Unterwasserdock wird eine riesige Maschine aktiviert, die den gesamten Tower kontrollieren könnte.",
+        "choices": [
+            { "text": "Maschine sabotieren", "next": "tt_42", "required_item": "slade_frequency" },
+            { "text": "Maschine übernehmen", "next": "tt_45", "karma": -5 }
+        ]
+    },
+
+    "tt_37": {
+        "text": "Die Tiere führen Starfire zu einem versteckten Wartungsraum voller gestohlener H.I.V.E.-Technologie.",
+        "choices": [
+            { "text": "Alles zerstören", "next": "tt_42", "karma": 3 },
+            { "text": "Die Technologie behalten", "next": "tt_45", "karma": -4 }
+        ]
+    },
+
+    "tt_38": {
+        "text": "Raven entscheidet sich freiwillig, Brother Blood entgegenzutreten, bevor Trigon vollständig erwacht.",
+        "choices": [
+            { "text": "Raven begleiten", "next": "tt_44", "karma": 5 },
+            { "text": "Sie alleine gehen lassen", "next": "tt_43", "karma": -6 }
+        ]
+    },
+
+    "tt_39": {
+        "text": "Red X gibt dir heimlich einen gestohlenen Energieschlüssel. 'Nur diesmal', sagt er.",
+        "choices": [
+            { "text": "Schlüssel nutzen", "next": "tt_42", "gain_item": "x_key" },
+            { "text": "Robin davon erzählen", "next": "tt_35", "karma": 2 }
+        ]
+    },
+
+    "tt_40": {
+        "text": "Die Fluchtkapseln funktionieren nicht. Brother Blood hat sie längst deaktiviert.",
+        "choices": [
+            { "text": "Zum Reaktor zurück", "next": "tt_41" },
+            { "text": "Einen anderen Ausgang suchen", "next": "tt_45", "karma": -3 }
+        ]
+    },
+
+    "tt_41": {
+        "text": "Die Titans versammeln sich schließlich gemeinsam im Hauptreaktor.",
+        "choices": [
+            { "text": "Gemeinsam kämpfen", "next": "tt_46", "karma": 5 },
+            { "text": "Brother Blood ablenken", "next": "tt_44" }
+        ]
+    },
+
+    "tt_42": {
+        "text": "Die Kontrolle über den Tower kehrt langsam zurück, doch Brother Blood aktiviert den letzten Reaktor.",
+        "choices": [
+            { "text": "Reaktor abschalten", "next": "tt_46", "required_item": "tower_protocols" },
+            { "text": "Die Energie umlenken", "next": "tt_45", "karma": -4 }
+        ]
+    },
+
+    "tt_43": {
+        "text": "Brother Blood nutzt die Verwirrung und absorbiert Energie aus Ravens Schattenmagie.",
+        "choices": [
+            { "text": "Raven befreien", "next": "tt_46", "required_item": "dark_rune" },
+            { "text": "Brother Blood direkt angreifen", "next": "tt_47", "karma": -5 }
+        ]
+    },
+
+    "tt_44": {
+        "text": "Du findest die wahre Energiequelle: einen gestohlenen Kristall aus Azarath mitten im Reaktor.",
+        "choices": [
+            { "text": "Kristall entfernen", "next": "tt_46", "karma": 4 },
+            { "text": "Kristall benutzen", "next": "tt_47", "karma": -6 }
+        ]
+    },
+
+    "tt_45": {
+        "text": "Die zusätzliche Energie macht die Situation instabil. Der Tower beginnt auseinanderzubrechen.",
+        "choices": [
+            { "text": "Die Titans warnen", "next": "tt_46", "karma": 2 },
+            { "text": "Weiter Energie sammeln", "next": "tt_47", "karma": -7 }
+        ]
+    },
+
+    "tt_46": {
+        "text": "Gemeinsam schaffen es die Titans, Brother Blood zurückzudrängen. Der rote Nebel verschwindet langsam aus Jump City.",
+        "choices": [
+            { "text": "Den Tower sichern", "next": "tt_48", "karma": 5 },
+            { "text": "Brother Blood verfolgen", "next": "tt_49" }
+        ]
+    },
+
+    "tt_47": {
+        "text": "Brother Blood verliert zwar die Kontrolle über den Reaktor, entkommt aber im Chaos des zusammenbrechenden Towers.",
+        "choices": [
+            { "text": "Überlebende retten", "next": "tt_48", "karma": 4 },
+            { "text": "Brother Blood verfolgen", "next": "tt_49", "karma": -3 }
+        ]
+    },
+
+    "tt_48": {
+        "text": "Robin blickt über Jump City. 'Das war kein normaler Angriff. Jemand testet uns.'",
+        "choices": [
+            { "text": "Vorbereiten", "next": "tt_50" }
+        ]
+    },
+
+    "tt_49": {
+        "text": "In den Ruinen des Hafens findest du nur noch Brother Bloods Maske und eine Nachricht: 'Die nächste Phase beginnt bald.'",
+        "choices": [
+            { "text": "Zum Tower zurück", "next": "tt_50" }
+        ]
+    },
+
+    "tt_50": {
+        "text": "Über Jump City öffnet sich ein dunkler Riss am Himmel. Der Übergang zu Kapitel 3 beginnt.",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
     "c2_b10_start": {
-        "text": "Bellwood steht unter Alarm. Mehrere Stadtteile verlieren gleichzeitig Strom, und die Strassen sind ungewoehnlich leer. Ben ist bereits im Einsatz – er kaempft gegen mutierte Drohnen, die eindeutig nicht von ihm stammen.",
+        "text": "Die Erde wirkt normal, doch der Omnitrix von Ben reagiert unkontrolliert. Aliens auf der ganzen Welt verändern ihre DNA zufällig. Max warnt, dass etwas die Codierung des Omnitrix selbst beeinflusst.",
         "choices": [
-            { "text": "Ben unterstuetzen", "next": "b10_1", "karma": 2 },
-            { "text": "Ursache der Ausfaelle untersuchen", "next": "b10_2" },
-            { "text": "Drohnen verfolgen", "next": "b10_3", "karma": -1 }
+            { "text": "Ben kontaktieren", "next": "b10_1", "karma": 2 },
+            { "text": "Max zuhören", "next": "b10_2" },
+            { "text": "Außerhalb der Stadt untersuchen", "next": "b10_3" }
         ]
     },
 
     "b10_1": {
-        "text": "Ben: 'Das sind Animos Designs! Aber die reagieren auf Omnitrix-Signale!'",
+        "text": "Ben: 'Der Omnitrix spielt verrückt... ich kann die Formen nicht stabil halten.'",
         "choices": [
-            { "text": "Mitkaempfen", "next": "b10_4", "gain_item": "alien_core" },
-            { "text": "Zivilisten sichern", "next": "b10_5", "karma": 2 }
+            { "text": "Omnitrix scannen", "next": "b10_4", "gain_item": "omnitrix_scan_data" },
+            { "text": "Ihn beruhigen", "next": "b10_5", "karma": 2 }
         ]
     },
 
     "b10_2": {
-        "text": "Du findest beschaedigte Strassen und Tiere, die leicht mutiert wirken. Etwas veraendert hier biologische Strukturen.",
+        "text": "Max vermutet, dass eine fremde Alien-Quelle den Omnitrix überschreibt.",
         "choices": [
-            { "text": "Verletzte retten", "next": "b10_5", "karma": 1 },
-            { "text": "Weiter untersuchen", "next": "b10_6", "karma": -1 }
+            { "text": "Quelle suchen", "next": "b10_3" },
+            { "text": "Ignorieren", "next": "b10_6", "karma": -2 }
         ]
     },
 
     "b10_3": {
-        "text": "Die Drohnen fuehren dich zu einem versteckten Labor unter der Stadt.",
+        "text": "Du findest eine verbrannte Absturzstelle eines unbekannten Raumschiffs.",
         "choices": [
-            { "text": "Eindringen", "next": "b10_7" },
-            { "text": "Ben warnen", "next": "b10_4", "karma": 1 }
+            { "text": "Untersuchen", "next": "b10_7", "gain_item": "alien_core_shard" },
+            { "text": "Umgebung sichern", "next": "b10_6", "karma": 1 }
         ]
     },
 
     "b10_4": {
-        "text": "Ben verwandelt sich in Inferno und zerstoert mehrere Drohnen. 'Die greifen das Omnitrix direkt an!'",
+        "text": "Der Omnitrix zeigt eine fremde Signatur im Null-Zeit-Code.",
         "choices": [
-            { "text": "Weiter kaempfen", "next": "b10_8", "karma": 2 },
-            { "text": "Omnitrix analysieren", "next": "b10_9" }
+            { "text": "Daten speichern", "next": "b10_7", "gain_item": "omnitrix_core_fragment" },
+            { "text": "Weiter analysieren", "next": "b10_8" }
         ]
     },
 
     "b10_5": {
-        "text": "Du rettest mehrere Bewohner. Gwen erscheint durch ein Portal und stabilisiert kurz die Umgebung.",
+        "text": "Ben stabilisiert kurz den Omnitrix, aber er überhitzt weiter.",
         "choices": [
-            { "text": "Mit Gwen koordinieren", "next": "b10_8", "gain_item": "mana_crystal" },
-            { "text": "Alleine weitermachen", "next": "b10_6" }
+            { "text": "Weiter helfen", "next": "b10_8", "karma": 2 },
+            { "text": "Abwarten", "next": "b10_6" }
         ]
     },
 
     "b10_6": {
-        "text": "Eine stark mutierte Kreatur greift an – halb Tier, halb technisches Experiment.",
+        "text": "Plötzlich tauchen mutierte Wildmutt-Klone in der Stadt auf.",
         "choices": [
-            { "text": "Kaempfen", "next": "b10_10", "karma": 1 },
-            { "text": "Fliehen", "next": "b10_11", "karma": -2 }
+            { "text": "Kämpfen", "next": "b10_9", "karma": 1 },
+            { "text": "Zivilisten evakuieren", "next": "b10_10", "karma": 3 }
         ]
     },
 
     "b10_7": {
-        "text": "Dr. Animo arbeitet an einem Generator, der biologische Energie aus der Stadt zieht.",
+        "text": "Azmuths Sicherheitsprotokoll aktiviert sich im Omnitrix.",
         "choices": [
-            { "text": "Maschine sabotieren", "next": "b10_12", "required_item": "alien_core" },
-            { "text": "Beobachten", "next": "b10_11" }
+            { "text": "Protokoll entschlüsseln", "next": "b10_11" },
+            { "text": "Zurückziehen", "next": "b10_8", "karma": -1 }
         ]
     },
 
     "b10_8": {
-        "text": "Ben: 'Das Omnitrix reagiert komisch… als wuerde jemand es fernsteuern wollen.'",
+        "text": "Gwen spürt eine magische Störung im selben Frequenzbereich wie der Omnitrix.",
         "choices": [
-            { "text": "Ursache suchen", "next": "b10_13" },
-            { "text": "Ignorieren", "next": "b10_10", "karma": -1 }
+            { "text": "Mit Gwen verbinden", "next": "b10_11", "karma": 2 },
+            { "text": "Alleine weiter", "next": "b10_10" }
         ]
     },
 
     "b10_9": {
-        "text": "Das Omnitrix pulsiert unregelmaessig und zeigt fremde DNA-Signaturen.",
+        "text": "Die Klone adaptieren fremde DNA und werden instabil.",
         "choices": [
-            { "text": "Kontakt herstellen", "next": "b10_14", "karma": 1 },
-            { "text": "Zurueckziehen", "next": "b10_10" }
+            { "text": "DNA-Probe nehmen", "next": "b10_12", "gain_item": "unstable_dna_sample" },
+            { "text": "Zurückdrängen", "next": "b10_10" }
         ]
     },
 
     "b10_10": {
-        "text": "Die Kreatur zerstoert mehrere Gebaeude. Panik bricht in Bellwood aus.",
+        "text": "Die Stadt verliert temporär die Kontrolle über Alien-Transformationen.",
         "choices": [
-            { "text": "Zivilisten retten", "next": "b10_15", "karma": 3 },
-            { "text": "Direkt angreifen", "next": "b10_16", "karma": 1 }
+            { "text": "Max informieren", "next": "b10_11", "karma": 2 },
+            { "text": "Direkt handeln", "next": "b10_13", "karma": -1 }
         ]
     },
 
     "b10_11": {
-        "text": "Weitere mutierte Kreaturen tauchen in den Strassen auf und breiten sich aus.",
+        "text": "Azmuth erscheint holografisch: 'Der Omnitrix wird von außen neu geschrieben.'",
         "choices": [
-            { "text": "Kanalisation nutzen", "next": "b10_17" },
-            { "text": "Kaempfen", "next": "b10_16" }
+            { "text": "Hilfe annehmen", "next": "b10_14", "karma": 2 },
+            { "text": "Misstrauen", "next": "b10_13", "karma": -2 }
         ]
     },
 
     "b10_12": {
-        "text": "Die Maschine ueberlaedt. Dr. Animo wird verletzt, die Energie beginnt zu entweichen.",
+        "text": "Die DNA-Probe reagiert auf den Omnitrix und stabilisiert kurz ein Muster.",
         "choices": [
-            { "text": "Ihn retten", "next": "b10_18", "karma": 2 },
-            { "text": "Maschine abschalten", "next": "b10_19", "karma": -2 }
+            { "text": "Speichern", "next": "b10_14", "gain_item": "dna_stability_sample" }
         ]
     },
 
     "b10_13": {
-        "text": "Das Omnitrix zeigt eine unbekannte Alien-DNA – sie gehoert nicht zur bekannten Datenbank.",
+        "text": "Vilgax-Signatur wird im Hintergrund des Systems erkannt.",
         "choices": [
-            { "text": "Speichern", "next": "b10_14", "gain_item": "unknown_dna" },
-            { "text": "Ignorieren", "next": "b10_15" }
+            { "text": "Konfrontieren", "next": "b10_15" },
+            { "text": "Verbergen", "next": "b10_14", "karma": -1 }
         ]
     },
 
     "b10_14": {
-        "text": "Azmuth erscheint holografisch: 'Jemand manipuliert die DNA-Struktur aller Lebewesen.'",
+        "text": "Der Omnitrix öffnet kurz eine Verbindung zur Null-Void-Dimension.",
         "choices": [
-            { "text": "Helfen", "next": "b10_20", "karma": 2 },
-            { "text": "Ablehnen", "next": "b10_16", "karma": -2 }
+            { "text": "Hineinscannen", "next": "b10_16" },
+            { "text": "Abbrechen", "next": "b10_15" }
         ]
     },
 
     "b10_15": {
-        "text": "Evakuierung beginnt. Bellwood steht unter massivem Druck durch die Mutationen.",
+        "text": "Eine kontrollierte Alien-Form von Ben erscheint instabil.",
         "choices": [
-            { "text": "Menschen retten", "next": "b10_21", "karma": 3 },
-            { "text": "Ben folgen", "next": "b10_16", "karma": -1 }
+            { "text": "Stabilisieren", "next": "b10_17", "required_item": "omnitrix_core_fragment" },
+            { "text": "Angreifen", "next": "b10_16", "karma": -2 }
         ]
     },
 
     "b10_16": {
-        "text": "Zombozo erscheint im Chaos und ernaehrt sich von der Angst der Menschen.",
+        "text": "Null Void Energie beginnt in die Erde zu lecken.",
         "choices": [
-            { "text": "Angreifen", "next": "b10_22" },
-            { "text": "Illusionen durchschauen", "next": "b10_23", "required_item": "mana_crystal" }
+            { "text": "Quelle versiegeln", "next": "b10_18", "required_item": "alien_core_shard" },
+            { "text": "Fliehen", "next": "b10_17", "karma": -2 }
         ]
     },
 
     "b10_17": {
-        "text": "In der Kanalisation findest du gefangene Menschen, die fuer Experimente genutzt wurden.",
+        "text": "Kevin erscheint kurz und erkennt das Energieproblem im Omnitrix.",
         "choices": [
-            { "text": "Befreien", "next": "b10_21", "karma": 3 },
-            { "text": "Weitergehen", "next": "b10_22", "karma": -2 }
+            { "text": "Zusammenarbeiten", "next": "b10_18", "karma": 2 },
+            { "text": "Ablehnen", "next": "b10_19", "karma": -1 }
         ]
     },
 
     "b10_18": {
-        "text": "Dr. Animo: 'Ich wollte die Natur retten… nicht zerstoeren.'",
+        "text": "Azmuth enthüllt: Eine fragmentierte Alien-Entität versucht den Omnitrix neu zu programmieren.",
         "choices": [
-            { "text": "Ihm glauben", "next": "b10_24", "karma": 2 },
-            { "text": "Zweifeln", "next": "b10_19", "karma": -1 }
+            { "text": "Stoppen", "next": "b10_20", "karma": 2 },
+            { "text": "Studieren", "next": "b10_19" }
         ]
     },
 
     "b10_19": {
-        "text": "Die Maschine zieht die restliche Energie in sich selbst zurueck.",
+        "text": "Der Omnitrix beginnt alle gespeicherten DNA-Muster zu überschreiben.",
         "choices": [
-            { "text": "Zerstoeren", "next": "b10_24" },
-            { "text": "Analysieren", "next": "b10_20" }
+            { "text": "Notfall aktivieren", "next": "b10_20" }
         ]
     },
 
     "b10_20": {
-        "text": "Azmuth: 'Etwas ausserhalb dieses Universums veraendert alle DNA gleichzeitig.'",
+        "text": "Ben entscheidet sich, die fragmentierte Alien-Quelle direkt im Null Void zu suchen.",
         "choices": [
-            { "text": "Helfen", "next": "b10_25", "karma": 2 },
-            { "text": "Ablehnen", "next": "b10_22", "karma": -2 }
+            { "text": "Portal öffnen", "next": "b10_21", "required_item": "dna_stability_sample" },
+            { "text": "Zögern", "next": "b10_19", "karma": -1 }
         ]
     },
 
     "b10_21": {
-        "text": "Die Bevoelkerung beginnt sich zu stabilisieren. Bellwood beruhigt sich langsam.",
+        "text": "Im Null Void wird klar: Die Quelle ist eine zerbrochene Version des Omnitrix selbst.",
         "choices": [
-            { "text": "Weiter", "next": "b10_25" }
+            { "text": "Synchronisieren", "next": "b10_22", "karma": 2 },
+            { "text": "Angreifen", "next": "b10_23", "karma": -2 }
         ]
     },
 
     "b10_22": {
-        "text": "Zombozo verstaerkt seine Illusionen und greift die Angst der Stadt direkt an.",
+        "text": "Die Systeme stabilisieren sich kurzzeitig über alle Alien-DNA-Ketten.",
         "choices": [
-            { "text": "Direkt angreifen", "next": "b10_26" },
-            { "text": "Quelle deaktivieren", "next": "b10_27", "required_item": "unknown_dna" }
+            { "text": "Zurückkehren", "next": "b10_24" }
         ]
     },
 
     "b10_23": {
-        "text": "Der Mana-Kristall laesst dich Zombozos Illusionen klar erkennen.",
+        "text": "Die fragmentierte Quelle verstärkt die Instabilität weiter.",
         "choices": [
-            { "text": "Konfrontieren", "next": "b10_26", "karma": 2 },
-            { "text": "Ben warnen", "next": "b10_25" }
+            { "text": "Zurückziehen", "next": "b10_24", "karma": -1 }
         ]
     },
 
     "b10_24": {
-        "text": "Die mutierten Kreaturen stabilisieren sich kurzzeitig und verlieren Kontrolle.",
+        "text": "Azmuth: 'Der Omnitrix hat überlebt, aber etwas Neues ist entstanden.'",
         "choices": [
-            { "text": "Helfen", "next": "b10_28", "karma": 3 },
-            { "text": "Besiegen", "next": "b10_26", "karma": -1 }
+            { "text": "Fortfahren", "next": "b10_25" }
         ]
     },
 
     "b10_25": {
-        "text": "Ben gibt dir einen Proto-Omnitrix Splitter zur Stabilisierung.",
+        "text": "Ben blickt auf den Omnitrix, der nun eine unbekannte zusätzliche Energie enthält.",
         "choices": [
-            { "text": "Nehmen", "next": "b10_28", "gain_item": "proto_omnitrix" }
+            { "text": "Kapitel abschließen", "next": "b10_26" }
         ]
     },
 
     "b10_26": {
-        "text": "Bellwood stabilisiert sich langsam, aber die Energie bleibt instabil.",
-        "choices": [
-            { "text": "Weiter", "next": "b10_29" }
-        ]
-    },
-
-    "b10_27": {
-        "text": "Die Angstquelle wird deaktiviert. Zombozo verliert seine Kraft und verschwindet.",
-        "choices": [
-            { "text": "Ben helfen", "next": "b10_28", "karma": 2 }
-        ]
-    },
-
-    "b10_28": {
-        "text": "Ben: 'Das war nur ein Teil von etwas Groesserem… ich spuere es.'",
-        "choices": [
-            { "text": "Bereit machen", "next": "b10_30" }
-        ]
-    },
-
-    "b10_29": {
-        "text": "Ein Riss im Himmel oeffnet sich ueber Bellwood.",
-        "choices": [
-            { "text": "Hingehen", "next": "b10_30" }
-        ]
-    },
-
-    "b10_30": {
-        "text": "Die Realitaet destabilisiert sich erneut. Der uebergang zu Kapitel 3 wird aktiv.",
+        "text": "Die Verbindung zum Null Void schließt sich langsam. Eine neue Bedrohung bleibt ungelöst.",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
-
-    "c2_sj_start": {
-        "text": "Du landest in einer verbrannten Zukunft. Der Himmel ist rot, die Sonne ist fast verdeckt. Aku herrscht ueber alles, und seine Maschinen patrouillieren die zerstoerten Strassen. Menschen leben versteckt oder sind gefangen genommen worden. Samurai Jack kaempft allein gegen mehrere Roboter, um eine kleine Gruppe Dorfbewohner zu schuetzen.",
+    "sj_01": {
+        "text": "Eine Stadt unter rotem Himmel. Menschen bewegen sich ohne Emotion. Jack erkennt: Ein Resonanz-Turm kontrolliert die Bevölkerung über Klangfrequenzen.",
         "choices": [
-            { "text": "Jack im Kampf unterstuetzen", "next": "sj_1", "karma": 2 },
-            { "text": "Die Stadt nach ueberlebenden durchsuchen", "next": "sj_2" },
-            { "text": "Den Roboterpatrouillen folgen", "next": "sj_3", "karma": -1 }
+            { "text": "Jack ansprechen", "next": "sj_02", "karma": 2 },
+            { "text": "Stadt beobachten", "next": "sj_03" }
         ]
     },
 
-    "sj_1": {
-        "text": "Jack besiegt die letzten Roboter praezise, aber du siehst Erschoepfung in seinen Augen. 'Aku zwingt diese Welt langsam in voellige Hoffnungslosigkeit.'",
+    "sj_02": {
+        "text": "Jack: 'Der Turm nutzt Frequenzen, um Emotionen zu unterdrücken und Energie zu sammeln.'",
         "choices": [
-            { "text": "Jack nach der Situation fragen", "next": "sj_4" },
-            { "text": "Weiterziehen und die Umgebung sichern", "next": "sj_5" }
+            { "text": "Analyse starten", "next": "sj_04" },
+            { "text": "Jack begleiten", "next": "sj_05", "karma": 2 }
         ]
     },
 
-    "sj_2": {
-        "text": "Du findest ein kleines Dorf, dessen Bewohner in Metallkaefigen von Aku’s Waechtern gehalten werden. Sie wirken gebrochen, aber lebendig.",
+    "sj_03": {
+        "text": "Du siehst Bürger, die sich synchron bewegen wie Maschinen.",
         "choices": [
-            { "text": "Dorfbewohner befreien", "next": "sj_5", "karma": 3 },
-            { "text": "Unbemerkt weitergehen", "next": "sj_6", "karma": -2 }
+            { "text": "Signal scannen", "next": "sj_04", "gain_item": "frequency_echo" },
+            { "text": "Wartungspunkte suchen", "next": "sj_06" }
         ]
     },
 
-    "sj_3": {
-        "text": "Die Roboter fuehren dich zu einem alten Tempel, der von dunkler Energie und Aku-Symbolen ueberzogen ist. Die Luft wirkt schwer.",
+    "sj_04": {
+        "text": "Die Frequenz enthält emotionale Fragmente der Bevölkerung.",
         "choices": [
-            { "text": "Tempel betreten", "next": "sj_7" },
-            { "text": "Jack warnen", "next": "sj_4", "karma": 1 }
+            { "text": "Speichern", "next": "sj_07", "gain_item": "emotion_residue" },
+            { "text": "Jack informieren", "next": "sj_05", "karma": 2 }
         ]
     },
 
-    "sj_4": {
-        "text": "Jack: 'Aku versucht, ein uraltes Artefakt zu finden. Es heisst Jewel of Neptune. Es koennte die letzte Hoffnung dieser Welt sein.'",
+    "sj_05": {
+        "text": "Jack erklärt: 'Der Turm verstärkt Kontrolle durch emotionale Rückkopplung.'",
         "choices": [
-            { "text": "Jack bei der Suche helfen", "next": "sj_8", "karma": 2 },
-            { "text": "Eigene Wege gehen", "next": "sj_6", "karma": -1 }
+            { "text": "Gegenfrequenz planen", "next": "sj_08" },
+            { "text": "Untergrund nutzen", "next": "sj_06" }
         ]
     },
 
-    "sj_5": {
-        "text": "Ein alter ueberlebender uebergibt dir eine zerbrochene Schriftrolle. Sie enthaelt Hinweise auf versteckte Zufluchtsorte gegen Aku.",
+    "sj_06": {
+        "text": "Du findest versteckte Wartungstunnel unter der Stadt.",
         "choices": [
-            { "text": "Schriftrolle annehmen", "next": "sj_8", "gain_item": "temple_scroll" },
-            { "text": "Ablehnen", "next": "sj_6" }
+            { "text": "Folgen", "next": "sj_09" },
+            { "text": "Markierungen setzen", "next": "sj_07", "gain_item": "route_map" }
         ]
     },
 
-    "sj_6": {
-        "text": "Die Welt beginnt zu flackern. Strassen verschwinden kurz und tauchen wieder auf. Aku’s Einfluss veraendert die Realitaet selbst.",
+    "sj_07": {
+        "text": "Die Daten zeigen unregelmäßige Energieausbrüche im Turm.",
         "choices": [
-            { "text": "Weitergehen", "next": "sj_9" }
+            { "text": "Speichern", "next": "sj_08" },
+            { "text": "Jack synchronisieren", "next": "sj_10", "karma": 2 }
         ]
     },
 
-    "sj_7": {
-        "text": "Im Tempel erscheint Demongo aus Schatten. Er ruft die Seelen gefallener Krieger, die gegen dich kaempfen sollen.",
+    "sj_08": {
+        "text": "Eine Gegenfrequenz wird theoretisch möglich.",
         "choices": [
-            { "text": "Gegen Demongo kaempfen", "next": "sj_10", "karma": 1 },
-            { "text": "Taktisch zurueckziehen", "next": "sj_9", "karma": -1 }
+            { "text": "Aufbauen", "next": "sj_10" },
+            { "text": "Abwarten", "next": "sj_09" }
         ]
     },
 
-    "sj_8": {
-        "text": "Jack zeigt dir eine Route zum Tempel des Wassers. 'Dort liegt etwas, das Aku fuerchtet.'",
+    "sj_09": {
+        "text": "Die Wartungstunnel führen näher zum Resonanz-Turm.",
         "choices": [
-            { "text": "Route folgen", "next": "sj_11" },
-            { "text": "Alleine vorausgehen", "next": "sj_10" }
-        ]
-    },
-
-    "sj_9": {
-        "text": "Aku’s Stimme hallt durch den Himmel: 'Zeit ist bedeutungslos. Alles gehoert mir.'",
-        "choices": [
-            { "text": "Widerstehen", "next": "sj_11", "karma": 2 },
-            { "text": "Zweifeln", "next": "sj_12", "karma": -2 }
+            { "text": "Weitergehen", "next": "sj_11" },
+            { "text": "Signal verstärken", "next": "sj_10", "gain_item": "signal_amplifier" }
         ]
     },
 
     "sj_10": {
-        "text": "Demongo beschwoert verstorbene Krieger. Die Luft fuellt sich mit Kampfgeistern vergangener Zeiten.",
+        "text": "Der Turm reagiert auf die verstärkten Signale.",
         "choices": [
-            { "text": "Kaempfen", "next": "sj_13" },
-            { "text": "Fliehen", "next": "sj_12", "karma": -1 }
+            { "text": "Drohnen abwehren", "next": "sj_12" },
+            { "text": "Verbergen", "next": "sj_11" }
         ]
     },
 
     "sj_11": {
-        "text": "Jack vertraut dir sein Katana kurz an. 'Nur wer diszipliniert bleibt, kann Aku widerstehen.'",
+        "text": "Du näherst dich dem zentralen Kontrollbereich.",
         "choices": [
-            { "text": "Katana annehmen", "next": "sj_14", "gain_item": "jacks_katana" },
-            { "text": "Ablehnen", "next": "sj_13", "karma": 1 }
+            { "text": "Hacken versuchen", "next": "sj_13", "gain_item": "drone_interface" },
+            { "text": "Jack rufen", "next": "sj_12", "karma": 1 }
         ]
     },
 
     "sj_12": {
-        "text": "Aku’s Maschinen greifen ein verstecktes Dorf an, um letzte Hoffnungssysteme zu zerstoeren.",
+        "text": "Drohnen patrouillieren durch die Straßen.",
         "choices": [
-            { "text": "Dorf verteidigen", "next": "sj_15", "karma": 3 },
-            { "text": "Weitergehen", "next": "sj_13", "karma": -2 }
+            { "text": "Ablenkung erzeugen", "next": "sj_14" },
+            { "text": "Kämpfen", "next": "sj_13", "karma": -2 }
         ]
     },
 
     "sj_13": {
-        "text": "Ein High Priest von Aku erscheint. Er behauptet, Aku sei nur ein Werkzeug einer noch aelteren Macht.",
+        "text": "Der Turm beginnt die Frequenz neu zu kalibrieren.",
         "choices": [
-            { "text": "Anhoeren", "next": "sj_16" },
-            { "text": "Angreifen", "next": "sj_17", "karma": -1 }
+            { "text": "System destabilisieren", "next": "sj_15" },
+            { "text": "Daten sichern", "next": "sj_14" }
         ]
     },
 
     "sj_14": {
-        "text": "Das Katana reagiert auf die Dunkelheit in der Welt und beginnt leicht zu leuchten.",
+        "text": "Du findest ein Kontrollterminal.",
         "choices": [
-            { "text": "Analyse durchfuehren", "next": "sj_16" },
-            { "text": "Weitergehen", "next": "sj_15" }
+            { "text": "Zugriff erzwingen", "next": "sj_15", "required_item": "drone_interface" },
+            { "text": "Jack warnen", "next": "sj_16" }
         ]
     },
 
     "sj_15": {
-        "text": "Die Dorfbewohner danken dir still. Hoffnung ist selten geworden in dieser Welt.",
+        "text": "Das System beginnt zu überlasten.",
         "choices": [
-            { "text": "Weiter", "next": "sj_18", "gain_item": "traveler_supplies" }
+            { "text": "Gegenfrequenz starten", "next": "sj_17" },
+            { "text": "Fliehen", "next": "sj_16", "karma": -2 }
         ]
     },
 
     "sj_16": {
-        "text": "Der High Priest sagt: 'Aku ist nicht das Ende. Nur ein Schatten eines groesseren Zyklus.'",
+        "text": "Der Turm verstärkt seine Kontrolle.",
         "choices": [
-            { "text": "Glauben", "next": "sj_19", "karma": -1 },
-            { "text": "Ablehnen", "next": "sj_17", "karma": 2 }
+            { "text": "Neu ansetzen", "next": "sj_17" },
+            { "text": "Jack unterstützen", "next": "sj_18", "karma": 2 }
         ]
     },
 
     "sj_17": {
-        "text": "Der Priest verwandelt sich in ein Schattenwesen, das von Aku’s Energie korrumpiert wurde.",
+        "text": "Die Gegenfrequenz beginnt zu wirken.",
         "choices": [
-            { "text": "Mit Katana kaempfen", "next": "sj_20", "required_item": "jacks_katana" },
-            { "text": "Ohne Katana kaempfen", "next": "sj_18", "karma": -2 }
+            { "text": "Stabilisieren", "next": "sj_18" },
+            { "text": "Überladen", "next": "sj_19", "karma": -1 }
         ]
     },
 
     "sj_18": {
-        "text": "Jack wird von Robotern eingekreist, aber kaempft weiter ohne aufzugeben.",
+        "text": "Die Bürger zeigen erste echte Emotionen.",
         "choices": [
-            { "text": "Jack unterstuetzen", "next": "sj_21", "karma": 2 },
-            { "text": "Verstecken", "next": "sj_19", "karma": -2 }
+            { "text": "Weiter stabilisieren", "next": "sj_20" },
+            { "text": "System prüfen", "next": "sj_19" }
         ]
     },
 
     "sj_19": {
-        "text": "Aku erscheint am Himmel und verdunkelt die gesamte Stadt.",
+        "text": "Der Turm beginnt zu kollabieren.",
         "choices": [
-            { "text": "Ihm entgegentreten", "next": "sj_22" },
-            { "text": "Fliehen", "next": "sj_21", "karma": -1 }
+            { "text": "Kontrolle sichern", "next": "sj_20" },
+            { "text": "Beobachten", "next": "sj_21" }
         ]
     },
 
     "sj_20": {
-        "text": "Das Katana schneidet durch die korrumpierte Energie und befreit den Priest von Aku’s Einfluss.",
+        "text": "Jack kämpft im Zentrum des Turms.",
         "choices": [
-            { "text": "Weiter", "next": "sj_22", "karma": 3 }
+            { "text": "Unterstützen", "next": "sj_22", "karma": 2 },
+            { "text": "Struktur analysieren", "next": "sj_21" }
         ]
     },
 
     "sj_21": {
-        "text": "Jack: 'Aku gewinnt nicht durch Staerke… sondern durch Zeit.'",
+        "text": "Der Turm verliert Stabilität.",
         "choices": [
-            { "text": "Ihm Mut geben", "next": "sj_23", "karma": 2 },
-            { "text": "Schweigen", "next": "sj_22" }
+            { "text": "Finale Phase", "next": "sj_23" },
+            { "text": "Daten sichern", "next": "sj_22", "gain_item": "core_fragment" }
         ]
     },
 
     "sj_22": {
-        "text": "Der Eingang zum Tempel des Wassers erscheint zwischen den Ruinen.",
+        "text": "Die Struktur bricht weiter zusammen.",
         "choices": [
-            { "text": "Betreten", "next": "sj_24", "required_item": "temple_scroll" },
-            { "text": "Alternative suchen", "next": "sj_23" }
+            { "text": "Stabilisieren", "next": "sj_23" },
+            { "text": "Zurückziehen", "next": "sj_24" }
         ]
     },
 
     "sj_23": {
-        "text": "Demongo kehrt mit einer Armee gefallener Krieger zurueck.",
+        "text": "Der Turm verliert Kontrolle über die Stadt.",
         "choices": [
-            { "text": "Kaempfen", "next": "sj_25", "karma": 1 },
-            { "text": "Zivilisten retten", "next": "sj_24", "karma": 3 }
+            { "text": "Überprüfen", "next": "sj_25" },
+            { "text": "Jack folgen", "next": "sj_24", "karma": 1 }
         ]
     },
 
     "sj_24": {
-        "text": "Im Tempel liegt das Jewel of Neptune – ein Artefakt, das Aku’s Einfluss schwaechen kann.",
+        "text": "Die Stadt beginnt sich zu normalisieren.",
         "choices": [
-            { "text": "Nehmen", "next": "sj_26", "gain_item": "jewel_of_neptune" }
+            { "text": "Ruinen untersuchen", "next": "sj_25" },
+            { "text": "Jack kontaktieren", "next": "sj_26" }
         ]
     },
 
     "sj_25": {
-        "text": "Jack wird verletzt, kaempft aber weiter unbeirrt.",
+        "text": "Der Turm ist nicht mehr aktiv.",
         "choices": [
-            { "text": "Heilen", "next": "sj_26", "required_item": "traveler_supplies" },
-            { "text": "Weiterziehen", "next": "sj_27", "karma": -3 }
+            { "text": "Finale Analyse", "next": "sj_26" },
+            { "text": "System scannen", "next": "sj_27" }
         ]
     },
 
     "sj_26": {
-        "text": "Das Jewel beginnt die Dunkelheit am Himmel zu schwaechen.",
+        "text": "Keine aktiven Signale mehr erkannt.",
         "choices": [
-            { "text": "Aktivieren", "next": "sj_28", "karma": 2 },
-            { "text": "Zurueckhalten", "next": "sj_27", "karma": -1 }
+            { "text": "Bestätigen", "next": "sj_27" },
+            { "text": "Jack informieren", "next": "sj_28", "karma": 1 }
         ]
     },
 
     "sj_27": {
-        "text": "Aku absorbiert Energie aus dem gesamten Nexus und wird staerker.",
+        "text": "Die Stadt ist frei.",
         "choices": [
-            { "text": "Angreifen", "next": "sj_28" },
-            { "text": "Jack schuetzen", "next": "sj_29", "karma": 2 }
+            { "text": "Letzte Kontrolle", "next": "sj_28" },
+            { "text": "Ruhe beobachten", "next": "sj_29" }
         ]
     },
 
     "sj_28": {
-        "text": "Jack kaempft Seite an Seite mit dir gegen Aku selbst.",
+        "text": "Jack bestätigt: 'Die Kontrolle ist gebrochen.'",
         "choices": [
-            { "text": "Katana einsetzen", "next": "sj_30", "required_item": "jacks_katana" },
-            { "text": "Jewel nutzen", "next": "sj_lose", "required_item": "jewel_of_neptune" }
-        ]
-    },
-
-    "sj_lose": {
-        "text": "Das Jewel reicht nicht aus. Aku absorbiert seine Energie vollstaendig.",
-        "choices": [
-            { "text": "Fliehen", "next": "sj_29", "karma": -2 }
+            { "text": "Weiter prüfen", "next": "sj_29" },
+            { "text": "Abschluss", "next": "sj_30" }
         ]
     },
 
     "sj_29": {
-        "text": "Jack: 'Dies ist nur ein Kampf von vielen… aber wir werden nicht aufgeben.'",
+        "text": "Die Stadt ist stabil.",
         "choices": [
-            { "text": "Vorbereiten", "next": "sj_30" }
+            { "text": "Letzte Bestätigung", "next": "sj_30" },
+            { "text": "Ruinen verlassen", "next": "sj_31" }
+        ]
+    },
+    "sj_30": {
+        "text": "Die letzten Resonanzwellen sterben im Stahl der Stadt. Kein künstlicher Klang mehr, nur Wind zwischen den Gebäuden.",
+        "choices": [
+            { "text": "Ruinen betreten", "next": "sj_31" },
+            { "text": "Auf Jack warten", "next": "sj_32", "karma": 1 }
         ]
     },
 
-    "sj_30": {
-        "text": "Aku verschwindet im Nexus-Riss, sein Lachen bleibt zurueck. Der Kampf um alle Welten beginnt.",
+    "sj_31": {
+        "text": "In den Trümmern des Turms findest du Räume voller stiller Verstärker, jetzt nutzlos und kalt.",
         "choices": [
-            { "text": "Kapitel 3 starten", "next": "c3_start" }
+            { "text": "Kernfragmente sichern", "next": "sj_33", "gain_item": "core_fragment" },
+            { "text": "Alles verlassen", "next": "sj_32" }
         ]
     },
+
+    "sj_32": {
+        "text": "Jack steht auf einem zerbrochenen Plattformrest. Die Stadt ist ruhig geworden.",
+        "choices": [
+            { "text": "Jack zuhören", "next": "sj_34" },
+            { "text": "Stadt beobachten", "next": "sj_33" }
+        ]
+    },
+
+    "sj_33": {
+        "text": "Zum ersten Mal bewegen sich die Menschen nicht synchron. Unsicher, aber frei.",
+        "choices": [
+            { "text": "Stabilität prüfen", "next": "sj_34" },
+            { "text": "Einwohner helfen", "next": "sj_35", "karma": 2 }
+        ]
+    },
+
+    "sj_34": {
+        "text": "Jack: 'Der Turm ist gefallen. Doch seine Wirkung hat Spuren hinterlassen.'",
+        "choices": [
+            { "text": "Spuren untersuchen", "next": "sj_35" },
+            { "text": "Weiterziehen vorbereiten", "next": "sj_36" }
+        ]
+    },
+
+    "sj_35": {
+        "text": "Du findest kleine technische Nachbrenner im System — Reste der alten Kontrolle.",
+        "choices": [
+            { "text": "Deaktivieren", "next": "sj_36" },
+            { "text": "Ignorieren", "next": "sj_36", "karma": -1 }
+        ]
+    },
+
+    "sj_36": {
+        "text": "Die Stadt beginnt sich selbst zu regulieren, ohne externe Frequenz.",
+        "choices": [
+            { "text": "Jack folgen", "next": "sj_37" },
+            { "text": "Letzten Blick zurück", "next": "sj_37", "karma": 1 }
+        ]
+    },
+
+    "sj_37": {
+        "text": "Jack wendet sich ab. 'Die Ordnung ist wieder in Bewegung.'",
+        "choices": [
+            { "text": "Mit Jack gehen", "next": "sj_38" },
+            { "text": "Andere Richtung wählen", "next": "sj_38" }
+        ]
+    },
+
+    "sj_38": {
+        "text": "Die Stadt hinter dir wirkt lebendig — unsicher, aber frei von Kontrolle.",
+        "choices": [
+            { "text": "Abschied nehmen", "next": "sj_39" }
+        ]
+    },
+
+    "sj_39": {
+        "text": "Der Resonanz-Turm ist endgültig verstummt. Die Stadt lebt wieder in echter, unberechenbarer Freiheit — mit all ihrer Unvollkommenheit.",
+        "choices": [
+            { "text": "Final bestätigen", "next": "sj_40" }
+        ]
+    },
+
+    "sj_40": {
+        "text": "Die Stadt ist frei von der Resonanz-Kontrolle. Jack verabschiedet sich still und setzt seine Reise fort. Das System ist zerstört — und die Menschen sind endlich wieder sie selbst.",
+        "choices": [
+            { "text": "Weiterziehen", "next": "c3_start" }
+        ]
+    },
+
+
+
+
+
+
+    //AB HIER WEITER Bearbeitung von Kapitel 2
+
+
+
+
+
 
     "c2_rs_start": {
         "text": "Der Park wirkt instabil. Der Himmel flackert wie ein kaputter Bildschirm. Mordecai und Rigby stehen vor dem Eingang des Parks und streiten sich, waehrend Skips bereits etwas Unheilvolles spuert.",
