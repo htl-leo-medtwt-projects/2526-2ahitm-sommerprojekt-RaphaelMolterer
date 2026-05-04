@@ -75,107 +75,99 @@ let gameData = {
     },
 
     "c1_ooa_start": {
-        "text": "Der Nexus stabilisiert fünf getrennte Cartoon-Realitäten. Ooo wirkt instabil, als würde es zwischen Versionen wechseln. Finn, Jake und Marceline sind da – aber etwas stimmt mit ihnen nicht.",
+        "text": "Der Nexus stabilisiert fünf getrennte Cartoon-Realitäten. Ooo wirkt instabil, als würde es zwischen Versionen wechseln. Finn, Jake und Marceline sind alle in der Nähe – und keiner von ihnen wirkt völlig normal.",
         "background": "./game_images/background_at_ooo.png",
-        "character": "./game_images/character_question.png",
         "choices": [
-            { "text": "Finn folgen", "next": "at_1", "karma": 1 },
-            { "text": "Jake folgen", "next": "at_2" },
-            { "text": "Marceline suchen", "next": "at_3", "karma": -1 },
-            { "text": "Dem Wanderer folgen", "next": "at_4" }
+            { "text": "Finn ansprechen", "next": "at_finn" },
+            { "text": "Jake ansprechen", "next": "at_jake" },
+            { "text": "Marceline ansprechen", "next": "at_marceline", "karma": -1 },
+            { "text": "Die Umgebung untersuchen", "next": "at_6" }
         ]
     },
 
-    "at_1": {
-        "text": "Finn wirkt angespannt. 'Ich hatte schon Träume von dir... aber du warst anders darin.'",
+    "at_finn": {
+        "text": "Finn steht angespannt da, die Hände geballt. 'Okay... das fühlt sich nicht wie ein normales Abenteuer an. Eher so, als würde jemand an der Welt ziehen.'",
         "background": "./game_images/background_at_treehouse.png",
         "character": "./game_images/character_at_finn.png",
         "choices": [
-            { "text": "Nach Details fragen", "next": "at_5" },
-            { "text": "Ignorieren", "next": "at_6", "karma": -1 },
-            { "text": "Schwert zeigen lassen", "next": "at_7", "karma": 1 }
+            { "text": "Nach Details fragen", "next": "at_finn_detail" },
+            { "text": "Beruhigen", "next": "at_group" },
+            { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
         ]
     },
 
-    "at_2": {
-        "text": "Jake: 'Die Realität riecht heute wie ein Fehler.'",
+    "at_finn_detail": {
+        "text": "Finn: 'Ich hatte Träume... in denen alles falsch war. Und jetzt fühlt es sich an, als würden die Träume zurück in die Realität sickern.'",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_finnDenken.png",
+        "choices": [
+            { "text": "Das ist gefährlich", "next": "at_11" },
+            { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
+        ]
+    },
+
+    "at_jake": {
+        "text": "Jake liegt halb entspannt da, obwohl die Realität flackert. 'Entweder ist Ooo kaputt oder ich hab wieder komische Sandwiches gegessen.'",
         "background": "./game_images/background_at_treehouse.png",
         "character": "./game_images/character_at_jake.png",
         "choices": [
-            { "text": "Vertrauen", "next": "at_7", "karma": 2 },
-            { "text": "Weggehen", "next": "at_6", "karma": -1 },
-            { "text": "Riechen lassen", "next": "at_8" }
+            { "text": "Das ist ernst", "next": "at_jake_serious" },
+            { "text": "Was spürst du?", "next": "at_jake_sense" },
+            { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
         ]
     },
 
-    "at_3": {
-        "text": "Marceline spielt eine schiefe Melodie. 'Das hier ist nicht Ooo wie es sein sollte.'",
+    "at_jake_serious": {
+        "text": "Jake richtet sich auf. 'Okay, ernst-Modus. Irgendwas greift hier von außen rein. Und es fühlt sich nicht freundlich an.'",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_jake2.png",
+        "choices": [
+            { "text": "Untersuchen", "next": "at_8" },
+            { "text": "Vertrauen", "next": "at_7", "karma": 1 }
+        ]
+    },
+
+    "at_jake_sense": {
+        "text": "Jake schnuppert in die Luft. 'Das riecht wie… Realität, die nicht fertig gerendert wurde.'",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_jake2.png",
+        "choices": [
+            { "text": "Untersuchen", "next": "at_8" },
+            { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
+        ]
+    },
+
+    "at_marceline": {
+        "text": "Marceline spielt eine verzerrte Melodie. 'Ooo klingt heute wie ein kaputtes Lied… und jemand hat den Text geändert.' Sie schaut in eine Richtung, die du nicht definieren kannst.",
         "background": "./game_images/background_at_cave.png",
         "character": "./game_images/character_at_marceline.png",
         "choices": [
             { "text": "Zuhören", "next": "at_9", "karma": 1 },
-            { "text": "Gehen", "next": "at_6", "karma": -1 },
-            { "text": "Fragen was sie meint", "next": "at_10" }
+            { "text": "Nachfragen", "next": "at_10" },
+            { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
         ]
     },
 
-    "at_4": {
-        "text": "Ein Fremder sagt: 'Der Lich hat viele Gesichter. Auch bekannte.'",
+    "at_group": {
+        "text": "Finn, Jake und Marceline stehen gemeinsam in der instabilen Realität von Ooo. Jeder reagiert anders auf dieselbe Störung – aber alle spüren sie.",
         "choices": [
-            { "text": "Glauben", "next": "at_7", "karma": 2 },
-            { "text": "Ignorieren", "next": "at_6", "karma": -2 }
-        ]
-    },
-
-    "at_5": {
-        "text": "Finn: 'Es gibt Erinnerungen, die ich nicht erlebt habe.'",
-        "choices": [
-            { "text": "Weiter fragen", "next": "at_11" },
-            { "text": "Thema wechseln", "next": "at_6" }
+            { "text": "Finn beobachten", "next": "at_finn" },
+            { "text": "Jake beobachten", "next": "at_jake" },
+            { "text": "Marceline beobachten", "next": "at_marceline" },
+            { "text": "Umgebung untersuchen", "next": "at_6" }
         ]
     },
 
     "at_6": {
-        "text": "Die Welt flackert kurz. Ooo verliert Stabilität.",
+        "text": "Die Welt flackert. Ooo verliert kurz seine Stabilität.",
+        "background": "./game_images/background_at_oooGlitch.png",
         "choices": [
             { "text": "Weitergehen", "next": "at_12" }
         ]
     },
 
-    "at_7": {
-        "text": "Jake wird ernst. 'Etwas ist in der Struktur von Ooo.'",
-        "choices": [
-            { "text": "Untersuchen", "next": "at_13" },
-            { "text": "Ignorieren", "next": "at_12", "karma": -1 }
-        ]
-    },
-
-    "at_8": {
-        "text": "Jake bemerkt einen Riss in der Luft.",
-        "choices": [
-            { "text": "Untersuchen", "next": "at_13" },
-            { "text": "Zurückziehen", "next": "at_6", "karma": -1 }
-        ]
-    },
-
-    "at_9": {
-        "text": "Marceline: 'Etwas benutzt Ooo als Schnittstelle.'",
-        "choices": [
-            { "text": "Weiter zuhören", "next": "at_11", "karma": 1 },
-            { "text": "Ablehnen", "next": "at_6", "karma": -2 }
-        ]
-    },
-
-    "at_10": {
-        "text": "Marceline stoppt. 'Nicht alles hier ist echt.'",
-        "choices": [
-            { "text": "Glauben", "next": "at_11", "karma": 2 },
-            { "text": "Zweifeln", "next": "at_6", "karma": -1 }
-        ]
-    },
-
     "at_11": {
-        "text": "Finn zeigt dir einen seltsamen Schatten im Himmel.",
+        "text": "Finn zeigt in den Himmel. Ein Schatten formt sich dort – ständig wechselnd, nie stabil.",
         "choices": [
             { "text": "Ansehen", "next": "at_13" },
             { "text": "Ignorieren", "next": "at_12", "karma": -1 }
@@ -190,7 +182,7 @@ let gameData = {
     },
 
     "at_13": {
-        "text": "Der Schatten im Himmel sieht aus wie ein Gesicht, das sich verändert.",
+        "text": "Der Schatten im Himmel sieht aus wie ein Gesicht, das sich ständig neu formt.",
         "choices": [
             { "text": "Berühren versuchen", "next": "at_15", "karma": 2 },
             { "text": "Zurückweichen", "next": "at_14" }
@@ -198,7 +190,7 @@ let gameData = {
     },
 
     "at_14": {
-        "text": "Jake öffnet einen kleinen stabilen Riss.",
+        "text": "Jake öffnet einen stabilen Riss in der Realität.",
         "choices": [
             { "text": "Durchgehen", "next": "at_16" },
             { "text": "Zögern", "next": "at_12", "karma": -1 }
@@ -206,7 +198,7 @@ let gameData = {
     },
 
     "at_15": {
-        "text": "Du siehst eine zweite Version von Finn, die dich anstarrt.",
+        "text": "Du siehst eine zweite Version von Finn, die dich direkt anstarrt.",
         "choices": [
             { "text": "Konfrontieren", "next": "at_17", "karma": -2 },
             { "text": "Akzeptieren", "next": "at_16", "karma": 1 }
@@ -214,7 +206,7 @@ let gameData = {
     },
 
     "at_16": {
-        "text": "Der Lich erscheint kurz im Himmel als Silhouette.",
+        "text": "Im Himmel erscheint kurz die Silhouette des Lich.",
         "choices": [
             { "text": "Angreifen", "next": "at_18", "karma": -2 },
             { "text": "Beobachten", "next": "at_18" }
@@ -238,7 +230,7 @@ let gameData = {
     },
 
     "at_19": {
-        "text": "Marceline gibt dir einen kleinen Schatten-Splitter.",
+        "text": "Marceline reicht dir einen Schatten-Splitter.",
         "choices": [
             { "text": "Nehmen", "next": "at_20", "gain_item": "shadow_fragment" }
         ]
@@ -260,7 +252,7 @@ let gameData = {
     },
 
     "at_22": {
-        "text": "Der Himmel zeigt mehrere Ooo-Versionen gleichzeitig.",
+        "text": "Mehrere Versionen von Ooo überlagern sich am Himmel.",
         "choices": [
             { "text": "Analysieren", "next": "at_23" },
             { "text": "Ignorieren", "next": "at_23", "karma": -1 }
@@ -300,7 +292,7 @@ let gameData = {
     },
 
     "at_27": {
-        "text": "Alle drei kämpfen gemeinsam gegen den Lich.",
+        "text": "Alle kämpfen gemeinsam gegen den Lich.",
         "choices": [
             { "text": "Unterstützen", "next": "at_28", "karma": 2 },
             { "text": "Zögern", "next": "at_28", "karma": -1 }
@@ -308,7 +300,7 @@ let gameData = {
     },
 
     "at_28": {
-        "text": "Der Lich zerfällt in mehrere Fragmente.",
+        "text": "Der Lich zerfällt in Fragmente.",
         "choices": [
             { "text": "Fragment nehmen", "next": "at_29", "gain_item": "lich_fragment" },
             { "text": "Ignorieren", "next": "at_29" }
@@ -316,14 +308,14 @@ let gameData = {
     },
 
     "at_29": {
-        "text": "Ooo stabilisiert sich kurz, aber der Nexus öffnet sich am Himmel.",
+        "text": "Ooo stabilisiert sich kurz, doch der Nexus öffnet sich am Himmel.",
         "choices": [
             { "text": "Weiter", "next": "at_30" }
         ]
     },
 
     "at_30": {
-        "text": "Der Nexus zieht Ooo vollständig in die Verbindung aller Welten. Kapitel 2 wird vorbereitet.",
+        "text": "Der Nexus zieht Ooo in die Verbindung aller Welten. Kapitel 2 wird vorbereitet.",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
@@ -2516,7 +2508,20 @@ let gameData = {
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
-    }
+    },
+
+    "c3_start": {
+        "text": "Kapitel 3. Der Nexus ist nicht mehr stabil. Die Cartoon-Welten sind nicht mehr getrennte Orte, sondern überlappende Kriegszonen aus Realität, Erinnerung und Fehlern. Etwas beginnt aktiv zu jagen.",
+        "choices": [
+            { "text": "Steven Universe", "next": "c3_su_start" },
+            { "text": "Scooby-Doo", "next": "c3_sd_start" },
+            { "text": "Ninja Turtles", "next": "c3_tmnt_start" },
+            { "text": "Super Hero Squad", "next": "c3_shs_start" },
+            { "text": "Total Drama Island", "next": "c3_tdi_start" }
+        ]
+    },
+
+
 };
 
 

@@ -99,7 +99,7 @@ body {
 
 #game-character {
     position: absolute;
-    bottom: 25%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     max-height: 100vh;
