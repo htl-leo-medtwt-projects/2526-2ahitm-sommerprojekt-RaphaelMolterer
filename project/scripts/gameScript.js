@@ -402,6 +402,8 @@ let gameData = {
 
     "gb_2": {
         "text": "Darwin wirkt nervös. 'Carrie hat aus Versehen die Stromversorgung der Schule gegruselt und jetzt spinnen alle elektronischen Sachen.'",
+        "background": "./game_images/background_gb_school.png",
+
         "choices": [
             { "text": "Helfen", "next": "gb_7", "karma": 2 },
             { "text": "Darüber lachen", "next": "gb_6", "karma": -1 },
@@ -623,51 +625,61 @@ let gameData = {
     },
 
     "c1_dx_start": {
-        "text": "Dexters Labor existiert in mehreren überlagerten Versionen gleichzeitig. Maschinen laufen ohne Bedienung. Dee Dee erscheint an Orten, an denen sie nicht sein sollte. Mandark beobachtet alles mit einem zu ruhigen Lächeln.",
+        "text": "Dexters Labor existiert in mehreren leicht versetzten Versionen gleichzeitig. Monitore flackern zwischen verschiedenen Experimenten, Türen führen nicht immer in denselben Raum und irgendwo läuft ein Alarm, den niemand ausgelöst hat. Dee Dee taucht ständig an unmöglichen Orten auf, während Mandark alles mit verdächtig ruhigem Lächeln beobachtet.",
+        "background": "./game_images/background_dx_lab.png",
         "choices": [
-            { "text": "Dexter folgen", "next": "dx_1", "karma": 1 },
-            { "text": "Mandark folgen", "next": "dx_2", "karma": -1 },
-            { "text": "Labor untersuchen", "next": "dx_3" },
-            { "text": "Dee Dee folgen", "next": "dx_4", "karma": 2 }
+            { "text": "Mit Dexter reden", "next": "dx_dexter", "karma": 1 },
+            { "text": "Mit Mandark reden", "next": "dx_mandark", "karma": -1 },
+            { "text": "Das Labor untersuchen", "next": "dx_3" },
+            { "text": "Dee Dee folgen", "next": "dx_deedee", "karma": 2 }
         ]
     },
 
-    "dx_1": {
-        "text": "Dexter: 'Ich habe dieses Szenario bereits mehrfach simuliert. Du gehörst nicht in diese Iteration.'",
+    "dx_dexter": {
+        "text": "Dexter hämmert hektisch auf seine Tastatur ein. 'Nein, nein, nein! Diese Simulation sollte stabil sein! Du gehörst definitiv nicht in diese Iteration!'",
+        "background": "./game_images/background_dx_controlroom.png",
+        "character": "./game_images/character_dx_dexter.png",
         "choices": [
             { "text": "Nachfragen", "next": "dx_5" },
-            { "text": "Ignorieren", "next": "dx_6", "karma": -1 },
-            { "text": "Beweise verlangen", "next": "dx_7", "karma": 1 }
+            { "text": "Beruhigen", "next": "dx_6" },
+            { "text": "Beweise verlangen", "next": "dx_7", "karma": 1 },
+            { "text": "Zurück zum Labor", "next": "c1_dx_start" }
         ]
     },
 
-    "dx_2": {
-        "text": "Mandark: 'Dexter versteht nur lineare Realität. Das hier ist rekursiv.'",
+    "dx_mandark": {
+        "text": "Mandark verschränkt die Arme. 'Dexter versteht nur lineare Wissenschaft. Aber Realität ist chaotisch… rekursiv… wunderschön instabil.'",
+        "background": "./game_images/background_dx_darklab.png",
+        "character": "./game_images/character_dx_mandark.png",
         "choices": [
-            { "text": "Zustimmen", "next": "dx_7", "karma": 2 },
-            { "text": "Zweifeln", "next": "dx_6", "karma": -2 },
-            { "text": "Weitergehen", "next": "dx_8" }
+            { "text": "Zuhören", "next": "dx_7", "karma": 1 },
+            { "text": "Ihm misstrauen", "next": "dx_6", "karma": -2 },
+            { "text": "Zurück zum Labor", "next": "c1_dx_start" }
+        ]
+    },
+
+    "dx_deedee": {
+        "text": "Dee Dee tanzt zwischen Maschinen hindurch, ohne die flackernden Warnungen zu beachten. 'Ooooh! Dieses Labor macht heute lustige Geräusche!'",
+        "background": "./game_images/background_dx_hallway.png",
+        "character": "./game_images/character_dx_deedee.png",
+        "choices": [
+            { "text": "Fragen was sie sieht", "next": "dx_10" },
+            { "text": "Ihr folgen", "next": "dx_8", "karma": 1 },
+            { "text": "Zurück zum Labor", "next": "c1_dx_start" }
         ]
     },
 
     "dx_3": {
-        "text": "Du findest eine Datei: REALITY_PATCH_LOG. Sie wurde hunderte Male überschrieben.",
+        "text": "Du findest eine Datei namens REALITY_PATCH_LOG. Sie wurde hunderte Male überschrieben.",
+        "background": "./game_images/background_dx_terminal.png",
         "choices": [
             { "text": "Datei analysieren", "next": "dx_9", "gain_item": "reality_log" },
-            { "text": "Schließen", "next": "dx_6", "karma": -1 }
-        ]
-    },
-
-    "dx_4": {
-        "text": "Dee Dee lächelt: 'Ich bin nur ein Fehler im System... oder die Lösung.'",
-        "choices": [
-            { "text": "Vertrauen", "next": "dx_10", "karma": 2 },
-            { "text": "Misstrauen", "next": "dx_6", "karma": -2 }
+            { "text": "Terminal schließen", "next": "dx_6", "karma": -1 }
         ]
     },
 
     "dx_5": {
-        "text": "Dexter zeigt dir mehrere Versionen von dir selbst im Laborbildschirm.",
+        "text": "Dexter zeigt dir mehrere Monitore. Auf jedem läuft eine leicht andere Version des Labors — und in jedem stehst du an anderer Stelle.",
         "choices": [
             { "text": "Untersuchen", "next": "dx_11" },
             { "text": "Abwenden", "next": "dx_6", "karma": -1 }
@@ -675,14 +687,15 @@ let gameData = {
     },
 
     "dx_6": {
-        "text": "Das Labor beginnt sich selbst neu zu kompilieren.",
+        "text": "Das Labor beginnt sich selbst neu zu kompilieren. Wände verschieben sich und Maschinen erscheinen doppelt.",
+        "background": "./game_images/background_dx_glitch.png",
         "choices": [
             { "text": "Weiter", "next": "dx_12" }
         ]
     },
 
     "dx_7": {
-        "text": "Mandark: 'Du bist ein Fremdprozess in Dexters Simulation.'",
+        "text": "Mandark grinst leicht. 'Du bist ein Fremdprozess in Dexters System. Deshalb reagiert alles auf dich.'",
         "choices": [
             { "text": "Akzeptieren", "next": "dx_10", "karma": 2 },
             { "text": "Ablehnen", "next": "dx_12", "karma": -2 }
@@ -690,30 +703,30 @@ let gameData = {
     },
 
     "dx_8": {
-        "text": "Dee Dee verändert unbewusst die Laborstruktur.",
+        "text": "Dee Dee dreht sich lachend im Kreis. Dabei verändern sich die Korridore des Labors um sie herum.",
         "choices": [
-            { "text": "Folgen", "next": "dx_13" },
-            { "text": "Ignorieren", "next": "dx_12", "karma": -1 }
+            { "text": "Weiter folgen", "next": "dx_13" },
+            { "text": "Zurückziehen", "next": "dx_12", "karma": -1 }
         ]
     },
 
     "dx_9": {
-        "text": "Die Logdatei zeigt: Realität wurde mehrfach gepatcht und zurückgesetzt.",
+        "text": "Die Datei zeigt, dass Dexter die Realität des Labors mehrfach zurückgesetzt hat.",
         "choices": [
             { "text": "Speichern", "next": "dx_13", "gain_item": "patch_core" }
         ]
     },
 
     "dx_10": {
-        "text": "Dexter: 'Dee Dee ist stabiler als jede meiner Formeln.'",
+        "text": "Dee Dee schaut plötzlich ernst. 'Manchmal erinnert sich das Labor an Sachen, die noch gar nicht passiert sind.'",
         "choices": [
             { "text": "Zuhören", "next": "dx_14", "karma": 2 },
-            { "text": "Zweifeln", "next": "dx_12", "karma": -2 }
+            { "text": "Nicht ernst nehmen", "next": "dx_12", "karma": -2 }
         ]
     },
 
     "dx_11": {
-        "text": "Du siehst unzählige Dexter-Varianten, die alle leicht unterschiedlich sind.",
+        "text": "Du siehst unzählige Dexter-Versionen. Manche arbeiten friedlich. Andere beobachten dich direkt.",
         "choices": [
             { "text": "Analysieren", "next": "dx_14" },
             { "text": "Ignorieren", "next": "dx_12", "karma": -1 }
@@ -721,22 +734,22 @@ let gameData = {
     },
 
     "dx_12": {
-        "text": "Ein Systemfehler breitet sich durch das Labor aus.",
+        "text": "Ein schwerer Systemfehler breitet sich durch das Labor aus.",
         "choices": [
             { "text": "Weitergehen", "next": "dx_15" }
         ]
     },
 
     "dx_13": {
-        "text": "Dee Dee berührt eine Maschine und stabilisiert sie kurzzeitig.",
+        "text": "Dee Dee berührt eine instabile Maschine — plötzlich stabilisiert sie sich.",
         "choices": [
             { "text": "Näher beobachten", "next": "dx_16" },
-            { "text": "Zurückziehen", "next": "dx_15" }
+            { "text": "Weitergehen", "next": "dx_15" }
         ]
     },
 
     "dx_14": {
-        "text": "Mandark: 'Dieses Labor ist nur ein Layer in einer größeren Struktur.'",
+        "text": "Mandark deutet auf die Decke des Labors. 'Dieses Labor ist nur ein Layer in einer viel größeren Struktur.'",
         "choices": [
             { "text": "Glauben", "next": "dx_17", "karma": 2 },
             { "text": "Zweifeln", "next": "dx_15", "karma": -2 }
@@ -751,29 +764,29 @@ let gameData = {
     },
 
     "dx_16": {
-        "text": "Dexter erkennt: Dee Dee ist ein Stabilitätsanker der Realität.",
+        "text": "Dexter starrt auf seine Scanner. 'Das ist unmöglich… Dee Dee stabilisiert die Realität einfach durch ihre Anwesenheit.'",
         "choices": [
             { "text": "Speichern", "next": "dx_17", "gain_item": "stability_anchor" }
         ]
     },
 
     "dx_17": {
-        "text": "Dexter: 'Wenn sie entfernt wird, kollabiert alles.'",
+        "text": "Dexter wirkt ungewöhnlich nervös. 'Wenn Dee Dee verschwindet, könnte das ganze Labor kollabieren.'",
         "choices": [
-            { "text": "Schützen", "next": "dx_18", "karma": 2 },
+            { "text": "Dee Dee schützen", "next": "dx_18", "karma": 2 },
             { "text": "Ignorieren", "next": "dx_18", "karma": -2 }
         ]
     },
 
     "dx_18": {
-        "text": "Das Labor zeigt einen Riss in der Realität unter dem Boden.",
+        "text": "Unter dem Labor öffnet sich ein flackernder Realitätsriss.",
         "choices": [
-            { "text": "Untersuchen", "next": "dx_19" },
+            { "text": "Untersuchen", "next": "dx_19" }
         ]
     },
 
     "dx_19": {
-        "text": "Der Riss zeigt mehrere Labore gleichzeitig überlagert.",
+        "text": "Im Riss erscheinen mehrere Versionen des Labors gleichzeitig.",
         "choices": [
             { "text": "Analysieren", "next": "dx_20", "gain_item": "lab_rift_data" },
             { "text": "Berühren", "next": "dx_20", "karma": 2 }
@@ -781,7 +794,7 @@ let gameData = {
     },
 
     "dx_20": {
-        "text": "Mandark: 'Dexter hat das System mehrfach neu geschrieben.'",
+        "text": "Mandark lächelt zufrieden. 'Dexter hat das System so oft neu geschrieben, dass es sich jetzt selbst überschreibt.'",
         "choices": [
             { "text": "Zuhören", "next": "dx_21", "karma": 2 },
             { "text": "Ablehnen", "next": "dx_21", "karma": -2 }
@@ -789,15 +802,15 @@ let gameData = {
     },
 
     "dx_21": {
-        "text": "Dee Dee sagt: 'Ich erinnere mich an Dinge, die nie passiert sind.'",
+        "text": "Dee Dee blickt in den Riss. 'Ich erinnere mich an Dinge, die nie passiert sind.'",
         "choices": [
-            { "text": "Fragen", "next": "dx_22" },
+            { "text": "Nachfragen", "next": "dx_22" },
             { "text": "Ignorieren", "next": "dx_15", "karma": -1 }
         ]
     },
 
     "dx_22": {
-        "text": "Dexter zeigt dir ein Gerät namens REALITY COMPILER.",
+        "text": "Dexter aktiviert eine gewaltige Maschine mit der Aufschrift REALITY COMPILER.",
         "choices": [
             { "text": "Anfassen", "next": "dx_23", "karma": 2 },
             { "text": "Ablehnen", "next": "dx_15", "karma": -2 }
@@ -805,14 +818,14 @@ let gameData = {
     },
 
     "dx_23": {
-        "text": "Du siehst, dass jede Handlung eine neue Version der Welt erzeugt.",
+        "text": "Du siehst unzählige mögliche Versionen des Labors entstehen und verschwinden.",
         "choices": [
             { "text": "Analysieren", "next": "dx_24" }
         ]
     },
 
     "dx_24": {
-        "text": "Dexter: 'Wir sind nicht die Originalinstanzen.'",
+        "text": "Dexter atmet tief durch. 'Wir sind wahrscheinlich nicht einmal die Originalversionen von uns.'",
         "choices": [
             { "text": "Akzeptieren", "next": "dx_25", "karma": 1 },
             { "text": "Ablehnen", "next": "dx_25", "karma": -1 }
@@ -835,7 +848,7 @@ let gameData = {
     },
 
     "dx_27": {
-        "text": "Dee Dee stabilisiert kurz die gesamte Realität.",
+        "text": "Dee Dee stabilisiert für einen kurzen Moment das gesamte Labor.",
         "choices": [
             { "text": "Vertrauen", "next": "dx_28", "karma": 2 },
             { "text": "Misstrauen", "next": "dx_28", "karma": -2 }
@@ -843,7 +856,7 @@ let gameData = {
     },
 
     "dx_28": {
-        "text": "Dexter: 'Etwas außerhalb dieses Systems greift ein.'",
+        "text": "Dexter blickt auf die flackernden Monitore. 'Etwas außerhalb unseres Systems greift ein.'",
         "choices": [
             { "text": "Verstehen", "next": "dx_29", "karma": 2 },
             { "text": "Zweifeln", "next": "dx_29", "karma": -2 }
@@ -858,113 +871,48 @@ let gameData = {
     },
 
     "dx_30": {
-        "text": "Das Labor kollabiert in den Nexus und öffnet die Verbindung zu allen Realitäten. Kapitel 2 wird vorbereitet.",
+        "text": "Dexters Labor kollabiert in den Nexus und öffnet die Verbindung zu allen Realitäten. Kapitel 2 wird vorbereitet.",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
     },
 
     "c1_ppg_start": {
-        "text": "Townsville wirkt stabil, aber falsch getaktet. Gebäude wiederholen sich minimal versetzt. Blossom, Bubbles und Buttercup wirken, als würden sie dich schon kennen – aus einer anderen Version.",
+        "text": "Townsville hat einen dieser Tage, an denen alles leicht daneben wirkt – Ampeln schalten zu spät, der Himmel flackert kurz und Professor Utoniums Labor klingt, als würde etwas darin nicht richtig schließen.",
         "choices": [
-            { "text": "Blossom folgen", "next": "ppg_1", "karma": 1 },
-            { "text": "Bubbles folgen", "next": "ppg_2", "karma": 2 },
+            { "text": "Blossom helfen", "next": "ppg_1", "karma": 1 },
+            { "text": "Bubbles begleiten", "next": "ppg_2", "karma": 2 },
             { "text": "Buttercup folgen", "next": "ppg_3", "karma": -1 },
             { "text": "Professor Utonium suchen", "next": "ppg_4" }
         ]
     },
 
-    "ppg_1": {
-        "text": "Blossom: 'Chemical X reagiert auf dich. Das ist nicht normal.'",
-        "choices": [
-            { "text": "Nachfragen", "next": "ppg_5" },
-            { "text": "Ignorieren", "next": "ppg_6", "karma": -1 },
-            { "text": "Beweise verlangen", "next": "ppg_7", "karma": 1 }
-        ]
-    },
-
-    "ppg_2": {
-        "text": "Bubbles: 'Ich sehe manchmal andere Townsville-Versionen... sie sind traurig.'",
-        "choices": [
-            { "text": "Trösten", "next": "ppg_5", "karma": 3 },
-            { "text": "Zweifeln", "next": "ppg_6", "karma": -2 },
-            { "text": "Fragen welche Versionen", "next": "ppg_7" }
-        ]
-    },
-
-    "ppg_3": {
-        "text": "Buttercup: 'Wenn etwas falsch ist, schlag ich es kaputt.'",
-        "choices": [
-            { "text": "Unterstützen", "next": "ppg_6", "karma": -2 },
-            { "text": "Stoppen", "next": "ppg_5", "karma": 2 },
-            { "text": "Beobachten", "next": "ppg_8" }
-        ]
-    },
-
-    "ppg_4": {
-        "text": "Professor Utonium wirkt kurz nicht vollständig real. 'Ich habe euch mehrfach erschaffen... oder nicht?'",
-        "choices": [
-            { "text": "Fragen", "next": "ppg_7" },
-            { "text": "Ignorieren", "next": "ppg_6", "karma": -1 }
-        ]
-    },
-
     "ppg_5": {
-        "text": "Blossom zeigt dir eine instabile Chemical X Analyse. Sie flackert wie ein kaputter Code.",
+        "text": "Blossom zeigt dir Messdaten aus dem Labor. Chemical X verhält sich unberechenbar, als würde es auf etwas reagieren, das außerhalb von Townsville liegt.",
         "choices": [
-            { "text": "Analysieren", "next": "ppg_9", "gain_item": "chemical_x_data" },
-            { "text": "Zurückziehen", "next": "ppg_6", "karma": -1 }
-        ]
-    },
-
-    "ppg_6": {
-        "text": "Townsville beginnt sich kurz zu wiederholen – als würde die Realität einen Frame springen.",
-        "choices": [
-            { "text": "Weiter", "next": "ppg_10" }
-        ]
-    },
-
-    "ppg_7": {
-        "text": "Blossom: 'Ihr seid nicht die erste Generation der Powerpuff Girls.'",
-        "choices": [
-            { "text": "Glauben", "next": "ppg_11", "karma": 2 },
-            { "text": "Zweifeln", "next": "ppg_10", "karma": -2 }
+            { "text": "Daten sichern", "next": "ppg_9", "gain_item": "chemical_x_data" },
+            { "text": "Zurückgehen", "next": "ppg_6", "karma": -1 }
         ]
     },
 
     "ppg_8": {
-        "text": "Buttercup bemerkt einen Riss im Himmel über Townsville.",
+        "text": "Am Himmel über Townsville entstehen kurze grüne Störungen, die sofort wieder verschwinden.",
         "choices": [
             { "text": "Untersuchen", "next": "ppg_12" },
             { "text": "Ignorieren", "next": "ppg_10", "karma": -1 }
         ]
     },
 
-    "ppg_9": {
-        "text": "Die Chemical X Daten zeigen mehrere Inkarnationen von Townsville.",
-        "choices": [
-            { "text": "Speichern", "next": "ppg_11", "gain_item": "chemical_x_core" }
-        ]
-    },
-
-    "ppg_10": {
-        "text": "Bubbles sagt leise: 'Etwas benutzt uns als Schutzschild.'",
-        "choices": [
-            { "text": "Zuhören", "next": "ppg_11", "karma": 2 },
-            { "text": "Ablehnen", "next": "ppg_13", "karma": -2 }
-        ]
-    },
-
     "ppg_11": {
-        "text": "Professor Utonium: 'Chemical X verbindet alle Versionen von uns.'",
+        "text": "Professor Utonium erkennt ein Muster in den Daten. 'Chemical X verbindet sich mit etwas anderem... aber ich weiß nicht womit.'",
         "choices": [
             { "text": "Verstehen", "next": "ppg_13", "karma": 2 },
-            { "text": "Ignorieren", "next": "ppg_12", "karma": -1 }
+            { "text": "Zweifeln", "next": "ppg_12", "karma": -1 }
         ]
     },
 
     "ppg_12": {
-        "text": "Der Riss im Himmel zeigt mehrere Townsville-Schichten gleichzeitig.",
+        "text": "Der Energieriss über Townsville wird stabiler und beginnt sichtbar zu bleiben.",
         "choices": [
             { "text": "Analysieren", "next": "ppg_14", "gain_item": "townsville_rift" },
             { "text": "Berühren", "next": "ppg_13", "karma": 2 }
@@ -972,177 +920,93 @@ let gameData = {
     },
 
     "ppg_13": {
-        "text": "Buttercup verliert kurz die Kontrolle über ihre Kraft.",
+        "text": "Buttercup verliert kurz die Kontrolle über ihre Kräfte und schlägt versehentlich einen Teil der Stadtstruktur weg.",
         "choices": [
-            { "text": "Helfen", "next": "ppg_15", "karma": 2 },
-            { "text": "Beobachten", "next": "ppg_14" }
-        ]
-    },
-
-    "ppg_14": {
-        "text": "Blossom: 'Wir sind Experimente in mehreren Iterationen.'",
-        "choices": [
-            { "text": "Akzeptieren", "next": "ppg_15", "karma": 1 },
-            { "text": "Ablehnen", "next": "ppg_16", "karma": -2 }
+            { "text": "Helfen stabilisieren", "next": "ppg_15", "karma": 2 },
+            { "text": "Zusehen", "next": "ppg_14" }
         ]
     },
 
     "ppg_15": {
-        "text": "Bubbles übergibt dir ein stabilisierendes Emotion-Fragment.",
+        "text": "Bubbles gibt dir ein kleines emotionales Stabilitätsfragment. 'Das hilft manchmal, wenn alles zu chaotisch wird.'",
         "choices": [
             { "text": "Nehmen", "next": "ppg_16", "gain_item": "emotion_core" }
         ]
     },
 
-    "ppg_16": {
-        "text": "Mojo Jojo taucht auf: 'Ich habe nichts zerstört... noch nicht.'",
-        "choices": [
-            { "text": "Glauben", "next": "ppg_17", "karma": -2 },
-            { "text": "Beobachten", "next": "ppg_17" }
-        ]
-    },
-
-    "ppg_17": {
-        "text": "Townsville beginnt sich in Schleifen zu bewegen.",
-        "choices": [
-            { "text": "Weitergehen", "next": "ppg_18" }
-        ]
-    },
-
-    "ppg_18": {
-        "text": "Blossom: 'Etwas schreibt unsere Realität neu.'",
-        "choices": [
-            { "text": "Zustimmen", "next": "ppg_19", "karma": 2 },
-            { "text": "Zweifeln", "next": "ppg_19", "karma": -2 }
-        ]
-    },
-
-    "ppg_19": {
-        "text": "Der Himmel zeigt kurz den Nexus über Townsville.",
-        "choices": [
-            { "text": "Beobachten", "next": "ppg_20" }
-        ]
-    },
-
     "ppg_20": {
-        "text": "Professor Utonium aktiviert ein verborgenes Protokoll.",
+        "text": "Professor Utonium aktiviert ein Notfallprogramm, um Chemical X zu stabilisieren – aber es braucht eine externe Verbindung zum Riss.",
         "choices": [
-            { "text": "Stoppen", "next": "ppg_21", "karma": 1 },
-            { "text": "Zulassen", "next": "ppg_21", "karma": -1 }
-        ]
-    },
-
-    "ppg_21": {
-        "text": "Buttercup: 'Ich spüre Versionen von mir, die ich nicht bin.'",
-        "choices": [
-            { "text": "Verstehen", "next": "ppg_22", "karma": 2 },
-            { "text": "Ignorieren", "next": "ppg_22", "karma": -2 }
+            { "text": "Helfen", "next": "ppg_21", "karma": 1 },
+            { "text": "Abwarten", "next": "ppg_21", "karma": -1 }
         ]
     },
 
     "ppg_22": {
-        "text": "Mojo Jojo zeigt dir einen Riss unter Townsville.",
+        "text": "Mojo Jojo zeigt auf den Energieriss unter dem Labor. 'Ich habe ihn nicht verursacht... aber ich kann ihn öffnen.'",
         "choices": [
             { "text": "Untersuchen", "next": "ppg_23" }
         ]
     },
 
     "ppg_23": {
-        "text": "Der Riss zeigt mehrere Townsville-Versionen gleichzeitig.",
+        "text": "Der Riss pulsiert stark unter dem Labor. Dahinter scheint die Energie von Chemical X gesammelt zu werden.",
         "choices": [
             { "text": "Analysieren", "next": "ppg_24", "gain_item": "chemical_rift_key" },
             { "text": "Berühren", "next": "ppg_24", "karma": 2 }
         ]
     },
 
-    "ppg_24": {
-        "text": "Bubbles stabilisiert kurz die Realität um euch herum.",
-        "choices": [
-            { "text": "Vertrauen", "next": "ppg_25", "karma": 2 },
-            { "text": "Misstrauen", "next": "ppg_25", "karma": -2 }
-        ]
-    },
-
-    "ppg_25": {
-        "text": "Blossom: 'Chemical X ist ein System zur Realitätsverknüpfung.'",
-        "choices": [
-            { "text": "Glauben", "next": "ppg_26", "karma": 2 },
-            { "text": "Ablehnen", "next": "ppg_26", "karma": -2 }
-        ]
-    },
-
-    "ppg_26": {
-        "text": "Townsville beginnt sich mit anderen Welten zu überlagern.",
-        "choices": [
-            { "text": "Weiter", "next": "ppg_27" }
-        ]
-    },
-
-    "ppg_27": {
-        "text": "Professor Utonium: 'Ihr seid Stabilitätsanker der Realität.'",
-        "choices": [
-            { "text": "Akzeptieren", "next": "ppg_28", "karma": 1 },
-            { "text": "Ablehnen", "next": "ppg_28", "karma": -1 }
-        ]
-    },
-
     "ppg_28": {
-        "text": "Mojo Jojo öffnet einen stabilen Riss unter Townsville.",
+        "text": "Mojo Jojo aktiviert einen instabilen Zugang zum Energieriss unter Townsville.",
         "choices": [
-            { "text": "Durchgehen (wenn stabilisiert)", "next": "ppg_29", "required_item": "chemical_rift_key" },
+            { "text": "Durchgehen", "next": "ppg_29", "required_item": "chemical_rift_key" },
             { "text": "Zögern", "next": "ppg_29" }
         ]
     },
 
-    "ppg_29": {
-        "text": "Alle Versionen von Townsville überlagern sich vollständig.",
-        "choices": [
-            { "text": "Weiter", "next": "ppg_30" }
-        ]
-    },
-
     "ppg_30": {
-        "text": "Townsville kollabiert in den Nexus und verbindet sich mit allen Realitäten. Übergang zu Kapitel 2 wird aktiviert.",
+        "text": "Der Energieriss stabilisiert sich und verbindet Townsville mit etwas Größerem außerhalb der Realität.",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
     },
 
     "c1_gf_start": {
-        "text": "Gravity Falls wirkt still. Zu still. Die Schilder flackern, der Himmel zeigt für Sekunden seltsame Symbole und irgendwo im Wald hörst du eine Stimme lachen. Dipper hält ein Journal fest umklammert, während Mabel versucht nervös zu lächeln.",
+        "text": "Gravity Falls fühlt sich heute falsch an – als hätte jemand die Realität leicht verschoben. Schilder wiederholen sich, der Wald wirkt tiefer als sonst, und das Mystery Shack knarzt, obwohl kein Wind geht. Dipper hält das Journal fest. 'Das passiert normalerweise nur, wenn etwas das Muster stört.'",
         "choices": [
             { "text": "Dipper folgen", "next": "gf_1", "karma": 1 },
-            { "text": "Mabel folgen", "next": "gf_2", "karma": 2 },
-            { "text": "Das Mystery Shack untersuchen", "next": "gf_3" }
+            { "text": "Mabel helfen", "next": "gf_2", "karma": 2 },
+            { "text": "Mystery Shack untersuchen", "next": "gf_3" }
         ]
     },
 
     "gf_1": {
-        "text": "Dipper zeigt dir Journal 3. Einige Seiten fehlen.",
+        "text": "Dipper schlägt das Journal auf. Mehrere Seiten über 'anormale Risse in der Realität' wurden teilweise gelöscht.",
         "choices": [
-            { "text": "Die fehlenden Seiten suchen", "next": "gf_4", "gain_item": "journal_page" },
-            { "text": "Dipper ignorieren", "next": "gf_5", "karma": -1 }
+            { "text": "Seiten suchen", "next": "gf_4", "gain_item": "journal_page" },
+            { "text": "Ignorieren", "next": "gf_5", "karma": -1 }
         ]
     },
 
     "gf_2": {
-        "text": "Mabel zeigt dir einen glitzernden Pullover. Darin steckt ein versteckter Schlüssel.",
+        "text": "Mabel zeigt dir einen Pullover, der plötzlich Symbole zeigt, die vorher nicht da waren. 'Das ist irgendwie gruselig, aber auch irgendwie cool?'",
         "choices": [
-            { "text": "Schlüssel nehmen", "next": "gf_4", "gain_item": "mystery_key" },
+            { "text": "Untersuchen", "next": "gf_4", "karma": 2 },
             { "text": "Ablehnen", "next": "gf_5" }
         ]
     },
 
     "gf_3": {
-        "text": "Im Keller des Mystery Shack findest du eine beschädigte Maschine von Ford.",
+        "text": "Im Keller des Shack findest du Ford’s alte Geräte. Eines davon läuft noch… obwohl es eigentlich ausgeschaltet sein sollte.",
         "choices": [
-            { "text": "Maschine reparieren", "next": "gf_6", "gain_item": "machine_core" },
+            { "text": "Gerät aktivieren", "next": "gf_6", "gain_item": "machine_core" },
             { "text": "Finger weg", "next": "gf_5" }
         ]
     },
 
     "gf_4": {
-        "text": "Dipper entdeckt Symbole im Wald. Sie sehen aus wie Warnungen.",
+        "text": "Dipper zeigt auf den Wald. Alte Warnsymbole tauchen in den Bäumen auf – sie scheinen frisch eingebrannt.",
         "choices": [
             { "text": "Symbole analysieren", "next": "gf_7", "karma": 2 },
             { "text": "Ignorieren", "next": "gf_8", "karma": -1 }
@@ -1150,14 +1014,14 @@ let gameData = {
     },
 
     "gf_5": {
-        "text": "Die Realität flackert kurz. Für eine Sekunde fehlt der Mond.",
+        "text": "Für einen Moment wird alles still. Selbst der Wind stoppt. Dann ist es wieder normal – zu normal.",
         "choices": [
             { "text": "Weiter", "next": "gf_8" }
         ]
     },
 
     "gf_6": {
-        "text": "Die Maschine aktiviert sich und zeigt eine versteckte Nachricht von Ford.",
+        "text": "Das Gerät aktiviert sich und spielt eine Nachricht von Ford ab: 'Wenn das hier läuft, hat Bill wieder begonnen, durch Träume zu greifen.'",
         "choices": [
             { "text": "Nachricht anhören", "next": "gf_7", "karma": 1 },
             { "text": "Ausschalten", "next": "gf_8" }
@@ -1165,23 +1029,23 @@ let gameData = {
     },
 
     "gf_7": {
-        "text": "Ford erscheint aus einem Portal. 'Bill Cipher lebt noch.'",
+        "text": "Ford erscheint kurz über das Gerät. 'Bill Cipher beeinflusst wieder die Traumebene. Und er nutzt Gravity Falls als Zugang.'",
         "choices": [
-            { "text": "Ford glauben", "next": "gf_9", "karma": 2 },
-            { "text": "Misstrauen", "next": "gf_10", "karma": -2 }
+            { "text": "Glauben", "next": "gf_9", "karma": 2 },
+            { "text": "Zweifeln", "next": "gf_10", "karma": -2 }
         ]
     },
 
     "gf_8": {
-        "text": "Wendy warnt dich vor Stimmen im Wald.",
+        "text": "Wendy warnt dich im Wald. 'Da draußen sind Dinge, die sich falsch anfühlen. Und ich meine nicht normal falsch.'",
         "choices": [
             { "text": "Mit Wendy gehen", "next": "gf_9" },
-            { "text": "Alleine weiter", "next": "gf_10", "karma": -1 }
+            { "text": "Alleine gehen", "next": "gf_10", "karma": -1 }
         ]
     },
 
     "gf_9": {
-        "text": "Im Wald findest du ein seltsames Auge im Baum.",
+        "text": "Zwischen den Bäumen siehst du ein pulsierendes Auge im Holz eines alten Baumes.",
         "choices": [
             { "text": "Untersuchen", "next": "gf_11", "gain_item": "cipher_eye" },
             { "text": "Zerstören", "next": "gf_12", "karma": 1 }
@@ -1189,30 +1053,30 @@ let gameData = {
     },
 
     "gf_10": {
-        "text": "Gideon taucht plötzlich auf. 'Du bist zu spät.'",
+        "text": "Gideon taucht plötzlich auf. 'Du bist genau da, wo du sein sollst.'",
         "choices": [
-            { "text": "Gideon bedrohen", "next": "gf_12", "karma": -2 },
+            { "text": "Gideon konfrontieren", "next": "gf_12", "karma": -2 },
             { "text": "Fragen stellen", "next": "gf_11" }
         ]
     },
 
     "gf_11": {
-        "text": "Das Auge reagiert auf das Journalfragment.",
+        "text": "Das Auge reagiert auf das Journalfragment und öffnet eine kleine Verzerrung in der Luft.",
         "choices": [
             { "text": "Kombinieren", "next": "gf_13", "required_item": "journal_page" },
-            { "text": "Ignorieren", "next": "gf_14" }
+            { "text": "Nicht riskieren", "next": "gf_14" }
         ]
     },
 
     "gf_12": {
-        "text": "Der Wald verändert seine Form.",
+        "text": "Der Wald beginnt sich leicht zu falten, als würde er dieselbe Szene erneut abspielen.",
         "choices": [
             { "text": "Weiterlaufen", "next": "gf_14" }
         ]
     },
 
     "gf_13": {
-        "text": "Ein versteckter Weg öffnet sich unter den Bäumen.",
+        "text": "Ein versteckter Pfad öffnet sich. Die Realität wirkt dahinter instabil.",
         "choices": [
             { "text": "Betreten", "next": "gf_15", "karma": 2 },
             { "text": "Warten", "next": "gf_14" }
@@ -1220,15 +1084,15 @@ let gameData = {
     },
 
     "gf_14": {
-        "text": "Mabel findet einen seltsamen Kristall am Boden.",
+        "text": "Mabel findet einen Kristall, der leise pulsiert, wenn sie ihn berührt.",
         "choices": [
             { "text": "Kristall nehmen", "next": "gf_15", "gain_item": "rift_crystal" },
-            { "text": "Liegen lassen", "next": "gf_15" }
+            { "text": "Lassen", "next": "gf_15" }
         ]
     },
 
     "gf_15": {
-        "text": "Ford erklärt, dass Bill Cipher Menschen durch Träume kontrolliert.",
+        "text": "Ford erklärt erneut: 'Bill greift durch Träume an. Wir müssen ihn dort treffen.'",
         "choices": [
             { "text": "Traummaschine aktivieren", "next": "gf_16", "required_item": "machine_core" },
             { "text": "Ablehnen", "next": "gf_17", "karma": -1 }
@@ -1236,7 +1100,7 @@ let gameData = {
     },
 
     "gf_16": {
-        "text": "Du betrittst einen Traumraum voller schwebender Symbole.",
+        "text": "Du betrittst eine Traumwelt voller schwebender Symbole und verzerrter Realität.",
         "choices": [
             { "text": "Symbol berühren", "next": "gf_18", "karma": 1 },
             { "text": "Abstand halten", "next": "gf_17" }
@@ -1244,7 +1108,7 @@ let gameData = {
     },
 
     "gf_17": {
-        "text": "Eine Stimme flüstert deinen Namen.",
+        "text": "Eine Stimme flüstert: 'Ich sehe dich, Dipper Pines…'",
         "choices": [
             { "text": "Antworten", "next": "gf_18", "karma": -1 },
             { "text": "Ignorieren", "next": "gf_19", "karma": 1 }
@@ -1252,7 +1116,7 @@ let gameData = {
     },
 
     "gf_18": {
-        "text": "Bill Cipher erscheint plötzlich lächelnd vor dir.",
+        "text": "Bill Cipher erscheint lächelnd im Traumraum. 'Endlich treffen wir uns richtig.'",
         "choices": [
             { "text": "Mit Bill reden", "next": "gf_20", "karma": -2 },
             { "text": "Ford warnen", "next": "gf_19", "karma": 2 }
@@ -1260,7 +1124,7 @@ let gameData = {
     },
 
     "gf_19": {
-        "text": "Ford aktiviert Schutzrunen im Shack.",
+        "text": "Ford aktiviert Schutzrunen im Shack. Die Realität beginnt sich kurz zu stabilisieren.",
         "choices": [
             { "text": "Runen verstärken", "next": "gf_21", "required_item": "rift_crystal" },
             { "text": "Nur beobachten", "next": "gf_21" }
@@ -1268,7 +1132,7 @@ let gameData = {
     },
 
     "gf_20": {
-        "text": "Bill bietet dir Macht über alle Cartoon-Welten an.",
+        "text": "Bill bietet dir Kontrolle über alle Realitäten an. 'Stell dir vor, du könntest alles schreiben.'",
         "choices": [
             { "text": "Annehmen", "next": "gf_22", "karma": -5 },
             { "text": "Ablehnen", "next": "gf_21", "karma": 3 }
@@ -1276,44 +1140,44 @@ let gameData = {
     },
 
     "gf_21": {
-        "text": "Soos bringt dir eine Kiste voller alter Artefakte.",
+        "text": "Soos bringt eine Kiste voller alter Ford-Artefakte. 'Ich hab einfach alles gesammelt, was gefährlich aussah!'",
         "choices": [
-            { "text": "Artefakte durchsuchen", "next": "gf_23", "gain_item": "gravity_orb" },
+            { "text": "Durchsuchen", "next": "gf_23", "gain_item": "gravity_orb" },
             { "text": "Ignorieren", "next": "gf_24" }
         ]
     },
 
     "gf_22": {
-        "text": "Bills Auge beginnt kurz in deinem Schatten zu erscheinen.",
+        "text": "Bills Auge beginnt sich in deiner Schattenform zu spiegeln.",
         "choices": [
             { "text": "Weiter", "next": "gf_24" }
         ]
     },
 
     "gf_23": {
-        "text": "Dipper erkennt ein Symbol gegen Bill Cipher.",
+        "text": "Dipper erkennt ein altes Symbol, das speziell gegen Bill Cipher wirkt.",
         "choices": [
-            { "text": "Symbol aktivieren", "next": "gf_25", "required_item": "cipher_eye" },
+            { "text": "Aktivieren", "next": "gf_25", "required_item": "cipher_eye" },
             { "text": "Nicht riskieren", "next": "gf_24" }
         ]
     },
 
     "gf_24": {
-        "text": "Der Himmel über Gravity Falls reißt auf.",
+        "text": "Der Himmel über Gravity Falls reißt auf und zeigt den Nexus dahinter.",
         "choices": [
-            { "text": "Zum Portal laufen", "next": "gf_26" }
+            { "text": "Zum Portal", "next": "gf_26" }
         ]
     },
 
     "gf_25": {
-        "text": "Bill schreit kurz auf. Die Realität stabilisiert sich für einen Moment.",
+        "text": "Bill schreit kurz auf. Die Traumwelt stabilisiert sich.",
         "choices": [
             { "text": "Weiter", "next": "gf_26", "karma": 3 }
         ]
     },
 
     "gf_26": {
-        "text": "Ford sagt: 'Nur jemand außerhalb dieser Welten kann den Nexus schließen.'",
+        "text": "Ford sagt ernst: 'Nur jemand außerhalb dieses Systems kann es wirklich schließen.'",
         "choices": [
             { "text": "Helfen", "next": "gf_27", "karma": 2 },
             { "text": "Ablehnen", "next": "gf_27", "karma": -2 }
@@ -1321,7 +1185,7 @@ let gameData = {
     },
 
     "gf_27": {
-        "text": "Bill übernimmt kurz Gideons Körper.",
+        "text": "Bill übernimmt kurz Gideons Körper und verzerrt die Realität um ihn herum.",
         "choices": [
             { "text": "Angreifen", "next": "gf_28", "required_item": "gravity_orb" },
             { "text": "Zurückweichen", "next": "gf_29", "karma": -1 }
@@ -1329,22 +1193,22 @@ let gameData = {
     },
 
     "gf_28": {
-        "text": "Das Gravity Orb stößt Bill aus Gideons Körper heraus.",
+        "text": "Das Gravity Orb stößt Bill aus dem Körper und schwächt ihn.",
         "choices": [
-            { "text": "Bill versiegeln", "next": "gf_30", "required_item": "mystery_key" },
-            { "text": "Bill entkommen lassen", "next": "gf_29", "karma": -5 }
+            { "text": "Versiegeln", "next": "gf_30", "required_item": "mystery_key" },
+            { "text": "Entkommen lassen", "next": "gf_29", "karma": -5 }
         ]
     },
 
     "gf_29": {
-        "text": "Gravity Falls beginnt zu kollabieren, doch Ford öffnet einen letzten Ausgang.",
+        "text": "Die Realität beginnt zu kollabieren, aber Ford öffnet einen letzten stabilen Ausgang.",
         "choices": [
-            { "text": "Durch das Portal", "next": "gf_30" }
+            { "text": "Durchgehen", "next": "gf_30" }
         ]
     },
 
     "gf_30": {
-        "text": "Der Nexus verbindet sich mit Gravity Falls. Kapitel 2 wartet hinter dem Portal.",
+        "text": "Gravity Falls stabilisiert sich kurz – aber der Nexus verbindet sich bereits mit anderen Welten.",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
