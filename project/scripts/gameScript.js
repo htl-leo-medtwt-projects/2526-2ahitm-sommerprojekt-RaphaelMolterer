@@ -309,7 +309,7 @@ let gameData = {
         "background": "./game_images/background_at_cave.png",
         "character": "./game_images/character_at_marceline.png",
         "choices": [
-            { "text": "Merken und Jakes Gedanken hören", "next": "at_24"},
+            { "text": "Merken und Jakes Gedanken hören", "next": "at_24" },
         ]
     },
 
@@ -338,14 +338,14 @@ let gameData = {
         "background": "./game_images/background_at_treehouse.png",
         "character": "./game_images/character_at_lich.png",
         "choices": [
-            { "text": "Kampf vorbereiten", "next": "at_27"},
-            { "text": "Beobachten", "next": "at_27", "karma": -1  }
+            { "text": "Kampf vorbereiten", "next": "at_27" },
+            { "text": "Beobachten", "next": "at_27", "karma": -1 }
         ]
     },
 
     "at_27": {
         "text": "Alle kämpfen gemeinsam gegen den Lich und der Lich verschwindet langsam.",
-        "background": "./game_images/background_at_treehouse.png",
+        "background": "./game_images/background_at_treehouseRip.png",
         "character": "./game_images/character_at_lich.png",
         "choices": [
             { "text": "Unterstützen", "next": "at_28", "karma": 2 },
@@ -355,7 +355,8 @@ let gameData = {
 
     "at_28": {
         "text": "Der Lich zerfällt in Fragmente.",
-        
+        "background": "./game_images/background_at_treehouseRip.png",
+        "character": "./game_images/character_at_lichFragment.png",
         "choices": [
             { "text": "Weiter", "next": "at_29" }
         ]
@@ -363,6 +364,7 @@ let gameData = {
 
     "at_29": {
         "text": "Ooo stabilisiert sich kurz, doch der Nexus öffnet sich am Himmel.",
+        "background": "./game_images/background_at_treehouse.png",
         "choices": [
             { "text": "Weiter", "next": "at_30" }
         ]
@@ -370,247 +372,251 @@ let gameData = {
 
     "at_30": {
         "text": "Der Nexus zieht Ooo in die Verbindung aller Welten. Kapitel 2 wird vorbereitet.",
+        "background": "./game_images/background_at_ooo.png",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
     },
 
     "c1_gb_start": {
-        "text": "Elmore wirkt falsch gerendert. Gebäude wiederholen sich leicht versetzt, als würde die Stadt in Schleifen laufen. Gumball, Darwin und Anais reagieren, als hätten sie dich schon einmal getroffen.",
+        "text": "In Elmore herrscht Chaos wie immer. Ein kaputter Einkaufswagen rollt brennend die Straße runter, Richard steckt im Briefkasten fest und irgendwo schreit Banana Joe grundlos. Gumball winkt dich hektisch zu sich. 'Perfektes Timing. Heute ist ALLES schiefgelaufen.'",
+        "background": "./game_images/background_gb_elmore.png",
         "choices": [
-            { "text": "Gumball folgen", "next": "gb_1", "karma": 1 },
-            { "text": "Darwin folgen", "next": "gb_2" },
+            { "text": "Gumball helfen", "next": "gb_1", "karma": 1 },
+            { "text": "Mit Darwin reden", "next": "gb_2" },
             { "text": "Anais folgen", "next": "gb_3", "karma": 2 },
             { "text": "Banana Joe beobachten", "next": "gb_4" }
         ]
     },
 
     "gb_1": {
-        "text": "Gumball: 'Ich hab Erinnerungen an dich aus einer Version, die nicht passiert ist.'",
+        "text": "Gumball zeigt auf die Schule. 'Principal Brown rastet aus, weil jemand das komplette Notensystem gelöscht hat. Und irgendwie glaubt jeder, ich war's.'",
+        "character": "./game_images/character_gb_gumball.png",
+        "background": "./game_images/background_gb_school.png",
         "choices": [
-            { "text": "Nachfragen", "next": "gb_5" },
-            { "text": "Ignorieren", "next": "gb_6", "karma": -1 },
-            { "text": "Beweise verlangen", "next": "gb_7", "karma": 1 }
+            { "text": "Beim Suchen helfen", "next": "gb_5" },
+            { "text": "Nicht dein Problem", "next": "gb_6", "karma": -1 },
+            { "text": "Fragen was passiert ist", "next": "gb_7", "karma": 1 }
         ]
     },
 
     "gb_2": {
-        "text": "Darwin: 'Elmore fühlt sich an wie ein Loop, der nie endet.'",
+        "text": "Darwin wirkt nervös. 'Carrie hat aus Versehen die Stromversorgung der Schule gegruselt und jetzt spinnen alle elektronischen Sachen.'",
         "choices": [
-            { "text": "Vertrauen", "next": "gb_7", "karma": 2 },
-            { "text": "Zweifeln", "next": "gb_6", "karma": -1 },
-            { "text": "Weitergehen", "next": "gb_8" }
+            { "text": "Helfen", "next": "gb_7", "karma": 2 },
+            { "text": "Darüber lachen", "next": "gb_6", "karma": -1 },
+            { "text": "Zur Schule gehen", "next": "gb_8" }
         ]
     },
 
     "gb_3": {
-        "text": "Anais: 'Die Stadt wurde mehrfach überschrieben. Ich sehe die Restdaten.'",
+        "text": "Anais hält mehrere Zettel in der Hand. 'Gumball und Darwin haben versucht, ihre Noten zu verbessern und dabei vermutlich das Schulnetzwerk zerstört.'",
         "choices": [
-            { "text": "Daten sehen", "next": "gb_9" },
+            { "text": "Anais helfen", "next": "gb_9" },
             { "text": "Ignorieren", "next": "gb_6", "karma": -2 },
-            { "text": "Helfen", "next": "gb_10", "karma": 2 }
+            { "text": "Die beiden verraten", "next": "gb_10", "karma": 2 }
         ]
     },
 
     "gb_4": {
-        "text": "Banana Joe wirkt kurz doppelt. 'Hast du mich schon einmal gesehen?'",
+        "text": "Banana Joe rennt lachend über den Schulhof. Hinter ihm fliegen hunderte ausgedruckte Zeugnisse durch die Luft.",
         "choices": [
-            { "text": "Ja", "next": "gb_6" },
-            { "text": "Nein", "next": "gb_6", "karma": -1 }
+            { "text": "Hinterherrennen", "next": "gb_6" },
+            { "text": "Die Zeugnisse einsammeln", "next": "gb_8", "karma": 1 }
         ]
     },
 
     "gb_5": {
-        "text": "Gumball zeigt dir eine fehlerhafte Stadtversion, die über die echte gelegt ist.",
+        "text": "Gumball führt dich in den Computerraum. Alle Bildschirme zeigen plötzlich nur noch dieselbe Nachricht: 'SYSTEM ERROR'.",
         "choices": [
-            { "text": "Analysieren", "next": "gb_11", "gain_item": "elmore_glitch_map" },
-            { "text": "Zurückziehen", "next": "gb_6", "karma": -1 }
+            { "text": "Computer untersuchen", "next": "gb_11", "gain_item": "school_access_card" },
+            { "text": "Lieber abhauen", "next": "gb_6", "karma": -1 }
         ]
     },
 
     "gb_6": {
-        "text": "Elmore flackert. Einige Figuren bewegen sich außerhalb ihrer Frames.",
+        "text": "Während ihr diskutiert, fällt plötzlich in der ganzen Schule der Strom aus. Schüler schreien, Automaten explodieren und irgendwo spielt eine Trompete.",
         "choices": [
             { "text": "Weiter", "next": "gb_12" }
         ]
     },
 
     "gb_7": {
-        "text": "Darwin: 'Etwas schreibt unsere Realität in Echtzeit neu.'",
+        "text": "Darwin erklärt alles hektisch. 'Wir wollten nur die Noten kurz ansehen. Dann hat Gumball auf irgendwas geklickt und jetzt funktioniert nichts mehr.'",
         "choices": [
-            { "text": "Zustimmen", "next": "gb_10", "karma": 2 },
-            { "text": "Ablehnen", "next": "gb_12", "karma": -2 }
+            { "text": "Verstehen", "next": "gb_10", "karma": 2 },
+            { "text": "Gumball beschuldigen", "next": "gb_12", "karma": -2 }
         ]
     },
 
     "gb_8": {
-        "text": "Die Schule von Elmore wiederholt denselben Moment erneut.",
+        "text": "In der Schule wiederholt die Lautsprecheranlage ständig dieselbe Durchsage von Principal Brown.",
         "choices": [
-            { "text": "Untersuchen", "next": "gb_11" }
+            { "text": "Kontrollraum suchen", "next": "gb_11" }
         ]
     },
 
     "gb_9": {
-        "text": "Anais zeigt dir Datenfragmente einer gelöschten Elmore-Version.",
+        "text": "Anais verbindet ihr Tablet mit dem Schulserver. 'Okay. Das Chaos kommt von einem Fehler im Hauptsystem. Überraschenderweise war Gumball diesmal nicht komplett schuld.'",
         "choices": [
-            { "text": "Speichern", "next": "gb_13", "gain_item": "anais_data_core" }
+            { "text": "Daten speichern", "next": "gb_13", "gain_item": "anais_backup_drive" }
         ]
     },
 
     "gb_10": {
-        "text": "Gumball verliert kurz die Synchronisation mit der Realität.",
+        "text": "Gumball versucht den Computer neu zu starten und sorgt versehentlich dafür, dass überall die Feueralarme losgehen.",
         "choices": [
-            { "text": "Stabilisieren helfen", "next": "gb_13", "karma": 2 },
-            { "text": "Beobachten", "next": "gb_12" }
+            { "text": "Beim Stoppen helfen", "next": "gb_13", "karma": 2 },
+            { "text": "Nur zusehen", "next": "gb_12" }
         ]
     },
 
     "gb_11": {
-        "text": "Der Glitch zeigt einen Riss unterhalb der Schule.",
+        "text": "Im Kontrollraum entdeckt ihr, dass das gesamte Schulnetzwerk in einer Endlosschleife festhängt.",
         "choices": [
-            { "text": "Untersuchen", "next": "gb_14" },
+            { "text": "System reparieren", "next": "gb_14" },
             { "text": "Ignorieren", "next": "gb_12", "karma": -1 }
         ]
     },
 
     "gb_12": {
-        "text": "Elmore beginnt sich in Versionen zu duplizieren.",
+        "text": "Die Schule versinkt komplett im Chaos. Türen öffnen sich zufällig, Lautsprecher rauschen und Larry versucht gleichzeitig zehn Probleme zu lösen.",
         "choices": [
             { "text": "Weiter", "next": "gb_15" }
         ]
     },
 
     "gb_13": {
-        "text": "Darwin gibt dir einen Stabilitätschip.",
+        "text": "Darwin gibt dir einen USB-Stick. 'Anais meint, damit könnten wir das System zurücksetzen.'",
         "choices": [
-            { "text": "Nehmen", "next": "gb_15", "gain_item": "stability_chip" }
+            { "text": "Nehmen", "next": "gb_15", "gain_item": "reset_drive" }
         ]
     },
 
     "gb_14": {
-        "text": "Der Riss zeigt mehrere Versionen der Schule gleichzeitig.",
+        "text": "Das System zeigt plötzlich hunderte fehlerhafte Dateien mit Namen wie 'Elmore_Final_v2_REAL_final'.",
         "choices": [
-            { "text": "Analysieren", "next": "gb_16", "gain_item": "school_rift_key" },
-            { "text": "Berühren", "next": "gb_16", "karma": 2 }
+            { "text": "Dateien analysieren", "next": "gb_16", "gain_item": "system_logs" },
+            { "text": "Einfach löschen", "next": "gb_16", "karma": 2 }
         ]
     },
 
     "gb_15": {
-        "text": "Gumball: 'Wir sind nicht die erste Version von uns.'",
+        "text": "Gumball lehnt sich erschöpft gegen die Wand. 'Warum endet bei uns eigentlich jeder normale Tag in einer Katastrophe?'",
         "choices": [
-            { "text": "Glauben", "next": "gb_17", "karma": 2 },
-            { "text": "Zweifeln", "next": "gb_17", "karma": -2 }
+            { "text": "Antworten", "next": "gb_17", "karma": 2 },
+            { "text": "Schweigen", "next": "gb_17", "karma": -2 }
         ]
     },
 
     "gb_16": {
-        "text": "Anais: 'Der Glitch ist ein Zugangspunkt.'",
+        "text": "Anais liest die Systemfehler durch. 'Okay... irgendwas schreibt die Fehler ständig neu. Deshalb kommt alles wieder zurück.'",
         "choices": [
             { "text": "Zuhören", "next": "gb_17", "karma": 2 },
-            { "text": "Ignorieren", "next": "gb_12", "karma": -1 }
+            { "text": "Nicht verstehen", "next": "gb_12", "karma": -1 }
         ]
     },
 
     "gb_17": {
-        "text": "Elmore beginnt sich zu überlagern mit anderen Realitäten.",
+        "text": "Die Bildschirme der Schule beginnen plötzlich gleichzeitig zu flackern.",
         "choices": [
             { "text": "Weitergehen", "next": "gb_18" }
         ]
     },
 
     "gb_18": {
-        "text": "Banana Joe sagt: 'Ich erinnere mich an Dinge, die nie passiert sind.'",
+        "text": "Banana Joe erscheint auf einem der Bildschirme. 'Äh... warum bin ich plötzlich im Schulsystem drin?'",
         "choices": [
-            { "text": "Fragen", "next": "gb_19" },
+            { "text": "Mit ihm reden", "next": "gb_19" },
             { "text": "Ignorieren", "next": "gb_19", "karma": -1 }
         ]
     },
 
     "gb_19": {
-        "text": "Der Riss unter der Schule beginnt sich zu öffnen.",
+        "text": "Der Hauptcomputer der Schule beginnt komplett zu überhitzen.",
         "choices": [
-            { "text": "Untersuchen", "next": "gb_20" }
+            { "text": "Reparieren", "next": "gb_20" }
         ]
     },
 
     "gb_20": {
-        "text": "Darwin stabilisiert kurz die Umgebung.",
+        "text": "Darwin schafft es kurz, die Systeme zu stabilisieren. 'Okay! Jetzt oder nie!'",
         "choices": [
             { "text": "Vertrauen", "next": "gb_21", "karma": 2 },
-            { "text": "Misstrauen", "next": "gb_21", "karma": -2 }
+            { "text": "Zweifeln", "next": "gb_21", "karma": -2 }
         ]
     },
 
     "gb_21": {
-        "text": "Gumball zeigt dir eine alternative Version von Elmore.",
+        "text": "Gumball startet das Backup-System. Für einen Moment funktioniert plötzlich wieder alles normal.",
         "choices": [
-            { "text": "Analysieren", "next": "gb_22", "gain_item": "elmore_alt_map" },
-            { "text": "Ablehnen", "next": "gb_22", "karma": -1 }
+            { "text": "Überprüfen", "next": "gb_22", "gain_item": "system_restore_key" },
+            { "text": "Abwarten", "next": "gb_22", "karma": -1 }
         ]
     },
 
     "gb_22": {
-        "text": "Anais: 'Diese Welt wird rekursiv geschrieben.'",
+        "text": "Anais verschränkt die Arme. 'Das Problem war nie der Computer. Die Schule selbst hat ständig fehlerhafte Daten produziert.'",
         "choices": [
             { "text": "Glauben", "next": "gb_23", "karma": 2 },
-            { "text": "Zweifeln", "next": "gb_23", "karma": -2 }
+            { "text": "Nicht glauben", "next": "gb_23", "karma": -2 }
         ]
     },
 
     "gb_23": {
-        "text": "Elmore kollabiert kurz und setzt sich neu zusammen.",
+        "text": "Plötzlich springt der Strom wieder an. Die Schule sieht aus, als wäre nie etwas passiert.",
         "choices": [
             { "text": "Weiter", "next": "gb_24" }
         ]
     },
 
     "gb_24": {
-        "text": "Gumball: 'Etwas nutzt uns als Simulation.'",
+        "text": "Gumball grinst erleichtert. 'Cool. Also haben wir offiziell nur fast die komplette Schule zerstört.'",
         "choices": [
-            { "text": "Akzeptieren", "next": "gb_25", "karma": 1 },
-            { "text": "Ablehnen", "next": "gb_25", "karma": -1 }
+            { "text": "Lachen", "next": "gb_25", "karma": 1 },
+            { "text": "Kopfschütteln", "next": "gb_25", "karma": -1 }
         ]
     },
 
     "gb_25": {
-        "text": "Der Himmel zeigt den Nexus über Elmore.",
+        "text": "Über der Schule öffnet sich plötzlich ein seltsamer leuchtender Riss am Himmel.",
         "choices": [
-            { "text": "Beobachten", "next": "gb_26" }
+            { "text": "Ansehen", "next": "gb_26" }
         ]
     },
 
     "gb_26": {
-        "text": "Darwin öffnet einen stabilen Riss.",
+        "text": "Darwin schaut nervös nach oben. 'Bitte sag mir, das hat nichts mit uns zu tun.'",
         "choices": [
-            { "text": "Durchgehen", "next": "gb_27", "required_item": "stability_chip" },
+            { "text": "Untersuchen", "next": "gb_27", "required_item": "reset_drive" },
             { "text": "Zögern", "next": "gb_27", "karma": -1 }
         ]
     },
 
     "gb_27": {
-        "text": "Alle Versionen von Elmore überlagern sich vollständig.",
+        "text": "Der Himmel über Elmore beginnt zu flackern wie ein kaputter Fernseher.",
         "choices": [
             { "text": "Weiter", "next": "gb_28" }
         ]
     },
 
     "gb_28": {
-        "text": "Anais: 'Kapitel 1 ist eine Testsimulation.'",
+        "text": "Anais sieht ernst aus. 'Okay. DAS ist definitiv nicht mehr normaler Cartoon-Wahnsinn.'",
         "choices": [
-            { "text": "Glauben", "next": "gb_29", "karma": 2 },
-            { "text": "Zweifeln", "next": "gb_29", "karma": -2 }
+            { "text": "Zustimmen", "next": "gb_29", "karma": 2 },
+            { "text": "Verharmlosen", "next": "gb_29", "karma": -2 }
         ]
     },
 
     "gb_29": {
-        "text": "Gumball sieht dich direkt an: 'Du bist nicht aus Elmore.'",
+        "text": "Gumball schaut zwischen dem Himmel und der Schule hin und her. 'Warum habe ich das Gefühl, dass das erst der Anfang war?'",
         "choices": [
             { "text": "Weiter", "next": "gb_30" }
         ]
     },
 
     "gb_30": {
-        "text": "Elmore öffnet einen stabilen Nexus-Riss. Verbindung zu allen Welten wird aktiv.",
+        "text": "Der leuchtende Riss stabilisiert sich über Elmore und verbindet sich mit etwas weit Größerem.",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
