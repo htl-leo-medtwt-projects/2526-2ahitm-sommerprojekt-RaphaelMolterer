@@ -122,7 +122,7 @@ let gameData = {
         "background": "./game_images/background_at_treehouse.png",
         "character": "./game_images/character_at_jake2.png",
         "choices": [
-            { "text": "Untersuchen", "next": "at_8" },
+            { "text": "Untersuchen", "next": "at_jake_sense" },
             { "text": "Vertrauen", "next": "at_7", "karma": 1 }
         ]
     },
@@ -132,7 +132,7 @@ let gameData = {
         "background": "./game_images/background_at_treehouse.png",
         "character": "./game_images/character_at_jake2.png",
         "choices": [
-            { "text": "Untersuchen", "next": "at_8" },
+            { "text": "Untersuchen", "next": "at_14" },
             { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
         ]
     },
@@ -229,13 +229,22 @@ let gameData = {
         "background": "./game_images/background_at_treehouse.png",
         "character": "./game_images/character_at_lichFight.png",
         "choices": [
-            { "text": "Mit dem Enchiridion attackieren", "next": "at_Winight", "karma": -2, "required_item": "enchiridion_piece" },
-            { "text": "Versuchen mit Faust zu kämpfen", "next": "at_looseFight" }
+            { "text": "Mit dem Enchiridion attackieren", "next": "at_WinFight", "karma": 2, "required_item": "enchiridion_piece" },
+            { "text": "Versuchen mit Faust zu kämpfen", "next": "at_looseFight", "karma": -2 }
         ]
     },
 
     "at_looseFight": {
-        "text": "Du kämpfst gegen den Lich.",
+        "text": "Du hast verloren und rennst weg!",
+        "background": "./game_images/background_at_chaos.png",
+        "choices": [
+            { "text": "Der Lich bricht dir die Nase und du rennst schnell weg", "next": "at_18", "karma": -2 },
+        ]
+    },
+
+    "at_WinFight": {
+        "text": "Du hast gewonnen und gehst weiter!",
+        "background": "./game_images/background_at_treehouse.png",
         "choices": [
             { "text": "Der Lich bricht dir die Nase und du rennst schnell weg", "next": "at_18", "karma": -2 },
         ]
@@ -243,6 +252,7 @@ let gameData = {
 
     "at_17": {
         "text": "Finn sagt: 'Das bist nicht du... oder doch?'",
+        "background": "./game_images/background_at_finnDenken.png",
         "choices": [
             { "text": "Zustimmen", "next": "at_21", "karma": 1 },
             { "text": "Ablehnen", "next": "at_18", "karma": -1 }
@@ -251,6 +261,7 @@ let gameData = {
 
     "at_18": {
         "text": "Ooo beginnt zu zerfallen und neu zu laden.",
+        "background": "./game_images/background_at_oooGlitch.png",
         "choices": [
             { "text": "Stabilisieren helfen", "next": "at_20", "karma": 2 },
             { "text": "Abwarten", "next": "at_20", "karma": -1 }
@@ -258,7 +269,9 @@ let gameData = {
     },
 
     "at_20": {
-        "text": "Jake: 'Der Lich nutzt mehrere Versionen von Ooo gleichzeitig.'",
+        "text": "Jake: 'Der Lich nutzt mehrere Versionen von Ooo gleichzeitig. Geh weiter zu Finn, er hat vielleicht eine Idee.'",
+        "background": "./game_images/background_at_oooGlitch.png",
+        "character": "./game_images/character_at_jake.png",
         "choices": [
             { "text": "Verstehen", "next": "at_21", "karma": 2 },
             { "text": "Zweifeln", "next": "at_21", "karma": -2 }
@@ -267,37 +280,53 @@ let gameData = {
 
     "at_21": {
         "text": "Finn findet ein zerbrochenes Stück des Enchiridion.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_finn.png",
         "choices": [
-            { "text": "Nehmen", "next": "at_22", "gain_item": "enchiridion_piece" }
+            { "text": "Nehmen", "next": "enchiridion", "gain_item": "enchiridion_piece" }
         ]
+    },
+
+    "enchiridion": {
+        "text": "Du erhältst ein Stück des Enchiridion.",
+        "background": "./game_images/background_at_grass.png",
+        "character": "./game_images/item_at_enchiridion.png",
+        "choices": [
+            { "text": "Weiter", "next": "at_22" }
+        ],
     },
 
     "at_22": {
         "text": "Mehrere Versionen von Ooo überlagern sich am Himmel.",
+        "background": "./game_images/background_at_treehouseChaos.png",
         "choices": [
-            { "text": "Analysieren", "next": "at_23" },
-            { "text": "Ignorieren", "next": "at_23", "karma": -1 }
+            { "text": "Schnell zu Marceline", "next": "at_23" },
         ]
     },
 
     "at_23": {
         "text": "Marceline: 'Etwas außerhalb greift ein.'",
+        "background": "./game_images/background_at_cave.png",
+        "character": "./game_images/character_at_marceline.png",
         "choices": [
-            { "text": "Zuhören", "next": "at_24", "karma": 2 },
-            { "text": "Ablehnen", "next": "at_24", "karma": -2 }
+            { "text": "Merken und Jakes Gedanken hören", "next": "at_24"},
         ]
     },
 
     "at_24": {
         "text": "Jake stabilisiert kurz die Realität.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_jake2.png",
         "choices": [
-            { "text": "Vertrauen", "next": "at_25", "karma": 2 },
-            { "text": "Misstrauen", "next": "at_25", "karma": -2 }
+            { "text": "Vertrauen", "next": "at_25", "karma": 1 },
+            { "text": "Misstrauen", "next": "at_25", "karma": -1 }
         ]
     },
 
     "at_25": {
         "text": "Finn: 'Wir sind nur eine von vielen Versionen.'",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_finn.png",
         "choices": [
             { "text": "Akzeptieren", "next": "at_26", "karma": 1 },
             { "text": "Ablehnen", "next": "at_26", "karma": -1 }
@@ -306,25 +335,29 @@ let gameData = {
 
     "at_26": {
         "text": "Der Lich erscheint erneut, diesmal stabiler.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_lich.png",
         "choices": [
-            { "text": "Kampf vorbereiten", "next": "at_27", "karma": -2 },
-            { "text": "Beobachten", "next": "at_27" }
+            { "text": "Kampf vorbereiten", "next": "at_27"},
+            { "text": "Beobachten", "next": "at_27", "karma": -1  }
         ]
     },
 
     "at_27": {
-        "text": "Alle kämpfen gemeinsam gegen den Lich.",
+        "text": "Alle kämpfen gemeinsam gegen den Lich und der Lich verschwindet langsam.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_lich.png",
         "choices": [
             { "text": "Unterstützen", "next": "at_28", "karma": 2 },
-            { "text": "Zögern", "next": "at_28", "karma": -1 }
+            { "text": "Zögern", "next": "at_28", "karma": -4 }
         ]
     },
 
     "at_28": {
         "text": "Der Lich zerfällt in Fragmente.",
+        
         "choices": [
-            { "text": "Fragment nehmen", "next": "at_29", "gain_item": "lich_fragment" },
-            { "text": "Ignorieren", "next": "at_29" }
+            { "text": "Weiter", "next": "at_29" }
         ]
     },
 
