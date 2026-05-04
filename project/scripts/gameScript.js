@@ -142,7 +142,6 @@ let gameData = {
         "background": "./game_images/background_at_cave.png",
         "character": "./game_images/character_at_marceline.png",
         "choices": [
-            { "text": "Zuhören", "next": "at_9", "karma": 1 },
             { "text": "Nachfragen", "next": "at_10" },
             { "text": "Zur Gruppe zurück", "next": "c1_ooa_start" }
         ]
@@ -150,6 +149,7 @@ let gameData = {
 
     "at_group": {
         "text": "Finn, Jake und Marceline stehen gemeinsam in der instabilen Realität von Ooo. Jeder reagiert anders auf dieselbe Störung – aber alle spüren sie.",
+        "background": "./game_images/background_at_ooo.png",
         "choices": [
             { "text": "Finn beobachten", "next": "at_finn" },
             { "text": "Jake beobachten", "next": "at_jake" },
@@ -168,6 +168,8 @@ let gameData = {
 
     "at_11": {
         "text": "Finn zeigt in den Himmel. Ein Schatten formt sich dort – ständig wechselnd, nie stabil.",
+        "background": "./game_images/background_at_treehouseRip.png",
+        "character": "./game_images/character_at_finnOben.png",
         "choices": [
             { "text": "Ansehen", "next": "at_13" },
             { "text": "Ignorieren", "next": "at_12", "karma": -1 }
@@ -176,13 +178,16 @@ let gameData = {
 
     "at_12": {
         "text": "Etwas folgt dir durch die Realitätsschicht.",
+        "background": "./game_images/background_at_treehouseRip.png",
+        "character": "./game_images/character_at_scary.png",
         "choices": [
-            { "text": "Wegrennen", "next": "at_14" }
+            { "text": "Weiter gehen", "next": "at_14" }
         ]
     },
 
     "at_13": {
         "text": "Der Schatten im Himmel sieht aus wie ein Gesicht, das sich ständig neu formt.",
+        "background": "./game_images/background_at_treehouseFace.png",
         "choices": [
             { "text": "Berühren versuchen", "next": "at_15", "karma": 2 },
             { "text": "Zurückweichen", "next": "at_14" }
@@ -191,6 +196,8 @@ let gameData = {
 
     "at_14": {
         "text": "Jake öffnet einen stabilen Riss in der Realität.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_jake3.png",
         "choices": [
             { "text": "Durchgehen", "next": "at_16" },
             { "text": "Zögern", "next": "at_12", "karma": -1 }
@@ -199,6 +206,8 @@ let gameData = {
 
     "at_15": {
         "text": "Du siehst eine zweite Version von Finn, die dich direkt anstarrt.",
+        "background": "./game_images/background_at_treehouseRip.png",
+        "character": "./game_images/character_at_fakeFinn.png",
         "choices": [
             { "text": "Konfrontieren", "next": "at_17", "karma": -2 },
             { "text": "Akzeptieren", "next": "at_16", "karma": 1 }
@@ -207,17 +216,36 @@ let gameData = {
 
     "at_16": {
         "text": "Im Himmel erscheint kurz die Silhouette des Lich.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_lich.png",
         "choices": [
-            { "text": "Angreifen", "next": "at_18", "karma": -2 },
+            { "text": "Angreifen", "next": "at_fight", "karma": -2 },
             { "text": "Beobachten", "next": "at_18" }
+        ]
+    },
+
+    "at_fight": {
+        "text": "Du kämpfst gegen den Lich.",
+        "background": "./game_images/background_at_treehouse.png",
+        "character": "./game_images/character_at_lichFight.png",
+        "choices": [
+            { "text": "Mit dem Enchiridion attackieren", "next": "at_Winight", "karma": -2, "required_item": "enchiridion_piece" },
+            { "text": "Versuchen mit Faust zu kämpfen", "next": "at_looseFight" }
+        ]
+    },
+
+    "at_looseFight": {
+        "text": "Du kämpfst gegen den Lich.",
+        "choices": [
+            { "text": "Der Lich bricht dir die Nase und du rennst schnell weg", "next": "at_18", "karma": -2 },
         ]
     },
 
     "at_17": {
         "text": "Finn sagt: 'Das bist nicht du... oder doch?'",
         "choices": [
-            { "text": "Zustimmen", "next": "at_19", "karma": 1 },
-            { "text": "Ablehnen", "next": "at_19", "karma": -1 }
+            { "text": "Zustimmen", "next": "at_21", "karma": 1 },
+            { "text": "Ablehnen", "next": "at_18", "karma": -1 }
         ]
     },
 
@@ -226,13 +254,6 @@ let gameData = {
         "choices": [
             { "text": "Stabilisieren helfen", "next": "at_20", "karma": 2 },
             { "text": "Abwarten", "next": "at_20", "karma": -1 }
-        ]
-    },
-
-    "at_19": {
-        "text": "Marceline reicht dir einen Schatten-Splitter.",
-        "choices": [
-            { "text": "Nehmen", "next": "at_20", "gain_item": "shadow_fragment" }
         ]
     },
 
@@ -2634,3 +2655,22 @@ function playKarmaSound(karma) {
 }
 
 initSounds();
+
+let pauseOpen = false;
+
+document.addEventListener("keydown", function (event) {
+
+    if (event.key === "Escape") {
+
+        pauseOpen = !pauseOpen;
+
+        let menu = document.getElementById("pause-menu");
+
+        if (pauseOpen) {
+            menu.style.display = "flex";
+        }
+        else {
+            menu.style.display = "none";
+        }
+    }
+});

@@ -149,3 +149,15 @@ body {
     transform: scale(1.02);
     background: #f2f2f2;
 }
+
+#pause-menu {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-size: 50px;
+    z-index: 9999;
+}
