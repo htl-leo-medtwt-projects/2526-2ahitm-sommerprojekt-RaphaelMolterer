@@ -8,315 +8,260 @@ let gameData = {
     "start": {
         "text": "Der Nexus stabilisiert fuenf getrennte Cartoon-Realitaeten. Jede zieht dich in ihre Version der Wahrheit.",
         "choices": [
-            { "text": "Adventure Time", "next": "c1_ooa_start" },
+            { "text": "Adventure Time", "next": "c1_at_start" },
             { "text": "Gumball", "next": "c1_gb_start" },
-            { "text": "Dexters Labor", "next": "c1_dx_start" },
+            { "text": "Dexters Labor", "next": "c1_dl_start" },
             { "text": "Powerpuff Girls", "next": "c1_ppg_start" },
             { "text": "Gravity Falls", "next": "c1_gf_start" }
         ]
     },
 
-    "c1_ooa_start": {
-        "text": "Der Nexus stabilisiert fuenf getrennte Cartoon-Realitaeten. Ooo wirkt instabil, als wuerde es zwischen Versionen wechseln. Finn, Jake und Marceline sind alle in der Naehe – und keiner von ihnen wirkt voellig normal.",
-        "background": "./game_images/background_at_ooo.png",
+    "c1_at_start": {
+        "text": "Prinzessin Bubblegum ruft dich mitten in der Nacht ins Candy Kingdom. Riesige Teile des Königreichs verwandeln sich plötzlich in wilde, lebendige Süßigkeiten-Monster. Finn und Jake versuchen bereits Chaos in den Straßen zu stoppen, während seltsame Musik aus den Zuckerrohrfeldern erklingt.",
         "choices": [
-            { "text": "Finn ansprechen", "next": "at_finn" },
-            { "text": "Jake ansprechen", "next": "at_jake" },
-            { "text": "Marceline ansprechen", "next": "at_marceline", "karma": -1 },
-            { "text": "Die Umgebung untersuchen", "next": "at_6" }
+            { "text": "Finn und Jake helfen", "next": "at_1", "karma": 3 },
+            { "text": "Den Geräuschen folgen", "next": "at_2" },
+            { "text": "Mit Bubblegum reden", "next": "at_3", "karma": -2 },
+            { "text": "Die Bürger evakuieren", "next": "at_4", "karma": 5 }
         ]
     },
 
-    "at_finn": {
-        "text": "Finn steht angespannt da, die Haende geballt. 'Okay... das fuehlt sich nicht wie ein normales Abenteuer an. Eher so, als wuerde jemand an der Welt ziehen.'",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_finn.png",
+    "at_1": {
+        "text": "Jake hält ein riesiges Marshmallow-Monster fest. Finn: 'Irgendwas macht die Candy People verrückt!'",
         "choices": [
-            { "text": "Nach Details fragen", "next": "at_finn_detail" },
-            { "text": "Beruhigen", "next": "at_group" },
-            { "text": "Zur Gruppe zurueck", "next": "c1_ooa_start" }
+            { "text": "Monster beruhigen", "next": "at_5", "karma": 4 },
+            { "text": "Direkt angreifen", "next": "at_6", "karma": -3 }
         ]
     },
 
-    "at_finn_detail": {
-        "text": "Finn: 'Ich hatte Traeume... in denen alles falsch war. Und jetzt fuehlt es sich an, als wuerden die Traeume zurueck in die Realitaet sickern.'",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_finnDenken.png",
+    "at_2": {
+        "text": "Zwischen den Zuckerrohrfeldern tanzen seltsame lebendige Instrumente im Kreis.",
         "choices": [
-            { "text": "Das ist gefaehrlich", "next": "at_11" },
-            { "text": "Zur Gruppe zurueck", "next": "c1_ooa_start" }
+            { "text": "Musik beobachten", "next": "at_7" },
+            { "text": "Instrument zerstören", "next": "at_6", "karma": -4 }
         ]
     },
 
-    "at_jake": {
-        "text": "Jake liegt halb entspannt da, obwohl die Realitaet flackert. 'Entweder ist Ooo kaputt oder ich hab wieder komische Sandwiches gegessen.'",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_jake.png",
+    "at_3": {
+        "text": "Bubblegum untersucht klebrige rosa Kristalle. 'Das hier stammt nicht aus meinem Labor.'",
         "choices": [
-            { "text": "Das ist ernst", "next": "at_jake_serious" },
-            { "text": "Was spuerst du?", "next": "at_jake_sense" },
-            { "text": "Zur Gruppe zurueck", "next": "c1_ooa_start" }
+            { "text": "Kristalle analysieren", "next": "at_8", "gain_item": "candy_crystal" },
+            { "text": "Finn suchen", "next": "at_1" }
         ]
     },
 
-    "at_jake_serious": {
-        "text": "Jake richtet sich auf. 'Okay, ernst-Modus. Irgendwas greift hier von aussen rein. Und es fuehlt sich nicht freundlich an.'",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_jake2.png",
+    "at_4": {
+        "text": "Peppermint Butler hilft dir dabei, panische Candy People in Sicherheit zu bringen.",
         "choices": [
-            { "text": "Untersuchen", "next": "at_jake_sense" },
-            { "text": "Vertrauen", "next": "at_7", "karma": 1 }
+            { "text": "Peppermint Butler vertrauen", "next": "at_9", "karma": -4 },
+            { "text": "Abstand halten", "next": "at_5", "karma": 2 }
         ]
     },
 
-    "at_jake_sense": {
-        "text": "Jake schnuppert in die Luft. 'Das riecht wie… Realitaet, die nicht fertig gerendert wurde.'",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_jake2.png",
+    "at_5": {
+        "text": "Das Monster beruhigt sich kurz und flüstert: 'Die Musik macht uns hungrig...'",
         "choices": [
-            { "text": "Untersuchen", "next": "at_14" },
-            { "text": "Zur Gruppe zurueck", "next": "c1_ooa_start" }
-        ]
-    },
-
-    "at_marceline": {
-        "text": "Marceline spielt eine verzerrte Melodie. 'Ooo klingt heute wie ein kaputtes Lied… und jemand hat den Text geaendert.' Sie schaut in eine Richtung, die du nicht definieren kannst.",
-        "background": "./game_images/background_at_cave.png",
-        "character": "./game_images/character_at_marceline.png",
-        "choices": [
-            { "text": "Nachfragen", "next": "at_10" },
-            { "text": "Zur Gruppe zurueck", "next": "c1_ooa_start" }
-        ]
-    },
-
-    "at_group": {
-        "text": "Finn, Jake und Marceline stehen gemeinsam in der instabilen Realitaet von Ooo. Jeder reagiert anders auf dieselbe Stoerung – aber alle spueren sie.",
-        "background": "./game_images/background_at_ooo.png",
-        "choices": [
-            { "text": "Finn beobachten", "next": "at_finn" },
-            { "text": "Jake beobachten", "next": "at_jake" },
-            { "text": "Marceline beobachten", "next": "at_marceline" },
-            { "text": "Umgebung untersuchen", "next": "at_6" }
+            { "text": "Nach der Quelle suchen", "next": "at_7" },
+            { "text": "Bubblegum warnen", "next": "at_8", "karma": 3 }
         ]
     },
 
     "at_6": {
-        "text": "Die Welt flackert. Ooo verliert kurz seine Stabilitaet.",
-        "background": "./game_images/background_at_oooGlitch.png",
+        "text": "Die zerstörten Süßigkeiten verschmelzen zu einer klebrigen Masse.",
         "choices": [
-            { "text": "Weitergehen", "next": "at_12" }
+            { "text": "Fliehen", "next": "at_10", "karma": -2 },
+            { "text": "Weiterkämpfen", "next": "at_11", "karma": -5 }
+        ]
+    },
+
+    "at_7": {
+        "text": "Du findest BMO, der hypnotisiert auf einer sprechenden Keytar spielt.",
+        "choices": [
+            { "text": "BMO stoppen", "next": "at_12" },
+            { "text": "Mithören", "next": "at_13", "gain_item": "strange_melody" }
+        ]
+    },
+
+    "at_8": {
+        "text": "Bubblegum erkennt die Kristalle. 'Das sieht nach alter Magie von Wizard City aus.'",
+        "choices": [
+            { "text": "Nach Wizard City reisen", "next": "at_14" },
+            { "text": "Im Kingdom bleiben", "next": "at_10", "karma": -3 }
+        ]
+    },
+
+    "at_9": {
+        "text": "Peppermint Butler führt dich heimlich in einen verbotenen Keller voller magischer Süßigkeiten.",
+        "choices": [
+            { "text": "Fragen stellen", "next": "at_15" },
+            { "text": "Sofort gehen", "next": "at_5", "karma": 2 }
+        ]
+    },
+
+    "at_10": {
+        "text": "Candy Zombies brechen aus den Straßen hervor.",
+        "choices": [
+            { "text": "Bürger schützen", "next": "at_16", "karma": 5 },
+            { "text": "Alleine fliehen", "next": "at_17", "karma": -5 }
         ]
     },
 
     "at_11": {
-        "text": "Finn zeigt in den Himmel. Ein Schatten formt sich dort – staendig wechselnd, nie stabil.",
-        "background": "./game_images/background_at_treehouseRip.png",
-        "character": "./game_images/character_at_finnOben.png",
+        "text": "Jake wird verletzt, als die Masse explodiert.",
         "choices": [
-            { "text": "Ansehen", "next": "at_13" },
-            { "text": "Ignorieren", "next": "at_12", "karma": -1 }
+            { "text": "Jake helfen", "next": "at_16", "karma": 4 },
+            { "text": "Dem Geräusch folgen", "next": "at_13", "karma": -3 }
         ]
     },
 
     "at_12": {
-        "text": "Etwas folgt dir durch die Realitaetsschicht.",
-        "background": "./game_images/background_at_treehouseRip.png",
-        "character": "./game_images/character_at_scary.png",
+        "text": "BMO wacht verwirrt auf. 'Die Musik kam aus den Dessert Caves!'",
         "choices": [
-            { "text": "Weiter gehen", "next": "at_14" }
+            { "text": "Zu den Höhlen gehen", "next": "at_18" },
+            { "text": "Bubblegum informieren", "next": "at_14", "karma": 2 }
         ]
     },
 
     "at_13": {
-        "text": "Der Schatten im Himmel sieht aus wie ein Gesicht, das sich staendig neu formt.",
-        "background": "./game_images/background_at_treehouseFace.png",
+        "text": "Die Melodie bleibt in deinem Kopf und zeigt dir versteckte Wege.",
         "choices": [
-            { "text": "Beruehren versuchen", "next": "at_15", "karma": 2 },
-            { "text": "Zurueckweichen", "next": "at_14" }
+            { "text": "Der Musik folgen", "next": "at_18", "required_item": "strange_melody" },
+            { "text": "Widerstehen", "next": "at_16", "karma": 2 }
         ]
     },
 
     "at_14": {
-        "text": "Jake oeffnet einen stabilen Riss in der Realitaet.",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_jake3.png",
+        "text": "In Wizard City behauptet ein alter Zauberer, die Musik könne Wünsche materialisieren.",
         "choices": [
-            { "text": "Durchgehen", "next": "at_16" },
-            { "text": "Zoegern", "next": "at_12", "karma": -1 }
+            { "text": "Ihm glauben", "next": "at_19", "karma": -2 },
+            { "text": "Beweise verlangen", "next": "at_20", "karma": 3 }
         ]
     },
 
     "at_15": {
-        "text": "Du siehst eine zweite Version von Finn, die dich direkt anstarrt.",
-        "background": "./game_images/background_at_treehouseRip.png",
-        "character": "./game_images/character_at_fakeFinn.png",
+        "text": "Peppermint Butler zeigt dir ein altes Rezeptbuch voller verbotener Candy-Rituale.",
         "choices": [
-            { "text": "Konfrontieren", "next": "at_17", "karma": -2 },
-            { "text": "Akzeptieren", "next": "at_16", "karma": 1 }
+            { "text": "Rezeptbuch nehmen", "next": "at_20", "gain_item": "forbidden_recipe" },
+            { "text": "Verbrennen", "next": "at_16", "karma": 4 }
         ]
     },
 
     "at_16": {
-        "text": "Im Himmel erscheint kurz die Silhouette des Lich.",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_lich.png",
+        "text": "Finn bemerkt, dass die Candy Zombies auf Musik reagieren.",
         "choices": [
-            { "text": "Angreifen", "next": "at_fight", "karma": -2 },
-            { "text": "Beobachten", "next": "at_18" }
-        ]
-    },
-
-    "at_fight": {
-        "text": "Du kaempfst gegen den Lich.",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_lichFight.png",
-        "choices": [
-            { "text": "Mit dem Enchiridion attackieren", "next": "at_WinFight", "karma": 2, "required_item": "enchiridion_piece" },
-            { "text": "Versuchen mit Faust zu kaempfen", "next": "at_looseFight", "karma": -2 }
-        ]
-    },
-
-    "at_looseFight": {
-        "text": "Du hast verloren und rennst weg!",
-        "background": "./game_images/background_at_chaos.png",
-        "choices": [
-            { "text": "Der Lich bricht dir die Nase und du rennst schnell weg", "next": "at_18", "karma": -2 },
-        ]
-    },
-
-    "at_WinFight": {
-        "text": "Du hast gewonnen und gehst weiter!",
-        "background": "./game_images/background_at_treehouse.png",
-        "choices": [
-            { "text": "Der Lich bricht dir die Nase und du rennst schnell weg", "next": "at_18", "karma": -2 },
+            { "text": "Musik nutzen", "next": "at_21", "required_item": "strange_melody" },
+            { "text": "Direkt kämpfen", "next": "at_22", "karma": -3 }
         ]
     },
 
     "at_17": {
-        "text": "Finn sagt: 'Das bist nicht du... oder doch?'",
-        "background": "./game_images/background_at_finnDenken.png",
+        "text": "Du versteckst dich in den Ruinen eines alten Bonbon-Ladens.",
         "choices": [
-            { "text": "Zustimmen", "next": "at_21", "karma": 1 },
-            { "text": "Ablehnen", "next": "at_18", "karma": -1 }
+            { "text": "Vorräte suchen", "next": "at_23", "gain_item": "sugar_mask" },
+            { "text": "Zurückkehren", "next": "at_22", "karma": 1 }
         ]
     },
 
     "at_18": {
-        "text": "Ooo beginnt zu zerfallen und neu zu laden.",
-        "background": "./game_images/background_at_oooGlitch.png",
+        "text": "In den Dessert Caves singt der Ice King traurig vor einem gigantischen lebenden Kuchen.",
         "choices": [
-            { "text": "Stabilisieren helfen", "next": "at_20", "karma": 2 },
-            { "text": "Abwarten", "next": "at_20", "karma": -1 }
+            { "text": "Mit Ice King reden", "next": "at_24" },
+            { "text": "Den Kuchen angreifen", "next": "at_22", "karma": -4 }
+        ]
+    },
+
+    "at_19": {
+        "text": "Der Zauberer versucht, die Musik für sich selbst zu kontrollieren.",
+        "choices": [
+            { "text": "Ihn stoppen", "next": "at_24", "karma": 4 },
+            { "text": "Ihm helfen", "next": "at_25", "karma": -5 }
         ]
     },
 
     "at_20": {
-        "text": "Jake: 'Der Lich nutzt mehrere Versionen von Ooo gleichzeitig. Geh weiter zu Finn, er hat vielleicht eine Idee.'",
-        "background": "./game_images/background_at_oooGlitch.png",
-        "character": "./game_images/character_at_jake.png",
+        "text": "Du erfährst, dass die Musik ursprünglich Candy People Gefühle verstärken sollte.",
         "choices": [
-            { "text": "Verstehen", "next": "at_21", "karma": 2 },
-            { "text": "Zweifeln", "next": "at_21", "karma": -2 }
+            { "text": "Die Quelle zerstören", "next": "at_26" },
+            { "text": "Die Musik umschreiben", "next": "at_21", "required_item": "forbidden_recipe" }
         ]
     },
 
     "at_21": {
-        "text": "Finn findet ein zerbrochenes Stueck des Enchiridion.",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_finn.png",
+        "text": "Die Melodie beruhigt Teile des Kingdoms, aber einige Candy People werden komplett emotionslos.",
         "choices": [
-            { "text": "Nehmen", "next": "enchiridion", "gain_item": "enchiridion_piece" }
+            { "text": "Weiter benutzen", "next": "at_27", "karma": -2 },
+            { "text": "Abbrechen", "next": "at_26", "karma": 3 }
         ]
     },
 
-    "enchiridion": {
-        "text": "Du erhaeltst ein Stueck des Enchiridion.",
-        "background": "./game_images/background_at_grass.png",
-        "character": "./game_images/item_at_enchiridion.png",
-        "choices": [
-            { "text": "Weiter", "next": "at_22" }
-        ],
-    },
-
     "at_22": {
-        "text": "Mehrere Versionen von Ooo ueberlagern sich am Himmel.",
-        "background": "./game_images/background_at_treehouseChaos.png",
+        "text": "Das Chaos breitet sich bis zum Breakfast Kingdom aus.",
         "choices": [
-            { "text": "Schnell zu Marceline", "next": "at_23" },
+            { "text": "Hilfe holen", "next": "at_28" },
+            { "text": "Alleine handeln", "next": "at_25", "karma": -4 }
         ]
     },
 
     "at_23": {
-        "text": "Marceline: 'Etwas ausserhalb greift ein.'",
-        "background": "./game_images/background_at_cave.png",
-        "character": "./game_images/character_at_marceline.png",
+        "text": "Die Sugar Mask schützt dich vor der hypnotischen Musik.",
         "choices": [
-            { "text": "Merken und Jakes Gedanken hoeren", "next": "at_24" },
+            { "text": "Benutzen", "next": "at_28", "gain_item": "sugar_mask" },
+            { "text": "Verstecken", "next": "at_22" }
         ]
     },
 
     "at_24": {
-        "text": "Jake stabilisiert kurz die Realitaet.",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_jake2.png",
+        "text": "Ice King gesteht, dass er die singende Torte aus Einsamkeit erschaffen hat.",
         "choices": [
-            { "text": "Vertrauen", "next": "at_25", "karma": 1 },
-            { "text": "Misstrauen", "next": "at_25", "karma": -1 }
+            { "text": "Mitgefühl zeigen", "next": "at_29", "karma": 5 },
+            { "text": "Vorwürfe machen", "next": "at_25", "karma": -4 }
         ]
     },
 
     "at_25": {
-        "text": "Finn: 'Wir sind nur eine von vielen Versionen.'",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_finn.png",
+        "text": "Die singende Torte wächst außer Kontrolle.",
         "choices": [
-            { "text": "Akzeptieren", "next": "at_26", "karma": 1 },
-            { "text": "Ablehnen", "next": "at_26", "karma": -1 }
+            { "text": "Evakuieren", "next": "at_28", "karma": 4 },
+            { "text": "Weiter kämpfen", "next": "at_30", "karma": -5 }
         ]
     },
 
     "at_26": {
-        "text": "Der Lich erscheint erneut, diesmal stabiler.",
-        "background": "./game_images/background_at_treehouse.png",
-        "character": "./game_images/character_at_lich.png",
+        "text": "Bubblegum entwickelt einen Plan, die Musik im ganzen Kingdom umzuleiten.",
         "choices": [
-            { "text": "Kampf vorbereiten", "next": "at_27" },
-            { "text": "Beobachten", "next": "at_27", "karma": -1 }
+            { "text": "Plan unterstützen", "next": "at_29", "karma": 4 },
+            { "text": "Eigenen Weg gehen", "next": "at_30", "karma": -2 }
         ]
     },
 
     "at_27": {
-        "text": "Alle kaempfen gemeinsam gegen den Lich und der Lich verschwindet langsam.",
-        "background": "./game_images/background_at_treehouseRip.png",
-        "character": "./game_images/character_at_lich.png",
+        "text": "Das Kingdom wird ruhig... fast zu ruhig.",
         "choices": [
-            { "text": "Unterstuetzen", "next": "at_28", "karma": 2 },
-            { "text": "Zoegern", "next": "at_28", "karma": -4 }
+            { "text": "Untersuchen", "next": "at_30" },
+            { "text": "Ignorieren", "next": "at_28", "karma": -3 }
         ]
     },
 
     "at_28": {
-        "text": "Der Lich zerfaellt in Fragmente.",
-        "background": "./game_images/background_at_treehouseRip.png",
-        "character": "./game_images/character_at_lichFragment.png",
+        "text": "Finn entdeckt den Ursprung der Musik tief unter dem Candy Kingdom.",
         "choices": [
-            { "text": "Weiter", "next": "at_29" }
+            { "text": "Hinabsteigen", "next": "at_29" },
+            { "text": "Ice King schicken", "next": "at_30", "karma": -2 }
         ]
     },
 
     "at_29": {
-        "text": "Ooo stabilisiert sich kurz, doch der Nexus oeffnet sich am Himmel.",
-        "background": "./game_images/background_at_treehouse.png",
+        "text": "Im Untergrund schlägt ein gigantisches lebendes Candy-Herz im Takt der Musik.",
         "choices": [
-            { "text": "Weiter", "next": "at_30" }
+            { "text": "Beruhigen", "next": "at_30", "required_item": "candy_crystal" },
+            { "text": "Zerstören", "next": "at_30", "karma": -6 }
         ]
     },
 
     "at_30": {
-        "text": "Der Nexus zieht Ooo in die Verbindung aller Welten. Kapitel 2 wird vorbereitet.",
-        "background": "./game_images/background_at_ooo.png",
+        "text": "Die Musik verstummt langsam. Das Candy Kingdom überlebt, aber einige Bewohner erinnern sich noch lange an diese Nacht.",
         "choices": [
-            { "text": "Kapitel 2 starten", "next": "c2_start" }
+            { "text": "Weiterziehen", "next": "c2_start" }
         ]
     },
 
@@ -566,351 +511,624 @@ let gameData = {
         ]
     },
 
-    "c1_dx_start": {
-        "text": "Dexters Labor existiert in mehreren leicht versetzten Versionen gleichzeitig. Monitore flackern zwischen verschiedenen Experimenten, Tueren fuehren nicht immer in denselben Raum und irgendwo laeuft ein Alarm, den niemand ausgeloest hat. Dee Dee taucht staendig an unmoeglichen Orten auf, waehrend Mandark alles mit verdaechtig ruhigem Laecheln beobachtet.",
-        "background": "./game_images/background_dx_lab.png",
+    "c2_dl_start": {
+        "text": "Dexter rast hektisch durch sein Labor. Überall öffnen sich plötzlich Mini-Portale, die fehlgeschlagene Erfindungen aus alten Experimenten freisetzen. Dee Dee tanzt ahnungslos zwischen schwebenden Robotern und mutierten Haushaltsgeräten herum.",
         "choices": [
-            { "text": "Mit Dexter reden", "next": "dx_dexter", "karma": 1 },
-            { "text": "Mit Mandark reden", "next": "dx_mandark", "karma": -1 },
-            { "text": "Das Labor untersuchen", "next": "dx_3" },
-            { "text": "Dee Dee folgen", "next": "dx_deedee", "karma": 2 }
+            { "text": "Dexter helfen", "next": "dl_1", "karma": 4 },
+            { "text": "Dee Dee folgen", "next": "dl_2", "karma": -2 },
+            { "text": "Die Portale untersuchen", "next": "dl_3" },
+            { "text": "Das Labor sichern", "next": "dl_4", "karma": 5 }
         ]
     },
 
-    "dx_dexter": {
-        "text": "Dexter haemmert hektisch auf seine Tastatur ein. 'Nein, nein, nein! Diese Simulation sollte stabil sein! Du gehoerst definitiv nicht in diese Iteration!'",
-        "background": "./game_images/background_dx_controlroom.png",
-        "character": "./game_images/character_dx_dexter.png",
+    "dl_1": {
+        "text": "Dexter: 'Mein Experimental-Reject-Archiv wurde aktiviert! Dinge, die niemals funktionieren sollten, laufen frei herum!'",
         "choices": [
-            { "text": "Nachfragen", "next": "dx_5" },
-            { "text": "Beruhigen", "next": "dx_6" },
-            { "text": "Beweise verlangen", "next": "dx_7", "karma": 1 },
-            { "text": "Zurueck zum Labor", "next": "c1_dx_start" }
+            { "text": "Archiv untersuchen", "next": "dl_5" },
+            { "text": "Sofort Systeme abschalten", "next": "dl_6", "karma": -3 }
         ]
     },
 
-    "dx_mandark": {
-        "text": "Mandark verschraenkt die Arme. 'Dexter versteht nur lineare Wissenschaft. Aber Realitaet ist chaotisch… rekursiv… wunderschoen instabil.'",
-        "background": "./game_images/background_dx_darklab.png",
-        "character": "./game_images/character_dx_mandark.png",
+    "dl_2": {
+        "text": "Dee Dee findet eine Maschine, die jede Zeichnung real werden lässt.",
         "choices": [
-            { "text": "Zuhoeren", "next": "dx_7", "karma": 1 },
-            { "text": "Ihm misstrauen", "next": "dx_6", "karma": -2 },
-            { "text": "Zurueck zum Labor", "next": "c1_dx_start" }
+            { "text": "Dee Dee stoppen", "next": "dl_5", "karma": 3 },
+            { "text": "Mitzeichnen", "next": "dl_7", "gain_item": "living_sketch" }
         ]
     },
 
-    "dx_deedee": {
-        "text": "Dee Dee tanzt zwischen Maschinen hindurch, ohne die flackernden Warnungen zu beachten. 'Ooooh! Dieses Labor macht heute lustige Geraeusche!'",
-        "background": "./game_images/background_dx_hallway.png",
-        "character": "./game_images/character_dx_deedee.png",
+    "dl_3": {
+        "text": "Eines der Portale zeigt eine ältere Version von Dexter, die panisch Warnungen ruft.",
         "choices": [
-            { "text": "Fragen was sie sieht", "next": "dx_10" },
-            { "text": "Ihr folgen", "next": "dx_8", "karma": 1 },
-            { "text": "Zurueck zum Labor", "next": "c1_dx_start" }
+            { "text": "Zuhören", "next": "dl_8" },
+            { "text": "Portal schließen", "next": "dl_6", "karma": -2 }
         ]
     },
 
-    "dx_3": {
-        "text": "Du findest eine Datei namens REALITY_PATCH_LOG. Sie wurde hunderte Male ueberschrieben.",
-        "background": "./game_images/background_dx_terminal.png",
+    "dl_4": {
+        "text": "Du verriegelst mehrere Laborebenen, aber dadurch werden einige Roboter eingeschlossen.",
         "choices": [
-            { "text": "Datei analysieren", "next": "dx_9", "gain_item": "reality_log" },
-            { "text": "Terminal schliessen", "next": "dx_6", "karma": -1 }
+            { "text": "Roboter opfern", "next": "dl_9", "karma": -4 },
+            { "text": "Notausgang öffnen", "next": "dl_5", "karma": 2 }
         ]
     },
 
-    "dx_5": {
-        "text": "Dexter zeigt dir mehrere Monitore. Auf jedem laeuft eine leicht andere Version des Labors — und in jedem stehst du an anderer Stelle.",
+    "dl_5": {
+        "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotröster, aggressive Staubsauger und ein schlafwandelnder Kampfanzug.",
         "choices": [
-            { "text": "Untersuchen", "next": "dx_11" },
-            { "text": "Abwenden", "next": "dx_6", "karma": -1 }
+            { "text": "Kampfanzug aktivieren", "next": "dl_10", "gain_item": "prototype_armor" },
+            { "text": "Archiv durchsuchen", "next": "dl_11" }
         ]
     },
 
-    "dx_6": {
-        "text": "Das Labor beginnt sich selbst neu zu kompilieren. Waende verschieben sich und Maschinen erscheinen doppelt.",
-        "background": "./game_images/background_dx_glitch.png",
+    "dl_6": {
+        "text": "Das Abschalten destabilisiert das Hauptreaktor-System.",
         "choices": [
-            { "text": "Weiter", "next": "dx_12" }
+            { "text": "Reaktor reparieren", "next": "dl_12", "karma": 4 },
+            { "text": "Dexter warnen", "next": "dl_8" }
         ]
     },
 
-    "dx_7": {
-        "text": "Mandark grinst leicht. 'Du bist ein Fremdprozess in Dexters System. Deshalb reagiert alles auf dich.'",
+    "dl_7": {
+        "text": "Dee Dee zeichnet ein riesiges lachendes Monster mit Lasernaugen.",
         "choices": [
-            { "text": "Akzeptieren", "next": "dx_10", "karma": 2 },
-            { "text": "Ablehnen", "next": "dx_12", "karma": -2 }
+            { "text": "Monster bekämpfen", "next": "dl_13", "karma": -3 },
+            { "text": "Zeichnung löschen", "next": "dl_11", "karma": 3 }
         ]
     },
 
-    "dx_8": {
-        "text": "Dee Dee dreht sich lachend im Kreis. Dabei veraendern sich die Korridore des Labors um sie herum.",
+    "dl_8": {
+        "text": "Der ältere Dexter erklärt: 'Ein Experiment namens Project Perfect wird bald alles ersetzen.'",
         "choices": [
-            { "text": "Weiter folgen", "next": "dx_13" },
-            { "text": "Zurueckziehen", "next": "dx_12", "karma": -1 }
+            { "text": "Mehr erfahren", "next": "dl_14" },
+            { "text": "Ignorieren", "next": "dl_12", "karma": -4 }
         ]
     },
 
-    "dx_9": {
-        "text": "Die Datei zeigt, dass Dexter die Realitaet des Labors mehrfach zurueckgesetzt hat.",
+    "dl_9": {
+        "text": "Die eingeschlossenen Roboter fusionieren zu einer einzigen gigantischen Maschine.",
         "choices": [
-            { "text": "Speichern", "next": "dx_13", "gain_item": "patch_core" }
+            { "text": "Kämpfen", "next": "dl_13" },
+            { "text": "Verstecken", "next": "dl_15", "karma": -3 }
         ]
     },
 
-    "dx_10": {
-        "text": "Dee Dee schaut ploetzlich ernst. 'Manchmal erinnert sich das Labor an Sachen, die noch gar nicht passiert sind.'",
+    "dl_10": {
+        "text": "Der Kampfanzug funktioniert... meistens. Gelegentlich greift er zufällige Objekte an.",
         "choices": [
-            { "text": "Zuhoeren", "next": "dx_14", "karma": 2 },
-            { "text": "Nicht ernst nehmen", "next": "dx_12", "karma": -2 }
+            { "text": "Weiter benutzen", "next": "dl_16", "karma": -2 },
+            { "text": "Abschalten", "next": "dl_11" }
         ]
     },
 
-    "dx_11": {
-        "text": "Du siehst unzaehlige Dexter-Versionen. Manche arbeiten friedlich. Andere beobachten dich direkt.",
+    "dl_11": {
+        "text": "Du findest alte Baupläne für Project Perfect.",
         "choices": [
-            { "text": "Analysieren", "next": "dx_14" },
-            { "text": "Ignorieren", "next": "dx_12", "karma": -1 }
+            { "text": "Pläne analysieren", "next": "dl_14", "gain_item": "perfect_blueprint" },
+            { "text": "Verbrennen", "next": "dl_12", "karma": 2 }
         ]
     },
 
-    "dx_12": {
-        "text": "Ein schwerer Systemfehler breitet sich durch das Labor aus.",
+    "dl_12": {
+        "text": "Mandark taucht plötzlich auf und behauptet, Dexter habe das Chaos selbst verursacht.",
         "choices": [
-            { "text": "Weitergehen", "next": "dx_15" }
+            { "text": "Mandark glauben", "next": "dl_17", "karma": -5 },
+            { "text": "Dexter verteidigen", "next": "dl_14", "karma": 4 }
         ]
     },
 
-    "dx_13": {
-        "text": "Dee Dee beruehrt eine instabile Maschine — ploetzlich stabilisiert sie sich.",
+    "dl_13": {
+        "text": "Das Monster beschädigt mehrere Sicherheitskerne im Labor.",
         "choices": [
-            { "text": "Naeher beobachten", "next": "dx_16" },
-            { "text": "Weitergehen", "next": "dx_15" }
+            { "text": "Kerne retten", "next": "dl_18", "karma": 5 },
+            { "text": "Monster verfolgen", "next": "dl_15", "karma": -2 }
         ]
     },
 
-    "dx_14": {
-        "text": "Mandark deutet auf die Decke des Labors. 'Dieses Labor ist nur ein Layer in einer viel groesseren Struktur.'",
+    "dl_14": {
+        "text": "Project Perfect sollte Dexters fehlerhafte Erfindungen automatisch verbessern.",
         "choices": [
-            { "text": "Glauben", "next": "dx_17", "karma": 2 },
-            { "text": "Zweifeln", "next": "dx_15", "karma": -2 }
+            { "text": "Projekt aktivieren", "next": "dl_19" },
+            { "text": "Projekt stoppen", "next": "dl_18", "karma": 3 }
         ]
     },
 
-    "dx_15": {
-        "text": "Das Labor beginnt sich in sich selbst zu falten.",
+    "dl_15": {
+        "text": "Im alten Testbereich arbeiten fehlgeschlagene Klon-Dexters heimlich weiter.",
         "choices": [
-            { "text": "Weiter", "next": "dx_18" }
+            { "text": "Mit ihnen reden", "next": "dl_20" },
+            { "text": "Alarm auslösen", "next": "dl_18", "karma": -3 }
         ]
     },
 
-    "dx_16": {
-        "text": "Dexter starrt auf seine Scanner. 'Das ist unmoeglich… Dee Dee stabilisiert die Realitaet einfach durch ihre Anwesenheit.'",
+    "dl_16": {
+        "text": "Der Kampfanzug scannt plötzlich Dee Dee als Bedrohung.",
         "choices": [
-            { "text": "Speichern", "next": "dx_17", "gain_item": "stability_anchor" }
+            { "text": "Dee Dee schützen", "next": "dl_20", "karma": 4 },
+            { "text": "Anzug weiterkämpfen lassen", "next": "dl_21", "karma": -5 }
         ]
     },
 
-    "dx_17": {
-        "text": "Dexter wirkt ungewoehnlich nervoes. 'Wenn Dee Dee verschwindet, koennte das ganze Labor kollabieren.'",
+    "dl_17": {
+        "text": "Mandark führt dich in ein geheimes Konkurrenzlabor unter Dexters Haus.",
         "choices": [
-            { "text": "Dee Dee schuetzen", "next": "dx_18", "karma": 2 },
-            { "text": "Ignorieren", "next": "dx_18", "karma": -2 }
+            { "text": "Zusammenarbeiten", "next": "dl_19", "karma": -2 },
+            { "text": "Sabotieren", "next": "dl_18", "karma": 4 }
         ]
     },
 
-    "dx_18": {
-        "text": "Unter dem Labor oeffnet sich ein flackernder Realitaetsriss.",
+    "dl_18": {
+        "text": "Dexter entdeckt, dass Project Perfect beginnt, das gesamte Labor umzubauen.",
         "choices": [
-            { "text": "Untersuchen", "next": "dx_19" }
+            { "text": "Kontrolle übernehmen", "next": "dl_22", "required_item": "perfect_blueprint" },
+            { "text": "Hauptsystem zerstören", "next": "dl_21", "karma": -4 }
         ]
     },
 
-    "dx_19": {
-        "text": "Im Riss erscheinen mehrere Versionen des Labors gleichzeitig.",
+    "dl_19": {
+        "text": "Project Perfect aktiviert sich vollständig und ersetzt kaputte Geräte durch perfekte Versionen.",
         "choices": [
-            { "text": "Analysieren", "next": "dx_20", "gain_item": "lab_rift_data" },
-            { "text": "Beruehren", "next": "dx_20", "karma": 2 }
+            { "text": "Beobachten", "next": "dl_22" },
+            { "text": "Sofort stoppen", "next": "dl_21", "karma": 2 }
         ]
     },
 
-    "dx_20": {
-        "text": "Mandark laechelt zufrieden. 'Dexter hat das System so oft neu geschrieben, dass es sich jetzt selbst ueberschreibt.'",
+    "dl_20": {
+        "text": "Die Klon-Dexters behaupten, sie seien entsorgt worden, obwohl sie funktionierten.",
         "choices": [
-            { "text": "Zuhoeren", "next": "dx_21", "karma": 2 },
-            { "text": "Ablehnen", "next": "dx_21", "karma": -2 }
+            { "text": "Ihnen helfen", "next": "dl_23", "karma": -2 },
+            { "text": "Dexter informieren", "next": "dl_22", "karma": 3 }
         ]
     },
 
-    "dx_21": {
-        "text": "Dee Dee blickt in den Riss. 'Ich erinnere mich an Dinge, die nie passiert sind.'",
+    "dl_21": {
+        "text": "Das Labor beginnt auseinanderzufallen.",
         "choices": [
-            { "text": "Nachfragen", "next": "dx_22" },
-            { "text": "Ignorieren", "next": "dx_15", "karma": -1 }
+            { "text": "Evakuieren", "next": "dl_24", "karma": 5 },
+            { "text": "Experiment retten", "next": "dl_23", "karma": -4 }
         ]
     },
 
-    "dx_22": {
-        "text": "Dexter aktiviert eine gewaltige Maschine mit der Aufschrift REALITY COMPILER.",
+    "dl_22": {
+        "text": "Project Perfect stuft plötzlich Menschen als 'ineffizient' ein.",
         "choices": [
-            { "text": "Anfassen", "next": "dx_23", "karma": 2 },
-            { "text": "Ablehnen", "next": "dx_15", "karma": -2 }
+            { "text": "System neu programmieren", "next": "dl_25", "required_item": "perfect_blueprint" },
+            { "text": "Computer zerstören", "next": "dl_24", "karma": -2 }
         ]
     },
 
-    "dx_23": {
-        "text": "Du siehst unzaehlige moegliche Versionen des Labors entstehen und verschwinden.",
+    "dl_23": {
+        "text": "Mandark versucht heimlich, Project Perfect zu übernehmen.",
         "choices": [
-            { "text": "Analysieren", "next": "dx_24" }
+            { "text": "Mandark stoppen", "next": "dl_25", "karma": 4 },
+            { "text": "Mandark gewähren lassen", "next": "dl_26", "karma": -6 }
         ]
     },
 
-    "dx_24": {
-        "text": "Dexter atmet tief durch. 'Wir sind wahrscheinlich nicht einmal die Originalversionen von uns.'",
+    "dl_24": {
+        "text": "Dee Dee findet den Hauptkern des Systems und beginnt darauf herumzutanzen.",
         "choices": [
-            { "text": "Akzeptieren", "next": "dx_25", "karma": 1 },
-            { "text": "Ablehnen", "next": "dx_25", "karma": -1 }
+            { "text": "Mitmachen", "next": "dl_26", "karma": -3 },
+            { "text": "Sie wegziehen", "next": "dl_25", "karma": 2 }
         ]
     },
 
-    "dx_25": {
-        "text": "Mandark oeffnet einen stabilen Riss unter dem Labor.",
+    "dl_25": {
+        "text": "Dexter schafft es, Project Perfect umzuprogrammieren.",
         "choices": [
-            { "text": "Durchgehen", "next": "dx_26", "required_item": "lab_rift_data" },
-            { "text": "Zoegern", "next": "dx_26" }
+            { "text": "Nur gefährliche Erfindungen löschen", "next": "dl_27", "karma": 5 },
+            { "text": "Alles zurücksetzen", "next": "dl_28", "karma": -2 }
         ]
     },
 
-    "dx_26": {
-        "text": "Das Labor beginnt sich vollstaendig zu ueberschreiben.",
+    "dl_26": {
+        "text": "Das Labor wird kurzzeitig komplett von der KI kontrolliert.",
         "choices": [
-            { "text": "Weiter", "next": "dx_27" }
+            { "text": "Dexter helfen", "next": "dl_27", "karma": 4 },
+            { "text": "Selbst fliehen", "next": "dl_28", "karma": -5 }
         ]
     },
 
-    "dx_27": {
-        "text": "Dee Dee stabilisiert fuer einen kurzen Moment das gesamte Labor.",
+    "dl_27": {
+        "text": "Die meisten Fehlfunktionen verschwinden langsam. Dexter wirkt erschöpft.",
         "choices": [
-            { "text": "Vertrauen", "next": "dx_28", "karma": 2 },
-            { "text": "Misstrauen", "next": "dx_28", "karma": -2 }
+            { "text": "Dexter beruhigen", "next": "dl_29", "karma": 3 },
+            { "text": "Mandark suchen", "next": "dl_28" }
         ]
     },
 
-    "dx_28": {
-        "text": "Dexter blickt auf die flackernden Monitore. 'Etwas ausserhalb unseres Systems greift ein.'",
+    "dl_28": {
+        "text": "Ein letzter versteckter Reject-Roboter aktiviert sich heimlich.",
         "choices": [
-            { "text": "Verstehen", "next": "dx_29", "karma": 2 },
-            { "text": "Zweifeln", "next": "dx_29", "karma": -2 }
+            { "text": "Abschalten", "next": "dl_29", "required_item": "prototype_armor" },
+            { "text": "Ignorieren", "next": "dl_30", "karma": -5 }
         ]
     },
 
-    "dx_29": {
-        "text": "Alle Versionen des Labors ueberlagern sich vollstaendig.",
+    "dl_29": {
+        "text": "Dexter versiegelt das Reject-Archiv erneut. Dee Dee malt bereits wieder an einer neuen Maschine.",
         "choices": [
-            { "text": "Weiter", "next": "dx_30" }
+            { "text": "Aufpassen", "next": "dl_30", "karma": 2 },
+            { "text": "Labor verlassen", "next": "dl_30" }
         ]
     },
 
-    "dx_30": {
-        "text": "Dexters Labor kollabiert in den Nexus und oeffnet die Verbindung zu allen Realitaeten. Kapitel 2 wird vorbereitet.",
+    "dl_30": {
+        "text": "Das Labor stabilisiert sich langsam wieder. Irgendwo tief im Archiv blinkt jedoch weiterhin ein vergessenes Experiment.",
         "choices": [
-            { "text": "Kapitel 2 starten", "next": "c2_start" }
+            { "text": "Weiterziehen", "next": "c2_start" }
         ]
     },
 
     "c1_ppg_start": {
-        "text": "Townsville hat einen dieser Tage, an denen alles leicht daneben wirkt – Ampeln schalten zu spaet, der Himmel flackert kurz und Professor Utoniums Labor klingt, als wuerde etwas darin nicht richtig schliessen.",
+        "text": "Townsville feiert den 'Tag der Helden'. Überall laufen Paraden, Professor Utonium präsentiert neue Sicherheitsdrohnen und der Bürgermeister hält eine viel zu lange Rede. Plötzlich färbt sich der Himmel rosa und überall in der Stadt erscheinen identische lächelnde Wolken mit riesigen Augen.",
         "choices": [
-            { "text": "Blossom helfen", "next": "ppg_1", "karma": 1 },
-            { "text": "Bubbles begleiten", "next": "ppg_2", "karma": 2 },
-            { "text": "Buttercup folgen", "next": "ppg_3", "karma": -1 },
-            { "text": "Professor Utonium suchen", "next": "ppg_4" }
+            { "text": "Zum Rathaus fliegen", "next": "ppg_1", "karma": 2 },
+            { "text": "Professor Utoniums Labor aufsuchen", "next": "ppg_2" },
+            { "text": "Den Wolken folgen", "next": "ppg_3", "karma": -2 },
+            { "text": "Die Bürger evakuieren", "next": "ppg_4", "karma": 3 }
+        ]
+    },
+
+    "ppg_1": {
+        "text": "Der Bürgermeister versteckt sich panisch unter seinem Schreibtisch. Ms. Bellum beobachtet die Wolken ruhig.",
+        "choices": [
+            { "text": "Ms. Bellum zuhören", "next": "ppg_5" },
+            { "text": "Den Bürgermeister beruhigen", "next": "ppg_6", "karma": 1 },
+            { "text": "Sofort losfliegen", "next": "ppg_7", "karma": -1 }
+        ]
+    },
+
+    "ppg_2": {
+        "text": "Professor Utonium untersucht rosa Rückstände. 'Das erinnert mich an eine instabile Form von Chemical X.'",
+        "choices": [
+            { "text": "Im Labor helfen", "next": "ppg_8", "gain_item": "chemical_scanner" },
+            { "text": "Nach Bubbles suchen", "next": "ppg_9" },
+            { "text": "Die Drohnen testen", "next": "ppg_10", "karma": -2 }
+        ]
+    },
+
+    "ppg_3": {
+        "text": "Die Wolken führen dich zu einem verlassenen Süßigkeitenlager am Hafen. Überall klebt rosa Zucker an den Wänden.",
+        "choices": [
+            { "text": "Das Lager untersuchen", "next": "ppg_11" },
+            { "text": "Die Zuckerreste einsammeln", "next": "ppg_12", "gain_item": "pink_residue" },
+            { "text": "Das Lager zerstören", "next": "ppg_13", "karma": -4 }
+        ]
+    },
+
+    "ppg_4": {
+        "text": "Viele Bürger weigern sich zu gehen, weil sie die Wolken 'freundlich' finden. Kinder beginnen ihnen zu folgen.",
+        "choices": [
+            { "text": "Die Kinder stoppen", "next": "ppg_14", "karma": 4 },
+            { "text": "Die Wolken beobachten", "next": "ppg_11" },
+            { "text": "Die Parade absagen lassen", "next": "ppg_6", "karma": -1 }
         ]
     },
 
     "ppg_5": {
-        "text": "Blossom zeigt dir Messdaten aus dem Labor. Chemical X verhaelt sich unberechenbar, als wuerde es auf etwas reagieren, das ausserhalb von Townsville liegt.",
+        "text": "Ms. Bellum: 'Die Wolken reagieren auf Emotionen. Je fröhlicher Townsville wird, desto größer werden sie.'",
         "choices": [
-            { "text": "Daten sichern", "next": "ppg_9", "gain_item": "chemical_x_data" },
-            { "text": "Zurueckgehen", "next": "ppg_6", "karma": -1 }
+            { "text": "Die Feier stoppen", "next": "ppg_15", "karma": -2 },
+            { "text": "Nach dem Ursprung suchen", "next": "ppg_11", "karma": 2 },
+            { "text": "Die Information geheim halten", "next": "ppg_16" }
+        ]
+    },
+
+    "ppg_6": {
+        "text": "Der Bürgermeister drückt dir nervös einen alten Notschlüssel für das Kraftwerk in die Hand.",
+        "choices": [
+            { "text": "Nehmen", "next": "ppg_17", "gain_item": "mayor_key" },
+            { "text": "Ablehnen", "next": "ppg_15" }
+        ]
+    },
+
+    "ppg_7": {
+        "text": "Mojo Jojo erscheint auf einem fliegenden Lautsprecherwagen. 'DIESE WOLKEN SIND NICHT MEIN WERK! Was leider bedeutet, dass jemand NOCH schlauer ist als ich!'",
+        "choices": [
+            { "text": "Mojo glauben", "next": "ppg_18" },
+            { "text": "Mojo angreifen", "next": "ppg_19", "karma": -3 },
+            { "text": "Ihn überwachen", "next": "ppg_20" }
         ]
     },
 
     "ppg_8": {
-        "text": "Am Himmel ueber Townsville entstehen kurze gruene Stoerungen, die sofort wieder verschwinden.",
+        "text": "Der Scanner entdeckt Spuren von verändertem Chemical X in mehreren Süßwarenfabriken.",
         "choices": [
-            { "text": "Untersuchen", "next": "ppg_12" },
-            { "text": "Ignorieren", "next": "ppg_10", "karma": -1 }
+            { "text": "Zur Marshmallow-Fabrik fliegen", "next": "ppg_21" },
+            { "text": "Zur Limonadenfabrik fliegen", "next": "ppg_22" },
+            { "text": "Die Daten speichern", "next": "ppg_16", "gain_item": "x_analysis" }
+        ]
+    },
+
+    "ppg_9": {
+        "text": "Bubbles sitzt im Park und redet mit einer rosa Wolke, als wäre sie lebendig.",
+        "choices": [
+            { "text": "Bubbles wegziehen", "next": "ppg_23", "karma": -1 },
+            { "text": "Der Wolke zuhören", "next": "ppg_24" },
+            { "text": "Still beobachten", "next": "ppg_20" }
+        ]
+    },
+
+    "ppg_10": {
+        "text": "Die Sicherheitsdrohnen geraten außer Kontrolle und markieren plötzlich alle Bürger als Bedrohung.",
+        "choices": [
+            { "text": "Drohnen abschalten", "next": "ppg_25", "karma": 2 },
+            { "text": "Die Drohnen umlenken", "next": "ppg_19", "karma": -3 }
         ]
     },
 
     "ppg_11": {
-        "text": "Professor Utonium erkennt ein Muster in den Daten. 'Chemical X verbindet sich mit etwas anderem... aber ich weiss nicht womit.'",
+        "text": "Im Lager entdeckst du eine riesige Maschine aus Süßigkeiten, Rohren und alten Teilen von Fuzzy Lumpkins.",
         "choices": [
-            { "text": "Verstehen", "next": "ppg_13", "karma": 2 },
-            { "text": "Zweifeln", "next": "ppg_12", "karma": -1 }
+            { "text": "Die Maschine analysieren", "next": "ppg_26", "required_item": "chemical_scanner" },
+            { "text": "Die Maschine aktivieren", "next": "ppg_27", "karma": -4 },
+            { "text": "Nach dem Erbauer suchen", "next": "ppg_18" }
         ]
     },
 
     "ppg_12": {
-        "text": "Der Energieriss ueber Townsville wird stabiler und beginnt sichtbar zu bleiben.",
+        "text": "Die rosa Rückstände reagieren plötzlich auf deine Bewegungen und formen kleine Gesichter.",
         "choices": [
-            { "text": "Analysieren", "next": "ppg_14", "gain_item": "townsville_rift" },
-            { "text": "Beruehren", "next": "ppg_13", "karma": 2 }
+            { "text": "In einen Behälter sperren", "next": "ppg_16", "karma": 2 },
+            { "text": "Verbrennen", "next": "ppg_13", "karma": -2 }
         ]
     },
 
     "ppg_13": {
-        "text": "Buttercup verliert kurz die Kontrolle ueber ihre Kraefte und schlaegt versehentlich einen Teil der Stadtstruktur weg.",
+        "text": "Die Explosion verteilt rosa Staub über ganz Townsville. Die Wolken wachsen sofort weiter.",
         "choices": [
-            { "text": "Helfen stabilisieren", "next": "ppg_15", "karma": 2 },
-            { "text": "Zusehen", "next": "ppg_14" }
+            { "text": "Zum Himmel fliegen", "next": "ppg_28", "karma": -5 },
+            { "text": "Professor Utonium warnen", "next": "ppg_29" }
+        ]
+    },
+
+    "ppg_14": {
+        "text": "Ein kleines Mädchen sagt: 'Die Wolken versprechen uns perfekte Träume.'",
+        "choices": [
+            { "text": "Weiter nachfragen", "next": "ppg_24" },
+            { "text": "Die Kinder evakuieren", "next": "ppg_29", "karma": 5 }
         ]
     },
 
     "ppg_15": {
-        "text": "Bubbles gibt dir ein kleines emotionales Stabilitaetsfragment. 'Das hilft manchmal, wenn alles zu chaotisch wird.'",
+        "text": "Townsville wird ruhiger. Die Wolken bewegen sich plötzlich direkt auf das Kraftwerk zu.",
         "choices": [
-            { "text": "Nehmen", "next": "ppg_16", "gain_item": "emotion_core" }
+            { "text": "Zum Kraftwerk fliegen", "next": "ppg_17" },
+            { "text": "Die Wolken verfolgen", "next": "ppg_28" }
+        ]
+    },
+
+    "ppg_16": {
+        "text": "Professor Utonium erkennt ein Muster: Die Wolken speichern Emotionen wie Energie.",
+        "choices": [
+            { "text": "Die Energie neutralisieren", "next": "ppg_30", "required_item": "pink_residue" },
+            { "text": "Die Energie umleiten", "next": "ppg_31", "required_item": "x_analysis" },
+            { "text": "Nichts riskieren", "next": "ppg_29" }
+        ]
+    },
+
+    "ppg_17": {
+        "text": "Im Kraftwerk sitzt HIM auf einem Thron aus rosa Rauch und summt fröhlich vor sich hin.",
+        "choices": [
+            { "text": "Mit HIM reden", "next": "ppg_32" },
+            { "text": "Direkt angreifen", "next": "ppg_33", "karma": -4 },
+            { "text": "Versteckt beobachten", "next": "ppg_34" }
+        ]
+    },
+
+    "ppg_18": {
+        "text": "Mojo Jojo erklärt genervt: 'Jemand benutzt instabiles Chemical X, um Townsville süchtig nach Glück zu machen.'",
+        "choices": [
+            { "text": "Mit Mojo zusammenarbeiten", "next": "ppg_35", "karma": 2 },
+            { "text": "Ihm misstrauen", "next": "ppg_20" }
+        ]
+    },
+
+    "ppg_19": {
+        "text": "Während des Kampfes entkommt Mojo und mehrere Wolken explodieren über der Innenstadt.",
+        "choices": [
+            { "text": "Die Menschen retten", "next": "ppg_29", "karma": 4 },
+            { "text": "Mojo weiter verfolgen", "next": "ppg_36", "karma": -3 }
         ]
     },
 
     "ppg_20": {
-        "text": "Professor Utonium aktiviert ein Notfallprogramm, um Chemical X zu stabilisieren – aber es braucht eine externe Verbindung zum Riss.",
+        "text": "Buttercup entdeckt geheime Lieferkisten mit dem Logo der Rowdyruff Boys.",
         "choices": [
-            { "text": "Helfen", "next": "ppg_21", "karma": 1 },
-            { "text": "Abwarten", "next": "ppg_21", "karma": -1 }
+            { "text": "Die Kisten öffnen", "next": "ppg_37" },
+            { "text": "Die Kisten zerstören", "next": "ppg_28", "karma": -2 }
+        ]
+    },
+
+    "ppg_21": {
+        "text": "Die Marshmallow-Fabrik produziert ununterbrochen rosa Schaumwesen.",
+        "choices": [
+            { "text": "Die Produktion stoppen", "next": "ppg_38", "karma": 3 },
+            { "text": "Ein Wesen untersuchen", "next": "ppg_24" }
         ]
     },
 
     "ppg_22": {
-        "text": "Mojo Jojo zeigt auf den Energieriss unter dem Labor. 'Ich habe ihn nicht verursacht... aber ich kann ihn oeffnen.'",
+        "text": "In der Limonadenfabrik verwandeln sich Arbeiter langsam in lächelnde Zuckerfiguren.",
         "choices": [
-            { "text": "Untersuchen", "next": "ppg_23" }
+            { "text": "Die Arbeiter retten", "next": "ppg_29", "karma": 5 },
+            { "text": "Die Maschine sabotieren", "next": "ppg_38", "karma": -1 }
         ]
     },
 
     "ppg_23": {
-        "text": "Der Riss pulsiert stark unter dem Labor. Dahinter scheint die Energie von Chemical X gesammelt zu werden.",
+        "text": "Bubbles wird wütend: 'Die Wolken tun niemandem weh!'",
         "choices": [
-            { "text": "Analysieren", "next": "ppg_24", "gain_item": "chemical_rift_key" },
-            { "text": "Beruehren", "next": "ppg_24", "karma": 2 }
+            { "text": "Bubbles vertrauen", "next": "ppg_24" },
+            { "text": "Sie ignorieren", "next": "ppg_33", "karma": -2 }
+        ]
+    },
+
+    "ppg_24": {
+        "text": "Die Wolke flüstert: 'Wir wollten nur, dass Townsville glücklich bleibt.'",
+        "choices": [
+            { "text": "Mit der Wolke verhandeln", "next": "ppg_39", "karma": 3 },
+            { "text": "Die Wolke einfangen", "next": "ppg_30", "karma": -1 }
+        ]
+    },
+
+    "ppg_25": {
+        "text": "Die Drohnen schalten sich ab. Dabei findest du einen versteckten Sender mit HIMs Symbol.",
+        "choices": [
+            { "text": "Sender mitnehmen", "next": "ppg_34", "gain_item": "him_signal_core" },
+            { "text": "Sender zerstören", "next": "ppg_17" }
+        ]
+    },
+
+    "ppg_26": {
+        "text": "Der Scanner zeigt: Die Maschine sammelt Freude und verwandelt sie in instabiles Chemical X.",
+        "choices": [
+            { "text": "Maschine abschalten", "next": "ppg_38", "karma": 4 },
+            { "text": "Mehr Energie sammeln", "next": "ppg_27", "karma": -5 }
+        ]
+    },
+
+    "ppg_27": {
+        "text": "Die Maschine erzeugt einen gigantischen rosa Sturm über Townsville.",
+        "choices": [
+            { "text": "Den Sturm bekämpfen", "next": "ppg_40" },
+            { "text": "Professor Utonium suchen", "next": "ppg_29" }
         ]
     },
 
     "ppg_28": {
-        "text": "Mojo Jojo aktiviert einen instabilen Zugang zum Energieriss unter Townsville.",
+        "text": "Die Wolken verschmelzen zu einem riesigen lächelnden Gesicht über Townsville.",
         "choices": [
-            { "text": "Durchgehen", "next": "ppg_29", "required_item": "chemical_rift_key" },
-            { "text": "Zoegern", "next": "ppg_29" }
+            { "text": "Angreifen", "next": "ppg_40", "karma": -2 },
+            { "text": "Mit ihm sprechen", "next": "ppg_39" }
+        ]
+    },
+
+    "ppg_29": {
+        "text": "Professor Utonium versucht verzweifelt ein Gegenmittel zu entwickeln.",
+        "choices": [
+            { "text": "Beim Gegenmittel helfen", "next": "ppg_30", "karma": 3 },
+            { "text": "Die Stadt verteidigen", "next": "ppg_40", "karma": 1 }
         ]
     },
 
     "ppg_30": {
-        "text": "Der Energieriss stabilisiert sich und verbindet Townsville mit etwas Groesserem ausserhalb der Realitaet.",
+        "text": "Das Gegenmittel braucht eine stabile Emotionsquelle.",
         "choices": [
-            { "text": "Kapitel 2 starten", "next": "c2_start" }
+            { "text": "Bubbles überzeugen zu helfen", "next": "ppg_41" },
+            { "text": "Chemical X benutzen", "next": "ppg_42", "required_item": "pink_residue" }
+        ]
+    },
+
+    "ppg_31": {
+        "text": "Die Energie wird in die Sicherheitsdrohnen umgeleitet. Sie könnten Townsville retten oder zerstören.",
+        "choices": [
+            { "text": "Drohnen aktivieren", "next": "ppg_42" },
+            { "text": "Plan abbrechen", "next": "ppg_40", "karma": -2 }
+        ]
+    },
+
+    "ppg_32": {
+        "text": "HIM lächelt: 'Ist ewiges Glück wirklich etwas Schlechtes?'",
+        "choices": [
+            { "text": "Zustimmen", "next": "ppg_43", "karma": -4 },
+            { "text": "Widersprechen", "next": "ppg_40", "karma": 3 },
+            { "text": "Zeit gewinnen", "next": "ppg_34" }
+        ]
+    },
+
+    "ppg_33": {
+        "text": "HIM verschwindet lachend und die rosa Energie breitet sich unkontrolliert aus.",
+        "choices": [
+            { "text": "Townsville retten", "next": "ppg_40", "karma": 4 },
+            { "text": "HIM verfolgen", "next": "ppg_43", "karma": -3 }
+        ]
+    },
+
+    "ppg_34": {
+        "text": "Du erkennst, dass HIM die Wolken nicht kontrolliert — er hält sie nur zurück.",
+        "choices": [
+            { "text": "Mit HIM zusammenarbeiten", "next": "ppg_41" },
+            { "text": "Ihm trotzdem misstrauen", "next": "ppg_40", "karma": -1 }
+        ]
+    },
+
+    "ppg_35": {
+        "text": "Mojo entwickelt widerwillig ein Gerät gegen die rosa Wolken.",
+        "choices": [
+            { "text": "Das Gerät benutzen", "next": "ppg_42", "required_item": "chemical_scanner" },
+            { "text": "Mojo stoppen", "next": "ppg_40", "karma": -2 }
+        ]
+    },
+
+    "ppg_36": {
+        "text": "Mojo führt dich direkt in eine Falle der Rowdyruff Boys.",
+        "choices": [
+            { "text": "Kämpfen", "next": "ppg_40" },
+            { "text": "Fliehen", "next": "ppg_43", "karma": -3 }
+        ]
+    },
+
+    "ppg_37": {
+        "text": "Die Kisten enthalten instabile Kopien der Powerpuff Girls aus Zuckerenergie.",
+        "choices": [
+            { "text": "Freilassen", "next": "ppg_27", "karma": -4 },
+            { "text": "Versiegeln", "next": "ppg_38", "karma": 2 }
+        ]
+    },
+
+    "ppg_38": {
+        "text": "Die Energie in Townsville wird schwächer, aber der Himmel beginnt aufzureißen.",
+        "choices": [
+            { "text": "Die Energie opfern", "next": "ppg_41", "karma": 5 },
+            { "text": "Die Energie behalten", "next": "ppg_43", "karma": -4 }
+        ]
+    },
+
+    "ppg_39": {
+        "text": "Die Wolken gestehen, dass sie aus den positiven Gefühlen der Bürger entstanden sind und Angst vor dem Verschwinden haben.",
+        "choices": [
+            { "text": "Ihnen helfen zu verschwinden", "next": "ppg_41", "karma": 4 },
+            { "text": "Sie kontrollieren", "next": "ppg_42", "karma": -3 }
+        ]
+    },
+
+    "ppg_40": {
+        "text": "Über Townsville beginnt ein gigantischer Kampf aus rosa Blitzen, Zuckerwesen und Chemical-X-Stürmen.",
+        "choices": [
+            { "text": "Die Stadt schützen", "next": "ppg_41", "karma": 5 },
+            { "text": "Alles riskieren", "next": "ppg_43", "karma": -5 }
+        ]
+    },
+
+    "ppg_41": {
+        "text": "Die rosa Wolken lösen sich langsam auf. Townsville bleibt beschädigt zurück, aber die Menschen erinnern sich an alles.",
+        "choices": [
+            { "text": "Mit den Powerpuff Girls bleiben", "next": "ppg_44" },
+            { "text": "Alleine verschwinden", "next": "ppg_44", "karma": -1 }
+        ]
+    },
+
+    "ppg_42": {
+        "text": "Die Energie stabilisiert sich kurz, doch kleine rosa Wolken bleiben über Townsville zurück.",
+        "choices": [
+            { "text": "Die Wolken beobachten", "next": "ppg_44" },
+            { "text": "Die Quelle verstecken", "next": "ppg_43", "karma": -2 }
+        ]
+    },
+
+    "ppg_43": {
+        "text": "HIM verschwindet lachend in einer rosa Flamme. Irgendetwas von der Energie bleibt in Townsville zurück.",
+        "choices": [
+            { "text": "Zurück zur Stadt", "next": "ppg_44" }
+        ]
+    },
+
+    "ppg_44": {
+        "text": "Professor Utonium blickt auf den Himmel: 'Townsville wird nie wirklich normal bleiben... aber vielleicht ist das auch gut so.'",
+        "choices": [
+            { "text": "Kapitel beenden", "next": "c2_start" }
         ]
     },
 
@@ -3385,11 +3603,1047 @@ let gameData = {
     "c4_start": {
         "text": "Kapitel 4. Wir kommen langsam naeher zum Ende, hoffentlich hast du nicht zu viele falschen Entscheidungen getroffen.",
         "choices": [
-            { "text": "Avatar", "next": "c4_av_start" },
+            { "text": "Avatar", "next": "c4_atla_start" },
             { "text": "Pinguine aus Madagascar", "next": "c4_pm_start" },
             { "text": "Rick and Morty", "next": "c4_rm_start" },
             { "text": "Darkwing Duck", "next": "c4_dd_start" },
             { "text": "Garfield", "next": "c4_ga_start" }
         ]
     },
+    "c4_atla_start": {
+        "text": "Der Himmel über der Erdkönigreich-Grenze ist dunkel. Eine Feuer-Navy-Flotte blockiert den Zugang zum Norden. Aang, Katara und Sokka beraten sich hastig während Appa nervös im Schnee stampft.",
+        "choices": [
+            { "text": "Aang folgen", "next": "atla_1" },
+            { "text": "Katara folgen", "next": "atla_2", "karma": 1 },
+            { "text": "Sokka folgen", "next": "atla_3" },
+            { "text": "Die Feuerflotte beobachten", "next": "atla_4", "karma": -1 }
+        ]
+    },
+
+    "atla_1": {
+        "text": "Aang: 'Wir müssen einen Weg durch die Blockade finden, ohne Gewalt wenn möglich.'",
+        "choices": [
+            { "text": "Alternative Route suchen", "next": "atla_5" },
+            { "text": "Direkt durchbrechen", "next": "atla_6", "karma": -2 }
+        ]
+    },
+
+    "atla_2": {
+        "text": "Katara konzentriert sich auf das Eis unter euch. 'Das Wasser hier erzählt Geschichten… etwas stimmt nicht.'",
+        "choices": [
+            { "text": "Wasserbändigen untersuchen", "next": "atla_7", "gain_item": "water_memory" },
+            { "text": "Ignorieren und weitergehen", "next": "atla_6" }
+        ]
+    },
+
+    "atla_3": {
+        "text": "Sokka plant eine Route auf einer alten Karte. 'Wenn wir hier durchgehen, umgehen wir die Flotte komplett… theoretisch.'",
+        "choices": [
+            { "text": "Sokkas Plan folgen", "next": "atla_5" },
+            { "text": "Plan riskant finden", "next": "atla_6" }
+        ]
+    },
+
+    "atla_4": {
+        "text": "Die Feuer-Navy reagiert sofort auf deine Bewegung. Ein Kommandant lässt die Suche verstärken.",
+        "choices": [
+            { "text": "Verstecken", "next": "atla_8" },
+            { "text": "Beobachten bleiben", "next": "atla_6", "karma": -1 }
+        ]
+    },
+
+    "atla_5": {
+        "text": "Ihr erreicht eine alte, gefrorene Höhle mit seltsamen Wasserstrukturen im Eis.",
+        "choices": [
+            { "text": "Höhle betreten", "next": "atla_9" },
+            { "text": "Weiter außen umgehen", "next": "atla_8" }
+        ]
+    },
+
+    "atla_6": {
+        "text": "Die Feuer-Navy beginnt das Gebiet systematisch zu durchkämmen.",
+        "choices": [
+            { "text": "Flucht planen", "next": "atla_8" },
+            { "text": "Konfrontation vorbereiten", "next": "atla_10", "karma": 2 }
+        ]
+    },
+
+    "atla_7": {
+        "text": "Das Wasser zeigt Visionen vergangener Wasserbändiger, die eine Warnung hinterlassen.",
+        "choices": [
+            { "text": "Vision analysieren", "next": "atla_9", "gain_item": "spirit_trace" },
+            { "text": "Abbrechen", "next": "atla_8" }
+        ]
+    },
+
+    "atla_8": {
+        "text": "Zuko beobachtet euch aus der Ferne, ohne sich zu zeigen.",
+        "choices": [
+            { "text": "Ihn verfolgen", "next": "atla_11" },
+            { "text": "Ignorieren", "next": "atla_10" }
+        ]
+    },
+
+    "atla_9": {
+        "text": "Ein Wassergeist reagiert auf eure Anwesenheit und blockiert den Weg.",
+        "choices": [
+            { "text": "Ruhig kommunizieren", "next": "atla_12", "karma": 2 },
+            { "text": "Durchbrechen", "next": "atla_10", "karma": -2 }
+        ]
+    },
+
+    "atla_10": {
+        "text": "Die Flotte rückt näher. Die Lage wird instabil.",
+        "choices": [
+            { "text": "Flucht Richtung Norden", "next": "atla_13" },
+            { "text": "Ablenkung erzeugen", "next": "atla_14", "karma": 1 }
+        ]
+    },
+
+    "atla_11": {
+        "text": "Zuko hinterlässt Hinweise auf eine interne Feuer-Navy-Spaltung.",
+        "choices": [
+            { "text": "Kontakt aufnehmen", "next": "atla_15" },
+            { "text": "Beobachten", "next": "atla_13" }
+        ]
+    },
+
+    "atla_12": {
+        "text": "Der Wassergeist gewährt euch sicheren Durchgang, aber beobachtet euch weiter.",
+        "choices": [
+            { "text": "Durchgehen", "next": "atla_13", "karma": 2 }
+        ]
+    },
+
+    "atla_13": {
+        "text": "Ihr erreicht einen verlassenen Südpol-Vorposten.",
+        "choices": [
+            { "text": "Ressourcen sammeln", "next": "atla_16", "gain_item": "supplies" },
+            { "text": "Weiterziehen", "next": "atla_15" }
+        ]
+    },
+
+    "atla_14": {
+        "text": "Die Feuer-Navy gerät kurz ins Chaos durch eine falsche Spur.",
+        "choices": [
+            { "text": "Flucht nutzen", "next": "atla_13", "karma": 1 }
+        ]
+    },
+
+    "atla_15": {
+        "text": "Toph taucht plötzlich auf. 'Ihr seid laut. Sehr laut.'",
+        "choices": [
+            { "text": "Hilfe annehmen", "next": "atla_17", "karma": 2 },
+            { "text": "Misstrauen", "next": "atla_16" }
+        ]
+    },
+
+    "atla_16": {
+        "text": "Die Gruppe wird erneut von Feuer-Soldaten verfolgt.",
+        "choices": [
+            { "text": "Kampf vermeiden", "next": "atla_18" },
+            { "text": "Stellung halten", "next": "atla_17", "karma": -1 }
+        ]
+    },
+
+    "atla_17": {
+        "text": "Toph öffnet einen unterirdischen Tunnelweg.",
+        "choices": [
+            { "text": "Folgen", "next": "atla_19" }
+        ]
+    },
+
+    "atla_18": {
+        "text": "Die Flucht führt euch tiefer in das Eis.",
+        "choices": [
+            { "text": "Weiter", "next": "atla_19" }
+        ]
+    },
+
+    "atla_19": {
+        "text": "Eine alte Lufttempel-Reliktkammer erscheint im Eis.",
+        "choices": [
+            { "text": "Untersuchen", "next": "atla_20" },
+            { "text": "Ignorieren", "next": "atla_21" }
+        ]
+    },
+
+    "atla_20": {
+        "text": "Ein Avatar-Relikt reagiert auf Aang.",
+        "choices": [
+            { "text": "Aktivieren", "next": "atla_22", "gain_item": "avatar_echo" }
+        ]
+    },
+
+    "atla_21": {
+        "text": "Die Feuer-Navy nähert sich erneut.",
+        "choices": [
+            { "text": "Flucht fortsetzen", "next": "atla_22" }
+        ]
+    },
+
+    "atla_22": {
+        "text": "Aang spürt eine große Störung im Gleichgewicht der Welt.",
+        "choices": [
+            { "text": "Zustimmen", "next": "atla_23", "karma": 2 },
+            { "text": "Zweifeln", "next": "atla_23", "karma": -2 }
+        ]
+    },
+
+    "atla_23": {
+        "text": "Zuko steht nun direkt vor euch.",
+        "choices": [
+            { "text": "Reden", "next": "atla_24" },
+            { "text": "Angreifen", "next": "atla_25", "karma": -2 }
+        ]
+    },
+
+    "atla_24": {
+        "text": "Zuko: 'Ich suche nicht euch. Ich suche meine eigene Antwort.'",
+        "choices": [
+            { "text": "Zusammenarbeiten", "next": "atla_26", "karma": 2 },
+            { "text": "Ablehnen", "next": "atla_25" }
+        ]
+    },
+
+    "atla_25": {
+        "text": "Der Kampf destabilisiert das Gebiet stark.",
+        "choices": [
+            { "text": "Weiter kämpfen", "next": "atla_27" },
+            { "text": "Rückzug", "next": "atla_26" }
+        ]
+    },
+
+    "atla_26": {
+        "text": "Gemeinsam erreicht ihr eine spirituelle Nexus-Spalte im Eis.",
+        "choices": [
+            { "text": "Nähern", "next": "atla_28" }
+        ]
+    },
+
+    "atla_27": {
+        "text": "Die Umgebung beginnt zu zerbrechen.",
+        "choices": [
+            { "text": "Letzte Entscheidung", "next": "atla_28" }
+        ]
+    },
+
+    "atla_28": {
+        "text": "Der Avatar-Zustand reagiert stark auf den Nexus.",
+        "choices": [
+            { "text": "Kontrollieren", "next": "atla_29" },
+            { "text": "Loslassen", "next": "atla_29" }
+        ]
+    },
+
+    "atla_29": {
+        "text": "Die Realität stabilisiert sich kurzzeitig.",
+        "choices": [
+            { "text": "Weitergehen", "next": "atla_30" }
+        ]
+    },
+
+    "atla_30": {
+        "text": "Der Nexus öffnet einen Übergang. Die Welt bereitet sich auf das letzte Kapitel vor.",
+        "choices": [
+            { "text": "Kapitel 5 starten", "next": "c5_start" }
+        ]
+    },
+    "c4_pm_start": {
+        "text": "Mitten in der Nacht fällt im Zoo plötzlich der Strom aus. Sirenen heulen kurz auf, bevor alles still wird. Skipper steht bereits auf dem Dach des Hauptgebäudes und beobachtet den Hafen mit einem Fernglas.",
+        "choices": [
+            { "text": "Skipper folgen", "next": "pm_1" },
+            { "text": "Kowalski im Labor suchen", "next": "pm_2" },
+            { "text": "Dem Stromausfall nachgehen", "next": "pm_3", "karma": -2 },
+            { "text": "Private helfen Tiere zu beruhigen", "next": "pm_4", "karma": 2 }
+        ]
+    },
+
+    "pm_1": {
+        "text": "Skipper: 'Jemand hat die Sicherheitskameras deaktiviert. Das passiert nicht zufällig.'",
+        "choices": [
+            { "text": "Den Hafen beobachten", "next": "pm_5" },
+            { "text": "Die Kanalisation prüfen", "next": "pm_6" }
+        ]
+    },
+
+    "pm_2": {
+        "text": "Kowalski analysiert beschädigte Datenchips. 'Interessant. Sehr interessant. Und potenziell katastrophal.'",
+        "choices": [
+            { "text": "Bei der Analyse helfen", "next": "pm_7", "gain_item": "security_chip" },
+            { "text": "Skipper informieren", "next": "pm_5" }
+        ]
+    },
+
+    "pm_3": {
+        "text": "Du findest beschädigte Leitungen hinter dem Aquarium. Frische Werkzeugspuren sind sichtbar.",
+        "choices": [
+            { "text": "Weiter untersuchen", "next": "pm_8" },
+            { "text": "Zurückmelden", "next": "pm_5" }
+        ]
+    },
+
+    "pm_4": {
+        "text": "Private versucht panische Tiere zu beruhigen. Einige glauben bereits an einen Angriff.",
+        "choices": [
+            { "text": "Mithelfen", "next": "pm_9", "karma": 3 },
+            { "text": "Die Gerüchte ignorieren", "next": "pm_5", "karma": -1 }
+        ]
+    },
+
+    "pm_5": {
+        "text": "Im Hafen liegt ein unbekanntes Versorgungsschiff ohne Kennzeichnung.",
+        "choices": [
+            { "text": "Einschleusen", "next": "pm_10" },
+            { "text": "Beobachten", "next": "pm_11" }
+        ]
+    },
+
+    "pm_6": {
+        "text": "In der Kanalisation entdeckt Rico mehrere Kisten mit Fischsymbolen.",
+        "choices": [
+            { "text": "Kisten öffnen", "next": "pm_12", "gain_item": "frozen_herring" },
+            { "text": "Unberührt lassen", "next": "pm_11" }
+        ]
+    },
+
+    "pm_7": {
+        "text": "Kowalski entdeckt verschlüsselte Nachrichten mit Verbindungen zu Dr. Blowhole.",
+        "choices": [
+            { "text": "Nachrichten entschlüsseln", "next": "pm_13" },
+            { "text": "Sofort handeln", "next": "pm_10", "karma": -1 }
+        ]
+    },
+
+    "pm_8": {
+        "text": "Ein versteckter Tunnel führt direkt unter den Zoo.",
+        "choices": [
+            { "text": "Tunnel betreten", "next": "pm_14" },
+            { "text": "Skipper holen", "next": "pm_11", "karma": 1 }
+        ]
+    },
+
+    "pm_9": {
+        "text": "Mort behauptet plötzlich, er habe einen Delfin im Zoo gesehen.",
+        "choices": [
+            { "text": "Mort glauben", "next": "pm_14" },
+            { "text": "Ignorieren", "next": "pm_11", "karma": -2 }
+        ]
+    },
+
+    "pm_10": {
+        "text": "An Bord des Schiffes fehlen sämtliche Besatzungsmitglieder.",
+        "choices": [
+            { "text": "Frachter durchsuchen", "next": "pm_15" },
+            { "text": "Maschinenraum prüfen", "next": "pm_16" }
+        ]
+    },
+
+    "pm_11": {
+        "text": "Skipper wird zunehmend misstrauisch. 'Zu ruhig. Das gefällt mir nicht.'",
+        "choices": [
+            { "text": "Wachen verstärken", "next": "pm_17", "karma": 2 },
+            { "text": "Direkt weitersuchen", "next": "pm_15" }
+        ]
+    },
+
+    "pm_12": {
+        "text": "Die Kisten enthalten gefrorene Heringe mit versteckten Sendern.",
+        "choices": [
+            { "text": "Sender analysieren", "next": "pm_13", "gain_item": "tracking_beacon" },
+            { "text": "Zerstören", "next": "pm_17", "karma": -1 }
+        ]
+    },
+
+    "pm_13": {
+        "text": "Kowalski entdeckt ein Signal unter dem Aquarium.",
+        "choices": [
+            { "text": "Signal verfolgen", "next": "pm_18" },
+            { "text": "Signal blockieren", "next": "pm_17", "karma": 1 }
+        ]
+    },
+
+    "pm_14": {
+        "text": "Im Tunnel hörst du metallische Geräusche und entfernte Delfinlaute.",
+        "choices": [
+            { "text": "Leise weitergehen", "next": "pm_18" },
+            { "text": "Angriff vorbereiten", "next": "pm_19", "karma": -2 }
+        ]
+    },
+
+    "pm_15": {
+        "text": "Private entdeckt persönliche Gegenstände der verschwundenen Crew.",
+        "choices": [
+            { "text": "Hinweise sammeln", "next": "pm_20", "gain_item": "captain_log" },
+            { "text": "Weiter ignorieren", "next": "pm_16", "karma": -1 }
+        ]
+    },
+
+    "pm_16": {
+        "text": "Der Maschinenraum wurde absichtlich sabotiert.",
+        "choices": [
+            { "text": "Reparieren", "next": "pm_20", "karma": 2 },
+            { "text": "Evakuieren", "next": "pm_17" }
+        ]
+    },
+
+    "pm_17": {
+        "text": "Mehrere Seehunde verlassen plötzlich panisch das Wassergehege.",
+        "choices": [
+            { "text": "Untersuchen", "next": "pm_18" },
+            { "text": "Ignorieren", "next": "pm_21", "karma": -2 }
+        ]
+    },
+
+    "pm_18": {
+        "text": "Dr. Blowhole erscheint auf einem Bildschirm. 'Wie schön euch wiederzusehen, Pinguine.'",
+        "choices": [
+            { "text": "Mit ihm reden", "next": "pm_22" },
+            { "text": "Signal orten", "next": "pm_23" }
+        ]
+    },
+
+    "pm_19": {
+        "text": "Der Angriff löst einen Alarm im gesamten Zoo aus.",
+        "choices": [
+            { "text": "Flucht", "next": "pm_21", "karma": -3 },
+            { "text": "Weitermachen", "next": "pm_23" }
+        ]
+    },
+
+    "pm_20": {
+        "text": "Das Captain-Log erwähnt geheime Lieferungen ans Aquarium.",
+        "choices": [
+            { "text": "Aquarium aufsuchen", "next": "pm_24" },
+            { "text": "Skipper warnen", "next": "pm_22", "karma": 1 }
+        ]
+    },
+
+    "pm_21": {
+        "text": "Die Kontrolle über den Zoo beginnt zu kollabieren.",
+        "choices": [
+            { "text": "Tiere evakuieren", "next": "pm_24", "karma": 3 },
+            { "text": "Nur Dr. Blowhole verfolgen", "next": "pm_23", "karma": -2 }
+        ]
+    },
+
+    "pm_22": {
+        "text": "Dr. Blowhole behauptet, jemand anderes stecke hinter allem.",
+        "choices": [
+            { "text": "Glauben", "next": "pm_25" },
+            { "text": "Ablehnen", "next": "pm_23", "karma": -1 }
+        ]
+    },
+
+    "pm_23": {
+        "text": "Rico entdeckt Sprengladungen unter dem Aquarium.",
+        "choices": [
+            { "text": "Entschärfen", "next": "pm_26", "required_item": "security_chip" },
+            { "text": "Ignorieren", "next": "pm_27", "karma": -3 }
+        ]
+    },
+
+    "pm_24": {
+        "text": "Im Aquarium findest du versteckte U-Boote der Delfine.",
+        "choices": [
+            { "text": "Sabotieren", "next": "pm_26" },
+            { "text": "Untersuchen", "next": "pm_25", "gain_item": "submarine_codes" }
+        ]
+    },
+
+    "pm_25": {
+        "text": "Ein unbekannter Agent funkt heimlich mit Blowhole.",
+        "choices": [
+            { "text": "Signal abhören", "next": "pm_28", "required_item": "tracking_beacon" },
+            { "text": "Direkt eingreifen", "next": "pm_27", "karma": -1 }
+        ]
+    },
+
+    "pm_26": {
+        "text": "Die Sprengladungen werden deaktiviert, aber der Zoo bleibt instabil.",
+        "choices": [
+            { "text": "Weiter suchen", "next": "pm_28" },
+            { "text": "Evakuierung abschließen", "next": "pm_29", "karma": 2 }
+        ]
+    },
+
+    "pm_27": {
+        "text": "Explosionen erschüttern Teile des Hafens.",
+        "choices": [
+            { "text": "Rettung organisieren", "next": "pm_29", "karma": 3 },
+            { "text": "Blowhole verfolgen", "next": "pm_28", "karma": -2 }
+        ]
+    },
+
+    "pm_28": {
+        "text": "Der wahre Drahtzieher entpuppt sich als eine Gruppe abtrünniger Robben.",
+        "choices": [
+            { "text": "Verhandeln", "next": "pm_30", "karma": 2 },
+            { "text": "Angreifen", "next": "pm_29", "karma": -2 }
+        ]
+    },
+
+    "pm_29": {
+        "text": "Der Zoo bleibt beschädigt zurück, aber die Gefahr ist vorerst vorbei.",
+        "choices": [
+            { "text": "Skipper folgen", "next": "pm_30" }
+        ]
+    },
+
+    "pm_30": {
+        "text": "Skipper blickt über den Hafen. 'Jungs... das war erst Runde eins.'",
+        "choices": [
+            { "text": "Kapitel 5 starten", "next": "c5_start" }
+        ]
+    },
+    "c4_rm_start": {
+        "text": "Du stolperst durch ein grünes Portal direkt in Rick Sanchez' Garage. Überall liegen halbfertige Geräte, Alien-Batterien und leuchtende Flüssigkeiten. Morty drückt panisch auf einem Controller, während Rick unter einem rauchenden Reaktor verschwindet.",
+        "choices": [
+            { "text": "Rick helfen", "next": "rm_1" },
+            { "text": "Morty beruhigen", "next": "rm_2", "karma": 2 },
+            { "text": "Portal-Gun untersuchen", "next": "rm_3", "karma": -2 },
+            { "text": "Garage durchsuchen", "next": "rm_4" }
+        ]
+    },
+
+    "rm_1": {
+        "text": "Rick zieht ein verkohltes Kabel aus dem Reaktor. 'Großartig. Irgendein Idiot hat die Raum-Zeit-Batterie falsch synchronisiert.'",
+        "choices": [
+            { "text": "Beim Reparieren helfen", "next": "rm_5", "gain_item": "phase_tool" },
+            { "text": "Nachfragen was passiert ist", "next": "rm_6" }
+        ]
+    },
+
+    "rm_2": {
+        "text": "Morty: 'Rick hat irgendwas aktiviert und jetzt verschwinden ganze Dimensionen aus dem Radar!'",
+        "choices": [
+            { "text": "Morty glauben", "next": "rm_6" },
+            { "text": "Rick suchen", "next": "rm_1" }
+        ]
+    },
+
+    "rm_3": {
+        "text": "Die Portal-Gun reagiert plötzlich auf deine Berührung und öffnet mehrere instabile Mini-Portale.",
+        "choices": [
+            { "text": "Portale schließen", "next": "rm_7", "karma": 2 },
+            { "text": "Ein Portal betreten", "next": "rm_8", "karma": -3 }
+        ]
+    },
+
+    "rm_4": {
+        "text": "Zwischen Schrott findest du ein halb verstecktes Gerät mit der Aufschrift 'Do Not Touch'.",
+        "choices": [
+            { "text": "Aktivieren", "next": "rm_8" },
+            { "text": "Rick zeigen", "next": "rm_5", "karma": 1 }
+        ]
+    },
+
+    "rm_5": {
+        "text": "Rick scannt das Gerät kurz. 'Okay… das sollte definitiv nicht hier sein.'",
+        "choices": [
+            { "text": "Fragen woher es kommt", "next": "rm_9" },
+            { "text": "Direkt zerstören", "next": "rm_10", "karma": -1 }
+        ]
+    },
+
+    "rm_6": {
+        "text": "Ein Alarm aktiviert sich im Haus. Mehrere rote Warnsymbole erscheinen auf allen Bildschirmen.",
+        "choices": [
+            { "text": "Warnung analysieren", "next": "rm_11" },
+            { "text": "Ignorieren", "next": "rm_8", "karma": -2 }
+        ]
+    },
+
+    "rm_7": {
+        "text": "Die Mini-Portale kollabieren, aber eines zeigt kurz eine zerstörte Version der Erde.",
+        "choices": [
+            { "text": "Beobachten", "next": "rm_11" },
+            { "text": "Verbindung abbrechen", "next": "rm_9" }
+        ]
+    },
+
+    "rm_8": {
+        "text": "Du landest in einer chaotischen Alien-Markthalle voller bewaffneter Händler.",
+        "choices": [
+            { "text": "Unauffällig bleiben", "next": "rm_12" },
+            { "text": "Technologie stehlen", "next": "rm_13", "gain_item": "quantum_chip", "karma": -2 }
+        ]
+    },
+
+    "rm_9": {
+        "text": "Rick öffnet ein verstecktes Labor unter der Garage.",
+        "choices": [
+            { "text": "Folgen", "next": "rm_14" },
+            { "text": "Oben bleiben", "next": "rm_11" }
+        ]
+    },
+
+    "rm_10": {
+        "text": "Die Explosion beschädigt mehrere Dimension-Tracker.",
+        "choices": [
+            { "text": "Reparieren helfen", "next": "rm_14" },
+            { "text": "Schuld vertuschen", "next": "rm_13", "karma": -3 }
+        ]
+    },
+
+    "rm_11": {
+        "text": "Die Warnung zeigt ein unbekanntes Signal außerhalb der Zentralen Kurve.",
+        "choices": [
+            { "text": "Signal verfolgen", "next": "rm_15" },
+            { "text": "Rick informieren", "next": "rm_14", "karma": 1 }
+        ]
+    },
+
+    "rm_12": {
+        "text": "Ein Alien-Händler erkennt dich als 'Freund von Rick Sanchez'.",
+        "choices": [
+            { "text": "Informationen kaufen", "next": "rm_15", "required_item": "phase_tool" },
+            { "text": "Weglaufen", "next": "rm_13" }
+        ]
+    },
+
+    "rm_13": {
+        "text": "Mehrere interdimensionale Kopfgeldjäger tauchen auf.",
+        "choices": [
+            { "text": "Verhandeln", "next": "rm_16" },
+            { "text": "Kämpfen", "next": "rm_17", "karma": -2 }
+        ]
+    },
+
+    "rm_14": {
+        "text": "Im Labor entdeckt Rick eine manipulierte Portal-Signatur.",
+        "choices": [
+            { "text": "Analysieren", "next": "rm_18", "gain_item": "portal_signature" },
+            { "text": "Ignorieren", "next": "rm_16" }
+        ]
+    },
+
+    "rm_15": {
+        "text": "Das Signal führt zu einer verlassenen Citadel-Station.",
+        "choices": [
+            { "text": "Station betreten", "next": "rm_19" },
+            { "text": "Außen scannen", "next": "rm_18" }
+        ]
+    },
+
+    "rm_16": {
+        "text": "Morty wird nervös. 'Rick… irgendwas fühlt sich falsch an.'",
+        "choices": [
+            { "text": "Morty ernst nehmen", "next": "rm_19", "karma": 2 },
+            { "text": "Ignorieren", "next": "rm_17", "karma": -2 }
+        ]
+    },
+
+    "rm_17": {
+        "text": "Die Situation eskaliert und mehrere Portale reißen gleichzeitig auf.",
+        "choices": [
+            { "text": "Portale stabilisieren", "next": "rm_20", "required_item": "portal_signature" },
+            { "text": "Fliehen", "next": "rm_21", "karma": -2 }
+        ]
+    },
+
+    "rm_18": {
+        "text": "Rick erkennt eine Technologie, die nicht von ihm stammt.",
+        "choices": [
+            { "text": "Weiter analysieren", "next": "rm_22" },
+            { "text": "Direkt zerstören", "next": "rm_20", "karma": -1 }
+        ]
+    },
+
+    "rm_19": {
+        "text": "In der Citadel laufen beschädigte Service-Roboter planlos herum.",
+        "choices": [
+            { "text": "Datenbank durchsuchen", "next": "rm_22", "gain_item": "citadel_codes" },
+            { "text": "Energieversorgung prüfen", "next": "rm_20" }
+        ]
+    },
+
+    "rm_20": {
+        "text": "Die Station beginnt langsam auseinanderzubrechen.",
+        "choices": [
+            { "text": "Evakuieren", "next": "rm_23", "karma": 2 },
+            { "text": "Weiterforschen", "next": "rm_22", "karma": -1 }
+        ]
+    },
+
+    "rm_21": {
+        "text": "Mehrere alternative Mortys erscheinen plötzlich durch instabile Portale.",
+        "choices": [
+            { "text": "Mit ihnen reden", "next": "rm_23" },
+            { "text": "Misstrauen", "next": "rm_24", "karma": -2 }
+        ]
+    },
+
+    "rm_22": {
+        "text": "Die Datenbank enthält Hinweise auf einen versteckten Portal-Kern.",
+        "choices": [
+            { "text": "Kern suchen", "next": "rm_25" },
+            { "text": "Rick warnen", "next": "rm_23", "karma": 1 }
+        ]
+    },
+
+    "rm_23": {
+        "text": "Rick wirkt ungewohnt still. 'Wenn das Ding aktiviert wird, zerreißt es die Kurve komplett.'",
+        "choices": [
+            { "text": "Rick helfen", "next": "rm_25", "karma": 2 },
+            { "text": "Selbst handeln", "next": "rm_24" }
+        ]
+    },
+
+    "rm_24": {
+        "text": "Der Portal-Kern beginnt Energie aus benachbarten Dimensionen zu ziehen.",
+        "choices": [
+            { "text": "Abschalten", "next": "rm_26", "required_item": "quantum_chip" },
+            { "text": "Weiterlaufen lassen", "next": "rm_27", "karma": -3 }
+        ]
+    },
+
+    "rm_25": {
+        "text": "Mehrere Ricks aus anderen Dimensionen treffen ein.",
+        "choices": [
+            { "text": "Zusammenarbeiten", "next": "rm_26" },
+            { "text": "Niemandem vertrauen", "next": "rm_27", "karma": -2 }
+        ]
+    },
+
+    "rm_26": {
+        "text": "Der Kern destabilisiert sich und droht zu kollabieren.",
+        "choices": [
+            { "text": "Stabilisieren", "next": "rm_28", "required_item": "citadel_codes" },
+            { "text": "Zerstören", "next": "rm_29" }
+        ]
+    },
+
+    "rm_27": {
+        "text": "Die Station beginnt ganze Portale zu verschlingen.",
+        "choices": [
+            { "text": "Menschen retten", "next": "rm_29", "karma": 3 },
+            { "text": "Nur entkommen", "next": "rm_28", "karma": -2 }
+        ]
+    },
+
+    "rm_28": {
+        "text": "Rick schließt das letzte Portal langsam.",
+        "choices": [
+            { "text": "Unterstützen", "next": "rm_30", "karma": 2 },
+            { "text": "Beobachten", "next": "rm_30" }
+        ]
+    },
+
+    "rm_29": {
+        "text": "Die Citadel verschwindet im grünen Portalsturm.",
+        "choices": [
+            { "text": "Zurückkehren", "next": "rm_30" }
+        ]
+    },
+
+    "rm_30": {
+        "text": "Rick lehnt sich erschöpft gegen die Portal-Gun. 'Okay… das Universum existiert noch. Für heute reicht mir das.'",
+        "choices": [
+            { "text": "Kapitel 5 starten", "next": "c5_start" }
+        ]
+    },
+    "c4_dd_start": {
+        "text": "Während des großen St.-Canard-Maskenfestivals verschwinden plötzlich mehrere berühmte Bürger der Stadt spurlos. Überall tauchen identische lachende Masken auf, die niemand mehr abnehmen kann. Darkwing Duck springt auf die Hauptbühne, als plötzlich auch der Bürgermeister verschwindet.",
+        "choices": [
+            { "text": "Darkwing zur Bühne folgen", "next": "dd_1", "karma": 3 },
+            { "text": "Die Maskenhändler untersuchen", "next": "dd_2" },
+            { "text": "Launchpad helfen, die Menge zu beruhigen", "next": "dd_3", "karma": 2 },
+            { "text": "Einer verdächtigen Gestalt folgen", "next": "dd_4", "karma": -2 }
+        ]
+    },
+
+    "dd_1": {
+        "text": "Darkwing untersucht den Bühnenboden. Dort finden sich seltsame violette Federn.",
+        "choices": [
+            { "text": "Die Federn analysieren", "next": "dd_5", "gain_item": "violet_feather" },
+            { "text": "Backstage suchen", "next": "dd_6" }
+        ]
+    },
+
+    "dd_2": {
+        "text": "Die Händler behaupten, ein unbekannter Wohltäter habe die Masken kostenlos verteilt.",
+        "choices": [
+            { "text": "Den Lieferwagen durchsuchen", "next": "dd_7" },
+            { "text": "Den Händlern glauben", "next": "dd_8", "karma": -3 }
+        ]
+    },
+
+    "dd_3": {
+        "text": "Launchpad versucht Kinder mit Ballontieren abzulenken, verursacht aber beinahe eine Panik.",
+        "choices": [
+            { "text": "Die Situation übernehmen", "next": "dd_8" },
+            { "text": "Launchpad unterstützen", "next": "dd_9", "karma": 3 }
+        ]
+    },
+
+    "dd_4": {
+        "text": "Die Gestalt verschwindet in den alten Filmstudios von St. Canard.",
+        "choices": [
+            { "text": "Reinschleichen", "next": "dd_10" },
+            { "text": "Darkwing informieren", "next": "dd_6", "karma": 2 }
+        ]
+    },
+
+    "dd_5": {
+        "text": "Die Feder gehört zu Ammonia Pine, einer exzentrischen Schurkin mit hypnotischen Parfüms.",
+        "choices": [
+            { "text": "Ihr Labor suchen", "next": "dd_11" },
+            { "text": "Erst weitere Hinweise sammeln", "next": "dd_12" }
+        ]
+    },
+
+    "dd_6": {
+        "text": "Hinter der Bühne findest du einen geheimen Tunnel unter dem Festivalgelände.",
+        "choices": [
+            { "text": "Dem Tunnel folgen", "next": "dd_13" },
+            { "text": "Gosalyn holen", "next": "dd_9", "karma": -2 }
+        ]
+    },
+
+    "dd_7": {
+        "text": "Im Lieferwagen liegen hunderte identische Masken und eine Einladung zur 'Mitternachtsvorstellung'.",
+        "choices": [
+            { "text": "Die Einladung behalten", "next": "dd_14", "gain_item": "midnight_ticket" },
+            { "text": "Alles zerstören", "next": "dd_8", "karma": -4 }
+        ]
+    },
+
+    "dd_8": {
+        "text": "Immer mehr Besucher beginnen gleichzeitig zu lachen und marschieren Richtung Innenstadt.",
+        "choices": [
+            { "text": "Die Menschen stoppen", "next": "dd_15", "karma": 4 },
+            { "text": "Den Ursprung suchen", "next": "dd_12" }
+        ]
+    },
+
+    "dd_9": {
+        "text": "Gosalyn entdeckt, dass einige Masken von innen mit seltsamer Tinte beschrieben sind.",
+        "choices": [
+            { "text": "Die Schrift entziffern", "next": "dd_16" },
+            { "text": "Die Masken verbrennen", "next": "dd_15", "karma": -3 }
+        ]
+    },
+
+    "dd_10": {
+        "text": "Im Filmstudio laufen alte Cartoons auf verlassenen Leinwänden — doch die Figuren bewegen sich außerhalb der Szenen.",
+        "choices": [
+            { "text": "Projektoren untersuchen", "next": "dd_17" },
+            { "text": "Die Leinwände zerstören", "next": "dd_18", "karma": -2 }
+        ]
+    },
+
+    "dd_11": {
+        "text": "Das Labor ist leer, aber überall stehen halb fertige Duftflaschen.",
+        "choices": [
+            { "text": "Eine Probe nehmen", "next": "dd_19", "gain_item": "perfume_sample" },
+            { "text": "Das Labor durchsuchen", "next": "dd_20" }
+        ]
+    },
+
+    "dd_12": {
+        "text": "Darkwing erkennt, dass alle verschwundenen Bürger ehemalige Schauspieler sind.",
+        "choices": [
+            { "text": "Alte Filmarchive besuchen", "next": "dd_17" },
+            { "text": "Die Theater der Stadt durchsuchen", "next": "dd_21" }
+        ]
+    },
+
+    "dd_13": {
+        "text": "Der Tunnel führt zu einem geheimen Untergrundtheater voller maskierter Zuschauer.",
+        "choices": [
+            { "text": "Die Vorstellung beobachten", "next": "dd_22" },
+            { "text": "Sofort eingreifen", "next": "dd_23", "karma": -3 }
+        ]
+    },
+
+    "dd_14": {
+        "text": "Die Einladung nennt einen Ort: das stillgelegte Monocrow-Theater.",
+        "choices": [
+            { "text": "Zum Theater gehen", "next": "dd_24" },
+            { "text": "Vorher Verstärkung holen", "next": "dd_20", "karma": 1 }
+        ]
+    },
+
+    "dd_15": {
+        "text": "Einige Festivalbesucher greifen plötzlich jeden ohne Maske an.",
+        "choices": [
+            { "text": "Die Menschen beruhigen", "next": "dd_25", "karma": 5 },
+            { "text": "Mit Rauchbomben fliehen", "next": "dd_21", "karma": -4 }
+        ]
+    },
+
+    "dd_16": {
+        "text": "Die Schrift enthält Regieanweisungen für ein Stück namens 'Die ewige Rolle'.",
+        "choices": [
+            { "text": "Weiterlesen", "next": "dd_24" },
+            { "text": "Die Seiten verstecken", "next": "dd_21", "karma": -2 }
+        ]
+    },
+
+    "dd_17": {
+        "text": "Die Projektoren werden von Quackerjack manipuliert, der sich als Regisseur ausgibt.",
+        "choices": [
+            { "text": "Mit ihm reden", "next": "dd_26" },
+            { "text": "Die Maschinen sabotieren", "next": "dd_23", "karma": -3 }
+        ]
+    },
+
+    "dd_18": {
+        "text": "Durch die zerstörten Leinwände entkommen mehrere animierte Kreaturen in die Straßen.",
+        "choices": [
+            { "text": "Sie verfolgen", "next": "dd_25" },
+            { "text": "Darkwing warnen", "next": "dd_20", "karma": 1 }
+        ]
+    },
+
+    "dd_19": {
+        "text": "Das Parfüm verstärkt Emotionen statt Kontrolle.",
+        "choices": [
+            { "text": "Die Probe behalten", "next": "dd_27" },
+            { "text": "Wegwerfen", "next": "dd_20", "karma": 2 }
+        ]
+    },
+
+    "dd_20": {
+        "text": "Launchpad entdeckt versteckte Gästezimmer unter dem Monocrow-Theater.",
+        "choices": [
+            { "text": "Untersuchen", "next": "dd_28" },
+            { "text": "Absperren", "next": "dd_21", "karma": -1 }
+        ]
+    },
+
+    "dd_21": {
+        "text": "Mehrere Schauspieler behaupten, sie hätten dieselbe Stimme in ihren Träumen gehört.",
+        "choices": [
+            { "text": "Die Aussagen vergleichen", "next": "dd_28" },
+            { "text": "Sie ignorieren", "next": "dd_29", "karma": -4 }
+        ]
+    },
+
+    "dd_22": {
+        "text": "Auf der Bühne erscheint eine maskierte Gestalt: Taurus Bulba.",
+        "choices": [
+            { "text": "Zuhören", "next": "dd_30" },
+            { "text": "Angreifen", "next": "dd_23", "karma": -5 }
+        ]
+    },
+
+    "dd_23": {
+        "text": "Das Publikum gerät in Panik und mehrere Gefangene verschwinden im Chaos.",
+        "choices": [
+            { "text": "Gefangene retten", "next": "dd_31", "karma": 4 },
+            { "text": "Bulba verfolgen", "next": "dd_29", "karma": -2 }
+        ]
+    },
+
+    "dd_24": {
+        "text": "Im Monocrow-Theater laufen die Vorbereitungen für eine riesige Mitternachtsaufführung.",
+        "choices": [
+            { "text": "Hinter die Bühne schleichen", "next": "dd_32" },
+            { "text": "Als Zuschauer tarnen", "next": "dd_22" }
+        ]
+    },
+
+    "dd_25": {
+        "text": "Darkwing erkennt, dass die Masken nur wirken, solange die Musik spielt.",
+        "choices": [
+            { "text": "Die Lautsprecher sabotieren", "next": "dd_33", "karma": 5 },
+            { "text": "Den Dirigenten suchen", "next": "dd_30" }
+        ]
+    },
+
+    "dd_26": {
+        "text": "Quackerjack behauptet, jemand habe ihm versprochen, seine Shows 'für immer unvergesslich' zu machen.",
+        "choices": [
+            { "text": "Ihm glauben", "next": "dd_30" },
+            { "text": "Ihn festsetzen", "next": "dd_29", "karma": -3 }
+        ]
+    },
+
+    "dd_27": {
+        "text": "Das Parfüm beruhigt kurz die maskierten Besucher.",
+        "choices": [
+            { "text": "Mehr herstellen", "next": "dd_33", "required_item": "perfume_sample" },
+            { "text": "Nur für dich behalten", "next": "dd_29", "karma": -4 }
+        ]
+    },
+
+    "dd_28": {
+        "text": "Unter dem Theater findest du verschwundene Schauspieler in luxuriösen Räumen eingesperrt.",
+        "choices": [
+            { "text": "Befreien", "next": "dd_31", "karma": 5 },
+            { "text": "Erst Bulba suchen", "next": "dd_30", "karma": -2 }
+        ]
+    },
+
+    "dd_29": {
+        "text": "Die Mitternachtsaufführung beginnt und ganz St. Canard hört plötzlich dieselbe Melodie.",
+        "choices": [
+            { "text": "Zum Dach des Theaters", "next": "dd_34" },
+            { "text": "Die Straßen evakuieren", "next": "dd_31", "karma": 4 }
+        ]
+    },
+
+    "dd_30": {
+        "text": "Taurus Bulba will die gesamte Stadt in eine 'perfekte ewige Vorstellung' verwandeln.",
+        "choices": [
+            { "text": "Seinen Plan verzögern", "next": "dd_34" },
+            { "text": "Sofort kämpfen", "next": "dd_35", "karma": -4 }
+        ]
+    },
+
+    "dd_31": {
+        "text": "Die geretteten Bürger helfen, andere Besucher von den Masken zu befreien.",
+        "choices": [
+            { "text": "Zum Theater zurückkehren", "next": "dd_34" },
+            { "text": "Die Stadt sichern", "next": "dd_36", "karma": 3 }
+        ]
+    },
+
+    "dd_32": {
+        "text": "Hinter der Bühne hängt ein riesiger mechanischer Vorhang voller Hypnose-Scheinwerfer.",
+        "choices": [
+            { "text": "Abschalten", "next": "dd_33", "required_item": "midnight_ticket" },
+            { "text": "Beschädigen", "next": "dd_35", "karma": -2 }
+        ]
+    },
+
+    "dd_33": {
+        "text": "Die Musik stoppt abrupt. Viele Besucher kommen langsam wieder zu sich.",
+        "choices": [
+            { "text": "Bulba konfrontieren", "next": "dd_36" },
+            { "text": "Quackerjack suchen", "next": "dd_35" }
+        ]
+    },
+
+    "dd_34": {
+        "text": "Auf dem Dach des Theaters wartet Bulba zwischen gigantischen Scheinwerfern.",
+        "choices": [
+            { "text": "Darkwing unterstützen", "next": "dd_36", "karma": 5 },
+            { "text": "Allein handeln", "next": "dd_35", "karma": -3 }
+        ]
+    },
+
+    "dd_35": {
+        "text": "Die Vorstellung endet im Chaos. Mehrere Schurken entkommen durch geheime Tunnel.",
+        "choices": [
+            { "text": "Die Bürger schützen", "next": "dd_36", "karma": 3 },
+            { "text": "Die Schurken verfolgen", "next": "dd_37", "karma": -2 }
+        ]
+    },
+
+    "dd_36": {
+        "text": "Das Festival wird gerettet, doch Darkwing blickt misstrauisch auf eine einzelne verbliebene Maske.",
+        "choices": [
+            { "text": "Untersuchen", "next": "dd_37" }
+        ]
+    },
+
+    "dd_37": {
+        "text": "Im Inneren der Maske erscheint ein unbekanntes Symbol. Darkwing spürt, dass St. Canard noch lange nicht sicher ist.",
+        "choices": [
+            { "text": "Kapitel 5 starten", "next": "c5_start" }
+        ]
+    }
 };
