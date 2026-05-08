@@ -78,9 +78,9 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         checkEnding();
         return;
     }
-    createjs.Sound.play("steps", {
-        volume: 0.1
-    });
+    if (sounds.steps) {
+        sounds.steps.play();
+    }
     currentScene = next;
     showScene(currentScene);
 }
@@ -146,22 +146,33 @@ function checkEnding() {
     showScene(currentScene);
 }
 
+let sounds = {};
+
 function initSounds() {
-    createjs.Sound.registerSound("./audio/steps.mp3", "steps");
-    createjs.Sound.registerSound("./audio/good.mp3", "good");
-    createjs.Sound.registerSound("./audio/bad.mp3", "bad");
+    sounds.steps = new Howl({
+        src: ['./audio/steps.mp3'],
+        volume: 0.1
+    });
+
+    sounds.good = new Howl({
+        src: ['./audio/good.mp3'],
+        volume: 0.2
+    });
+
+    sounds.bad = new Howl({
+        src: ['./audio/bad.mp3'],
+        volume: 0.2
+    });
 }
 
+initSounds();
+
 function playKarmaSound(karma) {
-    if (karma > 0) {
-        createjs.Sound.play("good", {
-            volume: 0.2
-        });
+    if (karma > 0 && sounds.good) {
+        sounds.good.play();
     }
-    else if (karma < 0) {
-        createjs.Sound.play("bad", {
-            volume: 0.2
-        });
+    else if (karma < 0 && sounds.bad) {
+        sounds.bad.play();
     }
 }
 
