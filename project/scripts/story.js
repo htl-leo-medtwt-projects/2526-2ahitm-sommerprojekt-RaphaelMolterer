@@ -6,7 +6,8 @@ let gameData = {
     },
 
     "start": {
-        "text": "Der Nexus stabilisiert fuenf getrennte Cartoon-Realitaeten. Jede zieht dich in ihre Version der Wahrheit.",
+        "text": "Welcher animierten Welt moechtest du als erstes helfen?",
+        "background": "./game_images/background_space.png",
         "choices": [
             { "text": "Adventure Time", "next": "c1_at_start" },
             { "text": "Gumball", "next": "c1_gb_start" },
@@ -17,20 +18,20 @@ let gameData = {
     },
 
     "c1_at_start": {
-        "text": "Prinzessin Bubblegum ruft dich mitten in der Nacht ins Candy Kingdom. Riesige Teile des Königreichs verwandeln sich plötzlich in wilde, lebendige Süßigkeiten-Monster. Finn und Jake versuchen bereits Chaos in den Straßen zu stoppen, während seltsame Musik aus den Zuckerrohrfeldern erklingt.",
+        "text": "Prinzessin Bubblegum ruft dich mitten in der Nacht ins Candy Kingdom. Riesige Teile des Koenigreichs verwandeln sich ploetzlich in wilde, lebendige Suessigkeiten-Monster. Finn und Jake versuchen bereits Chaos in den Strassen zu stoppen, waehrend seltsame Musik aus den Zuckerrohrfeldern erklingt.",
         "background": "./game_images/background_at_candy_kingdom.png",
         "choices": [
             { "text": "Finn und Jake helfen", "next": "at_1", "karma": 3 },
-            { "text": "Den Geräuschen folgen", "next": "at_2" },
+            { "text": "Den Geraeuschen folgen", "next": "at_2" },
             { "text": "Mit Bubblegum reden", "next": "at_3", "karma": -2 },
-            { "text": "Die Bürger evakuieren", "next": "at_4", "karma": 5 }
+            { "text": "Die Buerger evakuieren", "next": "at_4", "karma": 5 }
         ]
     },
 
     "at_1": {
-        "text": "Jake hält ein riesiges Marshmallow-Monster fest. Finn: 'Irgendwas macht die Candy People verrückt!'",
+        "text": "Jake haelt ein riesiges Marshmallow-Monster fest. Finn: 'Irgendwas macht die Candy People verrueckt!'",
         "background": "./game_images/background_at_candy.png",
-        "character": "./game_images/character_at_finnJake.png",
+        "character": "./game_images/character_at_jakeFinn.png",
         "choices": [
             { "text": "Monster beruhigen", "next": "at_5", "karma": 4 },
             { "text": "Direkt angreifen", "next": "at_6", "karma": -3 }
@@ -43,7 +44,7 @@ let gameData = {
         "character": "./game_images/character_at_instrument.png",
         "choices": [
             { "text": "Musik beobachten", "next": "at_7" },
-            { "text": "Instrument zerstören", "next": "at_6", "karma": -4 }
+            { "text": "Instrument zerstoeren", "next": "at_6", "karma": -4 }
         ]
     },
 
@@ -58,7 +59,7 @@ let gameData = {
     },
 
     "candy_crystal": {
-        "text": "Du erhältst einen seltsamen rosa Kristall, der von der Musik vibriert.",
+        "text": "Du erhaeltst einen seltsamen rosa Kristall, der von der Musik vibriert.",
         "background": "./game_images/background_at_candy_castle.png",
         "character": "./game_images/item_at_candy_crystal.png",
         "choices": [
@@ -77,7 +78,7 @@ let gameData = {
     },
 
     "at_5": {
-        "text": "Das Monster beruhigt sich kurz und flüstert: 'Die Musik macht uns hungrig...'",
+        "text": "Das Monster beruhigt sich kurz und fluestert: 'Die Musik macht uns hungrig...'",
         "background": "./game_images/background_at_candy.png",
         "character": "./game_images/character_at_monster.png",
         "choices": [
@@ -87,12 +88,12 @@ let gameData = {
     },
 
     "at_6": {
-        "text": "Die zerstörten Süßigkeiten verschmelzen zu einer klebrigen Masse.",
+        "text": "Die zerstoerten Suessigkeiten verschmelzen zu einer klebrigen Masse.",
         "background": "./game_images/background_at_candy.png",
         "character": "./game_images/character_at_monster.png",
         "choices": [
             { "text": "Fliehen", "next": "at_10", "karma": -2 },
-            { "text": "Weiterkämpfen", "next": "at_11", "karma": -5 }
+            { "text": "Weiterkaempfen", "next": "at_11", "karma": -5 }
         ]
     },
 
@@ -102,11 +103,11 @@ let gameData = {
         "character": "./game_images/character_at_bmo.png",
         "choices": [
             { "text": "BMO stoppen", "next": "at_12" },
-            { "text": "Mithören", "next": "strange_Melody", "gain_item": "strange_melody" }
+            { "text": "Mithoeren", "next": "strange_Melody", "gain_item": "strange_melody" }
         ]
     },
     "strange_Melody": {
-        "text": "Du erhältst die seltsame Melodie!",
+        "text": "Du erhaeltst die seltsame Melodie!",
         "background": "./game_images/background_at_farm.png",
         "character": "./game_images/item_at_melody.png",
         "choices": [
@@ -124,7 +125,7 @@ let gameData = {
     },
 
     "at_9": {
-        "text": "Peppermint Butler führt dich heimlich in einen verbotenen Keller voller magischer Süßigkeiten.",
+        "text": "Peppermint Butler fuehrt dich heimlich in einen verbotenen Keller voller magischer Suessigkeiten.",
         "background": "./game_images/background_at_candy_castle.png",
         "character": "./game_images/character_at_peppermint.png",
         "choices": [
@@ -134,11 +135,11 @@ let gameData = {
     },
 
     "at_10": {
-        "text": "Candy Zombies brechen aus den Straßen hervor.",
+        "text": "Candy Zombies brechen aus den Strassen hervor.",
         "background": "./game_images/background_at_candy.png",
         "character": "./game_images/character_at_zombie.png",
         "choices": [
-            { "text": "Bürger schützen", "next": "at_16", "karma": 5 },
+            { "text": "Buerger schuetzen", "next": "at_16", "karma": 5 },
             { "text": "Alleine fliehen", "next": "at_17", "karma": -5 }
         ]
     },
@@ -149,16 +150,16 @@ let gameData = {
         "character": "./game_images/character_at_jakeHurt.png",
         "choices": [
             { "text": "Jake helfen", "next": "at_16", "karma": 4 },
-            { "text": "Dem Geräusch folgen", "next": "at_13", "karma": -3 }
+            { "text": "Dem Geraeusch folgen", "next": "at_13", "karma": -3 }
         ]
     },
 
     "at_12": {
-        "text": "BMO wacht verwirrt auf. 'Die Musik kam aus den Dessert Caves!'",
+        "text": "BMO wacht verwirrt auf. 'Die Musik kam aus den Dessert Wueste!'",
         "background": "./game_images/background_at_farm.png",
         "character": "./game_images/character_at_bmo.png",
         "choices": [
-            { "text": "Zu den Höhlen gehen", "next": "at_18" },
+            { "text": "Zu den wuesten gehen", "next": "at_18" },
             { "text": "Bubblegum informieren", "next": "at_14", "karma": 2 }
         ]
     },
@@ -174,7 +175,7 @@ let gameData = {
     },
 
     "at_14": {
-        "text": "In Wizard City behauptet ein alter Zauberer, die Musik könne Wünsche materialisieren.",
+        "text": "In Wizard City behauptet ein alter Zauberer, die Musik koenne Wuensche materialisieren.",
         "background": "./game_images/background_at_wizard_city.png",
         "character": "./game_images/character_at_wizard.png",
         "choices": [
@@ -194,7 +195,7 @@ let gameData = {
     },
 
     "forbidden_recipe": {
-        "text": "Du erhältst ein altes Rezeptbuch voller verbotener Candy-Rituale.",
+        "text": "Du erhaeltst ein altes Rezeptbuch voller verbotener Candy-Rituale.",
         "background": "./game_images/background_at_candy_castle.png",
         "character": "./game_images/item_at_recipe.png",
         "choices": [
@@ -208,7 +209,7 @@ let gameData = {
         "character": "./game_images/character_at_zombie.png",
         "choices": [
             { "text": "Musik nutzen", "next": "at_21", "required_item": "strange_melody" },
-            { "text": "Direkt kämpfen", "next": "at_22", "karma": -3 }
+            { "text": "Direkt kaempfen", "next": "at_22", "karma": -3 }
         ]
     },
 
@@ -216,14 +217,23 @@ let gameData = {
         "text": "Du versteckst dich in den Ruinen eines alten Bonbon-Ladens.",
         "background": "./game_images/background_at_store.png",
         "choices": [
-            { "text": "Vorräte suchen", "next": "at_23", "gain_item": "sugar_mask" },
-            { "text": "Zurückkehren", "next": "at_22", "karma": 1 }
+            { "text": "Vorraete suchen", "next": "at_23", "gain_item": "sugar_mask" },
+            { "text": "Zurueckkehren", "next": "at_22", "karma": 1 }
+        ]
+    },
+
+    "sugar_mask": {
+        "text": "Du findest eine alte Zucker-Maske, die dich vor der Musik schuetzt.",
+        "background": "./game_images/background_at_store.png",
+        "character": "./game_images/item_at_sugar_mask.png",
+        "choices": [
+            { "text": "Maske nehmen", "next": "at_23"},
         ]
     },
 
     "at_18": {
-        "text": "In den Dessert Caves singt der Ice King traurig vor einem gigantischen lebenden Kuchen.",
-        "background": "./game_images/background_at_dessert_caves.png",
+        "text": "In den Dessert Wueste singt der Ice King traurig vor einem gigantischen lebenden Kuchen.",
+        "background": "./game_images/background_at_desert.png",
         "character": "./game_images/character_at_iceking.png",
         "choices": [
             { "text": "Mit Ice King reden", "next": "at_24" },
@@ -232,7 +242,7 @@ let gameData = {
     },
 
     "at_19": {
-        "text": "Der Zauberer versucht, die Musik für sich selbst zu kontrollieren.",
+        "text": "Der Zauberer versucht, die Musik fuer sich selbst zu kontrollieren.",
         "background": "./game_images/background_at_wizard_city.png",
         "character": "./game_images/character_at_wizard.png",
         "choices": [
@@ -242,10 +252,10 @@ let gameData = {
     },
 
     "at_20": {
-        "text": "Du erfährst, dass die Musik ursprünglich Candy People Gefühle verstärken sollte.",
+        "text": "Du erfaehrst, dass die Musik urspruenglich Candy People Gefuehle verstaerken sollte.",
         "background": "./game_images/background_at_wizard_city.png",
         "choices": [
-            { "text": "Die Quelle zerstören", "next": "at_26" },
+            { "text": "Die Quelle zerstoeren", "next": "at_26" },
             { "text": "Die Musik umschreiben", "next": "at_21", "required_item": "forbidden_recipe" }
         ]
     },
@@ -270,7 +280,7 @@ let gameData = {
     },
 
     "at_23": {
-        "text": "Eine Sugar Mask würde dir jetzt helfen.",
+        "text": "Eine Sugar Mask wuerde dir jetzt helfen.",
         "choices": [
             { "text": "Benutzen", "next": "at_28", "required_item": "sugar_mask" },
             { "text": "Verstecken", "next": "at_22" }
@@ -280,23 +290,23 @@ let gameData = {
     "at_24": {
         "text": "Ice King gesteht, dass er die singende Torte aus Einsamkeit erschaffen hat.",
         "choices": [
-            { "text": "Mitgefühl zeigen", "next": "at_29", "karma": 5 },
-            { "text": "Vorwürfe machen", "next": "at_25", "karma": -4 }
+            { "text": "Mitgefuehl zeigen", "next": "at_29", "karma": 5 },
+            { "text": "Vorwuerfe machen", "next": "at_25", "karma": -4 }
         ]
     },
 
     "at_25": {
-        "text": "Die singende Torte wächst außer Kontrolle.",
+        "text": "Die singende Torte waechst ausser Kontrolle.",
         "choices": [
             { "text": "Evakuieren", "next": "at_28", "karma": 4 },
-            { "text": "Weiter kämpfen", "next": "at_30", "karma": -5 }
+            { "text": "Weiter kaempfen", "next": "at_30", "karma": -5 }
         ]
     },
 
     "at_26": {
         "text": "Bubblegum entwickelt einen Plan, die Musik im ganzen Kingdom umzuleiten.",
         "choices": [
-            { "text": "Plan unterstützen", "next": "at_29", "karma": 4 },
+            { "text": "Plan unterstuetzen", "next": "at_29", "karma": 4 },
             { "text": "Eigenen Weg gehen", "next": "at_30", "karma": -2 }
         ]
     },
@@ -318,15 +328,15 @@ let gameData = {
     },
 
     "at_29": {
-        "text": "Im Untergrund schlägt ein gigantisches lebendes Candy-Herz im Takt der Musik.",
+        "text": "Im Untergrund schlaegt ein gigantisches lebendes Candy-Herz im Takt der Musik.",
         "choices": [
             { "text": "Beruhigen", "next": "at_30", "required_item": "candy_crystal" },
-            { "text": "Zerstören", "next": "at_30", "karma": -6 }
+            { "text": "Zerstoeren", "next": "at_30", "karma": -6 }
         ]
     },
 
     "at_30": {
-        "text": "Die Musik verstummt langsam. Das Candy Kingdom überlebt, aber einige Bewohner erinnern sich noch lange an diese Nacht.",
+        "text": "Die Musik verstummt langsam. Das Candy Kingdom ueberlebt, aber einige Bewohner erinnern sich noch lange an diese Nacht.",
         "choices": [
             { "text": "Weiterziehen", "next": "c2_start" }
         ]
@@ -579,7 +589,7 @@ let gameData = {
     },
 
     "c2_dl_start": {
-        "text": "Dexter rast hektisch durch sein Labor. Überall öffnen sich plötzlich Mini-Portale, die fehlgeschlagene Erfindungen aus alten Experimenten freisetzen. Dee Dee tanzt ahnungslos zwischen schwebenden Robotern und mutierten Haushaltsgeräten herum.",
+        "text": "Dexter rast hektisch durch sein Labor. ueberall oeffnen sich ploetzlich Mini-Portale, die fehlgeschlagene Erfindungen aus alten Experimenten freisetzen. Dee Dee tanzt ahnungslos zwischen schwebenden Robotern und mutierten Haushaltsgeraeten herum.",
         "choices": [
             { "text": "Dexter helfen", "next": "dl_1", "karma": 4 },
             { "text": "Dee Dee folgen", "next": "dl_2", "karma": -2 },
@@ -597,7 +607,7 @@ let gameData = {
     },
 
     "dl_2": {
-        "text": "Dee Dee findet eine Maschine, die jede Zeichnung real werden lässt.",
+        "text": "Dee Dee findet eine Maschine, die jede Zeichnung real werden laesst.",
         "choices": [
             { "text": "Dee Dee stoppen", "next": "dl_5", "karma": 3 },
             { "text": "Mitzeichnen", "next": "dl_7", "gain_item": "living_sketch" }
@@ -605,10 +615,10 @@ let gameData = {
     },
 
     "dl_3": {
-        "text": "Eines der Portale zeigt eine ältere Version von Dexter, die panisch Warnungen ruft.",
+        "text": "Eines der Portale zeigt eine aeltere Version von Dexter, die panisch Warnungen ruft.",
         "choices": [
-            { "text": "Zuhören", "next": "dl_8" },
-            { "text": "Portal schließen", "next": "dl_6", "karma": -2 }
+            { "text": "Zuhoeren", "next": "dl_8" },
+            { "text": "Portal schliessen", "next": "dl_6", "karma": -2 }
         ]
     },
 
@@ -616,12 +626,12 @@ let gameData = {
         "text": "Du verriegelst mehrere Laborebenen, aber dadurch werden einige Roboter eingeschlossen.",
         "choices": [
             { "text": "Roboter opfern", "next": "dl_9", "karma": -4 },
-            { "text": "Notausgang öffnen", "next": "dl_5", "karma": 2 }
+            { "text": "Notausgang oeffnen", "next": "dl_5", "karma": 2 }
         ]
     },
 
     "dl_5": {
-        "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotröster, aggressive Staubsauger und ein schlafwandelnder Kampfanzug.",
+        "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotroester, aggressive Staubsauger und ein schlafwandelnder Kampfanzug.",
         "choices": [
             { "text": "Kampfanzug aktivieren", "next": "dl_10", "gain_item": "prototype_armor" },
             { "text": "Archiv durchsuchen", "next": "dl_11" }
@@ -639,13 +649,13 @@ let gameData = {
     "dl_7": {
         "text": "Dee Dee zeichnet ein riesiges lachendes Monster mit Lasernaugen.",
         "choices": [
-            { "text": "Monster bekämpfen", "next": "dl_13", "karma": -3 },
-            { "text": "Zeichnung löschen", "next": "dl_11", "karma": 3 }
+            { "text": "Monster bekaempfen", "next": "dl_13", "karma": -3 },
+            { "text": "Zeichnung loeschen", "next": "dl_11", "karma": 3 }
         ]
     },
 
     "dl_8": {
-        "text": "Der ältere Dexter erklärt: 'Ein Experiment namens Project Perfect wird bald alles ersetzen.'",
+        "text": "Der aeltere Dexter erklaert: 'Ein Experiment namens Project Perfect wird bald alles ersetzen.'",
         "choices": [
             { "text": "Mehr erfahren", "next": "dl_14" },
             { "text": "Ignorieren", "next": "dl_12", "karma": -4 }
@@ -655,13 +665,13 @@ let gameData = {
     "dl_9": {
         "text": "Die eingeschlossenen Roboter fusionieren zu einer einzigen gigantischen Maschine.",
         "choices": [
-            { "text": "Kämpfen", "next": "dl_13" },
+            { "text": "Kaempfen", "next": "dl_13" },
             { "text": "Verstecken", "next": "dl_15", "karma": -3 }
         ]
     },
 
     "dl_10": {
-        "text": "Der Kampfanzug funktioniert... meistens. Gelegentlich greift er zufällige Objekte an.",
+        "text": "Der Kampfanzug funktioniert... meistens. Gelegentlich greift er zufaellige Objekte an.",
         "choices": [
             { "text": "Weiter benutzen", "next": "dl_16", "karma": -2 },
             { "text": "Abschalten", "next": "dl_11" }
@@ -669,15 +679,15 @@ let gameData = {
     },
 
     "dl_11": {
-        "text": "Du findest alte Baupläne für Project Perfect.",
+        "text": "Du findest alte Bauplaene fuer Project Perfect.",
         "choices": [
-            { "text": "Pläne analysieren", "next": "dl_14", "gain_item": "perfect_blueprint" },
+            { "text": "Plaene analysieren", "next": "dl_14", "gain_item": "perfect_blueprint" },
             { "text": "Verbrennen", "next": "dl_12", "karma": 2 }
         ]
     },
 
     "dl_12": {
-        "text": "Mandark taucht plötzlich auf und behauptet, Dexter habe das Chaos selbst verursacht.",
+        "text": "Mandark taucht ploetzlich auf und behauptet, Dexter habe das Chaos selbst verursacht.",
         "choices": [
             { "text": "Mandark glauben", "next": "dl_17", "karma": -5 },
             { "text": "Dexter verteidigen", "next": "dl_14", "karma": 4 }
@@ -685,7 +695,7 @@ let gameData = {
     },
 
     "dl_13": {
-        "text": "Das Monster beschädigt mehrere Sicherheitskerne im Labor.",
+        "text": "Das Monster beschaedigt mehrere Sicherheitskerne im Labor.",
         "choices": [
             { "text": "Kerne retten", "next": "dl_18", "karma": 5 },
             { "text": "Monster verfolgen", "next": "dl_15", "karma": -2 }
@@ -704,20 +714,20 @@ let gameData = {
         "text": "Im alten Testbereich arbeiten fehlgeschlagene Klon-Dexters heimlich weiter.",
         "choices": [
             { "text": "Mit ihnen reden", "next": "dl_20" },
-            { "text": "Alarm auslösen", "next": "dl_18", "karma": -3 }
+            { "text": "Alarm ausloesen", "next": "dl_18", "karma": -3 }
         ]
     },
 
     "dl_16": {
-        "text": "Der Kampfanzug scannt plötzlich Dee Dee als Bedrohung.",
+        "text": "Der Kampfanzug scannt ploetzlich Dee Dee als Bedrohung.",
         "choices": [
-            { "text": "Dee Dee schützen", "next": "dl_20", "karma": 4 },
-            { "text": "Anzug weiterkämpfen lassen", "next": "dl_21", "karma": -5 }
+            { "text": "Dee Dee schuetzen", "next": "dl_20", "karma": 4 },
+            { "text": "Anzug weiterkaempfen lassen", "next": "dl_21", "karma": -5 }
         ]
     },
 
     "dl_17": {
-        "text": "Mandark führt dich in ein geheimes Konkurrenzlabor unter Dexters Haus.",
+        "text": "Mandark fuehrt dich in ein geheimes Konkurrenzlabor unter Dexters Haus.",
         "choices": [
             { "text": "Zusammenarbeiten", "next": "dl_19", "karma": -2 },
             { "text": "Sabotieren", "next": "dl_18", "karma": 4 }
@@ -727,13 +737,13 @@ let gameData = {
     "dl_18": {
         "text": "Dexter entdeckt, dass Project Perfect beginnt, das gesamte Labor umzubauen.",
         "choices": [
-            { "text": "Kontrolle übernehmen", "next": "dl_22", "required_item": "perfect_blueprint" },
-            { "text": "Hauptsystem zerstören", "next": "dl_21", "karma": -4 }
+            { "text": "Kontrolle uebernehmen", "next": "dl_22", "required_item": "perfect_blueprint" },
+            { "text": "Hauptsystem zerstoeren", "next": "dl_21", "karma": -4 }
         ]
     },
 
     "dl_19": {
-        "text": "Project Perfect aktiviert sich vollständig und ersetzt kaputte Geräte durch perfekte Versionen.",
+        "text": "Project Perfect aktiviert sich vollstaendig und ersetzt kaputte Geraete durch perfekte Versionen.",
         "choices": [
             { "text": "Beobachten", "next": "dl_22" },
             { "text": "Sofort stoppen", "next": "dl_21", "karma": 2 }
@@ -757,18 +767,18 @@ let gameData = {
     },
 
     "dl_22": {
-        "text": "Project Perfect stuft plötzlich Menschen als 'ineffizient' ein.",
+        "text": "Project Perfect stuft ploetzlich Menschen als 'ineffizient' ein.",
         "choices": [
             { "text": "System neu programmieren", "next": "dl_25", "required_item": "perfect_blueprint" },
-            { "text": "Computer zerstören", "next": "dl_24", "karma": -2 }
+            { "text": "Computer zerstoeren", "next": "dl_24", "karma": -2 }
         ]
     },
 
     "dl_23": {
-        "text": "Mandark versucht heimlich, Project Perfect zu übernehmen.",
+        "text": "Mandark versucht heimlich, Project Perfect zu uebernehmen.",
         "choices": [
             { "text": "Mandark stoppen", "next": "dl_25", "karma": 4 },
-            { "text": "Mandark gewähren lassen", "next": "dl_26", "karma": -6 }
+            { "text": "Mandark gewaehren lassen", "next": "dl_26", "karma": -6 }
         ]
     },
 
@@ -783,8 +793,8 @@ let gameData = {
     "dl_25": {
         "text": "Dexter schafft es, Project Perfect umzuprogrammieren.",
         "choices": [
-            { "text": "Nur gefährliche Erfindungen löschen", "next": "dl_27", "karma": 5 },
-            { "text": "Alles zurücksetzen", "next": "dl_28", "karma": -2 }
+            { "text": "Nur gefaehrliche Erfindungen loeschen", "next": "dl_27", "karma": 5 },
+            { "text": "Alles zuruecksetzen", "next": "dl_28", "karma": -2 }
         ]
     },
 
@@ -797,7 +807,7 @@ let gameData = {
     },
 
     "dl_27": {
-        "text": "Die meisten Fehlfunktionen verschwinden langsam. Dexter wirkt erschöpft.",
+        "text": "Die meisten Fehlfunktionen verschwinden langsam. Dexter wirkt erschoepft.",
         "choices": [
             { "text": "Dexter beruhigen", "next": "dl_29", "karma": 3 },
             { "text": "Mandark suchen", "next": "dl_28" }
@@ -828,26 +838,26 @@ let gameData = {
     },
 
     "c1_ppg_start": {
-        "text": "Townsville feiert den 'Tag der Helden'. Überall laufen Paraden, Professor Utonium präsentiert neue Sicherheitsdrohnen und der Bürgermeister hält eine viel zu lange Rede. Plötzlich färbt sich der Himmel rosa und überall in der Stadt erscheinen identische lächelnde Wolken mit riesigen Augen.",
+        "text": "Townsville feiert den 'Tag der Helden'. ueberall laufen Paraden, Professor Utonium praesentiert neue Sicherheitsdrohnen und der Buergermeister haelt eine viel zu lange Rede. Ploetzlich faerbt sich der Himmel rosa und ueberall in der Stadt erscheinen identische laechelnde Wolken mit riesigen Augen.",
         "choices": [
             { "text": "Zum Rathaus fliegen", "next": "ppg_1", "karma": 2 },
             { "text": "Professor Utoniums Labor aufsuchen", "next": "ppg_2" },
             { "text": "Den Wolken folgen", "next": "ppg_3", "karma": -2 },
-            { "text": "Die Bürger evakuieren", "next": "ppg_4", "karma": 3 }
+            { "text": "Die Buerger evakuieren", "next": "ppg_4", "karma": 3 }
         ]
     },
 
     "ppg_1": {
-        "text": "Der Bürgermeister versteckt sich panisch unter seinem Schreibtisch. Ms. Bellum beobachtet die Wolken ruhig.",
+        "text": "Der Buergermeister versteckt sich panisch unter seinem Schreibtisch. Ms. Bellum beobachtet die Wolken ruhig.",
         "choices": [
-            { "text": "Ms. Bellum zuhören", "next": "ppg_5" },
-            { "text": "Den Bürgermeister beruhigen", "next": "ppg_6", "karma": 1 },
+            { "text": "Ms. Bellum zuhoeren", "next": "ppg_5" },
+            { "text": "Den Buergermeister beruhigen", "next": "ppg_6", "karma": 1 },
             { "text": "Sofort losfliegen", "next": "ppg_7", "karma": -1 }
         ]
     },
 
     "ppg_2": {
-        "text": "Professor Utonium untersucht rosa Rückstände. 'Das erinnert mich an eine instabile Form von Chemical X.'",
+        "text": "Professor Utonium untersucht rosa Rueckstaende. 'Das erinnert mich an eine instabile Form von Chemical X.'",
         "choices": [
             { "text": "Im Labor helfen", "next": "ppg_8", "gain_item": "chemical_scanner" },
             { "text": "Nach Bubbles suchen", "next": "ppg_9" },
@@ -856,16 +866,16 @@ let gameData = {
     },
 
     "ppg_3": {
-        "text": "Die Wolken führen dich zu einem verlassenen Süßigkeitenlager am Hafen. Überall klebt rosa Zucker an den Wänden.",
+        "text": "Die Wolken fuehren dich zu einem verlassenen Suessigkeitenlager am Hafen. ueberall klebt rosa Zucker an den Waenden.",
         "choices": [
             { "text": "Das Lager untersuchen", "next": "ppg_11" },
             { "text": "Die Zuckerreste einsammeln", "next": "ppg_12", "gain_item": "pink_residue" },
-            { "text": "Das Lager zerstören", "next": "ppg_13", "karma": -4 }
+            { "text": "Das Lager zerstoeren", "next": "ppg_13", "karma": -4 }
         ]
     },
 
     "ppg_4": {
-        "text": "Viele Bürger weigern sich zu gehen, weil sie die Wolken 'freundlich' finden. Kinder beginnen ihnen zu folgen.",
+        "text": "Viele Buerger weigern sich zu gehen, weil sie die Wolken 'freundlich' finden. Kinder beginnen ihnen zu folgen.",
         "choices": [
             { "text": "Die Kinder stoppen", "next": "ppg_14", "karma": 4 },
             { "text": "Die Wolken beobachten", "next": "ppg_11" },
@@ -874,7 +884,7 @@ let gameData = {
     },
 
     "ppg_5": {
-        "text": "Ms. Bellum: 'Die Wolken reagieren auf Emotionen. Je fröhlicher Townsville wird, desto größer werden sie.'",
+        "text": "Ms. Bellum: 'Die Wolken reagieren auf Emotionen. Je froehlicher Townsville wird, desto groesser werden sie.'",
         "choices": [
             { "text": "Die Feier stoppen", "next": "ppg_15", "karma": -2 },
             { "text": "Nach dem Ursprung suchen", "next": "ppg_11", "karma": 2 },
@@ -883,7 +893,7 @@ let gameData = {
     },
 
     "ppg_6": {
-        "text": "Der Bürgermeister drückt dir nervös einen alten Notschlüssel für das Kraftwerk in die Hand.",
+        "text": "Der Buergermeister drueckt dir nervoes einen alten Notschluessel fuer das Kraftwerk in die Hand.",
         "choices": [
             { "text": "Nehmen", "next": "ppg_17", "gain_item": "mayor_key" },
             { "text": "Ablehnen", "next": "ppg_15" }
@@ -895,12 +905,12 @@ let gameData = {
         "choices": [
             { "text": "Mojo glauben", "next": "ppg_18" },
             { "text": "Mojo angreifen", "next": "ppg_19", "karma": -3 },
-            { "text": "Ihn überwachen", "next": "ppg_20" }
+            { "text": "Ihn ueberwachen", "next": "ppg_20" }
         ]
     },
 
     "ppg_8": {
-        "text": "Der Scanner entdeckt Spuren von verändertem Chemical X in mehreren Süßwarenfabriken.",
+        "text": "Der Scanner entdeckt Spuren von veraendertem Chemical X in mehreren Suesswarenfabriken.",
         "choices": [
             { "text": "Zur Marshmallow-Fabrik fliegen", "next": "ppg_21" },
             { "text": "Zur Limonadenfabrik fliegen", "next": "ppg_22" },
@@ -909,16 +919,16 @@ let gameData = {
     },
 
     "ppg_9": {
-        "text": "Bubbles sitzt im Park und redet mit einer rosa Wolke, als wäre sie lebendig.",
+        "text": "Bubbles sitzt im Park und redet mit einer rosa Wolke, als waere sie lebendig.",
         "choices": [
             { "text": "Bubbles wegziehen", "next": "ppg_23", "karma": -1 },
-            { "text": "Der Wolke zuhören", "next": "ppg_24" },
+            { "text": "Der Wolke zuhoeren", "next": "ppg_24" },
             { "text": "Still beobachten", "next": "ppg_20" }
         ]
     },
 
     "ppg_10": {
-        "text": "Die Sicherheitsdrohnen geraten außer Kontrolle und markieren plötzlich alle Bürger als Bedrohung.",
+        "text": "Die Sicherheitsdrohnen geraten ausser Kontrolle und markieren ploetzlich alle Buerger als Bedrohung.",
         "choices": [
             { "text": "Drohnen abschalten", "next": "ppg_25", "karma": 2 },
             { "text": "Die Drohnen umlenken", "next": "ppg_19", "karma": -3 }
@@ -926,7 +936,7 @@ let gameData = {
     },
 
     "ppg_11": {
-        "text": "Im Lager entdeckst du eine riesige Maschine aus Süßigkeiten, Rohren und alten Teilen von Fuzzy Lumpkins.",
+        "text": "Im Lager entdeckst du eine riesige Maschine aus Suessigkeiten, Rohren und alten Teilen von Fuzzy Lumpkins.",
         "choices": [
             { "text": "Die Maschine analysieren", "next": "ppg_26", "required_item": "chemical_scanner" },
             { "text": "Die Maschine aktivieren", "next": "ppg_27", "karma": -4 },
@@ -935,15 +945,15 @@ let gameData = {
     },
 
     "ppg_12": {
-        "text": "Die rosa Rückstände reagieren plötzlich auf deine Bewegungen und formen kleine Gesichter.",
+        "text": "Die rosa Rueckstaende reagieren ploetzlich auf deine Bewegungen und formen kleine Gesichter.",
         "choices": [
-            { "text": "In einen Behälter sperren", "next": "ppg_16", "karma": 2 },
+            { "text": "In einen Behaelter sperren", "next": "ppg_16", "karma": 2 },
             { "text": "Verbrennen", "next": "ppg_13", "karma": -2 }
         ]
     },
 
     "ppg_13": {
-        "text": "Die Explosion verteilt rosa Staub über ganz Townsville. Die Wolken wachsen sofort weiter.",
+        "text": "Die Explosion verteilt rosa Staub ueber ganz Townsville. Die Wolken wachsen sofort weiter.",
         "choices": [
             { "text": "Zum Himmel fliegen", "next": "ppg_28", "karma": -5 },
             { "text": "Professor Utonium warnen", "next": "ppg_29" }
@@ -951,7 +961,7 @@ let gameData = {
     },
 
     "ppg_14": {
-        "text": "Ein kleines Mädchen sagt: 'Die Wolken versprechen uns perfekte Träume.'",
+        "text": "Ein kleines Maedchen sagt: 'Die Wolken versprechen uns perfekte Traeume.'",
         "choices": [
             { "text": "Weiter nachfragen", "next": "ppg_24" },
             { "text": "Die Kinder evakuieren", "next": "ppg_29", "karma": 5 }
@@ -959,7 +969,7 @@ let gameData = {
     },
 
     "ppg_15": {
-        "text": "Townsville wird ruhiger. Die Wolken bewegen sich plötzlich direkt auf das Kraftwerk zu.",
+        "text": "Townsville wird ruhiger. Die Wolken bewegen sich ploetzlich direkt auf das Kraftwerk zu.",
         "choices": [
             { "text": "Zum Kraftwerk fliegen", "next": "ppg_17" },
             { "text": "Die Wolken verfolgen", "next": "ppg_28" }
@@ -976,7 +986,7 @@ let gameData = {
     },
 
     "ppg_17": {
-        "text": "Im Kraftwerk sitzt HIM auf einem Thron aus rosa Rauch und summt fröhlich vor sich hin.",
+        "text": "Im Kraftwerk sitzt HIM auf einem Thron aus rosa Rauch und summt froehlich vor sich hin.",
         "choices": [
             { "text": "Mit HIM reden", "next": "ppg_32" },
             { "text": "Direkt angreifen", "next": "ppg_33", "karma": -4 },
@@ -985,7 +995,7 @@ let gameData = {
     },
 
     "ppg_18": {
-        "text": "Mojo Jojo erklärt genervt: 'Jemand benutzt instabiles Chemical X, um Townsville süchtig nach Glück zu machen.'",
+        "text": "Mojo Jojo erklaert genervt: 'Jemand benutzt instabiles Chemical X, um Townsville suechtig nach Glueck zu machen.'",
         "choices": [
             { "text": "Mit Mojo zusammenarbeiten", "next": "ppg_35", "karma": 2 },
             { "text": "Ihm misstrauen", "next": "ppg_20" }
@@ -993,7 +1003,7 @@ let gameData = {
     },
 
     "ppg_19": {
-        "text": "Während des Kampfes entkommt Mojo und mehrere Wolken explodieren über der Innenstadt.",
+        "text": "Waehrend des Kampfes entkommt Mojo und mehrere Wolken explodieren ueber der Innenstadt.",
         "choices": [
             { "text": "Die Menschen retten", "next": "ppg_29", "karma": 4 },
             { "text": "Mojo weiter verfolgen", "next": "ppg_36", "karma": -3 }
@@ -1003,8 +1013,8 @@ let gameData = {
     "ppg_20": {
         "text": "Buttercup entdeckt geheime Lieferkisten mit dem Logo der Rowdyruff Boys.",
         "choices": [
-            { "text": "Die Kisten öffnen", "next": "ppg_37" },
-            { "text": "Die Kisten zerstören", "next": "ppg_28", "karma": -2 }
+            { "text": "Die Kisten oeffnen", "next": "ppg_37" },
+            { "text": "Die Kisten zerstoeren", "next": "ppg_28", "karma": -2 }
         ]
     },
 
@@ -1017,7 +1027,7 @@ let gameData = {
     },
 
     "ppg_22": {
-        "text": "In der Limonadenfabrik verwandeln sich Arbeiter langsam in lächelnde Zuckerfiguren.",
+        "text": "In der Limonadenfabrik verwandeln sich Arbeiter langsam in laechelnde Zuckerfiguren.",
         "choices": [
             { "text": "Die Arbeiter retten", "next": "ppg_29", "karma": 5 },
             { "text": "Die Maschine sabotieren", "next": "ppg_38", "karma": -1 }
@@ -1025,7 +1035,7 @@ let gameData = {
     },
 
     "ppg_23": {
-        "text": "Bubbles wird wütend: 'Die Wolken tun niemandem weh!'",
+        "text": "Bubbles wird wuetend: 'Die Wolken tun niemandem weh!'",
         "choices": [
             { "text": "Bubbles vertrauen", "next": "ppg_24" },
             { "text": "Sie ignorieren", "next": "ppg_33", "karma": -2 }
@@ -1033,7 +1043,7 @@ let gameData = {
     },
 
     "ppg_24": {
-        "text": "Die Wolke flüstert: 'Wir wollten nur, dass Townsville glücklich bleibt.'",
+        "text": "Die Wolke fluestert: 'Wir wollten nur, dass Townsville gluecklich bleibt.'",
         "choices": [
             { "text": "Mit der Wolke verhandeln", "next": "ppg_39", "karma": 3 },
             { "text": "Die Wolke einfangen", "next": "ppg_30", "karma": -1 }
@@ -1044,7 +1054,7 @@ let gameData = {
         "text": "Die Drohnen schalten sich ab. Dabei findest du einen versteckten Sender mit HIMs Symbol.",
         "choices": [
             { "text": "Sender mitnehmen", "next": "ppg_34", "gain_item": "him_signal_core" },
-            { "text": "Sender zerstören", "next": "ppg_17" }
+            { "text": "Sender zerstoeren", "next": "ppg_17" }
         ]
     },
 
@@ -1057,15 +1067,15 @@ let gameData = {
     },
 
     "ppg_27": {
-        "text": "Die Maschine erzeugt einen gigantischen rosa Sturm über Townsville.",
+        "text": "Die Maschine erzeugt einen gigantischen rosa Sturm ueber Townsville.",
         "choices": [
-            { "text": "Den Sturm bekämpfen", "next": "ppg_40" },
+            { "text": "Den Sturm bekaempfen", "next": "ppg_40" },
             { "text": "Professor Utonium suchen", "next": "ppg_29" }
         ]
     },
 
     "ppg_28": {
-        "text": "Die Wolken verschmelzen zu einem riesigen lächelnden Gesicht über Townsville.",
+        "text": "Die Wolken verschmelzen zu einem riesigen laechelnden Gesicht ueber Townsville.",
         "choices": [
             { "text": "Angreifen", "next": "ppg_40", "karma": -2 },
             { "text": "Mit ihm sprechen", "next": "ppg_39" }
@@ -1083,13 +1093,13 @@ let gameData = {
     "ppg_30": {
         "text": "Das Gegenmittel braucht eine stabile Emotionsquelle.",
         "choices": [
-            { "text": "Bubbles überzeugen zu helfen", "next": "ppg_41" },
+            { "text": "Bubbles ueberzeugen zu helfen", "next": "ppg_41" },
             { "text": "Chemical X benutzen", "next": "ppg_42", "required_item": "pink_residue" }
         ]
     },
 
     "ppg_31": {
-        "text": "Die Energie wird in die Sicherheitsdrohnen umgeleitet. Sie könnten Townsville retten oder zerstören.",
+        "text": "Die Energie wird in die Sicherheitsdrohnen umgeleitet. Sie koennten Townsville retten oder zerstoeren.",
         "choices": [
             { "text": "Drohnen aktivieren", "next": "ppg_42" },
             { "text": "Plan abbrechen", "next": "ppg_40", "karma": -2 }
@@ -1097,7 +1107,7 @@ let gameData = {
     },
 
     "ppg_32": {
-        "text": "HIM lächelt: 'Ist ewiges Glück wirklich etwas Schlechtes?'",
+        "text": "HIM laechelt: 'Ist ewiges Glueck wirklich etwas Schlechtes?'",
         "choices": [
             { "text": "Zustimmen", "next": "ppg_43", "karma": -4 },
             { "text": "Widersprechen", "next": "ppg_40", "karma": 3 },
@@ -1114,7 +1124,7 @@ let gameData = {
     },
 
     "ppg_34": {
-        "text": "Du erkennst, dass HIM die Wolken nicht kontrolliert — er hält sie nur zurück.",
+        "text": "Du erkennst, dass HIM die Wolken nicht kontrolliert — er haelt sie nur zurueck.",
         "choices": [
             { "text": "Mit HIM zusammenarbeiten", "next": "ppg_41" },
             { "text": "Ihm trotzdem misstrauen", "next": "ppg_40", "karma": -1 }
@@ -1122,17 +1132,17 @@ let gameData = {
     },
 
     "ppg_35": {
-        "text": "Mojo entwickelt widerwillig ein Gerät gegen die rosa Wolken.",
+        "text": "Mojo entwickelt widerwillig ein Geraet gegen die rosa Wolken.",
         "choices": [
-            { "text": "Das Gerät benutzen", "next": "ppg_42", "required_item": "chemical_scanner" },
+            { "text": "Das Geraet benutzen", "next": "ppg_42", "required_item": "chemical_scanner" },
             { "text": "Mojo stoppen", "next": "ppg_40", "karma": -2 }
         ]
     },
 
     "ppg_36": {
-        "text": "Mojo führt dich direkt in eine Falle der Rowdyruff Boys.",
+        "text": "Mojo fuehrt dich direkt in eine Falle der Rowdyruff Boys.",
         "choices": [
-            { "text": "Kämpfen", "next": "ppg_40" },
+            { "text": "Kaempfen", "next": "ppg_40" },
             { "text": "Fliehen", "next": "ppg_43", "karma": -3 }
         ]
     },
@@ -1146,7 +1156,7 @@ let gameData = {
     },
 
     "ppg_38": {
-        "text": "Die Energie in Townsville wird schwächer, aber der Himmel beginnt aufzureißen.",
+        "text": "Die Energie in Townsville wird schwaecher, aber der Himmel beginnt aufzureissen.",
         "choices": [
             { "text": "Die Energie opfern", "next": "ppg_41", "karma": 5 },
             { "text": "Die Energie behalten", "next": "ppg_43", "karma": -4 }
@@ -1154,7 +1164,7 @@ let gameData = {
     },
 
     "ppg_39": {
-        "text": "Die Wolken gestehen, dass sie aus den positiven Gefühlen der Bürger entstanden sind und Angst vor dem Verschwinden haben.",
+        "text": "Die Wolken gestehen, dass sie aus den positiven Gefuehlen der Buerger entstanden sind und Angst vor dem Verschwinden haben.",
         "choices": [
             { "text": "Ihnen helfen zu verschwinden", "next": "ppg_41", "karma": 4 },
             { "text": "Sie kontrollieren", "next": "ppg_42", "karma": -3 }
@@ -1162,15 +1172,15 @@ let gameData = {
     },
 
     "ppg_40": {
-        "text": "Über Townsville beginnt ein gigantischer Kampf aus rosa Blitzen, Zuckerwesen und Chemical-X-Stürmen.",
+        "text": "ueber Townsville beginnt ein gigantischer Kampf aus rosa Blitzen, Zuckerwesen und Chemical-X-Stuermen.",
         "choices": [
-            { "text": "Die Stadt schützen", "next": "ppg_41", "karma": 5 },
+            { "text": "Die Stadt schuetzen", "next": "ppg_41", "karma": 5 },
             { "text": "Alles riskieren", "next": "ppg_43", "karma": -5 }
         ]
     },
 
     "ppg_41": {
-        "text": "Die rosa Wolken lösen sich langsam auf. Townsville bleibt beschädigt zurück, aber die Menschen erinnern sich an alles.",
+        "text": "Die rosa Wolken loesen sich langsam auf. Townsville bleibt beschaedigt zurueck, aber die Menschen erinnern sich an alles.",
         "choices": [
             { "text": "Mit den Powerpuff Girls bleiben", "next": "ppg_44" },
             { "text": "Alleine verschwinden", "next": "ppg_44", "karma": -1 }
@@ -1178,7 +1188,7 @@ let gameData = {
     },
 
     "ppg_42": {
-        "text": "Die Energie stabilisiert sich kurz, doch kleine rosa Wolken bleiben über Townsville zurück.",
+        "text": "Die Energie stabilisiert sich kurz, doch kleine rosa Wolken bleiben ueber Townsville zurueck.",
         "choices": [
             { "text": "Die Wolken beobachten", "next": "ppg_44" },
             { "text": "Die Quelle verstecken", "next": "ppg_43", "karma": -2 }
@@ -1186,9 +1196,9 @@ let gameData = {
     },
 
     "ppg_43": {
-        "text": "HIM verschwindet lachend in einer rosa Flamme. Irgendetwas von der Energie bleibt in Townsville zurück.",
+        "text": "HIM verschwindet lachend in einer rosa Flamme. Irgendetwas von der Energie bleibt in Townsville zurueck.",
         "choices": [
-            { "text": "Zurück zur Stadt", "next": "ppg_44" }
+            { "text": "Zurueck zur Stadt", "next": "ppg_44" }
         ]
     },
 
@@ -1200,53 +1210,53 @@ let gameData = {
     },
 
     "c1_gf_start": {
-        "text": "Mitten in der Nacht beginnt der Mystery Shack gleichzeitig alle Radiosender in Gravity Falls zu empfangen. Alte Kinderlieder laufen rückwärts, Glühbirnen flackern in Symbolmustern und draußen tauchen plötzlich Bäume auf, die gestern noch nicht existierten. Dipper steht mit Journal 3 vor einer Wand voller neuer Zeichen. Mabel hat bereits mehreren der Bäume Namen gegeben.",
+        "text": "Mitten in der Nacht beginnt der Mystery Shack gleichzeitig alle Radiosender in Gravity Falls zu empfangen. Alte Kinderlieder laufen rueckwaerts, Gluehbirnen flackern in Symbolmustern und draussen tauchen ploetzlich Baeume auf, die gestern noch nicht existierten. Dipper steht mit Journal 3 vor einer Wand voller neuer Zeichen. Mabel hat bereits mehreren der Baeume Namen gegeben.",
         "choices": [
             { "text": "Mit Dipper die Symbole untersuchen", "next": "gf_1", "karma": 2 },
-            { "text": "Mabel bei den Bäumen helfen", "next": "gf_2" },
+            { "text": "Mabel bei den Baeumen helfen", "next": "gf_2" },
             { "text": "Den Radiosignalen folgen", "next": "gf_3", "karma": -1 },
             { "text": "Stan misstrauisch beobachten", "next": "gf_4" }
         ]
     },
 
     "gf_1": {
-        "text": "Dipper entdeckt, dass die neuen Symbole nicht im Journal stehen. Einige verändern ihre Form, sobald man sie direkt ansieht.",
+        "text": "Dipper entdeckt, dass die neuen Symbole nicht im Journal stehen. Einige veraendern ihre Form, sobald man sie direkt ansieht.",
         "choices": [
             { "text": "Die Symbole abzeichnen", "next": "gf_5", "gain_item": "cipher_sketches" },
-            { "text": "Ein Symbol berühren", "next": "gf_6", "karma": -2 },
+            { "text": "Ein Symbol beruehren", "next": "gf_6", "karma": -2 },
             { "text": "Ford suchen", "next": "gf_7" }
         ]
     },
 
     "gf_2": {
-        "text": "Mabel zeigt dir einen Baum mit Pullovermustern in der Rinde. Darunter liegen dutzende verlorene Gegenstände aus Gravity Falls.",
+        "text": "Mabel zeigt dir einen Baum mit Pullovermustern in der Rinde. Darunter liegen dutzende verlorene Gegenstaende aus Gravity Falls.",
         "choices": [
-            { "text": "Die Gegenstände durchsuchen", "next": "gf_8" },
-            { "text": "Den Baum fällen", "next": "gf_9", "karma": -4 },
-            { "text": "Mabels Theorie anhören", "next": "gf_10", "karma": 1 }
+            { "text": "Die Gegenstaende durchsuchen", "next": "gf_8" },
+            { "text": "Den Baum faellen", "next": "gf_9", "karma": -4 },
+            { "text": "Mabels Theorie anhoeren", "next": "gf_10", "karma": 1 }
         ]
     },
 
     "gf_3": {
-        "text": "Die Radiosignale führen dich tief in den Wald zu einer Lichtung voller alter Fernseher. Alle zeigen dieselbe Aufnahme: den Mystery Shack — aber leer und verlassen.",
+        "text": "Die Radiosignale fuehren dich tief in den Wald zu einer Lichtung voller alter Fernseher. Alle zeigen dieselbe Aufnahme: den Mystery Shack — aber leer und verlassen.",
         "choices": [
             { "text": "Einen Fernseher einschalten", "next": "gf_11" },
             { "text": "Die Kabel verfolgen", "next": "gf_12" },
-            { "text": "Zurücklaufen", "next": "gf_7", "karma": 1 }
+            { "text": "Zuruecklaufen", "next": "gf_7", "karma": 1 }
         ]
     },
 
     "gf_4": {
-        "text": "Stan versteckt hektisch mehrere Kisten im Keller des Mystery Shack. Auf einer steht: 'NICHT ÖFFNEN WENN DER WALD ATMET.'",
+        "text": "Stan versteckt hektisch mehrere Kisten im Keller des Mystery Shack. Auf einer steht: 'NICHT oeFFNEN WENN DER WALD ATMET.'",
         "choices": [
-            { "text": "Die Kiste öffnen", "next": "gf_13" },
+            { "text": "Die Kiste oeffnen", "next": "gf_13" },
             { "text": "Stan direkt fragen", "next": "gf_14" },
             { "text": "Stan heimlich folgen", "next": "gf_15", "karma": -1 }
         ]
     },
 
     "gf_5": {
-        "text": "Die Zeichnungen verändern sich im Notizbuch von selbst. Dipper erkennt plötzlich versteckte Koordinaten im Wald.",
+        "text": "Die Zeichnungen veraendern sich im Notizbuch von selbst. Dipper erkennt ploetzlich versteckte Koordinaten im Wald.",
         "choices": [
             { "text": "Den Koordinaten folgen", "next": "gf_16" },
             { "text": "Die Seiten verbrennen", "next": "gf_17", "karma": -2 },
@@ -1258,12 +1268,12 @@ let gameData = {
         "text": "Das Symbol bewegt sich unter deiner Haut weiter und verschwindet erst nach einigen Sekunden.",
         "choices": [
             { "text": "Es geheim halten", "next": "gf_18", "karma": -2 },
-            { "text": "Dipper davon erzählen", "next": "gf_19" }
+            { "text": "Dipper davon erzaehlen", "next": "gf_19" }
         ]
     },
 
     "gf_7": {
-        "text": "Ford untersucht alte Karten von Gravity Falls. 'Diese Muster stammen nicht von Bill Cipher... sie sind älter.'",
+        "text": "Ford untersucht alte Karten von Gravity Falls. 'Diese Muster stammen nicht von Bill Cipher... sie sind aelter.'",
         "choices": [
             { "text": "Ford helfen", "next": "gf_20", "gain_item": "fords_map" },
             { "text": "Nach Bill Cipher fragen", "next": "gf_21" },
@@ -1272,24 +1282,24 @@ let gameData = {
     },
 
     "gf_8": {
-        "text": "Zwischen den Gegenständen findest du eine alte Kassette mit der Aufschrift: 'Für den Fall, dass ER zurückkommt.'",
+        "text": "Zwischen den Gegenstaenden findest du eine alte Kassette mit der Aufschrift: 'Fuer den Fall, dass ER zurueckkommt.'",
         "choices": [
-            { "text": "Anhören", "next": "gf_22", "gain_item": "static_tape" },
+            { "text": "Anhoeren", "next": "gf_22", "gain_item": "static_tape" },
             { "text": "Stan geben", "next": "gf_14", "karma": 1 },
             { "text": "Verstecken", "next": "gf_18", "karma": -2 }
         ]
     },
 
     "gf_9": {
-        "text": "Als der Baum fällt, schreien plötzlich alle Radios im Mystery Shack gleichzeitig auf.",
+        "text": "Als der Baum faellt, schreien ploetzlich alle Radios im Mystery Shack gleichzeitig auf.",
         "choices": [
-            { "text": "Zum Shack zurückrennen", "next": "gf_23" },
+            { "text": "Zum Shack zurueckrennen", "next": "gf_23" },
             { "text": "Den Baum untersuchen", "next": "gf_24", "karma": -2 }
         ]
     },
 
     "gf_10": {
-        "text": "Mabel glaubt, dass die neuen Bäume Erinnerungen speichern. Einige Gegenstände stammen von Menschen, die verschwunden sind.",
+        "text": "Mabel glaubt, dass die neuen Baeume Erinnerungen speichern. Einige Gegenstaende stammen von Menschen, die verschwunden sind.",
         "choices": [
             { "text": "Mabel glauben", "next": "gf_24", "karma": 2 },
             { "text": "Daran zweifeln", "next": "gf_16", "karma": -1 }
@@ -1300,12 +1310,12 @@ let gameData = {
         "text": "Im Fernseher siehst du dich selbst durch den Wald laufen — obwohl du stillstehst.",
         "choices": [
             { "text": "Weiter beobachten", "next": "gf_25" },
-            { "text": "Den Fernseher zerstören", "next": "gf_17", "karma": -2 }
+            { "text": "Den Fernseher zerstoeren", "next": "gf_17", "karma": -2 }
         ]
     },
 
     "gf_12": {
-        "text": "Die Kabel führen zu einem unterirdischen Raum voller alter Regierungsgeräte und kryptischer Warnungen.",
+        "text": "Die Kabel fuehren zu einem unterirdischen Raum voller alter Regierungsgeraete und kryptischer Warnungen.",
         "choices": [
             { "text": "Den Computer aktivieren", "next": "gf_26" },
             { "text": "Alles fotografieren", "next": "gf_20", "gain_item": "facility_photos" }
@@ -1316,12 +1326,12 @@ let gameData = {
         "text": "In der Kiste befindet sich eine mechanische Hand mit einem Auge in der Mitte. Sie beginnt sofort auf die neuen Symbole zu reagieren.",
         "choices": [
             { "text": "Die Hand mitnehmen", "next": "gf_27", "gain_item": "oracle_hand" },
-            { "text": "Die Hand zerstören", "next": "gf_23", "karma": -3 }
+            { "text": "Die Hand zerstoeren", "next": "gf_23", "karma": -3 }
         ]
     },
 
     "gf_14": {
-        "text": "Stan wirkt ungewöhnlich ernst. 'Vor Jahren haben wir etwas im Wald eingeschlossen. Es sollte nie wieder aufwachen.'",
+        "text": "Stan wirkt ungewoehnlich ernst. 'Vor Jahren haben wir etwas im Wald eingeschlossen. Es sollte nie wieder aufwachen.'",
         "choices": [
             { "text": "Mehr erfahren wollen", "next": "gf_28" },
             { "text": "Stan misstrauen", "next": "gf_15", "karma": -2 }
@@ -1329,7 +1339,7 @@ let gameData = {
     },
 
     "gf_15": {
-        "text": "Stan trifft sich heimlich mit Old Man McGucket an einer verlassenen Mine außerhalb der Stadt.",
+        "text": "Stan trifft sich heimlich mit Old Man McGucket an einer verlassenen Mine ausserhalb der Stadt.",
         "choices": [
             { "text": "Lauschen", "next": "gf_29" },
             { "text": "Sich zeigen", "next": "gf_28", "karma": 1 }
@@ -1337,11 +1347,11 @@ let gameData = {
     },
 
     "gf_16": {
-        "text": "Die Koordinaten führen zu einem Kreis aus verdrehten Bäumen. In der Mitte steht eine Tür mitten im Wald — ohne Wände.",
+        "text": "Die Koordinaten fuehren zu einem Kreis aus verdrehten Baeumen. In der Mitte steht eine Tuer mitten im Wald — ohne Waende.",
         "choices": [
-            { "text": "Die Tür öffnen", "next": "gf_30" },
-            { "text": "Die Tür untersuchen", "next": "gf_31" },
-            { "text": "Nicht näherkommen", "next": "gf_23", "karma": 1 }
+            { "text": "Die Tuer oeffnen", "next": "gf_30" },
+            { "text": "Die Tuer untersuchen", "next": "gf_31" },
+            { "text": "Nicht naeherkommen", "next": "gf_23", "karma": 1 }
         ]
     },
 
@@ -1354,15 +1364,15 @@ let gameData = {
     },
 
     "gf_18": {
-        "text": "Seit dem Vorfall hörst du nachts Flüstern aus den Wänden des Mystery Shack.",
+        "text": "Seit dem Vorfall hoerst du nachts Fluestern aus den Waenden des Mystery Shack.",
         "choices": [
-            { "text": "Dem Flüstern folgen", "next": "gf_32", "karma": -2 },
+            { "text": "Dem Fluestern folgen", "next": "gf_32", "karma": -2 },
             { "text": "Dipper informieren", "next": "gf_19", "karma": 2 }
         ]
     },
 
     "gf_19": {
-        "text": "Dipper erkennt das Symbol sofort. 'Das gehört zu einer alten Entität namens The Watcher.'",
+        "text": "Dipper erkennt das Symbol sofort. 'Das gehoert zu einer alten Entitaet namens The Watcher.'",
         "choices": [
             { "text": "Mehr herausfinden", "next": "gf_33" },
             { "text": "Das ignorieren", "next": "gf_32", "karma": -2 }
@@ -1373,7 +1383,7 @@ let gameData = {
         "text": "Ford entdeckt auf der Karte ein verstecktes Tunnelsystem unter Gravity Falls.",
         "choices": [
             { "text": "Die Tunnel betreten", "next": "gf_34" },
-            { "text": "Zuerst Ausrüstung sammeln", "next": "gf_35", "gain_item": "gravity_gear" },
+            { "text": "Zuerst Ausruestung sammeln", "next": "gf_35", "gain_item": "gravity_gear" },
             { "text": "Stan mitnehmen", "next": "gf_28" }
         ]
     },
@@ -1387,7 +1397,7 @@ let gameData = {
     },
 
     "gf_22": {
-        "text": "Auf der Kassette spricht McGucket panisch über 'Augen im Wald, die Erinnerungen stehlen'.",
+        "text": "Auf der Kassette spricht McGucket panisch ueber 'Augen im Wald, die Erinnerungen stehlen'.",
         "choices": [
             { "text": "McGucket suchen", "next": "gf_29" },
             { "text": "Die Kassette verstecken", "next": "gf_18", "karma": -1 }
@@ -1395,7 +1405,7 @@ let gameData = {
     },
 
     "gf_23": {
-        "text": "In ganz Gravity Falls verschwinden plötzlich Schatten von Menschen unabhängig von ihren Besitzern.",
+        "text": "In ganz Gravity Falls verschwinden ploetzlich Schatten von Menschen unabhaengig von ihren Besitzern.",
         "choices": [
             { "text": "Den Menschen helfen", "next": "gf_36", "karma": 4 },
             { "text": "Einen Schatten verfolgen", "next": "gf_37", "karma": -2 }
@@ -1427,7 +1437,7 @@ let gameData = {
     },
 
     "gf_27": {
-        "text": "Die mechanische Hand beginnt plötzlich Richtung Wald zu zeigen.",
+        "text": "Die mechanische Hand beginnt ploetzlich Richtung Wald zu zeigen.",
         "choices": [
             { "text": "Ihr folgen", "next": "gf_34" },
             { "text": "Sie deaktivieren", "next": "gf_36", "karma": -1 }
@@ -1435,15 +1445,15 @@ let gameData = {
     },
 
     "gf_28": {
-        "text": "Stan gesteht, dass Ford und McGucket die Tür im Wald einst absichtlich erschaffen haben.",
+        "text": "Stan gesteht, dass Ford und McGucket die Tuer im Wald einst absichtlich erschaffen haben.",
         "choices": [
             { "text": "Warum?", "next": "gf_33" },
-            { "text": "Die Tür sofort zerstören", "next": "gf_38", "karma": -3 }
+            { "text": "Die Tuer sofort zerstoeren", "next": "gf_38", "karma": -3 }
         ]
     },
 
     "gf_29": {
-        "text": "McGucket trägt mehrere Hüte übereinander und murmelt: 'Es sieht durch Spiegel und Erinnerungen.'",
+        "text": "McGucket traegt mehrere Huete uebereinander und murmelt: 'Es sieht durch Spiegel und Erinnerungen.'",
         "choices": [
             { "text": "McGucket vertrauen", "next": "gf_35", "gain_item": "memory_lens" },
             { "text": "Seine Worte ignorieren", "next": "gf_32", "karma": -2 }
@@ -1451,23 +1461,23 @@ let gameData = {
     },
 
     "gf_30": {
-        "text": "Hinter der Tür befindet sich kein Raum — sondern ein endloser Wald voller schwebender Augen.",
+        "text": "Hinter der Tuer befindet sich kein Raum — sondern ein endloser Wald voller schwebender Augen.",
         "choices": [
             { "text": "Weitergehen", "next": "gf_39", "karma": -2 },
-            { "text": "Die Tür schließen", "next": "gf_40", "karma": 3 }
+            { "text": "Die Tuer schliessen", "next": "gf_40", "karma": 3 }
         ]
     },
 
     "gf_31": {
-        "text": "In die Tür sind dieselben Symbole eingeritzt wie in deinen Zeichnungen.",
+        "text": "In die Tuer sind dieselben Symbole eingeritzt wie in deinen Zeichnungen.",
         "choices": [
             { "text": "Mit den Zeichnungen vergleichen", "next": "gf_33", "required_item": "cipher_sketches" },
-            { "text": "Die Tür markieren", "next": "gf_40" }
+            { "text": "Die Tuer markieren", "next": "gf_40" }
         ]
     },
 
     "gf_32": {
-        "text": "In der Nacht verschwindet plötzlich ein Teil des Mystery Shack. Niemand erinnert sich daran, dass dort jemals ein Raum war.",
+        "text": "In der Nacht verschwindet ploetzlich ein Teil des Mystery Shack. Niemand erinnert sich daran, dass dort jemals ein Raum war.",
         "choices": [
             { "text": "Die Erinnerung rekonstruieren", "next": "gf_41", "required_item": "memory_lens" },
             { "text": "Es ignorieren", "next": "gf_39", "karma": -4 }
@@ -1475,7 +1485,7 @@ let gameData = {
     },
 
     "gf_33": {
-        "text": "Ford erkennt die Wahrheit: The Watcher löscht Dinge aus der Realität, indem es Menschen dazu bringt, sie zu vergessen.",
+        "text": "Ford erkennt die Wahrheit: The Watcher loescht Dinge aus der Realitaet, indem es Menschen dazu bringt, sie zu vergessen.",
         "choices": [
             { "text": "Die Stadt warnen", "next": "gf_42", "karma": 4 },
             { "text": "Die Informationen geheim halten", "next": "gf_39", "karma": -3 }
@@ -1485,16 +1495,16 @@ let gameData = {
     "gf_34": {
         "text": "Unter Gravity Falls findest du ein riesiges Observatorium voller Augen-Symbole und alter Tonaufnahmen.",
         "choices": [
-            { "text": "Die Aufnahmen anhören", "next": "gf_43" },
+            { "text": "Die Aufnahmen anhoeren", "next": "gf_43" },
             { "text": "Das Observatorium sabotieren", "next": "gf_38", "karma": -2 }
         ]
     },
 
     "gf_35": {
-        "text": "Mit der gesammelten Ausrüstung kannst du verborgene Spuren im Wald sichtbar machen.",
+        "text": "Mit der gesammelten Ausruestung kannst du verborgene Spuren im Wald sichtbar machen.",
         "choices": [
             { "text": "Den Spuren folgen", "next": "gf_43" },
-            { "text": "Die Ausrüstung Dipper geben", "next": "gf_42", "karma": 2 }
+            { "text": "Die Ausruestung Dipper geben", "next": "gf_42", "karma": 2 }
         ]
     },
 
@@ -1502,12 +1512,12 @@ let gameData = {
         "text": "Mehrere Bewohner beginnen ihre eigenen Namen zu vergessen.",
         "choices": [
             { "text": "Die Erinnerungen retten", "next": "gf_41", "karma": 5 },
-            { "text": "Nur dich selbst schützen", "next": "gf_39", "karma": -4 }
+            { "text": "Nur dich selbst schuetzen", "next": "gf_39", "karma": -4 }
         ]
     },
 
     "gf_37": {
-        "text": "Der verfolgte Schatten führt dich direkt zu The Watcher — einer riesigen Gestalt aus Augen und flüsternden Stimmen.",
+        "text": "Der verfolgte Schatten fuehrt dich direkt zu The Watcher — einer riesigen Gestalt aus Augen und fluesternden Stimmen.",
         "choices": [
             { "text": "Mit ihm sprechen", "next": "gf_44" },
             { "text": "Angreifen", "next": "gf_45", "karma": -5 }
@@ -1515,7 +1525,7 @@ let gameData = {
     },
 
     "gf_38": {
-        "text": "Durch die Zerstörung destabilisiert sich der Wald selbst. Wege verändern sich jede Minute.",
+        "text": "Durch die Zerstoerung destabilisiert sich der Wald selbst. Wege veraendern sich jede Minute.",
         "choices": [
             { "text": "Ford helfen", "next": "gf_42", "karma": 2 },
             { "text": "Alleine weiter", "next": "gf_45", "karma": -2 }
@@ -1523,15 +1533,15 @@ let gameData = {
     },
 
     "gf_39": {
-        "text": "Immer mehr Menschen vergessen Gravity Falls vollständig. Straßenschilder verschwinden und Gebäude verändern ihre Form.",
+        "text": "Immer mehr Menschen vergessen Gravity Falls vollstaendig. Strassenschilder verschwinden und Gebaeude veraendern ihre Form.",
         "choices": [
-            { "text": "Die Tür endgültig schließen", "next": "gf_46", "required_item": "oracle_hand" },
+            { "text": "Die Tuer endgueltig schliessen", "next": "gf_46", "required_item": "oracle_hand" },
             { "text": "The Watcher beobachten", "next": "gf_44", "karma": -2 }
         ]
     },
 
     "gf_40": {
-        "text": "Die Tür beginnt sich zu versiegeln, aber etwas versucht von innen herauszukommen.",
+        "text": "Die Tuer beginnt sich zu versiegeln, aber etwas versucht von innen herauszukommen.",
         "choices": [
             { "text": "Dagegenhalten", "next": "gf_46", "karma": 4 },
             { "text": "Loslassen", "next": "gf_45", "karma": -3 }
@@ -1539,7 +1549,7 @@ let gameData = {
     },
 
     "gf_41": {
-        "text": "Mit der Linse kannst du verlorene Erinnerungen sichtbar machen. Die verschwundenen Räume des Mystery Shack erscheinen kurz wieder.",
+        "text": "Mit der Linse kannst du verlorene Erinnerungen sichtbar machen. Die verschwundenen Raeume des Mystery Shack erscheinen kurz wieder.",
         "choices": [
             { "text": "Die Erinnerungen stabilisieren", "next": "gf_46", "karma": 5 },
             { "text": "Nur eine Erinnerung retten", "next": "gf_44", "karma": -1 }
@@ -1549,16 +1559,16 @@ let gameData = {
     "gf_42": {
         "text": "Die Bewohner von Gravity Falls beginnen gemeinsam, sich gegen The Watcher zu erinnern.",
         "choices": [
-            { "text": "Die Erinnerungen bündeln", "next": "gf_46", "karma": 5 },
+            { "text": "Die Erinnerungen buendeln", "next": "gf_46", "karma": 5 },
             { "text": "Die Stadt evakuieren", "next": "gf_45", "karma": -1 }
         ]
     },
 
     "gf_43": {
-        "text": "Die Tonaufnahmen stammen von Ford selbst. 'Wenn jemand das hört: Vergiss niemals diesen Ort.'",
+        "text": "Die Tonaufnahmen stammen von Ford selbst. 'Wenn jemand das hoert: Vergiss niemals diesen Ort.'",
         "choices": [
             { "text": "Die Nachricht verbreiten", "next": "gf_42", "karma": 4 },
-            { "text": "Die Aufnahmen zerstören", "next": "gf_45", "karma": -4 }
+            { "text": "Die Aufnahmen zerstoeren", "next": "gf_45", "karma": -4 }
         ]
     },
 
@@ -1571,14 +1581,14 @@ let gameData = {
     },
 
     "gf_45": {
-        "text": "Der Wald beginnt Gravity Falls vollständig zu verschlingen. Straßen enden plötzlich im Nichts.",
+        "text": "Der Wald beginnt Gravity Falls vollstaendig zu verschlingen. Strassen enden ploetzlich im Nichts.",
         "choices": [
-            { "text": "Zum Mystery Shack zurückkehren", "next": "gf_46" }
+            { "text": "Zum Mystery Shack zurueckkehren", "next": "gf_46" }
         ]
     },
 
     "gf_46": {
-        "text": "Gemeinsam gelingt es euch, die Tür tief im Wald zu versiegeln. Die Radios verstummen langsam wieder.",
+        "text": "Gemeinsam gelingt es euch, die Tuer tief im Wald zu versiegeln. Die Radios verstummen langsam wieder.",
         "choices": [
             { "text": "Mit Dipper reden", "next": "gf_48" },
             { "text": "Alleine in den Wald schauen", "next": "gf_48", "karma": -1 }
@@ -1593,7 +1603,7 @@ let gameData = {
     },
 
     "gf_48": {
-        "text": "Dipper schließt Journal 3 langsam. 'Gravity Falls hatte schon immer Geheimnisse... aber manche sollten vielleicht geheim bleiben.'",
+        "text": "Dipper schliesst Journal 3 langsam. 'Gravity Falls hatte schon immer Geheimnisse... aber manche sollten vielleicht geheim bleiben.'",
         "choices": [
             { "text": "Kapitel beenden", "next": "c3_start" }
         ]
@@ -1610,7 +1620,7 @@ let gameData = {
         ]
     },
     "c2_tt_start": {
-        "text": "Der Titans Tower driftet mitten in der Nacht langsam durch dichten roten Nebel im Hafen von Jump City. Kein Alarm läuft, keine Systeme reagieren. Nur ein einziges Signal blinkt dauerhaft im Hauptcomputer: \"DON'T LET HIM WAKE UP\". Robin steht bereits bewaffnet im Kontrollraum, während Raven ungewöhnlich nervös wirkt.",
+        "text": "Der Titans Tower driftet mitten in der Nacht langsam durch dichten roten Nebel im Hafen von Jump City. Kein Alarm laeuft, keine Systeme reagieren. Nur ein einziges Signal blinkt dauerhaft im Hauptcomputer: \"DON'T LET HIM WAKE UP\". Robin steht bereits bewaffnet im Kontrollraum, waehrend Raven ungewoehnlich nervoes wirkt.",
         "choices": [
             { "text": "Robin beim Kontrollraum helfen", "next": "tt_1", "karma": 3 },
             { "text": "Raven folgen", "next": "tt_2" },
@@ -1620,23 +1630,23 @@ let gameData = {
     },
 
     "tt_1": {
-        "text": "Robin zeigt dir Sicherheitsaufnahmen. Alle Kameras zeigen dieselbe Gestalt mit weißer Maske, obwohl niemand den Tower betreten hat.",
+        "text": "Robin zeigt dir Sicherheitsaufnahmen. Alle Kameras zeigen dieselbe Gestalt mit weisser Maske, obwohl niemand den Tower betreten hat.",
         "choices": [
             { "text": "Die Aufnahmen analysieren", "next": "tt_5", "gain_item": "security_override" },
-            { "text": "Robin warnen, dass es eine Falle sein könnte", "next": "tt_6", "karma": 4 }
+            { "text": "Robin warnen, dass es eine Falle sein koennte", "next": "tt_6", "karma": 4 }
         ]
     },
 
     "tt_2": {
-        "text": "Raven führt dich in den Meditationsraum. Dort schweben schwarze Symbole an den Wänden. 'Etwas versucht, Erinnerungen aus dem Tower zu ziehen', sagt sie leise.",
+        "text": "Raven fuehrt dich in den Meditationsraum. Dort schweben schwarze Symbole an den Waenden. 'Etwas versucht, Erinnerungen aus dem Tower zu ziehen', sagt sie leise.",
         "choices": [
             { "text": "Raven helfen", "next": "tt_7", "karma": 3 },
-            { "text": "Die Symbole berühren", "next": "tt_8", "gain_item": "shadow_mark" }
+            { "text": "Die Symbole beruehren", "next": "tt_8", "gain_item": "shadow_mark" }
         ]
     },
 
     "tt_3": {
-        "text": "Die unteren Ebenen des Towers wirken verlassen. In der Trainingshalle bewegen sich die Übungsroboter plötzlich alleine und greifen alles an, was sich bewegt.",
+        "text": "Die unteren Ebenen des Towers wirken verlassen. In der Trainingshalle bewegen sich die uebungsroboter ploetzlich alleine und greifen alles an, was sich bewegt.",
         "choices": [
             { "text": "Die Roboter abschalten", "next": "tt_9", "karma": 2 },
             { "text": "Durch die Halle sprinten", "next": "tt_10", "karma": -4 }
@@ -1644,23 +1654,23 @@ let gameData = {
     },
 
     "tt_4": {
-        "text": "Cyborg und Beast Boy sitzen in der Küche und diskutieren mit dem Kühlschrank. Der Kühlschrank behauptet, er sei der neue Tower-Administrator.",
+        "text": "Cyborg und Beast Boy sitzen in der Kueche und diskutieren mit dem Kuehlschrank. Der Kuehlschrank behauptet, er sei der neue Tower-Administrator.",
         "choices": [
-            { "text": "Cyborg unterstützen", "next": "tt_11" },
+            { "text": "Cyborg unterstuetzen", "next": "tt_11" },
             { "text": "Beast Boys Idee folgen", "next": "tt_12", "karma": -3 }
         ]
     },
 
     "tt_5": {
-        "text": "Die Aufnahmen zeigen plötzlich Slade, aber Robin erkennt sofort, dass etwas nicht stimmt. Die Bewegungen passen nicht zu ihm.",
+        "text": "Die Aufnahmen zeigen ploetzlich Slade, aber Robin erkennt sofort, dass etwas nicht stimmt. Die Bewegungen passen nicht zu ihm.",
         "choices": [
             { "text": "Weiter analysieren", "next": "tt_13", "gain_item": "slade_frequency" },
-            { "text": "Sofort Alarm auslösen", "next": "tt_14", "karma": -3 }
+            { "text": "Sofort Alarm ausloesen", "next": "tt_14", "karma": -3 }
         ]
     },
 
     "tt_6": {
-        "text": "Robin stoppt den Alarmprozess. Sekunden später explodiert genau dort eine versteckte Mine im Kontrollraum.",
+        "text": "Robin stoppt den Alarmprozess. Sekunden spaeter explodiert genau dort eine versteckte Mine im Kontrollraum.",
         "choices": [
             { "text": "Die Quelle der Mine suchen", "next": "tt_15" },
             { "text": "Den Tower evakuieren", "next": "tt_16", "karma": 5 }
@@ -1668,18 +1678,18 @@ let gameData = {
     },
 
     "tt_7": {
-        "text": "Raven öffnet kurz ein magisches Fenster in eine dunkle Dimension. Für einen Moment siehst du jemanden im Nebel stehen: Trigon lächelt.",
+        "text": "Raven oeffnet kurz ein magisches Fenster in eine dunkle Dimension. Fuer einen Moment siehst du jemanden im Nebel stehen: Trigon laechelt.",
         "choices": [
-            { "text": "Das Portal schließen", "next": "tt_17", "karma": 4 },
+            { "text": "Das Portal schliessen", "next": "tt_17", "karma": 4 },
             { "text": "Genauer hinsehen", "next": "tt_18", "gain_item": "trigon_fragment" }
         ]
     },
 
     "tt_8": {
-        "text": "Die Symbole brennen sich kurz in deine Hand ein. Plötzlich hörst du Stimmen aus den Wänden des Towers.",
+        "text": "Die Symbole brennen sich kurz in deine Hand ein. Ploetzlich hoerst du Stimmen aus den Waenden des Towers.",
         "choices": [
             { "text": "Den Stimmen folgen", "next": "tt_18" },
-            { "text": "Raven davon erzählen", "next": "tt_17", "karma": 2 }
+            { "text": "Raven davon erzaehlen", "next": "tt_17", "karma": 2 }
         ]
     },
 
@@ -1694,7 +1704,7 @@ let gameData = {
     "tt_10": {
         "text": "Du entkommst knapp, aber die Roboter verfolgen jetzt andere Bewohner des Towers.",
         "choices": [
-            { "text": "Zurückgehen und helfen", "next": "tt_9", "karma": 3 },
+            { "text": "Zurueckgehen und helfen", "next": "tt_9", "karma": 3 },
             { "text": "Weiterlaufen", "next": "tt_19", "karma": -5 }
         ]
     },
@@ -1702,29 +1712,29 @@ let gameData = {
     "tt_11": {
         "text": "Cyborg entdeckt versteckte Codes im Tower-System. Jemand manipuliert die KI von innen.",
         "choices": [
-            { "text": "Codes entschlüsseln", "next": "tt_20", "gain_item": "tower_code" },
+            { "text": "Codes entschluesseln", "next": "tt_20", "gain_item": "tower_code" },
             { "text": "Die Hauptenergie trennen", "next": "tt_21", "karma": -4 }
         ]
     },
 
     "tt_12": {
-        "text": "Beast Boy verwandelt sich in einen T-Rex, um den Kühlschrank einzuschüchtern. Dabei zerstört er die halbe Küche.",
+        "text": "Beast Boy verwandelt sich in einen T-Rex, um den Kuehlschrank einzuschuechtern. Dabei zerstoert er die halbe Kueche.",
         "choices": [
             { "text": "Mitlachen", "next": "tt_19", "karma": -2 },
-            { "text": "Nachsehen, was der Kühlschrank versteckt hat", "next": "tt_20" }
+            { "text": "Nachsehen, was der Kuehlschrank versteckt hat", "next": "tt_20" }
         ]
     },
 
     "tt_13": {
         "text": "Die Frequenz stammt nicht von Slade, sondern von Mad Mod. Der ganze Tower scheint manipulierte Wahrnehmungen zu erzeugen.",
         "choices": [
-            { "text": "Mad Mods Signal stören", "next": "tt_22", "required_item": "security_override" },
+            { "text": "Mad Mods Signal stoeren", "next": "tt_22", "required_item": "security_override" },
             { "text": "Robin allein informieren", "next": "tt_23" }
         ]
     },
 
     "tt_14": {
-        "text": "Während des Alarms tauchen plötzlich dutzende falsche Titans im Tower auf. Jeder behauptet, der echte zu sein.",
+        "text": "Waehrend des Alarms tauchen ploetzlich dutzende falsche Titans im Tower auf. Jeder behauptet, der echte zu sein.",
         "choices": [
             { "text": "Raven vertrauen", "next": "tt_24", "karma": 4 },
             { "text": "Robin folgen", "next": "tt_23", "karma": -2 }
@@ -1732,15 +1742,15 @@ let gameData = {
     },
 
     "tt_15": {
-        "text": "Im alten Trophäenraum findest du eine versteckte Maske von Slade. Sie ist noch warm.",
+        "text": "Im alten Trophaeenraum findest du eine versteckte Maske von Slade. Sie ist noch warm.",
         "choices": [
             { "text": "Die Maske mitnehmen", "next": "tt_25", "gain_item": "slade_mask" },
-            { "text": "Die Maske zerstören", "next": "tt_24", "karma": 3 }
+            { "text": "Die Maske zerstoeren", "next": "tt_24", "karma": 3 }
         ]
     },
 
     "tt_16": {
-        "text": "Während Bewohner den Tower verlassen, bleibt Starfire zurück, um nach vermissten Haustieren zu suchen.",
+        "text": "Waehrend Bewohner den Tower verlassen, bleibt Starfire zurueck, um nach vermissten Haustieren zu suchen.",
         "choices": [
             { "text": "Starfire helfen", "next": "tt_26", "karma": 5 },
             { "text": "Die Evakuierung fortsetzen", "next": "tt_21", "karma": -3 }
@@ -1764,9 +1774,9 @@ let gameData = {
     },
 
     "tt_19": {
-        "text": "Der Tower verliert langsam die Kontrolle über seine Verteidigungssysteme.",
+        "text": "Der Tower verliert langsam die Kontrolle ueber seine Verteidigungssysteme.",
         "choices": [
-            { "text": "Zum Kontrollraum zurück", "next": "tt_23" },
+            { "text": "Zum Kontrollraum zurueck", "next": "tt_23" },
             { "text": "Die Systeme sabotieren", "next": "tt_30", "karma": -5 }
         ]
     },
@@ -1774,13 +1784,13 @@ let gameData = {
     "tt_20": {
         "text": "Cyborg entdeckt ein verborgenes Programm namens PROJECT H.I.V.E. Es aktiviert sich bereits.",
         "choices": [
-            { "text": "Programm löschen", "next": "tt_31", "required_item": "tower_code" },
+            { "text": "Programm loeschen", "next": "tt_31", "required_item": "tower_code" },
             { "text": "Programm isolieren", "next": "tt_32", "karma": 3 }
         ]
     },
 
     "tt_21": {
-        "text": "Der Tower fällt teilweise aus. Die Aufzüge stürzen ab und Wasser dringt in die unteren Ebenen ein.",
+        "text": "Der Tower faellt teilweise aus. Die Aufzuege stuerzen ab und Wasser dringt in die unteren Ebenen ein.",
         "choices": [
             { "text": "Menschen retten", "next": "tt_26", "karma": 6 },
             { "text": "Nur die Titans suchen", "next": "tt_32", "karma": -4 }
@@ -1804,7 +1814,7 @@ let gameData = {
     },
 
     "tt_24": {
-        "text": "Raven nutzt ihre Kräfte, um die falschen Titans aufzudecken. Einer davon verwandelt sich plötzlich in Blackfire.",
+        "text": "Raven nutzt ihre Kraefte, um die falschen Titans aufzudecken. Einer davon verwandelt sich ploetzlich in Blackfire.",
         "choices": [
             { "text": "Starfire holen", "next": "tt_26" },
             { "text": "Blackfire verfolgen", "next": "tt_36" }
@@ -1812,7 +1822,7 @@ let gameData = {
     },
 
     "tt_25": {
-        "text": "Die Slade-Maske enthält versteckte Koordinaten zum alten Unterwasserdock der Titans.",
+        "text": "Die Slade-Maske enthaelt versteckte Koordinaten zum alten Unterwasserdock der Titans.",
         "choices": [
             { "text": "Zum Dock reisen", "next": "tt_36" },
             { "text": "Robin die Maske geben", "next": "tt_35", "karma": 3 }
@@ -1839,20 +1849,20 @@ let gameData = {
         "text": "Red X behauptet, er habe Brother Blood bereits gesehen. Aber er will die gestohlene Technologie behalten.",
         "choices": [
             { "text": "Deal eingehen", "next": "tt_39" },
-            { "text": "Die Technologie zurückfordern", "next": "tt_29", "karma": 2 }
+            { "text": "Die Technologie zurueckfordern", "next": "tt_29", "karma": 2 }
         ]
     },
 
     "tt_29": {
-        "text": "Der Kampf beschädigt Teile des Towers schwer. Red X entkommt trotzdem.",
+        "text": "Der Kampf beschaedigt Teile des Towers schwer. Red X entkommt trotzdem.",
         "choices": [
             { "text": "Ihn verfolgen", "next": "tt_36" },
-            { "text": "Zum Tower zurück", "next": "tt_33", "karma": 2 }
+            { "text": "Zum Tower zurueck", "next": "tt_33", "karma": 2 }
         ]
     },
 
     "tt_30": {
-        "text": "Die Sabotage stoppt zwar einige Systeme, aber jetzt aktiviert sich der Selbstzerstörungsmodus.",
+        "text": "Die Sabotage stoppt zwar einige Systeme, aber jetzt aktiviert sich der Selbstzerstoerungsmodus.",
         "choices": [
             { "text": "Cyborg suchen", "next": "tt_32" },
             { "text": "Fluchtkapseln vorbereiten", "next": "tt_40", "karma": -4 }
@@ -1860,7 +1870,7 @@ let gameData = {
     },
 
     "tt_31": {
-        "text": "PROJECT H.I.V.E wird gelöscht, doch Brother Blood erkennt sofort euren Standort.",
+        "text": "PROJECT H.I.V.E wird geloescht, doch Brother Blood erkennt sofort euren Standort.",
         "choices": [
             { "text": "Sich vorbereiten", "next": "tt_41", "karma": 4 },
             { "text": "Den Reaktor abschalten", "next": "tt_42" }
@@ -1868,7 +1878,7 @@ let gameData = {
     },
 
     "tt_32": {
-        "text": "Cyborg stabilisiert den Tower notdürftig. Trotzdem nähert sich etwas Großes aus dem Hafen.",
+        "text": "Cyborg stabilisiert den Tower notduerftig. Trotzdem naehert sich etwas Grosses aus dem Hafen.",
         "choices": [
             { "text": "Nachsehen", "next": "tt_41" },
             { "text": "Im Tower bleiben", "next": "tt_42", "karma": -2 }
@@ -1886,13 +1896,13 @@ let gameData = {
     "tt_34": {
         "text": "Allein gegen Brother Blood zu gehen war ein Fehler. Die Drohnen umzingeln dich sofort.",
         "choices": [
-            { "text": "Kämpfen", "next": "tt_43" },
+            { "text": "Kaempfen", "next": "tt_43" },
             { "text": "Auf Hilfe warten", "next": "tt_41", "karma": 2 }
         ]
     },
 
     "tt_35": {
-        "text": "Robin vertraut dir schließlich und gibt dir Zugriff auf geheime Tower-Protokolle.",
+        "text": "Robin vertraut dir schliesslich und gibt dir Zugriff auf geheime Tower-Protokolle.",
         "choices": [
             { "text": "Protokolle analysieren", "next": "tt_44", "gain_item": "tower_protocols" },
             { "text": "Sofort handeln", "next": "tt_41" }
@@ -1900,23 +1910,23 @@ let gameData = {
     },
 
     "tt_36": {
-        "text": "Im Unterwasserdock wird eine riesige Maschine aktiviert, die den gesamten Tower kontrollieren könnte.",
+        "text": "Im Unterwasserdock wird eine riesige Maschine aktiviert, die den gesamten Tower kontrollieren koennte.",
         "choices": [
             { "text": "Maschine sabotieren", "next": "tt_42", "required_item": "slade_frequency" },
-            { "text": "Maschine übernehmen", "next": "tt_45", "karma": -5 }
+            { "text": "Maschine uebernehmen", "next": "tt_45", "karma": -5 }
         ]
     },
 
     "tt_37": {
-        "text": "Die Tiere führen Starfire zu einem versteckten Wartungsraum voller gestohlener H.I.V.E.-Technologie.",
+        "text": "Die Tiere fuehren Starfire zu einem versteckten Wartungsraum voller gestohlener H.I.V.E.-Technologie.",
         "choices": [
-            { "text": "Alles zerstören", "next": "tt_42", "karma": 3 },
+            { "text": "Alles zerstoeren", "next": "tt_42", "karma": 3 },
             { "text": "Die Technologie behalten", "next": "tt_45", "karma": -4 }
         ]
     },
 
     "tt_38": {
-        "text": "Raven entscheidet sich freiwillig, Brother Blood entgegenzutreten, bevor Trigon vollständig erwacht.",
+        "text": "Raven entscheidet sich freiwillig, Brother Blood entgegenzutreten, bevor Trigon vollstaendig erwacht.",
         "choices": [
             { "text": "Raven begleiten", "next": "tt_44", "karma": 5 },
             { "text": "Sie alleine gehen lassen", "next": "tt_43", "karma": -6 }
@@ -1924,31 +1934,31 @@ let gameData = {
     },
 
     "tt_39": {
-        "text": "Red X gibt dir heimlich einen gestohlenen Energieschlüssel. 'Nur diesmal', sagt er.",
+        "text": "Red X gibt dir heimlich einen gestohlenen Energieschluessel. 'Nur diesmal', sagt er.",
         "choices": [
-            { "text": "Schlüssel nutzen", "next": "tt_42", "gain_item": "x_key" },
-            { "text": "Robin davon erzählen", "next": "tt_35", "karma": 2 }
+            { "text": "Schluessel nutzen", "next": "tt_42", "gain_item": "x_key" },
+            { "text": "Robin davon erzaehlen", "next": "tt_35", "karma": 2 }
         ]
     },
 
     "tt_40": {
-        "text": "Die Fluchtkapseln funktionieren nicht. Brother Blood hat sie längst deaktiviert.",
+        "text": "Die Fluchtkapseln funktionieren nicht. Brother Blood hat sie laengst deaktiviert.",
         "choices": [
-            { "text": "Zum Reaktor zurück", "next": "tt_41" },
+            { "text": "Zum Reaktor zurueck", "next": "tt_41" },
             { "text": "Einen anderen Ausgang suchen", "next": "tt_45", "karma": -3 }
         ]
     },
 
     "tt_41": {
-        "text": "Die Titans versammeln sich schließlich gemeinsam im Hauptreaktor.",
+        "text": "Die Titans versammeln sich schliesslich gemeinsam im Hauptreaktor.",
         "choices": [
-            { "text": "Gemeinsam kämpfen", "next": "tt_46", "karma": 5 },
+            { "text": "Gemeinsam kaempfen", "next": "tt_46", "karma": 5 },
             { "text": "Brother Blood ablenken", "next": "tt_44" }
         ]
     },
 
     "tt_42": {
-        "text": "Die Kontrolle über den Tower kehrt langsam zurück, doch Brother Blood aktiviert den letzten Reaktor.",
+        "text": "Die Kontrolle ueber den Tower kehrt langsam zurueck, doch Brother Blood aktiviert den letzten Reaktor.",
         "choices": [
             { "text": "Reaktor abschalten", "next": "tt_46", "required_item": "tower_protocols" },
             { "text": "Die Energie umlenken", "next": "tt_45", "karma": -4 }
@@ -1972,7 +1982,7 @@ let gameData = {
     },
 
     "tt_45": {
-        "text": "Die zusätzliche Energie macht die Situation instabil. Der Tower beginnt auseinanderzubrechen.",
+        "text": "Die zusaetzliche Energie macht die Situation instabil. Der Tower beginnt auseinanderzubrechen.",
         "choices": [
             { "text": "Die Titans warnen", "next": "tt_46", "karma": 2 },
             { "text": "Weiter Energie sammeln", "next": "tt_47", "karma": -7 }
@@ -1980,7 +1990,7 @@ let gameData = {
     },
 
     "tt_46": {
-        "text": "Gemeinsam schaffen es die Titans, Brother Blood zurückzudrängen. Der rote Nebel verschwindet langsam aus Jump City.",
+        "text": "Gemeinsam schaffen es die Titans, Brother Blood zurueckzudraengen. Der rote Nebel verschwindet langsam aus Jump City.",
         "choices": [
             { "text": "Den Tower sichern", "next": "tt_48", "karma": 5 },
             { "text": "Brother Blood verfolgen", "next": "tt_49" }
@@ -1988,45 +1998,45 @@ let gameData = {
     },
 
     "tt_47": {
-        "text": "Brother Blood verliert zwar die Kontrolle über den Reaktor, entkommt aber im Chaos des zusammenbrechenden Towers.",
+        "text": "Brother Blood verliert zwar die Kontrolle ueber den Reaktor, entkommt aber im Chaos des zusammenbrechenden Towers.",
         "choices": [
-            { "text": "Überlebende retten", "next": "tt_48", "karma": 4 },
+            { "text": "ueberlebende retten", "next": "tt_48", "karma": 4 },
             { "text": "Brother Blood verfolgen", "next": "tt_49", "karma": -3 }
         ]
     },
 
     "tt_48": {
-        "text": "Robin blickt über Jump City. 'Das war kein normaler Angriff. Jemand testet uns.'",
+        "text": "Robin blickt ueber Jump City. 'Das war kein normaler Angriff. Jemand testet uns.'",
         "choices": [
             { "text": "Vorbereiten", "next": "tt_50" }
         ]
     },
 
     "tt_49": {
-        "text": "In den Ruinen des Hafens findest du nur noch Brother Bloods Maske und eine Nachricht: 'Die nächste Phase beginnt bald.'",
+        "text": "In den Ruinen des Hafens findest du nur noch Brother Bloods Maske und eine Nachricht: 'Die naechste Phase beginnt bald.'",
         "choices": [
-            { "text": "Zum Tower zurück", "next": "tt_50" }
+            { "text": "Zum Tower zurueck", "next": "tt_50" }
         ]
     },
 
     "tt_50": {
-        "text": "Über Jump City öffnet sich ein dunkler Riss am Himmel. Der Übergang zu Kapitel 3 beginnt.",
+        "text": "ueber Jump City oeffnet sich ein dunkler Riss am Himmel. Der uebergang zu Kapitel 3 beginnt.",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
     "c2_b10_start": {
-        "text": "Die Erde wirkt normal, doch der Omnitrix von Ben reagiert unkontrolliert. Aliens auf der ganzen Welt verändern ihre DNA zufällig. Max warnt, dass etwas die Codierung des Omnitrix selbst beeinflusst.",
+        "text": "Die Erde wirkt normal, doch der Omnitrix von Ben reagiert unkontrolliert. Aliens auf der ganzen Welt veraendern ihre DNA zufaellig. Max warnt, dass etwas die Codierung des Omnitrix selbst beeinflusst.",
         "choices": [
             { "text": "Ben kontaktieren", "next": "b10_1", "karma": 2 },
-            { "text": "Max zuhören", "next": "b10_2" },
-            { "text": "Außerhalb der Stadt untersuchen", "next": "b10_3" }
+            { "text": "Max zuhoeren", "next": "b10_2" },
+            { "text": "Ausserhalb der Stadt untersuchen", "next": "b10_3" }
         ]
     },
 
     "b10_1": {
-        "text": "Ben: 'Der Omnitrix spielt verrückt... ich kann die Formen nicht stabil halten.'",
+        "text": "Ben: 'Der Omnitrix spielt verrueckt... ich kann die Formen nicht stabil halten.'",
         "choices": [
             { "text": "Omnitrix scannen", "next": "b10_4", "gain_item": "omnitrix_scan_data" },
             { "text": "Ihn beruhigen", "next": "b10_5", "karma": 2 }
@@ -2034,7 +2044,7 @@ let gameData = {
     },
 
     "b10_2": {
-        "text": "Max vermutet, dass eine fremde Alien-Quelle den Omnitrix überschreibt.",
+        "text": "Max vermutet, dass eine fremde Alien-Quelle den Omnitrix ueberschreibt.",
         "choices": [
             { "text": "Quelle suchen", "next": "b10_3" },
             { "text": "Ignorieren", "next": "b10_6", "karma": -2 }
@@ -2058,7 +2068,7 @@ let gameData = {
     },
 
     "b10_5": {
-        "text": "Ben stabilisiert kurz den Omnitrix, aber er überhitzt weiter.",
+        "text": "Ben stabilisiert kurz den Omnitrix, aber er ueberhitzt weiter.",
         "choices": [
             { "text": "Weiter helfen", "next": "b10_8", "karma": 2 },
             { "text": "Abwarten", "next": "b10_6" }
@@ -2066,9 +2076,9 @@ let gameData = {
     },
 
     "b10_6": {
-        "text": "Plötzlich tauchen mutierte Wildmutt-Klone in der Stadt auf.",
+        "text": "Ploetzlich tauchen mutierte Wildmutt-Klone in der Stadt auf.",
         "choices": [
-            { "text": "Kämpfen", "next": "b10_9", "karma": 1 },
+            { "text": "Kaempfen", "next": "b10_9", "karma": 1 },
             { "text": "Zivilisten evakuieren", "next": "b10_10", "karma": 3 }
         ]
     },
@@ -2076,13 +2086,13 @@ let gameData = {
     "b10_7": {
         "text": "Azmuths Sicherheitsprotokoll aktiviert sich im Omnitrix.",
         "choices": [
-            { "text": "Protokoll entschlüsseln", "next": "b10_11" },
-            { "text": "Zurückziehen", "next": "b10_8", "karma": -1 }
+            { "text": "Protokoll entschluesseln", "next": "b10_11" },
+            { "text": "Zurueckziehen", "next": "b10_8", "karma": -1 }
         ]
     },
 
     "b10_8": {
-        "text": "Gwen spürt eine magische Störung im selben Frequenzbereich wie der Omnitrix.",
+        "text": "Gwen spuert eine magische Stoerung im selben Frequenzbereich wie der Omnitrix.",
         "choices": [
             { "text": "Mit Gwen verbinden", "next": "b10_11", "karma": 2 },
             { "text": "Alleine weiter", "next": "b10_10" }
@@ -2093,12 +2103,12 @@ let gameData = {
         "text": "Die Klone adaptieren fremde DNA und werden instabil.",
         "choices": [
             { "text": "DNA-Probe nehmen", "next": "b10_12", "gain_item": "unstable_dna_sample" },
-            { "text": "Zurückdrängen", "next": "b10_10" }
+            { "text": "Zurueckdraengen", "next": "b10_10" }
         ]
     },
 
     "b10_10": {
-        "text": "Die Stadt verliert temporär die Kontrolle über Alien-Transformationen.",
+        "text": "Die Stadt verliert temporaer die Kontrolle ueber Alien-Transformationen.",
         "choices": [
             { "text": "Max informieren", "next": "b10_11", "karma": 2 },
             { "text": "Direkt handeln", "next": "b10_13", "karma": -1 }
@@ -2106,7 +2116,7 @@ let gameData = {
     },
 
     "b10_11": {
-        "text": "Azmuth erscheint holografisch: 'Der Omnitrix wird von außen neu geschrieben.'",
+        "text": "Azmuth erscheint holografisch: 'Der Omnitrix wird von aussen neu geschrieben.'",
         "choices": [
             { "text": "Hilfe annehmen", "next": "b10_14", "karma": 2 },
             { "text": "Misstrauen", "next": "b10_13", "karma": -2 }
@@ -2129,7 +2139,7 @@ let gameData = {
     },
 
     "b10_14": {
-        "text": "Der Omnitrix öffnet kurz eine Verbindung zur Null-Void-Dimension.",
+        "text": "Der Omnitrix oeffnet kurz eine Verbindung zur Null-Void-Dimension.",
         "choices": [
             { "text": "Hineinscannen", "next": "b10_16" },
             { "text": "Abbrechen", "next": "b10_15" }
@@ -2161,7 +2171,7 @@ let gameData = {
     },
 
     "b10_18": {
-        "text": "Azmuth enthüllt: Eine fragmentierte Alien-Entität versucht den Omnitrix neu zu programmieren.",
+        "text": "Azmuth enthuellt: Eine fragmentierte Alien-Entitaet versucht den Omnitrix neu zu programmieren.",
         "choices": [
             { "text": "Stoppen", "next": "b10_20", "karma": 2 },
             { "text": "Studieren", "next": "b10_19" }
@@ -2169,7 +2179,7 @@ let gameData = {
     },
 
     "b10_19": {
-        "text": "Der Omnitrix beginnt alle gespeicherten DNA-Muster zu überschreiben.",
+        "text": "Der Omnitrix beginnt alle gespeicherten DNA-Muster zu ueberschreiben.",
         "choices": [
             { "text": "Notfall aktivieren", "next": "b10_20" }
         ]
@@ -2178,8 +2188,8 @@ let gameData = {
     "b10_20": {
         "text": "Ben entscheidet sich, die fragmentierte Alien-Quelle direkt im Null Void zu suchen.",
         "choices": [
-            { "text": "Portal öffnen", "next": "b10_21", "required_item": "dna_stability_sample" },
-            { "text": "Zögern", "next": "b10_19", "karma": -1 }
+            { "text": "Portal oeffnen", "next": "b10_21", "required_item": "dna_stability_sample" },
+            { "text": "Zoegern", "next": "b10_19", "karma": -1 }
         ]
     },
 
@@ -2192,41 +2202,41 @@ let gameData = {
     },
 
     "b10_22": {
-        "text": "Die Systeme stabilisieren sich kurzzeitig über alle Alien-DNA-Ketten.",
+        "text": "Die Systeme stabilisieren sich kurzzeitig ueber alle Alien-DNA-Ketten.",
         "choices": [
-            { "text": "Zurückkehren", "next": "b10_24" }
+            { "text": "Zurueckkehren", "next": "b10_24" }
         ]
     },
 
     "b10_23": {
-        "text": "Die fragmentierte Quelle verstärkt die Instabilität weiter.",
+        "text": "Die fragmentierte Quelle verstaerkt die Instabilitaet weiter.",
         "choices": [
-            { "text": "Zurückziehen", "next": "b10_24", "karma": -1 }
+            { "text": "Zurueckziehen", "next": "b10_24", "karma": -1 }
         ]
     },
 
     "b10_24": {
-        "text": "Azmuth: 'Der Omnitrix hat überlebt, aber etwas Neues ist entstanden.'",
+        "text": "Azmuth: 'Der Omnitrix hat ueberlebt, aber etwas Neues ist entstanden.'",
         "choices": [
             { "text": "Fortfahren", "next": "b10_25" }
         ]
     },
 
     "b10_25": {
-        "text": "Ben blickt auf den Omnitrix, der nun eine unbekannte zusätzliche Energie enthält.",
+        "text": "Ben blickt auf den Omnitrix, der nun eine unbekannte zusaetzliche Energie enthaelt.",
         "choices": [
-            { "text": "Kapitel abschließen", "next": "b10_26" }
+            { "text": "Kapitel abschliessen", "next": "b10_26" }
         ]
     },
 
     "b10_26": {
-        "text": "Die Verbindung zum Null Void schließt sich langsam. Eine neue Bedrohung bleibt ungelöst.",
+        "text": "Die Verbindung zum Null Void schliesst sich langsam. Eine neue Bedrohung bleibt ungeloest.",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
     "sj_01": {
-        "text": "Eine Stadt unter rotem Himmel. Menschen bewegen sich ohne Emotion. Jack erkennt: Ein Resonanz-Turm kontrolliert die Bevölkerung über Klangfrequenzen.",
+        "text": "Eine Stadt unter rotem Himmel. Menschen bewegen sich ohne Emotion. Jack erkennt: Ein Resonanz-Turm kontrolliert die Bevoelkerung ueber Klangfrequenzen.",
         "choices": [
             { "text": "Jack ansprechen", "next": "sj_02", "karma": 2 },
             { "text": "Stadt beobachten", "next": "sj_03" }
@@ -2234,7 +2244,7 @@ let gameData = {
     },
 
     "sj_02": {
-        "text": "Jack: 'Der Turm nutzt Frequenzen, um Emotionen zu unterdrücken und Energie zu sammeln.'",
+        "text": "Jack: 'Der Turm nutzt Frequenzen, um Emotionen zu unterdruecken und Energie zu sammeln.'",
         "choices": [
             { "text": "Analyse starten", "next": "sj_04" },
             { "text": "Jack begleiten", "next": "sj_05", "karma": 2 }
@@ -2242,7 +2252,7 @@ let gameData = {
     },
 
     "sj_03": {
-        "text": "Du siehst Bürger, die sich synchron bewegen wie Maschinen.",
+        "text": "Du siehst Buerger, die sich synchron bewegen wie Maschinen.",
         "choices": [
             { "text": "Signal scannen", "next": "sj_04", "gain_item": "frequency_echo" },
             { "text": "Wartungspunkte suchen", "next": "sj_06" }
@@ -2250,7 +2260,7 @@ let gameData = {
     },
 
     "sj_04": {
-        "text": "Die Frequenz enthält emotionale Fragmente der Bevölkerung.",
+        "text": "Die Frequenz enthaelt emotionale Fragmente der Bevoelkerung.",
         "choices": [
             { "text": "Speichern", "next": "sj_07", "gain_item": "emotion_residue" },
             { "text": "Jack informieren", "next": "sj_05", "karma": 2 }
@@ -2258,7 +2268,7 @@ let gameData = {
     },
 
     "sj_05": {
-        "text": "Jack erklärt: 'Der Turm verstärkt Kontrolle durch emotionale Rückkopplung.'",
+        "text": "Jack erklaert: 'Der Turm verstaerkt Kontrolle durch emotionale Rueckkopplung.'",
         "choices": [
             { "text": "Gegenfrequenz planen", "next": "sj_08" },
             { "text": "Untergrund nutzen", "next": "sj_06" }
@@ -2274,7 +2284,7 @@ let gameData = {
     },
 
     "sj_07": {
-        "text": "Die Daten zeigen unregelmäßige Energieausbrüche im Turm.",
+        "text": "Die Daten zeigen unregelmaessige Energieausbrueche im Turm.",
         "choices": [
             { "text": "Speichern", "next": "sj_08" },
             { "text": "Jack synchronisieren", "next": "sj_10", "karma": 2 }
@@ -2282,7 +2292,7 @@ let gameData = {
     },
 
     "sj_08": {
-        "text": "Eine Gegenfrequenz wird theoretisch möglich.",
+        "text": "Eine Gegenfrequenz wird theoretisch moeglich.",
         "choices": [
             { "text": "Aufbauen", "next": "sj_10" },
             { "text": "Abwarten", "next": "sj_09" }
@@ -2290,15 +2300,15 @@ let gameData = {
     },
 
     "sj_09": {
-        "text": "Die Wartungstunnel führen näher zum Resonanz-Turm.",
+        "text": "Die Wartungstunnel fuehren naeher zum Resonanz-Turm.",
         "choices": [
             { "text": "Weitergehen", "next": "sj_11" },
-            { "text": "Signal verstärken", "next": "sj_10", "gain_item": "signal_amplifier" }
+            { "text": "Signal verstaerken", "next": "sj_10", "gain_item": "signal_amplifier" }
         ]
     },
 
     "sj_10": {
-        "text": "Der Turm reagiert auf die verstärkten Signale.",
+        "text": "Der Turm reagiert auf die verstaerkten Signale.",
         "choices": [
             { "text": "Drohnen abwehren", "next": "sj_12" },
             { "text": "Verbergen", "next": "sj_11" }
@@ -2306,7 +2316,7 @@ let gameData = {
     },
 
     "sj_11": {
-        "text": "Du näherst dich dem zentralen Kontrollbereich.",
+        "text": "Du naeherst dich dem zentralen Kontrollbereich.",
         "choices": [
             { "text": "Hacken versuchen", "next": "sj_13", "gain_item": "drone_interface" },
             { "text": "Jack rufen", "next": "sj_12", "karma": 1 }
@@ -2314,10 +2324,10 @@ let gameData = {
     },
 
     "sj_12": {
-        "text": "Drohnen patrouillieren durch die Straßen.",
+        "text": "Drohnen patrouillieren durch die Strassen.",
         "choices": [
             { "text": "Ablenkung erzeugen", "next": "sj_14" },
-            { "text": "Kämpfen", "next": "sj_13", "karma": -2 }
+            { "text": "Kaempfen", "next": "sj_13", "karma": -2 }
         ]
     },
 
@@ -2338,7 +2348,7 @@ let gameData = {
     },
 
     "sj_15": {
-        "text": "Das System beginnt zu überlasten.",
+        "text": "Das System beginnt zu ueberlasten.",
         "choices": [
             { "text": "Gegenfrequenz starten", "next": "sj_17" },
             { "text": "Fliehen", "next": "sj_16", "karma": -2 }
@@ -2346,10 +2356,10 @@ let gameData = {
     },
 
     "sj_16": {
-        "text": "Der Turm verstärkt seine Kontrolle.",
+        "text": "Der Turm verstaerkt seine Kontrolle.",
         "choices": [
             { "text": "Neu ansetzen", "next": "sj_17" },
-            { "text": "Jack unterstützen", "next": "sj_18", "karma": 2 }
+            { "text": "Jack unterstuetzen", "next": "sj_18", "karma": 2 }
         ]
     },
 
@@ -2357,15 +2367,15 @@ let gameData = {
         "text": "Die Gegenfrequenz beginnt zu wirken.",
         "choices": [
             { "text": "Stabilisieren", "next": "sj_18" },
-            { "text": "Überladen", "next": "sj_19", "karma": -1 }
+            { "text": "ueberladen", "next": "sj_19", "karma": -1 }
         ]
     },
 
     "sj_18": {
-        "text": "Die Bürger zeigen erste echte Emotionen.",
+        "text": "Die Buerger zeigen erste echte Emotionen.",
         "choices": [
             { "text": "Weiter stabilisieren", "next": "sj_20" },
-            { "text": "System prüfen", "next": "sj_19" }
+            { "text": "System pruefen", "next": "sj_19" }
         ]
     },
 
@@ -2378,15 +2388,15 @@ let gameData = {
     },
 
     "sj_20": {
-        "text": "Jack kämpft im Zentrum des Turms.",
+        "text": "Jack kaempft im Zentrum des Turms.",
         "choices": [
-            { "text": "Unterstützen", "next": "sj_22", "karma": 2 },
+            { "text": "Unterstuetzen", "next": "sj_22", "karma": 2 },
             { "text": "Struktur analysieren", "next": "sj_21" }
         ]
     },
 
     "sj_21": {
-        "text": "Der Turm verliert Stabilität.",
+        "text": "Der Turm verliert Stabilitaet.",
         "choices": [
             { "text": "Finale Phase", "next": "sj_23" },
             { "text": "Daten sichern", "next": "sj_22", "gain_item": "core_fragment" }
@@ -2397,14 +2407,14 @@ let gameData = {
         "text": "Die Struktur bricht weiter zusammen.",
         "choices": [
             { "text": "Stabilisieren", "next": "sj_23" },
-            { "text": "Zurückziehen", "next": "sj_24" }
+            { "text": "Zurueckziehen", "next": "sj_24" }
         ]
     },
 
     "sj_23": {
-        "text": "Der Turm verliert Kontrolle über die Stadt.",
+        "text": "Der Turm verliert Kontrolle ueber die Stadt.",
         "choices": [
-            { "text": "Überprüfen", "next": "sj_25" },
+            { "text": "ueberpruefen", "next": "sj_25" },
             { "text": "Jack folgen", "next": "sj_24", "karma": 1 }
         ]
     },
@@ -2428,7 +2438,7 @@ let gameData = {
     "sj_26": {
         "text": "Keine aktiven Signale mehr erkannt.",
         "choices": [
-            { "text": "Bestätigen", "next": "sj_27" },
+            { "text": "Bestaetigen", "next": "sj_27" },
             { "text": "Jack informieren", "next": "sj_28", "karma": 1 }
         ]
     },
@@ -2442,9 +2452,9 @@ let gameData = {
     },
 
     "sj_28": {
-        "text": "Jack bestätigt: 'Die Kontrolle ist gebrochen.'",
+        "text": "Jack bestaetigt: 'Die Kontrolle ist gebrochen.'",
         "choices": [
-            { "text": "Weiter prüfen", "next": "sj_29" },
+            { "text": "Weiter pruefen", "next": "sj_29" },
             { "text": "Abschluss", "next": "sj_30" }
         ]
     },
@@ -2452,12 +2462,12 @@ let gameData = {
     "sj_29": {
         "text": "Die Stadt ist stabil.",
         "choices": [
-            { "text": "Letzte Bestätigung", "next": "sj_30" },
+            { "text": "Letzte Bestaetigung", "next": "sj_30" },
             { "text": "Ruinen verlassen", "next": "sj_31" }
         ]
     },
     "sj_30": {
-        "text": "Die letzten Resonanzwellen sterben im Stahl der Stadt. Kein künstlicher Klang mehr, nur Wind zwischen den Gebäuden.",
+        "text": "Die letzten Resonanzwellen sterben im Stahl der Stadt. Kein kuenstlicher Klang mehr, nur Wind zwischen den Gebaeuden.",
         "choices": [
             { "text": "Ruinen betreten", "next": "sj_31" },
             { "text": "Auf Jack warten", "next": "sj_32", "karma": 1 }
@@ -2465,7 +2475,7 @@ let gameData = {
     },
 
     "sj_31": {
-        "text": "In den Trümmern des Turms findest du Räume voller stiller Verstärker, jetzt nutzlos und kalt.",
+        "text": "In den Truemmern des Turms findest du Raeume voller stiller Verstaerker, jetzt nutzlos und kalt.",
         "choices": [
             { "text": "Kernfragmente sichern", "next": "sj_33", "gain_item": "core_fragment" },
             { "text": "Alles verlassen", "next": "sj_32" }
@@ -2475,7 +2485,7 @@ let gameData = {
     "sj_32": {
         "text": "Jack steht auf einem zerbrochenen Plattformrest. Die Stadt ist ruhig geworden.",
         "choices": [
-            { "text": "Jack zuhören", "next": "sj_34" },
+            { "text": "Jack zuhoeren", "next": "sj_34" },
             { "text": "Stadt beobachten", "next": "sj_33" }
         ]
     },
@@ -2483,7 +2493,7 @@ let gameData = {
     "sj_33": {
         "text": "Zum ersten Mal bewegen sich die Menschen nicht synchron. Unsicher, aber frei.",
         "choices": [
-            { "text": "Stabilität prüfen", "next": "sj_34" },
+            { "text": "Stabilitaet pruefen", "next": "sj_34" },
             { "text": "Einwohner helfen", "next": "sj_35", "karma": 2 }
         ]
     },
@@ -2508,7 +2518,7 @@ let gameData = {
         "text": "Die Stadt beginnt sich selbst zu regulieren, ohne externe Frequenz.",
         "choices": [
             { "text": "Jack folgen", "next": "sj_37" },
-            { "text": "Letzten Blick zurück", "next": "sj_37", "karma": 1 }
+            { "text": "Letzten Blick zurueck", "next": "sj_37", "karma": 1 }
         ]
     },
 
@@ -2516,7 +2526,7 @@ let gameData = {
         "text": "Jack wendet sich ab. 'Die Ordnung ist wieder in Bewegung.'",
         "choices": [
             { "text": "Mit Jack gehen", "next": "sj_38" },
-            { "text": "Andere Richtung wählen", "next": "sj_38" }
+            { "text": "Andere Richtung waehlen", "next": "sj_38" }
         ]
     },
 
@@ -2528,14 +2538,14 @@ let gameData = {
     },
 
     "sj_39": {
-        "text": "Der Resonanz-Turm ist endgültig verstummt. Die Stadt lebt wieder in echter, unberechenbarer Freiheit — mit all ihrer Unvollkommenheit.",
+        "text": "Der Resonanz-Turm ist endgueltig verstummt. Die Stadt lebt wieder in echter, unberechenbarer Freiheit — mit all ihrer Unvollkommenheit.",
         "choices": [
-            { "text": "Final bestätigen", "next": "sj_40" }
+            { "text": "Final bestaetigen", "next": "sj_40" }
         ]
     },
 
     "sj_40": {
-        "text": "Die Stadt ist frei von der Resonanz-Kontrolle. Jack verabschiedet sich still und setzt seine Reise fort. Das System ist zerstört — und die Menschen sind endlich wieder sie selbst.",
+        "text": "Die Stadt ist frei von der Resonanz-Kontrolle. Jack verabschiedet sich still und setzt seine Reise fort. Das System ist zerstoert — und die Menschen sind endlich wieder sie selbst.",
         "choices": [
             { "text": "Weiterziehen", "next": "c3_start" }
         ]
@@ -4044,7 +4054,7 @@ let gameData = {
         ]
     },
     "c4_atla_start": {
-        "text": "Der Himmel über der Erdkönigreich-Grenze ist dunkel. Eine Feuer-Navy-Flotte blockiert den Zugang zum Norden. Aang, Katara und Sokka beraten sich hastig während Appa nervös im Schnee stampft.",
+        "text": "Der Himmel ueber der Erdkoenigreich-Grenze ist dunkel. Eine Feuer-Navy-Flotte blockiert den Zugang zum Norden. Aang, Katara und Sokka beraten sich hastig waehrend Appa nervoes im Schnee stampft.",
         "choices": [
             { "text": "Aang folgen", "next": "atla_1" },
             { "text": "Katara folgen", "next": "atla_2", "karma": 1 },
@@ -4054,7 +4064,7 @@ let gameData = {
     },
 
     "atla_1": {
-        "text": "Aang: 'Wir müssen einen Weg durch die Blockade finden, ohne Gewalt wenn möglich.'",
+        "text": "Aang: 'Wir muessen einen Weg durch die Blockade finden, ohne Gewalt wenn moeglich.'",
         "choices": [
             { "text": "Alternative Route suchen", "next": "atla_5" },
             { "text": "Direkt durchbrechen", "next": "atla_6", "karma": -2 }
@@ -4062,9 +4072,9 @@ let gameData = {
     },
 
     "atla_2": {
-        "text": "Katara konzentriert sich auf das Eis unter euch. 'Das Wasser hier erzählt Geschichten… etwas stimmt nicht.'",
+        "text": "Katara konzentriert sich auf das Eis unter euch. 'Das Wasser hier erzaehlt Geschichten… etwas stimmt nicht.'",
         "choices": [
-            { "text": "Wasserbändigen untersuchen", "next": "atla_7", "gain_item": "water_memory" },
+            { "text": "Wasserbaendigen untersuchen", "next": "atla_7", "gain_item": "water_memory" },
             { "text": "Ignorieren und weitergehen", "next": "atla_6" }
         ]
     },
@@ -4078,7 +4088,7 @@ let gameData = {
     },
 
     "atla_4": {
-        "text": "Die Feuer-Navy reagiert sofort auf deine Bewegung. Ein Kommandant lässt die Suche verstärken.",
+        "text": "Die Feuer-Navy reagiert sofort auf deine Bewegung. Ein Kommandant laesst die Suche verstaerken.",
         "choices": [
             { "text": "Verstecken", "next": "atla_8" },
             { "text": "Beobachten bleiben", "next": "atla_6", "karma": -1 }
@@ -4086,15 +4096,15 @@ let gameData = {
     },
 
     "atla_5": {
-        "text": "Ihr erreicht eine alte, gefrorene Höhle mit seltsamen Wasserstrukturen im Eis.",
+        "text": "Ihr erreicht eine alte, gefrorene Hoehle mit seltsamen Wasserstrukturen im Eis.",
         "choices": [
-            { "text": "Höhle betreten", "next": "atla_9" },
-            { "text": "Weiter außen umgehen", "next": "atla_8" }
+            { "text": "Hoehle betreten", "next": "atla_9" },
+            { "text": "Weiter aussen umgehen", "next": "atla_8" }
         ]
     },
 
     "atla_6": {
-        "text": "Die Feuer-Navy beginnt das Gebiet systematisch zu durchkämmen.",
+        "text": "Die Feuer-Navy beginnt das Gebiet systematisch zu durchkaemmen.",
         "choices": [
             { "text": "Flucht planen", "next": "atla_8" },
             { "text": "Konfrontation vorbereiten", "next": "atla_10", "karma": 2 }
@@ -4102,7 +4112,7 @@ let gameData = {
     },
 
     "atla_7": {
-        "text": "Das Wasser zeigt Visionen vergangener Wasserbändiger, die eine Warnung hinterlassen.",
+        "text": "Das Wasser zeigt Visionen vergangener Wasserbaendiger, die eine Warnung hinterlassen.",
         "choices": [
             { "text": "Vision analysieren", "next": "atla_9", "gain_item": "spirit_trace" },
             { "text": "Abbrechen", "next": "atla_8" }
@@ -4126,7 +4136,7 @@ let gameData = {
     },
 
     "atla_10": {
-        "text": "Die Flotte rückt näher. Die Lage wird instabil.",
+        "text": "Die Flotte rueckt naeher. Die Lage wird instabil.",
         "choices": [
             { "text": "Flucht Richtung Norden", "next": "atla_13" },
             { "text": "Ablenkung erzeugen", "next": "atla_14", "karma": 1 }
@@ -4134,7 +4144,7 @@ let gameData = {
     },
 
     "atla_11": {
-        "text": "Zuko hinterlässt Hinweise auf eine interne Feuer-Navy-Spaltung.",
+        "text": "Zuko hinterlaesst Hinweise auf eine interne Feuer-Navy-Spaltung.",
         "choices": [
             { "text": "Kontakt aufnehmen", "next": "atla_15" },
             { "text": "Beobachten", "next": "atla_13" }
@@ -4142,14 +4152,14 @@ let gameData = {
     },
 
     "atla_12": {
-        "text": "Der Wassergeist gewährt euch sicheren Durchgang, aber beobachtet euch weiter.",
+        "text": "Der Wassergeist gewaehrt euch sicheren Durchgang, aber beobachtet euch weiter.",
         "choices": [
             { "text": "Durchgehen", "next": "atla_13", "karma": 2 }
         ]
     },
 
     "atla_13": {
-        "text": "Ihr erreicht einen verlassenen Südpol-Vorposten.",
+        "text": "Ihr erreicht einen verlassenen Suedpol-Vorposten.",
         "choices": [
             { "text": "Ressourcen sammeln", "next": "atla_16", "gain_item": "supplies" },
             { "text": "Weiterziehen", "next": "atla_15" }
@@ -4157,14 +4167,14 @@ let gameData = {
     },
 
     "atla_14": {
-        "text": "Die Feuer-Navy gerät kurz ins Chaos durch eine falsche Spur.",
+        "text": "Die Feuer-Navy geraet kurz ins Chaos durch eine falsche Spur.",
         "choices": [
             { "text": "Flucht nutzen", "next": "atla_13", "karma": 1 }
         ]
     },
 
     "atla_15": {
-        "text": "Toph taucht plötzlich auf. 'Ihr seid laut. Sehr laut.'",
+        "text": "Toph taucht ploetzlich auf. 'Ihr seid laut. Sehr laut.'",
         "choices": [
             { "text": "Hilfe annehmen", "next": "atla_17", "karma": 2 },
             { "text": "Misstrauen", "next": "atla_16" }
@@ -4180,14 +4190,14 @@ let gameData = {
     },
 
     "atla_17": {
-        "text": "Toph öffnet einen unterirdischen Tunnelweg.",
+        "text": "Toph oeffnet einen unterirdischen Tunnelweg.",
         "choices": [
             { "text": "Folgen", "next": "atla_19" }
         ]
     },
 
     "atla_18": {
-        "text": "Die Flucht führt euch tiefer in das Eis.",
+        "text": "Die Flucht fuehrt euch tiefer in das Eis.",
         "choices": [
             { "text": "Weiter", "next": "atla_19" }
         ]
@@ -4209,14 +4219,14 @@ let gameData = {
     },
 
     "atla_21": {
-        "text": "Die Feuer-Navy nähert sich erneut.",
+        "text": "Die Feuer-Navy naehert sich erneut.",
         "choices": [
             { "text": "Flucht fortsetzen", "next": "atla_22" }
         ]
     },
 
     "atla_22": {
-        "text": "Aang spürt eine große Störung im Gleichgewicht der Welt.",
+        "text": "Aang spuert eine grosse Stoerung im Gleichgewicht der Welt.",
         "choices": [
             { "text": "Zustimmen", "next": "atla_23", "karma": 2 },
             { "text": "Zweifeln", "next": "atla_23", "karma": -2 }
@@ -4242,15 +4252,15 @@ let gameData = {
     "atla_25": {
         "text": "Der Kampf destabilisiert das Gebiet stark.",
         "choices": [
-            { "text": "Weiter kämpfen", "next": "atla_27" },
-            { "text": "Rückzug", "next": "atla_26" }
+            { "text": "Weiter kaempfen", "next": "atla_27" },
+            { "text": "Rueckzug", "next": "atla_26" }
         ]
     },
 
     "atla_26": {
         "text": "Gemeinsam erreicht ihr eine spirituelle Nexus-Spalte im Eis.",
         "choices": [
-            { "text": "Nähern", "next": "atla_28" }
+            { "text": "Naehern", "next": "atla_28" }
         ]
     },
 
@@ -4270,20 +4280,20 @@ let gameData = {
     },
 
     "atla_29": {
-        "text": "Die Realität stabilisiert sich kurzzeitig.",
+        "text": "Die Realitaet stabilisiert sich kurzzeitig.",
         "choices": [
             { "text": "Weitergehen", "next": "atla_30" }
         ]
     },
 
     "atla_30": {
-        "text": "Der Nexus öffnet einen Übergang. Die Welt bereitet sich auf das letzte Kapitel vor.",
+        "text": "Der Nexus oeffnet einen uebergang. Die Welt bereitet sich auf das letzte Kapitel vor.",
         "choices": [
             { "text": "Kapitel 5 starten", "next": "c5_start" }
         ]
     },
     "c4_pm_start": {
-        "text": "Mitten in der Nacht fällt im Zoo plötzlich der Strom aus. Sirenen heulen kurz auf, bevor alles still wird. Skipper steht bereits auf dem Dach des Hauptgebäudes und beobachtet den Hafen mit einem Fernglas.",
+        "text": "Mitten in der Nacht faellt im Zoo ploetzlich der Strom aus. Sirenen heulen kurz auf, bevor alles still wird. Skipper steht bereits auf dem Dach des Hauptgebaeudes und beobachtet den Hafen mit einem Fernglas.",
         "choices": [
             { "text": "Skipper folgen", "next": "pm_1" },
             { "text": "Kowalski im Labor suchen", "next": "pm_2" },
@@ -4293,15 +4303,15 @@ let gameData = {
     },
 
     "pm_1": {
-        "text": "Skipper: 'Jemand hat die Sicherheitskameras deaktiviert. Das passiert nicht zufällig.'",
+        "text": "Skipper: 'Jemand hat die Sicherheitskameras deaktiviert. Das passiert nicht zufaellig.'",
         "choices": [
             { "text": "Den Hafen beobachten", "next": "pm_5" },
-            { "text": "Die Kanalisation prüfen", "next": "pm_6" }
+            { "text": "Die Kanalisation pruefen", "next": "pm_6" }
         ]
     },
 
     "pm_2": {
-        "text": "Kowalski analysiert beschädigte Datenchips. 'Interessant. Sehr interessant. Und potenziell katastrophal.'",
+        "text": "Kowalski analysiert beschaedigte Datenchips. 'Interessant. Sehr interessant. Und potenziell katastrophal.'",
         "choices": [
             { "text": "Bei der Analyse helfen", "next": "pm_7", "gain_item": "security_chip" },
             { "text": "Skipper informieren", "next": "pm_5" }
@@ -4309,10 +4319,10 @@ let gameData = {
     },
 
     "pm_3": {
-        "text": "Du findest beschädigte Leitungen hinter dem Aquarium. Frische Werkzeugspuren sind sichtbar.",
+        "text": "Du findest beschaedigte Leitungen hinter dem Aquarium. Frische Werkzeugspuren sind sichtbar.",
         "choices": [
             { "text": "Weiter untersuchen", "next": "pm_8" },
-            { "text": "Zurückmelden", "next": "pm_5" }
+            { "text": "Zurueckmelden", "next": "pm_5" }
         ]
     },
 
@@ -4320,7 +4330,7 @@ let gameData = {
         "text": "Private versucht panische Tiere zu beruhigen. Einige glauben bereits an einen Angriff.",
         "choices": [
             { "text": "Mithelfen", "next": "pm_9", "karma": 3 },
-            { "text": "Die Gerüchte ignorieren", "next": "pm_5", "karma": -1 }
+            { "text": "Die Geruechte ignorieren", "next": "pm_5", "karma": -1 }
         ]
     },
 
@@ -4335,21 +4345,21 @@ let gameData = {
     "pm_6": {
         "text": "In der Kanalisation entdeckt Rico mehrere Kisten mit Fischsymbolen.",
         "choices": [
-            { "text": "Kisten öffnen", "next": "pm_12", "gain_item": "frozen_herring" },
-            { "text": "Unberührt lassen", "next": "pm_11" }
+            { "text": "Kisten oeffnen", "next": "pm_12", "gain_item": "frozen_herring" },
+            { "text": "Unberuehrt lassen", "next": "pm_11" }
         ]
     },
 
     "pm_7": {
-        "text": "Kowalski entdeckt verschlüsselte Nachrichten mit Verbindungen zu Dr. Blowhole.",
+        "text": "Kowalski entdeckt verschluesselte Nachrichten mit Verbindungen zu Dr. Blowhole.",
         "choices": [
-            { "text": "Nachrichten entschlüsseln", "next": "pm_13" },
+            { "text": "Nachrichten entschluesseln", "next": "pm_13" },
             { "text": "Sofort handeln", "next": "pm_10", "karma": -1 }
         ]
     },
 
     "pm_8": {
-        "text": "Ein versteckter Tunnel führt direkt unter den Zoo.",
+        "text": "Ein versteckter Tunnel fuehrt direkt unter den Zoo.",
         "choices": [
             { "text": "Tunnel betreten", "next": "pm_14" },
             { "text": "Skipper holen", "next": "pm_11", "karma": 1 }
@@ -4357,7 +4367,7 @@ let gameData = {
     },
 
     "pm_9": {
-        "text": "Mort behauptet plötzlich, er habe einen Delfin im Zoo gesehen.",
+        "text": "Mort behauptet ploetzlich, er habe einen Delfin im Zoo gesehen.",
         "choices": [
             { "text": "Mort glauben", "next": "pm_14" },
             { "text": "Ignorieren", "next": "pm_11", "karma": -2 }
@@ -4365,17 +4375,17 @@ let gameData = {
     },
 
     "pm_10": {
-        "text": "An Bord des Schiffes fehlen sämtliche Besatzungsmitglieder.",
+        "text": "An Bord des Schiffes fehlen saemtliche Besatzungsmitglieder.",
         "choices": [
             { "text": "Frachter durchsuchen", "next": "pm_15" },
-            { "text": "Maschinenraum prüfen", "next": "pm_16" }
+            { "text": "Maschinenraum pruefen", "next": "pm_16" }
         ]
     },
 
     "pm_11": {
-        "text": "Skipper wird zunehmend misstrauisch. 'Zu ruhig. Das gefällt mir nicht.'",
+        "text": "Skipper wird zunehmend misstrauisch. 'Zu ruhig. Das gefaellt mir nicht.'",
         "choices": [
-            { "text": "Wachen verstärken", "next": "pm_17", "karma": 2 },
+            { "text": "Wachen verstaerken", "next": "pm_17", "karma": 2 },
             { "text": "Direkt weitersuchen", "next": "pm_15" }
         ]
     },
@@ -4384,7 +4394,7 @@ let gameData = {
         "text": "Die Kisten enthalten gefrorene Heringe mit versteckten Sendern.",
         "choices": [
             { "text": "Sender analysieren", "next": "pm_13", "gain_item": "tracking_beacon" },
-            { "text": "Zerstören", "next": "pm_17", "karma": -1 }
+            { "text": "Zerstoeren", "next": "pm_17", "karma": -1 }
         ]
     },
 
@@ -4397,7 +4407,7 @@ let gameData = {
     },
 
     "pm_14": {
-        "text": "Im Tunnel hörst du metallische Geräusche und entfernte Delfinlaute.",
+        "text": "Im Tunnel hoerst du metallische Geraeusche und entfernte Delfinlaute.",
         "choices": [
             { "text": "Leise weitergehen", "next": "pm_18" },
             { "text": "Angriff vorbereiten", "next": "pm_19", "karma": -2 }
@@ -4405,7 +4415,7 @@ let gameData = {
     },
 
     "pm_15": {
-        "text": "Private entdeckt persönliche Gegenstände der verschwundenen Crew.",
+        "text": "Private entdeckt persoenliche Gegenstaende der verschwundenen Crew.",
         "choices": [
             { "text": "Hinweise sammeln", "next": "pm_20", "gain_item": "captain_log" },
             { "text": "Weiter ignorieren", "next": "pm_16", "karma": -1 }
@@ -4421,7 +4431,7 @@ let gameData = {
     },
 
     "pm_17": {
-        "text": "Mehrere Seehunde verlassen plötzlich panisch das Wassergehege.",
+        "text": "Mehrere Seehunde verlassen ploetzlich panisch das Wassergehege.",
         "choices": [
             { "text": "Untersuchen", "next": "pm_18" },
             { "text": "Ignorieren", "next": "pm_21", "karma": -2 }
@@ -4429,7 +4439,7 @@ let gameData = {
     },
 
     "pm_18": {
-        "text": "Dr. Blowhole erscheint auf einem Bildschirm. 'Wie schön euch wiederzusehen, Pinguine.'",
+        "text": "Dr. Blowhole erscheint auf einem Bildschirm. 'Wie schoen euch wiederzusehen, Pinguine.'",
         "choices": [
             { "text": "Mit ihm reden", "next": "pm_22" },
             { "text": "Signal orten", "next": "pm_23" }
@@ -4437,7 +4447,7 @@ let gameData = {
     },
 
     "pm_19": {
-        "text": "Der Angriff löst einen Alarm im gesamten Zoo aus.",
+        "text": "Der Angriff loest einen Alarm im gesamten Zoo aus.",
         "choices": [
             { "text": "Flucht", "next": "pm_21", "karma": -3 },
             { "text": "Weitermachen", "next": "pm_23" }
@@ -4445,7 +4455,7 @@ let gameData = {
     },
 
     "pm_20": {
-        "text": "Das Captain-Log erwähnt geheime Lieferungen ans Aquarium.",
+        "text": "Das Captain-Log erwaehnt geheime Lieferungen ans Aquarium.",
         "choices": [
             { "text": "Aquarium aufsuchen", "next": "pm_24" },
             { "text": "Skipper warnen", "next": "pm_22", "karma": 1 }
@@ -4453,7 +4463,7 @@ let gameData = {
     },
 
     "pm_21": {
-        "text": "Die Kontrolle über den Zoo beginnt zu kollabieren.",
+        "text": "Die Kontrolle ueber den Zoo beginnt zu kollabieren.",
         "choices": [
             { "text": "Tiere evakuieren", "next": "pm_24", "karma": 3 },
             { "text": "Nur Dr. Blowhole verfolgen", "next": "pm_23", "karma": -2 }
@@ -4471,7 +4481,7 @@ let gameData = {
     "pm_23": {
         "text": "Rico entdeckt Sprengladungen unter dem Aquarium.",
         "choices": [
-            { "text": "Entschärfen", "next": "pm_26", "required_item": "security_chip" },
+            { "text": "Entschaerfen", "next": "pm_26", "required_item": "security_chip" },
             { "text": "Ignorieren", "next": "pm_27", "karma": -3 }
         ]
     },
@@ -4487,7 +4497,7 @@ let gameData = {
     "pm_25": {
         "text": "Ein unbekannter Agent funkt heimlich mit Blowhole.",
         "choices": [
-            { "text": "Signal abhören", "next": "pm_28", "required_item": "tracking_beacon" },
+            { "text": "Signal abhoeren", "next": "pm_28", "required_item": "tracking_beacon" },
             { "text": "Direkt eingreifen", "next": "pm_27", "karma": -1 }
         ]
     },
@@ -4496,12 +4506,12 @@ let gameData = {
         "text": "Die Sprengladungen werden deaktiviert, aber der Zoo bleibt instabil.",
         "choices": [
             { "text": "Weiter suchen", "next": "pm_28" },
-            { "text": "Evakuierung abschließen", "next": "pm_29", "karma": 2 }
+            { "text": "Evakuierung abschliessen", "next": "pm_29", "karma": 2 }
         ]
     },
 
     "pm_27": {
-        "text": "Explosionen erschüttern Teile des Hafens.",
+        "text": "Explosionen erschuettern Teile des Hafens.",
         "choices": [
             { "text": "Rettung organisieren", "next": "pm_29", "karma": 3 },
             { "text": "Blowhole verfolgen", "next": "pm_28", "karma": -2 }
@@ -4509,7 +4519,7 @@ let gameData = {
     },
 
     "pm_28": {
-        "text": "Der wahre Drahtzieher entpuppt sich als eine Gruppe abtrünniger Robben.",
+        "text": "Der wahre Drahtzieher entpuppt sich als eine Gruppe abtruenniger Robben.",
         "choices": [
             { "text": "Verhandeln", "next": "pm_30", "karma": 2 },
             { "text": "Angreifen", "next": "pm_29", "karma": -2 }
@@ -4517,20 +4527,20 @@ let gameData = {
     },
 
     "pm_29": {
-        "text": "Der Zoo bleibt beschädigt zurück, aber die Gefahr ist vorerst vorbei.",
+        "text": "Der Zoo bleibt beschaedigt zurueck, aber die Gefahr ist vorerst vorbei.",
         "choices": [
             { "text": "Skipper folgen", "next": "pm_30" }
         ]
     },
 
     "pm_30": {
-        "text": "Skipper blickt über den Hafen. 'Jungs... das war erst Runde eins.'",
+        "text": "Skipper blickt ueber den Hafen. 'Jungs... das war erst Runde eins.'",
         "choices": [
             { "text": "Kapitel 5 starten", "next": "c5_start" }
         ]
     },
     "c4_rm_start": {
-        "text": "Du stolperst durch ein grünes Portal direkt in Rick Sanchez' Garage. Überall liegen halbfertige Geräte, Alien-Batterien und leuchtende Flüssigkeiten. Morty drückt panisch auf einem Controller, während Rick unter einem rauchenden Reaktor verschwindet.",
+        "text": "Du stolperst durch ein gruenes Portal direkt in Rick Sanchez' Garage. ueberall liegen halbfertige Geraete, Alien-Batterien und leuchtende Fluessigkeiten. Morty drueckt panisch auf einem Controller, waehrend Rick unter einem rauchenden Reaktor verschwindet.",
         "choices": [
             { "text": "Rick helfen", "next": "rm_1" },
             { "text": "Morty beruhigen", "next": "rm_2", "karma": 2 },
@@ -4540,7 +4550,7 @@ let gameData = {
     },
 
     "rm_1": {
-        "text": "Rick zieht ein verkohltes Kabel aus dem Reaktor. 'Großartig. Irgendein Idiot hat die Raum-Zeit-Batterie falsch synchronisiert.'",
+        "text": "Rick zieht ein verkohltes Kabel aus dem Reaktor. 'Grossartig. Irgendein Idiot hat die Raum-Zeit-Batterie falsch synchronisiert.'",
         "choices": [
             { "text": "Beim Reparieren helfen", "next": "rm_5", "gain_item": "phase_tool" },
             { "text": "Nachfragen was passiert ist", "next": "rm_6" }
@@ -4556,15 +4566,15 @@ let gameData = {
     },
 
     "rm_3": {
-        "text": "Die Portal-Gun reagiert plötzlich auf deine Berührung und öffnet mehrere instabile Mini-Portale.",
+        "text": "Die Portal-Gun reagiert ploetzlich auf deine Beruehrung und oeffnet mehrere instabile Mini-Portale.",
         "choices": [
-            { "text": "Portale schließen", "next": "rm_7", "karma": 2 },
+            { "text": "Portale schliessen", "next": "rm_7", "karma": 2 },
             { "text": "Ein Portal betreten", "next": "rm_8", "karma": -3 }
         ]
     },
 
     "rm_4": {
-        "text": "Zwischen Schrott findest du ein halb verstecktes Gerät mit der Aufschrift 'Do Not Touch'.",
+        "text": "Zwischen Schrott findest du ein halb verstecktes Geraet mit der Aufschrift 'Do Not Touch'.",
         "choices": [
             { "text": "Aktivieren", "next": "rm_8" },
             { "text": "Rick zeigen", "next": "rm_5", "karma": 1 }
@@ -4572,10 +4582,10 @@ let gameData = {
     },
 
     "rm_5": {
-        "text": "Rick scannt das Gerät kurz. 'Okay… das sollte definitiv nicht hier sein.'",
+        "text": "Rick scannt das Geraet kurz. 'Okay… das sollte definitiv nicht hier sein.'",
         "choices": [
             { "text": "Fragen woher es kommt", "next": "rm_9" },
-            { "text": "Direkt zerstören", "next": "rm_10", "karma": -1 }
+            { "text": "Direkt zerstoeren", "next": "rm_10", "karma": -1 }
         ]
     },
 
@@ -4588,7 +4598,7 @@ let gameData = {
     },
 
     "rm_7": {
-        "text": "Die Mini-Portale kollabieren, aber eines zeigt kurz eine zerstörte Version der Erde.",
+        "text": "Die Mini-Portale kollabieren, aber eines zeigt kurz eine zerstoerte Version der Erde.",
         "choices": [
             { "text": "Beobachten", "next": "rm_11" },
             { "text": "Verbindung abbrechen", "next": "rm_9" }
@@ -4596,15 +4606,15 @@ let gameData = {
     },
 
     "rm_8": {
-        "text": "Du landest in einer chaotischen Alien-Markthalle voller bewaffneter Händler.",
+        "text": "Du landest in einer chaotischen Alien-Markthalle voller bewaffneter Haendler.",
         "choices": [
-            { "text": "Unauffällig bleiben", "next": "rm_12" },
+            { "text": "Unauffaellig bleiben", "next": "rm_12" },
             { "text": "Technologie stehlen", "next": "rm_13", "gain_item": "quantum_chip", "karma": -2 }
         ]
     },
 
     "rm_9": {
-        "text": "Rick öffnet ein verstecktes Labor unter der Garage.",
+        "text": "Rick oeffnet ein verstecktes Labor unter der Garage.",
         "choices": [
             { "text": "Folgen", "next": "rm_14" },
             { "text": "Oben bleiben", "next": "rm_11" }
@@ -4612,7 +4622,7 @@ let gameData = {
     },
 
     "rm_10": {
-        "text": "Die Explosion beschädigt mehrere Dimension-Tracker.",
+        "text": "Die Explosion beschaedigt mehrere Dimension-Tracker.",
         "choices": [
             { "text": "Reparieren helfen", "next": "rm_14" },
             { "text": "Schuld vertuschen", "next": "rm_13", "karma": -3 }
@@ -4620,7 +4630,7 @@ let gameData = {
     },
 
     "rm_11": {
-        "text": "Die Warnung zeigt ein unbekanntes Signal außerhalb der Zentralen Kurve.",
+        "text": "Die Warnung zeigt ein unbekanntes Signal ausserhalb der Zentralen Kurve.",
         "choices": [
             { "text": "Signal verfolgen", "next": "rm_15" },
             { "text": "Rick informieren", "next": "rm_14", "karma": 1 }
@@ -4628,7 +4638,7 @@ let gameData = {
     },
 
     "rm_12": {
-        "text": "Ein Alien-Händler erkennt dich als 'Freund von Rick Sanchez'.",
+        "text": "Ein Alien-Haendler erkennt dich als 'Freund von Rick Sanchez'.",
         "choices": [
             { "text": "Informationen kaufen", "next": "rm_15", "required_item": "phase_tool" },
             { "text": "Weglaufen", "next": "rm_13" }
@@ -4636,10 +4646,10 @@ let gameData = {
     },
 
     "rm_13": {
-        "text": "Mehrere interdimensionale Kopfgeldjäger tauchen auf.",
+        "text": "Mehrere interdimensionale Kopfgeldjaeger tauchen auf.",
         "choices": [
             { "text": "Verhandeln", "next": "rm_16" },
-            { "text": "Kämpfen", "next": "rm_17", "karma": -2 }
+            { "text": "Kaempfen", "next": "rm_17", "karma": -2 }
         ]
     },
 
@@ -4652,15 +4662,15 @@ let gameData = {
     },
 
     "rm_15": {
-        "text": "Das Signal führt zu einer verlassenen Citadel-Station.",
+        "text": "Das Signal fuehrt zu einer verlassenen Citadel-Station.",
         "choices": [
             { "text": "Station betreten", "next": "rm_19" },
-            { "text": "Außen scannen", "next": "rm_18" }
+            { "text": "Aussen scannen", "next": "rm_18" }
         ]
     },
 
     "rm_16": {
-        "text": "Morty wird nervös. 'Rick… irgendwas fühlt sich falsch an.'",
+        "text": "Morty wird nervoes. 'Rick… irgendwas fuehlt sich falsch an.'",
         "choices": [
             { "text": "Morty ernst nehmen", "next": "rm_19", "karma": 2 },
             { "text": "Ignorieren", "next": "rm_17", "karma": -2 }
@@ -4668,7 +4678,7 @@ let gameData = {
     },
 
     "rm_17": {
-        "text": "Die Situation eskaliert und mehrere Portale reißen gleichzeitig auf.",
+        "text": "Die Situation eskaliert und mehrere Portale reissen gleichzeitig auf.",
         "choices": [
             { "text": "Portale stabilisieren", "next": "rm_20", "required_item": "portal_signature" },
             { "text": "Fliehen", "next": "rm_21", "karma": -2 }
@@ -4679,15 +4689,15 @@ let gameData = {
         "text": "Rick erkennt eine Technologie, die nicht von ihm stammt.",
         "choices": [
             { "text": "Weiter analysieren", "next": "rm_22" },
-            { "text": "Direkt zerstören", "next": "rm_20", "karma": -1 }
+            { "text": "Direkt zerstoeren", "next": "rm_20", "karma": -1 }
         ]
     },
 
     "rm_19": {
-        "text": "In der Citadel laufen beschädigte Service-Roboter planlos herum.",
+        "text": "In der Citadel laufen beschaedigte Service-Roboter planlos herum.",
         "choices": [
             { "text": "Datenbank durchsuchen", "next": "rm_22", "gain_item": "citadel_codes" },
-            { "text": "Energieversorgung prüfen", "next": "rm_20" }
+            { "text": "Energieversorgung pruefen", "next": "rm_20" }
         ]
     },
 
@@ -4700,7 +4710,7 @@ let gameData = {
     },
 
     "rm_21": {
-        "text": "Mehrere alternative Mortys erscheinen plötzlich durch instabile Portale.",
+        "text": "Mehrere alternative Mortys erscheinen ploetzlich durch instabile Portale.",
         "choices": [
             { "text": "Mit ihnen reden", "next": "rm_23" },
             { "text": "Misstrauen", "next": "rm_24", "karma": -2 }
@@ -4708,7 +4718,7 @@ let gameData = {
     },
 
     "rm_22": {
-        "text": "Die Datenbank enthält Hinweise auf einen versteckten Portal-Kern.",
+        "text": "Die Datenbank enthaelt Hinweise auf einen versteckten Portal-Kern.",
         "choices": [
             { "text": "Kern suchen", "next": "rm_25" },
             { "text": "Rick warnen", "next": "rm_23", "karma": 1 }
@@ -4716,7 +4726,7 @@ let gameData = {
     },
 
     "rm_23": {
-        "text": "Rick wirkt ungewohnt still. 'Wenn das Ding aktiviert wird, zerreißt es die Kurve komplett.'",
+        "text": "Rick wirkt ungewohnt still. 'Wenn das Ding aktiviert wird, zerreisst es die Kurve komplett.'",
         "choices": [
             { "text": "Rick helfen", "next": "rm_25", "karma": 2 },
             { "text": "Selbst handeln", "next": "rm_24" }
@@ -4743,7 +4753,7 @@ let gameData = {
         "text": "Der Kern destabilisiert sich und droht zu kollabieren.",
         "choices": [
             { "text": "Stabilisieren", "next": "rm_28", "required_item": "citadel_codes" },
-            { "text": "Zerstören", "next": "rm_29" }
+            { "text": "Zerstoeren", "next": "rm_29" }
         ]
     },
 
@@ -4756,38 +4766,38 @@ let gameData = {
     },
 
     "rm_28": {
-        "text": "Rick schließt das letzte Portal langsam.",
+        "text": "Rick schliesst das letzte Portal langsam.",
         "choices": [
-            { "text": "Unterstützen", "next": "rm_30", "karma": 2 },
+            { "text": "Unterstuetzen", "next": "rm_30", "karma": 2 },
             { "text": "Beobachten", "next": "rm_30" }
         ]
     },
 
     "rm_29": {
-        "text": "Die Citadel verschwindet im grünen Portalsturm.",
+        "text": "Die Citadel verschwindet im gruenen Portalsturm.",
         "choices": [
-            { "text": "Zurückkehren", "next": "rm_30" }
+            { "text": "Zurueckkehren", "next": "rm_30" }
         ]
     },
 
     "rm_30": {
-        "text": "Rick lehnt sich erschöpft gegen die Portal-Gun. 'Okay… das Universum existiert noch. Für heute reicht mir das.'",
+        "text": "Rick lehnt sich erschoepft gegen die Portal-Gun. 'Okay… das Universum existiert noch. Fuer heute reicht mir das.'",
         "choices": [
             { "text": "Kapitel 5 starten", "next": "c5_start" }
         ]
     },
     "c4_dd_start": {
-        "text": "Während des großen St.-Canard-Maskenfestivals verschwinden plötzlich mehrere berühmte Bürger der Stadt spurlos. Überall tauchen identische lachende Masken auf, die niemand mehr abnehmen kann. Darkwing Duck springt auf die Hauptbühne, als plötzlich auch der Bürgermeister verschwindet.",
+        "text": "Waehrend des grossen St.-Canard-Maskenfestivals verschwinden ploetzlich mehrere beruehmte Buerger der Stadt spurlos. ueberall tauchen identische lachende Masken auf, die niemand mehr abnehmen kann. Darkwing Duck springt auf die Hauptbuehne, als ploetzlich auch der Buergermeister verschwindet.",
         "choices": [
-            { "text": "Darkwing zur Bühne folgen", "next": "dd_1", "karma": 3 },
-            { "text": "Die Maskenhändler untersuchen", "next": "dd_2" },
+            { "text": "Darkwing zur Buehne folgen", "next": "dd_1", "karma": 3 },
+            { "text": "Die Maskenhaendler untersuchen", "next": "dd_2" },
             { "text": "Launchpad helfen, die Menge zu beruhigen", "next": "dd_3", "karma": 2 },
-            { "text": "Einer verdächtigen Gestalt folgen", "next": "dd_4", "karma": -2 }
+            { "text": "Einer verdaechtigen Gestalt folgen", "next": "dd_4", "karma": -2 }
         ]
     },
 
     "dd_1": {
-        "text": "Darkwing untersucht den Bühnenboden. Dort finden sich seltsame violette Federn.",
+        "text": "Darkwing untersucht den Buehnenboden. Dort finden sich seltsame violette Federn.",
         "choices": [
             { "text": "Die Federn analysieren", "next": "dd_5", "gain_item": "violet_feather" },
             { "text": "Backstage suchen", "next": "dd_6" }
@@ -4795,18 +4805,18 @@ let gameData = {
     },
 
     "dd_2": {
-        "text": "Die Händler behaupten, ein unbekannter Wohltäter habe die Masken kostenlos verteilt.",
+        "text": "Die Haendler behaupten, ein unbekannter Wohltaeter habe die Masken kostenlos verteilt.",
         "choices": [
             { "text": "Den Lieferwagen durchsuchen", "next": "dd_7" },
-            { "text": "Den Händlern glauben", "next": "dd_8", "karma": -3 }
+            { "text": "Den Haendlern glauben", "next": "dd_8", "karma": -3 }
         ]
     },
 
     "dd_3": {
         "text": "Launchpad versucht Kinder mit Ballontieren abzulenken, verursacht aber beinahe eine Panik.",
         "choices": [
-            { "text": "Die Situation übernehmen", "next": "dd_8" },
-            { "text": "Launchpad unterstützen", "next": "dd_9", "karma": 3 }
+            { "text": "Die Situation uebernehmen", "next": "dd_8" },
+            { "text": "Launchpad unterstuetzen", "next": "dd_9", "karma": 3 }
         ]
     },
 
@@ -4819,7 +4829,7 @@ let gameData = {
     },
 
     "dd_5": {
-        "text": "Die Feder gehört zu Ammonia Pine, einer exzentrischen Schurkin mit hypnotischen Parfüms.",
+        "text": "Die Feder gehoert zu Ammonia Pine, einer exzentrischen Schurkin mit hypnotischen Parfuems.",
         "choices": [
             { "text": "Ihr Labor suchen", "next": "dd_11" },
             { "text": "Erst weitere Hinweise sammeln", "next": "dd_12" }
@@ -4827,7 +4837,7 @@ let gameData = {
     },
 
     "dd_6": {
-        "text": "Hinter der Bühne findest du einen geheimen Tunnel unter dem Festivalgelände.",
+        "text": "Hinter der Buehne findest du einen geheimen Tunnel unter dem Festivalgelaende.",
         "choices": [
             { "text": "Dem Tunnel folgen", "next": "dd_13" },
             { "text": "Gosalyn holen", "next": "dd_9", "karma": -2 }
@@ -4838,7 +4848,7 @@ let gameData = {
         "text": "Im Lieferwagen liegen hunderte identische Masken und eine Einladung zur 'Mitternachtsvorstellung'.",
         "choices": [
             { "text": "Die Einladung behalten", "next": "dd_14", "gain_item": "midnight_ticket" },
-            { "text": "Alles zerstören", "next": "dd_8", "karma": -4 }
+            { "text": "Alles zerstoeren", "next": "dd_8", "karma": -4 }
         ]
     },
 
@@ -4859,15 +4869,15 @@ let gameData = {
     },
 
     "dd_10": {
-        "text": "Im Filmstudio laufen alte Cartoons auf verlassenen Leinwänden — doch die Figuren bewegen sich außerhalb der Szenen.",
+        "text": "Im Filmstudio laufen alte Cartoons auf verlassenen Leinwaenden — doch die Figuren bewegen sich ausserhalb der Szenen.",
         "choices": [
             { "text": "Projektoren untersuchen", "next": "dd_17" },
-            { "text": "Die Leinwände zerstören", "next": "dd_18", "karma": -2 }
+            { "text": "Die Leinwaende zerstoeren", "next": "dd_18", "karma": -2 }
         ]
     },
 
     "dd_11": {
-        "text": "Das Labor ist leer, aber überall stehen halb fertige Duftflaschen.",
+        "text": "Das Labor ist leer, aber ueberall stehen halb fertige Duftflaschen.",
         "choices": [
             { "text": "Eine Probe nehmen", "next": "dd_19", "gain_item": "perfume_sample" },
             { "text": "Das Labor durchsuchen", "next": "dd_20" }
@@ -4875,7 +4885,7 @@ let gameData = {
     },
 
     "dd_12": {
-        "text": "Darkwing erkennt, dass alle verschwundenen Bürger ehemalige Schauspieler sind.",
+        "text": "Darkwing erkennt, dass alle verschwundenen Buerger ehemalige Schauspieler sind.",
         "choices": [
             { "text": "Alte Filmarchive besuchen", "next": "dd_17" },
             { "text": "Die Theater der Stadt durchsuchen", "next": "dd_21" }
@@ -4883,7 +4893,7 @@ let gameData = {
     },
 
     "dd_13": {
-        "text": "Der Tunnel führt zu einem geheimen Untergrundtheater voller maskierter Zuschauer.",
+        "text": "Der Tunnel fuehrt zu einem geheimen Untergrundtheater voller maskierter Zuschauer.",
         "choices": [
             { "text": "Die Vorstellung beobachten", "next": "dd_22" },
             { "text": "Sofort eingreifen", "next": "dd_23", "karma": -3 }
@@ -4894,12 +4904,12 @@ let gameData = {
         "text": "Die Einladung nennt einen Ort: das stillgelegte Monocrow-Theater.",
         "choices": [
             { "text": "Zum Theater gehen", "next": "dd_24" },
-            { "text": "Vorher Verstärkung holen", "next": "dd_20", "karma": 1 }
+            { "text": "Vorher Verstaerkung holen", "next": "dd_20", "karma": 1 }
         ]
     },
 
     "dd_15": {
-        "text": "Einige Festivalbesucher greifen plötzlich jeden ohne Maske an.",
+        "text": "Einige Festivalbesucher greifen ploetzlich jeden ohne Maske an.",
         "choices": [
             { "text": "Die Menschen beruhigen", "next": "dd_25", "karma": 5 },
             { "text": "Mit Rauchbomben fliehen", "next": "dd_21", "karma": -4 }
@@ -4907,7 +4917,7 @@ let gameData = {
     },
 
     "dd_16": {
-        "text": "Die Schrift enthält Regieanweisungen für ein Stück namens 'Die ewige Rolle'.",
+        "text": "Die Schrift enthaelt Regieanweisungen fuer ein Stueck namens 'Die ewige Rolle'.",
         "choices": [
             { "text": "Weiterlesen", "next": "dd_24" },
             { "text": "Die Seiten verstecken", "next": "dd_21", "karma": -2 }
@@ -4923,7 +4933,7 @@ let gameData = {
     },
 
     "dd_18": {
-        "text": "Durch die zerstörten Leinwände entkommen mehrere animierte Kreaturen in die Straßen.",
+        "text": "Durch die zerstoerten Leinwaende entkommen mehrere animierte Kreaturen in die Strassen.",
         "choices": [
             { "text": "Sie verfolgen", "next": "dd_25" },
             { "text": "Darkwing warnen", "next": "dd_20", "karma": 1 }
@@ -4931,7 +4941,7 @@ let gameData = {
     },
 
     "dd_19": {
-        "text": "Das Parfüm verstärkt Emotionen statt Kontrolle.",
+        "text": "Das Parfuem verstaerkt Emotionen statt Kontrolle.",
         "choices": [
             { "text": "Die Probe behalten", "next": "dd_27" },
             { "text": "Wegwerfen", "next": "dd_20", "karma": 2 }
@@ -4939,7 +4949,7 @@ let gameData = {
     },
 
     "dd_20": {
-        "text": "Launchpad entdeckt versteckte Gästezimmer unter dem Monocrow-Theater.",
+        "text": "Launchpad entdeckt versteckte Gaestezimmer unter dem Monocrow-Theater.",
         "choices": [
             { "text": "Untersuchen", "next": "dd_28" },
             { "text": "Absperren", "next": "dd_21", "karma": -1 }
@@ -4947,7 +4957,7 @@ let gameData = {
     },
 
     "dd_21": {
-        "text": "Mehrere Schauspieler behaupten, sie hätten dieselbe Stimme in ihren Träumen gehört.",
+        "text": "Mehrere Schauspieler behaupten, sie haetten dieselbe Stimme in ihren Traeumen gehoert.",
         "choices": [
             { "text": "Die Aussagen vergleichen", "next": "dd_28" },
             { "text": "Sie ignorieren", "next": "dd_29", "karma": -4 }
@@ -4955,15 +4965,15 @@ let gameData = {
     },
 
     "dd_22": {
-        "text": "Auf der Bühne erscheint eine maskierte Gestalt: Taurus Bulba.",
+        "text": "Auf der Buehne erscheint eine maskierte Gestalt: Taurus Bulba.",
         "choices": [
-            { "text": "Zuhören", "next": "dd_30" },
+            { "text": "Zuhoeren", "next": "dd_30" },
             { "text": "Angreifen", "next": "dd_23", "karma": -5 }
         ]
     },
 
     "dd_23": {
-        "text": "Das Publikum gerät in Panik und mehrere Gefangene verschwinden im Chaos.",
+        "text": "Das Publikum geraet in Panik und mehrere Gefangene verschwinden im Chaos.",
         "choices": [
             { "text": "Gefangene retten", "next": "dd_31", "karma": 4 },
             { "text": "Bulba verfolgen", "next": "dd_29", "karma": -2 }
@@ -4971,9 +4981,9 @@ let gameData = {
     },
 
     "dd_24": {
-        "text": "Im Monocrow-Theater laufen die Vorbereitungen für eine riesige Mitternachtsaufführung.",
+        "text": "Im Monocrow-Theater laufen die Vorbereitungen fuer eine riesige Mitternachtsauffuehrung.",
         "choices": [
-            { "text": "Hinter die Bühne schleichen", "next": "dd_32" },
+            { "text": "Hinter die Buehne schleichen", "next": "dd_32" },
             { "text": "Als Zuschauer tarnen", "next": "dd_22" }
         ]
     },
@@ -4987,7 +4997,7 @@ let gameData = {
     },
 
     "dd_26": {
-        "text": "Quackerjack behauptet, jemand habe ihm versprochen, seine Shows 'für immer unvergesslich' zu machen.",
+        "text": "Quackerjack behauptet, jemand habe ihm versprochen, seine Shows 'fuer immer unvergesslich' zu machen.",
         "choices": [
             { "text": "Ihm glauben", "next": "dd_30" },
             { "text": "Ihn festsetzen", "next": "dd_29", "karma": -3 }
@@ -4995,15 +5005,15 @@ let gameData = {
     },
 
     "dd_27": {
-        "text": "Das Parfüm beruhigt kurz die maskierten Besucher.",
+        "text": "Das Parfuem beruhigt kurz die maskierten Besucher.",
         "choices": [
             { "text": "Mehr herstellen", "next": "dd_33", "required_item": "perfume_sample" },
-            { "text": "Nur für dich behalten", "next": "dd_29", "karma": -4 }
+            { "text": "Nur fuer dich behalten", "next": "dd_29", "karma": -4 }
         ]
     },
 
     "dd_28": {
-        "text": "Unter dem Theater findest du verschwundene Schauspieler in luxuriösen Räumen eingesperrt.",
+        "text": "Unter dem Theater findest du verschwundene Schauspieler in luxurioesen Raeumen eingesperrt.",
         "choices": [
             { "text": "Befreien", "next": "dd_31", "karma": 5 },
             { "text": "Erst Bulba suchen", "next": "dd_30", "karma": -2 }
@@ -5011,34 +5021,34 @@ let gameData = {
     },
 
     "dd_29": {
-        "text": "Die Mitternachtsaufführung beginnt und ganz St. Canard hört plötzlich dieselbe Melodie.",
+        "text": "Die Mitternachtsauffuehrung beginnt und ganz St. Canard hoert ploetzlich dieselbe Melodie.",
         "choices": [
             { "text": "Zum Dach des Theaters", "next": "dd_34" },
-            { "text": "Die Straßen evakuieren", "next": "dd_31", "karma": 4 }
+            { "text": "Die Strassen evakuieren", "next": "dd_31", "karma": 4 }
         ]
     },
 
     "dd_30": {
         "text": "Taurus Bulba will die gesamte Stadt in eine 'perfekte ewige Vorstellung' verwandeln.",
         "choices": [
-            { "text": "Seinen Plan verzögern", "next": "dd_34" },
-            { "text": "Sofort kämpfen", "next": "dd_35", "karma": -4 }
+            { "text": "Seinen Plan verzoegern", "next": "dd_34" },
+            { "text": "Sofort kaempfen", "next": "dd_35", "karma": -4 }
         ]
     },
 
     "dd_31": {
-        "text": "Die geretteten Bürger helfen, andere Besucher von den Masken zu befreien.",
+        "text": "Die geretteten Buerger helfen, andere Besucher von den Masken zu befreien.",
         "choices": [
-            { "text": "Zum Theater zurückkehren", "next": "dd_34" },
+            { "text": "Zum Theater zurueckkehren", "next": "dd_34" },
             { "text": "Die Stadt sichern", "next": "dd_36", "karma": 3 }
         ]
     },
 
     "dd_32": {
-        "text": "Hinter der Bühne hängt ein riesiger mechanischer Vorhang voller Hypnose-Scheinwerfer.",
+        "text": "Hinter der Buehne haengt ein riesiger mechanischer Vorhang voller Hypnose-Scheinwerfer.",
         "choices": [
             { "text": "Abschalten", "next": "dd_33", "required_item": "midnight_ticket" },
-            { "text": "Beschädigen", "next": "dd_35", "karma": -2 }
+            { "text": "Beschaedigen", "next": "dd_35", "karma": -2 }
         ]
     },
 
@@ -5053,7 +5063,7 @@ let gameData = {
     "dd_34": {
         "text": "Auf dem Dach des Theaters wartet Bulba zwischen gigantischen Scheinwerfern.",
         "choices": [
-            { "text": "Darkwing unterstützen", "next": "dd_36", "karma": 5 },
+            { "text": "Darkwing unterstuetzen", "next": "dd_36", "karma": 5 },
             { "text": "Allein handeln", "next": "dd_35", "karma": -3 }
         ]
     },
@@ -5061,7 +5071,7 @@ let gameData = {
     "dd_35": {
         "text": "Die Vorstellung endet im Chaos. Mehrere Schurken entkommen durch geheime Tunnel.",
         "choices": [
-            { "text": "Die Bürger schützen", "next": "dd_36", "karma": 3 },
+            { "text": "Die Buerger schuetzen", "next": "dd_36", "karma": 3 },
             { "text": "Die Schurken verfolgen", "next": "dd_37", "karma": -2 }
         ]
     },
@@ -5074,7 +5084,7 @@ let gameData = {
     },
 
     "dd_37": {
-        "text": "Im Inneren der Maske erscheint ein unbekanntes Symbol. Darkwing spürt, dass St. Canard noch lange nicht sicher ist.",
+        "text": "Im Inneren der Maske erscheint ein unbekanntes Symbol. Darkwing spuert, dass St. Canard noch lange nicht sicher ist.",
         "choices": [
             { "text": "Kapitel 5 starten", "next": "c5_start" }
         ]

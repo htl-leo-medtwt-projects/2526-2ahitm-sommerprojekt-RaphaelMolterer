@@ -9,19 +9,7 @@ let slides = [
     },
     {
         img: "./images/Bild_3.png",
-        text: "Der legendaere Nullkern ist erwacht. Eine uralte Macht zwischen allen Universen, die Raum und Zeit verschlingt."
-    },
-    {
-        img: "./images/Bild_4.png",
-        text: "Du bist der letzte aktive Weltenwaechter. Nur du kannst durch die Dimensionen reisen und die Splitter des Gleichgewichts finden."
-    },
-    {
-        img: "./images/Bild_5.png",
-        text: "Doch Vorsicht... nicht jeder Held sagt die Wahrheit. Manche Verbuendete sind gefaehrlicher als die Monster selbst."
-    },
-    {
-        img: "./images/Bild_6.png",
-        text: "Deine Entscheidungen veraendern alles. Jeder Weg ist endgueltig. Jede Tat beeinflusst dein Karma. Und dein Karma bestimmt das Schicksal aller Welten."
+        text: "Deine Entscheidungen veraendern alles. Jeder Weg ist endgueltig. Jede Tat beeinflusst dein Karma. Und dein Karma bestimmt das Schicksal aller Welten. Rette das Cartoon Universum!"
     }
 ];
 
@@ -68,6 +56,21 @@ function handleChoice(next, karma, gainItem, requiredItem) {
     if (karma) {
         gameData.player.karma += karma;
         playKarmaSound(karma);
+
+        let container = document.getElementById("game-container");
+        let karmaClass = "";
+
+        if (karma > 0) {
+            karmaClass = "karma-good";
+        }
+        else {
+            karmaClass = "karma-bad";
+        }
+
+        container.classList.add(karmaClass);
+        setTimeout(function () {
+            container.classList.remove(karmaClass);
+        }, 500);
     }
 
     if (gainItem) {
@@ -78,9 +81,11 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         checkEnding();
         return;
     }
+
     if (sounds.steps) {
         sounds.steps.play();
     }
+
     currentScene = next;
     showScene(currentScene);
 }
@@ -92,9 +97,7 @@ function showScene(scene) {
     }
 
     document.getElementById("intro-container").style.display = "none";
-
     let gameContainer = document.getElementById("game-container");
-
     gameContainer.style.display = "flex";
 
     let gameCharacter = document.getElementById("game-character");
@@ -102,27 +105,51 @@ function showScene(scene) {
     let choicesDiv = document.getElementById("game-choices");
 
     if (sceneData.background) {
-        let backgroundUrl = `url(${sceneData.background})`;
-        gameContainer.style.backgroundImage = backgroundUrl;
-        document.body.style.backgroundImage = "none";
+        gameContainer.style.backgroundImage = "url(" + sceneData.background + ")";
         document.body.style.backgroundImage = "none";
     }
 
     if (sceneData.character) {
         gameCharacter.src = sceneData.character;
         gameCharacter.style.display = "block";
-    }
-    else {
+
+        gameCharacter.classList.remove("fade-in", "item-gain");
+        void gameCharacter.offsetWidth;
+
+        if (scene.includes("item") || scene.includes("crystal") || scene.includes("recipe") || scene.includes("Melody")) {
+            gameCharacter.classList.add("item-gain");
+        } else {
+            gameCharacter.classList.add("fade-in");
+        }
+    } else {
         gameCharacter.style.display = "none";
     }
 
     dialogText.innerText = sceneData.text;
+    dialogText.classList.remove("fade-in");
+    void dialogText.offsetWidth;
+    dialogText.classList.add("fade-in");
 
     choicesDiv.innerHTML = "";
-
     for (let i = 0; i < sceneData.choices.length; i++) {
         let choice = sceneData.choices[i];
-        let btnHtml = `<button onclick="handleChoice('${choice.next}', ${choice.karma || 0}, '${choice.gain_item || ''}', '${choice.required_item || ''}')">${choice.text}</button>`;
+
+        let karmaWert = 0;
+        if (choice.karma) {
+            karmaWert = choice.karma;
+        }
+
+        let itemGewonnen = "";
+        if (choice.gain_item) {
+            itemGewonnen = choice.gain_item;
+        }
+
+        let itemBenoetigt = "";
+        if (choice.required_item) {
+            itemBenoetigt = choice.required_item;
+        }
+
+        let btnHtml = "<button onclick=\"handleChoice('" + choice.next + "', " + karmaWert + ", '" + itemGewonnen + "', '" + itemBenoetigt + "')\">" + choice.text + "</button>";
         choicesDiv.innerHTML += btnHtml;
     }
 }
