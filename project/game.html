@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="flash-effect-overlay"></div>
     <div id="intro-container">
         <div id="frame">
             <div id="image" class="image"></div>
@@ -27,7 +28,14 @@
         </div>
     </div>
     <div id="pause-menu">
-        <h1>PAUSE</h1>
+        <div id="inventory-grid"></div>
+        <button class="close-backpack" onclick="toggleInventory()">X</button>
+    </div>
+    <div id="item-warning" class="warning-overlay">
+        <div class="warning-content">
+            <p id="warning-text">Du hast das benötigte Item nicht!</p>
+            <button onclick="closeWarning()">Verstanden</button>
+        </div>
     </div>
     <div id="game-container">
         <img id="game-character" style="display:none;" alt="Character">

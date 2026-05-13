@@ -21,10 +21,10 @@ let gameData = {
         "text": "Prinzessin Bubblegum ruft dich mitten in der Nacht ins Candy Kingdom. Riesige Teile des Koenigreichs verwandeln sich ploetzlich in wilde, lebendige Suessigkeiten-Monster. Finn und Jake versuchen bereits Chaos in den Strassen zu stoppen, waehrend seltsame Musik aus den Zuckerrohrfeldern erklingt.",
         "background": "./game_images/background_at_candy_kingdom.png",
         "choices": [
-            { "text": "Finn und Jake helfen", "next": "at_1", "karma": 3 },
+            { "text": "Finn und Jake helfen", "next": "at_1", "karma": 1 },
             { "text": "Den Geraeuschen folgen", "next": "at_2" },
-            { "text": "Mit Bubblegum reden", "next": "at_3", "karma": -2 },
-            { "text": "Die Buerger evakuieren", "next": "at_4", "karma": 5 }
+            { "text": "Mit Bubblegum reden", "next": "at_3"},
+            { "text": "Die Buerger evakuieren", "next": "at_4", "karma": 2 }
         ]
     },
 
@@ -53,7 +53,7 @@ let gameData = {
         "background": "./game_images/background_at_candy_castle.png",
         "character": "./game_images/character_at_bubblegum.png",
         "choices": [
-            { "text": "Kristalle analysieren", "next": "candy_crystal", "gain_item": "candy_crystal" },
+            { "text": "Kristalle analysieren", "next": "candy_crystal", "gain_item": "at_candy_crystal" },
             { "text": "Finn suchen", "next": "at_1" }
         ]
     },
@@ -103,7 +103,7 @@ let gameData = {
         "character": "./game_images/character_at_bmo.png",
         "choices": [
             { "text": "BMO stoppen", "next": "at_12" },
-            { "text": "Mithoeren", "next": "strange_Melody", "gain_item": "strange_melody" }
+            { "text": "Mithoeren", "next": "strange_Melody", "gain_item": "at_strange_melody" }
         ]
     },
     "strange_Melody": {
@@ -169,7 +169,7 @@ let gameData = {
         "background": "./game_images/background_at_farm.png",
         "character": "./game_images/character_at_note.png",
         "choices": [
-            { "text": "Der Musik folgen", "next": "at_18", "required_item": "strange_melody" },
+            { "text": "Der Musik folgen", "next": "at_18", "required_item": "at_strange_melody" },
             { "text": "Widerstehen", "next": "at_16", "karma": 2 }
         ]
     },
@@ -189,7 +189,7 @@ let gameData = {
         "background": "./game_images/background_at_candy_castle.png",
         "character": "./game_images/character_at_peppermint.png",
         "choices": [
-            { "text": "Rezeptbuch nehmen", "next": "forbidden_recipe", "gain_item": "forbidden_recipe" },
+            { "text": "Rezeptbuch nehmen", "next": "forbidden_recipe", "gain_item": "at_forbidden_recipe" },
             { "text": "Verbrennen", "next": "at_16", "karma": 4 }
         ]
     },
@@ -208,7 +208,7 @@ let gameData = {
         "background": "./game_images/background_at_candy.png",
         "character": "./game_images/character_at_zombie.png",
         "choices": [
-            { "text": "Musik nutzen", "next": "at_21", "required_item": "strange_melody" },
+            { "text": "Musik nutzen", "next": "at_21", "required_item": "at_strange_melody" },
             { "text": "Direkt kaempfen", "next": "at_22", "karma": -3 }
         ]
     },
@@ -217,8 +217,8 @@ let gameData = {
         "text": "Du versteckst dich in den Ruinen eines alten Bonbon-Ladens.",
         "background": "./game_images/background_at_store.png",
         "choices": [
-            { "text": "Vorraete suchen", "next": "at_23", "gain_item": "sugar_mask" },
-            { "text": "Zurueckkehren", "next": "at_22", "karma": 1 }
+            { "text": "Vorraete suchen", "next": "sugar_mask", "gain_item": "at_sugar_mask" },
+            { "text": "Zurueckkehren", "next": "at_23", "karma": 1 }
         ]
     },
 
@@ -246,7 +246,7 @@ let gameData = {
         "background": "./game_images/background_at_wizard_city.png",
         "character": "./game_images/character_at_wizard.png",
         "choices": [
-            { "text": "Ihn stoppen", "next": "at_24", "karma": 4 },
+            { "text": "Ihn stoppen und schnell weiter", "next": "at_24", "karma": 4 },
             { "text": "Ihm helfen", "next": "at_25", "karma": -5 }
         ]
     },
@@ -256,7 +256,7 @@ let gameData = {
         "background": "./game_images/background_at_wizard_city.png",
         "choices": [
             { "text": "Die Quelle zerstoeren", "next": "at_26" },
-            { "text": "Die Musik umschreiben", "next": "at_21", "required_item": "forbidden_recipe" }
+            { "text": "Die Musik umschreiben", "next": "at_21", "required_item": "at_forbidden_recipe" }
         ]
     },
 
@@ -280,15 +280,18 @@ let gameData = {
     },
 
     "at_23": {
-        "text": "Eine Sugar Mask wuerde dir jetzt helfen.",
+        "text": "Laute Musik spielt die deine Ohren betaeubt! Eine Zucker Maske wuerde dir jetzt helfen... Hast du denn eine gefunden?",
+        "background": "./game_images/background_at_candy_kingdom.png",
+        "character": "./game_images/character_at_note.png",
         "choices": [
-            { "text": "Benutzen", "next": "at_28", "required_item": "sugar_mask" },
-            { "text": "Verstecken", "next": "at_22" }
+            { "text": "Benutzen", "next": "at_28", "required_item": "at_sugar_mask" },
+            { "text": "Verstecken", "next": "at_22", "karma": -3 }
         ]
     },
 
     "at_24": {
-        "text": "Ice King gesteht, dass er die singende Torte aus Einsamkeit erschaffen hat.",
+        "text": "Ice King gesteht, dass er die Musik aus Einsamkeit erschaffen hat.",
+        "background": "./game_images/background_at_ice.png",
         "choices": [
             { "text": "Mitgefuehl zeigen", "next": "at_29", "karma": 5 },
             { "text": "Vorwuerfe machen", "next": "at_25", "karma": -4 }
@@ -296,7 +299,9 @@ let gameData = {
     },
 
     "at_25": {
-        "text": "Die singende Torte waechst ausser Kontrolle.",
+        "text": "Die Musik waechst ausser Kontrolle.",
+        "background": "./game_images/background_at_ice.png",
+        "character": "./game_images/character_at_note.png",
         "choices": [
             { "text": "Evakuieren", "next": "at_28", "karma": 4 },
             { "text": "Weiter kaempfen", "next": "at_30", "karma": -5 }
@@ -305,6 +310,8 @@ let gameData = {
 
     "at_26": {
         "text": "Bubblegum entwickelt einen Plan, die Musik im ganzen Kingdom umzuleiten.",
+        "background": "./game_images/background_at_candy_castle.png",
+        "character": "./game_images/character_at_bubblegum.png",
         "choices": [
             { "text": "Plan unterstuetzen", "next": "at_29", "karma": 4 },
             { "text": "Eigenen Weg gehen", "next": "at_30", "karma": -2 }
@@ -313,6 +320,7 @@ let gameData = {
 
     "at_27": {
         "text": "Das Kingdom wird ruhig... fast zu ruhig.",
+        "background": "./game_images/background_at_candy_kingdom.png",
         "choices": [
             { "text": "Untersuchen", "next": "at_30" },
             { "text": "Ignorieren", "next": "at_28", "karma": -3 }
@@ -321,6 +329,8 @@ let gameData = {
 
     "at_28": {
         "text": "Finn entdeckt den Ursprung der Musik tief unter dem Candy Kingdom.",
+        "background": "./game_images/background_at_candy_kingdom.png",
+        "character": "./game_images/character_at_finn.png",
         "choices": [
             { "text": "Hinabsteigen", "next": "at_29" },
             { "text": "Ice King schicken", "next": "at_30", "karma": -2 }
@@ -329,6 +339,8 @@ let gameData = {
 
     "at_29": {
         "text": "Im Untergrund schlaegt ein gigantisches lebendes Candy-Herz im Takt der Musik.",
+        "background": "./game_images/background_at_underground.png",
+        
         "choices": [
             { "text": "Beruhigen", "next": "at_30", "required_item": "candy_crystal" },
             { "text": "Zerstoeren", "next": "at_30", "karma": -6 }

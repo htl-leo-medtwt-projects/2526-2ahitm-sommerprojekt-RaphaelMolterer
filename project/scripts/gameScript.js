@@ -49,7 +49,7 @@ let currentScene = "start";
 
 function handleChoice(next, karma, gainItem, requiredItem) {
     if (requiredItem && !gameData.player.inventory.includes(requiredItem)) {
-        alert("Du hast das benötigte Item nicht!");
+        showWarning("Halt! Dir fehlt das Item: " + requiredItem);
         return;
     }
 
@@ -57,20 +57,23 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         gameData.player.karma += karma;
         playKarmaSound(karma);
 
-        let container = document.getElementById("game-container");
-        let karmaClass = "";
+        let flashOverlay = document.getElementById("flash-effect-overlay");
 
-        if (karma > 0) {
-            karmaClass = "karma-good";
-        }
-        else {
-            karmaClass = "karma-bad";
-        }
+        flashOverlay.classList.remove("karma-good-flash");
+        flashOverlay.classList.remove("karma-bad-flash");
 
-        container.classList.add(karmaClass);
         setTimeout(function () {
-            container.classList.remove(karmaClass);
-        }, 500);
+            if (karma > 0) {
+                flashOverlay.classList.add("karma-good-flash");
+            } else {
+                flashOverlay.classList.add("karma-bad-flash");
+            }
+        }, 10);
+
+        setTimeout(function () {
+            flashOverlay.classList.remove("karma-good-flash");
+            flashOverlay.classList.remove("karma-bad-flash");
+        }, 610);
     }
 
     if (gainItem) {
@@ -114,23 +117,40 @@ function showScene(scene) {
         gameCharacter.style.display = "block";
 
         gameCharacter.classList.remove("fade-in", "item-gain");
-        void gameCharacter.offsetWidth;
 
-        if (scene.includes("item") || scene.includes("crystal") || scene.includes("recipe") || scene.includes("Melody")) {
-            gameCharacter.classList.add("item-gain");
-        } else {
-            gameCharacter.classList.add("fade-in");
-        }
-    } else {
+        setTimeout(() => {
+            if (sceneData.gain_item) {
+                gameCharacter.classList.add("item-gain");
+            } else {
+                gameCharacter.classList.add("fade-in");
+            }
+        }, 0);
+    } 
+    else {
         gameCharacter.style.display = "none";
     }
 
     dialogText.innerText = sceneData.text;
-    dialogText.classList.remove("fade-in");
-    void dialogText.offsetWidth;
-    dialogText.classList.add("fade-in");
+
+    dialogText.animate(
+        [
+            {
+                opacity: 0,
+                transform: "translateY(20px)"
+            },
+            {
+                opacity: 1,
+                transform: "translateY(0)"
+            }
+        ],
+        {
+            duration: 500,
+            easing: 'ease-in'
+        }
+    );
 
     choicesDiv.innerHTML = "";
+
     for (let i = 0; i < sceneData.choices.length; i++) {
         let choice = sceneData.choices[i];
 
@@ -207,19 +227,70 @@ initSounds();
 
 let pauseOpen = false;
 
+
+
+function showWarning(message) {
+    const warning = document.getElementById("item-warning");
+    let parts = message.split('_');
+    let cleanMessage = "";
+
+    if (parts.length > 1) {
+        for (let i = 0; i < parts.length; i++) {
+            if (i === 0 && parts[i].toLowerCase().includes("at")) {
+                continue;
+            }
+            cleanMessage += parts[i];
+            if (i < parts.length - 1) {
+                cleanMessage += " ";
+            }
+        }
+    }
+    else {
+        cleanMessage = message;
+    }
+    document.getElementById("warning-text").innerText = cleanMessage.trim();
+    warning.style.display = "flex";
+}
+
+function closeWarning() {
+    document.getElementById("item-warning").style.display = "none";
+}
+
+function updateInventoryDisplay() {
+    let grid = document.getElementById("inventory-grid");
+    let items = gameData.player.inventory;
+    let inventoryHTML = "";
+
+    for (let i = 0; i < items.length; i++) {
+        let itemName = items[i];
+        let imagePath = `./game_images/item_${itemName}.png`;
+
+        inventoryHTML += `
+            <div class="inventory-item">
+                <img src="${imagePath}" alt="Item" 
+                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:white; font-size:2vh;\'>?</span>';">
+            </div>`;
+    }
+    grid.innerHTML = inventoryHTML;
+}
+
+function toggleInventory() {
+    pauseOpen = !pauseOpen;
+    let menu = document.getElementById("pause-menu");
+
+    if (pauseOpen) {
+        updateInventoryDisplay();
+        menu.style.display = "flex";
+        document.body.classList.add("backpack-open");
+    }
+    else {
+        menu.style.display = "none";
+        document.body.classList.remove("backpack-open");
+    }
+}
+
 document.addEventListener("keydown", function (event) {
-
     if (event.key === "Escape") {
-
-        pauseOpen = !pauseOpen;
-
-        let menu = document.getElementById("pause-menu");
-
-        if (pauseOpen) {
-            menu.style.display = "flex";
-        }
-        else {
-            menu.style.display = "none";
-        }
+        toggleInventory();
     }
 });

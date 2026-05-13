@@ -156,11 +156,75 @@ body {
     inset: 0;
     display: none;
     justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.85);
-    color: white;
-    font-size: 50px;
+    align-items: flex-start;
+    background-image: url('../images/Backpack_UI.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: 9999;
+    overflow-y: auto;
+    padding: 10vh 0;
+    scrollbar-width: none;
+}
+
+#inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vh;
+    width: 70vw;
+    align-content: start;
+}
+
+.close-backpack {
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    background: #d12310;
+    color: white;
+    border: 0.4vh solid black;
+    font-family: ByteBounce;
+    font-size: 5vh;
+    padding: 1vh 3vh;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+#inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vh;
+    width: 70vw;
+    height: 60vh;
+    margin-top: 5vh;
+}
+
+.inventory-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2vh;
+}
+
+.inventory-item img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.6));
+}
+
+.close-backpack {
+    position: absolute;
+    top: 5vh;
+    right: 5vw;
+    background: #d12310;
+    color: white;
+    border: 0.4vh solid black;
+    font-family: ByteBounce;
+    font-size: 5vh;
+    padding: 1vh 3vh;
+    cursor: pointer;
 }
 
 .fade-in {
@@ -203,14 +267,88 @@ body {
     }
 }
 
-@keyframes flashGreen {
-    50% {
-        box-shadow: inset 0 0 60px rgba(0, 255, 0, 0.4);
+#flash-effect-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.karma-good-flash {
+    animation: flashGreenAnim 0.6s ease-out;
+}
+
+.karma-bad-flash {
+    animation: flashRedAnim 0.6s ease-out;
+}
+
+@keyframes flashGreenAnim {
+    0% {
+        background-color: rgba(0, 255, 0, 0);
+    }
+
+    30% {
+        background-color: rgba(0, 255, 0, 0.4);
+    }
+
+    100% {
+        background-color: rgba(0, 255, 0, 0);
     }
 }
 
-@keyframes flashRed {
-    50% {
-        box-shadow: inset 0 0 60px rgba(255, 0, 0, 0.4);
+@keyframes flashRedAnim {
+    0% {
+        background-color: rgba(255, 0, 0, 0);
     }
+
+    30% {
+        background-color: rgba(255, 0, 0, 0.4);
+    }
+
+    100% {
+        background-color: rgba(255, 0, 0, 0);
+    }
+}
+
+.warning-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.warning-content {
+    background: #2c3e50;
+    color: white;
+    padding: 2%;
+    border: 3px solid #9a1304;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 0px;
+    font-family: ByteBounce;
+    font-size: 1.5rem;
+}
+
+.warning-content button {
+    margin-top: 1%;
+    padding: 1% 2%;
+    cursor: pointer;
+    background: #d12310;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: ByteBounce;
+    font-size: 1.5rem;
 }
