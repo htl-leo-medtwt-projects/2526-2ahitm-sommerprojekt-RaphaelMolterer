@@ -14,6 +14,7 @@
 
 <body>
     <div id="flash-effect-overlay"></div>
+    <button id="reset-game-btn" onclick="resetGame()">🗑️</button>
     <div id="audio-controls">
         <button id="mute-music-btn" onclick="toggleMuteMusic()">Musik: AN</button>
         <button id="mute-sounds-btn" onclick="toggleMuteSounds()">Sounds: AN</button>
@@ -37,8 +38,18 @@
     </div>
     <div id="item-warning" class="warning-overlay">
         <div class="warning-content">
-            <p id="warning-text">Du hast das benötigte Item nicht!</p>
+            <p id="warning-text">Du hast das benoetigte Item nicht!</p>
             <button onclick="closeWarning()">Verstanden</button>
+        </div>
+    </div>
+    <div id="reset-confirm-overlay" class="warning-overlay">
+        <div class="warning-content">
+            <p>Moechtest du das Spiel wirklich zuruecksetzen?</p>
+            <p id="reset-confirm-text">Dein gesamter Fortschritt, alle Items und dein Karma gehen verloren.</p>
+            <div id="ask-reset">
+                <button onclick="executeResetGame()" style="background: #d12310;">Ja, zuruecksetzen</button>
+                <button onclick="closeResetConfirm()" style="background: #34495e;">Abbrechen</button>
+            </div>
         </div>
     </div>
     <div id="game-container">

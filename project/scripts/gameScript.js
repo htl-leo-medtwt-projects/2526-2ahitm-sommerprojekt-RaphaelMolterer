@@ -362,14 +362,16 @@ function updateAudioButtonUI() {
     if (musicBtn) {
         if (isMusicMuted) {
             musicBtn.innerText = "Musik: STUMM";
-        } else {
+        }
+        else {
             musicBtn.innerText = "Musik: AN";
         }
     }
     if (soundsBtn) {
         if (isSoundsMuted) {
             soundsBtn.innerText = "Sounds: STUMM";
-        } else {
+        }
+        else {
             soundsBtn.innerText = "Sounds: AN";
         }
     }
@@ -442,6 +444,25 @@ function toggleInventory() {
         menu.style.display = "none";
         document.body.classList.remove("backpack-open");
     }
+}
+
+function resetGame() {
+    let confirmOverlay = document.getElementById("reset-confirm-overlay");
+    if (confirmOverlay) {
+        confirmOverlay.style.display = "flex";
+    }
+}
+
+function closeResetConfirm() {
+    let confirmOverlay = document.getElementById("reset-confirm-overlay");
+    if (confirmOverlay) {
+        confirmOverlay.style.display = "none";
+    }
+}
+
+function executeResetGame() {
+    localStorage.removeItem("cartoon_adventure_save");
+    location.reload();
 }
 
 // ==========================================

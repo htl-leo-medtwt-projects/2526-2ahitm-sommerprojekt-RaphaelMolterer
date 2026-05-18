@@ -372,9 +372,9 @@ body {
     background: white;
     border: 3px solid black;
     cursor: pointer;
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); 
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
     transition: transform 0.1s ease, box-shadow 0.1s ease;
-    -webkit-text-stroke: 0px; 
+    -webkit-text-stroke: 0px;
 }
 
 #audio-controls button:hover {
@@ -385,5 +385,67 @@ body {
 
 #audio-controls button:active {
     transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#reset-game-btn {
+    position: fixed;
+    top: 2vh;
+    left: 2vw;
+    padding: 1vh 1.5vw;
+    font-family: ByteBounce;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: #d12310;
+    border: 3px solid black;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+    z-index: 999999;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    -webkit-text-stroke: 0px;
+}
+
+#reset-game-btn:hover {
+    background: #b51c0c;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
+#reset-game-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+}
+
+#reset-confirm-text {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    -webkit-text-stroke-width: 0px;
+    margin-top: 0.5rem;
+}
+
+#ask-reset {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+#ask-reset button {
+    margin-top: 0;
+    padding: 1vh 2vw;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#ask-reset button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+}
+
+#ask-reset button:active {
+    transform: translate(3px, 3px);
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
 }
