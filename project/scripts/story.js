@@ -714,7 +714,7 @@ let gameData = {
     },
 
     "dl_5": {
-        "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotroester, aggressive Staubsauger und ein schlafwandelnder Kampfanzug.",
+        "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotroester, aggressive Staubsauger und ein Kampfanzug.",
         "background": "./game_images/background_dl_archive.png",
         "choices": [
             { "text": "Kampfanzug stehlen", "next": "prototype_armor", "gain_item": "prototype_armor", "karma": -3 },
@@ -723,31 +723,38 @@ let gameData = {
     },
 
     "prototype_armor": {
-        "text": "Du stiehlst einen schlafwandelnden Kampfanzug",
+        "text": "Du stiehlst einen Kampfanzug",
+        "background": "./game_images/background_dl_archive.png",
         "character": "./game_images/item_dl_armor.png",
         "choices": [
-            { "text": "Weiter", "next": "dl_10" }
+            { "text": "Weiter zu Dee Dee", "next": "dl_7" }
         ]
     },
 
     "dl_6": {
         "text": "Das Abschalten destabilisiert das Hauptreaktor-System.",
+        "background": "./game_images/background_dl_reactor.png",
         "choices": [
             { "text": "Reaktor reparieren", "next": "dl_12", "karma": 4 },
-            { "text": "Dexter warnen", "next": "dl_8" }
+            { "text": "Dexter warnen", "next": "dl_8" },
+            { "text": "Schnell weiter zu Dee Dee", "next": "dl_7"}
         ]
     },
 
     "dl_7": {
         "text": "Dee Dee zeichnet ein riesiges gefährliches Monster mit Lasernaugen.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_monster.png",
         "choices": [
             { "text": "Monster bekaempfen", "next": "dl_13", "karma": 3, "required_item": "prototype_armor" },
-            { "text": "Zeichnung loeschen", "next": "dl_11", "karma": -3 }
+            { "text": "Ignorieren und warten das Dexter ihn beseitigt", "next": "dl_11", "karma": -3 }
         ]
     },
 
     "dl_8": {
         "text": "Der aeltere Dexter erklaert: 'Ein Experiment namens Project Perfect wird bald alles ersetzen.'",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_old_dexter.png",
         "choices": [
             { "text": "Mehr erfahren", "next": "dl_14" },
             { "text": "Ignorieren", "next": "dl_12", "karma": -4 }
@@ -756,30 +763,36 @@ let gameData = {
 
     "dl_9": {
         "text": "Die eingeschlossenen Roboter fusionieren zu einer einzigen gigantischen Maschine.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_robot.png",
         "choices": [
             { "text": "Kaempfen", "next": "dl_13" },
             { "text": "Verstecken", "next": "dl_15", "karma": -3 }
         ]
     },
 
-    "dl_10": {
-        "text": "Der Kampfanzug funktioniert... meistens. Gelegentlich greift er zufaellige Objekte an.",
+    "dl_11": {
+        "text": "Du findest alte Bauplaene fuer Project Perfect.",
+        "background": "./game_images/background_dl_archive.png",
         "choices": [
-            { "text": "Weiter benutzen", "next": "dl_16", "karma": -2 },
-            { "text": "Abschalten", "next": "dl_11" }
+            { "text": "Plaene analysieren", "next": "perfect_blueprint", "gain_item": "perfect_blueprint" },
+            { "text": "Verbrennen", "next": "dl_12", "karma": 2 }
         ]
     },
 
-    "dl_11": {
-        "text": "Du findest alte Bauplaene fuer Project Perfect.",
+    "perfect_blueprint": {
+        "text": "Du erhaeltst die Bauplaene fuer Project Perfect.",
+        "background": "./game_images/background_dl_archive.png",
+        "character": "./game_images/item_dl_blueprint.png",
         "choices": [
-            { "text": "Plaene analysieren", "next": "dl_14", "gain_item": "perfect_blueprint" },
-            { "text": "Verbrennen", "next": "dl_12", "karma": 2 }
+            { "text": "Weiter", "next": "dl_14" }
         ]
     },
 
     "dl_12": {
         "text": "Mandark taucht ploetzlich auf und behauptet, Dexter habe das Chaos selbst verursacht.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_mandark.png",
         "choices": [
             { "text": "Mandark glauben", "next": "dl_17", "karma": -5 },
             { "text": "Dexter verteidigen", "next": "dl_14", "karma": 4 }
@@ -788,6 +801,8 @@ let gameData = {
 
     "dl_13": {
         "text": "Das Monster beschaedigt mehrere Sicherheitskerne im Labor.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_monster.png",
         "choices": [
             { "text": "Kerne retten", "next": "dl_18", "karma": 5 },
             { "text": "Monster verfolgen", "next": "dl_15", "karma": -2 }
@@ -796,6 +811,7 @@ let gameData = {
 
     "dl_14": {
         "text": "Project Perfect sollte Dexters fehlerhafte Erfindungen automatisch verbessern.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Projekt aktivieren", "next": "dl_19" },
             { "text": "Projekt stoppen", "next": "dl_18", "karma": 3 }
@@ -804,6 +820,8 @@ let gameData = {
 
     "dl_15": {
         "text": "Im alten Testbereich arbeiten fehlgeschlagene Klon-Dexters heimlich weiter.",
+        "background": "./game_images/background_dl_test_area.png",
+        "character": "./game_images/character_dl_clone_dexter.png",
         "choices": [
             { "text": "Mit ihnen reden", "next": "dl_20" },
             { "text": "Alarm ausloesen", "next": "dl_18", "karma": -3 }
@@ -812,6 +830,8 @@ let gameData = {
 
     "dl_16": {
         "text": "Der Kampfanzug scannt ploetzlich Dee Dee als Bedrohung.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_deedee.png",
         "choices": [
             { "text": "Dee Dee schuetzen", "next": "dl_20", "karma": 4 },
             { "text": "Anzug weiterkaempfen lassen", "next": "dl_21", "karma": -5 }
@@ -820,6 +840,8 @@ let gameData = {
 
     "dl_17": {
         "text": "Mandark fuehrt dich in ein geheimes Konkurrenzlabor unter Dexters Haus.",
+        "background": "./game_images/background_dl_mandark_lab.png",
+        "character": "./game_images/character_dl_mandark.png",
         "choices": [
             { "text": "Zusammenarbeiten", "next": "dl_19", "karma": -2 },
             { "text": "Sabotieren", "next": "dl_18", "karma": 4 }
@@ -828,6 +850,8 @@ let gameData = {
 
     "dl_18": {
         "text": "Dexter entdeckt, dass Project Perfect beginnt, das gesamte Labor umzubauen.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_dexter.png",
         "choices": [
             { "text": "Kontrolle uebernehmen", "next": "dl_22", "required_item": "perfect_blueprint" },
             { "text": "Hauptsystem zerstoeren", "next": "dl_21", "karma": -4 }
@@ -836,6 +860,7 @@ let gameData = {
 
     "dl_19": {
         "text": "Project Perfect aktiviert sich vollstaendig und ersetzt kaputte Geraete durch perfekte Versionen.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Beobachten", "next": "dl_22" },
             { "text": "Sofort stoppen", "next": "dl_21", "karma": 2 }
@@ -844,6 +869,8 @@ let gameData = {
 
     "dl_20": {
         "text": "Die Klon-Dexters behaupten, sie seien entsorgt worden, obwohl sie funktionierten.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_clone_dexter.png",
         "choices": [
             { "text": "Ihnen helfen", "next": "dl_23", "karma": -2 },
             { "text": "Dexter informieren", "next": "dl_22", "karma": 3 }
@@ -852,6 +879,7 @@ let gameData = {
 
     "dl_21": {
         "text": "Das Labor beginnt auseinanderzufallen.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Evakuieren", "next": "dl_24", "karma": 5 },
             { "text": "Experiment retten", "next": "dl_23", "karma": -4 }
@@ -860,6 +888,7 @@ let gameData = {
 
     "dl_22": {
         "text": "Project Perfect stuft ploetzlich Menschen als 'ineffizient' ein.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "System neu programmieren", "next": "dl_25", "required_item": "perfect_blueprint" },
             { "text": "Computer zerstoeren", "next": "dl_24", "karma": -2 }
@@ -868,6 +897,8 @@ let gameData = {
 
     "dl_23": {
         "text": "Mandark versucht heimlich, Project Perfect zu uebernehmen.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_mandark.png",
         "choices": [
             { "text": "Mandark stoppen", "next": "dl_25", "karma": 4 },
             { "text": "Mandark gewaehren lassen", "next": "dl_26", "karma": -6 }
@@ -876,6 +907,8 @@ let gameData = {
 
     "dl_24": {
         "text": "Dee Dee findet den Hauptkern des Systems und beginnt darauf herumzutanzen.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_deedee.png",
         "choices": [
             { "text": "Mitmachen", "next": "dl_26", "karma": -3 },
             { "text": "Sie wegziehen", "next": "dl_25", "karma": 2 }
@@ -884,6 +917,8 @@ let gameData = {
 
     "dl_25": {
         "text": "Dexter schafft es, Project Perfect umzuprogrammieren.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_dexter.png",
         "choices": [
             { "text": "Nur gefaehrliche Erfindungen loeschen", "next": "dl_27", "karma": 5 },
             { "text": "Alles zuruecksetzen", "next": "dl_28", "karma": -2 }
@@ -892,6 +927,7 @@ let gameData = {
 
     "dl_26": {
         "text": "Das Labor wird kurzzeitig komplett von der KI kontrolliert.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Dexter helfen", "next": "dl_27", "karma": 4 },
             { "text": "Selbst fliehen", "next": "dl_28", "karma": -5 }
@@ -900,6 +936,8 @@ let gameData = {
 
     "dl_27": {
         "text": "Die meisten Fehlfunktionen verschwinden langsam. Dexter wirkt erschoepft.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_dexter.png",
         "choices": [
             { "text": "Dexter beruhigen", "next": "dl_29", "karma": 3 },
             { "text": "Mandark suchen", "next": "dl_28" }
@@ -908,6 +946,8 @@ let gameData = {
 
     "dl_28": {
         "text": "Ein letzter versteckter Reject-Roboter aktiviert sich heimlich.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_robot.png",
         "choices": [
             { "text": "Mit einer lebendigen Zeichnung besiegen", "next": "dl_29", "required_item": "living_sketch" },
             { "text": "Ignorieren", "next": "dl_30", "karma": -5 }
@@ -916,6 +956,8 @@ let gameData = {
 
     "dl_29": {
         "text": "Dexter versiegelt das Reject-Archiv erneut. Dee Dee malt bereits wieder an einer neuen Maschine.",
+        "background": "./game_images/background_dl_archive.png",
+        "character": "./game_images/character_dl_dexter.png",
         "choices": [
             { "text": "Aufpassen", "next": "dl_30", "karma": 2 },
             { "text": "Labor verlassen", "next": "dl_30" }
@@ -924,6 +966,7 @@ let gameData = {
 
     "dl_30": {
         "text": "Das Labor stabilisiert sich langsam wieder. Irgendwo tief im Archiv blinkt jedoch weiterhin ein vergessenes Experiment.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Weiterziehen", "next": "c2_start" }
         ]
