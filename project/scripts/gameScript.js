@@ -18,6 +18,8 @@ let currentSlide = 0;
 let currentScene = "start";
 let pauseOpen = false;
 let sounds = {};
+let isMusicMuted = false;
+let isSoundsMuted = false;
 
 // ==========================================
 // LOCAL STORAGE SPEICHERUNG
@@ -28,17 +30,15 @@ function saveGame() {
         currentScene: currentScene,
         player: gameData.player,
         phase: phase,
-        currentSlide: currentSlide
+        currentSlide: currentSlide,
+        isMusicMuted: isMusicMuted,
+        isSoundsMuted: isSoundsMuted
     };
     localStorage.setItem("cartoon_adventure_save", JSON.stringify(saveState));
 }
 
 function loadGame() {
     let savedData = localStorage.getItem("cartoon_adventure_save");
-
-    if (sounds.bgMusic && !sounds.bgMusic.playing()) {
-        sounds.bgMusic.play();
-    }
 
     if (savedData) {
         let saveState = JSON.parse(savedData);
@@ -48,6 +48,22 @@ function loadGame() {
         phase = saveState.phase;
         currentSlide = saveState.currentSlide;
 
+        if (saveState.isMusicMuted) {
+            isMusicMuted = saveState.isMusicMuted;
+        }
+        else {
+            isMusicMuted = false;
+        }
+
+        if (saveState.isSoundsMuted) {
+            isSoundsMuted = saveState.isSoundsMuted;
+        }
+        else {
+            isSoundsMuted = false;
+        }
+
+        updateAudioButtonUI();
+
         if (phase === "game") {
             document.getElementById("intro-container").style.display = "none";
             document.getElementById("game-container").style.display = "flex";
@@ -55,19 +71,14 @@ function loadGame() {
             document.body.style.backgroundImage = "none";
             document.getElementById("text").innerText = "";
             showScene(currentScene);
-        } else {
+        }
+        else {
             showSlide();
         }
         console.log("Spielstand erfolgreich geladen!");
-    } else {
-        showSlide();
     }
-}
-
-function resetGame() {
-    if (confirm("Möchtest du das Spiel wirklich zurücksetzen? Alle Items und Karma gehen verloren.")) {
-        localStorage.removeItem("cartoon_adventure_save");
-        location.reload();
+    else {
+        showSlide();
     }
 }
 
@@ -76,8 +87,10 @@ function resetGame() {
 // ==========================================
 
 function next() {
-    if (sounds.bgMusic && !sounds.bgMusic.playing()) {
-        sounds.bgMusic.play();
+    if (sounds.bgMusic) {
+        if (!sounds.bgMusic.playing()) {
+            sounds.bgMusic.play();
+        }
     }
     currentSlide++;
     if (currentSlide >= slides.length) {
@@ -107,13 +120,17 @@ function showSlide() {
 // ==========================================
 
 function handleChoice(nextScene, karma, gainItem, requiredItem) {
-    if (sounds.bgMusic && !sounds.bgMusic.playing()) {
-        sounds.bgMusic.play();
+    if (sounds.bgMusic) {
+        if (!sounds.bgMusic.playing()) {
+            sounds.bgMusic.play();
+        }
     }
 
-    if (requiredItem && !gameData.player.inventory.includes(requiredItem)) {
-        showWarning(requiredItem);
-        return;
+    if (requiredItem) {
+        if (!gameData.player.inventory.includes(requiredItem)) {
+            showWarning(requiredItem);
+            return;
+        }
     }
 
     if (karma) {
@@ -204,9 +221,21 @@ function showScene(scene) {
 
     for (let i = 0; i < sceneData.choices.length; i++) {
         let choice = sceneData.choices[i];
-        let karmaWert = choice.karma ? choice.karma : 0;
-        let itemGewonnen = choice.gain_item ? choice.gain_item : "";
-        let itemBenoetigt = choice.required_item ? choice.required_item : "";
+
+        let karmaWert = 0;
+        if (choice.karma) {
+            karmaWert = choice.karma;
+        }
+
+        let itemGewonnen = "";
+        if (choice.gain_item) {
+            itemGewonnen = choice.gain_item;
+        }
+
+        let itemBenoetigt = "";
+        if (choice.required_item) {
+            itemBenoetigt = choice.required_item;
+        }
 
         let btnHtml = "<button onclick=\"handleChoice('" + choice.next + "', " + karmaWert + ", '" + itemGewonnen + "', '" + itemBenoetigt + "')\">" + choice.text + "</button>";
         choicesDiv.innerHTML += btnHtml;
@@ -255,18 +284,96 @@ function initSounds() {
         loop: true,
         html5: true
     });
+
+    if (isMusicMuted) {
+        sounds.bgMusic.mute(true);
+    }
+    if (isSoundsMuted) {
+        muteAllSounds(true);
+    }
+
+    updateAudioButtonUI();
 }
 
 function playKarmaSound(karma) {
-    if (karma > 0 && sounds.good) {
-        sounds.good.play();
+    if (isSoundsMuted) {
+        return;
     }
-    else if (karma < 0 && sounds.bad) {
-        sounds.bad.play();
+
+    if (karma > 0) {
+        if (sounds.good) {
+            sounds.good.play();
+        }
+    }
+    else if (karma < 0) {
+        if (sounds.bad) {
+            sounds.bad.play();
+        }
     }
 }
 
+function toggleMuteMusic() {
+    if (isMusicMuted) {
+        isMusicMuted = false;
+    } else {
+        isMusicMuted = true;
+    }
 
+    if (sounds.bgMusic) {
+        sounds.bgMusic.mute(isMusicMuted);
+        if (!isMusicMuted) {
+            if (!sounds.bgMusic.playing()) {
+                sounds.bgMusic.play();
+            }
+        }
+    }
+    updateAudioButtonUI();
+    saveGame();
+}
+
+function toggleMuteSounds() {
+    if (isSoundsMuted) {
+        isSoundsMuted = false;
+    } else {
+        isSoundsMuted = true;
+    }
+
+    muteAllSounds(isSoundsMuted);
+    updateAudioButtonUI();
+    saveGame();
+}
+
+function muteAllSounds(muteState) {
+    if (sounds.steps) {
+        sounds.steps.mute(muteState);
+    }
+    if (sounds.good) {
+        sounds.good.mute(muteState);
+    }
+    if (sounds.bad) {
+        sounds.bad.mute(muteState);
+    }
+}
+
+function updateAudioButtonUI() {
+    const musicBtn = document.getElementById("mute-music-btn");
+    const soundsBtn = document.getElementById("mute-sounds-btn");
+
+    if (musicBtn) {
+        if (isMusicMuted) {
+            musicBtn.innerText = "Musik: STUMM";
+        } else {
+            musicBtn.innerText = "Musik: AN";
+        }
+    }
+    if (soundsBtn) {
+        if (isSoundsMuted) {
+            soundsBtn.innerText = "Sounds: STUMM";
+        } else {
+            soundsBtn.innerText = "Sounds: AN";
+        }
+    }
+}
 
 // ==========================================
 // WARNING & INVENTORY 
@@ -318,7 +425,12 @@ function updateInventoryDisplay() {
 }
 
 function toggleInventory() {
-    pauseOpen = !pauseOpen;
+    if (pauseOpen) {
+        pauseOpen = false;
+    } else {
+        pauseOpen = true;
+    }
+
     let menu = document.getElementById("pause-menu");
 
     if (pauseOpen) {
@@ -331,6 +443,10 @@ function toggleInventory() {
         document.body.classList.remove("backpack-open");
     }
 }
+
+// ==========================================
+// INITIALISIERUNG
+// ==========================================
 
 initSounds();
 
