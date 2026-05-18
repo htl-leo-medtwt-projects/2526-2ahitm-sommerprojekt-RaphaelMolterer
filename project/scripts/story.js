@@ -23,7 +23,7 @@ let gameData = {
         "choices": [
             { "text": "Finn und Jake helfen", "next": "at_1", "karma": 1 },
             { "text": "Den Geraeuschen folgen", "next": "at_2" },
-            { "text": "Mit Bubblegum reden", "next": "at_3"},
+            { "text": "Mit Bubblegum reden", "next": "at_3" },
             { "text": "Die Buerger evakuieren", "next": "at_4", "karma": 2 }
         ]
     },
@@ -227,7 +227,7 @@ let gameData = {
         "background": "./game_images/background_at_store.png",
         "character": "./game_images/item_at_sugar_mask.png",
         "choices": [
-            { "text": "Maske nehmen", "next": "at_23"},
+            { "text": "Maske nehmen", "next": "at_23" },
         ]
     },
 
@@ -388,8 +388,6 @@ let gameData = {
         ]
     },
 
-    //suchen
-    
     "gb_3": {
         "text": "Anais haelt mehrere Zettel in der Hand. 'Gumball und Darwin haben versucht, ihre Noten zu verbessern und dabei vermutlich das Schulnetzwerk zerstoert.'",
         "background": "./game_images/background_gb_school.png",
@@ -416,14 +414,14 @@ let gameData = {
         "character": "./game_images/character_gb_gumball.png",
         "background": "./game_images/background_gb_computer_room.png",
         "choices": [
-            { "text": "Computer untersuchen", "next": "gb_11", "gain_item": "school_access_card" },
+            { "text": "Computer untersuchen", "next": "gb_11" },
             { "text": "Lieber abhauen", "next": "gb_6", "karma": -1 }
         ]
     },
 
     "gb_6": {
         "text": "Waehrend ihr diskutiert, faellt ploetzlich in der ganzen Schule der Strom aus. Schueler schreien, Automaten explodieren und irgendwo spielt eine Trompete.",
-        
+        "background": "./game_images/background_gb_dark_room.png",
         "choices": [
             { "text": "Weiter", "next": "gb_12" }
         ]
@@ -431,6 +429,8 @@ let gameData = {
 
     "gb_7": {
         "text": "Darwin erklaert alles hektisch. 'Wir wollten nur die Noten kurz ansehen. Dann hat Gumball auf irgendwas geklickt und jetzt funktioniert nichts mehr.'",
+        "character": "./game_images/character_gb_darwin.png",
+        "background": "./game_images/background_gb_school.png",
         "choices": [
             { "text": "Verstehen", "next": "gb_10", "karma": 2 },
             { "text": "Gumball beschuldigen", "next": "gb_12", "karma": -2 }
@@ -439,6 +439,7 @@ let gameData = {
 
     "gb_8": {
         "text": "In der Schule wiederholt die Lautsprecheranlage staendig dieselbe Durchsage von Principal Brown.",
+        "background": "./game_images/background_gb_school.png",
         "choices": [
             { "text": "Kontrollraum suchen", "next": "gb_11" }
         ]
@@ -446,13 +447,17 @@ let gameData = {
 
     "gb_9": {
         "text": "Anais verbindet ihr Tablet mit dem Schulserver. 'Okay. Das Chaos kommt von einem Fehler im Hauptsystem. ueberraschenderweise war Gumball diesmal nicht komplett schuld.'",
+        "background": "./game_images/background_gb_school.png",
+        "character": "./game_images/character_gb_anais.png",
         "choices": [
-            { "text": "Daten speichern", "next": "gb_13", "gain_item": "anais_backup_drive" }
+            { "text": "System analysieren", "next": "gb_13" }
         ]
     },
 
     "gb_10": {
         "text": "Gumball versucht den Computer neu zu starten und sorgt versehentlich dafuer, dass ueberall die Feueralarme losgehen.",
+        "background": "./game_images/background_gb_computer_room.png",
+        "character": "./game_images/character_gb_gumball.png",
         "choices": [
             { "text": "Beim Stoppen helfen", "next": "gb_13", "karma": 2 },
             { "text": "Nur zusehen", "next": "gb_12" }
@@ -461,6 +466,7 @@ let gameData = {
 
     "gb_11": {
         "text": "Im Kontrollraum entdeckt ihr, dass das gesamte Schulnetzwerk in einer Endlosschleife festhaengt.",
+        "background": "./game_images/background_gb_control_room.png",
         "choices": [
             { "text": "System reparieren", "next": "gb_14" },
             { "text": "Ignorieren", "next": "gb_12", "karma": -1 }
@@ -469,6 +475,7 @@ let gameData = {
 
     "gb_12": {
         "text": "Die Schule versinkt komplett im Chaos. Tueren oeffnen sich zufaellig, Lautsprecher rauschen und Larry versucht gleichzeitig zehn Probleme zu loesen.",
+        "background": "./game_images/background_gb_school.png",
         "choices": [
             { "text": "Weiter", "next": "gb_15" }
         ]
@@ -476,21 +483,35 @@ let gameData = {
 
     "gb_13": {
         "text": "Darwin gibt dir einen USB-Stick. 'Anais meint, damit koennten wir das System zuruecksetzen.'",
+        "background": "./game_images/background_gb_school.png",
+        "character": "./game_images/character_gb_darwin.png",
         "choices": [
-            { "text": "Nehmen", "next": "gb_15", "gain_item": "reset_drive" }
+            { "text": "Nehmen", "next": "reset_drive", "gain_item": "reset_drive" }
+        ]
+    },
+
+    "reset_drive": {
+        "text": "Du erhaeltst einen Reset-Drive.",
+        "background": "./game_images/background_gb_school.png",
+        "character": "./game_images/item_gb_reset_drive.png",
+        "choices": [
+            { "text": "Weiter", "next": "gb_15" }
         ]
     },
 
     "gb_14": {
         "text": "Das System zeigt ploetzlich hunderte fehlerhafte Dateien mit Namen wie 'Elmore_Final_v2_REAL_final'.",
+        "background": "./game_images/background_gb_control_room.png",
         "choices": [
-            { "text": "Dateien analysieren", "next": "gb_16", "gain_item": "system_logs" },
+            { "text": "Dateien analysieren", "next": "gb_16" },
             { "text": "Einfach loeschen", "next": "gb_16", "karma": 2 }
         ]
     },
 
     "gb_15": {
         "text": "Gumball lehnt sich erschoepft gegen die Wand. 'Warum endet bei uns eigentlich jeder normale Tag in einer Katastrophe?'",
+        "background": "./game_images/background_gb_school.png",
+        "character": "./game_images/character_gb_gumball.png",
         "choices": [
             { "text": "Antworten", "next": "gb_17", "karma": 2 },
             { "text": "Schweigen", "next": "gb_17", "karma": -2 }
@@ -499,6 +520,8 @@ let gameData = {
 
     "gb_16": {
         "text": "Anais liest die Systemfehler durch. 'Okay... irgendwas schreibt die Fehler staendig neu. Deshalb kommt alles wieder zurueck.'",
+        "background": "./game_images/background_gb_control_room.png",
+        "character": "./game_images/character_gb_anais.png",
         "choices": [
             { "text": "Zuhoeren", "next": "gb_17", "karma": 2 },
             { "text": "Nicht verstehen", "next": "gb_12", "karma": -1 }
@@ -507,6 +530,7 @@ let gameData = {
 
     "gb_17": {
         "text": "Die Bildschirme der Schule beginnen ploetzlich gleichzeitig zu flackern.",
+        "background": "./game_images/background_gb_school.png",
         "choices": [
             { "text": "Weitergehen", "next": "gb_18" }
         ]
@@ -514,6 +538,8 @@ let gameData = {
 
     "gb_18": {
         "text": "Banana Joe erscheint auf einem der Bildschirme. 'aeh... warum bin ich ploetzlich im Schulsystem drin?'",
+        "background": "./game_images/background_gb_school.png",
+        "character": "./game_images/character_gb_banana.png",
         "choices": [
             { "text": "Mit ihm reden", "next": "gb_19" },
             { "text": "Ignorieren", "next": "gb_19", "karma": -1 }
@@ -522,6 +548,7 @@ let gameData = {
 
     "gb_19": {
         "text": "Der Hauptcomputer der Schule beginnt komplett zu ueberhitzen.",
+        "background": "./game_images/background_gb_control_room.png",
         "choices": [
             { "text": "Reparieren", "next": "gb_20" }
         ]
@@ -529,6 +556,8 @@ let gameData = {
 
     "gb_20": {
         "text": "Darwin schafft es kurz, die Systeme zu stabilisieren. 'Okay! Jetzt oder nie!'",
+        "background": "./game_images/background_gb_control_room.png",
+        "character": "./game_images/character_gb_darwin.png",
         "choices": [
             { "text": "Vertrauen", "next": "gb_21", "karma": 2 },
             { "text": "Zweifeln", "next": "gb_21", "karma": -2 }
@@ -537,14 +566,18 @@ let gameData = {
 
     "gb_21": {
         "text": "Gumball startet das Backup-System. Fuer einen Moment funktioniert ploetzlich wieder alles normal.",
+        "background": "./game_images/background_gb_control_room.png",
+        "character": "./game_images/character_gb_gumball.png",
         "choices": [
-            { "text": "ueberpruefen", "next": "gb_22", "gain_item": "system_restore_key" },
+            { "text": "ueberpruefen", "next": "gb_22" },
             { "text": "Abwarten", "next": "gb_22", "karma": -1 }
         ]
     },
 
     "gb_22": {
         "text": "Anais verschraenkt die Arme. 'Das Problem war nie der Computer. Die Schule selbst hat staendig fehlerhafte Daten produziert.'",
+        "background": "./game_images/background_gb_control_room.png",
+        "character": "./game_images/character_gb_anais.png",
         "choices": [
             { "text": "Glauben", "next": "gb_23", "karma": 2 },
             { "text": "Nicht glauben", "next": "gb_23", "karma": -2 }
@@ -553,6 +586,7 @@ let gameData = {
 
     "gb_23": {
         "text": "Ploetzlich springt der Strom wieder an. Die Schule sieht aus, als waere nie etwas passiert.",
+        "background": "./game_images/background_gb_control_room.png",
         "choices": [
             { "text": "Weiter", "next": "gb_24" }
         ]
@@ -560,6 +594,8 @@ let gameData = {
 
     "gb_24": {
         "text": "Gumball grinst erleichtert. 'Cool. Also haben wir offiziell nur fast die komplette Schule zerstoert.'",
+        "background": "./game_images/background_gb_school.png",
+        "character": "./game_images/character_gb_gumball.png",
         "choices": [
             { "text": "Lachen", "next": "gb_25", "karma": 1 },
             { "text": "Kopfschuetteln", "next": "gb_25", "karma": -1 }
@@ -567,7 +603,8 @@ let gameData = {
     },
 
     "gb_25": {
-        "text": "ueber der Schule oeffnet sich ploetzlich ein seltsamer leuchtender Riss am Himmel.",
+        "text": "Ueber der Schule oeffnet sich ploetzlich ein seltsamer leuchtender Riss am Himmel.",
+        "background": "./game_images/background_gb_elmore.png",
         "choices": [
             { "text": "Ansehen", "next": "gb_26" }
         ]
@@ -575,14 +612,17 @@ let gameData = {
 
     "gb_26": {
         "text": "Darwin schaut nervoes nach oben. 'Bitte sag mir, das hat nichts mit uns zu tun.'",
+        "background": "./game_images/background_gb_elmore.png",
+        "character": "./game_images/character_gb_darwin.png",
         "choices": [
-            { "text": "Untersuchen", "next": "gb_27", "required_item": "reset_drive" },
-            { "text": "Zoegern", "next": "gb_27", "karma": -1 }
+            { "text": "Mit Reset-Drive untersuchen", "next": "gb_27", "required_item": "reset_drive" },
+            { "text": "Ohne Plan abwarten (Benötigt kein Item)", "next": "gb_27", "karma": -1 }
         ]
     },
 
     "gb_27": {
         "text": "Der Himmel ueber Elmore beginnt zu flackern wie ein kaputter Fernseher.",
+        "background": "./game_images/background_gb_elmore.png",
         "choices": [
             { "text": "Weiter", "next": "gb_28" }
         ]
@@ -590,6 +630,8 @@ let gameData = {
 
     "gb_28": {
         "text": "Anais sieht ernst aus. 'Okay. DAS ist definitiv nicht mehr normaler Cartoon-Wahnsinn.'",
+        "background": "./game_images/background_gb_elmore.png",
+        "character": "./game_images/character_gb_anais.png",
         "choices": [
             { "text": "Zustimmen", "next": "gb_29", "karma": 2 },
             { "text": "Verharmlosen", "next": "gb_29", "karma": -2 }
@@ -598,6 +640,8 @@ let gameData = {
 
     "gb_29": {
         "text": "Gumball schaut zwischen dem Himmel und der Schule hin und her. 'Warum habe ich das Gefuehl, dass das erst der Anfang war?'",
+        "background": "./game_images/background_gb_elmore.png",
+        "character": "./game_images/character_gb_gumball.png",
         "choices": [
             { "text": "Weiter", "next": "gb_30" }
         ]
@@ -605,6 +649,7 @@ let gameData = {
 
     "gb_30": {
         "text": "Der leuchtende Riss stabilisiert sich ueber Elmore und verbindet sich mit etwas weit Groesserem.",
+        "background": "./game_images/background_space.png",
         "choices": [
             { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
@@ -612,6 +657,7 @@ let gameData = {
 
     "c2_dl_start": {
         "text": "Dexter rast hektisch durch sein Labor. ueberall oeffnen sich ploetzlich Mini-Portale, die fehlgeschlagene Erfindungen aus alten Experimenten freisetzen. Dee Dee tanzt ahnungslos zwischen schwebenden Robotern und mutierten Haushaltsgeraeten herum.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Dexter helfen", "next": "dl_1", "karma": 4 },
             { "text": "Dee Dee folgen", "next": "dl_2", "karma": -2 },
@@ -622,6 +668,8 @@ let gameData = {
 
     "dl_1": {
         "text": "Dexter: 'Mein Experimental-Reject-Archiv wurde aktiviert! Dinge, die niemals funktionieren sollten, laufen frei herum!'",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_dexter.png",
         "choices": [
             { "text": "Archiv untersuchen", "next": "dl_5" },
             { "text": "Sofort Systeme abschalten", "next": "dl_6", "karma": -3 }
@@ -630,14 +678,26 @@ let gameData = {
 
     "dl_2": {
         "text": "Dee Dee findet eine Maschine, die jede Zeichnung real werden laesst.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_deedee.png",
         "choices": [
             { "text": "Dee Dee stoppen", "next": "dl_5", "karma": 3 },
-            { "text": "Mitzeichnen", "next": "dl_7", "gain_item": "living_sketch" }
+            { "text": "Mitzeichnen", "next": "living_sketch", "gain_item": "living_sketch" }
+        ]
+    },
+
+    "living_sketch": {
+        "text": "Du erhaeltst die lebendige Zeichnung eines Monsters mit Lasernaugen.",
+        "character": "./game_images/item_dl_sketch.png",
+        "choices": [
+            { "text": "Weiter", "next": "dl_7" }
         ]
     },
 
     "dl_3": {
         "text": "Eines der Portale zeigt eine aeltere Version von Dexter, die panisch Warnungen ruft.",
+        "background": "./game_images/background_dl_lab.png",
+        "character": "./game_images/character_dl_old_dexter.png",
         "choices": [
             { "text": "Zuhoeren", "next": "dl_8" },
             { "text": "Portal schliessen", "next": "dl_6", "karma": -2 }
@@ -646,6 +706,7 @@ let gameData = {
 
     "dl_4": {
         "text": "Du verriegelst mehrere Laborebenen, aber dadurch werden einige Roboter eingeschlossen.",
+        "background": "./game_images/background_dl_lab.png",
         "choices": [
             { "text": "Roboter opfern", "next": "dl_9", "karma": -4 },
             { "text": "Notausgang oeffnen", "next": "dl_5", "karma": 2 }
@@ -654,9 +715,18 @@ let gameData = {
 
     "dl_5": {
         "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotroester, aggressive Staubsauger und ein schlafwandelnder Kampfanzug.",
+        "background": "./game_images/background_dl_archive.png",
         "choices": [
-            { "text": "Kampfanzug aktivieren", "next": "dl_10", "gain_item": "prototype_armor" },
+            { "text": "Kampfanzug stehlen", "next": "prototype_armor", "gain_item": "prototype_armor", "karma": -3 },
             { "text": "Archiv durchsuchen", "next": "dl_11" }
+        ]
+    },
+
+    "prototype_armor": {
+        "text": "Du stiehlst einen schlafwandelnden Kampfanzug",
+        "character": "./game_images/item_dl_armor.png",
+        "choices": [
+            { "text": "Weiter", "next": "dl_10" }
         ]
     },
 
@@ -669,10 +739,10 @@ let gameData = {
     },
 
     "dl_7": {
-        "text": "Dee Dee zeichnet ein riesiges lachendes Monster mit Lasernaugen.",
+        "text": "Dee Dee zeichnet ein riesiges gefährliches Monster mit Lasernaugen.",
         "choices": [
-            { "text": "Monster bekaempfen", "next": "dl_13", "karma": -3 },
-            { "text": "Zeichnung loeschen", "next": "dl_11", "karma": 3 }
+            { "text": "Monster bekaempfen", "next": "dl_13", "karma": 3, "required_item": "prototype_armor" },
+            { "text": "Zeichnung loeschen", "next": "dl_11", "karma": -3 }
         ]
     },
 
@@ -839,7 +909,7 @@ let gameData = {
     "dl_28": {
         "text": "Ein letzter versteckter Reject-Roboter aktiviert sich heimlich.",
         "choices": [
-            { "text": "Abschalten", "next": "dl_29", "required_item": "prototype_armor" },
+            { "text": "Mit einer lebendigen Zeichnung besiegen", "next": "dl_29", "required_item": "living_sketch" },
             { "text": "Ignorieren", "next": "dl_30", "karma": -5 }
         ]
     },
