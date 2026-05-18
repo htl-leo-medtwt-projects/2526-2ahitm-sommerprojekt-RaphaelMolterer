@@ -393,7 +393,7 @@ let gameData = {
     "gb_3": {
         "text": "Anais haelt mehrere Zettel in der Hand. 'Gumball und Darwin haben versucht, ihre Noten zu verbessern und dabei vermutlich das Schulnetzwerk zerstoert.'",
         "background": "./game_images/background_gb_school.png",
-    
+        "character": "./game_images/character_gb_anais.png",
         "choices": [
             { "text": "Anais helfen", "next": "gb_9" },
             { "text": "Ignorieren", "next": "gb_6", "karma": -2 },
@@ -403,14 +403,18 @@ let gameData = {
 
     "gb_4": {
         "text": "Banana Joe rennt lachend ueber den Schulhof. Hinter ihm fliegen hunderte ausgedruckte Zeugnisse durch die Luft.",
+        "background": "./game_images/background_gb_schoolyard.png",
+        "character": "./game_images/character_gb_banana.png",
         "choices": [
-            { "text": "Hinterherrennen", "next": "gb_6" },
+            { "text": "Hinterher rennen", "next": "gb_6" },
             { "text": "Die Zeugnisse einsammeln", "next": "gb_8", "karma": 1 }
         ]
     },
 
     "gb_5": {
         "text": "Gumball fuehrt dich in den Computerraum. Alle Bildschirme zeigen ploetzlich nur noch dieselbe Nachricht: 'SYSTEM ERROR'.",
+        "character": "./game_images/character_gb_gumball.png",
+        "background": "./game_images/background_gb_computer_room.png",
         "choices": [
             { "text": "Computer untersuchen", "next": "gb_11", "gain_item": "school_access_card" },
             { "text": "Lieber abhauen", "next": "gb_6", "karma": -1 }
@@ -419,6 +423,7 @@ let gameData = {
 
     "gb_6": {
         "text": "Waehrend ihr diskutiert, faellt ploetzlich in der ganzen Schule der Strom aus. Schueler schreien, Automaten explodieren und irgendwo spielt eine Trompete.",
+        
         "choices": [
             { "text": "Weiter", "next": "gb_12" }
         ]
