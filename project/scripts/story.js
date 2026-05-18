@@ -340,15 +340,16 @@ let gameData = {
     "at_29": {
         "text": "Im Untergrund schlaegt ein gigantisches lebendes Candy-Herz im Takt der Musik.",
         "background": "./game_images/background_at_underground.png",
-        
+        "character": "./game_images/character_at_heart.png",
         "choices": [
-            { "text": "Beruhigen", "next": "at_30", "required_item": "candy_crystal" },
+            { "text": "Beruhigen", "next": "at_30", "required_item": "at_candy_crystal" },
             { "text": "Zerstoeren", "next": "at_30", "karma": -6 }
         ]
     },
 
     "at_30": {
         "text": "Die Musik verstummt langsam. Das Candy Kingdom ueberlebt, aber einige Bewohner erinnern sich noch lange an diese Nacht.",
+        "background": "./game_images/background_at_candy_kingdom.png",
         "choices": [
             { "text": "Weiterziehen", "next": "c2_start" }
         ]
@@ -379,7 +380,7 @@ let gameData = {
     "gb_2": {
         "text": "Darwin wirkt nervoes. 'Carrie hat aus Versehen die Stromversorgung der Schule gegruselt und jetzt spinnen alle elektronischen Sachen.'",
         "background": "./game_images/background_gb_school.png",
-
+        "character": "./game_images/character_gb_darwin.png",
         "choices": [
             { "text": "Helfen", "next": "gb_7", "karma": 2 },
             { "text": "Darueber lachen", "next": "gb_6", "karma": -1 },
@@ -387,8 +388,12 @@ let gameData = {
         ]
     },
 
+    //suchen
+    
     "gb_3": {
         "text": "Anais haelt mehrere Zettel in der Hand. 'Gumball und Darwin haben versucht, ihre Noten zu verbessern und dabei vermutlich das Schulnetzwerk zerstoert.'",
+        "background": "./game_images/background_gb_school.png",
+    
         "choices": [
             { "text": "Anais helfen", "next": "gb_9" },
             { "text": "Ignorieren", "next": "gb_6", "karma": -2 },

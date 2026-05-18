@@ -15,8 +15,70 @@ let slides = [
 
 let phase = "intro";
 let currentSlide = 0;
+let currentScene = "start";
+let pauseOpen = false;
+let sounds = {};
+
+// ==========================================
+// LOCAL STORAGE SPEICHERUNG
+// ==========================================
+
+function saveGame() {
+    let saveState = {
+        currentScene: currentScene,
+        player: gameData.player,
+        phase: phase,
+        currentSlide: currentSlide
+    };
+    localStorage.setItem("cartoon_adventure_save", JSON.stringify(saveState));
+}
+
+function loadGame() {
+    let savedData = localStorage.getItem("cartoon_adventure_save");
+
+    if (sounds.bgMusic && !sounds.bgMusic.playing()) {
+        sounds.bgMusic.play();
+    }
+
+    if (savedData) {
+        let saveState = JSON.parse(savedData);
+
+        currentScene = saveState.currentScene;
+        gameData.player = saveState.player;
+        phase = saveState.phase;
+        currentSlide = saveState.currentSlide;
+
+        if (phase === "game") {
+            document.getElementById("intro-container").style.display = "none";
+            document.getElementById("game-container").style.display = "flex";
+            document.getElementById("frame").style.background = "transparent";
+            document.body.style.backgroundImage = "none";
+            document.getElementById("text").innerText = "";
+            showScene(currentScene);
+        } else {
+            showSlide();
+        }
+        console.log("Spielstand erfolgreich geladen!");
+    } else {
+        showSlide();
+    }
+}
+
+function resetGame() {
+    if (confirm("Möchtest du das Spiel wirklich zurücksetzen? Alle Items und Karma gehen verloren.")) {
+        localStorage.removeItem("cartoon_adventure_save");
+        location.reload();
+    }
+}
+
+// ==========================================
+// INTRO / SLIDE 
+// ==========================================
 
 function next() {
+    if (sounds.bgMusic && !sounds.bgMusic.playing()) {
+        sounds.bgMusic.play();
+    }
     currentSlide++;
     if (currentSlide >= slides.length) {
         phase = "game";
@@ -31,25 +93,26 @@ function next() {
     else {
         showSlide();
     }
+    saveGame();
 }
 
 function showSlide() {
     document.getElementById("game-container").style.display = "none";
-    document.getElementById("image").style.backgroundImage =
-        `url(${slides[currentSlide].img})`;
-
-    document.getElementById("text").innerText =
-        slides[currentSlide].text;
+    document.getElementById("image").style.backgroundImage = `url(${slides[currentSlide].img})`;
+    document.getElementById("text").innerText = slides[currentSlide].text;
 }
 
-showSlide();
+// ==========================================
+// GAMEPLAY 
+// ==========================================
 
+function handleChoice(nextScene, karma, gainItem, requiredItem) {
+    if (sounds.bgMusic && !sounds.bgMusic.playing()) {
+        sounds.bgMusic.play();
+    }
 
-let currentScene = "start";
-
-function handleChoice(next, karma, gainItem, requiredItem) {
     if (requiredItem && !gameData.player.inventory.includes(requiredItem)) {
-        showWarning("Halt! Dir fehlt das Item: " + requiredItem);
+        showWarning(requiredItem);
         return;
     }
 
@@ -58,9 +121,7 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         playKarmaSound(karma);
 
         let flashOverlay = document.getElementById("flash-effect-overlay");
-
-        flashOverlay.classList.remove("karma-good-flash");
-        flashOverlay.classList.remove("karma-bad-flash");
+        flashOverlay.classList.remove("karma-good-flash", "karma-bad-flash");
 
         setTimeout(function () {
             if (karma > 0) {
@@ -71,8 +132,7 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         }, 10);
 
         setTimeout(function () {
-            flashOverlay.classList.remove("karma-good-flash");
-            flashOverlay.classList.remove("karma-bad-flash");
+            flashOverlay.classList.remove("karma-good-flash", "karma-bad-flash");
         }, 610);
     }
 
@@ -80,8 +140,9 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         gameData.player.inventory.push(gainItem);
     }
 
-    if (next == "karma_check") {
+    if (nextScene == "karma_check") {
         checkEnding();
+        saveGame();
         return;
     }
 
@@ -89,8 +150,9 @@ function handleChoice(next, karma, gainItem, requiredItem) {
         sounds.steps.play();
     }
 
-    currentScene = next;
+    currentScene = nextScene;
     showScene(currentScene);
+    saveGame();
 }
 
 function showScene(scene) {
@@ -115,7 +177,6 @@ function showScene(scene) {
     if (sceneData.character) {
         gameCharacter.src = sceneData.character;
         gameCharacter.style.display = "block";
-
         gameCharacter.classList.remove("fade-in", "item-gain");
 
         setTimeout(() => {
@@ -125,58 +186,34 @@ function showScene(scene) {
                 gameCharacter.classList.add("fade-in");
             }
         }, 0);
-    } 
+    }
     else {
         gameCharacter.style.display = "none";
     }
 
     dialogText.innerText = sceneData.text;
-
     dialogText.animate(
         [
-            {
-                opacity: 0,
-                transform: "translateY(20px)"
-            },
-            {
-                opacity: 1,
-                transform: "translateY(0)"
-            }
+            { opacity: 0, transform: "translateY(20px)" },
+            { opacity: 1, transform: "translateY(0)" }
         ],
-        {
-            duration: 500,
-            easing: 'ease-in'
-        }
+        { duration: 500, easing: 'ease-in' }
     );
 
     choicesDiv.innerHTML = "";
 
     for (let i = 0; i < sceneData.choices.length; i++) {
         let choice = sceneData.choices[i];
-
-        let karmaWert = 0;
-        if (choice.karma) {
-            karmaWert = choice.karma;
-        }
-
-        let itemGewonnen = "";
-        if (choice.gain_item) {
-            itemGewonnen = choice.gain_item;
-        }
-
-        let itemBenoetigt = "";
-        if (choice.required_item) {
-            itemBenoetigt = choice.required_item;
-        }
+        let karmaWert = choice.karma ? choice.karma : 0;
+        let itemGewonnen = choice.gain_item ? choice.gain_item : "";
+        let itemBenoetigt = choice.required_item ? choice.required_item : "";
 
         let btnHtml = "<button onclick=\"handleChoice('" + choice.next + "', " + karmaWert + ", '" + itemGewonnen + "', '" + itemBenoetigt + "')\">" + choice.text + "</button>";
         choicesDiv.innerHTML += btnHtml;
     }
 }
 
-
 function checkEnding() {
-
     if (gameData.player.karma >= 30) {
         currentScene = "ending_good";
     }
@@ -189,11 +226,12 @@ function checkEnding() {
     else {
         currentScene = "ending_chaos";
     }
-
     showScene(currentScene);
 }
 
-let sounds = {};
+// ==========================================
+// AUDIO 
+// ==========================================
 
 function initSounds() {
     sounds.steps = new Howl({
@@ -210,9 +248,14 @@ function initSounds() {
         src: ['./audio/bad.mp3'],
         volume: 0.2
     });
-}
 
-initSounds();
+    sounds.bgMusic = new Howl({
+        src: ['./audio/background_music.mp3'],
+        volume: 0.15,
+        loop: true,
+        html5: true
+    });
+}
 
 function playKarmaSound(karma) {
     if (karma > 0 && sounds.good) {
@@ -223,20 +266,20 @@ function playKarmaSound(karma) {
     }
 }
 
-initSounds();
-
-let pauseOpen = false;
 
 
+// ==========================================
+// WARNING & INVENTORY 
+// ==========================================
 
-function showWarning(message) {
+function showWarning(requiredItem) {
     const warning = document.getElementById("item-warning");
-    let parts = message.split('_');
+    let parts = requiredItem.split('_');
     let cleanMessage = "";
 
     if (parts.length > 1) {
         for (let i = 0; i < parts.length; i++) {
-            if (i === 0 && parts[i].toLowerCase().includes("at")) {
+            if (i === 0) {
                 continue;
             }
             cleanMessage += parts[i];
@@ -246,9 +289,10 @@ function showWarning(message) {
         }
     }
     else {
-        cleanMessage = message;
+        cleanMessage = requiredItem;
     }
-    document.getElementById("warning-text").innerText = cleanMessage.trim();
+
+    document.getElementById("warning-text").innerText = "Dir fehlt das Item: " + cleanMessage;
     warning.style.display = "flex";
 }
 
@@ -267,8 +311,7 @@ function updateInventoryDisplay() {
 
         inventoryHTML += `
             <div class="inventory-item">
-                <img src="${imagePath}" alt="Item" 
-                     onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\'color:white; font-size:2vh;\'>?</span>';">
+                <img src="${imagePath}" alt="${itemName}">
             </div>`;
     }
     grid.innerHTML = inventoryHTML;
@@ -288,6 +331,10 @@ function toggleInventory() {
         document.body.classList.remove("backpack-open");
     }
 }
+
+initSounds();
+
+loadGame();
 
 document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
