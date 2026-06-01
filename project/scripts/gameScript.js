@@ -194,15 +194,27 @@ function showScene(scene) {
     if (sceneData.character) {
         gameCharacter.src = sceneData.character;
         gameCharacter.style.display = "block";
-        gameCharacter.classList.remove("fade-in", "item-gain");
+
+        gameCharacter.classList.remove("fade-in", "item-gain", "anim-schweben", "anim-pulsieren", "anim-drehen", "anim-item-spezial");
 
         setTimeout(() => {
-            if (sceneData.gain_item) {
-                gameCharacter.classList.add("item-gain");
-            } else {
-                gameCharacter.classList.add("fade-in");
+            if (sceneData.character.includes("item_")) {
+                gameCharacter.classList.add("anim-item-spezial"); 
             }
-        }, 0);
+            else {
+                let randomAnimation = Math.random();
+
+                if (randomAnimation < 0.33) {
+                    gameCharacter.classList.add("anim-pulsieren");
+                }
+                else if (randomAnimation < 0.66) {
+                    gameCharacter.classList.add("anim-schweben");
+                }
+                else {
+                    gameCharacter.classList.add("anim-drehen");
+                }
+            }
+        }, 10);
     }
     else {
         gameCharacter.style.display = "none";
@@ -356,8 +368,8 @@ function muteAllSounds(muteState) {
 }
 
 function updateAudioButtonUI() {
-    const musicBtn = document.getElementById("mute-music-btn");
-    const soundsBtn = document.getElementById("mute-sounds-btn");
+    let musicBtn = document.getElementById("mute-music-btn");
+    let soundsBtn = document.getElementById("mute-sounds-btn");
 
     if (musicBtn) {
         if (isMusicMuted) {
@@ -382,7 +394,7 @@ function updateAudioButtonUI() {
 // ==========================================
 
 function showWarning(requiredItem) {
-    const warning = document.getElementById("item-warning");
+    let warning = document.getElementById("item-warning");
     let parts = requiredItem.split('_');
     let cleanMessage = "";
 
@@ -416,7 +428,13 @@ function updateInventoryDisplay() {
 
     for (let i = 0; i < items.length; i++) {
         let itemName = items[i];
-        let imagePath = `./game_images/item_${itemName}.png`;
+
+        let finalFileName = itemName;
+        if (!finalFileName.startsWith("item_")) {
+            finalFileName = "item_" + finalFileName;
+        }
+
+        let imagePath = `./game_images/${finalFileName}.png`;
 
         inventoryHTML += `
             <div class="inventory-item">
@@ -478,3 +496,4 @@ document.addEventListener("keydown", function (event) {
         toggleInventory();
     }
 });
+

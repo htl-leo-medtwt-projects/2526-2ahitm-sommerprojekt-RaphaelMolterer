@@ -31,14 +31,40 @@ body {
     padding-left: 0%;
 }
 
-#yes {
-    background: #4cd964;
+#yes, #no {
+    position: relative;
+    overflow: hidden;  
+    background-image: url('../game_images/background_button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     font-family: ByteBounce;
+    z-index: 1;         
+    color: black;
 }
 
-#no {
-    background: #ff6b6b;
-    font-family: ByteBounce;
+#yes::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 0, 0.15);
+    z-index: -1;
+    pointer-events: none;
+}
+
+#no::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.15);
+    z-index: -1; 
+    pointer-events: none;
 }
 
 #choices {
@@ -66,7 +92,10 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-    background: rgba(255, 255, 255, 0.8);
+    background-image: url('../game_images/background_button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 3px solid black;
     padding: 1%;
     text-align: center;

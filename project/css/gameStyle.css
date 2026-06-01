@@ -1,20 +1,25 @@
+/* ==========================================
+   Basis 
+   ========================================== */
 body {
     background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 0.9px;
-    font-family: ByteBounce;
-    background-image: url('../images/Background_Wooden.png');
+    margin: 0;
+    padding: 0;
+    font-family: ByteBounce, sans-serif;
+    background-image: url('../game_images/Background_stonewall.png');
     overflow: hidden;
 }
 
+/* ==========================================
+   Intro 
+   ========================================== */
 #frame {
     width: 100vw;
     height: 100vh;
-    background: url("../images/Holz_BG.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,6 +29,7 @@ body {
     justify-content: center;
     padding: 3vh 3vw;
     gap: 3vh;
+    box-sizing: border-box;
 }
 
 #image {
@@ -44,9 +50,12 @@ body {
 #text {
     flex: 1;
     padding: 2vh 6vw;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 2rem;
-    background: rgba(255, 255, 255, 0.8);
+    background-image: url('../game_images/background_button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 3px solid black;
 }
 
@@ -58,7 +67,7 @@ body {
 }
 
 #next-btn img {
-    height: 30vh;
+    height: 20vh;
     transition: transform 0.15s ease;
 }
 
@@ -66,26 +75,9 @@ body {
     transform: scale(1.15);
 }
 
-#choices {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-}
-
-#choices button {
-    padding: 1vh 2vw;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border: 2px solid black;
-    background: white;
-    transition: 0.2s;
-}
-
-#choices button:hover {
-    transform: scale(1.05);
-    background: #f0f0f0;
-}
-
+/* ==========================================
+   Game
+   ========================================== */
 #game-container {
     display: none;
     position: relative;
@@ -95,62 +87,177 @@ body {
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 #game-character {
     position: absolute;
     left: 50%;
     bottom: 35%;
-    transform: translateX(-50%) !important;
     max-height: 50vh;
     width: auto;
     pointer-events: none;
     object-fit: contain;
+    z-index: 10;
+
+    transform: translateX(-50%);
 }
 
+.fade-in {
+    animation: fadeInAnim 0.6s ease-out forwards;
+}
+
+.item-gain {
+    animation: bounceAnim 0.7s ease-in-out;
+}
+
+.anim-pulsieren {
+    animation: pulsate 2s ease-in-out infinite;
+}
+
+.anim-schweben {
+    animation: hover 1.5s ease-in-out infinite;
+}
+
+.anim-drehen {
+    animation: turnAround 3s ease-in-out infinite;
+}
+
+.anim-item-spezial {
+    animation: itemGlowAndFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeInAnim {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes bounceAnim {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.15);
+    }
+}
+
+@keyframes pulsate {
+
+    0%,
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        transform: translateX(-50%) scale(1.25);
+    }
+}
+
+@keyframes hover {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-4%);
+    }
+}
+
+@keyframes turnAround {
+
+    0%,
+    35%,
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+
+    45%,
+    85% {
+        transform: translateX(-50%) scaleX(-1);
+    }
+}
+
+@keyframes itemGlowAndFloat {
+    0% {
+        transform: translateX(-50%) translateY(0px);
+        filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4));
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-12px);
+        filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.8));
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0px);
+        filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.4));
+    }
+}
+
+/* ==========================================
+   Dialog 
+   ========================================== */
 #dialog {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 80%;
-    background: rgba(255, 255, 255, 0.9);
+    background-image: url('../game_images/background_button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     border: 3px solid black;
     padding: 1.5rem;
     text-align: center;
     font-size: 1.8rem;
     box-sizing: border-box;
+    z-index: 20;
+    margin-bottom: 2vh;
 }
 
 #game-choices {
-    position: absolute;
-    bottom: 4%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 80%;
     display: flex;
     gap: 2%;
+    margin-bottom: 4vh;
+    z-index: 20;
 }
-
 
 #game-choices button {
     flex: 1;
     padding: 2rem 1.5rem;
     font-size: 1.6rem;
-    font-family: ByteBounce;
+    font-family: ByteBounce, sans-serif;
     font-weight: bold;
     cursor: pointer;
     border: 2px solid black;
-    background: white;
+    background-image: url('../game_images/background_button.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     -webkit-text-stroke: 0.5px black;
-    transition: transform 0.15s ease, background 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.1s ease;
 }
 
 #game-choices button:hover {
     transform: scale(1.02);
-    background: #f2f2f2;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* ==========================================
+   Rucksack 
+   ========================================== */
 #pause-menu {
     position: fixed;
     inset: 0;
@@ -172,30 +279,9 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 3vh;
     width: 70vw;
-    align-content: start;
-}
-
-.close-backpack {
-    position: fixed;
-    top: 5vh;
-    right: 5vw;
-    background: #d12310;
-    color: white;
-    border: 0.4vh solid black;
-    font-family: ByteBounce;
-    font-size: 5vh;
-    padding: 1vh 3vh;
-    cursor: pointer;
-    z-index: 10000;
-}
-
-#inventory-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3vh;
-    width: 70vw;
     height: 60vh;
     margin-top: 5vh;
+    align-content: start;
 }
 
 .inventory-item {
@@ -215,56 +301,88 @@ body {
 }
 
 .close-backpack {
-    position: absolute;
+    position: fixed;
     top: 5vh;
     right: 5vw;
     background: #d12310;
     color: white;
     border: 0.4vh solid black;
-    font-family: ByteBounce;
+    font-family: ByteBounce, sans-serif;
     font-size: 5vh;
     padding: 1vh 3vh;
     cursor: pointer;
+    z-index: 10000;
 }
 
-.fade-in {
-    animation: fadeInAnim 0.6s ease-out;
+/* ==========================================
+   Overlays 
+   ========================================== */
+.warning-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 100000;
+    justify-content: center;
+    align-items: center;
 }
 
-.item-gain {
-    animation: bounceAnim 0.7s ease-in-out;
+.warning-content {
+    background: #2c3e50;
+    color: white;
+    padding: 2%;
+    border: 3px solid #9a1304;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke-width: 0px;
+    font-family: ByteBounce, sans-serif;
+    font-size: 1.5rem;
 }
 
-.karma-good {
-    animation: flashGreen 0.5s;
+.warning-content button {
+    margin-top: 1%;
+    padding: 1% 2%;
+    cursor: pointer;
+    background: #d12310;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-family: ByteBounce, sans-serif;
+    font-size: 1.5rem;
 }
 
-.karma-bad {
-    animation: flashRed 0.5s;
+#reset-confirm-text {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    -webkit-text-stroke-width: 0px;
+    margin-top: 0.5rem;
 }
 
-@keyframes fadeInAnim {
-    from {
-        opacity: 0;
-        transform: translateY(5px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#ask-reset {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    margin-top: 1.5rem;
+    width: 100%;
 }
 
-@keyframes bounceAnim {
+#ask-reset button {
+    margin-top: 0;
+    padding: 1vh 2vw;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    color: white;
+}
 
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
+#ask-reset button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
 }
 
 #flash-effect-overlay {
@@ -287,72 +405,32 @@ body {
 }
 
 @keyframes flashGreenAnim {
-    0% {
+
+    0%,
+    100% {
         background-color: rgba(0, 255, 0, 0);
     }
 
     30% {
         background-color: rgba(0, 255, 0, 0.4);
     }
-
-    100% {
-        background-color: rgba(0, 255, 0, 0);
-    }
 }
 
 @keyframes flashRedAnim {
-    0% {
+
+    0%,
+    100% {
         background-color: rgba(255, 0, 0, 0);
     }
 
     30% {
         background-color: rgba(255, 0, 0, 0.4);
     }
-
-    100% {
-        background-color: rgba(255, 0, 0, 0);
-    }
 }
 
-.warning-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.warning-content {
-    background: #2c3e50;
-    color: white;
-    padding: 2%;
-    border: 3px solid #9a1304;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke-width: 0px;
-    font-family: ByteBounce;
-    font-size: 1.5rem;
-}
-
-.warning-content button {
-    margin-top: 1%;
-    padding: 1% 2%;
-    cursor: pointer;
-    background: #d12310;
-    border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    font-family: ByteBounce;
-    font-size: 1.5rem;
-}
-
+/* ==========================================
+   Audio & Reset Button 
+   ========================================== */
 #audio-controls {
     position: fixed;
     top: 2vh;
@@ -360,12 +438,11 @@ body {
     display: flex;
     gap: 1vw;
     z-index: 999999;
-    pointer-events: auto;
 }
 
 #audio-controls button {
     padding: 1vh 1.5vw;
-    font-family: ByteBounce;
+    font-family: ByteBounce, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: black;
@@ -393,7 +470,7 @@ body {
     top: 2vh;
     left: 2vw;
     padding: 1vh 1.5vw;
-    font-family: ByteBounce;
+    font-family: ByteBounce, sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
@@ -417,35 +494,33 @@ body {
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
 }
 
-#reset-confirm-text {
-    font-size: 1.2rem;
-    color: #e74c3c;
-    -webkit-text-stroke-width: 0px;
-    margin-top: 0.5rem;
-}
-
-#ask-reset {
-    display: flex;
-    justify-content: center;
-    gap: 2%;
-    margin-top: 1.5rem;
+#karma-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 25px;
+    background-color: #333;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999989;
+    overflow: hidden;
 }
 
-#ask-reset button {
-    margin-top: 0;
-    padding: 1vh 2vw;
-    border: 2px solid black;
-    box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
-    transition: transform 0.1s ease, box-shadow 0.1s ease;
+#karma-bar-fill {
+    height: 100%;
+    width: 50%;
+    background-color: #7f8c8d;
+    transition: width 0.5s ease, background-color 0.5s ease;
 }
 
-#ask-reset button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
-}
-
-#ask-reset button:active {
-    transform: translate(3px, 3px);
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+#karma-bar-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
 }

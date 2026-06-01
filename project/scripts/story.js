@@ -103,7 +103,7 @@ let gameData = {
         "character": "./game_images/character_at_bmo.png",
         "choices": [
             { "text": "BMO stoppen", "next": "at_12" },
-            { "text": "Mithoeren", "next": "strange_Melody", "gain_item": "at_strange_melody" }
+            { "text": "Mithoeren", "next": "strange_Melody", "gain_item": "at_melody" }
         ]
     },
     "strange_Melody": {
@@ -189,7 +189,7 @@ let gameData = {
         "background": "./game_images/background_at_candy_castle.png",
         "character": "./game_images/character_at_peppermint.png",
         "choices": [
-            { "text": "Rezeptbuch nehmen", "next": "forbidden_recipe", "gain_item": "at_forbidden_recipe" },
+            { "text": "Rezeptbuch nehmen", "next": "forbidden_recipe", "gain_item": "at_recipe" },
             { "text": "Verbrennen", "next": "at_16", "karma": 4 }
         ]
     },
@@ -256,7 +256,7 @@ let gameData = {
         "background": "./game_images/background_at_wizard_city.png",
         "choices": [
             { "text": "Die Quelle zerstoeren", "next": "at_26" },
-            { "text": "Die Musik umschreiben", "next": "at_21", "required_item": "at_forbidden_recipe" }
+            { "text": "Die Musik umschreiben", "next": "at_21", "required_item": "at_recipe" }
         ]
     },
 
@@ -486,7 +486,7 @@ let gameData = {
         "background": "./game_images/background_gb_school.png",
         "character": "./game_images/character_gb_darwin.png",
         "choices": [
-            { "text": "Nehmen", "next": "reset_drive", "gain_item": "reset_drive" }
+            { "text": "Nehmen", "next": "reset_drive", "gain_item": "gb_reset_drive" }
         ]
     },
 
@@ -615,8 +615,8 @@ let gameData = {
         "background": "./game_images/background_gb_elmore.png",
         "character": "./game_images/character_gb_darwin.png",
         "choices": [
-            { "text": "Mit Reset-Drive untersuchen", "next": "gb_27", "required_item": "reset_drive" },
-            { "text": "Ohne Plan abwarten (Benötigt kein Item)", "next": "gb_27", "karma": -1 }
+            { "text": "Mit Reset-Drive untersuchen", "next": "gb_27", "required_item": "gb_reset_drive" },
+            { "text": "Ohne Plan abwarten (Benoetigt kein Item)", "next": "gb_27", "karma": -1 }
         ]
     },
 
@@ -655,7 +655,7 @@ let gameData = {
         ]
     },
 
-    "c2_dl_start": {
+    "c1_dl_start": {
         "text": "Dexter rast hektisch durch sein Labor. ueberall oeffnen sich ploetzlich Mini-Portale, die fehlgeschlagene Erfindungen aus alten Experimenten freisetzen. Dee Dee tanzt ahnungslos zwischen schwebenden Robotern und mutierten Haushaltsgeraeten herum.",
         "background": "./game_images/background_dl_lab.png",
         "choices": [
@@ -682,7 +682,7 @@ let gameData = {
         "character": "./game_images/character_dl_deedee.png",
         "choices": [
             { "text": "Dee Dee stoppen", "next": "dl_5", "karma": 3 },
-            { "text": "Mitzeichnen", "next": "living_sketch", "gain_item": "living_sketch" }
+            { "text": "Mitzeichnen", "next": "living_sketch", "gain_item": "dl_sketch" }
         ]
     },
 
@@ -717,7 +717,7 @@ let gameData = {
         "text": "Im Reject-Archiv liegen bizarre Erfindungen: unsichtbare Brotroester, aggressive Staubsauger und ein Kampfanzug.",
         "background": "./game_images/background_dl_archive.png",
         "choices": [
-            { "text": "Kampfanzug stehlen", "next": "prototype_armor", "gain_item": "prototype_armor", "karma": -3 },
+            { "text": "Kampfanzug stehlen", "next": "prototype_armor", "gain_item": "dl_armor", "karma": -3 },
             { "text": "Archiv durchsuchen", "next": "dl_11" }
         ]
     },
@@ -737,16 +737,16 @@ let gameData = {
         "choices": [
             { "text": "Reaktor reparieren", "next": "dl_12", "karma": 4 },
             { "text": "Dexter warnen", "next": "dl_8" },
-            { "text": "Schnell weiter zu Dee Dee", "next": "dl_7"}
+            { "text": "Schnell weiter zu Dee Dee", "next": "dl_7" }
         ]
     },
 
     "dl_7": {
-        "text": "Dee Dee zeichnet ein riesiges gefährliches Monster mit Lasernaugen.",
+        "text": "Dee Dee zeichnet ein riesiges gefaehrliches Monster mit Lasernaugen.",
         "background": "./game_images/background_dl_lab.png",
         "character": "./game_images/character_dl_monster.png",
         "choices": [
-            { "text": "Monster bekaempfen", "next": "dl_13", "karma": 3, "required_item": "prototype_armor" },
+            { "text": "Monster bekaempfen", "next": "dl_13", "karma": 3, "required_item": "dl_armor" },
             { "text": "Ignorieren und warten das Dexter ihn beseitigt", "next": "dl_11", "karma": -3 }
         ]
     },
@@ -775,7 +775,7 @@ let gameData = {
         "text": "Du findest alte Bauplaene fuer Project Perfect.",
         "background": "./game_images/background_dl_archive.png",
         "choices": [
-            { "text": "Plaene analysieren", "next": "perfect_blueprint", "gain_item": "perfect_blueprint" },
+            { "text": "Plaene analysieren", "next": "perfect_blueprint", "gain_item": "dl_blueprint" },
             { "text": "Verbrennen", "next": "dl_12", "karma": 2 }
         ]
     },
@@ -853,7 +853,7 @@ let gameData = {
         "background": "./game_images/background_dl_lab.png",
         "character": "./game_images/character_dl_dexter.png",
         "choices": [
-            { "text": "Kontrolle uebernehmen", "next": "dl_22", "required_item": "perfect_blueprint" },
+            { "text": "Kontrolle uebernehmen", "next": "dl_22", "required_item": "dl_blueprint" },
             { "text": "Hauptsystem zerstoeren", "next": "dl_21", "karma": -4 }
         ]
     },
@@ -890,7 +890,7 @@ let gameData = {
         "text": "Project Perfect stuft ploetzlich Menschen als 'ineffizient' ein.",
         "background": "./game_images/background_dl_lab.png",
         "choices": [
-            { "text": "System neu programmieren", "next": "dl_25", "required_item": "perfect_blueprint" },
+            { "text": "System neu programmieren", "next": "dl_25", "required_item": "dl_blueprint" },
             { "text": "Computer zerstoeren", "next": "dl_24", "karma": -2 }
         ]
     },
@@ -949,7 +949,7 @@ let gameData = {
         "background": "./game_images/background_dl_lab.png",
         "character": "./game_images/character_dl_robot.png",
         "choices": [
-            { "text": "Mit einer lebendigen Zeichnung besiegen", "next": "dl_29", "required_item": "living_sketch" },
+            { "text": "Mit einer lebendigen Zeichnung besiegen", "next": "dl_29", "required_item": "dl_sketch" },
             { "text": "Ignorieren", "next": "dl_30", "karma": -5 }
         ]
     },
@@ -972,1988 +972,1903 @@ let gameData = {
         ]
     },
 
+    //ab hier weiter
+
     "c1_ppg_start": {
-        "text": "Townsville feiert den 'Tag der Helden'. ueberall laufen Paraden, Professor Utonium praesentiert neue Sicherheitsdrohnen und der Buergermeister haelt eine viel zu lange Rede. Ploetzlich faerbt sich der Himmel rosa und ueberall in der Stadt erscheinen identische laechelnde Wolken mit riesigen Augen.",
+        "text": "Das Telefon des Buergermeisters schrillt ununterbrochen! In Townsville herrscht mal wieder Ausnahmezustand. Eine riesige, klebrige gruene Wolke zieht durch die Strassen und laesst die Bewohner seltsam hyperaktiv und aggressiv werden. Blossom, Bubbles und Buttercup erwarten dich bereits im Labor von Professor Utonium.",
+        "background": "./game_images/background_ppg_lab.png",
         "choices": [
-            { "text": "Zum Rathaus fliegen", "next": "ppg_1", "karma": 2 },
-            { "text": "Professor Utoniums Labor aufsuchen", "next": "ppg_2" },
-            { "text": "Den Wolken folgen", "next": "ppg_3", "karma": -2 },
-            { "text": "Die Buerger evakuieren", "next": "ppg_4", "karma": 3 }
+            { "text": "Mit Blossom die Wolke analysieren", "next": "ppg_1", "karma": 1 },
+            { "text": "Bubbles helfen, die Tiere im Zoo zu beruhigen", "next": "ppg_2" },
+            { "text": "Mit Buttercup direkt zum Rathaus fliegen", "next": "ppg_3", "karma": -1 },
+            { "text": "Mojo Jojos Observatorium im Auge behalten", "next": "ppg_4", "karma": 2 }
         ]
     },
 
     "ppg_1": {
-        "text": "Der Buergermeister versteckt sich panisch unter seinem Schreibtisch. Ms. Bellum beobachtet die Wolken ruhig.",
+        "text": "Blossom starrt auf den Computer. 'Die Wolke enthaelt Spuren von Chemical X, aber gemischt mit... faulen Bananen? Das macht keinen Sinn!' Ploetzlich bricht der Strom im Labor zusammen.",
+        "background": "./game_images/background_ppg_lab.png",
+        "character": "./game_images/character_ppg_blossom.png",
         "choices": [
-            { "text": "Ms. Bellum zuhoeren", "next": "ppg_5" },
-            { "text": "Den Buergermeister beruhigen", "next": "ppg_6", "karma": 1 },
-            { "text": "Sofort losfliegen", "next": "ppg_7", "karma": -1 }
+            { "text": "Den Notgenerator starten", "next": "ppg_5", "karma": 3 },
+            { "text": "Proben im Dunkeln sammeln", "next": "chemical_x_sample", "gain_item": "ppg_sample" }
+        ]
+    },
+
+    "chemical_x_sample": {
+        "text": "Du erhaeltst eine instabile Probe der Chemical-X-Zucker-Mischung. Sie leuchtet gefaehrlich gruen.",
+        "background": "./game_images/background_ppg_lab.png",
+        "character": "./game_images/item_ppg_sample.png",
+        "choices": [
+            { "text": "Weiter", "next": "ppg_8" }
         ]
     },
 
     "ppg_2": {
-        "text": "Professor Utonium untersucht rosa Rueckstaende. 'Das erinnert mich an eine instabile Form von Chemical X.'",
+        "text": "Im Zoo von Townsville spielen die Tiere verrueckt. Ein mutiertes Riesen-Eichhoernchen bedroht die Besucher. Bubbles weint: 'Es hat nur Angst! Wir duerfen ihm nicht wehtun!'",
+        "background": "./game_images/background_ppg_zoo.png",
+        "character": "./game_images/character_ppg_bubbles.png",
         "choices": [
-            { "text": "Im Labor helfen", "next": "ppg_8", "gain_item": "chemical_scanner" },
-            { "text": "Nach Bubbles suchen", "next": "ppg_9" },
-            { "text": "Die Drohnen testen", "next": "ppg_10", "karma": -2 }
+            { "text": "Das Eichhoernchen beruhigen", "next": "ppg_6", "karma": 4 },
+            { "text": "Es mit einem Netz fangen", "next": "ppg_7", "karma": -2 }
         ]
     },
 
     "ppg_3": {
-        "text": "Die Wolken fuehren dich zu einem verlassenen Suessigkeitenlager am Hafen. ueberall klebt rosa Zucker an den Waenden.",
+        "text": "Buttercup rammt die Tuer des Rathauses auf. Der Buergermeister versteckt sich zitternd unter seinem Schreibtisch und klammert sich an ein riesiges Gurkenglas. 'Die Monster wollen meine Gurken!'",
+        "background": "./game_images/background_ppg_city_hall.png",
+        "character": "./game_images/character_ppg_mayor.png",
         "choices": [
-            { "text": "Das Lager untersuchen", "next": "ppg_11" },
-            { "text": "Die Zuckerreste einsammeln", "next": "ppg_12", "gain_item": "pink_residue" },
-            { "text": "Das Lager zerstoeren", "next": "ppg_13", "karma": -4 }
+            { "text": "Dem Buergermeister das Gurkenglas wegnehmen", "next": "pickle_jar", "gain_item": "ppg_pickle", "karma": -2 },
+            { "text": "Das Rathaus verbarrikadieren", "next": "ppg_9", "karma": 3 }
+        ]
+    },
+
+    "pickle_jar": {
+        "text": "Du nimmst das extrem stinkende, aber seltsamerweise magnetische Gurkenglas des Buergermeisters an dich.",
+        "background": "./game_images/background_ppg_city_hall.png",
+        "character": "./game_images/item_ppg_pickle.png",
+        "choices": [
+            { "text": "Weiter", "next": "ppg_10" }
         ]
     },
 
     "ppg_4": {
-        "text": "Viele Buerger weigern sich zu gehen, weil sie die Wolken 'freundlich' finden. Kinder beginnen ihnen zu folgen.",
+        "text": "Du spionierst Mojo Jojos Vulkan-Observatorium aus. Durch das Fenster siehst du ihn an einer riesigen Gas-Kanone schrauben. Er murmelt: 'Und so werde ich, Mojo Jojo, Townsville beherrschen, indem ich Mojo Jojo bin!'",
+        "background": "./game_images/background_ppg_mojo_exterior.png",
+        "character": "./game_images/character_ppg_mojo.png",
         "choices": [
-            { "text": "Die Kinder stoppen", "next": "ppg_14", "karma": 4 },
-            { "text": "Die Wolken beobachten", "next": "ppg_11" },
-            { "text": "Die Parade absagen lassen", "next": "ppg_6", "karma": -1 }
+            { "text": "Sofort das Labor stuermen", "next": "ppg_11", "karma": -3 },
+            { "text": "Die Kanone heimlich sabotieren", "next": "ppg_12", "karma": 4 }
         ]
     },
 
     "ppg_5": {
-        "text": "Ms. Bellum: 'Die Wolken reagieren auf Emotionen. Je froehlicher Townsville wird, desto groesser werden sie.'",
+        "text": "Der Generator springt an, erzeugt aber eine gewaltige Schockwelle, die Blossom kurzzeitig desorientiert. Draussen auf der Strasse formieren sich mutierte Brokkoli-Monster.",
+        "background": "./game_images/background_ppg_street.png",
+        "character": "./game_images/character_ppg_broccolimonster.png",
         "choices": [
-            { "text": "Die Feier stoppen", "next": "ppg_15", "karma": -2 },
-            { "text": "Nach dem Ursprung suchen", "next": "ppg_11", "karma": 2 },
-            { "text": "Die Information geheim halten", "next": "ppg_16" }
+            { "text": "Die Monster frontal angreifen", "next": "ppg_13", "karma": -4 },
+            { "text": "Die Brokkoli-Monster aufessen", "next": "ppg_14", "karma": 2 }
         ]
     },
 
     "ppg_6": {
-        "text": "Der Buergermeister drueckt dir nervoes einen alten Notschluessel fuer das Kraftwerk in die Hand.",
+        "text": "Das Eichhoernchen beruhigt sich durch Bubbles' sanfte Stimme, stupst dich an und laesst eine glaenzende, decoder-aehnliche Antenne fallen, die es im Park gefunden hat.",
+        "background": "./game_images/background_ppg_zoo.png",
         "choices": [
-            { "text": "Nehmen", "next": "ppg_17", "gain_item": "mayor_key" },
-            { "text": "Ablehnen", "next": "ppg_15" }
+            { "text": "Die Antenne einstecken", "next": "mojo_decoder", "gain_item": "ppg_decoder" }
+        ]
+    },
+
+    "mojo_decoder": {
+        "text": "Du erhaeltst eine seltsame Affen-Antenne. Sie empfaengt verschluesselte Signale.",
+        "background": "./game_images/background_ppg_zoo.png",
+        "character": "./game_images/item_ppg_decoder.png",
+        "choices": [
+            { "text": "Zurueck zu den Maedels fliegen", "next": "ppg_8" }
         ]
     },
 
     "ppg_7": {
-        "text": "Mojo Jojo erscheint auf einem fliegenden Lautsprecherwagen. 'DIESE WOLKEN SIND NICHT MEIN WERK! Was leider bedeutet, dass jemand NOCH schlauer ist als ich!'",
+        "text": "Das Eichhoernchen durchbricht das Netz, wird noch wuetender und schleudert Buttercup durch eine Plakatwand. Das Chaos im Zoo eskaliert.",
+        "background": "./game_images/background_ppg_zoo.png",
         "choices": [
-            { "text": "Mojo glauben", "next": "ppg_18" },
-            { "text": "Mojo angreifen", "next": "ppg_19", "karma": -3 },
-            { "text": "Ihn ueberwachen", "next": "ppg_20" }
+            { "text": "Professor Utonium um Hilfe rufen", "next": "ppg_15" },
+            { "text": "Den Zoo evakuieren", "next": "ppg_9", "karma": 4 }
         ]
     },
 
     "ppg_8": {
-        "text": "Der Scanner entdeckt Spuren von veraendertem Chemical X in mehreren Suesswarenfabriken.",
+        "text": "Professor Utonium taucht auf. 'Kinder, die gruene Wolke neutralisiert die Gravitation der Stadt! Wenn wir die Quelle nicht finden, schwebt Townsville ins Weltall!'",
+        "background": "./game_images/background_ppg_lab.png",
+        "character": "./game_images/character_ppg_professor.png",
         "choices": [
-            { "text": "Zur Marshmallow-Fabrik fliegen", "next": "ppg_21" },
-            { "text": "Zur Limonadenfabrik fliegen", "next": "ppg_22" },
-            { "text": "Die Daten speichern", "next": "ppg_16", "gain_item": "x_analysis" }
+            { "text": "Die Wolke mit der Probe analysieren", "next": "ppg_16", "required_item": "ppg_sample" },
+            { "text": "Einen Wetterballon starten lassen", "next": "ppg_10", "karma": -1 }
         ]
     },
 
     "ppg_9": {
-        "text": "Bubbles sitzt im Park und redet mit einer rosa Wolke, als waere sie lebendig.",
+        "text": "Waehrend ihr versucht, das Rathaus zu sichern, taucht die Gangreen Gang auf! Ace grinst: 'Hey Puppen, schickes Gebaeude. Schade, wenn jemand die Fundamente sprengt!'",
+        "background": "./game_images/background_ppg_city_hall.png",
+        "character": "./game_images/character_ppg_gangreen.png",
         "choices": [
-            { "text": "Bubbles wegziehen", "next": "ppg_23", "karma": -1 },
-            { "text": "Der Wolke zuhoeren", "next": "ppg_24" },
-            { "text": "Still beobachten", "next": "ppg_20" }
+            { "text": "Die Gang bestechen", "next": "ppg_17", "karma": -5 },
+            { "text": "Gegen die Gang kaempfen", "next": "ppg_13", "karma": 3 }
         ]
     },
 
     "ppg_10": {
-        "text": "Die Sicherheitsdrohnen geraten ausser Kontrolle und markieren ploetzlich alle Buerger als Bedrohung.",
+        "text": "Ploetzlich verdunkelt sich der Himmel komplett. Es ist nicht die Wolke – es ist das schattenhafte Wesen 'ER' (Him), das durch die Angst der Buerger an Kraft gewinnt.",
+        "background": "./game_images/background_ppg_sky.png",
+        "character": "./game_images/character_ppg_him.png",
         "choices": [
-            { "text": "Drohnen abschalten", "next": "ppg_25", "karma": 2 },
-            { "text": "Die Drohnen umlenken", "next": "ppg_19", "karma": -3 }
+            { "text": "Sich den eigenen aengsten stellen", "next": "ppg_18", "karma": 5 },
+            { "text": "Gegen Hims Schatten-Klone kaempfen", "next": "ppg_19", "karma": -2 }
         ]
     },
 
     "ppg_11": {
-        "text": "Im Lager entdeckst du eine riesige Maschine aus Suessigkeiten, Rohren und alten Teilen von Fuzzy Lumpkins.",
+        "text": "Mojo Jojo war vorbereitet! Er drueckt einen roten Knopf und faengt Buttercup und dich in einem unzerstoerbaren Energiekaefig, der mit Bananensaft betrieben wird.",
+        "background": "./game_images/background_ppg_mojo_exterior.png",
+        "character": "./game_images/character_ppg_mojo.png",
         "choices": [
-            { "text": "Die Maschine analysieren", "next": "ppg_26", "required_item": "chemical_scanner" },
-            { "text": "Die Maschine aktivieren", "next": "ppg_27", "karma": -4 },
-            { "text": "Nach dem Erbauer suchen", "next": "ppg_18" }
+            { "text": "Den Kaefig mit dem sauren Gurkensaft kurzschliessen", "next": "ppg_20", "required_item": "ppg_pickle" },
+            { "text": "Auf Bubbles' Rettung warten", "next": "ppg_15", "karma": -2 }
         ]
     },
 
     "ppg_12": {
-        "text": "Die rosa Rueckstaende reagieren ploetzlich auf deine Bewegungen und formen kleine Gesichter.",
+        "text": "Du vertauschst die Kabel an Mojos Kanone. Als er abfeuern will, implodiert die Maschine und huellt das Observatorium in dicken, rosa Schleim.",
+        "background": "./game_images/background_ppg_mojo_exterior.png",
         "choices": [
-            { "text": "In einen Behaelter sperren", "next": "ppg_16", "karma": 2 },
-            { "text": "Verbrennen", "next": "ppg_13", "karma": -2 }
+            { "text": "Mojos Logbuch stehlen", "next": "ppg_21" },
+            { "text": "Mojo Jojo fesseln", "next": "ppg_16", "karma": 4 }
         ]
     },
 
     "ppg_13": {
-        "text": "Die Explosion verteilt rosa Staub ueber ganz Townsville. Die Wolken wachsen sofort weiter.",
+        "text": "Der Kampf wirbelt gigantische Mengen Staub auf. Die Brokkoli-Monster und die Gangreen Gang verbuenden sich im Chaos. Townsville brennt an mehreren Ecken.",
+        "background": "./game_images/background_ppg_street.png",
         "choices": [
-            { "text": "Zum Himmel fliegen", "next": "ppg_28", "karma": -5 },
-            { "text": "Professor Utonium warnen", "next": "ppg_29" }
+            { "text": "Die Rowdyruff Boys tauchen auf!", "next": "ppg_22", "karma": -5 },
+            { "text": "Rueckzug ins Labor", "next": "ppg_15", "karma": 1 }
         ]
     },
 
     "ppg_14": {
-        "text": "Ein kleines Maedchen sagt: 'Die Wolken versprechen uns perfekte Traeume.'",
+        "text": "Buttercup und die Kinder hassen Brokkoli, aber sie essen tapfer alles auf. Das stoppt die Monster, verursacht aber schreckliche Bauchschmerzen bei den Powerpuff Girls.",
+        "background": "./game_images/background_ppg_street.png",
         "choices": [
-            { "text": "Weiter nachfragen", "next": "ppg_24" },
-            { "text": "Die Kinder evakuieren", "next": "ppg_29", "karma": 5 }
+            { "text": "Trotz Schmerzen weiterfliegen", "next": "ppg_10", "karma": 4 },
+            { "text": "Pause machen und Medizin suchen", "next": "ppg_23", "karma": -2 }
         ]
     },
 
     "ppg_15": {
-        "text": "Townsville wird ruhiger. Die Wolken bewegen sich ploetzlich direkt auf das Kraftwerk zu.",
+        "text": "Im Labor versucht Professor Utonium verzweifelt, ein Gegenmittel zu mischen, doch ihm fehlt eine entscheidende chemische Komponente.",
+        "background": "./game_images/background_ppg_lab.png",
+        "character": "./game_images/character_ppg_professor.png",
         "choices": [
-            { "text": "Zum Kraftwerk fliegen", "next": "ppg_17" },
-            { "text": "Die Wolken verfolgen", "next": "ppg_28" }
+            { "text": "Die Chemical-X-Probe uebergeben", "next": "ppg_24", "required_item": "ppg_sample" },
+            { "text": "Dem Professor vorschlagen, das Gurkenglas zu nutzen", "next": "ppg_23", "required_item": "ppg_pickle" }
         ]
     },
 
     "ppg_16": {
-        "text": "Professor Utonium erkennt ein Muster: Die Wolken speichern Emotionen wie Energie.",
+        "text": "Mithilfe der Daten erkennst du, dass die Wolke von einem Satelliten gesteuert wird. Jemand funkt Befehle von der Erde aus!",
+        "background": "./game_images/background_ppg_lab.png",
         "choices": [
-            { "text": "Die Energie neutralisieren", "next": "ppg_30", "required_item": "pink_residue" },
-            { "text": "Die Energie umleiten", "next": "ppg_31", "required_item": "x_analysis" },
-            { "text": "Nichts riskieren", "next": "ppg_29" }
+            { "text": "Das Signal mit dem Affen-Decoder orten", "next": "ppg_25", "required_item": "ppg_decoder" },
+            { "text": "Blind in die Stratosphaere fliegen", "next": "ppg_19", "karma": -3 }
         ]
     },
 
     "ppg_17": {
-        "text": "Im Kraftwerk sitzt HIM auf einem Thron aus rosa Rauch und summt froehlich vor sich hin.",
+        "text": "Du gibst Ace und seiner Gang das magnetische Gurkenglas des Buergermeisters. Sie ziehen lachend ab, aber der Buergermeister ist am Boden zerstoert. Seine Trauer fuettert 'ER'.",
+        "background": "./game_images/background_ppg_city_hall.png",
+        "character": "./game_images/character_ppg_mayor.png",
         "choices": [
-            { "text": "Mit HIM reden", "next": "ppg_32" },
-            { "text": "Direkt angreifen", "next": "ppg_33", "karma": -4 },
-            { "text": "Versteckt beobachten", "next": "ppg_34" }
+            { "text": "Weiter", "next": "ppg_10" }
         ]
     },
 
     "ppg_18": {
-        "text": "Mojo Jojo erklaert genervt: 'Jemand benutzt instabiles Chemical X, um Townsville suechtig nach Glueck zu machen.'",
+        "text": "'ER' lacht mit seiner unheimlichen, zweigeteilten Stimme. Doch Blossoms unerschuetterliche Logik bricht seine Illusionen. 'ER' verliert an Kraft und zieht sich zischend zurueck.",
+        "background": "./game_images/background_ppg_sky.png",
+        "character": "./game_images/character_ppg_him.png",
         "choices": [
-            { "text": "Mit Mojo zusammenarbeiten", "next": "ppg_35", "karma": 2 },
-            { "text": "Ihm misstrauen", "next": "ppg_20" }
+            { "text": "Dem finalen Signal folgen", "next": "ppg_26" }
         ]
     },
 
     "ppg_19": {
-        "text": "Waehrend des Kampfes entkommt Mojo und mehrere Wolken explodieren ueber der Innenstadt.",
+        "text": "Die Schatten-Klone erweisen sich als extrem zaeh. Blossom, Bubbles und Buttercup verausgaben sich voellig. Die Stadt beginnt nun wirklich abzuheben – Haeuser schweben in die Luft!",
+        "background": "./game_images/background_ppg_sky.png",
         "choices": [
-            { "text": "Die Menschen retten", "next": "ppg_29", "karma": 4 },
-            { "text": "Mojo weiter verfolgen", "next": "ppg_36", "karma": -3 }
+            { "text": "Alles auf eine Karte setzen und angreifen", "next": "ppg_27", "karma": -5 },
+            { "text": "Die Buerger festhalten", "next": "ppg_28", "karma": 5 }
         ]
     },
 
     "ppg_20": {
-        "text": "Buttercup entdeckt geheime Lieferkisten mit dem Logo der Rowdyruff Boys.",
+        "text": "Der extrem saure Gurkensaft frisst sich durch die Kabel des Kaefigs! Der Laser bricht zusammen und ihr seid frei. Mojo Jojo schreit: 'Das ist unmoeglich! Essiggurken waren nicht in meinen Berechnungen!'",
+        "background": "./game_images/background_ppg_mojo_exterior.png",
+        "character": "./game_images/character_ppg_mojo.png",
         "choices": [
-            { "text": "Die Kisten oeffnen", "next": "ppg_37" },
-            { "text": "Die Kisten zerstoeren", "next": "ppg_28", "karma": -2 }
+            { "text": "Mojo Jojo KO schlagen", "next": "ppg_26", "karma": 2 },
+            { "text": "Sein Kontrollpult untersuchen", "next": "ppg_25" }
         ]
     },
 
     "ppg_21": {
-        "text": "Die Marshmallow-Fabrik produziert ununterbrochen rosa Schaumwesen.",
+        "text": "In Mojos Logbuch findest du die Frequenzen seiner Erfindungen. Das koennte extrem nuetzlich sein, um den Satelliten abzuschalten.",
+        "background": "./game_images/background_ppg_mojo_exterior.png",
         "choices": [
-            { "text": "Die Produktion stoppen", "next": "ppg_38", "karma": 3 },
-            { "text": "Ein Wesen untersuchen", "next": "ppg_24" }
+            { "text": "Logbuch an dich nehmen", "next": "mojo_logbook", "gain_item": "ppg_book" }
+        ]
+    },
+
+    "mojo_logbook": {
+        "text": "Du erhaeltst Mojo Jojos detailliertes Logbuch voller fieser Plaene.",
+        "background": "./game_images/background_ppg_mojo_exterior.png",
+        "character": "./game_images/item_ppg_book.png",
+        "choices": [
+            { "text": "Weiter zum Professor", "next": "ppg_15" }
         ]
     },
 
     "ppg_22": {
-        "text": "In der Limonadenfabrik verwandeln sich Arbeiter langsam in laechelnde Zuckerfiguren.",
+        "text": "Brick, Boomer und Butch – die Rowdyruff Boys – lachen euch aus. 'Ihr wollt Townsville retten? Wir machen es lieber platt!' Ein brutaler Dreikampf in den Wolken entbrennt.",
+        "background": "./game_images/background_ppg_sky.png",
+        "character": "./game_images/character_ppg_rowdyruff.png",
         "choices": [
-            { "text": "Die Arbeiter retten", "next": "ppg_29", "karma": 5 },
-            { "text": "Die Maschine sabotieren", "next": "ppg_38", "karma": -1 }
+            { "text": "Die Boys mit Mojos Logbuch austricksen", "next": "ppg_26", "required_item": "ppg_book" },
+            { "text": "Mit roher Gewalt kaempfen", "next": "ppg_27", "karma": -4 }
         ]
     },
 
     "ppg_23": {
-        "text": "Bubbles wird wuetend: 'Die Wolken tun niemandem weh!'",
+        "text": "Das Experiment schlaegt fehl! Es entsteht ein klebriger Schleim, der das halbe Labor blockiert. Professor Utonium seufzt: 'Das war wohl die falsche Zutat...'",
+        "background": "./game_images/background_ppg_lab.png",
         "choices": [
-            { "text": "Bubbles vertrauen", "next": "ppg_24" },
-            { "text": "Sie ignorieren", "next": "ppg_33", "karma": -2 }
+            { "text": "Das Beste daraus machen und losfliegen", "next": "ppg_19", "karma": -1 }
         ]
     },
 
     "ppg_24": {
-        "text": "Die Wolke fluestert: 'Wir wollten nur, dass Townsville gluecklich bleibt.'",
+        "text": "Perfekt! Der Professor mixt die Probe mit dem Gegenmittel. Er laedt es in eine riesige Spritze. 'Werft das in das Zentrum der Wolke!'",
+        "background": "./game_images/background_ppg_lab.png",
+        "character": "./game_images/character_ppg_professor.png",
         "choices": [
-            { "text": "Mit der Wolke verhandeln", "next": "ppg_39", "karma": 3 },
-            { "text": "Die Wolke einfangen", "next": "ppg_30", "karma": -1 }
+            { "text": "Die Antidot-Spritze nehmen", "next": "antidote_spray", "gain_item": "ppg_antidote" }
+        ]
+    },
+
+    "antidote_spray": {
+        "text": "Du erhaeltst die Antidot-Spritze des Professors. Sie vibriert voller reinem Chemical X.",
+        "background": "./game_images/background_ppg_lab.png",
+        "character": "./game_images/item_ppg_antidote.png",
+        "choices": [
+            { "text": "In den Himmel fliegen", "next": "ppg_26" }
         ]
     },
 
     "ppg_25": {
-        "text": "Die Drohnen schalten sich ab. Dabei findest du einen versteckten Sender mit HIMs Symbol.",
+        "text": "Der Decoder faengt Mojos Stimme ab. Aber warte... Mojo funkt gar nicht zum Satelliten. Jemand anderes benutzt SEINE Technologie! Das Signal fuehrt direkt ins tiefe All.",
+        "background": "./game_images/background_ppg_sky.png",
         "choices": [
-            { "text": "Sender mitnehmen", "next": "ppg_34", "gain_item": "him_signal_core" },
-            { "text": "Sender zerstoeren", "next": "ppg_17" }
+            { "text": "In die Stratosphaere durchbrechen", "next": "ppg_29" }
         ]
     },
 
     "ppg_26": {
-        "text": "Der Scanner zeigt: Die Maschine sammelt Freude und verwandelt sie in instabiles Chemical X.",
+        "text": "Ihr erreicht das Auge des gruenen Sturms. Dort oben schwebt eine gigantische Maschine, die die Stadt nach oben saugt. Ihr braucht etwas, um das System sofort zu stoppen.",
+        "background": "./game_images/background_ppg_sky.png",
         "choices": [
-            { "text": "Maschine abschalten", "next": "ppg_38", "karma": 4 },
-            { "text": "Mehr Energie sammeln", "next": "ppg_27", "karma": -5 }
+            { "text": "Das Gegenmittel in den Kern jagen", "next": "ppg_30", "required_item": "ppg_antidote" },
+            { "text": "Die Maschine physisch zertruemmern", "next": "ppg_27", "karma": -3 }
         ]
     },
 
     "ppg_27": {
-        "text": "Die Maschine erzeugt einen gigantischen rosa Sturm ueber Townsville.",
+        "text": "Durch die Zerstoerung explodiert die Chemical-X-Energie! Townsville stuerzt unsanft zurueck auf den Boden. Die Stadt ist gerettet, liegt aber komplett in Truemmern.",
+        "background": "./game_images/background_ppg_street.png",
         "choices": [
-            { "text": "Den Sturm bekaempfen", "next": "ppg_40" },
-            { "text": "Professor Utonium suchen", "next": "ppg_29" }
+            { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
     },
 
     "ppg_28": {
-        "text": "Die Wolken verschmelzen zu einem riesigen laechelnden Gesicht ueber Townsville.",
+        "text": "Bubbles und Blossom bilden ein riesiges Energienetz, um die fallenden Autos und Buerger aufzufangen, waehrend Buttercup die verbliebenen Monster abwehrt. Ihr rettet jeden Einzelnen!",
+        "background": "./game_images/background_ppg_street.png",
         "choices": [
-            { "text": "Angreifen", "next": "ppg_40", "karma": -2 },
-            { "text": "Mit ihm sprechen", "next": "ppg_39" }
+            { "text": "Die wahre Quelle im All suchen", "next": "ppg_29" }
         ]
     },
 
     "ppg_29": {
-        "text": "Professor Utonium versucht verzweifelt ein Gegenmittel zu entwickeln.",
+        "text": "Hoch ueber der Erde seht ihr ein Raumschiff. Es sind die tanzenden Alien-Invasoren aus dem Weltall, die Townsville entfuehren wollten, um die Erde in eine intergalaktische Disko zu verwandeln!",
+        "background": "./game_images/background_ppg_space.png",
         "choices": [
-            { "text": "Beim Gegenmittel helfen", "next": "ppg_30", "karma": 3 },
-            { "text": "Die Stadt verteidigen", "next": "ppg_40", "karma": 1 }
+            { "text": "Sie im Tanz-Duell besiegen", "next": "ppg_30", "karma": 5 },
+            { "text": "Ihr Mutterschiff rammen", "next": "ppg_27", "karma": -2 }
         ]
     },
 
     "ppg_30": {
-        "text": "Das Gegenmittel braucht eine stabile Emotionsquelle.",
+        "text": "Das Gegenmittel (oder das Tanz-Duell) wirkt perfekt! Die gruene Wolke loest sich in glitzernden Sternenstaub auf. Townsville landet sanft und sicher wieder auf der Erde. Der Erzaehler spricht: 'Und so wurde der Tag wieder gerettet, dank... den POWERPUFF GIRLS!'",
+        "background": "./game_images/background_ppg_sky.png",
         "choices": [
-            { "text": "Bubbles ueberzeugen zu helfen", "next": "ppg_41" },
-            { "text": "Chemical X benutzen", "next": "ppg_42", "required_item": "pink_residue" }
-        ]
-    },
-
-    "ppg_31": {
-        "text": "Die Energie wird in die Sicherheitsdrohnen umgeleitet. Sie koennten Townsville retten oder zerstoeren.",
-        "choices": [
-            { "text": "Drohnen aktivieren", "next": "ppg_42" },
-            { "text": "Plan abbrechen", "next": "ppg_40", "karma": -2 }
-        ]
-    },
-
-    "ppg_32": {
-        "text": "HIM laechelt: 'Ist ewiges Glueck wirklich etwas Schlechtes?'",
-        "choices": [
-            { "text": "Zustimmen", "next": "ppg_43", "karma": -4 },
-            { "text": "Widersprechen", "next": "ppg_40", "karma": 3 },
-            { "text": "Zeit gewinnen", "next": "ppg_34" }
-        ]
-    },
-
-    "ppg_33": {
-        "text": "HIM verschwindet lachend und die rosa Energie breitet sich unkontrolliert aus.",
-        "choices": [
-            { "text": "Townsville retten", "next": "ppg_40", "karma": 4 },
-            { "text": "HIM verfolgen", "next": "ppg_43", "karma": -3 }
-        ]
-    },
-
-    "ppg_34": {
-        "text": "Du erkennst, dass HIM die Wolken nicht kontrolliert — er haelt sie nur zurueck.",
-        "choices": [
-            { "text": "Mit HIM zusammenarbeiten", "next": "ppg_41" },
-            { "text": "Ihm trotzdem misstrauen", "next": "ppg_40", "karma": -1 }
-        ]
-    },
-
-    "ppg_35": {
-        "text": "Mojo entwickelt widerwillig ein Geraet gegen die rosa Wolken.",
-        "choices": [
-            { "text": "Das Geraet benutzen", "next": "ppg_42", "required_item": "chemical_scanner" },
-            { "text": "Mojo stoppen", "next": "ppg_40", "karma": -2 }
-        ]
-    },
-
-    "ppg_36": {
-        "text": "Mojo fuehrt dich direkt in eine Falle der Rowdyruff Boys.",
-        "choices": [
-            { "text": "Kaempfen", "next": "ppg_40" },
-            { "text": "Fliehen", "next": "ppg_43", "karma": -3 }
-        ]
-    },
-
-    "ppg_37": {
-        "text": "Die Kisten enthalten instabile Kopien der Powerpuff Girls aus Zuckerenergie.",
-        "choices": [
-            { "text": "Freilassen", "next": "ppg_27", "karma": -4 },
-            { "text": "Versiegeln", "next": "ppg_38", "karma": 2 }
-        ]
-    },
-
-    "ppg_38": {
-        "text": "Die Energie in Townsville wird schwaecher, aber der Himmel beginnt aufzureissen.",
-        "choices": [
-            { "text": "Die Energie opfern", "next": "ppg_41", "karma": 5 },
-            { "text": "Die Energie behalten", "next": "ppg_43", "karma": -4 }
-        ]
-    },
-
-    "ppg_39": {
-        "text": "Die Wolken gestehen, dass sie aus den positiven Gefuehlen der Buerger entstanden sind und Angst vor dem Verschwinden haben.",
-        "choices": [
-            { "text": "Ihnen helfen zu verschwinden", "next": "ppg_41", "karma": 4 },
-            { "text": "Sie kontrollieren", "next": "ppg_42", "karma": -3 }
-        ]
-    },
-
-    "ppg_40": {
-        "text": "ueber Townsville beginnt ein gigantischer Kampf aus rosa Blitzen, Zuckerwesen und Chemical-X-Stuermen.",
-        "choices": [
-            { "text": "Die Stadt schuetzen", "next": "ppg_41", "karma": 5 },
-            { "text": "Alles riskieren", "next": "ppg_43", "karma": -5 }
-        ]
-    },
-
-    "ppg_41": {
-        "text": "Die rosa Wolken loesen sich langsam auf. Townsville bleibt beschaedigt zurueck, aber die Menschen erinnern sich an alles.",
-        "choices": [
-            { "text": "Mit den Powerpuff Girls bleiben", "next": "ppg_44" },
-            { "text": "Alleine verschwinden", "next": "ppg_44", "karma": -1 }
-        ]
-    },
-
-    "ppg_42": {
-        "text": "Die Energie stabilisiert sich kurz, doch kleine rosa Wolken bleiben ueber Townsville zurueck.",
-        "choices": [
-            { "text": "Die Wolken beobachten", "next": "ppg_44" },
-            { "text": "Die Quelle verstecken", "next": "ppg_43", "karma": -2 }
-        ]
-    },
-
-    "ppg_43": {
-        "text": "HIM verschwindet lachend in einer rosa Flamme. Irgendetwas von der Energie bleibt in Townsville zurueck.",
-        "choices": [
-            { "text": "Zurueck zur Stadt", "next": "ppg_44" }
-        ]
-    },
-
-    "ppg_44": {
-        "text": "Professor Utonium blickt auf den Himmel: 'Townsville wird nie wirklich normal bleiben... aber vielleicht ist das auch gut so.'",
-        "choices": [
-            { "text": "Kapitel beenden", "next": "c2_start" }
+            { "text": "Weiterziehen", "next": "c2_start" }
         ]
     },
 
     "c1_gf_start": {
-        "text": "Mitten in der Nacht beginnt der Mystery Shack gleichzeitig alle Radiosender in Gravity Falls zu empfangen. Alte Kinderlieder laufen rueckwaerts, Gluehbirnen flackern in Symbolmustern und draussen tauchen ploetzlich Baeume auf, die gestern noch nicht existierten. Dipper steht mit Journal 3 vor einer Wand voller neuer Zeichen. Mabel hat bereits mehreren der Baeume Namen gegeben.",
+        "text": "Es ist ein unheimlich heisser Nachmittag in Gravity Falls. Ploetzlich fangen im Mystery Shack alle Uhren an, rueckwaerts zu laufen. Der Totempfahl draussen beginnt hysterisch zu lachen, und Dippers magnetischer Kompass dreht komplett durch. Dipper haelt panisch das Tagebuch Nummer 3 in den Haenden, waehrend Mabel neonfarbene Glitzer-Barrikaden baut.",
+        "background": "./game_images/background_gf_shack.png",
         "choices": [
-            { "text": "Mit Dipper die Symbole untersuchen", "next": "gf_1", "karma": 2 },
-            { "text": "Mabel bei den Baeumen helfen", "next": "gf_2" },
-            { "text": "Den Radiosignalen folgen", "next": "gf_3", "karma": -1 },
-            { "text": "Stan misstrauisch beobachten", "next": "gf_4" }
+            { "text": "Mit Dipper die Anomalie im Wald untersuchen", "next": "gf_1", "karma": 1 },
+            { "text": "Mabel beim Sichern des Mystery Shacks helfen", "next": "gf_2" },
+            { "text": "Gronkel Stan fragen, ob er etwas geklaut hat", "next": "gf_3", "karma": -1 },
+            { "text": "Soos im Keller bei der Elektronik helfen", "next": "gf_4", "karma": 2 }
         ]
     },
 
     "gf_1": {
-        "text": "Dipper entdeckt, dass die neuen Symbole nicht im Journal stehen. Einige veraendern ihre Form, sobald man sie direkt ansieht.",
+        "text": "Tief im Wald von Gravity Falls stoesst du mit Dipper auf eine leuchtende, geometrische Spalte im Boden. Dipper blaettert hektisch im Tagebuch: 'Hier steht etwas ueber ein Portal der amerikanischen Ureinwohner... oder es ist eine Falle von Bill Cipher! Wir muessen eine Probe der austretenden Energie nehmen.'",
+        "background": "./game_images/background_gf_forest.png",
+        "character": "./game_images/character_gf_dipper.png",
         "choices": [
-            { "text": "Die Symbole abzeichnen", "next": "gf_5", "gain_item": "cipher_sketches" },
-            { "text": "Ein Symbol beruehren", "next": "gf_6", "karma": -2 },
-            { "text": "Ford suchen", "next": "gf_7" }
+            { "text": "Die Energie mit einem Einmachglas einfangen", "next": "rift_essence", "gain_item": "gf_essence" },
+            { "text": "Die Spalte sofort mit Erde zuschuetten", "next": "gf_5", "karma": -2 }
+        ]
+    },
+
+    "rift_essence": {
+        "text": "Du erhaeltst ein Glas mit seltsam flackernder, blau-gelber Dimensions-Essenz. Sie fluestert rueckwaerts.",
+        "background": "./game_images/background_gf_forest.png",
+        "character": "./game_images/item_gf_essence.png",
+        "choices": [
+            { "text": "Weiter", "next": "gf_8" }
         ]
     },
 
     "gf_2": {
-        "text": "Mabel zeigt dir einen Baum mit Pullovermustern in der Rinde. Darunter liegen dutzende verlorene Gegenstaende aus Gravity Falls.",
+        "text": "Mabel wickelt gerade das Sparschwein Waddles in Alufolie. 'Gegen die Gedankenstrahlen, weisst du?' Ploetzlich klopft es heftig an den Fenstern. Es sind die Gnome! Angefuehrt von Jeff fordern sie lautstark eine neue Koenigin, da der Wald 'vibriert'.",
+        "background": "./game_images/background_gf_shack.png",
+        "character": "./game_images/character_gf_mabel.png",
         "choices": [
-            { "text": "Die Gegenstaende durchsuchen", "next": "gf_8" },
-            { "text": "Den Baum faellen", "next": "gf_9", "karma": -4 },
-            { "text": "Mabels Theorie anhoeren", "next": "gf_10", "karma": 1 }
+            { "text": "Die Gnome mit einer Laubblaeser-Attacke vertreiben", "next": "gf_6", "karma": -3 },
+            { "text": "Mit den Gnomen verhandeln", "next": "gf_7", "karma": 3 }
         ]
     },
 
     "gf_3": {
-        "text": "Die Radiosignale fuehren dich tief in den Wald zu einer Lichtung voller alter Fernseher. Alle zeigen dieselbe Aufnahme: den Mystery Shack — aber leer und verlassen.",
+        "text": "Gronkel Stan zaehlt in seinem Sessel nervoes einen Haufen Goldmuenzen. 'Ich? Geklaut? Das ist eine glatte Unterstellung! Aber falls jemand fragt: Diese vergoldete Azteken-Augenklappe war schon immer in meinem Besitz!'",
+        "background": "./game_images/background_gf_shack_interior.png",
+        "character": "./game_images/character_gf_stan.png",
         "choices": [
-            { "text": "Einen Fernseher einschalten", "next": "gf_11" },
-            { "text": "Die Kabel verfolgen", "next": "gf_12" },
-            { "text": "Zuruecklaufen", "next": "gf_7", "karma": 1 }
+            { "text": "Stan die Azteken-Augenklappe abschwatzen", "next": "aztec_eyepatch", "gain_item": "gf_eyepatch", "karma": -2 },
+            { "text": "Stan ignorieren und Wendy an der Kasse suchen", "next": "gf_9" }
+        ]
+    },
+
+    "aztec_eyepatch": {
+        "text": "Du erhaeltst eine antike Azteken-Augenklappe aus purem Gold. Sie scheint Licht seltsam zu brechen.",
+        "background": "./game_images/background_gf_shack_interior.png",
+        "character": "./game_images/item_gf_eyepatch.png",
+        "choices": [
+            { "text": "Weiter", "next": "gf_10" }
         ]
     },
 
     "gf_4": {
-        "text": "Stan versteckt hektisch mehrere Kisten im Keller des Mystery Shack. Auf einer steht: 'NICHT oeFFNEN WENN DER WALD ATMET.'",
+        "text": "Soos steht im Schuppen vor dem Sicherungskasten, der Funken sprueht. 'Hey Kumpel, der Kasten spricht mit mir. Er sagt, mein Geburtsdatum ist der Code zur Selbstzerstoerung der Realitaet. Ziemlich deep, oder?'",
+        "background": "./game_images/background_gf_shed.png",
+        "character": "./game_images/character_gf_soos.png",
         "choices": [
-            { "text": "Die Kiste oeffnen", "next": "gf_13" },
-            { "text": "Stan direkt fragen", "next": "gf_14" },
-            { "text": "Stan heimlich folgen", "next": "gf_15", "karma": -1 }
+            { "text": "Die Draehte blind herausreissen", "next": "gf_11", "karma": -4 },
+            { "text": "Einen alten UV-Strahler als Filter einbauen", "next": "gf_12", "karma": 4 }
         ]
     },
 
     "gf_5": {
-        "text": "Die Zeichnungen veraendern sich im Notizbuch von selbst. Dipper erkennt ploetzlich versteckte Koordinaten im Wald.",
+        "text": "Als du die Erde auf die Spalte wirfst, verfaerbt sich der Boden schwarz. Ein Rudel riesiger Augaepfel-Fledermaeuse bricht aus den Baumkronen hervor und attackiert euch!",
+        "background": "./game_images/background_gf_forest.png",
         "choices": [
-            { "text": "Den Koordinaten folgen", "next": "gf_16" },
-            { "text": "Die Seiten verbrennen", "next": "gf_17", "karma": -2 },
-            { "text": "Ford informieren", "next": "gf_7", "karma": 2 }
+            { "text": "In den Mystery Shack fluechten", "next": "gf_13", "karma": 1 },
+            { "text": "Mit aesten gegen sie kaempfen", "next": "gf_14", "karma": -3 }
         ]
     },
 
     "gf_6": {
-        "text": "Das Symbol bewegt sich unter deiner Haut weiter und verschwindet erst nach einigen Sekunden.",
+        "text": "Der Laubblaeser schiesst die Gnome im hohen Bogen in den Garten. Einer von ihnen verliert im Flug ein seltsames, dreieckiges Medaillon mit einem Code auf der Rueckseite.",
+        "background": "./game_images/background_gf_shack.png",
         "choices": [
-            { "text": "Es geheim halten", "next": "gf_18", "karma": -2 },
-            { "text": "Dipper davon erzaehlen", "next": "gf_19" }
+            { "text": "Das Medaillon aufheben", "next": "cipher_medallion", "gain_item": "gf_cipher_medallion" }
+        ]
+    },
+
+    "cipher_medallion": {
+        "text": "Du erhaeltst ein mysterioeses Gnom-Medaillon. Es ist mit kryptischen Symbolen graviert.",
+        "background": "./game_images/background_gf_shack.png",
+        "character": "./game_images/item_gf_medallion.png",
+        "choices": [
+            { "text": "Zu Dipper in den Wald laufen", "next": "gf_8" }
         ]
     },
 
     "gf_7": {
-        "text": "Ford untersucht alte Karten von Gravity Falls. 'Diese Muster stammen nicht von Bill Cipher... sie sind aelter.'",
+        "text": "Die Gnome sind bereit zu reden. Sie wollen Mabels Vorrat an 'Smile Dip' (Drogen-Zucker). Mabel gibt ihnen die Kiste schweren Herzens. Die Gnome tanzen euphorisch und rennen tief in den Wald.",
+        "background": "./game_images/background_gf_shack.png",
         "choices": [
-            { "text": "Ford helfen", "next": "gf_20", "gain_item": "fords_map" },
-            { "text": "Nach Bill Cipher fragen", "next": "gf_21" },
-            { "text": "Alleine weitersuchen", "next": "gf_16", "karma": -1 }
+            { "text": "Den Gnomen folgen", "next": "gf_15" },
+            { "text": "Im Shack bleiben", "next": "gf_9", "karma": 2 }
         ]
     },
 
     "gf_8": {
-        "text": "Zwischen den Gegenstaenden findest du eine alte Kassette mit der Aufschrift: 'Fuer den Fall, dass ER zurueckkommt.'",
+        "text": "Wendy kommt auf ihrem Fahrrad angesaust. 'Leute, die Northwest-Villa brennt nicht, aber sie schwebt zwei Meter ueber dem Boden! Pacifica dreht komplett durch und sucht Dipper!'",
+        "background": "./game_images/background_gf_road.png",
+        "character": "./game_images/character_gf_wendy.png",
         "choices": [
-            { "text": "Anhoeren", "next": "gf_22", "gain_item": "static_tape" },
-            { "text": "Stan geben", "next": "gf_14", "karma": 1 },
-            { "text": "Verstecken", "next": "gf_18", "karma": -2 }
+            { "text": "Das Phaenomen mit der Dimensions-Essenz untersuchen", "next": "gf_16", "required_item": "gf_essence" },
+            { "text": "Direkt zur Northwest-Villa fahren", "next": "gf_10", "karma": -1 }
         ]
     },
 
     "gf_9": {
-        "text": "Als der Baum faellt, schreien ploetzlich alle Radios im Mystery Shack gleichzeitig auf.",
+        "text": "Gideon Gleeful taucht ploetzlich auf der Veranda auf! Er haelt ein veraendertes Amulett in der Hand. 'Wenn ich diese Stadt nicht haben kann, wird sie niemand haben! Ich habe den Deal besiegelt!'",
+        "background": "./game_images/background_gf_shack.png",
+        "character": "./game_images/character_gf_gideon.png",
         "choices": [
-            { "text": "Zum Shack zurueckrennen", "next": "gf_23" },
-            { "text": "Den Baum untersuchen", "next": "gf_24", "karma": -2 }
+            { "text": "Gideon das Amulett entreissen", "next": "gf_13", "karma": 3 },
+            { "text": "Ihn mit der goldenen Augenklappe ablenken", "next": "gf_17", "required_item": "gf_eyepatch" }
         ]
     },
 
     "gf_10": {
-        "text": "Mabel glaubt, dass die neuen Baeume Erinnerungen speichern. Einige Gegenstaende stammen von Menschen, die verschwunden sind.",
+        "text": "Die Realitaet beginnt sich aufzuloesen. Der Himmel faerbt sich magenta und ein gigantisches, schwebendes Dreieck wirft seinen Schatten ueber Gravity Falls. Bill Cipher ist fast vollstaendig manifestiert!",
+        "background": "./game_images/background_gf_sky.png",
+        "character": "./game_images/character_gf_bill.png",
         "choices": [
-            { "text": "Mabel glauben", "next": "gf_24", "karma": 2 },
-            { "text": "Daran zweifeln", "next": "gf_16", "karma": -1 }
+            { "text": "Einen Deal mit Bill vorschlagen", "next": "gf_18", "karma": -5 },
+            { "text": "Das Geheimnis des Zodiak-Kreises suchen", "next": "gf_19", "karma": 3 }
         ]
     },
 
     "gf_11": {
-        "text": "Im Fernseher siehst du dich selbst durch den Wald laufen — obwohl du stillstehst.",
+        "text": "Das Herausreissen der Draehte loest einen massiven elektromagnetischen Impuls aus. Der Mystery Shack verliert jegliche magische Schutzbarriere. Der Wald rueckt bedrohlich naeher.",
+        "background": "./game_images/background_gf_shack_interior.png",
         "choices": [
-            { "text": "Weiter beobachten", "next": "gf_25" },
-            { "text": "Den Fernseher zerstoeren", "next": "gf_17", "karma": -2 }
+            { "text": "Die Geheimtuer hinter dem Verkaufsautomat suchen", "next": "gf_20" },
+            { "text": "Nach draussen fliehen", "next": "gf_15", "karma": -1 }
         ]
     },
 
     "gf_12": {
-        "text": "Die Kabel fuehren zu einem unterirdischen Raum voller alter Regierungsgeraete und kryptischer Warnungen.",
+        "text": "Der UV-Strahler wirft ein seltsames Licht an die Wand. Es enthuellt eine unsichtbare Botschaft von Autor Ford! Sie zeigt eine exakte Anleitung, wie man Dimensionsrisse versiegelt.",
+        "background": "./game_images/background_gf_shed.png",
         "choices": [
-            { "text": "Den Computer aktivieren", "next": "gf_26" },
-            { "text": "Alles fotografieren", "next": "gf_20", "gain_item": "facility_photos" }
+            { "text": "Die Anleitung kopieren", "next": "gf_21" }
         ]
     },
 
     "gf_13": {
-        "text": "In der Kiste befindet sich eine mechanische Hand mit einem Auge in der Mitte. Sie beginnt sofort auf die neuen Symbole zu reagieren.",
+        "text": "Ihr verschanzt euch im Shack. Draussen schlagen Blitze ein, die Gegenstaende lebendig machen. Stans Taxidermie-Kreaturen im Museum fangen ploetzlich an zu knurren.",
+        "background": "./game_images/background_gf_shack_interior.png",
         "choices": [
-            { "text": "Die Hand mitnehmen", "next": "gf_27", "gain_item": "oracle_hand" },
-            { "text": "Die Hand zerstoeren", "next": "gf_23", "karma": -3 }
+            { "text": "Gegen die ausgestopften Monster kaempfen", "next": "gf_22", "karma": -3 },
+            { "text": "In Fords geheimes Untergrund-Labor fluechten", "next": "gf_20", "karma": 4 }
         ]
     },
 
     "gf_14": {
-        "text": "Stan wirkt ungewoehnlich ernst. 'Vor Jahren haben wir etwas im Wald eingeschlossen. Es sollte nie wieder aufwachen.'",
+        "text": "Der Kampf im Wald ist brutal. Dipper verliert seine Kappe und ihr werdet von den Augaepfeln hypnotisiert. Ihr wacht erst Stunden spaeter auf – mitten im 'Weirdmageddon'-Vorbote.",
+        "background": "./game_images/background_gf_forest.png",
         "choices": [
-            { "text": "Mehr erfahren wollen", "next": "gf_28" },
-            { "text": "Stan misstrauen", "next": "gf_15", "karma": -2 }
+            { "text": "Hektisch zum Shack rennen", "next": "gf_15", "karma": -2 },
+            { "text": "Nach ueberlebenden suchen", "next": "gf_23", "karma": 4 }
         ]
     },
 
     "gf_15": {
-        "text": "Stan trifft sich heimlich mit Old Man McGucket an einer verlassenen Mine ausserhalb der Stadt.",
+        "text": "Du triffst im Chaos auf die 'Time Paradox Avoidance Enforcement Squadron' (Zeitpolizei) rund um Blendin Blandin. Sie versuchen, die Anomalie einzufrieren, werden aber von der Magie abgelenkt.",
+        "background": "./game_images/background_gf_road.png",
+        "character": "./game_images/character_gf_blendin.png",
         "choices": [
-            { "text": "Lauschen", "next": "gf_29" },
-            { "text": "Sich zeigen", "next": "gf_28", "karma": 1 }
+            { "text": "Ihre Zeit-Ausruestung sabotieren", "next": "gf_24", "karma": -4 },
+            { "text": "Ihnen Informationen aus dem Tagebuch geben", "next": "gf_19", "karma": 5 }
         ]
     },
 
     "gf_16": {
-        "text": "Die Koordinaten fuehren zu einem Kreis aus verdrehten Baeumen. In der Mitte steht eine Tuer mitten im Wald — ohne Waende.",
+        "text": "Das Glas mit der Essenz reagiert wie ein Magnet auf das Signal der Northwest-Villa. Es zeigt euch einen versteckten unterirdischen Bunker der Regierungsagenten.",
+        "background": "./game_images/background_gf_forest.png",
         "choices": [
-            { "text": "Die Tuer oeffnen", "next": "gf_30" },
-            { "text": "Die Tuer untersuchen", "next": "gf_31" },
-            { "text": "Nicht naeherkommen", "next": "gf_23", "karma": 1 }
+            { "text": "Den Regierungs-Bunker betreten", "next": "gf_25" }
         ]
     },
 
     "gf_17": {
-        "text": "Die verbrannten Seiten formen in der Asche ein neues Symbol.",
+        "text": "Gideon starrt hypnotisiert auf die goldene Azteken-Augenklappe. 'Das... das ist die Klappe des blinden Auges!' Waehrend er abgelenkt ist, klaut Mabel ihm sein Amulett und zerstoert es.",
+        "background": "./game_images/background_gf_shack.png",
+        "character": "./game_images/character_gf_gideon.png",
         "choices": [
-            { "text": "Das Symbol kopieren", "next": "gf_31", "gain_item": "ash_symbol" },
-            { "text": "Die Asche wegwerfen", "next": "gf_23", "karma": -1 }
+            { "text": "Gideon verjagen", "next": "gf_26", "karma": 4 },
+            { "text": "Gideons Notizen durchsuchen", "next": "gf_19" }
         ]
     },
 
     "gf_18": {
-        "text": "Seit dem Vorfall hoerst du nachts Fluestern aus den Waenden des Mystery Shack.",
+        "text": "Bill Cipher lacht ohrenbetaeubend. 'Ein Deal? Ich liebe Deals! Du gibst mir das Tagebuch Nummer 3, und ich sorge dafuer, dass Stan reich wird!' Dipper schreit: 'Tu es nicht!'",
+        "background": "./game_images/background_gf_sky.png",
+        "character": "./game_images/character_gf_bill.png",
         "choices": [
-            { "text": "Dem Fluestern folgen", "next": "gf_32", "karma": -2 },
-            { "text": "Dipper informieren", "next": "gf_19", "karma": 2 }
+            { "text": "Den Handschlag annehmen", "next": "gf_27", "karma": -6 },
+            { "text": "Im letzten Moment zurueckziehen", "next": "gf_26", "karma": 3 }
         ]
     },
 
     "gf_19": {
-        "text": "Dipper erkennt das Symbol sofort. 'Das gehoert zu einer alten Entitaet namens The Watcher.'",
+        "text": "Ihr findet heraus, dass Bills Schwachstelle ein alter, druidischer Bannspruch ist, der im Wald von Gravity Falls auf einer Steintafel eingraviert wurde. Aber der Code ist verschluesselt.",
+        "background": "./game_images/background_gf_forest.png",
         "choices": [
-            { "text": "Mehr herausfinden", "next": "gf_33" },
-            { "text": "Das ignorieren", "next": "gf_32", "karma": -2 }
+            { "text": "Den Code mit dem Gnom-Medaillon entschluesseln", "next": "gf_30", "required_item": "gf_medallion" },
+            { "text": "Raten und das Ritual blind starten", "next": "gf_27", "karma": -4 }
         ]
     },
 
     "gf_20": {
-        "text": "Ford entdeckt auf der Karte ein verstecktes Tunnelsystem unter Gravity Falls.",
+        "text": "Ihr tippt den Code am Verkaufsautomaten ein und fahrt mit dem geheimen Aufzug tief unter die Erde. Hier unten summt der gewaltige Dimensionstranszendent-Reaktor von Onkel Ford.",
+        "background": "./game_images/background_gf_lab.png",
         "choices": [
-            { "text": "Die Tunnel betreten", "next": "gf_34" },
-            { "text": "Zuerst Ausruestung sammeln", "next": "gf_35", "gain_item": "gravity_gear" },
-            { "text": "Stan mitnehmen", "next": "gf_28" }
+            { "text": "Den Reaktor auf Ueberlastung stellen", "next": "gf_28" },
+            { "text": "Fords Aufzeichnungen nach einer Waffe durchsuchen", "next": "gf_21" }
         ]
     },
 
     "gf_21": {
-        "text": "Ford wird still. 'Bill wollte Chaos. The Watcher will Kontrolle.'",
+        "text": "Du findest Fords experimentellen Quanten-Destabilisator – eine maechtige Laserkanone, die Dimensionswesen einfrieren kann.",
+        "background": "./game_images/background_gf_lab.png",
         "choices": [
-            { "text": "Das ernst nehmen", "next": "gf_33", "karma": 3 },
-            { "text": "Bill war schlimmer", "next": "gf_32", "karma": -2 }
+            { "text": "Die Laserkanone einstecken", "next": "quantum_gun", "gain_item": "gf_gun" }
+        ]
+    },
+
+    "quantum_gun": {
+        "text": "Du erhaeltst den Quanten-Destabilisator. Er summt gefaehrlich und verbraucht enorm viel Energie.",
+        "background": "./game_images/background_gf_lab.png",
+        "character": "./game_images/item_gf_gun.png",
+        "choices": [
+            { "text": "Nach oben gehen und Bill konfrontieren", "next": "gf_26" }
         ]
     },
 
     "gf_22": {
-        "text": "Auf der Kassette spricht McGucket panisch ueber 'Augen im Wald, die Erinnerungen stehlen'.",
+        "text": "Der Kampf gegen die Taxidermie-Monster verwuestet den Souvenirshop komplett. Stan weint um seine gefaelschten Exponate. Das Chaos lenkt euch ab, waehrend Bill an Macht gewinnt.",
+        "background": "./game_images/background_gf_shack_interior.png",
         "choices": [
-            { "text": "McGucket suchen", "next": "gf_29" },
-            { "text": "Die Kassette verstecken", "next": "gf_18", "karma": -1 }
+            { "text": "Sich im Schrank verstecken", "next": "gf_23", "karma": -2 }
         ]
     },
 
     "gf_23": {
-        "text": "In ganz Gravity Falls verschwinden ploetzlich Schatten von Menschen unabhaengig von ihren Besitzern.",
+        "text": "Draussen regnet es ploetzlich Seifenblasen, die reines Grauen verursachen. Pacifica Northwest rennt panisch an euch vorbei. 'Meine Eltern sind zu Stein geworden! Helft mir!'",
+        "background": "./game_images/background_gf_road.png",
+        "character": "./game_images/character_gf_pacifica.png",
         "choices": [
-            { "text": "Den Menschen helfen", "next": "gf_36", "karma": 4 },
-            { "text": "Einen Schatten verfolgen", "next": "gf_37", "karma": -2 }
+            { "text": "Pacifica troesten und mitnehmen", "next": "gf_28", "karma": 5 },
+            { "text": "Weiter nach Dipper suchen", "next": "gf_24", "karma": -3 }
         ]
     },
 
     "gf_24": {
-        "text": "Im Inneren des Baumes findest du hunderte eingravierte Namen verschwundener Einwohner.",
+        "text": "Durch die Sabotage oder das Zoegern kollidiert die Zeitleiste! Die Zukunft von Gravity Falls verschwimmt in einem psychedelischen Albtraum. Ihr muesst sofort handeln.",
+        "background": "./game_images/background_gf_sky.png",
         "choices": [
-            { "text": "Die Namen dokumentieren", "next": "gf_35", "karma": 2 },
-            { "text": "Einen Namen entfernen", "next": "gf_37", "karma": -3 }
+            { "text": "Bill Cipher direkt angreifen", "next": "gf_26" }
         ]
     },
 
     "gf_25": {
-        "text": "Die Fernseher zeigen nun eine Version von Gravity Falls ohne Menschen.",
+        "text": "Im Regierungs-Bunker findest du eine Gedaechtnisloesch-Maschine der 'Gesellschaft des Blinden Auges'. Sie koennte benutzt werden, um Bills Praesenz in den Koepfen der Menschen zu loeschen.",
+        "background": "./game_images/background_gf_bunker.png",
         "choices": [
-            { "text": "Nach Hinweisen suchen", "next": "gf_26" },
-            { "text": "Die Fernseher ausschalten", "next": "gf_23", "karma": 1 }
+            { "text": "Die Loesch-Maschine modifizieren", "next": "memory_gun", "gain_item": "gf_memory_gun" }
+        ]
+    },
+
+    "memory_gun": {
+        "text": "Du erhaeltst die modifizierte Gedaechtnisloesch-Pistole. Ein falscher Schuss und du vergisst deinen eigenen Namen.",
+        "background": "./game_images/background_gf_bunker.png",
+        "character": "./game_images/item_gf_memory_gun.png",
+        "choices": [
+            { "text": "Zurueck an die Oberflaeche", "next": "gf_26" }
         ]
     },
 
     "gf_26": {
-        "text": "Der Computer aktiviert ein altes Warnsystem: 'ENTITY OBSERVING. DO NOT OPEN THE DOOR.'",
+        "text": "Bill Cipher schwebt ueber dem Mystery Shack. 'Ihr dachtet, ihr koenntet mich aufhalten? Ich bin aus reinem reinen Wahnsinn gemacht!' Er holt zum finalen Schlag aus.",
+        "background": "./game_images/background_gf_sky.png",
+        "character": "./game_images/character_gf_bill.png",
         "choices": [
-            { "text": "Die Warnung ernst nehmen", "next": "gf_34", "karma": 2 },
-            { "text": "Die Warnung ignorieren", "next": "gf_30", "karma": -3 }
+            { "text": "Ihn mit dem Quanten-Destabilisator abschiessen", "next": "gf_30", "required_item": "gf_gun" },
+            { "text": "Bills Geist mit der Gedaechtnis-Pistole loeschen", "next": "gf_30", "required_item": "gf_memory_gun" }
         ]
     },
 
     "gf_27": {
-        "text": "Die mechanische Hand beginnt ploetzlich Richtung Wald zu zeigen.",
+        "text": "Der Plan schlaegt fehl! Bill Cipher uebernimmt die totale Kontrolle ueber die Geister der Bewohner. Gravity Falls wird in eine bizarre Albtraum-Dimension gezogen. Der Mystery Shack brennt.",
+        "background": "./game_images/background_gf_shack.png",
         "choices": [
-            { "text": "Ihr folgen", "next": "gf_34" },
-            { "text": "Sie deaktivieren", "next": "gf_36", "karma": -1 }
+            { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
     },
 
     "gf_28": {
-        "text": "Stan gesteht, dass Ford und McGucket die Tuer im Wald einst absichtlich erschaffen haben.",
+        "text": "Der Reaktor explodiert in einer blau-weissen Nova. Die Druckwelle fegt alle fliegenden Augen und bizarren Kreaturen hinweg, beschaedigt aber auch die halbe Stadt. Es ist ein harter Sieg.",
+        "background": "./game_images/background_gf_shack.png",
         "choices": [
-            { "text": "Warum?", "next": "gf_33" },
-            { "text": "Die Tuer sofort zerstoeren", "next": "gf_38", "karma": -3 }
+            { "text": "Kapitel 2 starten", "next": "c2_start" }
         ]
     },
 
     "gf_29": {
-        "text": "McGucket traegt mehrere Huete uebereinander und murmelt: 'Es sieht durch Spiegel und Erinnerungen.'",
+        "text": "Ihr schafft es, Bills physische Form durch pure Willenskraft und Teamwork abzulenken, waehrend Dipper und Mabel die magischen Runen anwenden. Bill schreit auf, als sich ein Sog oeffnet.",
+        "background": "./game_images/background_gf_sky.png",
         "choices": [
-            { "text": "McGucket vertrauen", "next": "gf_35", "gain_item": "memory_lens" },
-            { "text": "Seine Worte ignorieren", "next": "gf_32", "karma": -2 }
+            { "text": "Ihn endgueltig verbannen", "next": "gf_30", "karma": 5 }
         ]
     },
 
     "gf_30": {
-        "text": "Hinter der Tuer befindet sich kein Raum — sondern ein endloser Wald voller schwebender Augen.",
+        "text": "Mit einem markerschuetternden Schrei implodiert Bill Cipher in ein winziges, schwarzes Loch, das sich sofort schliesst. Die Uhren laufen wieder normal, der Himmel wird blau. Dipper klappt das Tagebuch zu und laechelt erschoepft. 'Wir haben es geschafft.' Der Erzaehler fluestert: 'Bis zum naechsten Mysterium...'",
+        "background": "./game_images/background_gf_shack.png",
         "choices": [
-            { "text": "Weitergehen", "next": "gf_39", "karma": -2 },
-            { "text": "Die Tuer schliessen", "next": "gf_40", "karma": 3 }
-        ]
-    },
-
-    "gf_31": {
-        "text": "In die Tuer sind dieselben Symbole eingeritzt wie in deinen Zeichnungen.",
-        "choices": [
-            { "text": "Mit den Zeichnungen vergleichen", "next": "gf_33", "required_item": "cipher_sketches" },
-            { "text": "Die Tuer markieren", "next": "gf_40" }
-        ]
-    },
-
-    "gf_32": {
-        "text": "In der Nacht verschwindet ploetzlich ein Teil des Mystery Shack. Niemand erinnert sich daran, dass dort jemals ein Raum war.",
-        "choices": [
-            { "text": "Die Erinnerung rekonstruieren", "next": "gf_41", "required_item": "memory_lens" },
-            { "text": "Es ignorieren", "next": "gf_39", "karma": -4 }
-        ]
-    },
-
-    "gf_33": {
-        "text": "Ford erkennt die Wahrheit: The Watcher loescht Dinge aus der Realitaet, indem es Menschen dazu bringt, sie zu vergessen.",
-        "choices": [
-            { "text": "Die Stadt warnen", "next": "gf_42", "karma": 4 },
-            { "text": "Die Informationen geheim halten", "next": "gf_39", "karma": -3 }
-        ]
-    },
-
-    "gf_34": {
-        "text": "Unter Gravity Falls findest du ein riesiges Observatorium voller Augen-Symbole und alter Tonaufnahmen.",
-        "choices": [
-            { "text": "Die Aufnahmen anhoeren", "next": "gf_43" },
-            { "text": "Das Observatorium sabotieren", "next": "gf_38", "karma": -2 }
-        ]
-    },
-
-    "gf_35": {
-        "text": "Mit der gesammelten Ausruestung kannst du verborgene Spuren im Wald sichtbar machen.",
-        "choices": [
-            { "text": "Den Spuren folgen", "next": "gf_43" },
-            { "text": "Die Ausruestung Dipper geben", "next": "gf_42", "karma": 2 }
-        ]
-    },
-
-    "gf_36": {
-        "text": "Mehrere Bewohner beginnen ihre eigenen Namen zu vergessen.",
-        "choices": [
-            { "text": "Die Erinnerungen retten", "next": "gf_41", "karma": 5 },
-            { "text": "Nur dich selbst schuetzen", "next": "gf_39", "karma": -4 }
-        ]
-    },
-
-    "gf_37": {
-        "text": "Der verfolgte Schatten fuehrt dich direkt zu The Watcher — einer riesigen Gestalt aus Augen und fluesternden Stimmen.",
-        "choices": [
-            { "text": "Mit ihm sprechen", "next": "gf_44" },
-            { "text": "Angreifen", "next": "gf_45", "karma": -5 }
-        ]
-    },
-
-    "gf_38": {
-        "text": "Durch die Zerstoerung destabilisiert sich der Wald selbst. Wege veraendern sich jede Minute.",
-        "choices": [
-            { "text": "Ford helfen", "next": "gf_42", "karma": 2 },
-            { "text": "Alleine weiter", "next": "gf_45", "karma": -2 }
-        ]
-    },
-
-    "gf_39": {
-        "text": "Immer mehr Menschen vergessen Gravity Falls vollstaendig. Strassenschilder verschwinden und Gebaeude veraendern ihre Form.",
-        "choices": [
-            { "text": "Die Tuer endgueltig schliessen", "next": "gf_46", "required_item": "oracle_hand" },
-            { "text": "The Watcher beobachten", "next": "gf_44", "karma": -2 }
-        ]
-    },
-
-    "gf_40": {
-        "text": "Die Tuer beginnt sich zu versiegeln, aber etwas versucht von innen herauszukommen.",
-        "choices": [
-            { "text": "Dagegenhalten", "next": "gf_46", "karma": 4 },
-            { "text": "Loslassen", "next": "gf_45", "karma": -3 }
-        ]
-    },
-
-    "gf_41": {
-        "text": "Mit der Linse kannst du verlorene Erinnerungen sichtbar machen. Die verschwundenen Raeume des Mystery Shack erscheinen kurz wieder.",
-        "choices": [
-            { "text": "Die Erinnerungen stabilisieren", "next": "gf_46", "karma": 5 },
-            { "text": "Nur eine Erinnerung retten", "next": "gf_44", "karma": -1 }
-        ]
-    },
-
-    "gf_42": {
-        "text": "Die Bewohner von Gravity Falls beginnen gemeinsam, sich gegen The Watcher zu erinnern.",
-        "choices": [
-            { "text": "Die Erinnerungen buendeln", "next": "gf_46", "karma": 5 },
-            { "text": "Die Stadt evakuieren", "next": "gf_45", "karma": -1 }
-        ]
-    },
-
-    "gf_43": {
-        "text": "Die Tonaufnahmen stammen von Ford selbst. 'Wenn jemand das hoert: Vergiss niemals diesen Ort.'",
-        "choices": [
-            { "text": "Die Nachricht verbreiten", "next": "gf_42", "karma": 4 },
-            { "text": "Die Aufnahmen zerstoeren", "next": "gf_45", "karma": -4 }
-        ]
-    },
-
-    "gf_44": {
-        "text": "The Watcher bietet dir einen Handel an: Niemand in Gravity Falls wird verschwinden — solange die Stadt niemals verlassen darf.",
-        "choices": [
-            { "text": "Annehmen", "next": "gf_47", "karma": -5 },
-            { "text": "Ablehnen", "next": "gf_46", "karma": 4 }
-        ]
-    },
-
-    "gf_45": {
-        "text": "Der Wald beginnt Gravity Falls vollstaendig zu verschlingen. Strassen enden ploetzlich im Nichts.",
-        "choices": [
-            { "text": "Zum Mystery Shack zurueckkehren", "next": "gf_46" }
-        ]
-    },
-
-    "gf_46": {
-        "text": "Gemeinsam gelingt es euch, die Tuer tief im Wald zu versiegeln. Die Radios verstummen langsam wieder.",
-        "choices": [
-            { "text": "Mit Dipper reden", "next": "gf_48" },
-            { "text": "Alleine in den Wald schauen", "next": "gf_48", "karma": -1 }
-        ]
-    },
-
-    "gf_47": {
-        "text": "Gravity Falls bleibt bestehen — aber niemand kann die Stadt jemals wieder verlassen.",
-        "choices": [
-            { "text": "Das akzeptieren", "next": "gf_48" }
-        ]
-    },
-
-    "gf_48": {
-        "text": "Dipper schliesst Journal 3 langsam. 'Gravity Falls hatte schon immer Geheimnisse... aber manche sollten vielleicht geheim bleiben.'",
-        "choices": [
-            { "text": "Kapitel beenden", "next": "c3_start" }
+            { "text": "Weiterziehen", "next": "c2_start" }
         ]
     },
 
     "c2_start": {
         "text": "Der Nexus oeffnet sich vollstaendig. Die fuenf ersten Welten verschwinden hinter dir, doch neue Signale erscheinen sofort. Einige Dimensionen kollidieren bereits miteinander. Stimmen, Erinnerungen und ganze Orte werden vermischt. Eine unbekannte Entitaet beobachtet jede deiner Entscheidungen.",
+        "background": "./game_images/background_space.png",
         "choices": [
             { "text": "Teen Titans", "next": "c2_tt_start" },
-            { "text": "Ben 10", "next": "c2_b10_start" },
-            { "text": "Samurai Jack", "next": "sj_01" },
+            { "text": "Ben 10", "next": "c2_ben_start" },
+            { "text": "Samurai Jack", "next": "c2_sj_start" },
             { "text": "Regular Show", "next": "c2_rs_start" },
             { "text": "Ninjago", "next": "c2_nj_start" }
         ]
     },
     "c2_tt_start": {
-        "text": "Der Titans Tower driftet mitten in der Nacht langsam durch dichten roten Nebel im Hafen von Jump City. Kein Alarm laeuft, keine Systeme reagieren. Nur ein einziges Signal blinkt dauerhaft im Hauptcomputer: \"DON'T LET HIM WAKE UP\". Robin steht bereits bewaffnet im Kontrollraum, waehrend Raven ungewoehnlich nervoes wirkt.",
+        "text": "Die Alarmanlage des Titans Tower draoehnt in ohrenbetaeubender Lautstaerke. Auf dem Hauptbildschirm flackert ein stilisiertes, rotes 'S'. Slade hat das neuronale Netzwerk von Jump City infiltriert. Ploetzlich verliert das Terminal die Verbindung, und ein seltsames, technologisches Summen bringt die Waende zum Vibrieren. Robin steht bereits mit geballten Faeusten am Kartentisch.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Robin beim Kontrollraum helfen", "next": "tt_1", "karma": 3 },
-            { "text": "Raven folgen", "next": "tt_2" },
-            { "text": "Alleine den Tower untersuchen", "next": "tt_3", "karma": -2 },
-            { "text": "Beast Boy und Cyborg suchen", "next": "tt_4" }
+            { "text": "Mit Robin Slades geheime Frequenz analysieren", "next": "c2_tt_1", "karma": 1 },
+            { "text": "Cyborg im Maschinenraum bei den Generatoren helfen", "next": "c2_tt_2" },
+            { "text": "Starfire und Beast Boy in die Innenstadt begleiten", "next": "c2_tt_3", "karma": -1 },
+            { "text": "Mit Raven ueber eine moegliche magische Signatur sprechen", "next": "c2_tt_4", "karma": 2 }
         ]
     },
 
-    "tt_1": {
-        "text": "Robin zeigt dir Sicherheitsaufnahmen. Alle Kameras zeigen dieselbe Gestalt mit weisser Maske, obwohl niemand den Tower betreten hat.",
+    "c2_tt_1": {
+        "text": "Robin hackt sich wie besessen durch Slades Firewalls. 'Er benutzt ein kybernetisches Signal, das direkt die Synapsen angreift! Wenn wir den Quellcode nicht isolieren, uebernimmt er die Stadt.' Das Terminal droht durchzubrennen.",
+        "background": "./game_images/background_tt_tower.png",
+        "character": "./game_images/character_tt_robin.png",
         "choices": [
-            { "text": "Die Aufnahmen analysieren", "next": "tt_5", "gain_item": "security_override" },
-            { "text": "Robin warnen, dass es eine Falle sein koennte", "next": "tt_6", "karma": 4 }
+            { "text": "Den Hauptrechner ueberlasten, um Daten zu retten", "next": "tt_slade_drive", "gain_item": "tt_slade_drive" },
+            { "text": "Den Hack manuell blockieren", "next": "c2_tt_5", "karma": -2 }
         ]
     },
 
-    "tt_2": {
-        "text": "Raven fuehrt dich in den Meditationsraum. Dort schweben schwarze Symbole an den Waenden. 'Etwas versucht, Erinnerungen aus dem Tower zu ziehen', sagt sie leise.",
+    "tt_slade_drive": {
+        "text": "Du erhaeltst eine verschluesselte Slade-Datenfestplatte. Sie glueht heiss und enthaelt Fragmente seiner Befehls-Matrix.",
+        "background": "./game_images/background_tt_tower.png",
+        "character": "./game_images/item_tt_slade_drive.png",
         "choices": [
-            { "text": "Raven helfen", "next": "tt_7", "karma": 3 },
-            { "text": "Die Symbole beruehren", "next": "tt_8", "gain_item": "shadow_mark" }
+            { "text": "Die Daten im Tower entschluesseln", "next": "c2_tt_8" },
+            { "text": "Die Festplatte mitnehmen und die Stadt sichern", "next": "c2_tt_10" }
         ]
     },
 
-    "tt_3": {
-        "text": "Die unteren Ebenen des Towers wirken verlassen. In der Trainingshalle bewegen sich die uebungsroboter ploetzlich alleine und greifen alles an, was sich bewegt.",
+    "c2_tt_2": {
+        "text": "Im Keller des Towers funkt Cyborg verzweifelt aus seinem Roboter-Arm. 'Mann, die H.I.V.E.-Five-Goere Gizmo hat ein Virus in meine Systeme geschleust! Ich verliere die Kontrolle ueber meine T-Car-Sicherheitsdrohnen!' Die Drohnen fahren ihre Laser aus.",
+        "background": "./game_images/background_tt_subway.png",
+        "character": "./game_images/character_tt_cyborg.png",
         "choices": [
-            { "text": "Die Roboter abschalten", "next": "tt_9", "karma": 2 },
-            { "text": "Durch die Halle sprinten", "next": "tt_10", "karma": -4 }
+            { "text": "Die Drohnen mit einem EMP lahmlegen", "next": "c2_tt_6", "karma": -3 },
+            { "text": "Gizmos Schadcode isolieren und umleiten", "next": "c2_tt_7", "karma": 3 }
         ]
     },
 
-    "tt_4": {
-        "text": "Cyborg und Beast Boy sitzen in der Kueche und diskutieren mit dem Kuehlschrank. Der Kuehlschrank behauptet, er sei der neue Tower-Administrator.",
+    "c2_tt_3": {
+        "text": "In den Strassen von Jump City herrscht Chaos. Passanten rennen hypnotisiert im Kreis, waehrend Mad Mod die Stadt mit riesigen, mechanischen Union-Jack-Sonden in ein absurdes britisches Labyrinth verwandelt. Starfire flucht auf Tamaranisch: 'Diese Maschinen beleidigen meine Augen!'",
+        "background": "./game_images/background_tt_city.png",
+        "character": "./game_images/character_tt_starfire.png",
         "choices": [
-            { "text": "Cyborg unterstuetzen", "next": "tt_11" },
-            { "text": "Beast Boys Idee folgen", "next": "tt_12", "karma": -3 }
+            { "text": "Eine der Sonden zerlegen und die Linse stehlen", "next": "tt_mod_lens", "gain_item": "tt_lens", "karma": -2 },
+            { "text": "Die Sonden mit Starfires Starbolts beschiessen", "next": "c2_tt_9", "karma": 3 }
         ]
     },
 
-    "tt_5": {
-        "text": "Die Aufnahmen zeigen ploetzlich Slade, aber Robin erkennt sofort, dass etwas nicht stimmt. Die Bewegungen passen nicht zu ihm.",
+    "tt_mod_lens": {
+        "text": "Du erhaeltst die optische Hyper-Brechungslinse aus Mad Mods Sonde. Sie kann Lichtwellen extrem verzerren.",
+        "background": "./game_images/background_tt_city.png",
+        "character": "./game_images/item_tt_lens.png",
         "choices": [
-            { "text": "Weiter analysieren", "next": "tt_13", "gain_item": "slade_frequency" },
-            { "text": "Sofort Alarm ausloesen", "next": "tt_14", "karma": -3 }
+            { "text": "Die Linse am Visier testen", "next": "c2_tt_10" },
+            { "text": "Zurueck zum Tower eilen", "next": "c2_tt_15" }
         ]
     },
 
-    "tt_6": {
-        "text": "Robin stoppt den Alarmprozess. Sekunden spaeter explodiert genau dort eine versteckte Mine im Kontrollraum.",
+    "c2_tt_4": {
+        "text": "Raven sitzt in tiefer Meditation, umgeben von einer dunklen Aura. 'Azarath Metrion Zinthos... Es ist nicht nur Technologie. Slade nutzt ein uraltes Artefakt der Geometrie, um die Realitaet zu verbiegen.' Sie oeffnet die Augen, die rot aufleuchten.",
+        "background": "./game_images/background_tt_raven_room.png",
+        "character": "./game_images/character_tt_raven.png",
         "choices": [
-            { "text": "Die Quelle der Mine suchen", "next": "tt_15" },
-            { "text": "Den Tower evakuieren", "next": "tt_16", "karma": 5 }
+            { "text": "Ravens Meditation stoeren und sie warnen", "next": "c2_tt_11", "karma": -3 },
+            { "text": "Ihr zuhoeren und das Buch der Schatten studieren", "next": "c2_tt_12", "karma": 4 }
         ]
     },
 
-    "tt_7": {
-        "text": "Raven oeffnet kurz ein magisches Fenster in eine dunkle Dimension. Fuer einen Moment siehst du jemanden im Nebel stehen: Trigon laechelt.",
+    "c2_tt_5": {
+        "text": "Der manuelle Block schlaegt fehl. Eine neuronale Rueckkopplung schiesst durch die Konsolen und blendet Robin kurzzeitig. Draussen vor den Fenstern tauchen Slades mechanische Commando-Bots auf und durchbrechen die Scheiben.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Das Portal schliessen", "next": "tt_17", "karma": 4 },
-            { "text": "Genauer hinsehen", "next": "tt_18", "gain_item": "trigon_fragment" }
+            { "text": "Die Bots im Nahkampf stellen", "next": "c2_tt_13", "karma": -4 },
+            { "text": "Beast Boy als T-Rex vorschicken", "next": "c2_tt_14", "karma": 2 }
         ]
     },
 
-    "tt_8": {
-        "text": "Die Symbole brennen sich kurz in deine Hand ein. Ploetzlich hoerst du Stimmen aus den Waenden des Towers.",
+    "c2_tt_6": {
+        "text": "Der EMP schaltet die Drohnen aus, grillt aber auch Cyborgs halbe interne Sensorik. Er bricht schwer atmend zusammen. Bevor du reagieren kannst, hinterlaesst Gizmo eine spoettische Videobotschaft und einen Prototyp-Sprengkopf im Raum.",
+        "background": "./game_images/background_tt_subway.png",
         "choices": [
-            { "text": "Den Stimmen folgen", "next": "tt_18" },
-            { "text": "Raven davon erzaehlen", "next": "tt_17", "karma": 2 }
+            { "text": "Den H.I.V.E.-Sprengkopf einstecken", "next": "tt_hive_detonator", "gain_item": "tt_detonator" },
+            { "text": "Den Sprengkopf ignorieren und Cyborg evakuieren", "next": "c2_tt_8", "karma": 2 }
         ]
     },
 
-    "tt_9": {
-        "text": "Einer der Roboter zeigt vor dem Abschalten eine Nachricht: 'ER IST BEREITS IM TOWER'.",
+    "tt_hive_detonator": {
+        "text": "Du erhaeltst einen unbestimmten H.I.V.E.-Zuender. Er tickt unregelmaessig, birgt aber eine enorme Sprengkraft.",
+        "background": "./game_images/background_tt_subway.png",
+        "character": "./game_images/item_tt_detonator.png",
         "choices": [
-            { "text": "Nach Eindringlingen suchen", "next": "tt_15" },
-            { "text": "Robin informieren", "next": "tt_14", "karma": 2 }
+            { "text": "Zurueck zu Robin eilen", "next": "c2_tt_8" },
+            { "text": "Direkt in die U-Bahn-Schaechte vordringen", "next": "c2_tt_15" }
         ]
     },
 
-    "tt_10": {
-        "text": "Du entkommst knapp, aber die Roboter verfolgen jetzt andere Bewohner des Towers.",
+    "c2_tt_7": {
+        "text": "Dank deiner Hilfe isoliert Cyborg den Code. Er grinst: 'Gute Arbeit, Little Buddy! Ich habe den Spiess umgedreht.' Die Drohnen feuern nun auf Slades herannahende Truppen und halten den Tower-Eingang sauber.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Zurueckgehen und helfen", "next": "tt_9", "karma": 3 },
-            { "text": "Weiterlaufen", "next": "tt_19", "karma": -5 }
+            { "text": "Den Ursprung des Signals am Hafen suchen", "next": "c2_tt_15" },
+            { "text": "Robin im Kontrollraum absichern", "next": "c2_tt_9", "karma": 4 }
         ]
     },
 
-    "tt_11": {
-        "text": "Cyborg entdeckt versteckte Codes im Tower-System. Jemand manipuliert die KI von innen.",
+    "c2_tt_8": {
+        "text": "Die Commando-Bots haben die Energiebarrieren des Towers ueberlastet. Das gesamte Gebaeude wechselt in den roten Verteidigungsmodus. ueber den Lautsprecher ertoent Slades ruhige, sadistische Stimme: 'Titans... Eure Zeit laeuft ab.'",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Codes entschluesseln", "next": "tt_20", "gain_item": "tower_code" },
-            { "text": "Die Hauptenergie trennen", "next": "tt_21", "karma": -4 }
+            { "text": "Slades Festplatte nutzen, um seine Bots zu deaktivieren", "next": "c2_tt_16", "required_item": "tt_slade_drive" },
+            { "text": "Den Tower evakuieren und den Kampf nach draussen verlegen", "next": "c2_tt_10", "karma": -1 }
         ]
     },
 
-    "tt_12": {
-        "text": "Beast Boy verwandelt sich in einen T-Rex, um den Kuehlschrank einzuschuechtern. Dabei zerstoert er die halbe Kueche.",
+    "c2_tt_9": {
+        "text": "Mad Mods Sonden explodieren, setzen aber ein grelles, psychedelisches Gas frei. Die Titans beginnen, Halluzinationen von ihren schlimmsten Feinden zu sehen. Das Chaos auf den Strassen erreicht den Siedepunkt.",
+        "background": "./game_images/background_tt_city.png",
         "choices": [
-            { "text": "Mitlachen", "next": "tt_19", "karma": -2 },
-            { "text": "Nachsehen, was der Kuehlschrank versteckt hat", "next": "tt_20" }
+            { "text": "Gegen die Halluzinationen ankaempfen", "next": "c2_tt_17", "karma": -5 },
+            { "text": "Raven um eine mentale Barriere bitten", "next": "c2_tt_13", "karma": 3 }
         ]
     },
 
-    "tt_13": {
-        "text": "Die Frequenz stammt nicht von Slade, sondern von Mad Mod. Der ganze Tower scheint manipulierte Wahrnehmungen zu erzeugen.",
+    "c2_tt_10": {
+        "text": "Die Stadt transformiert sich weiter. Schwebende Plattformen aus kaltem Stahl verdecken die Sonne. Am Himmel oeffnet sich ein rissiges Loch aus purer, roetlicher Chrono-Energie. Slade versucht, die Zeit selbst einzufrieren.",
+        "background": "./game_images/background_tt_sky.png",
+        "character": "./game_images/character_tt_slade.png",
         "choices": [
-            { "text": "Mad Mods Signal stoeren", "next": "tt_22", "required_item": "security_override" },
-            { "text": "Robin allein informieren", "next": "tt_23" }
+            { "text": "Sich in Slades temporales Feld wagen", "next": "c2_tt_18", "karma": 5 },
+            { "text": "Die Sonden im Zentrum zerstoeren", "next": "c2_tt_19", "karma": -2 }
         ]
     },
 
-    "tt_14": {
-        "text": "Waehrend des Alarms tauchen ploetzlich dutzende falsche Titans im Tower auf. Jeder behauptet, der echte zu sein.",
+    "c2_tt_11": {
+        "text": "Raven verliert durch den Schock die Kontrolle ueber ihre Telekinese. Mehrere schwere Buecherregale stuerzen auf euch herab, und das Zimmer wird von daemonischen Schatten geflutet. Ihr muesst sofort fliehen.",
+        "background": "./game_images/background_tt_raven_room.png",
         "choices": [
-            { "text": "Raven vertrauen", "next": "tt_24", "karma": 4 },
-            { "text": "Robin folgen", "next": "tt_23", "karma": -2 }
+            { "text": "Durch das Fenster nach draussen springen", "next": "c2_tt_20" },
+            { "text": "Raven helfen, ihre Kraefte wieder zu fokussieren", "next": "c2_tt_15", "karma": -2 }
         ]
     },
 
-    "tt_15": {
-        "text": "Im alten Trophaeenraum findest du eine versteckte Maske von Slade. Sie ist noch warm.",
+    "c2_tt_12": {
+        "text": "Im Buch der Schatten entdeckst du eine alte tamaranische Glyphe, die beschreibt, wie man kuenstliche Illusionen bricht. Das koennte Mad Mods Linsen komplett nutzlos machen.",
+        "background": "./game_images/background_tt_raven_room.png",
         "choices": [
-            { "text": "Die Maske mitnehmen", "next": "tt_25", "gain_item": "slade_mask" },
-            { "text": "Die Maske zerstoeren", "next": "tt_24", "karma": 3 }
+            { "text": "Die Glyphe kopieren und mitnehmen", "next": "tt_shadow_visor", "gain_item": "tt_visor" },
+            { "text": "Das Buch schliessen und direkt zum Hafen aufbrechen", "next": "c2_tt_25", "karma": 1 }
         ]
     },
 
-    "tt_16": {
-        "text": "Waehrend Bewohner den Tower verlassen, bleibt Starfire zurueck, um nach vermissten Haustieren zu suchen.",
+    "c2_tt_13": {
+        "text": "Der Kampf im Tower hinterlaesst schwere Verwuestungen. Cyborgs Schaltkreise funken, und Robin wird von einem schweren Schlag gegen die Wand geschleudert. Ihr werdet langsam in die Enge getrieben.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Starfire helfen", "next": "tt_26", "karma": 5 },
-            { "text": "Die Evakuierung fortsetzen", "next": "tt_21", "karma": -3 }
+            { "text": "Den H.I.V.E.-Sprengkopf als Verzweiflungstat zuenden", "next": "c2_tt_22", "required_item": "tt_hive_detonator" },
+            { "text": "Rueckzug in die Katakomben unter der Stadt", "next": "c2_tt_15", "karma": 1 }
         ]
     },
 
-    "tt_17": {
-        "text": "Raven erkennt, dass jemand versucht, Trigons Energie mit Technologie zu verbinden.",
+    "c2_tt_14": {
+        "text": "Beast Boy wuetet als T-Rex durch die Reihen der Bots. Das verschafft euch Luft, aber seine ungestuemte Art bringt die Decke des Ops-Rooms zum Einsturz. Tonnen von Schutt versperren den Hauptausgang.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Cyborg warnen", "next": "tt_20" },
-            { "text": "Das Ritual heimlich beobachten", "next": "tt_27", "gain_item": "dark_rune" }
+            { "text": "Gemeinsam einen Tunnel graben", "next": "c2_tt_10", "karma": 4 },
+            { "text": "Nach einem alternativen Lueftungsschacht suchen", "next": "c2_tt_23", "karma": -2 }
         ]
     },
 
-    "tt_18": {
-        "text": "Die Stimmen locken dich in einen stillgelegten Bereich des Towers. Dort sitzt Red X auf einem Thron aus gestohlenen Titan-Technologien.",
+    "c2_tt_15": {
+        "text": "Ihr verfolgt das Signal bis in ein verlassenes U-Bahn-Netzwerk unter Jump City. ueberall haengen Draehte und Slades markante Sensoren. Hier unten wartet bereits Cinderblock, um euch den Weg zu versperren!",
+        "background": "./game_images/background_tt_subway.png",
+        "character": "./game_images/character_tt_cinderblock.png",
         "choices": [
-            { "text": "Mit Red X verhandeln", "next": "tt_28" },
-            { "text": "Angreifen", "next": "tt_29", "karma": -4 }
+            { "text": "Den Steinkoloss frontal angreifen", "next": "c2_tt_24", "karma": -4 },
+            { "text": "Ihn mit Mad Mods Linse blenden und umgehen", "next": "c2_tt_26", "required_item": "tt_mod_lens" }
         ]
     },
 
-    "tt_19": {
-        "text": "Der Tower verliert langsam die Kontrolle ueber seine Verteidigungssysteme.",
+    "c2_tt_16": {
+        "text": "Du speist den Code aus Slades Festplatte ins Sicherheitssystem ein. Die angreifenden Bots frieren mitten in der Bewegung ein und schalten sich ab. Robin atmet auf. 'Geniestreich. Jetzt wissen wir, wo er steckt! Tuning-Fabrik am Hafen!'",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Zum Kontrollraum zurueck", "next": "tt_23" },
-            { "text": "Die Systeme sabotieren", "next": "tt_30", "karma": -5 }
+            { "text": "Sofort zum Hafen aufbrechen", "next": "c2_tt_25" },
+            { "text": "Vorher noch das Arsenal des Towers pluendern", "next": "c2_tt_23", "karma": -1 }
         ]
     },
 
-    "tt_20": {
-        "text": "Cyborg entdeckt ein verborgenes Programm namens PROJECT H.I.V.E. Es aktiviert sich bereits.",
+    "c2_tt_17": {
+        "text": "Die Halluzinationen zermuerben das Team. Starfire feuert blind ihre Laser ab, und Beast Boy verwandelt sich panisch in eine Maus, um sich zu verstecken. Slades Falle droht euch komplett zu brechen.",
+        "background": "./game_images/background_tt_city.png",
         "choices": [
-            { "text": "Programm loeschen", "next": "tt_31", "required_item": "tower_code" },
-            { "text": "Programm isolieren", "next": "tt_32", "karma": 3 }
+            { "text": "Sich gegenseitig wachruetteln und zum Hafen fliehen", "next": "c2_tt_25", "karma": 2 },
+            { "text": "In den Ruinen der Stadt Deckung suchen", "next": "c2_tt_10", "karma": -2 }
         ]
     },
 
-    "tt_21": {
-        "text": "Der Tower faellt teilweise aus. Die Aufzuege stuerzen ab und Wasser dringt in die unteren Ebenen ein.",
+    "c2_tt_18": {
+        "text": "Das temporale Feld zerrt an deinen Zellen. Doch Robins unbaendiger Wille treibt das Team voran. Ihr durchbrecht die Zeitschleife und zwingt Slade, sich im Epizentrum zu offenbaren.",
+        "background": "./game_images/background_tt_sky.png",
+        "character": "./game_images/character_tt_slade.png",
         "choices": [
-            { "text": "Menschen retten", "next": "tt_26", "karma": 6 },
-            { "text": "Nur die Titans suchen", "next": "tt_32", "karma": -4 }
+            { "text": "Slade zum finalen Duell fordern", "next": "c2_tt_30", "karma": 4 },
+            { "text": "Zuerst seine Apparatur sabotieren", "next": "c2_tt_26", "karma": 2 }
         ]
     },
 
-    "tt_22": {
-        "text": "Mad Mods Illusionen brechen zusammen. Kurz siehst du den echten Feind: Brother Blood kontrolliert den Tower aus dem Hauptreaktor.",
+    "tt_shadow_visor": {
+        "text": "Du erhaeltst das Schatten-Visier, das durch tamaranische Glyphen modifiziert wurde. Es enthuellt verborgene Frequenzen.",
+        "background": "./game_images/background_tt_raven_room.png",
+        "character": "./game_images/item_tt_visor.png",
         "choices": [
-            { "text": "Robin informieren", "next": "tt_33" },
-            { "text": "Alleine hingehen", "next": "tt_34", "karma": -3 }
+            { "text": "Das Visier aufsetzen und den Hafen scannen", "next": "c2_tt_25" },
+            { "text": "Das Visier an Robin uebergeben", "next": "c2_tt_26", "karma": 3 }
         ]
     },
 
-    "tt_23": {
-        "text": "Robin wird immer misstrauischer. Er glaubt inzwischen, dass einer der Titans manipuliert wurde.",
+    "c2_tt_19": {
+        "text": "Die Zerstoerung der Sonden setzt unkontrollierte Schockwellen frei. Ganze Haeuserblocks in Jump City verlieren die Erdanziehung und driften in den Himmel. Die Stadt droht auseinanderzubrechen.",
+        "background": "./game_images/background_tt_sky.png",
         "choices": [
-            { "text": "Robin beruhigen", "next": "tt_35", "karma": 4 },
-            { "text": "Seinem Verdacht zustimmen", "next": "tt_34", "karma": -5 }
+            { "text": "Die Truemmer mit Cyborgs Magneten sichern", "next": "c2_tt_27", "karma": -5 },
+            { "text": "Zusammenhalten und direkt das Zentrum stuermen", "next": "c2_tt_28", "karma": 5 }
         ]
     },
 
-    "tt_24": {
-        "text": "Raven nutzt ihre Kraefte, um die falschen Titans aufzudecken. Einer davon verwandelt sich ploetzlich in Blackfire.",
+    "c2_tt_20": {
+        "text": "Ihr landet unsanft auf den Felsen unter dem Tower. Der Himmel ueber euch verfaerbt sich blutrot. Ein mechanisches Heulen kuendigt an, dass Slades Modifikationen das Festland erreicht haben.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Starfire holen", "next": "tt_26" },
-            { "text": "Blackfire verfolgen", "next": "tt_36" }
+            { "text": "Sich durch die feindlichen Linien zum Hafen durchschlagen", "next": "c2_tt_25", "karma": 4 },
+            { "text": "In den alten Abwasserrohren Schutz suchen", "next": "c2_tt_24", "karma": -3 }
         ]
     },
 
-    "tt_25": {
-        "text": "Die Slade-Maske enthaelt versteckte Koordinaten zum alten Unterwasserdock der Titans.",
+    "c2_tt_22": {
+        "text": "Die Explosion des H.I.V.E.-Sprengkopfs reisst ein gewaltiges Loch in die Angreifer-Wellen, bringt aber auch die halbe Tower-Struktur zum Einsturz. Es ist ein gefaehrlicher Patt.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Zum Dock reisen", "next": "tt_36" },
-            { "text": "Robin die Maske geben", "next": "tt_35", "karma": 3 }
+            { "text": "Aus den Truemmern befreien und zum Hafen rennen", "next": "c2_tt_25", "karma": 2 },
+            { "text": "In den rauchenden Truemmern auf die Bots warten", "next": "c2_tt_23", "karma": -2 }
         ]
     },
 
-    "tt_26": {
-        "text": "Starfire findet die Haustiere des Towers in einem versiegelten Wartungsschacht. Sie wurden absichtlich dort eingesperrt.",
+    "c2_tt_23": {
+        "text": "Durch die giftigen Gase der zerstoerten Elektronik verliert ihr wertvolle Zeit. Slade hat die Kontrolle ueber das staedtische Energienetz vollendet. Der Tower versinkt in purer Dunkelheit.",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Die Tiere befreien", "next": "tt_37", "karma": 5 },
-            { "text": "Weiter zum Reaktor", "next": "tt_33", "karma": -3 }
+            { "text": "Das Schatten-Visier aktivieren, um Feinde zu sehen", "next": "c2_tt_26", "required_item": "tt_shadow_visor" },
+            { "text": "Ohne Sicht im Dunkeln weiterkaempfen", "next": "c2_tt_24", "karma": -3 }
         ]
     },
 
-    "tt_27": {
-        "text": "Das Ritual zeigt dir eine Vision: Brother Blood will Raven benutzen, um Trigons Macht zu kontrollieren.",
+    "c2_tt_24": {
+        "text": "Cinderblock rammt euch unbarmherzig ungespitzt in den Boden. Der brute-force Angriff schwaecht die Titans enorm. Slade nutzt eure Erschoepfung aus, um seine finale Barriere zu schliessen.",
+        "background": "./game_images/background_tt_subway.png",
+        "character": "./game_images/character_tt_cinderblock.png",
         "choices": [
-            { "text": "Raven warnen", "next": "tt_38", "karma": 5 },
-            { "text": "Die Information geheim halten", "next": "tt_34", "karma": -6 }
+            { "text": "Einen taktischen Rueckzug zum Hafen wagen", "next": "c2_tt_25", "karma": 1 },
+            { "text": "Alles auf eine Karte setzen und blind weiterschlagen", "next": "c2_tt_27", "karma": -4 }
         ]
     },
 
-    "tt_28": {
-        "text": "Red X behauptet, er habe Brother Blood bereits gesehen. Aber er will die gestohlene Technologie behalten.",
+    "c2_tt_25": {
+        "text": "Am Hafen angekommen, blickt ihr auf eine riesige, metallische Festung, die aus den Docks geschossen ist. Slade steht auf der Spitze und lenkt den Chrono-Sturm mit seinen Haenden. Ihr braucht einen perfekten Plan.",
+        "background": "./game_images/background_tt_city.png",
         "choices": [
-            { "text": "Deal eingehen", "next": "tt_39" },
-            { "text": "Die Technologie zurueckfordern", "next": "tt_29", "karma": 2 }
+            { "text": "Das Signal mit der Slade-Festplatte kurzschliessen", "next": "c2_tt_30", "required_item": "tt_slade_drive" },
+            { "text": "Die Festung frontal mit Starfires Kraeften stuermen", "next": "c2_tt_29" }
         ]
     },
 
-    "tt_29": {
-        "text": "Der Kampf beschaedigt Teile des Towers schwer. Red X entkommt trotzdem.",
+    "c2_tt_26": {
+        "text": "Dank der Linse oder des Visiers umgeht ihr Cinderblock muehelos und stosst direkt in das Herz von Slades Kommandozentrale vor. Die Apparatur, die Jump City einfrieren soll, liegt offen vor euch.",
+        "background": "./game_images/background_tt_subway.png",
         "choices": [
-            { "text": "Ihn verfolgen", "next": "tt_36" },
-            { "text": "Zum Tower zurueck", "next": "tt_33", "karma": 2 }
+            { "text": "Den Kern der Apparatur ueberlasten", "next": "c2_tt_30", "karma": 3 },
+            { "text": "Die Energiekabel kappen und Slades Zorn riskieren", "next": "c2_tt_27", "karma": -1 }
         ]
     },
 
-    "tt_30": {
-        "text": "Die Sabotage stoppt zwar einige Systeme, aber jetzt aktiviert sich der Selbstzerstoerungsmodus.",
+    "c2_tt_27": {
+        "text": "Die Apparatur explodiert in einer unkontrollierten Welle. Slade entkommt im Schatten, waehrend Jump City zwar gerettet, aber schwer beschaedigt zurueckbleibt. Robin starrt schweigend auf die rauchenden Docks.",
+        "background": "./game_images/background_tt_city.png",
         "choices": [
-            { "text": "Cyborg suchen", "next": "tt_32" },
-            { "text": "Fluchtkapseln vorbereiten", "next": "tt_40", "karma": -4 }
+            { "text": "Kapitel 3 starten", "next": "c3_start" },
+            { "text": "Nach ueberlebenden in den Truemmern suchen", "next": "c3_start", "karma": 3 }
         ]
     },
 
-    "tt_31": {
-        "text": "PROJECT H.I.V.E wird geloescht, doch Brother Blood erkennt sofort euren Standort.",
+    "c2_tt_28": {
+        "text": "Starfire und Cyborg bilden eine lebende Barriere, um die herabstuerzenden Truemmer der Stadt abzufangen, waehrend Robin und Raven sich durch die Verteidigungslinien schlagen.",
+        "background": "./game_images/background_tt_sky.png",
         "choices": [
-            { "text": "Sich vorbereiten", "next": "tt_41", "karma": 4 },
-            { "text": "Den Reaktor abschalten", "next": "tt_42" }
+            { "text": "Slade endgueltig auf der Plattform stellen", "next": "c2_tt_29" },
+            { "text": "Zuerst die Zivilisten in Sicherheit bringen", "next": "c2_tt_27", "karma": 5 }
         ]
     },
 
-    "tt_32": {
-        "text": "Cyborg stabilisiert den Tower notduerftig. Trotzdem naehert sich etwas Grosses aus dem Hafen.",
+    "c2_tt_29": {
+        "text": "Slades Maske reflektiert das roetliche Licht des Sturms. 'Ihr seid puenktlich, Titans. Aber Puenktlichkeit wird euch diesmal nicht retten!' Er zieht seine Doppel-Kampfstange und geht in Position.",
+        "background": "./game_images/background_tt_sky.png",
+        "character": "./game_images/character_tt_slade.png",
         "choices": [
-            { "text": "Nachsehen", "next": "tt_41" },
-            { "text": "Im Tower bleiben", "next": "tt_42", "karma": -2 }
+            { "text": "Ihn im Teamwork gemeinsam attackieren", "next": "c2_tt_30", "karma": 5 },
+            { "text": "Ihn ablenken, waehrend Raven den Sturm bannt", "next": "c2_tt_30", "karma": 3 }
         ]
     },
 
-    "tt_33": {
-        "text": "Im Hauptreaktor wartet Brother Blood bereits mit einer Armee aus H.I.V.E.-Drohnen.",
+    "c2_tt_30": {
+        "text": "Mit einer koordinierten Attacke zerschmettert ihr Slades Chrono-Zentralrechner. Die metallischen Festungen implodieren und das rote Leuchten verschwindet aus der Stadt. Slade zieht sich geduckt in die Dunkelheit zurueck. Robin steckt seine Kampfstange ein und blickt aufs Meer. 'Wir sind bereit fuer das, was als naechstes kommt.'",
+        "background": "./game_images/background_tt_tower.png",
         "choices": [
-            { "text": "Direkt angreifen", "next": "tt_43", "karma": -3 },
-            { "text": "Die Energiequelle suchen", "next": "tt_44" }
+            { "text": "Kapitel 3 starten", "next": "c3_start" },
+            { "text": "Das Team im Tower versammeln", "next": "c3_start", "karma": 2 }
         ]
     },
 
-    "tt_34": {
-        "text": "Allein gegen Brother Blood zu gehen war ein Fehler. Die Drohnen umzingeln dich sofort.",
+    "c2_ben_start": {
+        "text": "Der Rust Bucket rollt mitten in der Nacht auf einen verlassenen Campingplatz im waldigen Nirgendwo. Plötzlich fängt die Omnitrix an Bens Handgelenk wild an, rot und gelb zu flackern, und stößt eine Schockwelle aus, die alle Lichter löscht. Opa Max blickt besorgt auf seine Klempner-Instrumente, während Gwen bereits ein magisches Buch aufschlägt.",
+        "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Kaempfen", "next": "tt_43" },
-            { "text": "Auf Hilfe warten", "next": "tt_41", "karma": 2 }
+            { "text": "Mit Opa Max die Klempner-Signale prüfen", "next": "c2_ben_1", "karma": 2 },
+            { "text": "Mit Gwen nach magischen Energiespuren suchen", "next": "c2_ben_2", "karma": 1 },
+            { "text": "Die Omnitrix gewaltsam neustarten", "next": "c2_ben_3", "karma": -1 },
+            { "text": "Die Umgebung als Kletteraffe (Wildmutt) auskundschaften", "next": "c2_ben_4", "karma": 3 }
         ]
     },
 
-    "tt_35": {
-        "text": "Robin vertraut dir schliesslich und gibt dir Zugriff auf geheime Tower-Protokolle.",
+    "c2_ben_1": {
+        "text": "Opa Max öffnet ein verstecktes Fach im Rust Bucket. 'Ben, die Sensoren empfangen eine Signatur, die Vilgax' Drohnen ähnelt, aber gekreuzt mit Dr. Animos Mutations-Wellen!' Ein seltsamer, kybernetischer Schlüssel fällt aus dem Klempner-Archiv.",
+        "background": "./game_images/.png",
+        "character": "./game_images/character_ben_max.png",
         "choices": [
-            { "text": "Protokolle analysieren", "next": "tt_44", "gain_item": "tower_protocols" },
-            { "text": "Sofort handeln", "next": "tt_41" }
+            { "text": "Den Klempner-Schlüssel einstecken", "next": "ben_omnitrix_key", "gain_item": "ben_omnitrix_key" },
+            { "text": "Den Schlüssel liegen lassen und die Stadt warnen", "next": "c2_ben_5", "karma": -2 }
         ]
     },
 
-    "tt_36": {
-        "text": "Im Unterwasserdock wird eine riesige Maschine aktiviert, die den gesamten Tower kontrollieren koennte.",
+    "ben_omnitrix_key": {
+        "text": "Du erhältst den Klempner-Spezialschlüssel. Er kann außerirdische Systeme überschreiben.",
+        "background": "./game_images/background_ben_rustbucket.png",
+        "character": "./game_images/item_ben_omnitrix_key.png",
         "choices": [
-            { "text": "Maschine sabotieren", "next": "tt_42", "required_item": "slade_frequency" },
-            { "text": "Maschine uebernehmen", "next": "tt_45", "karma": -5 }
+            { "text": "Den Schlüssel an der Omnitrix testen", "next": "c2_ben_8" },
+            { "text": "Opa Max in den Wald folgen", "next": "c2_ben_10" }
         ]
     },
 
-    "tt_37": {
-        "text": "Die Tiere fuehren Starfire zu einem versteckten Wartungsraum voller gestohlener H.I.V.E.-Technologie.",
+    "c2_ben_2": {
+        "text": "Gwen führt dich zu einer Lichtung, auf der die Pflanzen lila leuchten. 'Das ist Hexerei... oder Kevin 11 absorbiert mal wieder Energie!' Plötzlich bricht ein mutierter Riesen-Hirsch mit messerscharfen Stoßzähnen aus dem Unterholz.",
+        "background": "./game_images/background_ben_woods.png",
+        "character": "./game_images/character_ben_gwen.png",
         "choices": [
-            { "text": "Alles zerstoeren", "next": "tt_42", "karma": 3 },
-            { "text": "Die Technologie behalten", "next": "tt_45", "karma": -4 }
+            { "text": "Als 'Kannonenkugel' (Cannonbolt) den Hirsch rammen", "next": "c2_ben_6", "karma": -3 },
+            { "text": "Gwen Zeit verschaffen, um ein Bann-Ritual zu sprechen", "next": "c2_ben_7", "karma": 3 }
         ]
     },
 
-    "tt_38": {
-        "text": "Raven entscheidet sich freiwillig, Brother Blood entgegenzutreten, bevor Trigon vollstaendig erwacht.",
+    "c2_ben_3": {
+        "text": "Du schlägst frustriert auf die Omnitrix. Das Display dreht komplett durch und verwandelt dich in eine bizarre, instabile Mischung aus 'Maturi' (Grey Matter) und 'Stinker' (Stinkfly). Du verlierst deine Flugkraft, hast aber ein kleines, klebriges Mutations-Ei gerettet, das vom Himmel fiel.",
+        "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Raven begleiten", "next": "tt_44", "karma": 5 },
-            { "text": "Sie alleine gehen lassen", "next": "tt_43", "karma": -6 }
+            { "text": "Das Mutations-Ei untersuchen und einpacken", "next": "ben_mutation_egg", "gain_item": "ben_mutation_egg" },
+            { "text": "Das Ei zerstören und Deckung suchen", "next": "c2_ben_9", "karma": -2 }
         ]
     },
 
-    "tt_39": {
-        "text": "Red X gibt dir heimlich einen gestohlenen Energieschluessel. 'Nur diesmal', sagt er.",
+    "ben_mutation_egg": {
+        "text": "Du erhältst ein schleimiges DNA-Mutations-Ei. Es pulsiert im Takt außerirdischer Frequenzen.",
+        "background": "./game_images/background_ben_woods.png",
+        "character": "./game_images/item_ben_mutation_egg.png",
         "choices": [
-            { "text": "Schluessel nutzen", "next": "tt_42", "gain_item": "x_key" },
-            { "text": "Robin davon erzaehlen", "next": "tt_35", "karma": 2 }
+            { "text": "Das Ei zu Opa Max bringen", "next": "c2_ben_15" },
+            { "text": "Als Grey Matter die DNA des Eies analysieren", "next": "c2_ben_12" }
         ]
     },
 
-    "tt_40": {
-        "text": "Die Fluchtkapseln funktionieren nicht. Brother Blood hat sie laengst deaktiviert.",
+    "c2_ben_4": {
+        "text": "Als Wildmutt nimmst du eine Witterung auf: Rostiges Metall und verbranntes Fleisch. Du folgst der Spur zu einer alten Mine, in der Dr. Animo an einer gigantischen DNA-Saugmaschine arbeitet. Er lacht irre: 'Bald wird die gesamte Fauna der Erde meinen mutierten Ameisen gehorchen!'",
+        "background": "./game_images/background_ben_mine.png",
+        "character": "./game_images/character_ben_animo.png",
         "choices": [
-            { "text": "Zum Reaktor zurueck", "next": "tt_41" },
-            { "text": "Einen anderen Ausgang suchen", "next": "tt_45", "karma": -3 }
+            { "text": "Animo sofort im Sturzflug angreifen", "next": "c2_ben_11", "karma": -3 },
+            { "text": "Heimlich die Energiekabel der Maschine sabotieren", "next": "c2_ben_12", "karma": 4 }
         ]
     },
 
-    "tt_41": {
-        "text": "Die Titans versammeln sich schliesslich gemeinsam im Hauptreaktor.",
+    "c2_ben_5": {
+        "text": "Während ihr versucht, den Rust Bucket zu starten, schlagen drei von Vilgax' biomechanischen Drohnen durch das Dach! Sie feuern lähmende Plasmastrahlen ab. Ben wird zu Boden geworfen.",
+        "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
-            { "text": "Gemeinsam kaempfen", "next": "tt_46", "karma": 5 },
-            { "text": "Brother Blood ablenken", "next": "tt_44" }
+            { "text": "Als 'Feuerteufel' (Heatblast) die Drohnen schmelzen", "next": "c2_ben_13", "karma": -4 },
+            { "text": "Gwen mit einem improvisierten Schutzschild decken", "next": "c2_ben_14", "karma": 2 }
         ]
     },
 
-    "tt_42": {
-        "text": "Die Kontrolle ueber den Tower kehrt langsam zurueck, doch Brother Blood aktiviert den letzten Reaktor.",
+    "c2_ben_6": {
+        "text": "Du rammst den Hirsch, doch die Wucht der Mutation lässt dich abprallen. Du krachst in den Rust Bucket und beschädigst die Sensoren. Opa Max schaut finster drein.",
+        "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
-            { "text": "Reaktor abschalten", "next": "tt_46", "required_item": "tower_protocols" },
-            { "text": "Die Energie umlenken", "next": "tt_45", "karma": -4 }
+            { "text": "Trotzdem das Klempner-Gegenmittel im Wald suchen", "next": "c2_ben_15" },
+            { "text": "Dich für den Fehler entschuldigen und Gwens Rat folgen", "next": "c2_ben_7", "karma": 2 }
         ]
     },
 
-    "tt_43": {
-        "text": "Brother Blood nutzt die Verwirrung und absorbiert Energie aus Ravens Schattenmagie.",
+    "c2_ben_7": {
+        "text": "Gwen schleudert eine Kette aus rosa Mana-Energie, die das Tier fixiert. Der Hirsch schüttelt den Kopf, bricht aus der Gedankenkontrolle aus und hinterlässt beim Weglaufen ein glühendes Vilgax-Abzeichen.",
+        "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Raven befreien", "next": "tt_46", "required_item": "dark_rune" },
-            { "text": "Brother Blood direkt angreifen", "next": "tt_47", "karma": -5 }
+            { "text": "Das Vilgax-Abzeichen aufheben", "next": "ben_vilgax_crest", "gain_item": "ben_vilgax_crest" },
+            { "text": "Das Abzeichen ignorieren und Gwens Magie weiter stärken", "next": "c2_ben_10", "karma": 3 }
         ]
     },
 
-    "tt_44": {
-        "text": "Du findest die wahre Energiequelle: einen gestohlenen Kristall aus Azarath mitten im Reaktor.",
+    "ben_vilgax_crest": {
+        "text": "Du erhältst ein schweres, außerirdisches Vilgax-Abzeichen. Es strahlt pure Bedrohung aus.",
+        "background": "./game_images/background_ben_woods.png",
+        "character": "./game_images/item_ben_vilgax_crest.png",
         "choices": [
-            { "text": "Kristall entfernen", "next": "tt_46", "karma": 4 },
-            { "text": "Kristall benutzen", "next": "tt_47", "karma": -6 }
+            { "text": "Das Abzeichen mit der Omnitrix scannen", "next": "c2_ben_8" },
+            { "text": "Direkt zu Dr. Animos Mine laufen", "next": "c2_ben_15" }
         ]
     },
 
-    "tt_45": {
-        "text": "Die zusaetzliche Energie macht die Situation instabil. Der Tower beginnt auseinanderzubrechen.",
+    "c2_ben_8": {
+        "text": "Durch den Scan oder den Klempner-Schlüssel kalibriert sich die Omnitrix neu. Das Display leuchtet wieder im hellen, sicheren Grün! Du hast vollen Zugriff auf 'Komet' (XLR8) und 'Vierarme' (Four Arms).",
+        "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
-            { "text": "Die Titans warnen", "next": "tt_46", "karma": 2 },
-            { "text": "Weiter Energie sammeln", "next": "tt_47", "karma": -7 }
+            { "text": "Als XLR8 blitzschnell die Mine stürmen", "next": "c2_ben_25", "karma": 4 },
+            { "text": "Als Four Arms auf Vilgax' Drohnen warten", "next": "c2_ben_16", "karma": 2 }
         ]
     },
 
-    "tt_46": {
-        "text": "Gemeinsam schaffen es die Titans, Brother Blood zurueckzudraengen. Der rote Nebel verschwindet langsam aus Jump City.",
+    "c2_ben_9": {
+        "text": "Die Omnitrix entlädt sich unkontrolliert und hüllt den ganzen Campingplatz in dichten, stinkenden Alien-Schleim. Kevin 11 tritt aus den Schatten und grinst dreckig: 'Danke für die Energie, Tennyson!'",
+        "background": "./game_images/background_ben_woods.png",
+        "character": "./game_images/character_ben_kevin.png",
         "choices": [
-            { "text": "Den Tower sichern", "next": "tt_48", "karma": 5 },
-            { "text": "Brother Blood verfolgen", "next": "tt_49" }
+            { "text": "Gegen den mutierten Kevin kämpfen", "next": "c2_ben_17", "karma": -5 },
+            { "text": "Ihn mit einer Lüge in die Mine locken", "next": "c2_ben_13", "karma": 3 }
         ]
     },
 
-    "tt_47": {
-        "text": "Brother Blood verliert zwar die Kontrolle ueber den Reaktor, entkommt aber im Chaos des zusammenbrechenden Towers.",
+    "c2_ben_10": {
+        "text": "Der Himmel färbt sich pechschwarz, als ein gigantisches Vilgax-Schlachtschiff über den Baumkronen auftaucht. Ein Traktorstrahl beginnt, den Rust Bucket nach oben zu saugen. Die Zeit drängt!",
+        "background": "./game_images/background_ben_sky.png",
         "choices": [
-            { "text": "ueberlebende retten", "next": "tt_48", "karma": 4 },
-            { "text": "Brother Blood verfolgen", "next": "tt_49", "karma": -3 }
+            { "text": "Sich absichtlich hochsaugen lassen, um das Schiff zu sabotieren", "next": "c2_ben_18", "karma": 5 },
+            { "text": "Den Traktorstrahl mit geballter Alien-Kraft beschießen", "next": "c2_ben_19", "karma": -2 }
         ]
     },
 
-    "tt_48": {
-        "text": "Robin blickt ueber Jump City. 'Das war kein normaler Angriff. Jemand testet uns.'",
+    "c2_ben_11": {
+        "text": "Dr. Animo feuert seine Mutations-Strahlenkanone ab. Wildmutt wird getroffen und mutiert zu einer noch wilderen, unkontrollierbaren Bestie, die Opa Max angreift! Du musst die Transformation sofort abbrechen.",
+        "background": "./game_images/background_ben_mine.png",
         "choices": [
-            { "text": "Vorbereiten", "next": "tt_50" }
+            { "text": "Die Omnitrix mit dem Klempner-Schlüssel überlasten", "next": "c2_ben_20", "required_item": "ben_omnitrix_key" },
+            { "text": "Gwen um einen magischen Beruhigungszauber anflehen", "next": "c2_ben_14", "karma": -1 }
         ]
     },
 
-    "tt_49": {
-        "text": "In den Ruinen des Hafens findest du nur noch Brother Bloods Maske und eine Nachricht: 'Die naechste Phase beginnt bald.'",
+    "c2_ben_12": {
+        "text": "Als Grey Matter oder durch clevere Sabotage liest du Dr. Animos Pläne. Er arbeitet im Auftrag von Vilgax! Vilgax will die mutierte Tier-DNA nutzen, um seine Drohnen-Armee unbesiegbar zu machen.",
+        "background": "./game_images/background_ben_mine.png",
         "choices": [
-            { "text": "Zum Tower zurueck", "next": "tt_50" }
+            { "text": "Die Daten auf ein Klempner-Pad laden", "next": "ben_plumber_pad", "gain_item": "ben_plumber_pad" },
+            { "text": "Die Konsole sofort zertrümmern", "next": "c2_ben_16", "karma": -2 }
         ]
     },
 
-    "tt_50": {
-        "text": "ueber Jump City oeffnet sich ein dunkler Riss am Himmel. Der uebergang zu Kapitel 3 beginnt.",
+    "ben_plumber_pad": {
+        "text": "Du erhältst ein Klempner-Datenpad mit Vilgax' Satelliten-Frequenzen.",
+        "background": "./game_images/background_ben_mine.png",
+        "character": "./game_images/item_ben_plumber_pad.png",
+        "choices": [
+            { "text": "Den Rust Bucket kontaktieren", "next": "c2_ben_26" },
+            { "text": "Den Satelliten direkt angreifen", "next": "c2_ben_23" }
+        ]
+    },
+
+    "c2_ben_13": {
+        "text": "Heatblasts Feuer setzt den halben Wald in Brand! Die Drohnen fliehen, aber der Campingplatz brennt lichterloh. Die Tiere schreien in Panik und das Chaos ist perfekt.",
+        "background": "./game_images/background_ben_woods.png",
+        "choices": [
+            { "text": "Das Feuer als 'Wasserbüffel' (Upgrade) ersticken", "next": "c2_ben_22", "karma": 4 },
+            { "text": "Das Feuer ignorieren und Animo in die Mine folgen", "next": "c2_ben_15", "karma": -4 }
+        ]
+    },
+
+    "c2_ben_14": {
+        "text": "Gwen schafft es, eine magische Schutzbarriere aufzubauen, während du die Drohnen ablenkst. Doch die Barriere splittert langsam unter dem schweren Beschuss. Ihr braucht Verstärkung.",
+        "background": "./game_images/background_ben_woods.png",
+        "choices": [
+            { "text": "Das DNA-Ei auf die Drohnen werfen, um sie kurzzuschließen", "next": "c2_ben_26", "required_item": "ben_mutation_egg" },
+            { "text": "Mit roher Gewalt als Four Arms durchbrechen", "next": "c2_ben_24", "karma": -3 }
+        ]
+    },
+
+    "c2_ben_15": {
+        "text": "Ihr erreicht die Mine, doch der Eingang ist mit einer schweren Klempner-Sicherheitstür verriegelt, die Dr. Animo modifiziert hat. Ein falscher Code löst Giftgas aus.",
+        "background": "./game_images/background_ben_mine.png",
+        "choices": [
+            { "text": "Die Tür mit dem Klempner-Schlüssel hacken", "next": "c2_ben_26", "required_item": "ben_omnitrix_key" },
+            { "text": "Die Tür als Four Arms gewaltsam aus den Angeln reißen", "next": "c2_ben_24", "karma": -3 }
+        ]
+    },
+
+    "c2_ben_16": {
+        "text": "Vilgax' Elite-Drohnen landen und riegeln das gesamte Gebiet ab. Sie scannen die Omnitrix und bereiten den finalen Extraktions-Laser vor. Ben steht allein gegen eine Armee.",
+        "background": "./game_images/background_ben_woods.png",
+        "choices": [
+            { "text": "Das Vilgax-Abzeichen nutzen, um die Drohnen zu täuschen", "next": "c2_ben_30", "required_item": "ben_vilgax_crest" },
+            { "text": "Sich schreiend in den Kampf stürzen", "next": "c2_ben_27", "karma": -5 }
+        ]
+    },
+
+    "c2_ben_17": {
+        "text": "Kevin 11 hat Teile von Diamondheads und Heatblasts Kräften absorbiert und schleudert brennende Kristalle nach dir! Der Rust Bucket wird schwer getroffen und explodiert fast.",
+        "background": "./game_images/background_ben_woods.png",
+        "character": "./game_images/character_ben_kevin.png",
+        "choices": [
+            { "text": "Ihn mit Gwens Zauberbüchern ablenken", "next": "c2_ben_28", "karma": 2 },
+            { "text": "Wütend zurückschlagen", "next": "c2_ben_24", "karma": -4 }
+        ]
+    },
+
+    "c2_ben_18": {
+        "text": "Im Inneren des Vilgax-Schiffes werdet ihr sofort von Roboter-Wachen umstellt. Doch Bens Grinsen bleibt: 'Ihr habt mich genau da, wo ich euch haben wollte!'",
+        "background": "./game_images/background_ben_ship.png",
+        "choices": [
+            { "text": "Die Schiffskonsole mit dem Klempner-Schlüssel infizieren", "next": "c2_ben_30", "required_item": "ben_omnitrix_key" },
+            { "text": "Als 'Upgrade' (Upgrade) mit dem Schiff verschmelzen", "next": "c2_ben_26", "karma": 5 }
+        ]
+    },
+
+    "c2_ben_19": {
+        "text": "Der Beschuss des Traktorstrahls löst eine gravitative Singularität aus! Ganze Bäume, Felsen und der Rust Bucket wirbeln unkontrolliert durch die Luft. Die Mine stürzt ein.",
+        "background": "./game_images/background_ben_sky.png",
+        "choices": [
+            { "text": "Opa Max und Gwen mit XLR8 retten", "next": "c2_ben_28", "karma": 5 },
+            { "text": "Sich nur selbst als 'Fliege' in Sicherheit bringen", "next": "c2_ben_27", "karma": -5 }
+        ]
+    },
+
+    "c2_ben_20": {
+        "text": "Der Klempner-Schlüssel erzwingt einen harten Reset der Omnitrix. Du wirst schmerzhaft zurückverwandelt, aber die Mutations-Welle bricht ab. Animo flucht lautstark in seiner Steuerkanzel.",
+        "background": "./game_images/background_ben_mine.png",
+        "character": "./game_images/character_ben_animo.png",
+        "choices": [
+            { "text": "Animos Kanzel mit dem Klempner-Pad hacken", "next": "c2_ben_30", "required_item": "ben_plumber_pad" },
+            { "text": "Opa Max die Laserkanone des Rust Buckets abfeuern lassen", "next": "c2_ben_27", "karma": 3 }
+        ]
+    },
+
+    "c2_ben_22": {
+        "text": "Als Upgrade verschmilzt du mit dem Löschsystem des Rust Buckets und erzeugst einen gigantischen, chemischen Regenschauer, der das Feuer löscht und die Drohnen kurzschließt.",
+        "background": "./game_images/background_ben_rustbucket.png",
+        "choices": [
+            { "text": "Direkt zum Mutterschiff fliegen", "next": "c2_ben_23" },
+            { "text": "Zu Fuß den Wald sichern", "next": "c2_ben_24", "karma": -1 }
+        ]
+    },
+
+    "c2_ben_23": {
+        "text": "Du erreichst die Stratosphäre, doch Vilgax' Hauptlaser ist bereits zu 99% aufgeladen. Ein einziger Schuss wird das Klempner-Hauptquartier vernichten. Du musst sofort handeln.",
+        "background": "./game_images/background_ben_sky.png",
+        "choices": [
+            { "text": "Den Code des Klempner-Pads einspeisen", "next": "c2_ben_30", "required_item": "ben_plumber_pad" },
+            { "text": "Als 'Stahlschädel' (Diamondhead) den Laser physisch blockieren", "next": "c2_ben_27", "karma": -2 }
+        ]
+    },
+
+    "c2_ben_24": {
+        "text": "Rohe Gewalt führt zu einer gewaltigen Explosion der DNA-Tanks! Dr. Animos Mine stürzt komplett ein. Die Schurken entkommen im Chaos, und die Gegend gleicht einem Schlachtfeld.",
+        "background": "./game_images/background_ben_mine.png",
+        "choices": [
+            { "text": "Kapitel 3 starten", "next": "c3_start" },
+            { "text": "Den Rust Bucket mühsam reparieren", "next": "c3_start", "karma": 2 }
+        ]
+    },
+
+    "c2_ben_25": {
+        "text": "Als XLR8 bist du so schnell, dass Dr. Animo dich nicht einmal kommen sieht! Du reißt die Hauptplatine aus seiner Maschine, bevor er den Hebel umlegen kann. Er jammert bitterlich.",
+        "background": "./game_images/background_ben_mine.png",
+        "character": "./game_images/character_ben_animo.png",
+        "choices": [
+            { "text": "Ihn den Klempnern übergeben", "next": "c2_ben_30", "karma": 4 },
+            { "text": "Seine restlichen Waffen plündern", "next": "c2_ben_27", "karma": -2 }
+        ]
+    },
+
+    "c2_ben_26": {
+        "text": "Dank perfekter Vorbereitung und den richtigen Items neutralisiert ihr Animos Apparatur komplett. Das außerirdische Signal bricht ab, und das Vilgax-Schiff verliert die Orientierung.",
+        "background": "./game_images/background_ben_mine.png",
+        "choices": [
+            { "text": "Den finalen Schlag gegen Vilgax' Drohnen führen", "next": "c2_ben_30" },
+            { "text": "Sich zurückziehen und den Sieg feiern", "next": "c2_ben_28", "karma": -1 }
+        ]
+    },
+
+    "c2_ben_27": {
+        "text": "Das Schlachtschiff explodiert in einer gewaltigen Nova am Nachthimmel. Vilgax entkommt in einer Rettungskapsel, während der Rust Bucket schwer beschädigt auf der Erde zurückbleibt. Ben reibt sich den Nacken.",
+        "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    "c2_b10_start": {
-        "text": "Die Erde wirkt normal, doch der Omnitrix von Ben reagiert unkontrolliert. Aliens auf der ganzen Welt veraendern ihre DNA zufaellig. Max warnt, dass etwas die Codierung des Omnitrix selbst beeinflusst.",
+    "c2_ben_28": {
+        "text": "Gwen nutzt ihre gesamte verbliebene Mana-Energie, um ein Schutzschild um den Rust Bucket zu weben, während Opa Max die Triebwerke neu startet. Ihr entkommt den herabstürzenden Trümmern haarscharf.",
+        "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
-            { "text": "Ben kontaktieren", "next": "b10_1", "karma": 2 },
-            { "text": "Max zuhoeren", "next": "b10_2" },
-            { "text": "Ausserhalb der Stadt untersuchen", "next": "b10_3" }
+            { "text": "Vilgax am Boden stellen", "next": "c2_ben_29" },
+            { "text": "Sich in Sicherheit bringen", "next": "c2_ben_27", "karma": 4 }
         ]
     },
 
-    "b10_1": {
-        "text": "Ben: 'Der Omnitrix spielt verrueckt... ich kann die Formen nicht stabil halten.'",
+    "c2_ben_29": {
+        "text": "Vilgax' riesige, gepanzerte Gestalt tritt aus dem Rauch des abgestürzten Schiffs. 'Tennyson... Du bist eine Plage! Gib mir die Omnitrix, oder ich reiße diese Welt in Stücke!' Er zieht seine riesige Laserklinge.",
+        "background": "./game_images/background_ben_woods.png",
+        "character": "./game_images/character_ben_vilgax.png",
         "choices": [
-            { "text": "Omnitrix scannen", "next": "b10_4", "gain_item": "omnitrix_scan_data" },
-            { "text": "Ihn beruhigen", "next": "b10_5", "karma": 2 }
+            { "text": "Ihn mit vereinten Kräften attackieren", "next": "c2_ben_30", "karma": 5 },
+            { "text": "Die Omnitrix auf Selbstzerstörung drohen lassen", "next": "c2_ben_30", "karma": 3 }
         ]
     },
 
-    "b10_2": {
-        "text": "Max vermutet, dass eine fremde Alien-Quelle den Omnitrix ueberschreibt.",
-        "choices": [
-            { "text": "Quelle suchen", "next": "b10_3" },
-            { "text": "Ignorieren", "next": "b10_6", "karma": -2 }
-        ]
-    },
-
-    "b10_3": {
-        "text": "Du findest eine verbrannte Absturzstelle eines unbekannten Raumschiffs.",
-        "choices": [
-            { "text": "Untersuchen", "next": "b10_7", "gain_item": "alien_core_shard" },
-            { "text": "Umgebung sichern", "next": "b10_6", "karma": 1 }
-        ]
-    },
-
-    "b10_4": {
-        "text": "Der Omnitrix zeigt eine fremde Signatur im Null-Zeit-Code.",
-        "choices": [
-            { "text": "Daten speichern", "next": "b10_7", "gain_item": "omnitrix_core_fragment" },
-            { "text": "Weiter analysieren", "next": "b10_8" }
-        ]
-    },
-
-    "b10_5": {
-        "text": "Ben stabilisiert kurz den Omnitrix, aber er ueberhitzt weiter.",
-        "choices": [
-            { "text": "Weiter helfen", "next": "b10_8", "karma": 2 },
-            { "text": "Abwarten", "next": "b10_6" }
-        ]
-    },
-
-    "b10_6": {
-        "text": "Ploetzlich tauchen mutierte Wildmutt-Klone in der Stadt auf.",
-        "choices": [
-            { "text": "Kaempfen", "next": "b10_9", "karma": 1 },
-            { "text": "Zivilisten evakuieren", "next": "b10_10", "karma": 3 }
-        ]
-    },
-
-    "b10_7": {
-        "text": "Azmuths Sicherheitsprotokoll aktiviert sich im Omnitrix.",
-        "choices": [
-            { "text": "Protokoll entschluesseln", "next": "b10_11" },
-            { "text": "Zurueckziehen", "next": "b10_8", "karma": -1 }
-        ]
-    },
-
-    "b10_8": {
-        "text": "Gwen spuert eine magische Stoerung im selben Frequenzbereich wie der Omnitrix.",
-        "choices": [
-            { "text": "Mit Gwen verbinden", "next": "b10_11", "karma": 2 },
-            { "text": "Alleine weiter", "next": "b10_10" }
-        ]
-    },
-
-    "b10_9": {
-        "text": "Die Klone adaptieren fremde DNA und werden instabil.",
-        "choices": [
-            { "text": "DNA-Probe nehmen", "next": "b10_12", "gain_item": "unstable_dna_sample" },
-            { "text": "Zurueckdraengen", "next": "b10_10" }
-        ]
-    },
-
-    "b10_10": {
-        "text": "Die Stadt verliert temporaer die Kontrolle ueber Alien-Transformationen.",
-        "choices": [
-            { "text": "Max informieren", "next": "b10_11", "karma": 2 },
-            { "text": "Direkt handeln", "next": "b10_13", "karma": -1 }
-        ]
-    },
-
-    "b10_11": {
-        "text": "Azmuth erscheint holografisch: 'Der Omnitrix wird von aussen neu geschrieben.'",
-        "choices": [
-            { "text": "Hilfe annehmen", "next": "b10_14", "karma": 2 },
-            { "text": "Misstrauen", "next": "b10_13", "karma": -2 }
-        ]
-    },
-
-    "b10_12": {
-        "text": "Die DNA-Probe reagiert auf den Omnitrix und stabilisiert kurz ein Muster.",
-        "choices": [
-            { "text": "Speichern", "next": "b10_14", "gain_item": "dna_stability_sample" }
-        ]
-    },
-
-    "b10_13": {
-        "text": "Vilgax-Signatur wird im Hintergrund des Systems erkannt.",
-        "choices": [
-            { "text": "Konfrontieren", "next": "b10_15" },
-            { "text": "Verbergen", "next": "b10_14", "karma": -1 }
-        ]
-    },
-
-    "b10_14": {
-        "text": "Der Omnitrix oeffnet kurz eine Verbindung zur Null-Void-Dimension.",
-        "choices": [
-            { "text": "Hineinscannen", "next": "b10_16" },
-            { "text": "Abbrechen", "next": "b10_15" }
-        ]
-    },
-
-    "b10_15": {
-        "text": "Eine kontrollierte Alien-Form von Ben erscheint instabil.",
-        "choices": [
-            { "text": "Stabilisieren", "next": "b10_17", "required_item": "omnitrix_core_fragment" },
-            { "text": "Angreifen", "next": "b10_16", "karma": -2 }
-        ]
-    },
-
-    "b10_16": {
-        "text": "Null Void Energie beginnt in die Erde zu lecken.",
-        "choices": [
-            { "text": "Quelle versiegeln", "next": "b10_18", "required_item": "alien_core_shard" },
-            { "text": "Fliehen", "next": "b10_17", "karma": -2 }
-        ]
-    },
-
-    "b10_17": {
-        "text": "Kevin erscheint kurz und erkennt das Energieproblem im Omnitrix.",
-        "choices": [
-            { "text": "Zusammenarbeiten", "next": "b10_18", "karma": 2 },
-            { "text": "Ablehnen", "next": "b10_19", "karma": -1 }
-        ]
-    },
-
-    "b10_18": {
-        "text": "Azmuth enthuellt: Eine fragmentierte Alien-Entitaet versucht den Omnitrix neu zu programmieren.",
-        "choices": [
-            { "text": "Stoppen", "next": "b10_20", "karma": 2 },
-            { "text": "Studieren", "next": "b10_19" }
-        ]
-    },
-
-    "b10_19": {
-        "text": "Der Omnitrix beginnt alle gespeicherten DNA-Muster zu ueberschreiben.",
-        "choices": [
-            { "text": "Notfall aktivieren", "next": "b10_20" }
-        ]
-    },
-
-    "b10_20": {
-        "text": "Ben entscheidet sich, die fragmentierte Alien-Quelle direkt im Null Void zu suchen.",
-        "choices": [
-            { "text": "Portal oeffnen", "next": "b10_21", "required_item": "dna_stability_sample" },
-            { "text": "Zoegern", "next": "b10_19", "karma": -1 }
-        ]
-    },
-
-    "b10_21": {
-        "text": "Im Null Void wird klar: Die Quelle ist eine zerbrochene Version des Omnitrix selbst.",
-        "choices": [
-            { "text": "Synchronisieren", "next": "b10_22", "karma": 2 },
-            { "text": "Angreifen", "next": "b10_23", "karma": -2 }
-        ]
-    },
-
-    "b10_22": {
-        "text": "Die Systeme stabilisieren sich kurzzeitig ueber alle Alien-DNA-Ketten.",
-        "choices": [
-            { "text": "Zurueckkehren", "next": "b10_24" }
-        ]
-    },
-
-    "b10_23": {
-        "text": "Die fragmentierte Quelle verstaerkt die Instabilitaet weiter.",
-        "choices": [
-            { "text": "Zurueckziehen", "next": "b10_24", "karma": -1 }
-        ]
-    },
-
-    "b10_24": {
-        "text": "Azmuth: 'Der Omnitrix hat ueberlebt, aber etwas Neues ist entstanden.'",
-        "choices": [
-            { "text": "Fortfahren", "next": "b10_25" }
-        ]
-    },
-
-    "b10_25": {
-        "text": "Ben blickt auf den Omnitrix, der nun eine unbekannte zusaetzliche Energie enthaelt.",
-        "choices": [
-            { "text": "Kapitel abschliessen", "next": "b10_26" }
-        ]
-    },
-
-    "b10_26": {
-        "text": "Die Verbindung zum Null Void schliesst sich langsam. Eine neue Bedrohung bleibt ungeloest.",
+    "c2_ben_30": {
+        "text": "Mit einer meisterhaften Kombination aus Teamwork und Bens stärksten Aliens zerschmettert ihr Vilgax' kybernetische Rüstung und jagt Dr. Animo in die Flucht. Die Omnitrix leuchtet in einem beruhigenden, konstanten Grün. Opa Max klopft Ben auf die Schulter: 'Gute Arbeit, Junge. Du wirst ein echter Held.' Ben grinst: 'Klar, Opa! Das war doch ein Kinderspiel!'",
+        "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
-    "sj_01": {
-        "text": "Eine Stadt unter rotem Himmel. Menschen bewegen sich ohne Emotion. Jack erkennt: Ein Resonanz-Turm kontrolliert die Bevoelkerung ueber Klangfrequenzen.",
+
+    "c2_sj_start": {
+        "text": "Ein unheimlicher roter Nebel legt sich über das dystopische Cyber-Ödland. Jack steht medtierend auf einem Hügel, das magische Schwert auf den Knien. Plötzlich zerreißt das mechanische Kreischen von Akus Beetle-Drones die Stille. Ein Hologramm von Akus brennenden Augen erscheint am Himmel und lacht hämisch. Du musst Jack helfen, die Bedrohung einzuschätzen.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Jack ansprechen", "next": "sj_02", "karma": 2 },
-            { "text": "Stadt beobachten", "next": "sj_03" }
+            { "text": "Mit Jacks Schwert die Dronen-Welle frontal abwehren", "next": "c2_sj_1", "karma": 1 },
+            { "text": "In die Ruinen der kybernetischen Stadt flüchten", "next": "c2_sj_2" },
+            { "text": "Nach einem verborgenen Zeitportal in den Bergen suchen", "next": "c2_sj_3", "karma": 2 },
+            { "text": "Die Geister der Ahnen um Führung anflehen", "next": "c2_sj_4", "karma": 3 }
         ]
     },
 
-    "sj_02": {
-        "text": "Jack: 'Der Turm nutzt Frequenzen, um Emotionen zu unterdruecken und Energie zu sammeln.'",
+    "c2_sj_1": {
+        "text": "Jack wirbelt wie ein Tornado durch die Reihen der Käfer-Drohnen. Metall splittert, doch die Masse ist erdrückend. Eine beschädigte Anführer-Drohne stürzt direkt vor dir ab und ihr Kern legt ein seltsames Steuerungsmodul frei.",
+        "background": "./game_images/background_sj_wasteland.png",
+        "character": "./game_images/character_sj_jack.png",
         "choices": [
-            { "text": "Analyse starten", "next": "sj_04" },
-            { "text": "Jack begleiten", "next": "sj_05", "karma": 2 }
+            { "text": "Das Drohnen-Steuerungsmodul bergen", "next": "sj_drone_core", "gain_item": "sj_drone_core" },
+            { "text": "Den Kern zerstören und Jack den Rücken freihalten", "next": "c2_sj_5", "karma": 2 }
         ]
     },
 
-    "sj_03": {
-        "text": "Du siehst Buerger, die sich synchron bewegen wie Maschinen.",
+    "sj_drone_core": {
+        "text": "Du erhältst den Drohnen-Steuerungsmodul. Er funkt noch immer auf Akus privaten Frequenzen.",
+        "background": "./game_images/background_sj_wasteland.png",
+        "character": "./game_images/item_sj_drone_core.png",
         "choices": [
-            { "text": "Signal scannen", "next": "sj_04", "gain_item": "frequency_echo" },
-            { "text": "Wartungspunkte suchen", "next": "sj_06" }
+            { "text": "Die Signale mit Jacks Instinkten kombinieren", "next": "c2_sj_8" },
+            { "text": "Das Modul in den Ruinen der Stadt untersuchen", "next": "c2_sj_10" }
         ]
     },
 
-    "sj_04": {
-        "text": "Die Frequenz enthaelt emotionale Fragmente der Bevoelkerung.",
+    "c2_sj_2": {
+        "text": "In den neonbeleuchteten, dreckigen Gassen der Cyber-Stadt trefft ihr auf den Schotten! Er schwingt sein magisches Claymore-Schwert und lacht: 'Jack, mein Junge! Schön dich zu sehen! Ich dachte schon, Aku hätte dich zu einem Toaster verarbeitet!' Doch hinter ihm taucht Demongo, der Seelensammler, auf.",
+        "background": "./game_images/background_sj_cybercity.png",
+        "character": "./game_images/character_sj_scotsman.png",
         "choices": [
-            { "text": "Speichern", "next": "sj_07", "gain_item": "emotion_residue" },
-            { "text": "Jack informieren", "next": "sj_05", "karma": 2 }
+            { "text": "Zusammen mit dem Schotten die Seelen-Krieger angreifen", "next": "c2_sj_6", "karma": -2 },
+            { "text": "Demongos Artefakt im Chaos stehlen", "next": "c2_sj_7", "karma": 3 }
         ]
     },
 
-    "sj_05": {
-        "text": "Jack erklaert: 'Der Turm verstaerkt Kontrolle durch emotionale Rueckkopplung.'",
+    "c2_sj_3": {
+        "text": "Hoch in den nebligen Bergen findet ihr einen uralten Tempel. Inmitten der Ruinen schwebt ein blau leuchtendes Zeitportal. Doch es wird von drei blinden Bogenschützen bewacht, deren Gehör absolut perfekt ist. Jeder Schritt könnte tödlich sein.",
+        "background": "./game_images/background_sj_temple.png",
         "choices": [
-            { "text": "Gegenfrequenz planen", "next": "sj_08" },
-            { "text": "Untergrund nutzen", "next": "sj_06" }
+            { "text": "Sich lautlos an den Schützen vorbeischleichen", "next": "sj_ancestor_amulet", "gain_item": "sj_ancestor_amulet" },
+            { "text": "Sie ablenken, indem du Steine wirfst", "next": "c2_sj_9", "karma": -2 }
         ]
     },
 
-    "sj_06": {
-        "text": "Du findest versteckte Wartungstunnel unter der Stadt.",
+    "sj_ancestor_amulet": {
+        "text": "Du weichst den Schützen aus und findest ein uraltes Ahnen-Amulett auf dem Altar des Tempels.",
+        "background": "./game_images/background_sj_temple.png",
+        "character": "./game_images/item_sj_ancestor_amulet.png",
         "choices": [
-            { "text": "Folgen", "next": "sj_09" },
-            { "text": "Markierungen setzen", "next": "sj_07", "gain_item": "route_map" }
+            { "text": "Das Amulett Jack überreichen", "next": "c2_sj_15" },
+            { "text": "Das Portal genauer untersuchen", "next": "c2_sj_12" }
         ]
     },
 
-    "sj_07": {
-        "text": "Die Daten zeigen unregelmaessige Energieausbrueche im Turm.",
+    "c2_sj_4": {
+        "text": "Jack kniet nieder. Die Geister seiner Vorfahren erscheinen als sanftes weißes Licht. Sie flüstern: 'Aku schläft nicht. Er benutzt die Seelen der Vergangenheit, um die Zukunft zu versiegeln. Finde den Seilenstein.' Plötzlich wird die Vision von feindlichen Kopfgeldjägern unterbrochen.",
+        "background": "./game_images/background_sj_wasteland.png",
+        "character": "./game_images/character_sj_spirits.png",
         "choices": [
-            { "text": "Speichern", "next": "sj_08" },
-            { "text": "Jack synchronisieren", "next": "sj_10", "karma": 2 }
+            { "text": "Jack gegen die Kopfgeldjäger verteidigen", "next": "c2_sj_11", "karma": 4 },
+            { "text": "In den Tempel in den Bergen fliehen", "next": "c2_sj_12", "karma": -1 }
         ]
     },
 
-    "sj_08": {
-        "text": "Eine Gegenfrequenz wird theoretisch moeglich.",
+    "c2_sj_5": {
+        "text": "Die Drohnen explodieren in einer gewaltigen Welle aus grünem Feuer. Der Rauch vernebelt Jacks Sicht. Aus den Schatten tritt der schreckliche Shinobi-Krieger, ein Meister der Dunkelheit, und fordert Jack zum Duell.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Aufbauen", "next": "sj_10" },
-            { "text": "Abwarten", "next": "sj_09" }
+            { "text": "Jack das Licht bringen, um den Schatten zu brechen", "next": "c2_sj_13", "karma": 3 },
+            { "text": "Jack im Dunkeln allein kämpfen lassen", "next": "c2_sj_14", "karma": -3 }
         ]
     },
 
-    "sj_09": {
-        "text": "Die Wartungstunnel fuehren naeher zum Resonanz-Turm.",
+    "c2_sj_6": {
+        "text": "Der Schotte kämpft heroisch, doch Demongos Armee aus unendlichen Seelen regeneriert sich ständig. Der Schotte wird umzingelt. Ihr müsst eine schwere Entscheidung treffen, um ihn zu retten.",
+        "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Weitergehen", "next": "sj_11" },
-            { "text": "Signal verstaerken", "next": "sj_10", "gain_item": "signal_amplifier" }
+            { "text": "Demongos Seelen-Essenz mit dem Drohnen-Modul überlasten", "next": "c2_tt_15", "required_item": "sj_drone_core" },
+            { "text": "Einen verzweifelten Frontalangriff wagen", "next": "c2_sj_24", "karma": -4 }
         ]
     },
 
-    "sj_10": {
-        "text": "Der Turm reagiert auf die verstaerkten Signale.",
+    "c2_sj_7": {
+        "text": "Während der Schotte Demongo ablenkt, schleichst du dich von hinten heran und reißt Demongo einen glühenden Seelenstein aus der Krone. Demongo kreischt vor Schmerz auf und seine Armee erzittert.",
+        "background": "./game_images/background_sj_cybercity.png",
+        "character": "./game_images/character_sj_demongo.png",
         "choices": [
-            { "text": "Drohnen abwehren", "next": "sj_12" },
-            { "text": "Verbergen", "next": "sj_11" }
+            { "text": "Den Seelenstein einstecken", "next": "sj_soul_gem", "gain_item": "sj_soul_gem" },
+            { "text": "Den Stein sofort am Boden zertrümmern", "next": "c2_sj_10", "karma": 4 }
         ]
     },
 
-    "sj_11": {
-        "text": "Du naeherst dich dem zentralen Kontrollbereich.",
+    "sj_soul_gem": {
+        "text": "Du erhältst Demongos Seelenstein. Er pulsiert mit der Energie gefangener Krieger.",
+        "background": "./game_images/background_sj_cybercity.png",
+        "character": "./game_images/item_sj_soul_gem.png",
         "choices": [
-            { "text": "Hacken versuchen", "next": "sj_13", "gain_item": "drone_interface" },
-            { "text": "Jack rufen", "next": "sj_12", "karma": 1 }
+            { "text": "Jack den Stein zeigen", "next": "c2_sj_8" },
+            { "text": "Den Stein nutzen, um das Zeitportal zu öffnen", "next": "c2_sj_15" }
         ]
     },
 
-    "sj_12": {
-        "text": "Drohnen patrouillieren durch die Strassen.",
+    "c2_sj_8": {
+        "text": "Jack erkennt das Muster hinter Akus Angriffen. 'Aku versucht, die Portale mit dieser Technologie und den geraubten Seelen zu sperren.' Plötzlich bebt die Erde – Aku selbst manifestiert einen Teil seines riesigen, schwarzen Körpers über dem Areal.",
+        "background": "./game_images/background_sj_cybercity.png",
+        "character": "./game_images/character_sj_aku.png",
         "choices": [
-            { "text": "Ablenkung erzeugen", "next": "sj_14" },
-            { "text": "Kaempfen", "next": "sj_13", "karma": -2 }
+            { "text": "Aku direkt mit dem magischen Schwert attackieren", "next": "c2_sj_18", "karma": 5 },
+            { "text": "Den Rückzug in die Berge antreten", "next": "c2_sj_19", "karma": -2 }
         ]
     },
 
-    "sj_13": {
-        "text": "Der Turm beginnt die Frequenz neu zu kalibrieren.",
+    "c2_sj_9": {
+        "text": "Die blinden Bogenschützen hören das Geräusch sofort! Ein tödlicher Pfeilhagel geht auf euch nieder. Jack kann dich gerade noch rechtzeitig hinter eine Säule reißen, doch das Portal beginnt instabil zu flackern.",
+        "background": "./game_images/background_sj_temple.png",
         "choices": [
-            { "text": "System destabilisieren", "next": "sj_15" },
-            { "text": "Daten sichern", "next": "sj_14" }
+            { "text": "Das Portal trotz Gefahr betreten", "next": "c2_sj_17", "karma": -4 },
+            { "text": "Sich zurückziehen und Jacks Schwert vertrauen", "next": "c2_sj_13", "karma": 2 }
         ]
     },
 
-    "sj_14": {
-        "text": "Du findest ein Kontrollterminal.",
+    "c2_sj_10": {
+        "text": "Die Realität um euch herum verzerrt sich. Aku schickt seine stärksten Elite-Assassinen – die hochmodernen, mörderischen Roboter-Löwen. Sie umzingeln die Cyber-Stadt und schneiden jeden Fluchtweg ab.",
+        "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Zugriff erzwingen", "next": "sj_15", "required_item": "drone_interface" },
-            { "text": "Jack warnen", "next": "sj_16" }
+            { "text": "Sich mit dem Schotten Rücken an Rücken verteidigen", "next": "c2_sj_18", "karma": 5 },
+            { "text": "Das Ahnen-Amulett nutzen, um ein Schutzschild zu rufen", "next": "c2_tt_19", "required_item": "sj_ancestor_amulet" }
         ]
     },
 
-    "sj_15": {
-        "text": "Das System beginnt zu ueberlasten.",
+    "c2_sj_11": {
+        "text": "Jack pariert die Angriffe der Kopfgeldjäger mit chirurgischer Präzision. Doch im Eifer des Gefechts wird er von einer Giftnadel gestreift. Seine Bewegungen werden langsamer und sein Blick verschwimmt.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Gegenfrequenz starten", "next": "sj_17" },
-            { "text": "Fliehen", "next": "sj_16", "karma": -2 }
+            { "text": "Das Ahnen-Amulett nutzen, um das Gift zu reinigen", "next": "c2_sj_20", "required_item": "sj_ancestor_amulet" },
+            { "text": "Jack stützen und verzweifelt einen Unterschlupf suchen", "next": "c2_sj_15", "karma": -2 }
         ]
     },
 
-    "sj_16": {
-        "text": "Der Turm verstaerkt seine Kontrolle.",
+    "c2_sj_12": {
+        "text": "Das Zeitportal zieht Energie aus der Umgebung ab und droht, alles in Reichweite zu atomisieren. Jack starrt hinein: 'Es ist manipuliert... Eine Falle von Aku!'",
+        "background": "./game_images/background_sj_temple.png",
         "choices": [
-            { "text": "Neu ansetzen", "next": "sj_17" },
-            { "text": "Jack unterstuetzen", "next": "sj_18", "karma": 2 }
+            { "text": "Demongos Seelenstein opfern, um das Portal zu reinigen", "next": "c2_sj_26", "required_item": "sj_soul_gem" },
+            { "text": "Das Portal mit Jacks Schwert zerstören, bevor es explodiert", "next": "c2_sj_25", "karma": 3 }
         ]
     },
 
-    "sj_17": {
-        "text": "Die Gegenfrequenz beginnt zu wirken.",
+    "c2_sj_13": {
+        "text": "Mithilfe deines Feuers oder Spiegels reflektierst du das Licht. Der Shinobi-Krieger verliert seine Tarnung im Schatten. Jack nutzt die Millisekunde und streckt den finsteren Krieger mit einem einzigen, sauberen Hieb nieder.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Stabilisieren", "next": "sj_18" },
-            { "text": "ueberladen", "next": "sj_19", "karma": -1 }
+            { "text": "Dem Shinobi seine Schatten-Rüstung abnehmen", "next": "sj_shadow_armor", "gain_item": "sj_shadow_armor" },
+            { "text": "Sofort weiter zu Akus Zentralturm reisen", "next": "c2_sj_25", "karma": 2 }
         ]
     },
 
-    "sj_18": {
-        "text": "Die Buerger zeigen erste echte Emotionen.",
+    "sj_shadow_armor": {
+        "text": "Du erhältst die Rüstung des Shinobi-Kriegers. Sie macht den Träger im Schatten fast unsichtbar.",
+        "background": "./game_images/background_sj_wasteland.png",
+        "character": "./game_images/item_sj_shadow_armor.png",
         "choices": [
-            { "text": "Weiter stabilisieren", "next": "sj_20" },
-            { "text": "System pruefen", "next": "sj_19" }
+            { "text": "Die Rüstung anlegen", "next": "c2_sj_10" },
+            { "text": "Sie für später im Gepäck verstauen", "next": "c2_sj_15" }
         ]
     },
 
-    "sj_19": {
-        "text": "Der Turm beginnt zu kollabieren.",
+    "c2_sj_14": {
+        "text": "Ohne Licht wird Jack im finsteren Nebel schwer am Arm verletzt. Er verliert kurzzeitig den Halt an seinem Schwert. Der Shinobi triumphiert fast, während Akus Lachen durch das Tal dröhnt.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Kontrolle sichern", "next": "sj_20" },
-            { "text": "Beobachten", "next": "sj_21" }
+            { "text": "Dich schützend vor Jack werfen", "next": "c2_sj_22", "karma": 5 },
+            { "text": "Weglaufen und den Schotten zur Hilfe holen", "next": "c2_sj_23", "karma": -4 }
         ]
     },
 
-    "sj_20": {
-        "text": "Jack kaempft im Zentrum des Turms.",
+    "c2_sj_15": {
+        "text": "Ihr flüchtet tiefer in die verschneiten Pässe. Die Kälte setzt euch zu, und hinter euch jagen euch Akus fliegende Spionage-Drohnen. Ihr braucht einen sicheren Weg vorbei an den Wachen des Berges.",
+        "background": "./game_images/background_sj_temple.png",
         "choices": [
-            { "text": "Unterstuetzen", "next": "sj_22", "karma": 2 },
-            { "text": "Struktur analysieren", "next": "sj_21" }
+            { "text": "Die Drohnen mit dem Drohnen-Modul umprogrammieren", "next": "c2_sj_26", "required_item": "sj_drone_core" },
+            { "text": "Sich mit der Schatten-Rüstung unbemerkt vorbeischleichen", "next": "c2_sj_26", "required_item": "sj_shadow_armor" }
         ]
     },
 
-    "sj_21": {
-        "text": "Der Turm verliert Stabilitaet.",
+    "c2_sj_16": {
+        "text": "Das Signal bricht zusammen. Aku erkennt, dass du seine Befehle manipulierst. Er ballt seine riesige Faust und schlägt mit purer, roher Gewalt mitten in das Bergmassiv ein!",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Finale Phase", "next": "sj_23" },
-            { "text": "Daten sichern", "next": "sj_22", "gain_item": "core_fragment" }
+            { "text": "Dem Schlag ausweichen", "next": "c2_sj_25" },
+            { "text": "Den Schlag mit Jacks Schwert blocken", "next": "c2_sj_27", "karma": -2 }
         ]
     },
 
-    "sj_22": {
-        "text": "Die Struktur bricht weiter zusammen.",
+    "c2_sj_17": {
+        "text": "Das instabile Portal schleudert euch nicht in die Vergangenheit, sondern mitten in eine von Akus grausamsten Arenen der Zukunft. Gladiatoren-Roboter aktivieren ihre Klingen.",
+        "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Stabilisieren", "next": "sj_23" },
-            { "text": "Zurueckziehen", "next": "sj_24" }
+            { "text": "Gemeinsam um euer Leben kämpfen", "next": "c2_sj_25", "karma": 2 },
+            { "text": "Ein Versteck in der Arena suchen", "next": "c2_sj_24", "karma": -3 }
         ]
     },
 
-    "sj_23": {
-        "text": "Der Turm verliert Kontrolle ueber die Stadt.",
+    "c2_sj_18": {
+        "text": "Jacks magisches Schwert schneidet durch Akus schwarze Masse wie ein heißes Messer durch Butter. Aku heult auf und zieht seine Tentakel zurück, hinterlässt aber eine brennende Spur der Zerstörung.",
+        "background": "./game_images/background_sj_wasteland.png",
+        "character": "./game_images/character_sj_aku.png",
         "choices": [
-            { "text": "ueberpruefen", "next": "sj_25" },
-            { "text": "Jack folgen", "next": "sj_24", "karma": 1 }
+            { "text": "Ihm den finalen Stoß versetzen", "next": "c2_sj_30", "karma": 5 },
+            { "text": "Das brennende Dorf zuerst evakuieren", "next": "c2_sj_27", "karma": 4 }
         ]
     },
 
-    "sj_24": {
-        "text": "Die Stadt beginnt sich zu normalisieren.",
+    "c2_sj_19": {
+        "text": "Euer Rückzug gibt Aku Zeit, die gesamte Realität dieses Zeitalters weiter zu korrumpieren. Der Himmel brennt dauerhaft schwarz und die Hoffnung der Bewohner schwindet gegen Null.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Ruinen untersuchen", "next": "sj_25" },
-            { "text": "Jack kontaktieren", "next": "sj_26" }
+            { "text": "Den Widerstand neu formieren", "next": "c2_sj_27", "karma": -3 },
+            { "text": "Akus Zentralturm heimlich infiltrieren", "next": "c2_sj_28", "karma": 4 }
         ]
     },
 
-    "sj_25": {
-        "text": "Der Turm ist nicht mehr aktiv.",
+    "c2_sj_20": {
+        "text": "Das Amulett leuchtet in reinem, goldenem Licht. Das düstere Gift weicht aus Jacks Körper und seine Augen erlangen ihre messerscharfe Konzentration zurück. Er dankt dir mit einer tiefen Verbeugung.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Finale Analyse", "next": "sj_26" },
-            { "text": "System scannen", "next": "sj_27" }
+            { "text": "Aku gemeinsam entgegentreten", "next": "c2_sj_30" }
         ]
     },
 
-    "sj_26": {
-        "text": "Keine aktiven Signale mehr erkannt.",
+    "c2_sj_22": {
+        "text": "Du fängst den Schlag des Shinobi ab und wirst schwer verletzt. Doch dein Opfer gibt Jack den nötigen Zorn! Mit einem gewaltigen Schrei spaltet er die Dunkelheit und vernichtet den Feind.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Bestaetigen", "next": "sj_27" },
-            { "text": "Jack informieren", "next": "sj_28", "karma": 1 }
+            { "text": "Dich von Jack verarzten lassen", "next": "c2_sj_25" }
         ]
     },
 
-    "sj_27": {
-        "text": "Die Stadt ist frei.",
+    "c2_sj_23": {
+        "text": "Du verlierst wertvolle Zeit. Als du mit dem Schotten zurückkehrst, ist das Schlachtfeld leer und Jacks Schwert liegt einsam im Staub. Aku hat ihn entführt.",
+        "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Letzte Kontrolle", "next": "sj_28" },
-            { "text": "Ruhe beobachten", "next": "sj_29" }
+            { "text": "Ihn aus Akus Turm befreien", "next": "c2_sj_28", "karma": -4 }
         ]
     },
 
-    "sj_28": {
-        "text": "Jack bestaetigt: 'Die Kontrolle ist gebrochen.'",
+    "c2_sj_24": {
+        "text": "Der brute-force Kampf gegen Demongos Armee erschöpft euch vollends. Ihr müsst euch unter schweren Verlusten zurückziehen. Jacks Schwert verliert durch den Kontakt mit so viel Dunkelheit kurzzeitig seinen Glanz.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Weiter pruefen", "next": "sj_29" },
-            { "text": "Abschluss", "next": "sj_30" }
+            { "text": "Einen meditativen Ort zur Reinigung suchen", "next": "c2_sj_27", "karma": -2 }
         ]
     },
 
-    "sj_29": {
-        "text": "Die Stadt ist stabil.",
+    "c2_sj_25": {
+        "text": "Ihr erreicht den Fuß von Akus gigantischem Zentralturm. Pechschwarze Dornen ragen kilometerweit in den Himmel. Hier oben wird sich das Schicksal dieser Ära entscheiden.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Letzte Bestaetigung", "next": "sj_30" },
-            { "text": "Ruinen verlassen", "next": "sj_31" }
-        ]
-    },
-    "sj_30": {
-        "text": "Die letzten Resonanzwellen sterben im Stahl der Stadt. Kein kuenstlicher Klang mehr, nur Wind zwischen den Gebaeuden.",
-        "choices": [
-            { "text": "Ruinen betreten", "next": "sj_31" },
-            { "text": "Auf Jack warten", "next": "sj_32", "karma": 1 }
+            { "text": "Den Turm stürmen und Aku konfrontieren", "next": "c2_sj_29" }
         ]
     },
 
-    "sj_31": {
-        "text": "In den Truemmern des Turms findest du Raeume voller stiller Verstaerker, jetzt nutzlos und kalt.",
+    "c2_sj_26": {
+        "text": "Dank deiner cleveren Vorbereitung und den gesammelten Items überlistet ihr Akus Verteidigungssysteme komplett. Das Portal im Tempel stabilisiert sich und strahlt ein reines Zeit-Signal aus.",
+        "background": "./game_images/background_sj_temple.png",
         "choices": [
-            { "text": "Kernfragmente sichern", "next": "sj_33", "gain_item": "core_fragment" },
-            { "text": "Alles verlassen", "next": "sj_32" }
+            { "text": "Das Portal aktivieren und Aku den Weg abschneiden", "next": "c2_sj_30" }
         ]
     },
 
-    "sj_32": {
-        "text": "Jack steht auf einem zerbrochenen Plattformrest. Die Stadt ist ruhig geworden.",
+    "c2_sj_27": {
+        "text": "Der Zentralturm erzittert unter einer gewaltigen Explosion. Aku zieht sich in den Kern der Erde zurück, um seine Wunden zu regenerieren. Die Welt ist vorerst gerettet, doch der Weg in die Vergangenheit bleibt Jack verwehrt.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Jack zuhoeren", "next": "sj_34" },
-            { "text": "Stadt beobachten", "next": "sj_33" }
+            { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    "sj_33": {
-        "text": "Zum ersten Mal bewegen sich die Menschen nicht synchron. Unsicher, aber frei.",
+    "c2_sj_28": {
+        "text": "Der Schotte und die verbliebenen Rebellen starten einen heroischen Ablenkungsangriff auf die Tore des Turms, wodurch Jack und du unbemerkt bis in Akus Thronsaal vordringen könnt.",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Stabilitaet pruefen", "next": "sj_34" },
-            { "text": "Einwohner helfen", "next": "sj_35", "karma": 2 }
+            { "text": "Aku im Thronsaal überraschen", "next": "c2_sj_29" }
         ]
     },
 
-    "sj_34": {
-        "text": "Jack: 'Der Turm ist gefallen. Doch seine Wirkung hat Spuren hinterlassen.'",
+    "c2_sj_29": {
+        "text": "Aku nimmt seine monströse Urform an – ein gigantischer Drache aus reinem, schwarzem Hass. 'Jack! Du wirst diese Ära niemals verlassen! Du wirst hier sterben, in der Zukunft, die MEIN ist!'",
+        "background": "./game_images/background_sj_wasteland.png",
+        "character": "./game_images/character_sj_aku.png",
         "choices": [
-            { "text": "Spuren untersuchen", "next": "sj_35" },
-            { "text": "Weiterziehen vorbereiten", "next": "sj_36" }
+            { "text": "Ihn im Namen der Gerechtigkeit attackieren", "next": "c2_sj_30", "karma": 5 }
         ]
     },
 
-    "sj_35": {
-        "text": "Du findest kleine technische Nachbrenner im System — Reste der alten Kontrolle.",
+    "c2_sj_30": {
+        "text": "Mit einem finalen, meisterhaften Hieb treibt Jack das magische Schwert tief in Akus Kern. Das pure Licht der Klinge löst die finstere Kreatur in schreienden Sternenstaub auf. Der rote Nebel weicht warmem Sonnenlicht. Jack steckt sein Schwert ein, blickt dankbar zu dir und wendet sich dem Horizont zu. 'Der Kampf war lang, mein Freund. Aber die Zukunft ist endlich frei.'",
+        "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Deaktivieren", "next": "sj_36" },
-            { "text": "Ignorieren", "next": "sj_36", "karma": -1 }
+            { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    "sj_36": {
-        "text": "Die Stadt beginnt sich selbst zu regulieren, ohne externe Frequenz.",
-        "choices": [
-            { "text": "Jack folgen", "next": "sj_37" },
-            { "text": "Letzten Blick zurueck", "next": "sj_37", "karma": 1 }
-        ]
-    },
-
-    "sj_37": {
-        "text": "Jack wendet sich ab. 'Die Ordnung ist wieder in Bewegung.'",
-        "choices": [
-            { "text": "Mit Jack gehen", "next": "sj_38" },
-            { "text": "Andere Richtung waehlen", "next": "sj_38" }
-        ]
-    },
-
-    "sj_38": {
-        "text": "Die Stadt hinter dir wirkt lebendig — unsicher, aber frei von Kontrolle.",
-        "choices": [
-            { "text": "Abschied nehmen", "next": "sj_39" }
-        ]
-    },
-
-    "sj_39": {
-        "text": "Der Resonanz-Turm ist endgueltig verstummt. Die Stadt lebt wieder in echter, unberechenbarer Freiheit — mit all ihrer Unvollkommenheit.",
-        "choices": [
-            { "text": "Final bestaetigen", "next": "sj_40" }
-        ]
-    },
-
-    "sj_40": {
-        "text": "Die Stadt ist frei von der Resonanz-Kontrolle. Jack verabschiedet sich still und setzt seine Reise fort. Das System ist zerstoert — und die Menschen sind endlich wieder sie selbst.",
-        "choices": [
-            { "text": "Weiterziehen", "next": "c3_start" }
-        ]
-    },
-
-
-
-
-
-
-    //AB HIER WEITER Bearbeitung von Kapitel 2
-
-
-
-
-
+//AB HIER WEITER Bearbeitung von Kapitel 2
 
     "c2_rs_start": {
-        "text": "Der Park wirkt instabil. Der Himmel flackert wie ein kaputter Bildschirm. Mordecai und Rigby stehen vor dem Eingang des Parks und streiten sich, waehrend Skips bereits etwas Unheilvolles spuert.",
+        "text": "Es ist ein unerträglich heißer Nachmittag im Park. Mordecai und Rigby haben absolut keine Lust, den alten Rasenmäher zu reparieren. Stattdessen haben sie eine mysteriöse, verstaubte Videospiel-Kassette namens The Destroyer of Worlds gefunden und sie heimlich in den Fernseher geschoben. Als Rigby den Startknopf drückt, schießt ein gigantischer, pixeliger Laserstrahl aus dem Bildschirm und saugt Benson mitsamt seinem Klemmbrett direkt in das Spiel!",
+        "background": "./game_images/background_rs_living_room.png",
         "choices": [
-            { "text": "Mordecai folgen", "next": "rs_1", "karma": 1 },
-            { "text": "Rigby folgen", "next": "rs_2", "karma": -1 },
-            { "text": "Skips ansprechen", "next": "rs_3", "karma": 2 },
-            { "text": "Den Park untersuchen", "next": "rs_4" }
+            { "text": "Skips in der Garage um Rat fragen", "next": "c2_rs_1", "karma": 2 },
+            { "text": "Muscle Man nach einem Cheat-Code fragen", "next": "c2_rs_2" },
+            { "text": "Pops um alte Münzen für den Automaten bitten", "next": "c2_rs_3", "karma": 1 },
+            { "text": "Den verbotenen Power-Glove-Controller aus Bensons Büro holen", "next": "c2_rs_4", "karma": -1 }
         ]
     },
 
-    "rs_1": {
-        "text": "Mordecai: 'Das ist kein normaler Glitch... irgendwas ueberschreibt die Parkregeln von innen.'",
+    "c2_rs_1": {
+        "text": "Skips ballt seine riesigen Fäuste und seufzt schwer. Ja, ich habe das schon mal gesehen. Das ist kein normales Spiel, sondern ein interdimensionales Gefängnis für jähzornige Parkmanager. Wenn wir den Highscore nicht knacken, bleibt Benson für immer ein Pixel. Er reicht dir ein golden leuchtendes, unleserliches Buch aus seinem Tresor.",
+        "background": "./game_images/background_rs_skips_garage.png",
+        "character": "./game_images/character_rs_skips.png",
         "choices": [
-            { "text": "Nach Details fragen", "next": "rs_5" },
-            { "text": "Es runterspielen", "next": "rs_6" },
-            { "text": "Skips holen", "next": "rs_8" }
+            { "text": "Das Buch der ewigen Parkregeln mitnehmen", "next": "rs_park_rules", "gain_item": "rs_park_rules" },
+            { "text": "Das Buch ablehnen und direkt mit Skips Werkzeugen das Spiel aufschrauben", "next": "c2_rs_5", "karma": -2 }
         ]
     },
 
-    "rs_2": {
-        "text": "Rigby steckt in einem Snackautomaten fest, der ihn jedes Mal neu ausspuckt, wenn er versucht, etwas zu klauen.",
+    "rs_park_rules": {
+        "text": "Du hältst das Buch der ewigen Parkregeln in den Händen. Jede geschriebene Zeile vibriert voller bürokratischer Magie.",
+        "background": "./game_images/background_rs_skips_garage.png",
+        "character": "./game_images/item_rs_park_rules.png",
         "choices": [
-            { "text": "Helfen ihn rauszuziehen", "next": "rs_5", "karma": 1 },
-            { "text": "Automat genauer ansehen", "next": "rs_7", "gain_item": "glitch_coin" },
-            { "text": "Warten was passiert", "next": "rs_6" }
+            { "text": "Die Regeln im Wohnzimmer laut vorlesen", "next": "c2_rs_8" },
+            { "text": "Damit zum Kaffeeladen laufen und Margaret um Hilfe bitten", "next": "c2_rs_7" }
         ]
     },
 
-    "rs_3": {
-        "text": "Skips: 'Das fuehlt sich an wie ein alter Fehler... einer, der gelernt hat, sich selbst zu reparieren.'",
+    "c2_rs_2": {
+        "text": "Muscle Man schwingt sein Shirt wild im Kreis und johlt laut auf. Wisst ihr, wer noch in einer Arcade-Maschine festsitzt? MEINE MOM! WOOOO! Er rammt vor Begeisterung mit seinem kleinen grünen Auto den Golfkarren und schleudert eine legendäre, extrem klebrige Fritte aus seinem Vorrat in deine Hand.",
+        "background": "./game_images/background_rs_trailer.png",
+        "character": "./game_images/character_rs_muscleman.png",
         "choices": [
-            { "text": "Mehr wissen wollen", "next": "rs_8" },
-            { "text": "Ignorieren und weitermachen", "next": "rs_6", "karma": -1 },
-            { "text": "Andere warnen", "next": "rs_5" }
+            { "text": "Die Ultimative Chili-Cheese-Fritte einstecken", "next": "rs_chili_fry", "gain_item": "rs_chili_fry" },
+            { "text": "Die Fritte sofort aufessen um mutig zu werden", "next": "c2_rs_6", "karma": -3 }
         ]
     },
 
-    "rs_4": {
-        "text": "Der Park wiederholt sich leicht versetzt. Du gehst denselben Weg zweimal, aber mit kleinen Veraenderungen im Schatten.",
+    "rs_chili_fry": {
+        "text": "Du fängst die Ultimative Chili-Cheese-Fritte auf. Sie verströmt einen so scharfen Geruch, dass sich die Realität leicht verzerrt.",
+        "background": "./game_images/background_rs_trailer.png",
+        "character": "./game_images/item_rs_chili_fry.png",
         "choices": [
-            { "text": "Dem Fehler folgen", "next": "rs_9" },
-            { "text": "Zur Mitte zurueckgehen", "next": "rs_6" },
-            { "text": "Skips fragen was das ist", "next": "rs_8" }
+            { "text": "Die klebrige Fritte in die Elektronik des Fernsehers stopfen", "next": "c2_rs_15" },
+            { "text": "Damit zum Friedhof gehen und den Sensenmann Death um Hilfe anflehen", "next": "c2_rs_12" }
         ]
     },
 
-    "rs_5": {
-        "text": "Benson schreit aus dem Buero: 'Wenn das wieder so ein Chaos wird, macht ihr das nach der Schicht sauber!'",
+    "c2_rs_3": {
+        "text": "Pops kichert fröhlich und gibt dir statt Geld einen riesigen, funkelnden Lutscher aus seiner Sammlung. Oh, ein exquisites Tauschmittel für elektronischen Schabernack! Im selben Moment bricht das Spiel im Haus durch die Wände und schießt pixelige Laserstrahlen auf den Park-Rasen.",
+        "background": "./game_images/background_rs_park_lawn.png",
+        "character": "./game_images/character_rs_pops.png",
         "choices": [
-            { "text": "Beruhigen", "next": "rs_10" },
-            { "text": "Weiterarbeiten", "next": "rs_11" },
-            { "text": "Ihn ignorieren", "next": "rs_6", "karma": -1 }
+            { "text": "Den Kaffeeladen vor den Lasern beschützen", "next": "c2_rs_7", "karma": 3 },
+            { "text": "Mit Pops Lutscher den Gott des Synthesizers Gary im Weltall rufen", "next": "c2_rs_9", "karma": -1 }
         ]
     },
 
-    "rs_6": {
-        "text": "Der Park fuehlt sich kurz… doppelt an. Als wuerde jemand denselben Moment zweimal speichern.",
+    "c2_rs_4": {
+        "text": "Rigby bricht mit einer Haarnadel Bensons Bürotür auf. Auf dem Schreibtisch liegt ein verbotenes, kosmisches Keyboard. Damit können wir alles machen! Sogar Bensons Kaugummis in echtes Gold verwandeln! Die Tasten fangen an, unheimlich bunt zu glühen.",
+        "background": "./game_images/background_rs_benson_office.png",
         "choices": [
-            { "text": "Dem Riss folgen", "next": "rs_12" },
-            { "text": "Zurueck zu den anderen", "next": "rs_11" },
-            { "text": "Warten", "next": "rs_11" }
+            { "text": "Den The Power-Synthesizer an dich nehmen", "next": "rs_power_synth", "gain_item": "rs_power_synth" },
+            { "text": "Das Keyboard ignorieren und lieber Bensons alten Safe knacken", "next": "c2_rs_11", "karma": -4 }
         ]
     },
 
-    "rs_7": {
-        "text": "Die Glitch-Muenze ist warm. Sie zeigt kurz eine Version des Parks, die nicht existieren sollte.",
+    "rs_power_synth": {
+        "text": "Du nimmst den The Power-Synthesizer an dich. Jede Taste, die du drückst, verändert die Welt um dich herum.",
+        "background": "./game_images/background_rs_benson_office.png",
+        "character": "./game_images/item_rs_power_synth.png",
         "choices": [
-            { "text": "Aufheben", "next": "rs_10", "gain_item": "glitch_coin" },
-            { "text": "Wegwerfen", "next": "rs_11" },
-            { "text": "Rigby zeigen", "next": "rs_10" }
+            { "text": "Ein Lied spielen um Benson aus dem Bildschirm zu teleportieren", "next": "c2_rs_8" },
+            { "text": "Auf den Parkplatz rennen und den Golfkarren mit Musik tunen", "next": "c2_rs_22" }
         ]
     },
 
-    "rs_8": {
-        "text": "Skips: 'Das ist kein einfacher Fehler. Der Park wird benutzt. Als Test.'",
+    "c2_rs_5": {
+        "text": "Du schraubst die Rückseite der Maschine auf. Ein gewaltiger Schwall aus kochend heißem, pixeligem Kaugummi spritzt heraus! Die klebrige Masse formiert sich zu einer gigantischen Version von Benson als Kaugummi-Monster. Es brüllt laut durch das Haus: WENN IHR DAS NICHT SOFORT AUFRÄUMT SEID IHR GEFEUERT!",
+        "background": "./game_images/background_rs_living_room.png",
         "choices": [
-            { "text": "Nach dem Test fragen", "next": "rs_12" },
-            { "text": "Nicht weiter darueber reden", "next": "rs_11" },
-            { "text": "Andere holen", "next": "rs_10" }
+            { "text": "Das Kaugummi-Monster mit Schaufeln angreifen", "next": "c2_rs_13", "karma": -4 },
+            { "text": "Das Monster mit Rigbys alten Betten ablenken", "next": "c2_rs_14", "karma": 2 }
         ]
     },
 
-    "rs_9": {
-        "text": "Du findest einen Bereich ohne Geraeusche. Selbst Schritte machen keinen Klang.",
+    "c2_rs_6": {
+        "text": "Die Fritte verursacht sofort heftige Magenkrämpfe und Halluzinationen. Der Himmel über dem Park verwandelt sich in ein wildes Neon-Szenario der achtziger Jahre. Eine riesige, schwebende Musikkassette taucht auf und fordert euch zu einem Rap-Battle um Bensons Freiheit heraus.",
+        "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
-            { "text": "Untersuchen", "next": "rs_13", "gain_item": "silent_fragment" },
-            { "text": "Zurueckgehen", "next": "rs_11" },
-            { "text": "Rigby hineinziehen", "next": "rs_10" }
+            { "text": "Mordecai den Beatbox-Rhythmus vorgeben", "next": "c2_rs_17", "karma": 3 },
+            { "text": "Panisch weglaufen und Hi-Five Ghost um Hilfe bitten", "next": "c2_rs_15", "karma": -2 }
         ]
     },
 
-    "rs_10": {
-        "text": "Muscle Man: 'Okay hoer zu… ich hab so einen Typen gesehen. Der Park wiederholt sich wegen IHM, Mann.'",
+    "c2_rs_7": {
+        "text": "Im Kaffeeladen bereiten Margaret und Eileen gerade die Flucht vor. Die Kaffeemaschine ist durch die Strahlung zum Leben erwacht und spuckt kochenden Espresso durch den Raum! Ihr müsst das wildgewordene Gerät sofort stoppen.",
+        "background": "./game_images/background_rs_coffee_shop.png",
+        "character": "./game_images/character_rs_margaret.png",
         "choices": [
-            { "text": "Mehr Infos verlangen", "next": "rs_14" },
-            { "text": "Nicht ernst nehmen", "next": "rs_11" },
-            { "text": "Skips informieren", "next": "rs_12" }
+            { "text": "Die Maschine mit den Ewigen Parkregeln besänftigen", "next": "c2_rs_26", "required_item": "rs_park_rules" },
+            { "text": "Den Stecker mit einer Zange herausreißen", "next": "c2_rs_13", "karma": -3 }
         ]
     },
 
-    "rs_11": {
-        "text": "Etwas im Park fuehlt sich an, als wuerde es deine Entscheidungen leicht vorausziehen.",
+    "c2_rs_8": {
+        "text": "Das Videospiel explodiert in einer Pixel-Wolke! Ein gigantischer, schwebender Totenkopf bricht aus dem Gehäuse und fliegt über das Parkgelände. Es ist der wahre Destroyer of Worlds, und er hält Benson in einer digitalen Energiekugel gefangen.",
+        "background": "./game_images/background_rs_park_lawn.png",
+        "character": "./game_images/character_rs_destroyer.png",
         "choices": [
-            { "text": "Weitergehen", "next": "rs_15" },
-            { "text": "Zurueck zum Eingang", "next": "rs_6" },
-            { "text": "Pause machen", "next": "rs_15" }
+            { "text": "Den Destroyer mit dem Synthesizer in ein Musik-Duell verwickeln", "next": "c2_rs_30", "required_item": "rs_power_synth" },
+            { "text": "Ihn mit dem Golfkarren frontal rammen", "next": "c2_rs_19", "karma": -3 }
         ]
     },
 
-    "rs_12": {
-        "text": "Skips fuehrt dich zu einem alten Teil des Parks, der nicht auf Karten existiert.",
+    "c2_rs_9": {
+        "text": "Gary erscheint in seiner fliegenden Sportwagen-Limousine am rosafarbenen Nachthimmel. Wer wagt es, die kosmische Harmonie mit billigem Park-Zucker zu stören? Er sieht das wachsende Arcade-Chaos und schüttelt verärgert den Kopf.",
+        "background": "./game_images/background_rs_neon_sky.png",
+        "character": "./game_images/character_rs_gary.png",
         "choices": [
-            { "text": "Untersuchen", "next": "rs_16" },
-            { "text": "Umkehren", "next": "rs_11" },
-            { "text": "Alle holen", "next": "rs_15" }
+            { "text": "Gary überreden euch seine magische Laser-Gitarre zu leihen", "next": "c2_rs_18", "karma": 4 },
+            { "text": "Heimlich in sein fliegendes Auto einbrechen", "next": "c2_rs_11", "karma": -5 }
         ]
     },
 
-    "rs_13": {
-        "text": "Der Silent Fragment zeigt flackernde Versionen von dir im Park – leicht zeitversetzt.",
+    "c2_rs_10": {
+        "text": "Mordecai und Rigby fangen an, sich lautstark im Wohnzimmer zu streiten. Du Idiot, ich habe dir gesagt, wir sollen den Rasen mähen! Halt den Mund, Mordecai, das Spiel ist episch! Während sie zanken, erschafft der Fernseher Hunderte von aggressiven 8-Bit-Gegnern.",
+        "background": "./game_images/background_rs_living_room.png",
         "choices": [
-            { "text": "Speichern", "next": "rs_15", "gain_item": "park_memory" },
-            { "text": "Nicht weiter anschauen", "next": "rs_11" }
+            { "text": "Die Pixel-Klone mit der scharfen Fritte wegschmelzen", "next": "c2_rs_26", "required_item": "rs_chili_fry" },
+            { "text": "Die Klone mit alten Besen bekämpfen", "next": "c2_rs_14", "karma": -2 }
         ]
     },
 
-    "rs_14": {
-        "text": "Eileen erkennt Muster im Parksystem. Jemand hat die Realitaet wie ein Trainingsprogramm aufgebaut.",
+    "c2_rs_11": {
+        "text": "Deine unüberlegte Aktion beschwört Death, den Sensenmann auf seinem flammenden Motorrad! Er zieht eine düstere Taschenuhr heraus. Bensons Zeit ist eigentlich noch nicht um, aber euer Pfusch stört die Unterwelt. Wer verliert, gibt mir seine Seele!",
+        "background": "./game_images/background_rs_park_lawn.png",
+        "character": "./game_images/character_rs_death.png",
         "choices": [
-            { "text": "Weiter analysieren", "next": "rs_16" },
-            { "text": "Stoppen", "next": "rs_15" },
-            { "text": "Skips fragen", "next": "rs_16" }
+            { "text": "Death zu einem allesentscheidenden Armdrücken-Match herausfordern", "next": "c2_rs_24", "karma": -4 },
+            { "text": "Ihm die ultimative Chili-Fritte als Tauschobjekt anbieten", "next": "c2_rs_26", "required_item": "rs_chili_fry" }
         ]
     },
 
-    "rs_15": {
-        "text": "Der Himmel im Park reisst leicht auf. Etwas schaut hindurch, aber ohne direkt einzugreifen.",
+    "c2_rs_12": {
+        "text": "In der staubigen Unterwelt angekommen, sitzt Death in seiner alten Lederjacke auf einer Kiste. Die Chili-Fritte? Mann, die gibt es in der Hölle seit Ewigkeiten nicht mehr! Dafür gebe ich euch Bensons Rettungs-Code direkt zurück. Er kritzelt Zahlen auf ein Brett.",
+        "background": "./game_images/background_rs_underworld.png",
+        "character": "./game_images/character_rs_death.png",
         "choices": [
-            { "text": "Weitergehen", "next": "rs_17" },
-            { "text": "Zurueckziehen", "next": "rs_16" }
+            { "text": "Das offizielle Park-Klemmbrett einstecken", "next": "rs_benson_clipboard", "gain_item": "rs_benson_clipboard" }
         ]
     },
 
-    "rs_16": {
-        "text": "Skips: 'Der Park ist ein Knotenpunkt. Aber irgendwas nutzt ihn als Schleife.'",
+    "rs_benson_clipboard": {
+        "text": "Du erhältst Bensons offizielles Park-Klemmbrett. Auf der Rückseite steht der geheime Deaktivierungs-Code.",
+        "background": "./game_images/background_rs_underworld.png",
+        "character": "./game_images/item_rs_benson_clipboard.png",
         "choices": [
-            { "text": "Zustimmen", "next": "rs_17" },
-            { "text": "Zweifeln", "next": "rs_17" },
-            { "text": "Beweise suchen", "next": "rs_14" }
+            { "text": "Zurück an die Oberfläche rennen", "next": "c2_rs_25" },
+            { "text": "Den Code sofort über das Keyboard einspielen", "next": "c2_rs_26", "required_item": "rs_power_synth" }
         ]
     },
 
-    "rs_17": {
-        "text": "Ein alter Arcade-Automat erscheint im Park. Er zeigt mehrere Versionen derselben Szene.",
+    "c2_rs_13": {
+        "text": "Der heftige Kampf eskaliert völlig. Das Kaugummi-Monster schleudert Mordecai durch das morsche Dach des Hauses. Benson schreit wütend aus dem Schleim: WENN DAS HAUS EINSTÜRZT SEID IHR ALLE FÜR IMMER GEEEEEFEUERT!",
+        "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Glitch-Muenze einsetzen", "next": "rs_18", "required_item": "glitch_coin" },
-            { "text": "Automat ignorieren", "next": "rs_19" },
-            { "text": "Skips untersuchen lassen", "next": "rs_18" }
+            { "text": "Einen riesigen Kampf-Roboter aus alten Röhrenfernsehern bauen", "next": "c2_rs_27", "karma": -3 },
+            { "text": "Skips anflehen ein magisches Schutzsiegel auf den Boden zu zeichnen", "next": "c2_rs_28", "karma": 4 }
         ]
     },
 
-    "rs_18": {
-        "text": "Der Automat oeffnet einen stabilen Riss. Er fuehlt sich an, als wuerde er nicht zum Park gehoeren.",
+    "c2_rs_14": {
+        "text": "Die Ablenkung funktioniert nicht lange. Die Spiele-Kassette spuckt plötzlich ein riesiges, fliegendes Auge aus, das die Parkbänke in glitzernde Limonade verwandelt. Thomas der Praktikant rennt schreiend im Ziegenkostüm an euch vorbei.",
+        "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Durchgehen", "next": "rs_20" },
-            { "text": "Andere zuerst schicken", "next": "rs_20" }
+            { "text": "Das Auge mit dem The Power-Synthesizer hypnotisieren", "next": "c2_rs_30", "required_item": "rs_power_synth" },
+            { "text": "Blind in den Wald flüchten und hoffen dass der Tag endet", "next": "c2_rs_19", "karma": -4 }
         ]
     },
 
-    "rs_19": {
-        "text": "Benson verliert kurz die uebersicht ueber den Park. Arbeitslisten aendern sich von selbst.",
+    "c2_rs_15": {
+        "text": "Der Golfkarren wird mit Muscle Mans Fritte als Treibstoff gefüttert. Der Karren schießt wie eine Rakete in den Himmel, bricht durch die Wolkendecke und katapultiert euch direkt in die neonfarbene Dimension des Videospiels!",
+        "background": "./game_images/background_rs_digital_space.png",
         "choices": [
-            { "text": "Helfen stabilisieren", "next": "rs_20" },
-            { "text": "Abwarten", "next": "rs_20" }
+            { "text": "Den digitalen Hauptprozessor mit dem Karren rammen", "next": "c2_rs_25" },
+            { "text": "Nach Bensons Avatar im hellen Datenstrom suchen", "next": "c2_rs_18", "karma": 3 }
         ]
     },
 
-    "rs_20": {
-        "text": "Skips: 'Das hier ist kein Parkproblem mehr. Das ist etwas Groesseres.'",
+    "c2_rs_17": {
+        "text": "Mordecai legt los und droppt die wildesten Reime der Parkgeschichte! Der Park ist cool, du bist nur Code, wir schicken dich zurück in den Game-Over-Tod! Die schwebende Musikkassette explodiert vor Ehrfurcht und hinterlässt ein glühendes Portal.",
+        "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
-            { "text": "Weiter", "next": "rs_21" }
+            { "text": "Durch das Portal direkt zu Benson springen", "next": "c2_rs_25", "karma": 4 },
+            { "text": "Das Portal mit den Zeilen der Parkregeln stabilisieren", "next": "c2_rs_26", "required_item": "rs_park_rules" }
         ]
     },
 
-    "rs_21": {
-        "text": "Ein Schatten formt sich ueber dem Park. Er wirkt vertraut, aber nicht vollstaendig real.",
+    "c2_rs_18": {
+        "text": "Mit Garys Laser-Gitarre bewaffnet feuert Mordecai gewaltige Rock-Akkorde ab, die die pixelige Rüstung des Destroyers wegsprengen. Rigby tanzt wild im Hintergrund, um den Gegner vollkommen zu verwirren.",
+        "background": "./game_images/background_rs_digital_space.png",
         "choices": [
-            { "text": "Konfrontieren", "next": "rs_22" },
-            { "text": "Beobachten", "next": "rs_22" },
-            { "text": "Vorbereiten", "next": "rs_22" }
+            { "text": "Den finalen Power-Akkord auf den Saiten spielen", "next": "c2_rs_30", "karma": 5 },
+            { "text": "Benson den Rettungs-Code vom Klemmbrett zurufen", "next": "c2_rs_30", "required_item": "rs_benson_clipboard" }
         ]
     },
 
-    "rs_22": {
-        "text": "Die Praesenz: 'Ihr nennt es Park. Wir nennen es Simulation.'",
+    "c2_rs_19": {
+        "text": "Euer feiger Rückzug macht alles nur noch schlimmer. Der Destroyer of Worlds verwandelt das gesamte Parkgelände in ein unspielbares Retro-Spiel voller tödlicher Stacheln und fliegender Pixel-Schildkröten. Alles versinkt im Chaos.",
+        "background": "./game_images/background_rs_digital_space.png",
         "choices": [
-            { "text": "Nachfragen", "next": "rs_23" },
-            { "text": "Widersprechen", "next": "rs_23" }
+            { "text": "Das schwere Spiel auf die harte Tour durchspielen", "next": "c2_rs_27", "karma": -4 },
+            { "text": "Den Synthesizer für einen harten Realitäts-Reset nutzen", "next": "c2_rs_30", "required_item": "rs_power_synth" }
         ]
     },
 
-    "rs_23": {
-        "text": "Mordecai und Rigby bemerken, dass der Park leicht unterschiedliche Versionen von ihnen enthaelt.",
+    "c2_rs_22": {
+        "text": "Das kosmische Keyboard verwandelt den kleinen Golfkarren in einen gigantischen, intergalaktischen Kampf-Jet mit Flammenwerfern! Mordecai schreit begeistert: Oooooh jaaa! Jetzt reden wir! Ihr fliegt mitten in das feurige Auge des Sturms.",
+        "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
-            { "text": "Untersuchen", "next": "rs_24" },
-            { "text": "Ignorieren", "next": "rs_24" }
+            { "text": "Die Laser-Kanonen des Jets voll abfeuern", "next": "c2_rs_30" },
+            { "text": "Aus dem Jet springen und den Kern manuell angreifen", "next": "c2_rs_25", "karma": 2 }
         ]
     },
 
-    "rs_24": {
-        "text": "Der Park beginnt sich zu ueberlagern. Wege existieren mehrfach gleichzeitig.",
+    "c2_rs_24": {
+        "text": "Death besiegt Rigby im Armdrücken innerhalb von einer Sekunde. Eure Seelen gehören mir! Doch im letzten Moment wirft Mordecai eine schwere Bowlingkugel nach der Sense, was die Zeit kurzfristig einfriert.",
+        "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Park Memory nutzen", "next": "rs_25", "required_item": "park_memory" },
-            { "text": "Einfach weitergehen", "next": "rs_25" }
+            { "text": "Zum großen Parksee flüchten", "next": "c2_rs_27" },
+            { "text": "Zurück ins Haus sprinten", "next": "c2_rs_13", "karma": -1 }
         ]
     },
 
-    "rs_25": {
-        "text": "Skips stabilisiert Teile der Struktur, verliert dabei aber Energie.",
+    "c2_rs_25": {
+        "text": "Ihr erreicht das Herz des Arcade-Spiels. Benson hängt hilflos an leuchtenden Digitalkabeln und seine Augen glühen gefährlich rot. Ihr hättet verdammt noch mal den Rasen mähen sollen! Ihr müsst ihn sofort befreien.",
+        "background": "./game_images/background_rs_digital_space.png",
         "choices": [
-            { "text": "Unterstuetzen", "next": "rs_26" },
-            { "text": "Beobachten", "next": "rs_26" }
+            { "text": "Ihm sein echtes Klemmbrett vor das Gesicht halten", "next": "c2_rs_30", "required_item": "rs_benson_clipboard" },
+            { "text": "Die Kabel mit Skips Vorschlaghammer zertrümmern", "next": "c2_rs_27", "karma": -2 }
         ]
     },
 
-    "rs_26": {
-        "text": "Der Schatten bewegt sich nicht mehr zufaellig. Er reagiert auf eure Entscheidungen.",
+    "c2_rs_26": {
+        "text": "Durch den perfekten Einsatz deines Gegenstands kollabiert die Spiel-Matrix vollständig. Die pixeligen Feinde lösen sich in Luft auf und die Kassette spuckt Benson aus. Er landet unsanft, aber unversehrt auf dem Rasen.",
+        "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Weiter", "next": "rs_27" }
+            { "text": "Ihm hastig beim Aufstehen helfen", "next": "c2_rs_30" },
+            { "text": "Ihn ignorieren und so tun als wäre nichts passiert", "next": "c2_rs_27", "karma": -3 }
         ]
     },
 
-    "rs_27": {
-        "text": "Benson: 'Wenn das weitergeht, gibt es bald keinen Park mehr, der noch gleich ist.'",
+    "c2_rs_27": {
+        "text": "Die riesige Apparatur explodiert in einer gigantischen, nuklearen Kaugummi-Detonation! Der gesamte Park ist völlig demoliert, alle Bäume sind weg und das Haus ist nur noch ein rauchender Krater. Benson steht zitternd in den Trümmern, während sein Kopf tiefrot anläuft.",
+        "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Zustimmen", "next": "rs_28" },
-            { "text": "Zweifeln", "next": "rs_28" }
+            { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    "rs_28": {
-        "text": "Der Park wird vollstaendig von der ueberlagerten Struktur erfasst.",
+    "c2_rs_28": {
+        "text": "Skips zeichnet mit magischer Kreide einen perfekten Kreis auf den Rasen, der die digitale Strahlung des Destroyers aufsaugt. Mordecai und Rigby nutzen die kurze Pause, um den finalen Gegenangriff zu starten.",
+        "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Weiter", "next": "rs_29" }
+            { "text": "Den Destroyer endgültig konfrontieren", "next": "c2_rs_25" },
+            { "text": "In den Jet steigen und von oben angreifen", "next": "c2_rs_22", "karma": 2 }
         ]
     },
 
-    "rs_29": {
-        "text": "Mehrere Versionen des Parks existieren gleichzeitig, aber nicht stabil.",
-        "choices": [
-            { "text": "Beobachten", "next": "rs_30" }
-        ]
-    },
-
-    "rs_30": {
-        "text": "Der Park oeffnet einen vollstaendigen Nexus-Riss. Der uebergang zu Kapitel 3 wird aktiviert.",
+    "c2_rs_30": {
+        "text": "Mit einem epischen Finale zerschmettert ihr den Destroyer of Worlds in eine Million bunte Pixel. Der Park verwandelt sich augenblicklich zurück in sein normales, idyllisches Grün. Benson landet keuchend auf dem Rasen, klopft sich den Staub vom Hemd und funkelt Mordecai und Rigby wütend an: Ihr räumt diesen Müll sofort auf, oder ihr seid GEFEUERT! Mordecai und Rigby schauen sich an, grinsen breit und rufen im Chor: OOOOOOOOOOOH!",
+        "background": "./game_images/background_rs_living_room.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
