@@ -1977,7 +1977,7 @@ let gameData = {
 
     "c2_ben_1": {
         "text": "Opa Max öffnet ein verstecktes Fach im Rust Bucket. 'Ben, die Sensoren empfangen eine Signatur, die Vilgax' Drohnen ähnelt, aber gekreuzt mit Dr. Animos Mutations-Wellen!' Ein seltsamer, kybernetischer Schlüssel fällt aus dem Klempner-Archiv.",
-        "background": "./game_images/.png",
+        "background": "./game_images/background_ben_rustbucket.png",
         "character": "./game_images/character_ben_max.png",
         "choices": [
             { "text": "Den Klempner-Schlüssel einstecken", "next": "ben_omnitrix_key", "gain_item": "ben_omnitrix_key" },
@@ -2591,7 +2591,7 @@ let gameData = {
         ]
     },
 
-//AB HIER WEITER Bearbeitung von Kapitel 2
+    //AB HIER WEITER Bearbeitung von Kapitel 2
 
     "c2_rs_start": {
         "text": "Es ist ein unerträglich heißer Nachmittag im Park. Mordecai und Rigby haben absolut keine Lust, den alten Rasenmäher zu reparieren. Stattdessen haben sie eine mysteriöse, verstaubte Videospiel-Kassette namens The Destroyer of Worlds gefunden und sie heimlich in den Fernseher geschoben. Als Rigby den Startknopf drückt, schießt ein gigantischer, pixeliger Laserstrahl aus dem Bildschirm und saugt Benson mitsamt seinem Klemmbrett direkt in das Spiel!",
@@ -2653,7 +2653,7 @@ let gameData = {
             { "text": "Mit Pops Lutscher den Gott des Synthesizers Gary im Weltall rufen", "next": "c2_rs_9", "karma": -1 }
         ]
     },
-
+    //HAHAHA
     "c2_rs_4": {
         "text": "Rigby bricht mit einer Haarnadel Bensons Bürotür auf. Auf dem Schreibtisch liegt ein verbotenes, kosmisches Keyboard. Damit können wir alles machen! Sogar Bensons Kaugummis in echtes Gold verwandeln! Die Tasten fangen an, unheimlich bunt zu glühen.",
         "background": "./game_images/background_rs_benson_office.png",
@@ -2875,235 +2875,244 @@ let gameData = {
     },
 
     "c2_nj_start": {
-        "text": "Ninjago City ist in Dunkelheit gehuellt. Die Goldenen Waffen reagieren unkontrolliert auf eine fremde Energie. Kai, Jay, Cole und Zane stehen angespannt vor dem Kloster von Spinjitzu. Sensei Wu wirkt besorgt.",
+        "text": "In New Ninjago City bricht mitten in der Nacht das gesamte Stromnetz zusammen. Auf den riesigen Werbebildschirmen erscheint das lachende, digitale Gesicht des Overlords, gefolgt von einer Flut aus ranzigem, lila Schlamm, der aus den Gullys quillt. Es ist das Ultraböse, das die Stadt mit digitaler Finsternis infiziert! Lloyd, Kai, Jay, Cole, Zane und Nya haben sich bereits um das Kontrollpult des Flugseglers versammelt.",
+        "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
-            { "text": "Kai folgen", "next": "nj_1", "karma": 1 },
-            { "text": "Zane folgen", "next": "nj_2" },
-            { "text": "Cole folgen", "next": "nj_3" },
-            { "text": "Jay folgen", "next": "nj_4", "karma": -1 },
-            { "text": "Sensei Wu ansprechen", "next": "nj_5" }
+            { "text": "Mit Lloyd und Zane den digitalen Quellcode analysieren", "next": "c2_nj_1", "karma": 2 },
+            { "text": "Mit Kai und Nya die Straßen der Stadt sichern", "next": "c2_nj_2" },
+            { "text": "Mit Cole und Jay die Katakomben unter der Stadt untersuchen", "next": "c2_nj_3", "karma": 1 },
+            { "text": "Meister Wu im Kloster des Spinjitzu um Rat fragen", "next": "c2_nj_4", "karma": -1 }
         ]
     },
 
-    "nj_1": {
-        "text": "Kai: 'Das Feuer reagiert, als wuerde es gegen etwas kaempfen, das wir nicht sehen koennen.'",
+    "c2_nj_1": {
+        "text": "Zanes Augen flackern blau, während er sich in die infizierten Mainframes hackt. 'Der Overlord benutzt ein techno-organisches Virus! Es überschreibt die Logikschaltkreise der Stadt.' Lloyd zieht seine Klinge: 'Wir müssen ein Backup sichern, bevor alles gelöscht wird!' Das Terminal droht zu implodieren.",
+        "background": "./game_images/background_nj_lab.png",
+        "character": "./game_images/character_nj_zane.png",
         "choices": [
-            { "text": "Quelle untersuchen", "next": "nj_6" },
-            { "text": "Sofort angreifen", "next": "nj_7", "karma": -1 }
+            { "text": "Den Techno-Blade-Prototyp aufladen und mitnehmen", "next": "nj_techno_blade", "gain_item": "nj_techno_blade" },
+            { "text": "Das System manuell herunterfahren und die Daten riskieren", "next": "c2_nj_5", "karma": -2 }
         ]
     },
 
-    "nj_2": {
-        "text": "Zane analysiert die Umgebung. 'Unbekannte Energie beeinflusst elementare Systeme.'",
+    "nj_techno_blade": {
+        "text": "Du erhältst die Techno-Klinge. Sie leuchtet in grellem Techno-Grün und kann jedes digitale System hacken.",
+        "background": "./game_images/background_nj_lab.png",
+        "character": "./game_images/item_nj_techno_blade.png",
         "choices": [
-            { "text": "Daten sichern", "next": "nj_6", "gain_item": "ninja_data_core" },
-            { "text": "Weiter beobachten", "next": "nj_8" }
+            { "text": "Die Klinge am Hauptrechner nutzen", "next": "c2_nj_8" },
+            { "text": "Damit zu Kai auf die Straßen von New Ninjago City fliegen", "next": "c2_nj_10" }
         ]
     },
 
-    "nj_3": {
-        "text": "Cole spuert starke Erschuetterungen unter der Stadt. Etwas bewegt sich tief unter Ninjago City.",
+    "c2_nj_2": {
+        "text": "Kai blockiert mit seinen Feuerschwertern eine Brücke, während Nya versucht, die flüchtenden Bürger mit Wasserbarrieren zu lenken. Eine Armee aus bizarren, mutierten Nindroiden bricht durch die Absperrungen. Kai ruft: 'Sie reagieren nicht auf normales Feuer! Ihre Rüstung ist aus unzerstörbarem Tiefengestein!'",
+        "background": "./game_images/background_nj_city_streets.png",
+        "character": "./game_images/character_nj_kai.png",
         "choices": [
-            { "text": "Nachgehen", "next": "nj_9", "karma": 1 },
-            { "text": "Erst warnen", "next": "nj_8" }
+            { "text": "Einen Nindroiden-Kommandanten ausschalten und sein Abzeichen stehlen", "next": "nj_overlord_insignia", "gain_item": "nj_overlord_insignia" },
+            { "text": "Mit Spinjitzu die Brücke zum Einsturz bringen", "next": "c2_nj_6", "karma": -3 }
         ]
     },
 
-    "nj_4": {
-        "text": "Jay versucht die Energie zu stabilisieren, verschlimmert aber kurz die Spannung im System.",
+    "nj_overlord_insignia": {
+        "text": "Du erhältst das digitale Overlord-Abzeichen. Es pulsiert mit dunkler, violetter Digiverse-Energie.",
+        "background": "./game_images/background_nj_city_streets.png",
+        "character": "./game_images/item_nj_overlord_insignia.png",
         "choices": [
-            { "text": "Reparieren helfen", "next": "nj_10", "karma": 1 },
-            { "text": "Zurueckziehen", "next": "nj_7", "karma": -1 }
+            { "text": "Das Abzeichen nutzen um getarnte Nindroiden-Frequenzen zu orten", "next": "c2_nj_15" },
+            { "text": "Damit ins Borg-Industriegebäude eindringen", "next": "c2_nj_12" }
         ]
     },
 
-    "nj_5": {
-        "text": "Sensei Wu: 'Die Waffen reagieren nicht mehr auf uns… sie reagieren auf etwas, das sie ruft.'",
+    "c2_nj_3": {
+        "text": "Cole nutzt seine Erd-Elementarkräfte, um die stürzenden Deckenbalken im Untergrund aufzuhalten, während Jay nervös an den Kabeln herumfummelt. Plötzlich taucht Pythor aus den Schatten auf! Der Schlangen-General zischt hämisch: 'Das Ultraböse hat mir eine neue Armee versprochen, Ninja! Ihr kommt zu spät!'",
+        "background": "./game_images/background_nj_subway.png",
+        "character": "./game_images/character_nj_pythor.png",
         "choices": [
-            { "text": "Vertrauen", "next": "nj_11", "karma": 1 },
-            { "text": "Mehr wissen wollen", "next": "nj_7" }
+            { "text": "Gegen Pythor und seine Schlangen-Krieger kämpfen", "next": "c2_nj_7", "karma": 3 },
+            { "text": "Den magischen Flöten-Prototyp aus Wus Kiste nutzen", "next": "nj_sacred_flute", "gain_item": "nj_sacred_flute", "karma": -1 }
         ]
     },
 
-    "nj_6": {
-        "text": "Die Goldenen Waffen reagieren ploetzlich auf deine Naehe. Energie flackert kurz auf.",
+    "nj_sacred_flute": {
+        "text": "Du erhältst die Heilige Flöte. Ihre Töne können das Gehör von Schlangen-Kreaturen extrem manipulieren.",
+        "background": "./game_images/background_nj_subway.png",
+        "character": "./game_images/item_nj_sacred_flute.png",
         "choices": [
-            { "text": "Beruehren", "next": "nj_12", "gain_item": "golden_energy_fragment", "karma": 1 },
-            { "text": "Abbrechen", "next": "nj_8" }
+            { "text": "Die Flöte sofort spielen um Pythor zu vertreiben", "next": "c2_nj_8" },
+            { "text": "Die Flöte einpacken und Cole im Kampf helfen", "next": "c2_nj_22" }
         ]
     },
 
-    "nj_7": {
-        "text": "Eine dunkle Praesenz zieht kurz durch die Strassen. Garmadon erscheint und verschwindet wieder.",
+    "c2_nj_4": {
+        "text": "Meister Wu sitzt im Kloster und trinkt ruhig seinen Tee, während die goldenen Drachenstatuen um ihn herum lebendig werden. 'Der Overlord greift nicht nur die Technik an, sondern das Gleichgewicht von Ninjago. Ihr müsst den Goldenen Kern finden!' Plötzlich greifen Rote Visier-Drohnen das Kloster an.",
+        "background": "./game_images/background_nj_monastery.png",
+        "character": "./game_images/character_nj_wu.png",
         "choices": [
-            { "text": "Ihm folgen", "next": "nj_13", "karma": -1 },
-            { "text": "Situation sichern", "next": "nj_8" }
+            { "text": "Das Kloster mit Meister Wu verteidigen", "next": "c2_nj_11", "karma": -4 },
+            { "text": "Wus Rat folgen und sofort zurück nach New Ninjago City fliegen", "next": "c2_nj_12", "karma": 2 }
         ]
     },
 
-    "nj_8": {
-        "text": "Die Stadt wirkt instabil, als wuerden sich ihre Grundlagen verschieben.",
+    "c2_nj_5": {
+        "text": "Das manuelle Herunterfahren löst eine energetische Kettenreaktion aus. Cyrus Borgs Labor wird von lila Blitzen überflutet und die Cyber-Sicherheitssysteme wenden sich gegen euch. Lloyd wird von schweren Sicherheits-Barrieren eingekesselt.",
+        "background": "./game_images/background_nj_lab.png",
+        "character": "./game_images/character_nj_lloyd.png",
         "choices": [
-            { "text": "Weiter", "next": "nj_14" }
+            { "text": "Lloyd mit Kais Feuerkräften freibrennen", "next": "c2_nj_13", "karma": -4 },
+            { "text": "Zane die Systeme überbrücken lassen", "next": "c2_nj_14", "karma": 2 }
         ]
     },
 
-    "nj_9": {
-        "text": "Unter dem Kloster findest du eine alte versiegelte Kammer.",
+    "c2_nj_6": {
+        "text": "Die Brücke bricht krachend in sich zusammen, doch die Nindroiden nutzen ihre Jetpacks und fliegen direkt auf den Flugsegler zu. Jay schreit panisch: 'Das war ein schlechter Plan! Sie haben Flügel! Warum haben die Dinger immer Flügel?!'",
+        "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
-            { "text": "oeffnen", "next": "nj_15", "required_item": "ninja_data_core" },
-            { "text": "Sichern und melden", "next": "nj_8", "karma": 1 }
+            { "text": "Die Bordkanonen des Flugseglers aktivieren", "next": "c2_nj_17", "karma": 3 },
+            { "text": "In den dichten Rauch der Stadt abtauchen", "next": "c2_nj_15", "karma": -2 }
         ]
     },
 
-    "nj_10": {
-        "text": "Pixel stabilisiert kurz die Systeme der Stadt.",
+    "c2_nj_7": {
+        "text": "Cole und Jay kämpfen erbittert, doch Pythors Schlangen nutzen das techno-organische Gift, um die Ninja zu lähmen. Das lila Elixier droht, Coles Felskräfteradius zu infizieren. Ihr braucht ein starkes Gegenmittel oder ein Ablenkungsmanöver.",
+        "background": "./game_images/background_nj_subway.png",
+        "character": "./game_images/character_nj_jay.png",
         "choices": [
-            { "text": "Koordinieren", "next": "nj_16", "karma": 1 }
+            { "text": "Die Techno-Klinge in das U-Bahn-Schienennetz rammen", "next": "c2_nj_26", "required_item": "nj_techno_blade" },
+            { "text": "Mit Jays Blitzkräften einen gewaltigen Kurzschluss erzeugen", "next": "c2_nj_13", "karma": -3 }
         ]
     },
 
-    "nj_11": {
-        "text": "Wu ueberreicht dir eine alte Schriftrolle der ersten Spinjitzu-Meister.",
+    "c2_nj_8": {
+        "text": "Das Digiverse öffnet sich am Himmel! Eine gigantische, gold-violette Festung materialisiert sich über der Stadt. Der Overlord spricht mit hasserfüllter, digitaler Stimme: 'Ninja! Eure Waffen sind veraltet! Ich bin das neue Zeitalter!'",
+        "background": "./game_images/background_nj_sky.png",
+        "character": "./game_images/character_nj_overlord.png",
         "choices": [
-            { "text": "Annehmen", "next": "nj_17", "gain_item": "spinjitzu_scroll" }
+            { "text": "Die Festung mit der Techno-Klinge hacken", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
+            { "text": "Die Drachen-Mechs rufen und die Festung stürmen", "next": "c2_nj_19", "karma": -3 }
         ]
     },
 
-    "nj_12": {
-        "text": "Die Energie zeigt dir fragmentierte Visionen der Goldenen Waffen in Aktion.",
+    "c2_nj_11": {
+        "text": "Der Kampf im Kloster ist zerstörerisch. Die Visier-Drohnen brennen die heiligen Schriftrollen nieder. Wu wehrt sich mit seinem Stab, wird aber von der schieren Übermacht überwältigt. Er ruft: 'Vergiss mich! Rette Ninjago!'",
+        "background": "./game_images/background_nj_monastery.png",
         "choices": [
-            { "text": "Analysieren", "next": "nj_14" }
+            { "text": "Meister Wu im Stich lassen und den Goldenen Kern suchen", "next": "c2_nj_27", "karma": -4 },
+            { "text": "Die Heilige Flöte spielen, um die Resonanz der Drohnen zu stören", "next": "c2_nj_26", "required_item": "nj_sacred_flute" }
         ]
     },
 
-    "nj_13": {
-        "text": "Garmadon wirkt instabil, als kaempfe er gegen etwas in sich selbst.",
+    "c2_nj_12": {
+        "text": "Ihr erreicht den Borg-Tower im Zentrum der Stadt. Doch die Sicherheits-KIs haben alle Aufzüge blockiert. Aus den Wänden fahren rotierende Laserklingen heraus. Nya versucht verzweifelt, das System mit ihrem Mech zu blockieren.",
+        "background": "./game_images/background_nj_lab.png",
+        "character": "./game_images/character_nj_nya.png",
         "choices": [
-            { "text": "Ihm helfen", "next": "nj_18", "karma": 1 },
-            { "text": "Angreifen", "next": "nj_19", "karma": -2 }
+            { "text": "Das Overlord-Abzeichen an den Scanner halten", "next": "c2_nj_26", "required_item": "nj_overlord_insignia" },
+            { "text": "Den Tower mit roher Gewalt von außen hochklettern", "next": "c2_nj_24", "karma": -4 }
         ]
     },
 
-    "nj_14": {
-        "text": "Die Goldenen Waffen beginnen sich gegenseitig anzuziehen.",
+    "c2_nj_13": {
+        "text": "Kais Flammen schmelzen die Barrieren, lösen aber auch die automatische Sprinkleranlage aus, was Jays Blitzkräfte unkontrollierbar im Raum verteilt. Das ganze Labor gerät unter heftigen Strom und die Sensoren explodieren.",
+        "background": "./game_images/background_nj_lab.png",
         "choices": [
-            { "text": "Untersuchen", "next": "nj_20" }
+            { "text": "Als vereintes Team den Borg-Tower evakuieren", "next": "c2_nj_27", "karma": -3 },
+            { "text": "Trotz der Blitze bis zum Hauptprozessor vordringen", "next": "c2_nj_28", "karma": 4 }
         ]
     },
 
-    "nj_15": {
-        "text": "In der Kammer liegt ein Nexus-Siegelstein.",
+    "c2_nj_14": {
+        "text": "Zane kalibriert seine internen Systeme und erzeugt ein eisiges Schutzschild, das die schädliche Strahlung absorbiert. Cole nutzt die Sekunde, um den Energiekern der feindlichen Drohnen mit einem mächtigen Schlag zu pulverisieren.",
+        "background": "./game_images/background_nj_lab.png",
         "choices": [
-            { "text": "Aktivieren", "next": "nj_21", "karma": 1 },
-            { "text": "Versiegeln lassen", "next": "nj_14", "karma": 1 }
+            { "text": "Die Techno-Klinge im Kern verankern", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
+            { "text": "Den Kern direkt mit Elementarkräften zerstören", "next": "c2_nj_19", "karma": -4 }
         ]
     },
 
-    "nj_16": {
-        "text": "Pixel stabilisiert kurzzeitig die Energiefluesse.",
+    "c2_nj_15": {
+        "text": "Das Signal führt euch tief in ein verlassenes Industriegebiet am Hafen. Hier haben die Nindroiden ein Portal errichtet, das Energie direkt aus dem Digiverse saugt. Lloyd spürt die dunkle Präsenz: 'Der Overlord lädt sich hier auf!'",
+        "background": "./game_images/background_nj_city_streets.png",
+        "character": "./game_images/character_nj_lloyd.png",
         "choices": [
-            { "text": "Danke sagen", "next": "nj_14", "karma": 1 }
+            { "text": "Das Portal mit dem Overlord-Abzeichen überlasten", "next": "c2_nj_30", "required_item": "nj_overlord_insignia" },
+            { "text": "Das Portal mit Cole und Kai physisch attackieren", "next": "c2_nj_24", "karma": 2 }
         ]
     },
 
-    "nj_17": {
-        "text": "Die Schriftrolle warnt vor einer Vereinigung der Waffen.",
+    "c2_nj_17": {
+        "text": "Die Kanonen des Flugseglers feuern reines Licht ab! Die fliegenden Nindroiden werden reihenweise vom Himmel geholt. Doch die schiere Explosion beschädigt die Hauptsegel und das Schiff droht abzustürzen.",
+        "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
-            { "text": "Weiterlesen", "next": "nj_20" }
+            { "text": "Das Schiff auf dem Borg-Tower notlanden", "next": "c2_nj_25", "karma": 4 },
+            { "text": "Das Steuer loslassen und im freien Fall kämpfen", "next": "c2_nj_26", "required_item": "nj_techno_blade" }
         ]
     },
 
-    "nj_18": {
-        "text": "Garmadon hilft dir kurz gegen eine Schattenwelle.",
+    "c2_nj_19": {
+        "text": "Der Frontalangriff scheitert an der techno-organischen Panzerung der Festung. Die Mechs der Ninja frieren mitten in der Luft ein, als der Overlord den Saft abdreht. Ihr stürzt unaufhaltsam in die Tiefe der Stadt.",
+        "background": "./game_images/background_nj_sky.png",
         "choices": [
-            { "text": "Zusammenhalten", "next": "nj_22", "karma": 1 }
+            { "text": "Spinjitzu einsetzen um den Sturz abzufedern", "next": "c2_nj_27", "karma": -4 },
+            { "text": "Die Techno-Klinge werfen um das System im Fall zu hacken", "next": "c2_nj_30", "required_item": "nj_techno_blade" }
         ]
     },
 
-    "nj_19": {
-        "text": "Eine Schattenarmee von Morro erscheint ploetzlich.",
+    "c2_nj_22": {
+        "text": "Mit Coles gewaltiger Erdkraft baut ihr eine massive Steinmauer gegen Pythors Angriffe. Jay nutzt den Schutz, um die Kabel neu zu verlegen. Doch die Schlangen fangen an, die Mauer mit ihren Säurezähnen zu zersetzen.",
+        "background": "./game_images/background_nj_subway.png",
         "choices": [
-            { "text": "Kaempfen", "next": "nj_23" },
-            { "text": "Rueckzug organisieren", "next": "nj_22", "karma": -1 }
+            { "text": "Die Heilige Flöte spielen um ihre Sinne zu vernebeln", "next": "c2_nj_30", "required_item": "nj_sacred_flute" },
+            { "text": "Die Mauer einstürzen lassen und die Flucht ergreifen", "next": "c2_nj_25" }
         ]
     },
 
-    "nj_20": {
-        "text": "Die Goldenen Waffen destabilisieren den Himmel ueber Ninjago.",
+    "c2_nj_24": {
+        "text": "Der brute-force Angriff verursacht eine massive Explosion der Generatoren. Der Borg-Tower erzittert und New Ninjago City versinkt im kompletten Chaos. Die Nindroiden triumphieren, während die Ninja zurückgedrängt werden.",
+        "background": "./game_images/background_nj_city_streets.png",
         "choices": [
-            { "text": "Stabilisieren", "next": "nj_24", "required_item": "golden_energy_fragment", "karma": 1 },
-            { "text": "Beobachten", "next": "nj_23" }
+            { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    "nj_21": {
-        "text": "Der Nexus-Siegelstein verbindet die Kraefte der Ninja.",
+    "c2_nj_25": {
+        "text": "Ihr erreicht den Dachgipfel des Borg-Towers. Inmitten eines digitalen Gewitters schwebt der Overlord in seiner ultimativen Cyber-Rüstung. Lloyd aktiviert seine goldene Elementarenergie: 'Es endet hier, Overlord!'",
+        "background": "./game_images/background_nj_sky.png",
+        "character": "./game_images/character_nj_lloyd.png",
         "choices": [
-            { "text": "Aktivieren", "next": "nj_24", "karma": 1 },
-            { "text": "Sichern", "next": "nj_23" }
+            { "text": "Ihn mit der Techno-Klinge kurzschließen", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
+            { "text": "Ein kombiniertes Elementar-Spinjitzu starten", "next": "c2_nj_27", "karma": -2 }
         ]
     },
 
-    "nj_22": {
-        "text": "Die Ninja kaempfen gemeinsam gegen Morro.",
+    "c2_nj_26": {
+        "text": "Durch den cleveren Einsatz deines Gegenstands bricht die feindliche Energiebarriere zusammen. Das digitale Virus wird aus den Systemen gespült und der Overlord verliert den Zugriff auf die Abwehrtürme.",
+        "background": "./game_images/background_nj_lab.png",
         "choices": [
-            { "text": "Unterstuetzen", "next": "nj_25", "karma": 1 }
+            { "text": "Den Overlord im Zentrum konfrontieren", "next": "c2_nj_30" }
         ]
     },
 
-    "nj_23": {
-        "text": "Garmadon verliert kurz die Kontrolle ueber seine Form.",
+    "c2_nj_27": {
+        "text": "Das finale Gefecht hinterlässt schwere Schäden an der Infrastruktur der Stadt. Der Overlord wird temporär in das Digiverse zurückgedrängt, doch New Ninjago City liegt in Trümmern und die Energieversorgung ist dauerhaft instabil. Die Ninja blicken erschöpft auf das Trümmerfeld.",
+        "background": "./game_images/background_nj_city_streets.png",
         "choices": [
-            { "text": "Eingreifen", "next": "nj_25" }
+            { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    "nj_24": {
-        "text": "Ein Riss oeffnet sich ueber Ninjago City.",
+    "c2_nj_28": {
+        "text": "Kai und Nya bilden eine feurige Verteidigungslinie gegen die heranstürmenden Nindroiden, während Lloyd und Zane sich bis zum digitalen Hauptprozessor durchschlagen.",
+        "background": "./game_images/background_nj_lab.png",
         "choices": [
-            { "text": "Durchgehen", "next": "nj_26" }
+            { "text": "Den finalen Virus-Löschbefehl eingeben", "next": "c2_nj_25" }
         ]
     },
 
-    "nj_25": {
-        "text": "Wu: 'Wir muessen bereit sein fuer das, was kommt.'",
-        "choices": [
-            { "text": "Weiter", "next": "nj_26" }
-        ]
-    },
-
-    "nj_26": {
-        "text": "Die Goldenen Waffen reagieren gleichzeitig auf den Riss.",
-        "choices": [
-            { "text": "Beobachten", "next": "nj_27" }
-        ]
-    },
-
-    "nj_27": {
-        "text": "Pixel: 'Kapitel 3 Stabilitaet kritisch.'",
-        "choices": [
-            { "text": "Verstehen", "next": "nj_28", "karma": 1 },
-            { "text": "Abwarten", "next": "nj_28" }
-        ]
-    },
-
-    "nj_28": {
-        "text": "Ninjago beginnt zu kollabieren.",
-        "choices": [
-            { "text": "Weiter", "next": "nj_29" }
-        ]
-    },
-
-    "nj_29": {
-        "text": "Mehrere Ninja-Versionen erscheinen gleichzeitig.",
-        "choices": [
-            { "text": "Beobachten", "next": "nj_30" }
-        ]
-    },
-
-    "nj_30": {
-        "text": "Der Nexus-Riss oeffnet sich vollstaendig ueber Ninjago City.",
+    "c2_nj_30": {
+        "text": "Mit einem monumentalen Finale zerschmettern die Ninja – getragen von Lloyds goldener Kraft, Zanes unermüdlicher Logik und dem verheerenden Hack der Techno-Klinge – die Rüstung des Overlords. Das lila Leuchten erlischt im gesamten Netz und weicht reinem, hellem Licht. Die Stadt atmet auf, während die Nindroiden sich in harmlose Schaltkreise auflösen. Meister Wu tritt lächelnd zu den Ninja, streicht sich über den Bart und sagt stolz: 'Ihr habt eure Lektion gelernt, Ninja. Technologie ist mächtig, aber das stärkste Element ist und bleibt euer Zusammenhalt!' Die Ninja kreuzen ihre Klingen und rufen im Chor: 'NINJA-GO!'",
+        "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
@@ -4339,7 +4348,7 @@ let gameData = {
     "atla_30": {
         "text": "Der Nexus oeffnet einen uebergang. Die Welt bereitet sich auf das letzte Kapitel vor.",
         "choices": [
-            { "text": "Kapitel 5 starten", "next": "c5_start" }
+            { "text": "Kapitel 5 starten", "next": "end" }
         ]
     },
     "c4_pm_start": {
@@ -4586,7 +4595,7 @@ let gameData = {
     "pm_30": {
         "text": "Skipper blickt ueber den Hafen. 'Jungs... das war erst Runde eins.'",
         "choices": [
-            { "text": "Kapitel 5 starten", "next": "c5_start" }
+            { "text": "Kapitel 5 starten", "next": "end" }
         ]
     },
     "c4_rm_start": {
@@ -4833,7 +4842,7 @@ let gameData = {
     "rm_30": {
         "text": "Rick lehnt sich erschoepft gegen die Portal-Gun. 'Okay… das Universum existiert noch. Fuer heute reicht mir das.'",
         "choices": [
-            { "text": "Kapitel 5 starten", "next": "c5_start" }
+            { "text": "Kapitel 5 starten", "next": "end" }
         ]
     },
     "c4_dd_start": {
@@ -5136,7 +5145,35 @@ let gameData = {
     "dd_37": {
         "text": "Im Inneren der Maske erscheint ein unbekanntes Symbol. Darkwing spuert, dass St. Canard noch lange nicht sicher ist.",
         "choices": [
-            { "text": "Kapitel 5 starten", "next": "c5_start" }
+            { "text": "Kapitel 5 starten", "next": "end" }
+        ]
+    },
+    "ending_good": {
+        "text": "Phänomenal! Dein hohes Karma hat die Portale stabilisiert. Die Dimensionen harmonieren wieder miteinander und das Cartoon-Universum erstrahlt in sicherem, goldenem Glanz. Du bist ein wahrer Weltenwächter!",
+        "background": "./images/ending_good_bg.png",
+        "choices": [
+            { "text": "Spiel neustarten", "next": "execute_reset" }
+        ]
+    },
+    "ending_neutral": {
+        "text": "Gute Arbeit. Die Welten kollidieren nicht mehr, aber die Portale bleiben instabil. Es herrscht ein brüchiger Frieden im Cartoon-Universum, der ständige Wachsamkeit erfordert.",
+        "background": "./images/ending_neutral_bg.png",
+        "choices": [
+            { "text": "Spiel neustarten", "next": "execute_reset" }
+        ]
+    },
+    "ending_evil": {
+        "text": "Das pure Chaos! Deine skrupellosen Entscheidungen haben den Nexus korrumpiert. Die Bösewichte haben die Macht übernommen, Realitäten zerfallen und das Cartoon-Universum versinkt in ewiger Dunkelheit.",
+        "background": "./images/ending_evil_bg.png",
+        "choices": [
+            { "text": "Es noch einmal versuchen", "next": "execute_reset" }
+        ]
+    },
+    "ending_chaos": {
+        "text": "Weder gut noch böse – deine unentschlossenen Taten haben ein unberechenbares Dimensions-Chaos ausgelöst. Die Welten sind wild miteinander verschmolzen. Ein völlig neues, verrücktes Universum ist entstanden.",
+        "background": "./images/ending_chaos_bg.png",
+        "choices": [
+            { "text": "Anderen Pfad wählen", "next": "execute_reset" }
         ]
     }
 };

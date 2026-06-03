@@ -157,7 +157,7 @@ function handleChoice(nextScene, karma, gainItem, requiredItem) {
         gameData.player.inventory.push(gainItem);
     }
 
-    if (nextScene == "karma_check") {
+    if (nextScene == "end") {
         checkEnding();
         saveGame();
         return;
@@ -174,6 +174,10 @@ function handleChoice(nextScene, karma, gainItem, requiredItem) {
 
 function showScene(scene) {
     let sceneData = gameData[scene];
+    if (scene === "execute_reset") {
+        executeResetGame();
+        return;
+    }
     if (!sceneData) {
         return;
     }
@@ -199,7 +203,7 @@ function showScene(scene) {
 
         setTimeout(() => {
             if (sceneData.character.includes("item_")) {
-                gameCharacter.classList.add("anim-item-spezial"); 
+                gameCharacter.classList.add("anim-item-spezial");
             }
             else {
                 let randomAnimation = Math.random();
