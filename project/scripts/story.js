@@ -972,8 +972,6 @@ let gameData = {
         ]
     },
 
-    //ab hier weiter
-
     "c1_ppg_start": {
         "text": "Das Telefon des Buergermeisters schrillt ununterbrochen! In Townsville herrscht mal wieder Ausnahmezustand. Eine riesige, klebrige gruene Wolke zieht durch die Strassen und laesst die Bewohner seltsam hyperaktiv und aggressiv werden. Blossom, Bubbles und Buttercup erwarten dich bereits im Labor von Professor Utonium.",
         "background": "./game_images/background_ppg_lab.png",
@@ -1965,10 +1963,10 @@ let gameData = {
     },
 
     "c2_ben_start": {
-        "text": "Der Rust Bucket rollt mitten in der Nacht auf einen verlassenen Campingplatz im waldigen Nirgendwo. Plötzlich fängt die Omnitrix an Bens Handgelenk wild an, rot und gelb zu flackern, und stößt eine Schockwelle aus, die alle Lichter löscht. Opa Max blickt besorgt auf seine Klempner-Instrumente, während Gwen bereits ein magisches Buch aufschlägt.",
+        "text": "Der Rust Bucket rollt mitten in der Nacht auf einen verlassenen Campingplatz im waldigen Nirgendwo. Ploetzlich faengt die Omnitrix an Bens Handgelenk wild an, rot und gelb zu flackern, und stoesst eine Schockwelle aus, die alle Lichter loescht. Opa Max blickt besorgt auf seine Klempner-Instrumente, waehrend Gwen bereits ein magisches Buch aufschlaegt.",
         "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Mit Opa Max die Klempner-Signale prüfen", "next": "c2_ben_1", "karma": 2 },
+            { "text": "Mit Opa Max die Klempner-Signale pruefen", "next": "c2_ben_1", "karma": 2 },
             { "text": "Mit Gwen nach magischen Energiespuren suchen", "next": "c2_ben_2", "karma": 1 },
             { "text": "Die Omnitrix gewaltsam neustarten", "next": "c2_ben_3", "karma": -1 },
             { "text": "Die Umgebung als Kletteraffe (Wildmutt) auskundschaften", "next": "c2_ben_4", "karma": 3 }
@@ -1976,27 +1974,27 @@ let gameData = {
     },
 
     "c2_ben_1": {
-        "text": "Opa Max öffnet ein verstecktes Fach im Rust Bucket. 'Ben, die Sensoren empfangen eine Signatur, die Vilgax' Drohnen ähnelt, aber gekreuzt mit Dr. Animos Mutations-Wellen!' Ein seltsamer, kybernetischer Schlüssel fällt aus dem Klempner-Archiv.",
+        "text": "Opa Max oeffnet ein verstecktes Fach im Rust Bucket. 'Ben, die Sensoren empfangen eine Signatur, die Vilgax' Drohnen aehnelt, aber gekreuzt mit Dr. Animos Mutations-Wellen!' Ein seltsamer, kybernetischer Schluessel faellt aus dem Klempner-Archiv.",
         "background": "./game_images/background_ben_rustbucket.png",
         "character": "./game_images/character_ben_max.png",
         "choices": [
-            { "text": "Den Klempner-Schlüssel einstecken", "next": "ben_omnitrix_key", "gain_item": "ben_omnitrix_key" },
-            { "text": "Den Schlüssel liegen lassen und die Stadt warnen", "next": "c2_ben_5", "karma": -2 }
+            { "text": "Den Klempner-Schluessel einstecken", "next": "ben_omnitrix_key", "gain_item": "ben_omnitrix_key" },
+            { "text": "Den Schluessel liegen lassen und die Stadt warnen", "next": "c2_ben_5", "karma": -2 }
         ]
     },
 
     "ben_omnitrix_key": {
-        "text": "Du erhältst den Klempner-Spezialschlüssel. Er kann außerirdische Systeme überschreiben.",
+        "text": "Du erhaeltst den Klempner-Spezialschluessel. Er kann ausserirdische Systeme ueberschreiben.",
         "background": "./game_images/background_ben_rustbucket.png",
         "character": "./game_images/item_ben_omnitrix_key.png",
         "choices": [
-            { "text": "Den Schlüssel an der Omnitrix testen", "next": "c2_ben_8" },
+            { "text": "Den Schluessel an der Omnitrix testen", "next": "c2_ben_8" },
             { "text": "Opa Max in den Wald folgen", "next": "c2_ben_10" }
         ]
     },
 
     "c2_ben_2": {
-        "text": "Gwen führt dich zu einer Lichtung, auf der die Pflanzen lila leuchten. 'Das ist Hexerei... oder Kevin 11 absorbiert mal wieder Energie!' Plötzlich bricht ein mutierter Riesen-Hirsch mit messerscharfen Stoßzähnen aus dem Unterholz.",
+        "text": "Gwen fuehrt dich zu einer Lichtung, auf der die Pflanzen lila leuchten. 'Das ist Hexerei... oder Kevin 11 absorbiert mal wieder Energie!' Ploetzlich bricht ein mutierter Riesen-Hirsch mit messerscharfen Stosszaehnen aus dem Unterholz.",
         "background": "./game_images/background_ben_woods.png",
         "character": "./game_images/character_ben_gwen.png",
         "choices": [
@@ -2006,16 +2004,16 @@ let gameData = {
     },
 
     "c2_ben_3": {
-        "text": "Du schlägst frustriert auf die Omnitrix. Das Display dreht komplett durch und verwandelt dich in eine bizarre, instabile Mischung aus 'Maturi' (Grey Matter) und 'Stinker' (Stinkfly). Du verlierst deine Flugkraft, hast aber ein kleines, klebriges Mutations-Ei gerettet, das vom Himmel fiel.",
+        "text": "Du schlaegst frustriert auf die Omnitrix. Das Display dreht komplett durch und verwandelt dich in eine bizarre, instabile Mischung aus 'Maturi' (Grey Matter) und 'Stinker' (Stinkfly). Du verlierst deine Flugkraft, hast aber ein kleines, klebriges Mutations-Ei gerettet, das vom Himmel fiel.",
         "background": "./game_images/background_ben_woods.png",
         "choices": [
             { "text": "Das Mutations-Ei untersuchen und einpacken", "next": "ben_mutation_egg", "gain_item": "ben_mutation_egg" },
-            { "text": "Das Ei zerstören und Deckung suchen", "next": "c2_ben_9", "karma": -2 }
+            { "text": "Das Ei zerstoeren und Deckung suchen", "next": "c2_ben_9", "karma": -2 }
         ]
     },
 
     "ben_mutation_egg": {
-        "text": "Du erhältst ein schleimiges DNA-Mutations-Ei. Es pulsiert im Takt außerirdischer Frequenzen.",
+        "text": "Du erhaeltst ein schleimiges DNA-Mutations-Ei. Es pulsiert im Takt ausserirdischer Frequenzen.",
         "background": "./game_images/background_ben_woods.png",
         "character": "./game_images/item_ben_mutation_egg.png",
         "choices": [
@@ -2035,7 +2033,7 @@ let gameData = {
     },
 
     "c2_ben_5": {
-        "text": "Während ihr versucht, den Rust Bucket zu starten, schlagen drei von Vilgax' biomechanischen Drohnen durch das Dach! Sie feuern lähmende Plasmastrahlen ab. Ben wird zu Boden geworfen.",
+        "text": "Waehrend ihr versucht, den Rust Bucket zu starten, schlagen drei von Vilgax' biomechanischen Drohnen durch das Dach! Sie feuern laehmende Plasmastrahlen ab. Ben wird zu Boden geworfen.",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Als 'Feuerteufel' (Heatblast) die Drohnen schmelzen", "next": "c2_ben_13", "karma": -4 },
@@ -2044,25 +2042,25 @@ let gameData = {
     },
 
     "c2_ben_6": {
-        "text": "Du rammst den Hirsch, doch die Wucht der Mutation lässt dich abprallen. Du krachst in den Rust Bucket und beschädigst die Sensoren. Opa Max schaut finster drein.",
+        "text": "Du rammst den Hirsch, doch die Wucht der Mutation laesst dich abprallen. Du krachst in den Rust Bucket und beschaedigst die Sensoren. Opa Max schaut finster drein.",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Trotzdem das Klempner-Gegenmittel im Wald suchen", "next": "c2_ben_15" },
-            { "text": "Dich für den Fehler entschuldigen und Gwens Rat folgen", "next": "c2_ben_7", "karma": 2 }
+            { "text": "Dich fuer den Fehler entschuldigen und Gwens Rat folgen", "next": "c2_ben_7", "karma": 2 }
         ]
     },
 
     "c2_ben_7": {
-        "text": "Gwen schleudert eine Kette aus rosa Mana-Energie, die das Tier fixiert. Der Hirsch schüttelt den Kopf, bricht aus der Gedankenkontrolle aus und hinterlässt beim Weglaufen ein glühendes Vilgax-Abzeichen.",
+        "text": "Gwen schleudert eine Kette aus rosa Mana-Energie, die das Tier fixiert. Der Hirsch schuettelt den Kopf, bricht aus der Gedankenkontrolle aus und hinterlaesst beim Weglaufen ein gluehendes Vilgax-Abzeichen.",
         "background": "./game_images/background_ben_woods.png",
         "choices": [
             { "text": "Das Vilgax-Abzeichen aufheben", "next": "ben_vilgax_crest", "gain_item": "ben_vilgax_crest" },
-            { "text": "Das Abzeichen ignorieren und Gwens Magie weiter stärken", "next": "c2_ben_10", "karma": 3 }
+            { "text": "Das Abzeichen ignorieren und Gwens Magie weiter staerken", "next": "c2_ben_10", "karma": 3 }
         ]
     },
 
     "ben_vilgax_crest": {
-        "text": "Du erhältst ein schweres, außerirdisches Vilgax-Abzeichen. Es strahlt pure Bedrohung aus.",
+        "text": "Du erhaeltst ein schweres, ausserirdisches Vilgax-Abzeichen. Es strahlt pure Bedrohung aus.",
         "background": "./game_images/background_ben_woods.png",
         "character": "./game_images/item_ben_vilgax_crest.png",
         "choices": [
@@ -2072,30 +2070,30 @@ let gameData = {
     },
 
     "c2_ben_8": {
-        "text": "Durch den Scan oder den Klempner-Schlüssel kalibriert sich die Omnitrix neu. Das Display leuchtet wieder im hellen, sicheren Grün! Du hast vollen Zugriff auf 'Komet' (XLR8) und 'Vierarme' (Four Arms).",
+        "text": "Durch den Scan oder den Klempner-Schluessel kalibriert sich die Omnitrix neu. Das Display leuchtet wieder im hellen, sicheren Gruen! Du hast vollen Zugriff auf 'Komet' (XLR8) und 'Vierarme' (Four Arms).",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
-            { "text": "Als XLR8 blitzschnell die Mine stürmen", "next": "c2_ben_25", "karma": 4 },
+            { "text": "Als XLR8 blitzschnell die Mine stuermen", "next": "c2_ben_25", "karma": 4 },
             { "text": "Als Four Arms auf Vilgax' Drohnen warten", "next": "c2_ben_16", "karma": 2 }
         ]
     },
 
     "c2_ben_9": {
-        "text": "Die Omnitrix entlädt sich unkontrolliert und hüllt den ganzen Campingplatz in dichten, stinkenden Alien-Schleim. Kevin 11 tritt aus den Schatten und grinst dreckig: 'Danke für die Energie, Tennyson!'",
+        "text": "Die Omnitrix entlaedt sich unkontrolliert und huellt den ganzen Campingplatz in dichten, stinkenden Alien-Schleim. Kevin 11 tritt aus den Schatten und grinst dreckig: 'Danke fuer die Energie, Tennyson!'",
         "background": "./game_images/background_ben_woods.png",
         "character": "./game_images/character_ben_kevin.png",
         "choices": [
-            { "text": "Gegen den mutierten Kevin kämpfen", "next": "c2_ben_17", "karma": -5 },
-            { "text": "Ihn mit einer Lüge in die Mine locken", "next": "c2_ben_13", "karma": 3 }
+            { "text": "Gegen den mutierten Kevin kaempfen", "next": "c2_ben_17", "karma": -5 },
+            { "text": "Ihn mit einer Luege in die Mine locken", "next": "c2_ben_13", "karma": 3 }
         ]
     },
 
     "c2_ben_10": {
-        "text": "Der Himmel färbt sich pechschwarz, als ein gigantisches Vilgax-Schlachtschiff über den Baumkronen auftaucht. Ein Traktorstrahl beginnt, den Rust Bucket nach oben zu saugen. Die Zeit drängt!",
+        "text": "Der Himmel faerbt sich pechschwarz, als ein gigantisches Vilgax-Schlachtschiff ueber den Baumkronen auftaucht. Ein Traktorstrahl beginnt, den Rust Bucket nach oben zu saugen. Die Zeit draengt!",
         "background": "./game_images/background_ben_sky.png",
         "choices": [
             { "text": "Sich absichtlich hochsaugen lassen, um das Schiff zu sabotieren", "next": "c2_ben_18", "karma": 5 },
-            { "text": "Den Traktorstrahl mit geballter Alien-Kraft beschießen", "next": "c2_ben_19", "karma": -2 }
+            { "text": "Den Traktorstrahl mit geballter Alien-Kraft beschiessen", "next": "c2_ben_19", "karma": -2 }
         ]
     },
 
@@ -2103,22 +2101,22 @@ let gameData = {
         "text": "Dr. Animo feuert seine Mutations-Strahlenkanone ab. Wildmutt wird getroffen und mutiert zu einer noch wilderen, unkontrollierbaren Bestie, die Opa Max angreift! Du musst die Transformation sofort abbrechen.",
         "background": "./game_images/background_ben_mine.png",
         "choices": [
-            { "text": "Die Omnitrix mit dem Klempner-Schlüssel überlasten", "next": "c2_ben_20", "required_item": "ben_omnitrix_key" },
+            { "text": "Die Omnitrix mit dem Klempner-Schluessel ueberlasten", "next": "c2_ben_20", "required_item": "ben_omnitrix_key" },
             { "text": "Gwen um einen magischen Beruhigungszauber anflehen", "next": "c2_ben_14", "karma": -1 }
         ]
     },
 
     "c2_ben_12": {
-        "text": "Als Grey Matter oder durch clevere Sabotage liest du Dr. Animos Pläne. Er arbeitet im Auftrag von Vilgax! Vilgax will die mutierte Tier-DNA nutzen, um seine Drohnen-Armee unbesiegbar zu machen.",
+        "text": "Als Grey Matter oder durch clevere Sabotage liest du Dr. Animos Plaene. Er arbeitet im Auftrag von Vilgax! Vilgax will die mutierte Tier-DNA nutzen, um seine Drohnen-Armee unbesiegbar zu machen.",
         "background": "./game_images/background_ben_mine.png",
         "choices": [
             { "text": "Die Daten auf ein Klempner-Pad laden", "next": "ben_plumber_pad", "gain_item": "ben_plumber_pad" },
-            { "text": "Die Konsole sofort zertrümmern", "next": "c2_ben_16", "karma": -2 }
+            { "text": "Die Konsole sofort zertruemmern", "next": "c2_ben_16", "karma": -2 }
         ]
     },
 
     "ben_plumber_pad": {
-        "text": "Du erhältst ein Klempner-Datenpad mit Vilgax' Satelliten-Frequenzen.",
+        "text": "Du erhaeltst ein Klempner-Datenpad mit Vilgax' Satelliten-Frequenzen.",
         "background": "./game_images/background_ben_mine.png",
         "character": "./game_images/item_ben_plumber_pad.png",
         "choices": [
@@ -2131,26 +2129,26 @@ let gameData = {
         "text": "Heatblasts Feuer setzt den halben Wald in Brand! Die Drohnen fliehen, aber der Campingplatz brennt lichterloh. Die Tiere schreien in Panik und das Chaos ist perfekt.",
         "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Das Feuer als 'Wasserbüffel' (Upgrade) ersticken", "next": "c2_ben_22", "karma": 4 },
+            { "text": "Das Feuer als 'Wasserbueffel' (Upgrade) ersticken", "next": "c2_ben_22", "karma": 4 },
             { "text": "Das Feuer ignorieren und Animo in die Mine folgen", "next": "c2_ben_15", "karma": -4 }
         ]
     },
 
     "c2_ben_14": {
-        "text": "Gwen schafft es, eine magische Schutzbarriere aufzubauen, während du die Drohnen ablenkst. Doch die Barriere splittert langsam unter dem schweren Beschuss. Ihr braucht Verstärkung.",
+        "text": "Gwen schafft es, eine magische Schutzbarriere aufzubauen, waehrend du die Drohnen ablenkst. Doch die Barriere splittert langsam unter dem schweren Beschuss. Ihr braucht Verstaerkung.",
         "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Das DNA-Ei auf die Drohnen werfen, um sie kurzzuschließen", "next": "c2_ben_26", "required_item": "ben_mutation_egg" },
+            { "text": "Das DNA-Ei auf die Drohnen werfen, um sie kurzzuschliessen", "next": "c2_ben_26", "required_item": "ben_mutation_egg" },
             { "text": "Mit roher Gewalt als Four Arms durchbrechen", "next": "c2_ben_24", "karma": -3 }
         ]
     },
 
     "c2_ben_15": {
-        "text": "Ihr erreicht die Mine, doch der Eingang ist mit einer schweren Klempner-Sicherheitstür verriegelt, die Dr. Animo modifiziert hat. Ein falscher Code löst Giftgas aus.",
+        "text": "Ihr erreicht die Mine, doch der Eingang ist mit einer schweren Klempner-Sicherheitstuer verriegelt, die Dr. Animo modifiziert hat. Ein falscher Code loest Giftgas aus.",
         "background": "./game_images/background_ben_mine.png",
         "choices": [
-            { "text": "Die Tür mit dem Klempner-Schlüssel hacken", "next": "c2_ben_26", "required_item": "ben_omnitrix_key" },
-            { "text": "Die Tür als Four Arms gewaltsam aus den Angeln reißen", "next": "c2_ben_24", "karma": -3 }
+            { "text": "Die Tuer mit dem Klempner-Schluessel hacken", "next": "c2_ben_26", "required_item": "ben_omnitrix_key" },
+            { "text": "Die Tuer als Four Arms gewaltsam aus den Angeln reissen", "next": "c2_ben_24", "karma": -3 }
         ]
     },
 
@@ -2158,18 +2156,18 @@ let gameData = {
         "text": "Vilgax' Elite-Drohnen landen und riegeln das gesamte Gebiet ab. Sie scannen die Omnitrix und bereiten den finalen Extraktions-Laser vor. Ben steht allein gegen eine Armee.",
         "background": "./game_images/background_ben_woods.png",
         "choices": [
-            { "text": "Das Vilgax-Abzeichen nutzen, um die Drohnen zu täuschen", "next": "c2_ben_30", "required_item": "ben_vilgax_crest" },
-            { "text": "Sich schreiend in den Kampf stürzen", "next": "c2_ben_27", "karma": -5 }
+            { "text": "Das Vilgax-Abzeichen nutzen, um die Drohnen zu taeuschen", "next": "c2_ben_30", "required_item": "ben_vilgax_crest" },
+            { "text": "Sich schreiend in den Kampf stuerzen", "next": "c2_ben_27", "karma": -5 }
         ]
     },
 
     "c2_ben_17": {
-        "text": "Kevin 11 hat Teile von Diamondheads und Heatblasts Kräften absorbiert und schleudert brennende Kristalle nach dir! Der Rust Bucket wird schwer getroffen und explodiert fast.",
+        "text": "Kevin 11 hat Teile von Diamondheads und Heatblasts Kraeften absorbiert und schleudert brennende Kristalle nach dir! Der Rust Bucket wird schwer getroffen und explodiert fast.",
         "background": "./game_images/background_ben_woods.png",
         "character": "./game_images/character_ben_kevin.png",
         "choices": [
-            { "text": "Ihn mit Gwens Zauberbüchern ablenken", "next": "c2_ben_28", "karma": 2 },
-            { "text": "Wütend zurückschlagen", "next": "c2_ben_24", "karma": -4 }
+            { "text": "Ihn mit Gwens Zauberbuechern ablenken", "next": "c2_ben_28", "karma": 2 },
+            { "text": "Wuetend zurueckschlagen", "next": "c2_ben_24", "karma": -4 }
         ]
     },
 
@@ -2177,13 +2175,13 @@ let gameData = {
         "text": "Im Inneren des Vilgax-Schiffes werdet ihr sofort von Roboter-Wachen umstellt. Doch Bens Grinsen bleibt: 'Ihr habt mich genau da, wo ich euch haben wollte!'",
         "background": "./game_images/background_ben_ship.png",
         "choices": [
-            { "text": "Die Schiffskonsole mit dem Klempner-Schlüssel infizieren", "next": "c2_ben_30", "required_item": "ben_omnitrix_key" },
+            { "text": "Die Schiffskonsole mit dem Klempner-Schluessel infizieren", "next": "c2_ben_30", "required_item": "ben_omnitrix_key" },
             { "text": "Als 'Upgrade' (Upgrade) mit dem Schiff verschmelzen", "next": "c2_ben_26", "karma": 5 }
         ]
     },
 
     "c2_ben_19": {
-        "text": "Der Beschuss des Traktorstrahls löst eine gravitative Singularität aus! Ganze Bäume, Felsen und der Rust Bucket wirbeln unkontrolliert durch die Luft. Die Mine stürzt ein.",
+        "text": "Der Beschuss des Traktorstrahls loest eine gravitative Singularitaet aus! Ganze Baeume, Felsen und der Rust Bucket wirbeln unkontrolliert durch die Luft. Die Mine stuerzt ein.",
         "background": "./game_images/background_ben_sky.png",
         "choices": [
             { "text": "Opa Max und Gwen mit XLR8 retten", "next": "c2_ben_28", "karma": 5 },
@@ -2192,7 +2190,7 @@ let gameData = {
     },
 
     "c2_ben_20": {
-        "text": "Der Klempner-Schlüssel erzwingt einen harten Reset der Omnitrix. Du wirst schmerzhaft zurückverwandelt, aber die Mutations-Welle bricht ab. Animo flucht lautstark in seiner Steuerkanzel.",
+        "text": "Der Klempner-Schluessel erzwingt einen harten Reset der Omnitrix. Du wirst schmerzhaft zurueckverwandelt, aber die Mutations-Welle bricht ab. Animo flucht lautstark in seiner Steuerkanzel.",
         "background": "./game_images/background_ben_mine.png",
         "character": "./game_images/character_ben_animo.png",
         "choices": [
@@ -2202,53 +2200,53 @@ let gameData = {
     },
 
     "c2_ben_22": {
-        "text": "Als Upgrade verschmilzt du mit dem Löschsystem des Rust Buckets und erzeugst einen gigantischen, chemischen Regenschauer, der das Feuer löscht und die Drohnen kurzschließt.",
+        "text": "Als Upgrade verschmilzt du mit dem Loeschsystem des Rust Buckets und erzeugst einen gigantischen, chemischen Regenschauer, der das Feuer loescht und die Drohnen kurzschliesst.",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Direkt zum Mutterschiff fliegen", "next": "c2_ben_23" },
-            { "text": "Zu Fuß den Wald sichern", "next": "c2_ben_24", "karma": -1 }
+            { "text": "Zu Fuss den Wald sichern", "next": "c2_ben_24", "karma": -1 }
         ]
     },
 
     "c2_ben_23": {
-        "text": "Du erreichst die Stratosphäre, doch Vilgax' Hauptlaser ist bereits zu 99% aufgeladen. Ein einziger Schuss wird das Klempner-Hauptquartier vernichten. Du musst sofort handeln.",
+        "text": "Du erreichst die Stratosphaere, doch Vilgax' Hauptlaser ist bereits zu 99% aufgeladen. Ein einziger Schuss wird das Klempner-Hauptquartier vernichten. Du musst sofort handeln.",
         "background": "./game_images/background_ben_sky.png",
         "choices": [
             { "text": "Den Code des Klempner-Pads einspeisen", "next": "c2_ben_30", "required_item": "ben_plumber_pad" },
-            { "text": "Als 'Stahlschädel' (Diamondhead) den Laser physisch blockieren", "next": "c2_ben_27", "karma": -2 }
+            { "text": "Als 'Stahlschaedel' (Diamondhead) den Laser physisch blockieren", "next": "c2_ben_27", "karma": -2 }
         ]
     },
 
     "c2_ben_24": {
-        "text": "Rohe Gewalt führt zu einer gewaltigen Explosion der DNA-Tanks! Dr. Animos Mine stürzt komplett ein. Die Schurken entkommen im Chaos, und die Gegend gleicht einem Schlachtfeld.",
+        "text": "Rohe Gewalt fuehrt zu einer gewaltigen Explosion der DNA-Tanks! Dr. Animos Mine stuerzt komplett ein. Die Schurken entkommen im Chaos, und die Gegend gleicht einem Schlachtfeld.",
         "background": "./game_images/background_ben_mine.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" },
-            { "text": "Den Rust Bucket mühsam reparieren", "next": "c3_start", "karma": 2 }
+            { "text": "Den Rust Bucket muehsam reparieren", "next": "c3_start", "karma": 2 }
         ]
     },
 
     "c2_ben_25": {
-        "text": "Als XLR8 bist du so schnell, dass Dr. Animo dich nicht einmal kommen sieht! Du reißt die Hauptplatine aus seiner Maschine, bevor er den Hebel umlegen kann. Er jammert bitterlich.",
+        "text": "Als XLR8 bist du so schnell, dass Dr. Animo dich nicht einmal kommen sieht! Du reisst die Hauptplatine aus seiner Maschine, bevor er den Hebel umlegen kann. Er jammert bitterlich.",
         "background": "./game_images/background_ben_mine.png",
         "character": "./game_images/character_ben_animo.png",
         "choices": [
-            { "text": "Ihn den Klempnern übergeben", "next": "c2_ben_30", "karma": 4 },
-            { "text": "Seine restlichen Waffen plündern", "next": "c2_ben_27", "karma": -2 }
+            { "text": "Ihn den Klempnern uebergeben", "next": "c2_ben_30", "karma": 4 },
+            { "text": "Seine restlichen Waffen pluendern", "next": "c2_ben_27", "karma": -2 }
         ]
     },
 
     "c2_ben_26": {
-        "text": "Dank perfekter Vorbereitung und den richtigen Items neutralisiert ihr Animos Apparatur komplett. Das außerirdische Signal bricht ab, und das Vilgax-Schiff verliert die Orientierung.",
+        "text": "Dank perfekter Vorbereitung und den richtigen Items neutralisiert ihr Animos Apparatur komplett. Das ausserirdische Signal bricht ab, und das Vilgax-Schiff verliert die Orientierung.",
         "background": "./game_images/background_ben_mine.png",
         "choices": [
-            { "text": "Den finalen Schlag gegen Vilgax' Drohnen führen", "next": "c2_ben_30" },
-            { "text": "Sich zurückziehen und den Sieg feiern", "next": "c2_ben_28", "karma": -1 }
+            { "text": "Den finalen Schlag gegen Vilgax' Drohnen fuehren", "next": "c2_ben_30" },
+            { "text": "Sich zurueckziehen und den Sieg feiern", "next": "c2_ben_28", "karma": -1 }
         ]
     },
 
     "c2_ben_27": {
-        "text": "Das Schlachtschiff explodiert in einer gewaltigen Nova am Nachthimmel. Vilgax entkommt in einer Rettungskapsel, während der Rust Bucket schwer beschädigt auf der Erde zurückbleibt. Ben reibt sich den Nacken.",
+        "text": "Das Schlachtschiff explodiert in einer gewaltigen Nova am Nachthimmel. Vilgax entkommt in einer Rettungskapsel, waehrend der Rust Bucket schwer beschaedigt auf der Erde zurueckbleibt. Ben reibt sich den Nacken.",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -2256,7 +2254,7 @@ let gameData = {
     },
 
     "c2_ben_28": {
-        "text": "Gwen nutzt ihre gesamte verbliebene Mana-Energie, um ein Schutzschild um den Rust Bucket zu weben, während Opa Max die Triebwerke neu startet. Ihr entkommt den herabstürzenden Trümmern haarscharf.",
+        "text": "Gwen nutzt ihre gesamte verbliebene Mana-Energie, um ein Schutzschild um den Rust Bucket zu weben, waehrend Opa Max die Triebwerke neu startet. Ihr entkommt den herabstuerzenden Truemmern haarscharf.",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Vilgax am Boden stellen", "next": "c2_ben_29" },
@@ -2265,17 +2263,17 @@ let gameData = {
     },
 
     "c2_ben_29": {
-        "text": "Vilgax' riesige, gepanzerte Gestalt tritt aus dem Rauch des abgestürzten Schiffs. 'Tennyson... Du bist eine Plage! Gib mir die Omnitrix, oder ich reiße diese Welt in Stücke!' Er zieht seine riesige Laserklinge.",
+        "text": "Vilgax' riesige, gepanzerte Gestalt tritt aus dem Rauch des abgestuerzten Schiffs. 'Tennyson... Du bist eine Plage! Gib mir die Omnitrix, oder ich reisse diese Welt in Stuecke!' Er zieht seine riesige Laserklinge.",
         "background": "./game_images/background_ben_woods.png",
         "character": "./game_images/character_ben_vilgax.png",
         "choices": [
-            { "text": "Ihn mit vereinten Kräften attackieren", "next": "c2_ben_30", "karma": 5 },
-            { "text": "Die Omnitrix auf Selbstzerstörung drohen lassen", "next": "c2_ben_30", "karma": 3 }
+            { "text": "Ihn mit vereinten Kraeften attackieren", "next": "c2_ben_30", "karma": 5 },
+            { "text": "Die Omnitrix auf Selbstzerstoerung drohen lassen", "next": "c2_ben_30", "karma": 3 }
         ]
     },
 
     "c2_ben_30": {
-        "text": "Mit einer meisterhaften Kombination aus Teamwork und Bens stärksten Aliens zerschmettert ihr Vilgax' kybernetische Rüstung und jagt Dr. Animo in die Flucht. Die Omnitrix leuchtet in einem beruhigenden, konstanten Grün. Opa Max klopft Ben auf die Schulter: 'Gute Arbeit, Junge. Du wirst ein echter Held.' Ben grinst: 'Klar, Opa! Das war doch ein Kinderspiel!'",
+        "text": "Mit einer meisterhaften Kombination aus Teamwork und Bens staerksten Aliens zerschmettert ihr Vilgax' kybernetische Ruestung und jagt Dr. Animo in die Flucht. Die Omnitrix leuchtet in einem beruhigenden, konstanten Gruen. Opa Max klopft Ben auf die Schulter: 'Gute Arbeit, Junge. Du wirst ein echter Held.' Ben grinst: 'Klar, Opa! Das war doch ein Kinderspiel!'",
         "background": "./game_images/background_ben_rustbucket.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -2283,28 +2281,28 @@ let gameData = {
     },
 
     "c2_sj_start": {
-        "text": "Ein unheimlicher roter Nebel legt sich über das dystopische Cyber-Ödland. Jack steht medtierend auf einem Hügel, das magische Schwert auf den Knien. Plötzlich zerreißt das mechanische Kreischen von Akus Beetle-Drones die Stille. Ein Hologramm von Akus brennenden Augen erscheint am Himmel und lacht hämisch. Du musst Jack helfen, die Bedrohung einzuschätzen.",
+        "text": "Ein unheimlicher roter Nebel legt sich ueber das dystopische Cyber-oedland. Jack steht medtierend auf einem Huegel, das magische Schwert auf den Knien. Ploetzlich zerreisst das mechanische Kreischen von Akus Beetle-Drones die Stille. Ein Hologramm von Akus brennenden Augen erscheint am Himmel und lacht haemisch. Du musst Jack helfen, die Bedrohung einzuschaetzen.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Mit Jacks Schwert die Dronen-Welle frontal abwehren", "next": "c2_sj_1", "karma": 1 },
-            { "text": "In die Ruinen der kybernetischen Stadt flüchten", "next": "c2_sj_2" },
+            { "text": "In die Ruinen der kybernetischen Stadt fluechten", "next": "c2_sj_2" },
             { "text": "Nach einem verborgenen Zeitportal in den Bergen suchen", "next": "c2_sj_3", "karma": 2 },
-            { "text": "Die Geister der Ahnen um Führung anflehen", "next": "c2_sj_4", "karma": 3 }
+            { "text": "Die Geister der Ahnen um Fuehrung anflehen", "next": "c2_sj_4", "karma": 3 }
         ]
     },
 
     "c2_sj_1": {
-        "text": "Jack wirbelt wie ein Tornado durch die Reihen der Käfer-Drohnen. Metall splittert, doch die Masse ist erdrückend. Eine beschädigte Anführer-Drohne stürzt direkt vor dir ab und ihr Kern legt ein seltsames Steuerungsmodul frei.",
+        "text": "Jack wirbelt wie ein Tornado durch die Reihen der Kaefer-Drohnen. Metall splittert, doch die Masse ist erdrueckend. Eine beschaedigte Anfuehrer-Drohne stuerzt direkt vor dir ab und ihr Kern legt ein seltsames Steuerungsmodul frei.",
         "background": "./game_images/background_sj_wasteland.png",
         "character": "./game_images/character_sj_jack.png",
         "choices": [
             { "text": "Das Drohnen-Steuerungsmodul bergen", "next": "sj_drone_core", "gain_item": "sj_drone_core" },
-            { "text": "Den Kern zerstören und Jack den Rücken freihalten", "next": "c2_sj_5", "karma": 2 }
+            { "text": "Den Kern zerstoeren und Jack den Ruecken freihalten", "next": "c2_sj_5", "karma": 2 }
         ]
     },
 
     "sj_drone_core": {
-        "text": "Du erhältst den Drohnen-Steuerungsmodul. Er funkt noch immer auf Akus privaten Frequenzen.",
+        "text": "Du erhaeltst den Drohnen-Steuerungsmodul. Er funkt noch immer auf Akus privaten Frequenzen.",
         "background": "./game_images/background_sj_wasteland.png",
         "character": "./game_images/item_sj_drone_core.png",
         "choices": [
@@ -2314,7 +2312,7 @@ let gameData = {
     },
 
     "c2_sj_2": {
-        "text": "In den neonbeleuchteten, dreckigen Gassen der Cyber-Stadt trefft ihr auf den Schotten! Er schwingt sein magisches Claymore-Schwert und lacht: 'Jack, mein Junge! Schön dich zu sehen! Ich dachte schon, Aku hätte dich zu einem Toaster verarbeitet!' Doch hinter ihm taucht Demongo, der Seelensammler, auf.",
+        "text": "In den neonbeleuchteten, dreckigen Gassen der Cyber-Stadt trefft ihr auf den Schotten! Er schwingt sein magisches Claymore-Schwert und lacht: 'Jack, mein Junge! Schoen dich zu sehen! Ich dachte schon, Aku haette dich zu einem Toaster verarbeitet!' Doch hinter ihm taucht Demongo, der Seelensammler, auf.",
         "background": "./game_images/background_sj_cybercity.png",
         "character": "./game_images/character_sj_scotsman.png",
         "choices": [
@@ -2324,106 +2322,106 @@ let gameData = {
     },
 
     "c2_sj_3": {
-        "text": "Hoch in den nebligen Bergen findet ihr einen uralten Tempel. Inmitten der Ruinen schwebt ein blau leuchtendes Zeitportal. Doch es wird von drei blinden Bogenschützen bewacht, deren Gehör absolut perfekt ist. Jeder Schritt könnte tödlich sein.",
+        "text": "Hoch in den nebligen Bergen findet ihr einen uralten Tempel. Inmitten der Ruinen schwebt ein blau leuchtendes Zeitportal. Doch es wird von drei blinden Bogenschuetzen bewacht, deren Gehoer absolut perfekt ist. Jeder Schritt koennte toedlich sein.",
         "background": "./game_images/background_sj_temple.png",
         "choices": [
-            { "text": "Sich lautlos an den Schützen vorbeischleichen", "next": "sj_ancestor_amulet", "gain_item": "sj_ancestor_amulet" },
+            { "text": "Sich lautlos an den Schuetzen vorbeischleichen", "next": "sj_ancestor_amulet", "gain_item": "sj_ancestor_amulet" },
             { "text": "Sie ablenken, indem du Steine wirfst", "next": "c2_sj_9", "karma": -2 }
         ]
     },
 
     "sj_ancestor_amulet": {
-        "text": "Du weichst den Schützen aus und findest ein uraltes Ahnen-Amulett auf dem Altar des Tempels.",
+        "text": "Du weichst den Schuetzen aus und findest ein uraltes Ahnen-Amulett auf dem Altar des Tempels.",
         "background": "./game_images/background_sj_temple.png",
         "character": "./game_images/item_sj_ancestor_amulet.png",
         "choices": [
-            { "text": "Das Amulett Jack überreichen", "next": "c2_sj_15" },
+            { "text": "Das Amulett Jack ueberreichen", "next": "c2_sj_15" },
             { "text": "Das Portal genauer untersuchen", "next": "c2_sj_12" }
         ]
     },
 
     "c2_sj_4": {
-        "text": "Jack kniet nieder. Die Geister seiner Vorfahren erscheinen als sanftes weißes Licht. Sie flüstern: 'Aku schläft nicht. Er benutzt die Seelen der Vergangenheit, um die Zukunft zu versiegeln. Finde den Seilenstein.' Plötzlich wird die Vision von feindlichen Kopfgeldjägern unterbrochen.",
+        "text": "Jack kniet nieder. Die Geister seiner Vorfahren erscheinen als sanftes weisses Licht. Sie fluestern: 'Aku schlaeft nicht. Er benutzt die Seelen der Vergangenheit, um die Zukunft zu versiegeln. Finde den Seilenstein.' Ploetzlich wird die Vision von feindlichen Kopfgeldjaegern unterbrochen.",
         "background": "./game_images/background_sj_wasteland.png",
         "character": "./game_images/character_sj_spirits.png",
         "choices": [
-            { "text": "Jack gegen die Kopfgeldjäger verteidigen", "next": "c2_sj_11", "karma": 4 },
+            { "text": "Jack gegen die Kopfgeldjaeger verteidigen", "next": "c2_sj_11", "karma": 4 },
             { "text": "In den Tempel in den Bergen fliehen", "next": "c2_sj_12", "karma": -1 }
         ]
     },
 
     "c2_sj_5": {
-        "text": "Die Drohnen explodieren in einer gewaltigen Welle aus grünem Feuer. Der Rauch vernebelt Jacks Sicht. Aus den Schatten tritt der schreckliche Shinobi-Krieger, ein Meister der Dunkelheit, und fordert Jack zum Duell.",
+        "text": "Die Drohnen explodieren in einer gewaltigen Welle aus gruenem Feuer. Der Rauch vernebelt Jacks Sicht. Aus den Schatten tritt der schreckliche Shinobi-Krieger, ein Meister der Dunkelheit, und fordert Jack zum Duell.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Jack das Licht bringen, um den Schatten zu brechen", "next": "c2_sj_13", "karma": 3 },
-            { "text": "Jack im Dunkeln allein kämpfen lassen", "next": "c2_sj_14", "karma": -3 }
+            { "text": "Jack im Dunkeln allein kaempfen lassen", "next": "c2_sj_14", "karma": -3 }
         ]
     },
 
     "c2_sj_6": {
-        "text": "Der Schotte kämpft heroisch, doch Demongos Armee aus unendlichen Seelen regeneriert sich ständig. Der Schotte wird umzingelt. Ihr müsst eine schwere Entscheidung treffen, um ihn zu retten.",
+        "text": "Der Schotte kaempft heroisch, doch Demongos Armee aus unendlichen Seelen regeneriert sich staendig. Der Schotte wird umzingelt. Ihr muesst eine schwere Entscheidung treffen, um ihn zu retten.",
         "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Demongos Seelen-Essenz mit dem Drohnen-Modul überlasten", "next": "c2_tt_15", "required_item": "sj_drone_core" },
+            { "text": "Demongos Seelen-Essenz mit dem Drohnen-Modul ueberlasten", "next": "c2_tt_15", "required_item": "sj_drone_core" },
             { "text": "Einen verzweifelten Frontalangriff wagen", "next": "c2_sj_24", "karma": -4 }
         ]
     },
 
     "c2_sj_7": {
-        "text": "Während der Schotte Demongo ablenkt, schleichst du dich von hinten heran und reißt Demongo einen glühenden Seelenstein aus der Krone. Demongo kreischt vor Schmerz auf und seine Armee erzittert.",
+        "text": "Waehrend der Schotte Demongo ablenkt, schleichst du dich von hinten heran und reisst Demongo einen gluehenden Seelenstein aus der Krone. Demongo kreischt vor Schmerz auf und seine Armee erzittert.",
         "background": "./game_images/background_sj_cybercity.png",
         "character": "./game_images/character_sj_demongo.png",
         "choices": [
             { "text": "Den Seelenstein einstecken", "next": "sj_soul_gem", "gain_item": "sj_soul_gem" },
-            { "text": "Den Stein sofort am Boden zertrümmern", "next": "c2_sj_10", "karma": 4 }
+            { "text": "Den Stein sofort am Boden zertruemmern", "next": "c2_sj_10", "karma": 4 }
         ]
     },
 
     "sj_soul_gem": {
-        "text": "Du erhältst Demongos Seelenstein. Er pulsiert mit der Energie gefangener Krieger.",
+        "text": "Du erhaeltst Demongos Seelenstein. Er pulsiert mit der Energie gefangener Krieger.",
         "background": "./game_images/background_sj_cybercity.png",
         "character": "./game_images/item_sj_soul_gem.png",
         "choices": [
             { "text": "Jack den Stein zeigen", "next": "c2_sj_8" },
-            { "text": "Den Stein nutzen, um das Zeitportal zu öffnen", "next": "c2_sj_15" }
+            { "text": "Den Stein nutzen, um das Zeitportal zu oeffnen", "next": "c2_sj_15" }
         ]
     },
 
     "c2_sj_8": {
-        "text": "Jack erkennt das Muster hinter Akus Angriffen. 'Aku versucht, die Portale mit dieser Technologie und den geraubten Seelen zu sperren.' Plötzlich bebt die Erde – Aku selbst manifestiert einen Teil seines riesigen, schwarzen Körpers über dem Areal.",
+        "text": "Jack erkennt das Muster hinter Akus Angriffen. 'Aku versucht, die Portale mit dieser Technologie und den geraubten Seelen zu sperren.' Ploetzlich bebt die Erde – Aku selbst manifestiert einen Teil seines riesigen, schwarzen Koerpers ueber dem Areal.",
         "background": "./game_images/background_sj_cybercity.png",
         "character": "./game_images/character_sj_aku.png",
         "choices": [
             { "text": "Aku direkt mit dem magischen Schwert attackieren", "next": "c2_sj_18", "karma": 5 },
-            { "text": "Den Rückzug in die Berge antreten", "next": "c2_sj_19", "karma": -2 }
+            { "text": "Den Rueckzug in die Berge antreten", "next": "c2_sj_19", "karma": -2 }
         ]
     },
 
     "c2_sj_9": {
-        "text": "Die blinden Bogenschützen hören das Geräusch sofort! Ein tödlicher Pfeilhagel geht auf euch nieder. Jack kann dich gerade noch rechtzeitig hinter eine Säule reißen, doch das Portal beginnt instabil zu flackern.",
+        "text": "Die blinden Bogenschuetzen hoeren das Geraeusch sofort! Ein toedlicher Pfeilhagel geht auf euch nieder. Jack kann dich gerade noch rechtzeitig hinter eine Saeule reissen, doch das Portal beginnt instabil zu flackern.",
         "background": "./game_images/background_sj_temple.png",
         "choices": [
             { "text": "Das Portal trotz Gefahr betreten", "next": "c2_sj_17", "karma": -4 },
-            { "text": "Sich zurückziehen und Jacks Schwert vertrauen", "next": "c2_sj_13", "karma": 2 }
+            { "text": "Sich zurueckziehen und Jacks Schwert vertrauen", "next": "c2_sj_13", "karma": 2 }
         ]
     },
 
     "c2_sj_10": {
-        "text": "Die Realität um euch herum verzerrt sich. Aku schickt seine stärksten Elite-Assassinen – die hochmodernen, mörderischen Roboter-Löwen. Sie umzingeln die Cyber-Stadt und schneiden jeden Fluchtweg ab.",
+        "text": "Die Realitaet um euch herum verzerrt sich. Aku schickt seine staerksten Elite-Assassinen – die hochmodernen, moerderischen Roboter-Loewen. Sie umzingeln die Cyber-Stadt und schneiden jeden Fluchtweg ab.",
         "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Sich mit dem Schotten Rücken an Rücken verteidigen", "next": "c2_sj_18", "karma": 5 },
+            { "text": "Sich mit dem Schotten Ruecken an Ruecken verteidigen", "next": "c2_sj_18", "karma": 5 },
             { "text": "Das Ahnen-Amulett nutzen, um ein Schutzschild zu rufen", "next": "c2_tt_19", "required_item": "sj_ancestor_amulet" }
         ]
     },
 
     "c2_sj_11": {
-        "text": "Jack pariert die Angriffe der Kopfgeldjäger mit chirurgischer Präzision. Doch im Eifer des Gefechts wird er von einer Giftnadel gestreift. Seine Bewegungen werden langsamer und sein Blick verschwimmt.",
+        "text": "Jack pariert die Angriffe der Kopfgeldjaeger mit chirurgischer Praezision. Doch im Eifer des Gefechts wird er von einer Giftnadel gestreift. Seine Bewegungen werden langsamer und sein Blick verschwimmt.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Das Ahnen-Amulett nutzen, um das Gift zu reinigen", "next": "c2_sj_20", "required_item": "sj_ancestor_amulet" },
-            { "text": "Jack stützen und verzweifelt einen Unterschlupf suchen", "next": "c2_sj_15", "karma": -2 }
+            { "text": "Jack stuetzen und verzweifelt einen Unterschlupf suchen", "next": "c2_sj_15", "karma": -2 }
         ]
     },
 
@@ -2432,7 +2430,7 @@ let gameData = {
         "background": "./game_images/background_sj_temple.png",
         "choices": [
             { "text": "Demongos Seelenstein opfern, um das Portal zu reinigen", "next": "c2_sj_26", "required_item": "sj_soul_gem" },
-            { "text": "Das Portal mit Jacks Schwert zerstören, bevor es explodiert", "next": "c2_sj_25", "karma": 3 }
+            { "text": "Das Portal mit Jacks Schwert zerstoeren, bevor es explodiert", "next": "c2_sj_25", "karma": 3 }
         ]
     },
 
@@ -2440,41 +2438,41 @@ let gameData = {
         "text": "Mithilfe deines Feuers oder Spiegels reflektierst du das Licht. Der Shinobi-Krieger verliert seine Tarnung im Schatten. Jack nutzt die Millisekunde und streckt den finsteren Krieger mit einem einzigen, sauberen Hieb nieder.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Dem Shinobi seine Schatten-Rüstung abnehmen", "next": "sj_shadow_armor", "gain_item": "sj_shadow_armor" },
+            { "text": "Dem Shinobi seine Schatten-Ruestung abnehmen", "next": "sj_shadow_armor", "gain_item": "sj_shadow_armor" },
             { "text": "Sofort weiter zu Akus Zentralturm reisen", "next": "c2_sj_25", "karma": 2 }
         ]
     },
 
     "sj_shadow_armor": {
-        "text": "Du erhältst die Rüstung des Shinobi-Kriegers. Sie macht den Träger im Schatten fast unsichtbar.",
+        "text": "Du erhaeltst die Ruestung des Shinobi-Kriegers. Sie macht den Traeger im Schatten fast unsichtbar.",
         "background": "./game_images/background_sj_wasteland.png",
         "character": "./game_images/item_sj_shadow_armor.png",
         "choices": [
-            { "text": "Die Rüstung anlegen", "next": "c2_sj_10" },
-            { "text": "Sie für später im Gepäck verstauen", "next": "c2_sj_15" }
+            { "text": "Die Ruestung anlegen", "next": "c2_sj_10" },
+            { "text": "Sie fuer spaeter im Gepaeck verstauen", "next": "c2_sj_15" }
         ]
     },
 
     "c2_sj_14": {
-        "text": "Ohne Licht wird Jack im finsteren Nebel schwer am Arm verletzt. Er verliert kurzzeitig den Halt an seinem Schwert. Der Shinobi triumphiert fast, während Akus Lachen durch das Tal dröhnt.",
+        "text": "Ohne Licht wird Jack im finsteren Nebel schwer am Arm verletzt. Er verliert kurzzeitig den Halt an seinem Schwert. Der Shinobi triumphiert fast, waehrend Akus Lachen durch das Tal droehnt.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Dich schützend vor Jack werfen", "next": "c2_sj_22", "karma": 5 },
+            { "text": "Dich schuetzend vor Jack werfen", "next": "c2_sj_22", "karma": 5 },
             { "text": "Weglaufen und den Schotten zur Hilfe holen", "next": "c2_sj_23", "karma": -4 }
         ]
     },
 
     "c2_sj_15": {
-        "text": "Ihr flüchtet tiefer in die verschneiten Pässe. Die Kälte setzt euch zu, und hinter euch jagen euch Akus fliegende Spionage-Drohnen. Ihr braucht einen sicheren Weg vorbei an den Wachen des Berges.",
+        "text": "Ihr fluechtet tiefer in die verschneiten Paesse. Die Kaelte setzt euch zu, und hinter euch jagen euch Akus fliegende Spionage-Drohnen. Ihr braucht einen sicheren Weg vorbei an den Wachen des Berges.",
         "background": "./game_images/background_sj_temple.png",
         "choices": [
             { "text": "Die Drohnen mit dem Drohnen-Modul umprogrammieren", "next": "c2_sj_26", "required_item": "sj_drone_core" },
-            { "text": "Sich mit der Schatten-Rüstung unbemerkt vorbeischleichen", "next": "c2_sj_26", "required_item": "sj_shadow_armor" }
+            { "text": "Sich mit der Schatten-Ruestung unbemerkt vorbeischleichen", "next": "c2_sj_26", "required_item": "sj_shadow_armor" }
         ]
     },
 
     "c2_sj_16": {
-        "text": "Das Signal bricht zusammen. Aku erkennt, dass du seine Befehle manipulierst. Er ballt seine riesige Faust und schlägt mit purer, roher Gewalt mitten in das Bergmassiv ein!",
+        "text": "Das Signal bricht zusammen. Aku erkennt, dass du seine Befehle manipulierst. Er ballt seine riesige Faust und schlaegt mit purer, roher Gewalt mitten in das Bergmassiv ein!",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Dem Schlag ausweichen", "next": "c2_sj_25" },
@@ -2486,23 +2484,23 @@ let gameData = {
         "text": "Das instabile Portal schleudert euch nicht in die Vergangenheit, sondern mitten in eine von Akus grausamsten Arenen der Zukunft. Gladiatoren-Roboter aktivieren ihre Klingen.",
         "background": "./game_images/background_sj_cybercity.png",
         "choices": [
-            { "text": "Gemeinsam um euer Leben kämpfen", "next": "c2_sj_25", "karma": 2 },
+            { "text": "Gemeinsam um euer Leben kaempfen", "next": "c2_sj_25", "karma": 2 },
             { "text": "Ein Versteck in der Arena suchen", "next": "c2_sj_24", "karma": -3 }
         ]
     },
 
     "c2_sj_18": {
-        "text": "Jacks magisches Schwert schneidet durch Akus schwarze Masse wie ein heißes Messer durch Butter. Aku heult auf und zieht seine Tentakel zurück, hinterlässt aber eine brennende Spur der Zerstörung.",
+        "text": "Jacks magisches Schwert schneidet durch Akus schwarze Masse wie ein heisses Messer durch Butter. Aku heult auf und zieht seine Tentakel zurueck, hinterlaesst aber eine brennende Spur der Zerstoerung.",
         "background": "./game_images/background_sj_wasteland.png",
         "character": "./game_images/character_sj_aku.png",
         "choices": [
-            { "text": "Ihm den finalen Stoß versetzen", "next": "c2_sj_30", "karma": 5 },
+            { "text": "Ihm den finalen Stoss versetzen", "next": "c2_sj_30", "karma": 5 },
             { "text": "Das brennende Dorf zuerst evakuieren", "next": "c2_sj_27", "karma": 4 }
         ]
     },
 
     "c2_sj_19": {
-        "text": "Euer Rückzug gibt Aku Zeit, die gesamte Realität dieses Zeitalters weiter zu korrumpieren. Der Himmel brennt dauerhaft schwarz und die Hoffnung der Bewohner schwindet gegen Null.",
+        "text": "Euer Rueckzug gibt Aku Zeit, die gesamte Realitaet dieses Zeitalters weiter zu korrumpieren. Der Himmel brennt dauerhaft schwarz und die Hoffnung der Bewohner schwindet gegen Null.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Den Widerstand neu formieren", "next": "c2_sj_27", "karma": -3 },
@@ -2511,7 +2509,7 @@ let gameData = {
     },
 
     "c2_sj_20": {
-        "text": "Das Amulett leuchtet in reinem, goldenem Licht. Das düstere Gift weicht aus Jacks Körper und seine Augen erlangen ihre messerscharfe Konzentration zurück. Er dankt dir mit einer tiefen Verbeugung.",
+        "text": "Das Amulett leuchtet in reinem, goldenem Licht. Das duestere Gift weicht aus Jacks Koerper und seine Augen erlangen ihre messerscharfe Konzentration zurueck. Er dankt dir mit einer tiefen Verbeugung.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Aku gemeinsam entgegentreten", "next": "c2_sj_30" }
@@ -2519,7 +2517,7 @@ let gameData = {
     },
 
     "c2_sj_22": {
-        "text": "Du fängst den Schlag des Shinobi ab und wirst schwer verletzt. Doch dein Opfer gibt Jack den nötigen Zorn! Mit einem gewaltigen Schrei spaltet er die Dunkelheit und vernichtet den Feind.",
+        "text": "Du faengst den Schlag des Shinobi ab und wirst schwer verletzt. Doch dein Opfer gibt Jack den noetigen Zorn! Mit einem gewaltigen Schrei spaltet er die Dunkelheit und vernichtet den Feind.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Dich von Jack verarzten lassen", "next": "c2_sj_25" }
@@ -2527,7 +2525,7 @@ let gameData = {
     },
 
     "c2_sj_23": {
-        "text": "Du verlierst wertvolle Zeit. Als du mit dem Schotten zurückkehrst, ist das Schlachtfeld leer und Jacks Schwert liegt einsam im Staub. Aku hat ihn entführt.",
+        "text": "Du verlierst wertvolle Zeit. Als du mit dem Schotten zurueckkehrst, ist das Schlachtfeld leer und Jacks Schwert liegt einsam im Staub. Aku hat ihn entfuehrt.",
         "background": "./game_images/background_sj_cybercity.png",
         "choices": [
             { "text": "Ihn aus Akus Turm befreien", "next": "c2_sj_28", "karma": -4 }
@@ -2535,7 +2533,7 @@ let gameData = {
     },
 
     "c2_sj_24": {
-        "text": "Der brute-force Kampf gegen Demongos Armee erschöpft euch vollends. Ihr müsst euch unter schweren Verlusten zurückziehen. Jacks Schwert verliert durch den Kontakt mit so viel Dunkelheit kurzzeitig seinen Glanz.",
+        "text": "Der brute-force Kampf gegen Demongos Armee erschoepft euch vollends. Ihr muesst euch unter schweren Verlusten zurueckziehen. Jacks Schwert verliert durch den Kontakt mit so viel Dunkelheit kurzzeitig seinen Glanz.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Einen meditativen Ort zur Reinigung suchen", "next": "c2_sj_27", "karma": -2 }
@@ -2543,15 +2541,15 @@ let gameData = {
     },
 
     "c2_sj_25": {
-        "text": "Ihr erreicht den Fuß von Akus gigantischem Zentralturm. Pechschwarze Dornen ragen kilometerweit in den Himmel. Hier oben wird sich das Schicksal dieser Ära entscheiden.",
+        "text": "Ihr erreicht den Fuss von Akus gigantischem Zentralturm. Pechschwarze Dornen ragen kilometerweit in den Himmel. Hier oben wird sich das Schicksal dieser aera entscheiden.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Den Turm stürmen und Aku konfrontieren", "next": "c2_sj_29" }
+            { "text": "Den Turm stuermen und Aku konfrontieren", "next": "c2_sj_29" }
         ]
     },
 
     "c2_sj_26": {
-        "text": "Dank deiner cleveren Vorbereitung und den gesammelten Items überlistet ihr Akus Verteidigungssysteme komplett. Das Portal im Tempel stabilisiert sich und strahlt ein reines Zeit-Signal aus.",
+        "text": "Dank deiner cleveren Vorbereitung und den gesammelten Items ueberlistet ihr Akus Verteidigungssysteme komplett. Das Portal im Tempel stabilisiert sich und strahlt ein reines Zeit-Signal aus.",
         "background": "./game_images/background_sj_temple.png",
         "choices": [
             { "text": "Das Portal aktivieren und Aku den Weg abschneiden", "next": "c2_sj_30" }
@@ -2559,7 +2557,7 @@ let gameData = {
     },
 
     "c2_sj_27": {
-        "text": "Der Zentralturm erzittert unter einer gewaltigen Explosion. Aku zieht sich in den Kern der Erde zurück, um seine Wunden zu regenerieren. Die Welt ist vorerst gerettet, doch der Weg in die Vergangenheit bleibt Jack verwehrt.",
+        "text": "Der Zentralturm erzittert unter einer gewaltigen Explosion. Aku zieht sich in den Kern der Erde zurueck, um seine Wunden zu regenerieren. Die Welt ist vorerst gerettet, doch der Weg in die Vergangenheit bleibt Jack verwehrt.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -2567,15 +2565,15 @@ let gameData = {
     },
 
     "c2_sj_28": {
-        "text": "Der Schotte und die verbliebenen Rebellen starten einen heroischen Ablenkungsangriff auf die Tore des Turms, wodurch Jack und du unbemerkt bis in Akus Thronsaal vordringen könnt.",
+        "text": "Der Schotte und die verbliebenen Rebellen starten einen heroischen Ablenkungsangriff auf die Tore des Turms, wodurch Jack und du unbemerkt bis in Akus Thronsaal vordringen koennt.",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
-            { "text": "Aku im Thronsaal überraschen", "next": "c2_sj_29" }
+            { "text": "Aku im Thronsaal ueberraschen", "next": "c2_sj_29" }
         ]
     },
 
     "c2_sj_29": {
-        "text": "Aku nimmt seine monströse Urform an – ein gigantischer Drache aus reinem, schwarzem Hass. 'Jack! Du wirst diese Ära niemals verlassen! Du wirst hier sterben, in der Zukunft, die MEIN ist!'",
+        "text": "Aku nimmt seine monstroese Urform an – ein gigantischer Drache aus reinem, schwarzem Hass. 'Jack! Du wirst diese aera niemals verlassen! Du wirst hier sterben, in der Zukunft, die MEIN ist!'",
         "background": "./game_images/background_sj_wasteland.png",
         "character": "./game_images/character_sj_aku.png",
         "choices": [
@@ -2584,28 +2582,27 @@ let gameData = {
     },
 
     "c2_sj_30": {
-        "text": "Mit einem finalen, meisterhaften Hieb treibt Jack das magische Schwert tief in Akus Kern. Das pure Licht der Klinge löst die finstere Kreatur in schreienden Sternenstaub auf. Der rote Nebel weicht warmem Sonnenlicht. Jack steckt sein Schwert ein, blickt dankbar zu dir und wendet sich dem Horizont zu. 'Der Kampf war lang, mein Freund. Aber die Zukunft ist endlich frei.'",
+        "text": "Mit einem finalen, meisterhaften Hieb treibt Jack das magische Schwert tief in Akus Kern. Das pure Licht der Klinge loest die finstere Kreatur in schreienden Sternenstaub auf. Der rote Nebel weicht warmem Sonnenlicht. Jack steckt sein Schwert ein, blickt dankbar zu dir und wendet sich dem Horizont zu. 'Der Kampf war lang, mein Freund. Aber die Zukunft ist endlich frei.'",
         "background": "./game_images/background_sj_wasteland.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
         ]
     },
 
-    //AB HIER WEITER Bearbeitung von Kapitel 2
 
     "c2_rs_start": {
-        "text": "Es ist ein unerträglich heißer Nachmittag im Park. Mordecai und Rigby haben absolut keine Lust, den alten Rasenmäher zu reparieren. Stattdessen haben sie eine mysteriöse, verstaubte Videospiel-Kassette namens The Destroyer of Worlds gefunden und sie heimlich in den Fernseher geschoben. Als Rigby den Startknopf drückt, schießt ein gigantischer, pixeliger Laserstrahl aus dem Bildschirm und saugt Benson mitsamt seinem Klemmbrett direkt in das Spiel!",
+        "text": "Es ist ein unertraeglich heisser Nachmittag im Park. Mordecai und Rigby haben absolut keine Lust, den alten Rasenmaeher zu reparieren. Stattdessen haben sie eine mysterioese, verstaubte Videospiel-Kassette namens The Destroyer of Worlds gefunden und sie heimlich in den Fernseher geschoben. Als Rigby den Startknopf drueckt, schiesst ein gigantischer, pixeliger Laserstrahl aus dem Bildschirm und saugt Benson mitsamt seinem Klemmbrett direkt in das Spiel!",
         "background": "./game_images/background_rs_living_room.png",
         "choices": [
             { "text": "Skips in der Garage um Rat fragen", "next": "c2_rs_1", "karma": 2 },
             { "text": "Muscle Man nach einem Cheat-Code fragen", "next": "c2_rs_2" },
-            { "text": "Pops um alte Münzen für den Automaten bitten", "next": "c2_rs_3", "karma": 1 },
-            { "text": "Den verbotenen Power-Glove-Controller aus Bensons Büro holen", "next": "c2_rs_4", "karma": -1 }
+            { "text": "Pops um alte Muenzen fuer den Automaten bitten", "next": "c2_rs_3", "karma": 1 },
+            { "text": "Den verbotenen Power-Glove-Controller aus Bensons Buero holen", "next": "c2_rs_4", "karma": -1 }
         ]
     },
 
     "c2_rs_1": {
-        "text": "Skips ballt seine riesigen Fäuste und seufzt schwer. Ja, ich habe das schon mal gesehen. Das ist kein normales Spiel, sondern ein interdimensionales Gefängnis für jähzornige Parkmanager. Wenn wir den Highscore nicht knacken, bleibt Benson für immer ein Pixel. Er reicht dir ein golden leuchtendes, unleserliches Buch aus seinem Tresor.",
+        "text": "Skips ballt seine riesigen Faeuste und seufzt schwer. Ja, ich habe das schon mal gesehen. Das ist kein normales Spiel, sondern ein interdimensionales Gefaengnis fuer jaehzornige Parkmanager. Wenn wir den Highscore nicht knacken, bleibt Benson fuer immer ein Pixel. Er reicht dir ein golden leuchtendes, unleserliches Buch aus seinem Tresor.",
         "background": "./game_images/background_rs_skips_garage.png",
         "character": "./game_images/character_rs_skips.png",
         "choices": [
@@ -2615,7 +2612,7 @@ let gameData = {
     },
 
     "rs_park_rules": {
-        "text": "Du hältst das Buch der ewigen Parkregeln in den Händen. Jede geschriebene Zeile vibriert voller bürokratischer Magie.",
+        "text": "Du haeltst das Buch der ewigen Parkregeln in den Haenden. Jede geschriebene Zeile vibriert voller buerokratischer Magie.",
         "background": "./game_images/background_rs_skips_garage.png",
         "character": "./game_images/item_rs_park_rules.png",
         "choices": [
@@ -2625,7 +2622,7 @@ let gameData = {
     },
 
     "c2_rs_2": {
-        "text": "Muscle Man schwingt sein Shirt wild im Kreis und johlt laut auf. Wisst ihr, wer noch in einer Arcade-Maschine festsitzt? MEINE MOM! WOOOO! Er rammt vor Begeisterung mit seinem kleinen grünen Auto den Golfkarren und schleudert eine legendäre, extrem klebrige Fritte aus seinem Vorrat in deine Hand.",
+        "text": "Muscle Man schwingt sein Shirt wild im Kreis und johlt laut auf. Wisst ihr, wer noch in einer Arcade-Maschine festsitzt? MEINE MOM! WOOOO! Er rammt vor Begeisterung mit seinem kleinen gruenen Auto den Golfkarren und schleudert eine legendaere, extrem klebrige Fritte aus seinem Vorrat in deine Hand.",
         "background": "./game_images/background_rs_trailer.png",
         "character": "./game_images/character_rs_muscleman.png",
         "choices": [
@@ -2635,7 +2632,7 @@ let gameData = {
     },
 
     "rs_chili_fry": {
-        "text": "Du fängst die Ultimative Chili-Cheese-Fritte auf. Sie verströmt einen so scharfen Geruch, dass sich die Realität leicht verzerrt.",
+        "text": "Du faengst die Ultimative Chili-Cheese-Fritte auf. Sie verstroemt einen so scharfen Geruch, dass sich die Realitaet leicht verzerrt.",
         "background": "./game_images/background_rs_trailer.png",
         "character": "./game_images/item_rs_chili_fry.png",
         "choices": [
@@ -2645,17 +2642,16 @@ let gameData = {
     },
 
     "c2_rs_3": {
-        "text": "Pops kichert fröhlich und gibt dir statt Geld einen riesigen, funkelnden Lutscher aus seiner Sammlung. Oh, ein exquisites Tauschmittel für elektronischen Schabernack! Im selben Moment bricht das Spiel im Haus durch die Wände und schießt pixelige Laserstrahlen auf den Park-Rasen.",
+        "text": "Pops kichert froehlich und gibt dir statt Geld einen riesigen, funkelnden Lutscher aus seiner Sammlung. Oh, ein exquisites Tauschmittel fuer elektronischen Schabernack! Im selben Moment bricht das Spiel im Haus durch die Waende und schiesst pixelige Laserstrahlen auf den Park-Rasen.",
         "background": "./game_images/background_rs_park_lawn.png",
         "character": "./game_images/character_rs_pops.png",
         "choices": [
-            { "text": "Den Kaffeeladen vor den Lasern beschützen", "next": "c2_rs_7", "karma": 3 },
+            { "text": "Den Kaffeeladen vor den Lasern beschuetzen", "next": "c2_rs_7", "karma": 3 },
             { "text": "Mit Pops Lutscher den Gott des Synthesizers Gary im Weltall rufen", "next": "c2_rs_9", "karma": -1 }
         ]
     },
-    //HAHAHA
     "c2_rs_4": {
-        "text": "Rigby bricht mit einer Haarnadel Bensons Bürotür auf. Auf dem Schreibtisch liegt ein verbotenes, kosmisches Keyboard. Damit können wir alles machen! Sogar Bensons Kaugummis in echtes Gold verwandeln! Die Tasten fangen an, unheimlich bunt zu glühen.",
+        "text": "Rigby bricht mit einer Haarnadel Bensons Buerotuer auf. Auf dem Schreibtisch liegt ein verbotenes, kosmisches Keyboard. Damit koennen wir alles machen! Sogar Bensons Kaugummis in echtes Gold verwandeln! Die Tasten fangen an, unheimlich bunt zu gluehen.",
         "background": "./game_images/background_rs_benson_office.png",
         "choices": [
             { "text": "Den The Power-Synthesizer an dich nehmen", "next": "rs_power_synth", "gain_item": "rs_power_synth" },
@@ -2664,7 +2660,7 @@ let gameData = {
     },
 
     "rs_power_synth": {
-        "text": "Du nimmst den The Power-Synthesizer an dich. Jede Taste, die du drückst, verändert die Welt um dich herum.",
+        "text": "Du nimmst den The Power-Synthesizer an dich. Jede Taste, die du drueckst, veraendert die Welt um dich herum.",
         "background": "./game_images/background_rs_benson_office.png",
         "character": "./game_images/item_rs_power_synth.png",
         "choices": [
@@ -2674,7 +2670,7 @@ let gameData = {
     },
 
     "c2_rs_5": {
-        "text": "Du schraubst die Rückseite der Maschine auf. Ein gewaltiger Schwall aus kochend heißem, pixeligem Kaugummi spritzt heraus! Die klebrige Masse formiert sich zu einer gigantischen Version von Benson als Kaugummi-Monster. Es brüllt laut durch das Haus: WENN IHR DAS NICHT SOFORT AUFRÄUMT SEID IHR GEFEUERT!",
+        "text": "Du schraubst die Rueckseite der Maschine auf. Ein gewaltiger Schwall aus kochend heissem, pixeligem Kaugummi spritzt heraus! Die klebrige Masse formiert sich zu einer gigantischen Version von Benson als Kaugummi-Monster. Es bruellt laut durch das Haus: WENN IHR DAS NICHT SOFORT AUFRaeUMT SEID IHR GEFEUERT!",
         "background": "./game_images/background_rs_living_room.png",
         "choices": [
             { "text": "Das Kaugummi-Monster mit Schaufeln angreifen", "next": "c2_rs_13", "karma": -4 },
@@ -2683,7 +2679,7 @@ let gameData = {
     },
 
     "c2_rs_6": {
-        "text": "Die Fritte verursacht sofort heftige Magenkrämpfe und Halluzinationen. Der Himmel über dem Park verwandelt sich in ein wildes Neon-Szenario der achtziger Jahre. Eine riesige, schwebende Musikkassette taucht auf und fordert euch zu einem Rap-Battle um Bensons Freiheit heraus.",
+        "text": "Die Fritte verursacht sofort heftige Magenkraempfe und Halluzinationen. Der Himmel ueber dem Park verwandelt sich in ein wildes Neon-Szenario der achtziger Jahre. Eine riesige, schwebende Musikkassette taucht auf und fordert euch zu einem Rap-Battle um Bensons Freiheit heraus.",
         "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
             { "text": "Mordecai den Beatbox-Rhythmus vorgeben", "next": "c2_rs_17", "karma": 3 },
@@ -2692,17 +2688,17 @@ let gameData = {
     },
 
     "c2_rs_7": {
-        "text": "Im Kaffeeladen bereiten Margaret und Eileen gerade die Flucht vor. Die Kaffeemaschine ist durch die Strahlung zum Leben erwacht und spuckt kochenden Espresso durch den Raum! Ihr müsst das wildgewordene Gerät sofort stoppen.",
+        "text": "Im Kaffeeladen bereiten Margaret und Eileen gerade die Flucht vor. Die Kaffeemaschine ist durch die Strahlung zum Leben erwacht und spuckt kochenden Espresso durch den Raum! Ihr muesst das wildgewordene Geraet sofort stoppen.",
         "background": "./game_images/background_rs_coffee_shop.png",
         "character": "./game_images/character_rs_margaret.png",
         "choices": [
-            { "text": "Die Maschine mit den Ewigen Parkregeln besänftigen", "next": "c2_rs_26", "required_item": "rs_park_rules" },
-            { "text": "Den Stecker mit einer Zange herausreißen", "next": "c2_rs_13", "karma": -3 }
+            { "text": "Die Maschine mit den Ewigen Parkregeln besaenftigen", "next": "c2_rs_26", "required_item": "rs_park_rules" },
+            { "text": "Den Stecker mit einer Zange herausreissen", "next": "c2_rs_13", "karma": -3 }
         ]
     },
 
     "c2_rs_8": {
-        "text": "Das Videospiel explodiert in einer Pixel-Wolke! Ein gigantischer, schwebender Totenkopf bricht aus dem Gehäuse und fliegt über das Parkgelände. Es ist der wahre Destroyer of Worlds, und er hält Benson in einer digitalen Energiekugel gefangen.",
+        "text": "Das Videospiel explodiert in einer Pixel-Wolke! Ein gigantischer, schwebender Totenkopf bricht aus dem Gehaeuse und fliegt ueber das Parkgelaende. Es ist der wahre Destroyer of Worlds, und er haelt Benson in einer digitalen Energiekugel gefangen.",
         "background": "./game_images/background_rs_park_lawn.png",
         "character": "./game_images/character_rs_destroyer.png",
         "choices": [
@@ -2712,36 +2708,36 @@ let gameData = {
     },
 
     "c2_rs_9": {
-        "text": "Gary erscheint in seiner fliegenden Sportwagen-Limousine am rosafarbenen Nachthimmel. Wer wagt es, die kosmische Harmonie mit billigem Park-Zucker zu stören? Er sieht das wachsende Arcade-Chaos und schüttelt verärgert den Kopf.",
+        "text": "Gary erscheint in seiner fliegenden Sportwagen-Limousine am rosafarbenen Nachthimmel. Wer wagt es, die kosmische Harmonie mit billigem Park-Zucker zu stoeren? Er sieht das wachsende Arcade-Chaos und schuettelt veraergert den Kopf.",
         "background": "./game_images/background_rs_neon_sky.png",
         "character": "./game_images/character_rs_gary.png",
         "choices": [
-            { "text": "Gary überreden euch seine magische Laser-Gitarre zu leihen", "next": "c2_rs_18", "karma": 4 },
+            { "text": "Gary ueberreden euch seine magische Laser-Gitarre zu leihen", "next": "c2_rs_18", "karma": 4 },
             { "text": "Heimlich in sein fliegendes Auto einbrechen", "next": "c2_rs_11", "karma": -5 }
         ]
     },
 
     "c2_rs_10": {
-        "text": "Mordecai und Rigby fangen an, sich lautstark im Wohnzimmer zu streiten. Du Idiot, ich habe dir gesagt, wir sollen den Rasen mähen! Halt den Mund, Mordecai, das Spiel ist episch! Während sie zanken, erschafft der Fernseher Hunderte von aggressiven 8-Bit-Gegnern.",
+        "text": "Mordecai und Rigby fangen an, sich lautstark im Wohnzimmer zu streiten. Du Idiot, ich habe dir gesagt, wir sollen den Rasen maehen! Halt den Mund, Mordecai, das Spiel ist episch! Waehrend sie zanken, erschafft der Fernseher Hunderte von aggressiven 8-Bit-Gegnern.",
         "background": "./game_images/background_rs_living_room.png",
         "choices": [
             { "text": "Die Pixel-Klone mit der scharfen Fritte wegschmelzen", "next": "c2_rs_26", "required_item": "rs_chili_fry" },
-            { "text": "Die Klone mit alten Besen bekämpfen", "next": "c2_rs_14", "karma": -2 }
+            { "text": "Die Klone mit alten Besen bekaempfen", "next": "c2_rs_14", "karma": -2 }
         ]
     },
 
     "c2_rs_11": {
-        "text": "Deine unüberlegte Aktion beschwört Death, den Sensenmann auf seinem flammenden Motorrad! Er zieht eine düstere Taschenuhr heraus. Bensons Zeit ist eigentlich noch nicht um, aber euer Pfusch stört die Unterwelt. Wer verliert, gibt mir seine Seele!",
+        "text": "Deine unueberlegte Aktion beschwoert Death, den Sensenmann auf seinem flammenden Motorrad! Er zieht eine duestere Taschenuhr heraus. Bensons Zeit ist eigentlich noch nicht um, aber euer Pfusch stoert die Unterwelt. Wer verliert, gibt mir seine Seele!",
         "background": "./game_images/background_rs_park_lawn.png",
         "character": "./game_images/character_rs_death.png",
         "choices": [
-            { "text": "Death zu einem allesentscheidenden Armdrücken-Match herausfordern", "next": "c2_rs_24", "karma": -4 },
+            { "text": "Death zu einem allesentscheidenden Armdruecken-Match herausfordern", "next": "c2_rs_24", "karma": -4 },
             { "text": "Ihm die ultimative Chili-Fritte als Tauschobjekt anbieten", "next": "c2_rs_26", "required_item": "rs_chili_fry" }
         ]
     },
 
     "c2_rs_12": {
-        "text": "In der staubigen Unterwelt angekommen, sitzt Death in seiner alten Lederjacke auf einer Kiste. Die Chili-Fritte? Mann, die gibt es in der Hölle seit Ewigkeiten nicht mehr! Dafür gebe ich euch Bensons Rettungs-Code direkt zurück. Er kritzelt Zahlen auf ein Brett.",
+        "text": "In der staubigen Unterwelt angekommen, sitzt Death in seiner alten Lederjacke auf einer Kiste. Die Chili-Fritte? Mann, die gibt es in der Hoelle seit Ewigkeiten nicht mehr! Dafuer gebe ich euch Bensons Rettungs-Code direkt zurueck. Er kritzelt Zahlen auf ein Brett.",
         "background": "./game_images/background_rs_underworld.png",
         "character": "./game_images/character_rs_death.png",
         "choices": [
@@ -2750,35 +2746,35 @@ let gameData = {
     },
 
     "rs_benson_clipboard": {
-        "text": "Du erhältst Bensons offizielles Park-Klemmbrett. Auf der Rückseite steht der geheime Deaktivierungs-Code.",
+        "text": "Du erhaeltst Bensons offizielles Park-Klemmbrett. Auf der Rueckseite steht der geheime Deaktivierungs-Code.",
         "background": "./game_images/background_rs_underworld.png",
         "character": "./game_images/item_rs_benson_clipboard.png",
         "choices": [
-            { "text": "Zurück an die Oberfläche rennen", "next": "c2_rs_25" },
-            { "text": "Den Code sofort über das Keyboard einspielen", "next": "c2_rs_26", "required_item": "rs_power_synth" }
+            { "text": "Zurueck an die Oberflaeche rennen", "next": "c2_rs_25" },
+            { "text": "Den Code sofort ueber das Keyboard einspielen", "next": "c2_rs_26", "required_item": "rs_power_synth" }
         ]
     },
 
     "c2_rs_13": {
-        "text": "Der heftige Kampf eskaliert völlig. Das Kaugummi-Monster schleudert Mordecai durch das morsche Dach des Hauses. Benson schreit wütend aus dem Schleim: WENN DAS HAUS EINSTÜRZT SEID IHR ALLE FÜR IMMER GEEEEEFEUERT!",
+        "text": "Der heftige Kampf eskaliert voellig. Das Kaugummi-Monster schleudert Mordecai durch das morsche Dach des Hauses. Benson schreit wuetend aus dem Schleim: WENN DAS HAUS EINSTueRZT SEID IHR ALLE FueR IMMER GEEEEEFEUERT!",
         "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Einen riesigen Kampf-Roboter aus alten Röhrenfernsehern bauen", "next": "c2_rs_27", "karma": -3 },
+            { "text": "Einen riesigen Kampf-Roboter aus alten Roehrenfernsehern bauen", "next": "c2_rs_27", "karma": -3 },
             { "text": "Skips anflehen ein magisches Schutzsiegel auf den Boden zu zeichnen", "next": "c2_rs_28", "karma": 4 }
         ]
     },
 
     "c2_rs_14": {
-        "text": "Die Ablenkung funktioniert nicht lange. Die Spiele-Kassette spuckt plötzlich ein riesiges, fliegendes Auge aus, das die Parkbänke in glitzernde Limonade verwandelt. Thomas der Praktikant rennt schreiend im Ziegenkostüm an euch vorbei.",
+        "text": "Die Ablenkung funktioniert nicht lange. Die Spiele-Kassette spuckt ploetzlich ein riesiges, fliegendes Auge aus, das die Parkbaenke in glitzernde Limonade verwandelt. Thomas der Praktikant rennt schreiend im Ziegenkostuem an euch vorbei.",
         "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
             { "text": "Das Auge mit dem The Power-Synthesizer hypnotisieren", "next": "c2_rs_30", "required_item": "rs_power_synth" },
-            { "text": "Blind in den Wald flüchten und hoffen dass der Tag endet", "next": "c2_rs_19", "karma": -4 }
+            { "text": "Blind in den Wald fluechten und hoffen dass der Tag endet", "next": "c2_rs_19", "karma": -4 }
         ]
     },
 
     "c2_rs_15": {
-        "text": "Der Golfkarren wird mit Muscle Mans Fritte als Treibstoff gefüttert. Der Karren schießt wie eine Rakete in den Himmel, bricht durch die Wolkendecke und katapultiert euch direkt in die neonfarbene Dimension des Videospiels!",
+        "text": "Der Golfkarren wird mit Muscle Mans Fritte als Treibstoff gefuettert. Der Karren schiesst wie eine Rakete in den Himmel, bricht durch die Wolkendecke und katapultiert euch direkt in die neonfarbene Dimension des Videospiels!",
         "background": "./game_images/background_rs_digital_space.png",
         "choices": [
             { "text": "Den digitalen Hauptprozessor mit dem Karren rammen", "next": "c2_rs_25" },
@@ -2787,7 +2783,7 @@ let gameData = {
     },
 
     "c2_rs_17": {
-        "text": "Mordecai legt los und droppt die wildesten Reime der Parkgeschichte! Der Park ist cool, du bist nur Code, wir schicken dich zurück in den Game-Over-Tod! Die schwebende Musikkassette explodiert vor Ehrfurcht und hinterlässt ein glühendes Portal.",
+        "text": "Mordecai legt los und droppt die wildesten Reime der Parkgeschichte! Der Park ist cool, du bist nur Code, wir schicken dich zurueck in den Game-Over-Tod! Die schwebende Musikkassette explodiert vor Ehrfurcht und hinterlaesst ein gluehendes Portal.",
         "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
             { "text": "Durch das Portal direkt zu Benson springen", "next": "c2_rs_25", "karma": 4 },
@@ -2796,7 +2792,7 @@ let gameData = {
     },
 
     "c2_rs_18": {
-        "text": "Mit Garys Laser-Gitarre bewaffnet feuert Mordecai gewaltige Rock-Akkorde ab, die die pixelige Rüstung des Destroyers wegsprengen. Rigby tanzt wild im Hintergrund, um den Gegner vollkommen zu verwirren.",
+        "text": "Mit Garys Laser-Gitarre bewaffnet feuert Mordecai gewaltige Rock-Akkorde ab, die die pixelige Ruestung des Destroyers wegsprengen. Rigby tanzt wild im Hintergrund, um den Gegner vollkommen zu verwirren.",
         "background": "./game_images/background_rs_digital_space.png",
         "choices": [
             { "text": "Den finalen Power-Akkord auf den Saiten spielen", "next": "c2_rs_30", "karma": 5 },
@@ -2805,11 +2801,11 @@ let gameData = {
     },
 
     "c2_rs_19": {
-        "text": "Euer feiger Rückzug macht alles nur noch schlimmer. Der Destroyer of Worlds verwandelt das gesamte Parkgelände in ein unspielbares Retro-Spiel voller tödlicher Stacheln und fliegender Pixel-Schildkröten. Alles versinkt im Chaos.",
+        "text": "Euer feiger Rueckzug macht alles nur noch schlimmer. Der Destroyer of Worlds verwandelt das gesamte Parkgelaende in ein unspielbares Retro-Spiel voller toedlicher Stacheln und fliegender Pixel-Schildkroeten. Alles versinkt im Chaos.",
         "background": "./game_images/background_rs_digital_space.png",
         "choices": [
             { "text": "Das schwere Spiel auf die harte Tour durchspielen", "next": "c2_rs_27", "karma": -4 },
-            { "text": "Den Synthesizer für einen harten Realitäts-Reset nutzen", "next": "c2_rs_30", "required_item": "rs_power_synth" }
+            { "text": "Den Synthesizer fuer einen harten Realitaets-Reset nutzen", "next": "c2_rs_30", "required_item": "rs_power_synth" }
         ]
     },
 
@@ -2823,34 +2819,34 @@ let gameData = {
     },
 
     "c2_rs_24": {
-        "text": "Death besiegt Rigby im Armdrücken innerhalb von einer Sekunde. Eure Seelen gehören mir! Doch im letzten Moment wirft Mordecai eine schwere Bowlingkugel nach der Sense, was die Zeit kurzfristig einfriert.",
+        "text": "Death besiegt Rigby im Armdruecken innerhalb von einer Sekunde. Eure Seelen gehoeren mir! Doch im letzten Moment wirft Mordecai eine schwere Bowlingkugel nach der Sense, was die Zeit kurzfristig einfriert.",
         "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Zum großen Parksee flüchten", "next": "c2_rs_27" },
-            { "text": "Zurück ins Haus sprinten", "next": "c2_rs_13", "karma": -1 }
+            { "text": "Zum grossen Parksee fluechten", "next": "c2_rs_27" },
+            { "text": "Zurueck ins Haus sprinten", "next": "c2_rs_13", "karma": -1 }
         ]
     },
 
     "c2_rs_25": {
-        "text": "Ihr erreicht das Herz des Arcade-Spiels. Benson hängt hilflos an leuchtenden Digitalkabeln und seine Augen glühen gefährlich rot. Ihr hättet verdammt noch mal den Rasen mähen sollen! Ihr müsst ihn sofort befreien.",
+        "text": "Ihr erreicht das Herz des Arcade-Spiels. Benson haengt hilflos an leuchtenden Digitalkabeln und seine Augen gluehen gefaehrlich rot. Ihr haettet verdammt noch mal den Rasen maehen sollen! Ihr muesst ihn sofort befreien.",
         "background": "./game_images/background_rs_digital_space.png",
         "choices": [
             { "text": "Ihm sein echtes Klemmbrett vor das Gesicht halten", "next": "c2_rs_30", "required_item": "rs_benson_clipboard" },
-            { "text": "Die Kabel mit Skips Vorschlaghammer zertrümmern", "next": "c2_rs_27", "karma": -2 }
+            { "text": "Die Kabel mit Skips Vorschlaghammer zertruemmern", "next": "c2_rs_27", "karma": -2 }
         ]
     },
 
     "c2_rs_26": {
-        "text": "Durch den perfekten Einsatz deines Gegenstands kollabiert die Spiel-Matrix vollständig. Die pixeligen Feinde lösen sich in Luft auf und die Kassette spuckt Benson aus. Er landet unsanft, aber unversehrt auf dem Rasen.",
+        "text": "Durch den perfekten Einsatz deines Gegenstands kollabiert die Spiel-Matrix vollstaendig. Die pixeligen Feinde loesen sich in Luft auf und die Kassette spuckt Benson aus. Er landet unsanft, aber unversehrt auf dem Rasen.",
         "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
             { "text": "Ihm hastig beim Aufstehen helfen", "next": "c2_rs_30" },
-            { "text": "Ihn ignorieren und so tun als wäre nichts passiert", "next": "c2_rs_27", "karma": -3 }
+            { "text": "Ihn ignorieren und so tun als waere nichts passiert", "next": "c2_rs_27", "karma": -3 }
         ]
     },
 
     "c2_rs_27": {
-        "text": "Die riesige Apparatur explodiert in einer gigantischen, nuklearen Kaugummi-Detonation! Der gesamte Park ist völlig demoliert, alle Bäume sind weg und das Haus ist nur noch ein rauchender Krater. Benson steht zitternd in den Trümmern, während sein Kopf tiefrot anläuft.",
+        "text": "Die riesige Apparatur explodiert in einer gigantischen, nuklearen Kaugummi-Detonation! Der gesamte Park ist voellig demoliert, alle Baeume sind weg und das Haus ist nur noch ein rauchender Krater. Benson steht zitternd in den Truemmern, waehrend sein Kopf tiefrot anlaeuft.",
         "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -2861,13 +2857,13 @@ let gameData = {
         "text": "Skips zeichnet mit magischer Kreide einen perfekten Kreis auf den Rasen, der die digitale Strahlung des Destroyers aufsaugt. Mordecai und Rigby nutzen die kurze Pause, um den finalen Gegenangriff zu starten.",
         "background": "./game_images/background_rs_park_lawn.png",
         "choices": [
-            { "text": "Den Destroyer endgültig konfrontieren", "next": "c2_rs_25" },
+            { "text": "Den Destroyer endgueltig konfrontieren", "next": "c2_rs_25" },
             { "text": "In den Jet steigen und von oben angreifen", "next": "c2_rs_22", "karma": 2 }
         ]
     },
 
     "c2_rs_30": {
-        "text": "Mit einem epischen Finale zerschmettert ihr den Destroyer of Worlds in eine Million bunte Pixel. Der Park verwandelt sich augenblicklich zurück in sein normales, idyllisches Grün. Benson landet keuchend auf dem Rasen, klopft sich den Staub vom Hemd und funkelt Mordecai und Rigby wütend an: Ihr räumt diesen Müll sofort auf, oder ihr seid GEFEUERT! Mordecai und Rigby schauen sich an, grinsen breit und rufen im Chor: OOOOOOOOOOOH!",
+        "text": "Mit einem epischen Finale zerschmettert ihr den Destroyer of Worlds in eine Million bunte Pixel. Der Park verwandelt sich augenblicklich zurueck in sein normales, idyllisches Gruen. Benson landet keuchend auf dem Rasen, klopft sich den Staub vom Hemd und funkelt Mordecai und Rigby wuetend an: Ihr raeumt diesen Muell sofort auf, oder ihr seid GEFEUERT! Mordecai und Rigby schauen sich an, grinsen breit und rufen im Chor: OOOOOOOOOOOH!",
         "background": "./game_images/background_rs_living_room.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -2875,18 +2871,18 @@ let gameData = {
     },
 
     "c2_nj_start": {
-        "text": "In New Ninjago City bricht mitten in der Nacht das gesamte Stromnetz zusammen. Auf den riesigen Werbebildschirmen erscheint das lachende, digitale Gesicht des Overlords, gefolgt von einer Flut aus ranzigem, lila Schlamm, der aus den Gullys quillt. Es ist das Ultraböse, das die Stadt mit digitaler Finsternis infiziert! Lloyd, Kai, Jay, Cole, Zane und Nya haben sich bereits um das Kontrollpult des Flugseglers versammelt.",
+        "text": "In New Ninjago City bricht mitten in der Nacht das gesamte Stromnetz zusammen. Auf den riesigen Werbebildschirmen erscheint das lachende, digitale Gesicht des Overlords, gefolgt von einer Flut aus ranzigem, lila Schlamm, der aus den Gullys quillt. Es ist das Ultraboese, das die Stadt mit digitaler Finsternis infiziert! Lloyd, Kai, Jay, Cole, Zane und Nya haben sich bereits um das Kontrollpult des Flugseglers versammelt.",
         "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
             { "text": "Mit Lloyd und Zane den digitalen Quellcode analysieren", "next": "c2_nj_1", "karma": 2 },
-            { "text": "Mit Kai und Nya die Straßen der Stadt sichern", "next": "c2_nj_2" },
+            { "text": "Mit Kai und Nya die Strassen der Stadt sichern", "next": "c2_nj_2" },
             { "text": "Mit Cole und Jay die Katakomben unter der Stadt untersuchen", "next": "c2_nj_3", "karma": 1 },
             { "text": "Meister Wu im Kloster des Spinjitzu um Rat fragen", "next": "c2_nj_4", "karma": -1 }
         ]
     },
 
     "c2_nj_1": {
-        "text": "Zanes Augen flackern blau, während er sich in die infizierten Mainframes hackt. 'Der Overlord benutzt ein techno-organisches Virus! Es überschreibt die Logikschaltkreise der Stadt.' Lloyd zieht seine Klinge: 'Wir müssen ein Backup sichern, bevor alles gelöscht wird!' Das Terminal droht zu implodieren.",
+        "text": "Zanes Augen flackern blau, waehrend er sich in die infizierten Mainframes hackt. 'Der Overlord benutzt ein techno-organisches Virus! Es ueberschreibt die Logikschaltkreise der Stadt.' Lloyd zieht seine Klinge: 'Wir muessen ein Backup sichern, bevor alles geloescht wird!' Das Terminal droht zu implodieren.",
         "background": "./game_images/background_nj_lab.png",
         "character": "./game_images/character_nj_zane.png",
         "choices": [
@@ -2896,77 +2892,77 @@ let gameData = {
     },
 
     "nj_techno_blade": {
-        "text": "Du erhältst die Techno-Klinge. Sie leuchtet in grellem Techno-Grün und kann jedes digitale System hacken.",
+        "text": "Du erhaeltst die Techno-Klinge. Sie leuchtet in grellem Techno-Gruen und kann jedes digitale System hacken.",
         "background": "./game_images/background_nj_lab.png",
         "character": "./game_images/item_nj_techno_blade.png",
         "choices": [
             { "text": "Die Klinge am Hauptrechner nutzen", "next": "c2_nj_8" },
-            { "text": "Damit zu Kai auf die Straßen von New Ninjago City fliegen", "next": "c2_nj_10" }
+            { "text": "Damit zu Kai auf die Strassen von New Ninjago City fliegen", "next": "c2_nj_10" }
         ]
     },
 
     "c2_nj_2": {
-        "text": "Kai blockiert mit seinen Feuerschwertern eine Brücke, während Nya versucht, die flüchtenden Bürger mit Wasserbarrieren zu lenken. Eine Armee aus bizarren, mutierten Nindroiden bricht durch die Absperrungen. Kai ruft: 'Sie reagieren nicht auf normales Feuer! Ihre Rüstung ist aus unzerstörbarem Tiefengestein!'",
+        "text": "Kai blockiert mit seinen Feuerschwertern eine Bruecke, waehrend Nya versucht, die fluechtenden Buerger mit Wasserbarrieren zu lenken. Eine Armee aus bizarren, mutierten Nindroiden bricht durch die Absperrungen. Kai ruft: 'Sie reagieren nicht auf normales Feuer! Ihre Ruestung ist aus unzerstoerbarem Tiefengestein!'",
         "background": "./game_images/background_nj_city_streets.png",
         "character": "./game_images/character_nj_kai.png",
         "choices": [
             { "text": "Einen Nindroiden-Kommandanten ausschalten und sein Abzeichen stehlen", "next": "nj_overlord_insignia", "gain_item": "nj_overlord_insignia" },
-            { "text": "Mit Spinjitzu die Brücke zum Einsturz bringen", "next": "c2_nj_6", "karma": -3 }
+            { "text": "Mit Spinjitzu die Bruecke zum Einsturz bringen", "next": "c2_nj_6", "karma": -3 }
         ]
     },
 
     "nj_overlord_insignia": {
-        "text": "Du erhältst das digitale Overlord-Abzeichen. Es pulsiert mit dunkler, violetter Digiverse-Energie.",
+        "text": "Du erhaeltst das digitale Overlord-Abzeichen. Es pulsiert mit dunkler, violetter Digiverse-Energie.",
         "background": "./game_images/background_nj_city_streets.png",
         "character": "./game_images/item_nj_overlord_insignia.png",
         "choices": [
             { "text": "Das Abzeichen nutzen um getarnte Nindroiden-Frequenzen zu orten", "next": "c2_nj_15" },
-            { "text": "Damit ins Borg-Industriegebäude eindringen", "next": "c2_nj_12" }
+            { "text": "Damit ins Borg-Industriegebaeude eindringen", "next": "c2_nj_12" }
         ]
     },
 
     "c2_nj_3": {
-        "text": "Cole nutzt seine Erd-Elementarkräfte, um die stürzenden Deckenbalken im Untergrund aufzuhalten, während Jay nervös an den Kabeln herumfummelt. Plötzlich taucht Pythor aus den Schatten auf! Der Schlangen-General zischt hämisch: 'Das Ultraböse hat mir eine neue Armee versprochen, Ninja! Ihr kommt zu spät!'",
+        "text": "Cole nutzt seine Erd-Elementarkraefte, um die stuerzenden Deckenbalken im Untergrund aufzuhalten, waehrend Jay nervoes an den Kabeln herumfummelt. Ploetzlich taucht Pythor aus den Schatten auf! Der Schlangen-General zischt haemisch: 'Das Ultraboese hat mir eine neue Armee versprochen, Ninja! Ihr kommt zu spaet!'",
         "background": "./game_images/background_nj_subway.png",
         "character": "./game_images/character_nj_pythor.png",
         "choices": [
-            { "text": "Gegen Pythor und seine Schlangen-Krieger kämpfen", "next": "c2_nj_7", "karma": 3 },
-            { "text": "Den magischen Flöten-Prototyp aus Wus Kiste nutzen", "next": "nj_sacred_flute", "gain_item": "nj_sacred_flute", "karma": -1 }
+            { "text": "Gegen Pythor und seine Schlangen-Krieger kaempfen", "next": "c2_nj_7", "karma": 3 },
+            { "text": "Den magischen Floeten-Prototyp aus Wus Kiste nutzen", "next": "nj_sacred_flute", "gain_item": "nj_sacred_flute", "karma": -1 }
         ]
     },
 
     "nj_sacred_flute": {
-        "text": "Du erhältst die Heilige Flöte. Ihre Töne können das Gehör von Schlangen-Kreaturen extrem manipulieren.",
+        "text": "Du erhaeltst die Heilige Floete. Ihre Toene koennen das Gehoer von Schlangen-Kreaturen extrem manipulieren.",
         "background": "./game_images/background_nj_subway.png",
         "character": "./game_images/item_nj_sacred_flute.png",
         "choices": [
-            { "text": "Die Flöte sofort spielen um Pythor zu vertreiben", "next": "c2_nj_8" },
-            { "text": "Die Flöte einpacken und Cole im Kampf helfen", "next": "c2_nj_22" }
+            { "text": "Die Floete sofort spielen um Pythor zu vertreiben", "next": "c2_nj_8" },
+            { "text": "Die Floete einpacken und Cole im Kampf helfen", "next": "c2_nj_22" }
         ]
     },
 
     "c2_nj_4": {
-        "text": "Meister Wu sitzt im Kloster und trinkt ruhig seinen Tee, während die goldenen Drachenstatuen um ihn herum lebendig werden. 'Der Overlord greift nicht nur die Technik an, sondern das Gleichgewicht von Ninjago. Ihr müsst den Goldenen Kern finden!' Plötzlich greifen Rote Visier-Drohnen das Kloster an.",
+        "text": "Meister Wu sitzt im Kloster und trinkt ruhig seinen Tee, waehrend die goldenen Drachenstatuen um ihn herum lebendig werden. 'Der Overlord greift nicht nur die Technik an, sondern das Gleichgewicht von Ninjago. Ihr muesst den Goldenen Kern finden!' Ploetzlich greifen Rote Visier-Drohnen das Kloster an.",
         "background": "./game_images/background_nj_monastery.png",
         "character": "./game_images/character_nj_wu.png",
         "choices": [
             { "text": "Das Kloster mit Meister Wu verteidigen", "next": "c2_nj_11", "karma": -4 },
-            { "text": "Wus Rat folgen und sofort zurück nach New Ninjago City fliegen", "next": "c2_nj_12", "karma": 2 }
+            { "text": "Wus Rat folgen und sofort zurueck nach New Ninjago City fliegen", "next": "c2_nj_12", "karma": 2 }
         ]
     },
 
     "c2_nj_5": {
-        "text": "Das manuelle Herunterfahren löst eine energetische Kettenreaktion aus. Cyrus Borgs Labor wird von lila Blitzen überflutet und die Cyber-Sicherheitssysteme wenden sich gegen euch. Lloyd wird von schweren Sicherheits-Barrieren eingekesselt.",
+        "text": "Das manuelle Herunterfahren loest eine energetische Kettenreaktion aus. Cyrus Borgs Labor wird von lila Blitzen ueberflutet und die Cyber-Sicherheitssysteme wenden sich gegen euch. Lloyd wird von schweren Sicherheits-Barrieren eingekesselt.",
         "background": "./game_images/background_nj_lab.png",
         "character": "./game_images/character_nj_lloyd.png",
         "choices": [
-            { "text": "Lloyd mit Kais Feuerkräften freibrennen", "next": "c2_nj_13", "karma": -4 },
-            { "text": "Zane die Systeme überbrücken lassen", "next": "c2_nj_14", "karma": 2 }
+            { "text": "Lloyd mit Kais Feuerkraeften freibrennen", "next": "c2_nj_13", "karma": -4 },
+            { "text": "Zane die Systeme ueberbruecken lassen", "next": "c2_nj_14", "karma": 2 }
         ]
     },
 
     "c2_nj_6": {
-        "text": "Die Brücke bricht krachend in sich zusammen, doch die Nindroiden nutzen ihre Jetpacks und fliegen direkt auf den Flugsegler zu. Jay schreit panisch: 'Das war ein schlechter Plan! Sie haben Flügel! Warum haben die Dinger immer Flügel?!'",
+        "text": "Die Bruecke bricht krachend in sich zusammen, doch die Nindroiden nutzen ihre Jetpacks und fliegen direkt auf den Flugsegler zu. Jay schreit panisch: 'Das war ein schlechter Plan! Sie haben Fluegel! Warum haben die Dinger immer Fluegel?!'",
         "background": "./game_images/background_rs_neon_sky.png",
         "choices": [
             { "text": "Die Bordkanonen des Flugseglers aktivieren", "next": "c2_nj_17", "karma": 3 },
@@ -2975,46 +2971,46 @@ let gameData = {
     },
 
     "c2_nj_7": {
-        "text": "Cole und Jay kämpfen erbittert, doch Pythors Schlangen nutzen das techno-organische Gift, um die Ninja zu lähmen. Das lila Elixier droht, Coles Felskräfteradius zu infizieren. Ihr braucht ein starkes Gegenmittel oder ein Ablenkungsmanöver.",
+        "text": "Cole und Jay kaempfen erbittert, doch Pythors Schlangen nutzen das techno-organische Gift, um die Ninja zu laehmen. Das lila Elixier droht, Coles Felskraefteradius zu infizieren. Ihr braucht ein starkes Gegenmittel oder ein Ablenkungsmanoever.",
         "background": "./game_images/background_nj_subway.png",
         "character": "./game_images/character_nj_jay.png",
         "choices": [
             { "text": "Die Techno-Klinge in das U-Bahn-Schienennetz rammen", "next": "c2_nj_26", "required_item": "nj_techno_blade" },
-            { "text": "Mit Jays Blitzkräften einen gewaltigen Kurzschluss erzeugen", "next": "c2_nj_13", "karma": -3 }
+            { "text": "Mit Jays Blitzkraeften einen gewaltigen Kurzschluss erzeugen", "next": "c2_nj_13", "karma": -3 }
         ]
     },
 
     "c2_nj_8": {
-        "text": "Das Digiverse öffnet sich am Himmel! Eine gigantische, gold-violette Festung materialisiert sich über der Stadt. Der Overlord spricht mit hasserfüllter, digitaler Stimme: 'Ninja! Eure Waffen sind veraltet! Ich bin das neue Zeitalter!'",
+        "text": "Das Digiverse oeffnet sich am Himmel! Eine gigantische, gold-violette Festung materialisiert sich ueber der Stadt. Der Overlord spricht mit hasserfuellter, digitaler Stimme: 'Ninja! Eure Waffen sind veraltet! Ich bin das neue Zeitalter!'",
         "background": "./game_images/background_nj_sky.png",
         "character": "./game_images/character_nj_overlord.png",
         "choices": [
             { "text": "Die Festung mit der Techno-Klinge hacken", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
-            { "text": "Die Drachen-Mechs rufen und die Festung stürmen", "next": "c2_nj_19", "karma": -3 }
+            { "text": "Die Drachen-Mechs rufen und die Festung stuermen", "next": "c2_nj_19", "karma": -3 }
         ]
     },
 
     "c2_nj_11": {
-        "text": "Der Kampf im Kloster ist zerstörerisch. Die Visier-Drohnen brennen die heiligen Schriftrollen nieder. Wu wehrt sich mit seinem Stab, wird aber von der schieren Übermacht überwältigt. Er ruft: 'Vergiss mich! Rette Ninjago!'",
+        "text": "Der Kampf im Kloster ist zerstoererisch. Die Visier-Drohnen brennen die heiligen Schriftrollen nieder. Wu wehrt sich mit seinem Stab, wird aber von der schieren uebermacht ueberwaeltigt. Er ruft: 'Vergiss mich! Rette Ninjago!'",
         "background": "./game_images/background_nj_monastery.png",
         "choices": [
             { "text": "Meister Wu im Stich lassen und den Goldenen Kern suchen", "next": "c2_nj_27", "karma": -4 },
-            { "text": "Die Heilige Flöte spielen, um die Resonanz der Drohnen zu stören", "next": "c2_nj_26", "required_item": "nj_sacred_flute" }
+            { "text": "Die Heilige Floete spielen, um die Resonanz der Drohnen zu stoeren", "next": "c2_nj_26", "required_item": "nj_sacred_flute" }
         ]
     },
 
     "c2_nj_12": {
-        "text": "Ihr erreicht den Borg-Tower im Zentrum der Stadt. Doch die Sicherheits-KIs haben alle Aufzüge blockiert. Aus den Wänden fahren rotierende Laserklingen heraus. Nya versucht verzweifelt, das System mit ihrem Mech zu blockieren.",
+        "text": "Ihr erreicht den Borg-Tower im Zentrum der Stadt. Doch die Sicherheits-KIs haben alle Aufzuege blockiert. Aus den Waenden fahren rotierende Laserklingen heraus. Nya versucht verzweifelt, das System mit ihrem Mech zu blockieren.",
         "background": "./game_images/background_nj_lab.png",
         "character": "./game_images/character_nj_nya.png",
         "choices": [
             { "text": "Das Overlord-Abzeichen an den Scanner halten", "next": "c2_nj_26", "required_item": "nj_overlord_insignia" },
-            { "text": "Den Tower mit roher Gewalt von außen hochklettern", "next": "c2_nj_24", "karma": -4 }
+            { "text": "Den Tower mit roher Gewalt von aussen hochklettern", "next": "c2_nj_24", "karma": -4 }
         ]
     },
 
     "c2_nj_13": {
-        "text": "Kais Flammen schmelzen die Barrieren, lösen aber auch die automatische Sprinkleranlage aus, was Jays Blitzkräfte unkontrollierbar im Raum verteilt. Das ganze Labor gerät unter heftigen Strom und die Sensoren explodieren.",
+        "text": "Kais Flammen schmelzen die Barrieren, loesen aber auch die automatische Sprinkleranlage aus, was Jays Blitzkraefte unkontrollierbar im Raum verteilt. Das ganze Labor geraet unter heftigen Strom und die Sensoren explodieren.",
         "background": "./game_images/background_nj_lab.png",
         "choices": [
             { "text": "Als vereintes Team den Borg-Tower evakuieren", "next": "c2_nj_27", "karma": -3 },
@@ -3023,35 +3019,35 @@ let gameData = {
     },
 
     "c2_nj_14": {
-        "text": "Zane kalibriert seine internen Systeme und erzeugt ein eisiges Schutzschild, das die schädliche Strahlung absorbiert. Cole nutzt die Sekunde, um den Energiekern der feindlichen Drohnen mit einem mächtigen Schlag zu pulverisieren.",
+        "text": "Zane kalibriert seine internen Systeme und erzeugt ein eisiges Schutzschild, das die schaedliche Strahlung absorbiert. Cole nutzt die Sekunde, um den Energiekern der feindlichen Drohnen mit einem maechtigen Schlag zu pulverisieren.",
         "background": "./game_images/background_nj_lab.png",
         "choices": [
             { "text": "Die Techno-Klinge im Kern verankern", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
-            { "text": "Den Kern direkt mit Elementarkräften zerstören", "next": "c2_nj_19", "karma": -4 }
+            { "text": "Den Kern direkt mit Elementarkraeften zerstoeren", "next": "c2_nj_19", "karma": -4 }
         ]
     },
 
     "c2_nj_15": {
-        "text": "Das Signal führt euch tief in ein verlassenes Industriegebiet am Hafen. Hier haben die Nindroiden ein Portal errichtet, das Energie direkt aus dem Digiverse saugt. Lloyd spürt die dunkle Präsenz: 'Der Overlord lädt sich hier auf!'",
+        "text": "Das Signal fuehrt euch tief in ein verlassenes Industriegebiet am Hafen. Hier haben die Nindroiden ein Portal errichtet, das Energie direkt aus dem Digiverse saugt. Lloyd spuert die dunkle Praesenz: 'Der Overlord laedt sich hier auf!'",
         "background": "./game_images/background_nj_city_streets.png",
         "character": "./game_images/character_nj_lloyd.png",
         "choices": [
-            { "text": "Das Portal mit dem Overlord-Abzeichen überlasten", "next": "c2_nj_30", "required_item": "nj_overlord_insignia" },
+            { "text": "Das Portal mit dem Overlord-Abzeichen ueberlasten", "next": "c2_nj_30", "required_item": "nj_overlord_insignia" },
             { "text": "Das Portal mit Cole und Kai physisch attackieren", "next": "c2_nj_24", "karma": 2 }
         ]
     },
 
     "c2_nj_17": {
-        "text": "Die Kanonen des Flugseglers feuern reines Licht ab! Die fliegenden Nindroiden werden reihenweise vom Himmel geholt. Doch die schiere Explosion beschädigt die Hauptsegel und das Schiff droht abzustürzen.",
+        "text": "Die Kanonen des Flugseglers feuern reines Licht ab! Die fliegenden Nindroiden werden reihenweise vom Himmel geholt. Doch die schiere Explosion beschaedigt die Hauptsegel und das Schiff droht abzustuerzen.",
         "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
             { "text": "Das Schiff auf dem Borg-Tower notlanden", "next": "c2_nj_25", "karma": 4 },
-            { "text": "Das Steuer loslassen und im freien Fall kämpfen", "next": "c2_nj_26", "required_item": "nj_techno_blade" }
+            { "text": "Das Steuer loslassen und im freien Fall kaempfen", "next": "c2_nj_26", "required_item": "nj_techno_blade" }
         ]
     },
 
     "c2_nj_19": {
-        "text": "Der Frontalangriff scheitert an der techno-organischen Panzerung der Festung. Die Mechs der Ninja frieren mitten in der Luft ein, als der Overlord den Saft abdreht. Ihr stürzt unaufhaltsam in die Tiefe der Stadt.",
+        "text": "Der Frontalangriff scheitert an der techno-organischen Panzerung der Festung. Die Mechs der Ninja frieren mitten in der Luft ein, als der Overlord den Saft abdreht. Ihr stuerzt unaufhaltsam in die Tiefe der Stadt.",
         "background": "./game_images/background_nj_sky.png",
         "choices": [
             { "text": "Spinjitzu einsetzen um den Sturz abzufedern", "next": "c2_nj_27", "karma": -4 },
@@ -3060,16 +3056,16 @@ let gameData = {
     },
 
     "c2_nj_22": {
-        "text": "Mit Coles gewaltiger Erdkraft baut ihr eine massive Steinmauer gegen Pythors Angriffe. Jay nutzt den Schutz, um die Kabel neu zu verlegen. Doch die Schlangen fangen an, die Mauer mit ihren Säurezähnen zu zersetzen.",
+        "text": "Mit Coles gewaltiger Erdkraft baut ihr eine massive Steinmauer gegen Pythors Angriffe. Jay nutzt den Schutz, um die Kabel neu zu verlegen. Doch die Schlangen fangen an, die Mauer mit ihren Saeurezaehnen zu zersetzen.",
         "background": "./game_images/background_nj_subway.png",
         "choices": [
-            { "text": "Die Heilige Flöte spielen um ihre Sinne zu vernebeln", "next": "c2_nj_30", "required_item": "nj_sacred_flute" },
-            { "text": "Die Mauer einstürzen lassen und die Flucht ergreifen", "next": "c2_nj_25" }
+            { "text": "Die Heilige Floete spielen um ihre Sinne zu vernebeln", "next": "c2_nj_30", "required_item": "nj_sacred_flute" },
+            { "text": "Die Mauer einstuerzen lassen und die Flucht ergreifen", "next": "c2_nj_25" }
         ]
     },
 
     "c2_nj_24": {
-        "text": "Der brute-force Angriff verursacht eine massive Explosion der Generatoren. Der Borg-Tower erzittert und New Ninjago City versinkt im kompletten Chaos. Die Nindroiden triumphieren, während die Ninja zurückgedrängt werden.",
+        "text": "Der brute-force Angriff verursacht eine massive Explosion der Generatoren. Der Borg-Tower erzittert und New Ninjago City versinkt im kompletten Chaos. Die Nindroiden triumphieren, waehrend die Ninja zurueckgedraengt werden.",
         "background": "./game_images/background_nj_city_streets.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -3077,17 +3073,17 @@ let gameData = {
     },
 
     "c2_nj_25": {
-        "text": "Ihr erreicht den Dachgipfel des Borg-Towers. Inmitten eines digitalen Gewitters schwebt der Overlord in seiner ultimativen Cyber-Rüstung. Lloyd aktiviert seine goldene Elementarenergie: 'Es endet hier, Overlord!'",
+        "text": "Ihr erreicht den Dachgipfel des Borg-Towers. Inmitten eines digitalen Gewitters schwebt der Overlord in seiner ultimativen Cyber-Ruestung. Lloyd aktiviert seine goldene Elementarenergie: 'Es endet hier, Overlord!'",
         "background": "./game_images/background_nj_sky.png",
         "character": "./game_images/character_nj_lloyd.png",
         "choices": [
-            { "text": "Ihn mit der Techno-Klinge kurzschließen", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
+            { "text": "Ihn mit der Techno-Klinge kurzschliessen", "next": "c2_nj_30", "required_item": "nj_techno_blade" },
             { "text": "Ein kombiniertes Elementar-Spinjitzu starten", "next": "c2_nj_27", "karma": -2 }
         ]
     },
 
     "c2_nj_26": {
-        "text": "Durch den cleveren Einsatz deines Gegenstands bricht die feindliche Energiebarriere zusammen. Das digitale Virus wird aus den Systemen gespült und der Overlord verliert den Zugriff auf die Abwehrtürme.",
+        "text": "Durch den cleveren Einsatz deines Gegenstands bricht die feindliche Energiebarriere zusammen. Das digitale Virus wird aus den Systemen gespuelt und der Overlord verliert den Zugriff auf die Abwehrtuerme.",
         "background": "./game_images/background_nj_lab.png",
         "choices": [
             { "text": "Den Overlord im Zentrum konfrontieren", "next": "c2_nj_30" }
@@ -3095,7 +3091,7 @@ let gameData = {
     },
 
     "c2_nj_27": {
-        "text": "Das finale Gefecht hinterlässt schwere Schäden an der Infrastruktur der Stadt. Der Overlord wird temporär in das Digiverse zurückgedrängt, doch New Ninjago City liegt in Trümmern und die Energieversorgung ist dauerhaft instabil. Die Ninja blicken erschöpft auf das Trümmerfeld.",
+        "text": "Das finale Gefecht hinterlaesst schwere Schaeden an der Infrastruktur der Stadt. Der Overlord wird temporaer in das Digiverse zurueckgedraengt, doch New Ninjago City liegt in Truemmern und die Energieversorgung ist dauerhaft instabil. Die Ninja blicken erschoepft auf das Truemmerfeld.",
         "background": "./game_images/background_nj_city_streets.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -3103,15 +3099,15 @@ let gameData = {
     },
 
     "c2_nj_28": {
-        "text": "Kai und Nya bilden eine feurige Verteidigungslinie gegen die heranstürmenden Nindroiden, während Lloyd und Zane sich bis zum digitalen Hauptprozessor durchschlagen.",
+        "text": "Kai und Nya bilden eine feurige Verteidigungslinie gegen die heranstuermenden Nindroiden, waehrend Lloyd und Zane sich bis zum digitalen Hauptprozessor durchschlagen.",
         "background": "./game_images/background_nj_lab.png",
         "choices": [
-            { "text": "Den finalen Virus-Löschbefehl eingeben", "next": "c2_nj_25" }
+            { "text": "Den finalen Virus-Loeschbefehl eingeben", "next": "c2_nj_25" }
         ]
     },
 
     "c2_nj_30": {
-        "text": "Mit einem monumentalen Finale zerschmettern die Ninja – getragen von Lloyds goldener Kraft, Zanes unermüdlicher Logik und dem verheerenden Hack der Techno-Klinge – die Rüstung des Overlords. Das lila Leuchten erlischt im gesamten Netz und weicht reinem, hellem Licht. Die Stadt atmet auf, während die Nindroiden sich in harmlose Schaltkreise auflösen. Meister Wu tritt lächelnd zu den Ninja, streicht sich über den Bart und sagt stolz: 'Ihr habt eure Lektion gelernt, Ninja. Technologie ist mächtig, aber das stärkste Element ist und bleibt euer Zusammenhalt!' Die Ninja kreuzen ihre Klingen und rufen im Chor: 'NINJA-GO!'",
+        "text": "Mit einem monumentalen Finale zerschmettern die Ninja – getragen von Lloyds goldener Kraft, Zanes unermuedlicher Logik und dem verheerenden Hack der Techno-Klinge – die Ruestung des Overlords. Das lila Leuchten erlischt im gesamten Netz und weicht reinem, hellem Licht. Die Stadt atmet auf, waehrend die Nindroiden sich in harmlose Schaltkreise aufloesen. Meister Wu tritt laechelnd zu den Ninja, streicht sich ueber den Bart und sagt stolz: 'Ihr habt eure Lektion gelernt, Ninja. Technologie ist maechtig, aber das staerkste Element ist und bleibt euer Zusammenhalt!' Die Ninja kreuzen ihre Klingen und rufen im Chor: 'NINJA-GO!'",
         "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" }
@@ -3363,7 +3359,7 @@ let gameData = {
     "su_30": {
         "text": "Alle Realitaeten der Gems beginnen sich zu ueberlagern. uebergang zu Kapitel 4 aktiviert.",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "c4_start" }
+            { "text": "Kapitel 4 starten", "next": "end" }
         ]
     },
     "c3_sd_start": {
@@ -3601,7 +3597,7 @@ let gameData = {
     "sd_30": {
         "text": "Der Fall ist geloest, aber etwas Groesseres bleibt im Hintergrund aktiv. uebergang zu Kapitel 4 oeffnet sich.",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "c4_start" }
+            { "text": "Kapitel 4 starten", "next": "end" }
         ]
     },
     "c3_tmnt_start": {
@@ -3750,7 +3746,7 @@ let gameData = {
     "tmnt_ending_1": {
         "text": "Der Kern stabilisiert sich kurz – dann beginnt er, sich mit der Stadt zu verbinden. uebergang zu Kapitel 4 oeffnet sich.",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "c4_start" }
+            { "text": "Kapitel 4 starten", "next": "end" }
         ]
     },
     "c3_shs_start": {
@@ -3904,7 +3900,7 @@ let gameData = {
     "shs_end_1": {
         "text": "Der Synchronisationskern aktiviert sich vollstaendig. Die Realitaet der Stadt beginnt sich neu zu strukturieren. uebergang zu Kapitel 4 oeffnet sich.",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "c4_start" }
+            { "text": "Kapitel 4 starten", "next": "end" }
         ]
     },
     "c3_tdi_start": {
@@ -4099,1081 +4095,45 @@ let gameData = {
     "tdi_end_1": {
         "text": "Die Insel scheint selbst Teil des Spiels zu werden. uebergang zu Kapitel 4 wird aktiviert.",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "c4_start" }
-        ]
-    },
-    "c4_start": {
-        "text": "Kapitel 4. Wir kommen langsam naeher zum Ende, hoffentlich hast du nicht zu viele falschen Entscheidungen getroffen.",
-        "choices": [
-            { "text": "Avatar", "next": "c4_atla_start" },
-            { "text": "Pinguine aus Madagascar", "next": "c4_pm_start" },
-            { "text": "Rick and Morty", "next": "c4_rm_start" },
-            { "text": "Darkwing Duck", "next": "c4_dd_start" },
-            { "text": "Garfield", "next": "c4_ga_start" }
-        ]
-    },
-    "c4_atla_start": {
-        "text": "Der Himmel ueber der Erdkoenigreich-Grenze ist dunkel. Eine Feuer-Navy-Flotte blockiert den Zugang zum Norden. Aang, Katara und Sokka beraten sich hastig waehrend Appa nervoes im Schnee stampft.",
-        "choices": [
-            { "text": "Aang folgen", "next": "atla_1" },
-            { "text": "Katara folgen", "next": "atla_2", "karma": 1 },
-            { "text": "Sokka folgen", "next": "atla_3" },
-            { "text": "Die Feuerflotte beobachten", "next": "atla_4", "karma": -1 }
-        ]
-    },
-
-    "atla_1": {
-        "text": "Aang: 'Wir muessen einen Weg durch die Blockade finden, ohne Gewalt wenn moeglich.'",
-        "choices": [
-            { "text": "Alternative Route suchen", "next": "atla_5" },
-            { "text": "Direkt durchbrechen", "next": "atla_6", "karma": -2 }
-        ]
-    },
-
-    "atla_2": {
-        "text": "Katara konzentriert sich auf das Eis unter euch. 'Das Wasser hier erzaehlt Geschichten… etwas stimmt nicht.'",
-        "choices": [
-            { "text": "Wasserbaendigen untersuchen", "next": "atla_7", "gain_item": "water_memory" },
-            { "text": "Ignorieren und weitergehen", "next": "atla_6" }
-        ]
-    },
-
-    "atla_3": {
-        "text": "Sokka plant eine Route auf einer alten Karte. 'Wenn wir hier durchgehen, umgehen wir die Flotte komplett… theoretisch.'",
-        "choices": [
-            { "text": "Sokkas Plan folgen", "next": "atla_5" },
-            { "text": "Plan riskant finden", "next": "atla_6" }
-        ]
-    },
-
-    "atla_4": {
-        "text": "Die Feuer-Navy reagiert sofort auf deine Bewegung. Ein Kommandant laesst die Suche verstaerken.",
-        "choices": [
-            { "text": "Verstecken", "next": "atla_8" },
-            { "text": "Beobachten bleiben", "next": "atla_6", "karma": -1 }
-        ]
-    },
-
-    "atla_5": {
-        "text": "Ihr erreicht eine alte, gefrorene Hoehle mit seltsamen Wasserstrukturen im Eis.",
-        "choices": [
-            { "text": "Hoehle betreten", "next": "atla_9" },
-            { "text": "Weiter aussen umgehen", "next": "atla_8" }
-        ]
-    },
-
-    "atla_6": {
-        "text": "Die Feuer-Navy beginnt das Gebiet systematisch zu durchkaemmen.",
-        "choices": [
-            { "text": "Flucht planen", "next": "atla_8" },
-            { "text": "Konfrontation vorbereiten", "next": "atla_10", "karma": 2 }
-        ]
-    },
-
-    "atla_7": {
-        "text": "Das Wasser zeigt Visionen vergangener Wasserbaendiger, die eine Warnung hinterlassen.",
-        "choices": [
-            { "text": "Vision analysieren", "next": "atla_9", "gain_item": "spirit_trace" },
-            { "text": "Abbrechen", "next": "atla_8" }
-        ]
-    },
-
-    "atla_8": {
-        "text": "Zuko beobachtet euch aus der Ferne, ohne sich zu zeigen.",
-        "choices": [
-            { "text": "Ihn verfolgen", "next": "atla_11" },
-            { "text": "Ignorieren", "next": "atla_10" }
-        ]
-    },
-
-    "atla_9": {
-        "text": "Ein Wassergeist reagiert auf eure Anwesenheit und blockiert den Weg.",
-        "choices": [
-            { "text": "Ruhig kommunizieren", "next": "atla_12", "karma": 2 },
-            { "text": "Durchbrechen", "next": "atla_10", "karma": -2 }
-        ]
-    },
-
-    "atla_10": {
-        "text": "Die Flotte rueckt naeher. Die Lage wird instabil.",
-        "choices": [
-            { "text": "Flucht Richtung Norden", "next": "atla_13" },
-            { "text": "Ablenkung erzeugen", "next": "atla_14", "karma": 1 }
-        ]
-    },
-
-    "atla_11": {
-        "text": "Zuko hinterlaesst Hinweise auf eine interne Feuer-Navy-Spaltung.",
-        "choices": [
-            { "text": "Kontakt aufnehmen", "next": "atla_15" },
-            { "text": "Beobachten", "next": "atla_13" }
-        ]
-    },
-
-    "atla_12": {
-        "text": "Der Wassergeist gewaehrt euch sicheren Durchgang, aber beobachtet euch weiter.",
-        "choices": [
-            { "text": "Durchgehen", "next": "atla_13", "karma": 2 }
-        ]
-    },
-
-    "atla_13": {
-        "text": "Ihr erreicht einen verlassenen Suedpol-Vorposten.",
-        "choices": [
-            { "text": "Ressourcen sammeln", "next": "atla_16", "gain_item": "supplies" },
-            { "text": "Weiterziehen", "next": "atla_15" }
-        ]
-    },
-
-    "atla_14": {
-        "text": "Die Feuer-Navy geraet kurz ins Chaos durch eine falsche Spur.",
-        "choices": [
-            { "text": "Flucht nutzen", "next": "atla_13", "karma": 1 }
-        ]
-    },
-
-    "atla_15": {
-        "text": "Toph taucht ploetzlich auf. 'Ihr seid laut. Sehr laut.'",
-        "choices": [
-            { "text": "Hilfe annehmen", "next": "atla_17", "karma": 2 },
-            { "text": "Misstrauen", "next": "atla_16" }
-        ]
-    },
-
-    "atla_16": {
-        "text": "Die Gruppe wird erneut von Feuer-Soldaten verfolgt.",
-        "choices": [
-            { "text": "Kampf vermeiden", "next": "atla_18" },
-            { "text": "Stellung halten", "next": "atla_17", "karma": -1 }
-        ]
-    },
-
-    "atla_17": {
-        "text": "Toph oeffnet einen unterirdischen Tunnelweg.",
-        "choices": [
-            { "text": "Folgen", "next": "atla_19" }
-        ]
-    },
-
-    "atla_18": {
-        "text": "Die Flucht fuehrt euch tiefer in das Eis.",
-        "choices": [
-            { "text": "Weiter", "next": "atla_19" }
-        ]
-    },
-
-    "atla_19": {
-        "text": "Eine alte Lufttempel-Reliktkammer erscheint im Eis.",
-        "choices": [
-            { "text": "Untersuchen", "next": "atla_20" },
-            { "text": "Ignorieren", "next": "atla_21" }
-        ]
-    },
-
-    "atla_20": {
-        "text": "Ein Avatar-Relikt reagiert auf Aang.",
-        "choices": [
-            { "text": "Aktivieren", "next": "atla_22", "gain_item": "avatar_echo" }
-        ]
-    },
-
-    "atla_21": {
-        "text": "Die Feuer-Navy naehert sich erneut.",
-        "choices": [
-            { "text": "Flucht fortsetzen", "next": "atla_22" }
-        ]
-    },
-
-    "atla_22": {
-        "text": "Aang spuert eine grosse Stoerung im Gleichgewicht der Welt.",
-        "choices": [
-            { "text": "Zustimmen", "next": "atla_23", "karma": 2 },
-            { "text": "Zweifeln", "next": "atla_23", "karma": -2 }
-        ]
-    },
-
-    "atla_23": {
-        "text": "Zuko steht nun direkt vor euch.",
-        "choices": [
-            { "text": "Reden", "next": "atla_24" },
-            { "text": "Angreifen", "next": "atla_25", "karma": -2 }
-        ]
-    },
-
-    "atla_24": {
-        "text": "Zuko: 'Ich suche nicht euch. Ich suche meine eigene Antwort.'",
-        "choices": [
-            { "text": "Zusammenarbeiten", "next": "atla_26", "karma": 2 },
-            { "text": "Ablehnen", "next": "atla_25" }
-        ]
-    },
-
-    "atla_25": {
-        "text": "Der Kampf destabilisiert das Gebiet stark.",
-        "choices": [
-            { "text": "Weiter kaempfen", "next": "atla_27" },
-            { "text": "Rueckzug", "next": "atla_26" }
-        ]
-    },
-
-    "atla_26": {
-        "text": "Gemeinsam erreicht ihr eine spirituelle Nexus-Spalte im Eis.",
-        "choices": [
-            { "text": "Naehern", "next": "atla_28" }
-        ]
-    },
-
-    "atla_27": {
-        "text": "Die Umgebung beginnt zu zerbrechen.",
-        "choices": [
-            { "text": "Letzte Entscheidung", "next": "atla_28" }
-        ]
-    },
-
-    "atla_28": {
-        "text": "Der Avatar-Zustand reagiert stark auf den Nexus.",
-        "choices": [
-            { "text": "Kontrollieren", "next": "atla_29" },
-            { "text": "Loslassen", "next": "atla_29" }
-        ]
-    },
-
-    "atla_29": {
-        "text": "Die Realitaet stabilisiert sich kurzzeitig.",
-        "choices": [
-            { "text": "Weitergehen", "next": "atla_30" }
-        ]
-    },
-
-    "atla_30": {
-        "text": "Der Nexus oeffnet einen uebergang. Die Welt bereitet sich auf das letzte Kapitel vor.",
-        "choices": [
-            { "text": "Kapitel 5 starten", "next": "end" }
-        ]
-    },
-    "c4_pm_start": {
-        "text": "Mitten in der Nacht faellt im Zoo ploetzlich der Strom aus. Sirenen heulen kurz auf, bevor alles still wird. Skipper steht bereits auf dem Dach des Hauptgebaeudes und beobachtet den Hafen mit einem Fernglas.",
-        "choices": [
-            { "text": "Skipper folgen", "next": "pm_1" },
-            { "text": "Kowalski im Labor suchen", "next": "pm_2" },
-            { "text": "Dem Stromausfall nachgehen", "next": "pm_3", "karma": -2 },
-            { "text": "Private helfen Tiere zu beruhigen", "next": "pm_4", "karma": 2 }
-        ]
-    },
-
-    "pm_1": {
-        "text": "Skipper: 'Jemand hat die Sicherheitskameras deaktiviert. Das passiert nicht zufaellig.'",
-        "choices": [
-            { "text": "Den Hafen beobachten", "next": "pm_5" },
-            { "text": "Die Kanalisation pruefen", "next": "pm_6" }
-        ]
-    },
-
-    "pm_2": {
-        "text": "Kowalski analysiert beschaedigte Datenchips. 'Interessant. Sehr interessant. Und potenziell katastrophal.'",
-        "choices": [
-            { "text": "Bei der Analyse helfen", "next": "pm_7", "gain_item": "security_chip" },
-            { "text": "Skipper informieren", "next": "pm_5" }
-        ]
-    },
-
-    "pm_3": {
-        "text": "Du findest beschaedigte Leitungen hinter dem Aquarium. Frische Werkzeugspuren sind sichtbar.",
-        "choices": [
-            { "text": "Weiter untersuchen", "next": "pm_8" },
-            { "text": "Zurueckmelden", "next": "pm_5" }
-        ]
-    },
-
-    "pm_4": {
-        "text": "Private versucht panische Tiere zu beruhigen. Einige glauben bereits an einen Angriff.",
-        "choices": [
-            { "text": "Mithelfen", "next": "pm_9", "karma": 3 },
-            { "text": "Die Geruechte ignorieren", "next": "pm_5", "karma": -1 }
-        ]
-    },
-
-    "pm_5": {
-        "text": "Im Hafen liegt ein unbekanntes Versorgungsschiff ohne Kennzeichnung.",
-        "choices": [
-            { "text": "Einschleusen", "next": "pm_10" },
-            { "text": "Beobachten", "next": "pm_11" }
-        ]
-    },
-
-    "pm_6": {
-        "text": "In der Kanalisation entdeckt Rico mehrere Kisten mit Fischsymbolen.",
-        "choices": [
-            { "text": "Kisten oeffnen", "next": "pm_12", "gain_item": "frozen_herring" },
-            { "text": "Unberuehrt lassen", "next": "pm_11" }
-        ]
-    },
-
-    "pm_7": {
-        "text": "Kowalski entdeckt verschluesselte Nachrichten mit Verbindungen zu Dr. Blowhole.",
-        "choices": [
-            { "text": "Nachrichten entschluesseln", "next": "pm_13" },
-            { "text": "Sofort handeln", "next": "pm_10", "karma": -1 }
-        ]
-    },
-
-    "pm_8": {
-        "text": "Ein versteckter Tunnel fuehrt direkt unter den Zoo.",
-        "choices": [
-            { "text": "Tunnel betreten", "next": "pm_14" },
-            { "text": "Skipper holen", "next": "pm_11", "karma": 1 }
-        ]
-    },
-
-    "pm_9": {
-        "text": "Mort behauptet ploetzlich, er habe einen Delfin im Zoo gesehen.",
-        "choices": [
-            { "text": "Mort glauben", "next": "pm_14" },
-            { "text": "Ignorieren", "next": "pm_11", "karma": -2 }
-        ]
-    },
-
-    "pm_10": {
-        "text": "An Bord des Schiffes fehlen saemtliche Besatzungsmitglieder.",
-        "choices": [
-            { "text": "Frachter durchsuchen", "next": "pm_15" },
-            { "text": "Maschinenraum pruefen", "next": "pm_16" }
-        ]
-    },
-
-    "pm_11": {
-        "text": "Skipper wird zunehmend misstrauisch. 'Zu ruhig. Das gefaellt mir nicht.'",
-        "choices": [
-            { "text": "Wachen verstaerken", "next": "pm_17", "karma": 2 },
-            { "text": "Direkt weitersuchen", "next": "pm_15" }
-        ]
-    },
-
-    "pm_12": {
-        "text": "Die Kisten enthalten gefrorene Heringe mit versteckten Sendern.",
-        "choices": [
-            { "text": "Sender analysieren", "next": "pm_13", "gain_item": "tracking_beacon" },
-            { "text": "Zerstoeren", "next": "pm_17", "karma": -1 }
-        ]
-    },
-
-    "pm_13": {
-        "text": "Kowalski entdeckt ein Signal unter dem Aquarium.",
-        "choices": [
-            { "text": "Signal verfolgen", "next": "pm_18" },
-            { "text": "Signal blockieren", "next": "pm_17", "karma": 1 }
-        ]
-    },
-
-    "pm_14": {
-        "text": "Im Tunnel hoerst du metallische Geraeusche und entfernte Delfinlaute.",
-        "choices": [
-            { "text": "Leise weitergehen", "next": "pm_18" },
-            { "text": "Angriff vorbereiten", "next": "pm_19", "karma": -2 }
-        ]
-    },
-
-    "pm_15": {
-        "text": "Private entdeckt persoenliche Gegenstaende der verschwundenen Crew.",
-        "choices": [
-            { "text": "Hinweise sammeln", "next": "pm_20", "gain_item": "captain_log" },
-            { "text": "Weiter ignorieren", "next": "pm_16", "karma": -1 }
-        ]
-    },
-
-    "pm_16": {
-        "text": "Der Maschinenraum wurde absichtlich sabotiert.",
-        "choices": [
-            { "text": "Reparieren", "next": "pm_20", "karma": 2 },
-            { "text": "Evakuieren", "next": "pm_17" }
-        ]
-    },
-
-    "pm_17": {
-        "text": "Mehrere Seehunde verlassen ploetzlich panisch das Wassergehege.",
-        "choices": [
-            { "text": "Untersuchen", "next": "pm_18" },
-            { "text": "Ignorieren", "next": "pm_21", "karma": -2 }
-        ]
-    },
-
-    "pm_18": {
-        "text": "Dr. Blowhole erscheint auf einem Bildschirm. 'Wie schoen euch wiederzusehen, Pinguine.'",
-        "choices": [
-            { "text": "Mit ihm reden", "next": "pm_22" },
-            { "text": "Signal orten", "next": "pm_23" }
-        ]
-    },
-
-    "pm_19": {
-        "text": "Der Angriff loest einen Alarm im gesamten Zoo aus.",
-        "choices": [
-            { "text": "Flucht", "next": "pm_21", "karma": -3 },
-            { "text": "Weitermachen", "next": "pm_23" }
-        ]
-    },
-
-    "pm_20": {
-        "text": "Das Captain-Log erwaehnt geheime Lieferungen ans Aquarium.",
-        "choices": [
-            { "text": "Aquarium aufsuchen", "next": "pm_24" },
-            { "text": "Skipper warnen", "next": "pm_22", "karma": 1 }
-        ]
-    },
-
-    "pm_21": {
-        "text": "Die Kontrolle ueber den Zoo beginnt zu kollabieren.",
-        "choices": [
-            { "text": "Tiere evakuieren", "next": "pm_24", "karma": 3 },
-            { "text": "Nur Dr. Blowhole verfolgen", "next": "pm_23", "karma": -2 }
-        ]
-    },
-
-    "pm_22": {
-        "text": "Dr. Blowhole behauptet, jemand anderes stecke hinter allem.",
-        "choices": [
-            { "text": "Glauben", "next": "pm_25" },
-            { "text": "Ablehnen", "next": "pm_23", "karma": -1 }
-        ]
-    },
-
-    "pm_23": {
-        "text": "Rico entdeckt Sprengladungen unter dem Aquarium.",
-        "choices": [
-            { "text": "Entschaerfen", "next": "pm_26", "required_item": "security_chip" },
-            { "text": "Ignorieren", "next": "pm_27", "karma": -3 }
-        ]
-    },
-
-    "pm_24": {
-        "text": "Im Aquarium findest du versteckte U-Boote der Delfine.",
-        "choices": [
-            { "text": "Sabotieren", "next": "pm_26" },
-            { "text": "Untersuchen", "next": "pm_25", "gain_item": "submarine_codes" }
-        ]
-    },
-
-    "pm_25": {
-        "text": "Ein unbekannter Agent funkt heimlich mit Blowhole.",
-        "choices": [
-            { "text": "Signal abhoeren", "next": "pm_28", "required_item": "tracking_beacon" },
-            { "text": "Direkt eingreifen", "next": "pm_27", "karma": -1 }
-        ]
-    },
-
-    "pm_26": {
-        "text": "Die Sprengladungen werden deaktiviert, aber der Zoo bleibt instabil.",
-        "choices": [
-            { "text": "Weiter suchen", "next": "pm_28" },
-            { "text": "Evakuierung abschliessen", "next": "pm_29", "karma": 2 }
-        ]
-    },
-
-    "pm_27": {
-        "text": "Explosionen erschuettern Teile des Hafens.",
-        "choices": [
-            { "text": "Rettung organisieren", "next": "pm_29", "karma": 3 },
-            { "text": "Blowhole verfolgen", "next": "pm_28", "karma": -2 }
-        ]
-    },
-
-    "pm_28": {
-        "text": "Der wahre Drahtzieher entpuppt sich als eine Gruppe abtruenniger Robben.",
-        "choices": [
-            { "text": "Verhandeln", "next": "pm_30", "karma": 2 },
-            { "text": "Angreifen", "next": "pm_29", "karma": -2 }
-        ]
-    },
-
-    "pm_29": {
-        "text": "Der Zoo bleibt beschaedigt zurueck, aber die Gefahr ist vorerst vorbei.",
-        "choices": [
-            { "text": "Skipper folgen", "next": "pm_30" }
-        ]
-    },
-
-    "pm_30": {
-        "text": "Skipper blickt ueber den Hafen. 'Jungs... das war erst Runde eins.'",
-        "choices": [
-            { "text": "Kapitel 5 starten", "next": "end" }
-        ]
-    },
-    "c4_rm_start": {
-        "text": "Du stolperst durch ein gruenes Portal direkt in Rick Sanchez' Garage. ueberall liegen halbfertige Geraete, Alien-Batterien und leuchtende Fluessigkeiten. Morty drueckt panisch auf einem Controller, waehrend Rick unter einem rauchenden Reaktor verschwindet.",
-        "choices": [
-            { "text": "Rick helfen", "next": "rm_1" },
-            { "text": "Morty beruhigen", "next": "rm_2", "karma": 2 },
-            { "text": "Portal-Gun untersuchen", "next": "rm_3", "karma": -2 },
-            { "text": "Garage durchsuchen", "next": "rm_4" }
-        ]
-    },
-
-    "rm_1": {
-        "text": "Rick zieht ein verkohltes Kabel aus dem Reaktor. 'Grossartig. Irgendein Idiot hat die Raum-Zeit-Batterie falsch synchronisiert.'",
-        "choices": [
-            { "text": "Beim Reparieren helfen", "next": "rm_5", "gain_item": "phase_tool" },
-            { "text": "Nachfragen was passiert ist", "next": "rm_6" }
-        ]
-    },
-
-    "rm_2": {
-        "text": "Morty: 'Rick hat irgendwas aktiviert und jetzt verschwinden ganze Dimensionen aus dem Radar!'",
-        "choices": [
-            { "text": "Morty glauben", "next": "rm_6" },
-            { "text": "Rick suchen", "next": "rm_1" }
-        ]
-    },
-
-    "rm_3": {
-        "text": "Die Portal-Gun reagiert ploetzlich auf deine Beruehrung und oeffnet mehrere instabile Mini-Portale.",
-        "choices": [
-            { "text": "Portale schliessen", "next": "rm_7", "karma": 2 },
-            { "text": "Ein Portal betreten", "next": "rm_8", "karma": -3 }
-        ]
-    },
-
-    "rm_4": {
-        "text": "Zwischen Schrott findest du ein halb verstecktes Geraet mit der Aufschrift 'Do Not Touch'.",
-        "choices": [
-            { "text": "Aktivieren", "next": "rm_8" },
-            { "text": "Rick zeigen", "next": "rm_5", "karma": 1 }
-        ]
-    },
-
-    "rm_5": {
-        "text": "Rick scannt das Geraet kurz. 'Okay… das sollte definitiv nicht hier sein.'",
-        "choices": [
-            { "text": "Fragen woher es kommt", "next": "rm_9" },
-            { "text": "Direkt zerstoeren", "next": "rm_10", "karma": -1 }
-        ]
-    },
-
-    "rm_6": {
-        "text": "Ein Alarm aktiviert sich im Haus. Mehrere rote Warnsymbole erscheinen auf allen Bildschirmen.",
-        "choices": [
-            { "text": "Warnung analysieren", "next": "rm_11" },
-            { "text": "Ignorieren", "next": "rm_8", "karma": -2 }
-        ]
-    },
-
-    "rm_7": {
-        "text": "Die Mini-Portale kollabieren, aber eines zeigt kurz eine zerstoerte Version der Erde.",
-        "choices": [
-            { "text": "Beobachten", "next": "rm_11" },
-            { "text": "Verbindung abbrechen", "next": "rm_9" }
-        ]
-    },
-
-    "rm_8": {
-        "text": "Du landest in einer chaotischen Alien-Markthalle voller bewaffneter Haendler.",
-        "choices": [
-            { "text": "Unauffaellig bleiben", "next": "rm_12" },
-            { "text": "Technologie stehlen", "next": "rm_13", "gain_item": "quantum_chip", "karma": -2 }
-        ]
-    },
-
-    "rm_9": {
-        "text": "Rick oeffnet ein verstecktes Labor unter der Garage.",
-        "choices": [
-            { "text": "Folgen", "next": "rm_14" },
-            { "text": "Oben bleiben", "next": "rm_11" }
-        ]
-    },
-
-    "rm_10": {
-        "text": "Die Explosion beschaedigt mehrere Dimension-Tracker.",
-        "choices": [
-            { "text": "Reparieren helfen", "next": "rm_14" },
-            { "text": "Schuld vertuschen", "next": "rm_13", "karma": -3 }
-        ]
-    },
-
-    "rm_11": {
-        "text": "Die Warnung zeigt ein unbekanntes Signal ausserhalb der Zentralen Kurve.",
-        "choices": [
-            { "text": "Signal verfolgen", "next": "rm_15" },
-            { "text": "Rick informieren", "next": "rm_14", "karma": 1 }
-        ]
-    },
-
-    "rm_12": {
-        "text": "Ein Alien-Haendler erkennt dich als 'Freund von Rick Sanchez'.",
-        "choices": [
-            { "text": "Informationen kaufen", "next": "rm_15", "required_item": "phase_tool" },
-            { "text": "Weglaufen", "next": "rm_13" }
-        ]
-    },
-
-    "rm_13": {
-        "text": "Mehrere interdimensionale Kopfgeldjaeger tauchen auf.",
-        "choices": [
-            { "text": "Verhandeln", "next": "rm_16" },
-            { "text": "Kaempfen", "next": "rm_17", "karma": -2 }
-        ]
-    },
-
-    "rm_14": {
-        "text": "Im Labor entdeckt Rick eine manipulierte Portal-Signatur.",
-        "choices": [
-            { "text": "Analysieren", "next": "rm_18", "gain_item": "portal_signature" },
-            { "text": "Ignorieren", "next": "rm_16" }
-        ]
-    },
-
-    "rm_15": {
-        "text": "Das Signal fuehrt zu einer verlassenen Citadel-Station.",
-        "choices": [
-            { "text": "Station betreten", "next": "rm_19" },
-            { "text": "Aussen scannen", "next": "rm_18" }
-        ]
-    },
-
-    "rm_16": {
-        "text": "Morty wird nervoes. 'Rick… irgendwas fuehlt sich falsch an.'",
-        "choices": [
-            { "text": "Morty ernst nehmen", "next": "rm_19", "karma": 2 },
-            { "text": "Ignorieren", "next": "rm_17", "karma": -2 }
-        ]
-    },
-
-    "rm_17": {
-        "text": "Die Situation eskaliert und mehrere Portale reissen gleichzeitig auf.",
-        "choices": [
-            { "text": "Portale stabilisieren", "next": "rm_20", "required_item": "portal_signature" },
-            { "text": "Fliehen", "next": "rm_21", "karma": -2 }
-        ]
-    },
-
-    "rm_18": {
-        "text": "Rick erkennt eine Technologie, die nicht von ihm stammt.",
-        "choices": [
-            { "text": "Weiter analysieren", "next": "rm_22" },
-            { "text": "Direkt zerstoeren", "next": "rm_20", "karma": -1 }
-        ]
-    },
-
-    "rm_19": {
-        "text": "In der Citadel laufen beschaedigte Service-Roboter planlos herum.",
-        "choices": [
-            { "text": "Datenbank durchsuchen", "next": "rm_22", "gain_item": "citadel_codes" },
-            { "text": "Energieversorgung pruefen", "next": "rm_20" }
-        ]
-    },
-
-    "rm_20": {
-        "text": "Die Station beginnt langsam auseinanderzubrechen.",
-        "choices": [
-            { "text": "Evakuieren", "next": "rm_23", "karma": 2 },
-            { "text": "Weiterforschen", "next": "rm_22", "karma": -1 }
-        ]
-    },
-
-    "rm_21": {
-        "text": "Mehrere alternative Mortys erscheinen ploetzlich durch instabile Portale.",
-        "choices": [
-            { "text": "Mit ihnen reden", "next": "rm_23" },
-            { "text": "Misstrauen", "next": "rm_24", "karma": -2 }
-        ]
-    },
-
-    "rm_22": {
-        "text": "Die Datenbank enthaelt Hinweise auf einen versteckten Portal-Kern.",
-        "choices": [
-            { "text": "Kern suchen", "next": "rm_25" },
-            { "text": "Rick warnen", "next": "rm_23", "karma": 1 }
-        ]
-    },
-
-    "rm_23": {
-        "text": "Rick wirkt ungewohnt still. 'Wenn das Ding aktiviert wird, zerreisst es die Kurve komplett.'",
-        "choices": [
-            { "text": "Rick helfen", "next": "rm_25", "karma": 2 },
-            { "text": "Selbst handeln", "next": "rm_24" }
-        ]
-    },
-
-    "rm_24": {
-        "text": "Der Portal-Kern beginnt Energie aus benachbarten Dimensionen zu ziehen.",
-        "choices": [
-            { "text": "Abschalten", "next": "rm_26", "required_item": "quantum_chip" },
-            { "text": "Weiterlaufen lassen", "next": "rm_27", "karma": -3 }
-        ]
-    },
-
-    "rm_25": {
-        "text": "Mehrere Ricks aus anderen Dimensionen treffen ein.",
-        "choices": [
-            { "text": "Zusammenarbeiten", "next": "rm_26" },
-            { "text": "Niemandem vertrauen", "next": "rm_27", "karma": -2 }
-        ]
-    },
-
-    "rm_26": {
-        "text": "Der Kern destabilisiert sich und droht zu kollabieren.",
-        "choices": [
-            { "text": "Stabilisieren", "next": "rm_28", "required_item": "citadel_codes" },
-            { "text": "Zerstoeren", "next": "rm_29" }
-        ]
-    },
-
-    "rm_27": {
-        "text": "Die Station beginnt ganze Portale zu verschlingen.",
-        "choices": [
-            { "text": "Menschen retten", "next": "rm_29", "karma": 3 },
-            { "text": "Nur entkommen", "next": "rm_28", "karma": -2 }
-        ]
-    },
-
-    "rm_28": {
-        "text": "Rick schliesst das letzte Portal langsam.",
-        "choices": [
-            { "text": "Unterstuetzen", "next": "rm_30", "karma": 2 },
-            { "text": "Beobachten", "next": "rm_30" }
-        ]
-    },
-
-    "rm_29": {
-        "text": "Die Citadel verschwindet im gruenen Portalsturm.",
-        "choices": [
-            { "text": "Zurueckkehren", "next": "rm_30" }
-        ]
-    },
-
-    "rm_30": {
-        "text": "Rick lehnt sich erschoepft gegen die Portal-Gun. 'Okay… das Universum existiert noch. Fuer heute reicht mir das.'",
-        "choices": [
-            { "text": "Kapitel 5 starten", "next": "end" }
-        ]
-    },
-    "c4_dd_start": {
-        "text": "Waehrend des grossen St.-Canard-Maskenfestivals verschwinden ploetzlich mehrere beruehmte Buerger der Stadt spurlos. ueberall tauchen identische lachende Masken auf, die niemand mehr abnehmen kann. Darkwing Duck springt auf die Hauptbuehne, als ploetzlich auch der Buergermeister verschwindet.",
-        "choices": [
-            { "text": "Darkwing zur Buehne folgen", "next": "dd_1", "karma": 3 },
-            { "text": "Die Maskenhaendler untersuchen", "next": "dd_2" },
-            { "text": "Launchpad helfen, die Menge zu beruhigen", "next": "dd_3", "karma": 2 },
-            { "text": "Einer verdaechtigen Gestalt folgen", "next": "dd_4", "karma": -2 }
-        ]
-    },
-
-    "dd_1": {
-        "text": "Darkwing untersucht den Buehnenboden. Dort finden sich seltsame violette Federn.",
-        "choices": [
-            { "text": "Die Federn analysieren", "next": "dd_5", "gain_item": "violet_feather" },
-            { "text": "Backstage suchen", "next": "dd_6" }
-        ]
-    },
-
-    "dd_2": {
-        "text": "Die Haendler behaupten, ein unbekannter Wohltaeter habe die Masken kostenlos verteilt.",
-        "choices": [
-            { "text": "Den Lieferwagen durchsuchen", "next": "dd_7" },
-            { "text": "Den Haendlern glauben", "next": "dd_8", "karma": -3 }
-        ]
-    },
-
-    "dd_3": {
-        "text": "Launchpad versucht Kinder mit Ballontieren abzulenken, verursacht aber beinahe eine Panik.",
-        "choices": [
-            { "text": "Die Situation uebernehmen", "next": "dd_8" },
-            { "text": "Launchpad unterstuetzen", "next": "dd_9", "karma": 3 }
-        ]
-    },
-
-    "dd_4": {
-        "text": "Die Gestalt verschwindet in den alten Filmstudios von St. Canard.",
-        "choices": [
-            { "text": "Reinschleichen", "next": "dd_10" },
-            { "text": "Darkwing informieren", "next": "dd_6", "karma": 2 }
-        ]
-    },
-
-    "dd_5": {
-        "text": "Die Feder gehoert zu Ammonia Pine, einer exzentrischen Schurkin mit hypnotischen Parfuems.",
-        "choices": [
-            { "text": "Ihr Labor suchen", "next": "dd_11" },
-            { "text": "Erst weitere Hinweise sammeln", "next": "dd_12" }
-        ]
-    },
-
-    "dd_6": {
-        "text": "Hinter der Buehne findest du einen geheimen Tunnel unter dem Festivalgelaende.",
-        "choices": [
-            { "text": "Dem Tunnel folgen", "next": "dd_13" },
-            { "text": "Gosalyn holen", "next": "dd_9", "karma": -2 }
-        ]
-    },
-
-    "dd_7": {
-        "text": "Im Lieferwagen liegen hunderte identische Masken und eine Einladung zur 'Mitternachtsvorstellung'.",
-        "choices": [
-            { "text": "Die Einladung behalten", "next": "dd_14", "gain_item": "midnight_ticket" },
-            { "text": "Alles zerstoeren", "next": "dd_8", "karma": -4 }
-        ]
-    },
-
-    "dd_8": {
-        "text": "Immer mehr Besucher beginnen gleichzeitig zu lachen und marschieren Richtung Innenstadt.",
-        "choices": [
-            { "text": "Die Menschen stoppen", "next": "dd_15", "karma": 4 },
-            { "text": "Den Ursprung suchen", "next": "dd_12" }
-        ]
-    },
-
-    "dd_9": {
-        "text": "Gosalyn entdeckt, dass einige Masken von innen mit seltsamer Tinte beschrieben sind.",
-        "choices": [
-            { "text": "Die Schrift entziffern", "next": "dd_16" },
-            { "text": "Die Masken verbrennen", "next": "dd_15", "karma": -3 }
-        ]
-    },
-
-    "dd_10": {
-        "text": "Im Filmstudio laufen alte Cartoons auf verlassenen Leinwaenden — doch die Figuren bewegen sich ausserhalb der Szenen.",
-        "choices": [
-            { "text": "Projektoren untersuchen", "next": "dd_17" },
-            { "text": "Die Leinwaende zerstoeren", "next": "dd_18", "karma": -2 }
-        ]
-    },
-
-    "dd_11": {
-        "text": "Das Labor ist leer, aber ueberall stehen halb fertige Duftflaschen.",
-        "choices": [
-            { "text": "Eine Probe nehmen", "next": "dd_19", "gain_item": "perfume_sample" },
-            { "text": "Das Labor durchsuchen", "next": "dd_20" }
-        ]
-    },
-
-    "dd_12": {
-        "text": "Darkwing erkennt, dass alle verschwundenen Buerger ehemalige Schauspieler sind.",
-        "choices": [
-            { "text": "Alte Filmarchive besuchen", "next": "dd_17" },
-            { "text": "Die Theater der Stadt durchsuchen", "next": "dd_21" }
-        ]
-    },
-
-    "dd_13": {
-        "text": "Der Tunnel fuehrt zu einem geheimen Untergrundtheater voller maskierter Zuschauer.",
-        "choices": [
-            { "text": "Die Vorstellung beobachten", "next": "dd_22" },
-            { "text": "Sofort eingreifen", "next": "dd_23", "karma": -3 }
-        ]
-    },
-
-    "dd_14": {
-        "text": "Die Einladung nennt einen Ort: das stillgelegte Monocrow-Theater.",
-        "choices": [
-            { "text": "Zum Theater gehen", "next": "dd_24" },
-            { "text": "Vorher Verstaerkung holen", "next": "dd_20", "karma": 1 }
-        ]
-    },
-
-    "dd_15": {
-        "text": "Einige Festivalbesucher greifen ploetzlich jeden ohne Maske an.",
-        "choices": [
-            { "text": "Die Menschen beruhigen", "next": "dd_25", "karma": 5 },
-            { "text": "Mit Rauchbomben fliehen", "next": "dd_21", "karma": -4 }
-        ]
-    },
-
-    "dd_16": {
-        "text": "Die Schrift enthaelt Regieanweisungen fuer ein Stueck namens 'Die ewige Rolle'.",
-        "choices": [
-            { "text": "Weiterlesen", "next": "dd_24" },
-            { "text": "Die Seiten verstecken", "next": "dd_21", "karma": -2 }
-        ]
-    },
-
-    "dd_17": {
-        "text": "Die Projektoren werden von Quackerjack manipuliert, der sich als Regisseur ausgibt.",
-        "choices": [
-            { "text": "Mit ihm reden", "next": "dd_26" },
-            { "text": "Die Maschinen sabotieren", "next": "dd_23", "karma": -3 }
-        ]
-    },
-
-    "dd_18": {
-        "text": "Durch die zerstoerten Leinwaende entkommen mehrere animierte Kreaturen in die Strassen.",
-        "choices": [
-            { "text": "Sie verfolgen", "next": "dd_25" },
-            { "text": "Darkwing warnen", "next": "dd_20", "karma": 1 }
-        ]
-    },
-
-    "dd_19": {
-        "text": "Das Parfuem verstaerkt Emotionen statt Kontrolle.",
-        "choices": [
-            { "text": "Die Probe behalten", "next": "dd_27" },
-            { "text": "Wegwerfen", "next": "dd_20", "karma": 2 }
-        ]
-    },
-
-    "dd_20": {
-        "text": "Launchpad entdeckt versteckte Gaestezimmer unter dem Monocrow-Theater.",
-        "choices": [
-            { "text": "Untersuchen", "next": "dd_28" },
-            { "text": "Absperren", "next": "dd_21", "karma": -1 }
-        ]
-    },
-
-    "dd_21": {
-        "text": "Mehrere Schauspieler behaupten, sie haetten dieselbe Stimme in ihren Traeumen gehoert.",
-        "choices": [
-            { "text": "Die Aussagen vergleichen", "next": "dd_28" },
-            { "text": "Sie ignorieren", "next": "dd_29", "karma": -4 }
-        ]
-    },
-
-    "dd_22": {
-        "text": "Auf der Buehne erscheint eine maskierte Gestalt: Taurus Bulba.",
-        "choices": [
-            { "text": "Zuhoeren", "next": "dd_30" },
-            { "text": "Angreifen", "next": "dd_23", "karma": -5 }
-        ]
-    },
-
-    "dd_23": {
-        "text": "Das Publikum geraet in Panik und mehrere Gefangene verschwinden im Chaos.",
-        "choices": [
-            { "text": "Gefangene retten", "next": "dd_31", "karma": 4 },
-            { "text": "Bulba verfolgen", "next": "dd_29", "karma": -2 }
-        ]
-    },
-
-    "dd_24": {
-        "text": "Im Monocrow-Theater laufen die Vorbereitungen fuer eine riesige Mitternachtsauffuehrung.",
-        "choices": [
-            { "text": "Hinter die Buehne schleichen", "next": "dd_32" },
-            { "text": "Als Zuschauer tarnen", "next": "dd_22" }
-        ]
-    },
-
-    "dd_25": {
-        "text": "Darkwing erkennt, dass die Masken nur wirken, solange die Musik spielt.",
-        "choices": [
-            { "text": "Die Lautsprecher sabotieren", "next": "dd_33", "karma": 5 },
-            { "text": "Den Dirigenten suchen", "next": "dd_30" }
-        ]
-    },
-
-    "dd_26": {
-        "text": "Quackerjack behauptet, jemand habe ihm versprochen, seine Shows 'fuer immer unvergesslich' zu machen.",
-        "choices": [
-            { "text": "Ihm glauben", "next": "dd_30" },
-            { "text": "Ihn festsetzen", "next": "dd_29", "karma": -3 }
-        ]
-    },
-
-    "dd_27": {
-        "text": "Das Parfuem beruhigt kurz die maskierten Besucher.",
-        "choices": [
-            { "text": "Mehr herstellen", "next": "dd_33", "required_item": "perfume_sample" },
-            { "text": "Nur fuer dich behalten", "next": "dd_29", "karma": -4 }
-        ]
-    },
-
-    "dd_28": {
-        "text": "Unter dem Theater findest du verschwundene Schauspieler in luxurioesen Raeumen eingesperrt.",
-        "choices": [
-            { "text": "Befreien", "next": "dd_31", "karma": 5 },
-            { "text": "Erst Bulba suchen", "next": "dd_30", "karma": -2 }
-        ]
-    },
-
-    "dd_29": {
-        "text": "Die Mitternachtsauffuehrung beginnt und ganz St. Canard hoert ploetzlich dieselbe Melodie.",
-        "choices": [
-            { "text": "Zum Dach des Theaters", "next": "dd_34" },
-            { "text": "Die Strassen evakuieren", "next": "dd_31", "karma": 4 }
-        ]
-    },
-
-    "dd_30": {
-        "text": "Taurus Bulba will die gesamte Stadt in eine 'perfekte ewige Vorstellung' verwandeln.",
-        "choices": [
-            { "text": "Seinen Plan verzoegern", "next": "dd_34" },
-            { "text": "Sofort kaempfen", "next": "dd_35", "karma": -4 }
-        ]
-    },
-
-    "dd_31": {
-        "text": "Die geretteten Buerger helfen, andere Besucher von den Masken zu befreien.",
-        "choices": [
-            { "text": "Zum Theater zurueckkehren", "next": "dd_34" },
-            { "text": "Die Stadt sichern", "next": "dd_36", "karma": 3 }
-        ]
-    },
-
-    "dd_32": {
-        "text": "Hinter der Buehne haengt ein riesiger mechanischer Vorhang voller Hypnose-Scheinwerfer.",
-        "choices": [
-            { "text": "Abschalten", "next": "dd_33", "required_item": "midnight_ticket" },
-            { "text": "Beschaedigen", "next": "dd_35", "karma": -2 }
-        ]
-    },
-
-    "dd_33": {
-        "text": "Die Musik stoppt abrupt. Viele Besucher kommen langsam wieder zu sich.",
-        "choices": [
-            { "text": "Bulba konfrontieren", "next": "dd_36" },
-            { "text": "Quackerjack suchen", "next": "dd_35" }
-        ]
-    },
-
-    "dd_34": {
-        "text": "Auf dem Dach des Theaters wartet Bulba zwischen gigantischen Scheinwerfern.",
-        "choices": [
-            { "text": "Darkwing unterstuetzen", "next": "dd_36", "karma": 5 },
-            { "text": "Allein handeln", "next": "dd_35", "karma": -3 }
-        ]
-    },
-
-    "dd_35": {
-        "text": "Die Vorstellung endet im Chaos. Mehrere Schurken entkommen durch geheime Tunnel.",
-        "choices": [
-            { "text": "Die Buerger schuetzen", "next": "dd_36", "karma": 3 },
-            { "text": "Die Schurken verfolgen", "next": "dd_37", "karma": -2 }
-        ]
-    },
-
-    "dd_36": {
-        "text": "Das Festival wird gerettet, doch Darkwing blickt misstrauisch auf eine einzelne verbliebene Maske.",
-        "choices": [
-            { "text": "Untersuchen", "next": "dd_37" }
-        ]
-    },
-
-    "dd_37": {
-        "text": "Im Inneren der Maske erscheint ein unbekanntes Symbol. Darkwing spuert, dass St. Canard noch lange nicht sicher ist.",
-        "choices": [
-            { "text": "Kapitel 5 starten", "next": "end" }
+            { "text": "Kapitel 4 starten", "next": "end" }
         ]
     },
     "ending_good": {
-        "text": "Phänomenal! Dein hohes Karma hat die Portale stabilisiert. Die Dimensionen harmonieren wieder miteinander und das Cartoon-Universum erstrahlt in sicherem, goldenem Glanz. Du bist ein wahrer Weltenwächter!",
+        "text": "Phaenomenal! Dein hohes Karma hat die Portale stabilisiert. Die Dimensionen harmonieren wieder miteinander und das Cartoon-Universum erstrahlt in sicherem, goldenem Glanz. Du bist ein wahrer Weltenwaechter!",
         "background": "./images/ending_good_bg.png",
         "choices": [
             { "text": "Spiel neustarten", "next": "execute_reset" }
         ]
     },
     "ending_neutral": {
-        "text": "Gute Arbeit. Die Welten kollidieren nicht mehr, aber die Portale bleiben instabil. Es herrscht ein brüchiger Frieden im Cartoon-Universum, der ständige Wachsamkeit erfordert.",
+        "text": "Gute Arbeit. Die Welten kollidieren nicht mehr, aber die Portale bleiben instabil. Es herrscht ein bruechiger Frieden im Cartoon-Universum, der staendige Wachsamkeit erfordert.",
         "background": "./images/ending_neutral_bg.png",
         "choices": [
             { "text": "Spiel neustarten", "next": "execute_reset" }
         ]
     },
     "ending_evil": {
-        "text": "Das pure Chaos! Deine skrupellosen Entscheidungen haben den Nexus korrumpiert. Die Bösewichte haben die Macht übernommen, Realitäten zerfallen und das Cartoon-Universum versinkt in ewiger Dunkelheit.",
+        "text": "Das pure Chaos! Deine skrupellosen Entscheidungen haben den Nexus korrumpiert. Die Boesewichte haben die Macht uebernommen, Realitaeten zerfallen und das Cartoon-Universum versinkt in ewiger Dunkelheit.",
         "background": "./images/ending_evil_bg.png",
         "choices": [
             { "text": "Es noch einmal versuchen", "next": "execute_reset" }
         ]
     },
     "ending_chaos": {
-        "text": "Weder gut noch böse – deine unentschlossenen Taten haben ein unberechenbares Dimensions-Chaos ausgelöst. Die Welten sind wild miteinander verschmolzen. Ein völlig neues, verrücktes Universum ist entstanden.",
+        "text": "Weder gut noch boese – deine unentschlossenen Taten haben ein unberechenbares Dimensions-Chaos ausgeloest. Die Welten sind wild miteinander verschmolzen. Ein voellig neues, verruecktes Universum ist entstanden.",
         "background": "./images/ending_chaos_bg.png",
         "choices": [
-            { "text": "Anderen Pfad wählen", "next": "execute_reset" }
+            { "text": "Anderen Pfad waehlen", "next": "execute_reset" }
         ]
-    }
+    },
+
+    "example": {
+        "text": "Beispiel Dialog",
+        "background": "./game_images/background.png",
+        "character": "./game_images/character.png",
+        "choices": [
+            { "text": "Man bekommt ein Item", "next": "exampleA", "gain_item": "example_item", "karma": 1 },
+            { "text": "Man braucht ein Item", "next": "exampleB", "require_item": "example_item", "karma": -1 }
+        ]
+    },
 };

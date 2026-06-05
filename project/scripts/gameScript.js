@@ -271,6 +271,9 @@ function checkEnding() {
     else {
         currentScene = "ending_chaos";
     }
+
+    unlockAchievement(currentScene);
+
     showScene(currentScene);
 }
 
@@ -501,3 +504,66 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
+// ==========================================
+// ACHIEVEMENT LOGIK (KLASSISCHES JS)
+// ==========================================
+
+let achievementsOpen = false;
+
+const achievementNames = {
+    "ending_good": "Das gute Ende 😇",
+    "ending_neutral": "Das neutrale Ende 😐",
+    "ending_evil": "Das boese Ende 😈",
+    "ending_chaos": "Das Chaos-Ende 🌀"
+};
+
+function unlockAchievement(endingKey) {
+    let unlockedRaw = localStorage.getItem("cartoon_adventure_achievements");
+    let unlocked = [];
+
+    if (unlockedRaw) {
+        unlocked = JSON.parse(unlockedRaw);
+    }
+
+    if (unlocked.includes(endingKey) == false) {
+        unlocked.push(endingKey);
+        localStorage.setItem("cartoon_adventure_achievements", JSON.stringify(unlocked));
+        console.log("Achievement dauerhaft gesichert: " + endingKey);
+    }
+}
+
+function updateAchievementsDisplay() {
+    let listDiv = document.getElementById("achievement-list");
+    let unlockedRaw = localStorage.getItem("cartoon_adventure_achievements");
+    let unlocked = [];
+
+    if (unlockedRaw) {
+        unlocked = JSON.parse(unlockedRaw);
+    }
+
+    let htmlResult = "";
+    
+    for (let key in achievementNames) {
+        if (unlocked.includes(key)) {
+            htmlResult += '<div class="achievement-item" style="color: #2ecc71;">✅ <strong>' + achievementNames[key] + '</strong></div>';
+        } 
+        else {
+            htmlResult += '<div class="achievement-item" style="color: #bdc3c7; opacity: 0.6;">🔒 <em>??? (Noch gesperrt)</em></div>';
+        }
+    }
+    
+    listDiv.innerHTML = htmlResult;
+}
+
+function toggleAchievements() {
+    let overlay = document.getElementById("achievement-overlay");
+    
+    if (achievementsOpen) {
+        achievementsOpen = false;
+        overlay.style.display = "none";
+    } else {
+        achievementsOpen = true;
+        updateAchievementsDisplay();
+        overlay.style.display = "flex";
+    }
+}

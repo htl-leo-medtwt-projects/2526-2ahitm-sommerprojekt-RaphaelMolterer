@@ -11,12 +11,24 @@
     <script src="./scripts/story.js"></script>
     <link rel="icon" href="./favicon/android-chrome-512x512.png">
 </head>
+
 <body>
     <div id="flash-effect-overlay"></div>
     <button id="reset-game-btn" onclick="resetGame()">🗑️</button>
     <div id="audio-controls">
         <button id="mute-music-btn" onclick="toggleMuteMusic()">Musik: AN</button>
         <button id="mute-sounds-btn" onclick="toggleMuteSounds()">Sounds: AN</button>
+    </div>
+    <button id="achievement-btn" onclick="toggleAchievements()">🏆</button>
+
+    <div id="achievement-overlay" class="warning-overlay">
+        <div class="warning-content"
+            style="background: #34495e; border: 3px solid #f1c40f; max-width: 400px; width: 90%;">
+            <h2 style="color: #f1c40f; margin-top: 0;">Freigeschaltete Enden</h2>
+            <div id="achievement-list" style="text-align: left; margin: 2vh 0; font-size: 1.3rem; line-height: 2rem;">
+            </div>
+            <button onclick="toggleAchievements()" style="background: #7f8c8d;">Schliessen</button>
+        </div>
     </div>
     <div id="intro-container">
         <div id="frame">
