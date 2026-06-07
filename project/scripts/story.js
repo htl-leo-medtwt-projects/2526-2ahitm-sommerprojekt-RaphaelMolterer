@@ -1149,8 +1149,8 @@ let gameData = {
         "background": "./game_images/background_ppg_lab.png",
         "character": "./game_images/character_ppg_professor.png",
         "choices": [
-            { "text": "Die Chemical-X-Probe uebergeben", "next": "ppg_24", "required_item": "ppg_sample" },
-            { "text": "Dem Professor vorschlagen, das Gurkenglas zu nutzen", "next": "ppg_23", "required_item": "ppg_pickle" }
+            { "text": "Die Chemical-X-Probe uebergeben", "next": "ppg_24", "required_item": "ppg_sample", "karma": 3 },
+            { "text": "Dem Professor anders helfen", "next": "ppg_23" }
         ]
     },
 
@@ -2222,7 +2222,7 @@ let gameData = {
         "background": "./game_images/background_ben_mine.png",
         "choices": [
             { "text": "Kapitel 3 starten", "next": "c3_start" },
-            { "text": "Den Rust Bucket muehsam reparieren", "next": "c3_start", "karma": 2 }
+            { "text": "Den Rust Bucket muehsam reparieren", "next": "c3_start", "karma": 2, "required_item": "ben_plumber_pad" }
         ]
     },
 
@@ -2963,7 +2963,7 @@ let gameData = {
 
     "c2_nj_6": {
         "text": "Die Bruecke bricht krachend in sich zusammen, doch die Nindroiden nutzen ihre Jetpacks und fliegen direkt auf den Flugsegler zu. Jay schreit panisch: 'Das war ein schlechter Plan! Sie haben Fluegel! Warum haben die Dinger immer Fluegel?!'",
-        "background": "./game_images/background_rs_neon_sky.png",
+        "background": "./game_images/background_nj_destinys_bounty.png",
         "choices": [
             { "text": "Die Bordkanonen des Flugseglers aktivieren", "next": "c2_nj_17", "karma": 3 },
             { "text": "In den dichten Rauch der Stadt abtauchen", "next": "c2_nj_15", "karma": -2 }
@@ -3116,6 +3116,7 @@ let gameData = {
 
     "c3_start": {
         "text": "Kapitel 3. Der Nexus ist nicht mehr stabil. Die Cartoon-Welten sind nicht mehr getrennte Orte, sondern ueberlappende Kriegszonen aus Realitaet, Erinnerung und Fehlern. Etwas beginnt aktiv zu jagen.",
+        "background": "./game_images/background_space.png",
         "choices": [
             { "text": "Steven Universe", "next": "c3_su_start" },
             { "text": "Scooby-Doo", "next": "c3_sd_start" },
@@ -3125,1015 +3126,1084 @@ let gameData = {
         ]
     },
     "c3_su_start": {
-        "text": "Beach City wirkt ungewoehnlich still. Die Sterne ueber dem Meer flackern rosa. Garnet steht schweigend am Strand, Pearl ueberprueft hektisch alte Homeworld-Signale, und Amethyst wirkt nervoes.",
+        "text": "Es ist ein friedlicher Abend am Strand von Beach City, bis plötzlich die Erde heftig bebt. Aus dem Ozean schießt eine gigantische, mechanische Hand der Gem-Heimatwelt! Die Finger der Hand bohren sich in den Sand und fangen an, zerstörerische Strahlung auf den Tempel abzugeben. Peridot erscheint auf einem Hologramm und tippt wild auf ihren Touchpads, während Steven, Garnet, Amethyst und Pearl bereits ihre Waffen manifestieren.",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Garnet folgen", "next": "su_1", "karma": 1 },
-            { "text": "Pearl folgen", "next": "su_2" },
-            { "text": "Amethyst folgen", "next": "su_3", "karma": -1 },
-            { "text": "Steven suchen", "next": "su_4" }
+            { "text": "Mit Steven und Pearl die Invasions-Kapsel untersuchen", "next": "c3_su_1", "karma": 2 },
+            { "text": "Mit Garnet die mechanischen Finger direkt angreifen", "next": "c3_su_2", "karma": -1 },
+            { "text": "Mit Amethyst im Tempel nach alten Gem-Artefakten suchen", "next": "c3_su_3", "karma": 1 },
+            { "text": "Greg Universe um kosmischen Rat und Werkzeug bitten", "next": "c3_su_4", "karma": 3 }
         ]
     },
 
-    "su_1": {
-        "text": "Garnet: 'Die Zukunft ist unklar. Etwas hat die Zeitlinien beschaedigt.'",
+    "c3_su_1": {
+        "text": "Pearl untersucht die glühende Kontrollkonsole der Kapsel mit schockiertem Blick. 'Das ist eine Destabilisierungs-Matrix der Diamanten! Wenn wir das Signal nicht blockieren, werden unsere physischen Formen einfach aufgelöst!' Steven hält schützend sein Schild hoch, während ein wichtiges Bauteil aus der Konsole bricht.",
+        "background": "./game_images/background_su_spaceship_interior.png",
+        "character": "./game_images/character_su_pearl.png",
         "choices": [
-            { "text": "Genauer fragen", "next": "su_5" },
-            { "text": "Abwarten", "next": "su_6", "karma": -1 }
+            { "text": "Den Heimatwelt-Gem-Destabilisator einpacken", "next": "su_gem_destabilizer", "gain_item": "su_gem_destabilizer" },
+            { "text": "Die Konsole mit Pearls Speer blind zertrümmern", "next": "c3_su_5", "karma": -2 }
         ]
     },
 
-    "su_2": {
-        "text": "Pearl analysiert eine alte Kristallkarte. 'Homeworld bewegt sich wieder.'",
+    "su_gem_destabilizer": {
+        "text": "Du erhältst einen Gem-Destabilisator. Seine gelben Blitze können die physische Form jeder Gem-Projektion sofort auflösen.",
+        "background": "./game_images/background_su_spaceship_interior.png",
+        "character": "./game_images/item_su_destabilizer.png",
         "choices": [
-            { "text": "Karte nehmen", "next": "su_5", "gain_item": "crystal_map" },
-            { "text": "Pearl helfen", "next": "su_7", "karma": 1 }
+            { "text": "Die Waffe an den Kontrollkabeln testen", "next": "c3_su_8" },
+            { "text": "Damit zu Garnet an den Strand rennen", "next": "c3_su_6" }
         ]
     },
 
-    "su_3": {
-        "text": "Amethyst: 'Ich hab kein gutes Gefuehl bei dem ganzen Kram.'",
+    "c3_su_2": {
+        "text": "Garnet schlägt mit ihren schweren Raketen-Stiefeln und Fäusten auf das Metall ein, doch die Hand absorbiert ihre Energie und leitet sie ins Meer um. Jasper springt plötzlich von der Spitze der Konstruktion herab! Sie grinst bösartig: 'Ihr jämmerlichen Rebellen der Crystal Gems! Heute werdet ihr vor Yellow Diamond Rechenschaft ablegen!'",
+        "background": "./game_images/background_su_beach.png",
+        "character": "./game_images/character_su_jasper.png",
         "choices": [
-            { "text": "Beruhigen", "next": "su_6", "karma": 1 },
-            { "text": "Ignorieren", "next": "su_8", "karma": -1 }
+            { "text": "Garnet im Duell gegen Jasper unterstützen", "next": "c3_su_6", "karma": 3 },
+            { "text": "Jaspers weggeworfenen Heimatwelt-Scanner an dich nehmen", "next": "su_homeworld_scanner", "gain_item": "su_homeworld_scanner", "karma": -1 }
         ]
     },
 
-    "su_4": {
-        "text": "Steven ist verschwunden, nur sein Melonensamen liegt im Sand.",
+    "su_homeworld_scanner": {
+        "text": "Du erhältst einen Heimatwelt-Scanner. Er ortet versteckte Gem-Energiequellen und Schwachstellen in fremder Technologie.",
+        "background": "./game_images/background_su_beach.png",
+        "character": "./game_images/item_su_scanner.png",
         "choices": [
-            { "text": "Samen nehmen", "next": "su_5", "gain_item": "melon_seed" },
-            { "text": "Suchen", "next": "su_8" }
+            { "text": "Den Scanner nutzen um die Schwachstelle der Riesen-Hand zu finden", "next": "c3_su_15" },
+            { "text": "Damit zu Stevens Strandhaus flüchten", "next": "c3_su_12" }
         ]
     },
 
-    "su_5": {
-        "text": "Ein schwaches rosa Licht pulsiert aus dem Ozean.",
+    "c3_su_3": {
+        "text": "Amethyst wirbelt mit ihrer Peitsche durch das riesige Chaos im Tempel-Inneren. Überall fliegen magische Gegenstände herum. 'Hier drin ist alles voller gefährlicher Relikte! Such nach etwas, das nützlich aussieht!' Plötzlich droht eine schwere Steinstatue auf Lapis Lazulis Spiegel zu stürzen.",
+        "background": "./game_images/background_su_crystal_temple.png",
+        "character": "./game_images/character_su_amethyst.png",
         "choices": [
-            { "text": "Untersuchen", "next": "su_9" },
-            { "text": "Zurueckgehen", "next": "su_6" }
+            { "text": "Die Statue mit Amethysts Kräften zertrümmern", "next": "c3_su_7", "karma": -3 },
+            { "text": "Den magischen Gem-Spiegel rechtzeitig auffangen", "next": "su_lapis_mirror", "gain_item": "su_lapis_mirror", "karma": 4 }
         ]
     },
 
-    "su_6": {
-        "text": "Ein verzerrtes Signal der Diamanten wird empfangen.",
+    "su_lapis_mirror": {
+        "text": "Du fängst Lapis' magischen Spiegel auf. Er reflektiert die Wahrheit und kontrolliert mächtige Wassermassen.",
+        "background": "./game_images/background_su_crystal_temple.png",
+        "character": "./game_images/item_su_mirror.png",
         "choices": [
-            { "text": "Anhoeren", "next": "su_10" },
-            { "text": "Signal blockieren", "next": "su_8", "karma": -1 }
+            { "text": "Den Spiegel nutzen um Lapis um Hilfe zu bitten", "next": "c3_su_8" },
+            { "text": "Den Spiegel zu Steven am Strand bringen", "next": "c3_su_22" }
         ]
     },
 
-    "su_7": {
-        "text": "Pearl wirkt unsicher: 'Das koennte gefaehrlich sein… oder wichtig.'",
+    "c3_su_4": {
+        "text": "Greg Universe steht panisch vor seiner Autowerkstatt und hält eine alte E-Gitarre in den Händen. 'Kumpel, diese Gem-Sachen übersteigen mein Wissen, aber mein Sound-System im Van hat genug Bass, um feindliche Frequenzen zu stören!' Plötzlich mutieren die Strandkrabben durch die Strahlung zu Riesen-Monstern.",
+        "background": "./game_images/background_su_car_wash.png",
+        "character": "./game_images/character_su_greg.png",
         "choices": [
-            { "text": "Trotzdem analysieren", "next": "su_10", "karma": 1 },
-            { "text": "Stoppen", "next": "su_8" }
+            { "text": "Die Werkstatt mit Gregs Van verteidigen", "next": "c3_su_11", "karma": 4 },
+            { "text": "Gregs Spezial-Werkzeugbox schnappen und zum Strandhaus laufen", "next": "c3_su_12", "karma": -2 }
         ]
     },
 
-    "su_8": {
-        "text": "Der Strand beginnt leicht zu schimmern, als waere er nicht stabil.",
+    "c3_su_5": {
+        "text": "Das Zertrümmern der Konsole löst eine energetische Rückkopplung aus. Das Schiff riegelt alle Türen automatisch ab und giftiger Gem-Schleim fließt aus den Lüftungsschächten. Pearl verliert vor Panik die Fassung, während Steven versucht, eine schützende Blase um euch zu weben.",
+        "background": "./game_images/background_su_spaceship_interior.png",
+        "character": "./game_images/character_su_steven.png",
         "choices": [
-            { "text": "Weitergehen", "next": "su_11" }
+            { "text": "Connie rufen um die Tür mit ihrem Schwert aufzubrechen", "next": "c3_su_13", "karma": 3 },
+            { "text": "Pearl durch ein beruhigendes Gespräch fokussieren", "next": "c3_su_14", "karma": 5 }
         ]
     },
 
-    "su_9": {
-        "text": "Unter Wasser erscheint eine alte Homeworld-Struktur.",
+    "c3_su_6": {
+        "text": "Jasper setzt ihre gewaltige Helm-Ramme ein und schleudert Garnet in den Sand. Durch die Wucht des Schlags spaltet sich Garnet schmerzhaft in ihre zwei Hälften: Ruby und Sapphire! Ruby tobt vor Zorn, während Sapphire weint. Jasper lacht: 'Eine Fusion ist nur ein billiger Trick!'",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Eintauchen", "next": "su_12", "karma": 1 },
-            { "text": "Zurueckziehen", "next": "su_11", "karma": -1 }
+            { "text": "Den Gem-Destabilisator einsetzen um Jasper aufzuhalten", "next": "c3_su_26", "required_item": "su_gem_destabilizer" },
+            { "text": "Ruby und Sapphire decken und einen Frontalangriff wagen", "next": "c3_su_13", "karma": -4 }
         ]
     },
 
-    "su_10": {
-        "text": "Diamantensignal: 'Die Ordnung der Kristalle wird neu bewertet.'",
+    "c3_su_7": {
+        "text": "Die Explosion der Statue reißt ein Loch in das Fundament des Tempels. Kaltes Meerwasser flutet die Kammern und droht, alle heiligen Artefakte wegzuspülen. Lion taucht plötzlich auf und brüllt laut, um ein Portal auszubringen.",
+        "background": "./game_images/background_su_crystal_temple.png",
         "choices": [
-            { "text": "Antworten", "next": "su_12", "karma": 2 },
-            { "text": "Ignorieren", "next": "su_11", "karma": -1 }
+            { "text": "Auf Lions Rücken springen und zum Strand fliegen", "next": "c3_su_15", "karma": -2 },
+            { "text": "Die Artefakte im steigenden Wasser manuell sichern", "next": "c3_su_13", "karma": 4 }
         ]
     },
 
-    "su_11": {
-        "text": "Ein kleines leuchtendes Fragment faellt aus dem Himmel.",
+    "c3_su_8": {
+        "text": "Die Heimatwelt-Hand schließt sich komplett zu einer Faust und bereitet den finalen Laser-Impuls vor, der ganz Beach City auslöschen soll. Das grelle Licht spiegelt sich im Ozean. Steven steht entschlossen an vorderster Front: 'Wir geben unsere Heimat nicht auf!'",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Aufheben", "next": "su_13", "gain_item": "light_fragment" }
+            { "text": "Den Laser-Kern mit dem Gem-Destabilisator sabotieren", "next": "c3_su_30", "required_item": "su_gem_destabilizer" },
+            { "text": "Lapis Lazulis Wasserkräfte über den Spiegel aktivieren", "next": "c3_su_30", "required_item": "su_lapis_mirror" }
         ]
     },
 
-    "su_12": {
-        "text": "Lapis erscheint kurz im Wasser, wirkt aber verwirrt.",
+    "c3_su_11": {
+        "text": "Greg dreht die Lautsprecher voll auf! Die massiven Schallwellen bringen die mutierten Krabben zum Platzen und stören die feindlichen Frequenzen der Riesen-Hand. Doch das Soundsystem überhitzt komplett und der Van fängt an zu rauchen.",
+        "background": "./game_images/background_su_car_wash.png",
         "choices": [
-            { "text": "Mit ihr sprechen", "next": "su_14", "karma": 1 },
-            { "text": "Beobachten", "next": "su_13" }
+            { "text": "Den Van mit Stevens heilenden Kräften kühlen", "next": "c3_su_28", "karma": 4 },
+            { "text": "Den rauchenden Van als Rammbock gegen die Hand nutzen", "next": "c3_su_27", "karma": -5 }
         ]
     },
 
-    "su_13": {
-        "text": "Peridot funkt: 'Etwas manipuliert die Gem-Struktur weltweit.'",
+    "c3_su_12": {
+        "text": "Ihr erreicht das Strandhaus, doch Peridots fliegende Roboter-Insekten haben das Gebäude bereits umzingelt. Sie scannen nach Rose Quartzes Schild. Connie verteidigt die Veranda tapfer mit ihrem Übungsschwert, wird aber langsam müde.",
+        "background": "./game_images/background_su_beachhouse.png",
+        "character": "./game_images/character_su_connie.png",
         "choices": [
-            { "text": "Zusammenarbeiten", "next": "su_15", "karma": 1 },
-            { "text": "Allein handeln", "next": "su_16", "karma": -1 }
+            { "text": "Die Roboter mit dem Heimatwelt-Scanner umprogrammieren", "next": "c3_su_26", "required_item": "su_homeworld_scanner" },
+            { "text": "In den direkten Nahkampf übergehen", "next": "c3_su_13", "karma": -4 }
         ]
     },
 
-    "su_14": {
-        "text": "Lapis gibt dir eine Wasserprojektion einer unbekannten Insel.",
+    "c3_su_13": {
+        "text": "Der brute-force Versuch schlägt fehl. Das Heimatwelt-Schiff absorbiert eure Energie und die Roboter kesseln euch ein. Die Lage scheint aussichtslos, doch plötzlich bricht Alexandrite mit einem lauten Brüllen durch die feindlichen Linien, um euch rauszuhauen!",
+        "background": "./game_images/background_su_beach.png",
+        "character": "./game_images/character_su_alexandrite.png",
         "choices": [
-            { "text": "Merken", "next": "su_15", "gain_item": "ocean_map" }
+            { "text": "Alexandrites Angriff unterstützen", "next": "c3_su_28", "karma": 3 },
+            { "text": "Die Verwirrung nutzen um den Kern des Schiffs zu suchen", "next": "c3_su_27", "karma": -1 }
         ]
     },
 
-    "su_15": {
-        "text": "Garnet sagt: 'Die Zukunft spaltet sich weiter.'",
+    "c3_su_14": {
+        "text": "Pearl beruhigt sich und erinnert sich an eine geheime Notfall-Sequenz. Sie projiziert eine holografische Karte, die den direkten Zugang zum Gehirn des Schiffes freilegt. Steven fusioniert vor Freude mit Connie zu Stevonnie!",
+        "background": "./game_images/background_su_spaceship_interior.png",
+        "character": "./game_images/character_su_stevonnie.png",
         "choices": [
-            { "text": "Vertrauen", "next": "su_17", "karma": 1 },
-            { "text": "Zweifeln", "next": "su_16", "karma": -1 }
+            { "text": "Das Gehirn des Schiffs mit dem Gem-Destabilisator angreifen", "next": "c3_su_30", "required_item": "su_gem_destabilizer" },
+            { "text": "Die Kern-Kabel mit Stevonnies Schwert durchtrennen", "next": "c3_su_27", "karma": -3 }
         ]
     },
 
-    "su_16": {
-        "text": "Ein Homeworld-Schiff naehert sich Beach City.",
+    "c3_su_15": {
+        "text": "Mithilfe deines Scanners oder Lions Hilfe findet ihr die Schwachstelle: Ein kleiner, grüner Energieknoten an den Gelenken der mechanischen Hand. Doch Peridot bewacht den Knoten persönlich aus ihrer fliegenden Kapsel heraus.",
+        "background": "./game_images/background_su_beach.png",
+        "character": "./game_images/character_su_peridot.png",
         "choices": [
-            { "text": "Vorbereiten", "next": "su_18" },
-            { "text": "Abwarten", "next": "su_17", "karma": -1 }
+            { "text": "Peridots Kapsel mit dem Heimatwelt-Scanner hacken", "next": "c3_su_30", "required_item": "su_homeworld_scanner" },
+            { "text": "Amethyst ihre Peitsche nutzen lassen um die Kapsel wegzureißen", "next": "c3_su_13", "karma": 2 }
         ]
     },
 
-    "su_17": {
-        "text": "Steven taucht ploetzlich wieder auf, aber wirkt veraendert.",
+    "c3_su_22": {
+        "text": "Du bringst den Spiegel zu Steven. Als er das Glas berührt, bricht Lapis Lazuli frei und formt riesige, majestätische Flügel aus reinem Meerwasser! Sie fliegt hoch in den Himmel und reißt gigantische Wassermassen mit sich nach oben.",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Ansprechen", "next": "su_18" },
-            { "text": "Beobachten", "next": "su_19" }
+            { "text": "Lapis den Befehl geben das Schiff im Ozean zu ertränken", "next": "c3_su_30", "karma": 5 },
+            { "text": "Den Spiegel nutzen um Jasper zu blenden", "next": "c3_su_13", "karma": -1 }
         ]
     },
 
-    "su_18": {
-        "text": "Steven: 'Ich habe etwas im Licht gesehen, das nicht hier sein sollte.'",
+    "c3_su_26": {
+        "text": "Durch den cleveren Einsatz deiner Gegenstände bricht Jaspers Verteidigung oder Peridots Drohnen-Netzwerk komplett in sich zusammen. Die grüne Strahlung erlischt und die mechanische Hand verliert jegliche Energieversorgung.",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Nachfragen", "next": "su_20" },
-            { "text": "Wechseln Thema", "next": "su_19", "karma": -1 }
+            { "text": "Den finalen Rettungsschlag mit Steven einleiten", "next": "c3_su_30" },
+            { "text": "Die Schurken zur Rede stellen", "next": "c3_su_27", "karma": 2 }
         ]
     },
 
-    "su_19": {
-        "text": "Das Homeworld-Schiff landet nahe der Kueste.",
+    "c3_su_27": {
+        "text": "Das Schiff explodiert in einer gewaltigen Welle aus bunten Lichtpartikeln! Jasper und Peridot flüchten in einer Rettungskapsel ins All. Beach City ist zwar vorerst gerettet, aber der Strand gleicht einem Kraterfeld und die Crystal Gems müssen den Tempel mühsam neu aufbauen.",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Hingehen", "next": "su_21" }
+            { "text": "end", "next": "end" }
         ]
     },
 
-    "su_20": {
-        "text": "Steven gibt dir einen fragmentierten Kristall.",
+    "c3_su_28": {
+        "text": "Garnet fusioniert im Licht von Gregs verstärktem Soundsystem wieder perfekt zusammen und formt mit Amethyst und Pearl die gigantische, mächtige Fusion Alexandrite! Mit feurigen Bögen attackiert sie das feindliche Schiff.",
+        "background": "./game_images/background_su_beach.png",
+        "character": "./game_images/character_su_alexandrite.png",
         "choices": [
-            { "text": "Nehmen", "next": "su_21", "gain_item": "crystal_fragment" }
+            { "text": "Den finalen Schlag anführen", "next": "c3_su_30" }
         ]
     },
 
-    "su_21": {
-        "text": "Eine alte Diamantenprojektion erscheint ueber dem Schiff.",
+    "c3_su_30": {
+        "text": "Mit einem monumentalen Finale zerschmettern die Crystal Gems – getragen von Stevens unerschütterlichem Schild, Alexandrites geballter Fusionskraft und dem präzisen Einsatz des Gem-Destabilisators – die mechanische Heimatwelt-Hand. Die Trümmer lösen sich in harmlose, funkelnde Sternschnuppen auf, die friedlich ins Meer fallen. Der Strand von Beach City leuchtet in ruhigem, warmem Abendlicht. Steven atmet tief durch, isst genüsslich einen Cookie Cat-Eisriegel und lächelt dich dankbar an, während Garnet ihm sanft über den Kopf streicht: 'Solange wir zusammenhalten, wird diese Welt immer unser Zuhause sein.'",
+        "background": "./game_images/background_su_beach.png",
         "choices": [
-            { "text": "Kontakt aufnehmen", "next": "su_22", "karma": 1 },
-            { "text": "Angreifen vorbereiten", "next": "su_23", "karma": -1 }
-        ]
-    },
-
-    "su_22": {
-        "text": "Die Projektion sagt nichts, aber reagiert auf den Kristall.",
-        "choices": [
-            { "text": "Kristall zeigen", "next": "su_24", "required_item": "crystal_fragment" },
-            { "text": "Wegstecken", "next": "su_23" }
-        ]
-    },
-
-    "su_23": {
-        "text": "Das Schiff beginnt, Energie aus der Umgebung zu ziehen.",
-        "choices": [
-            { "text": "Stoppen", "next": "su_24" }
-        ]
-    },
-
-    "su_24": {
-        "text": "Peridot: 'Das ist ein Schluessel zu einer alten Gem-Kontrolle.'",
-        "choices": [
-            { "text": "Aktivieren", "next": "su_25", "karma": 2 },
-            { "text": "Sichern", "next": "su_26" }
-        ]
-    },
-
-    "su_25": {
-        "text": "Das Schiff stabilisiert sich kurzzeitig.",
-        "choices": [
-            { "text": "Weiter untersuchen", "next": "su_27" }
-        ]
-    },
-
-    "su_26": {
-        "text": "Das Schiff reagiert instabiler.",
-        "choices": [
-            { "text": "Eingreifen", "next": "su_27", "karma": -1 }
-        ]
-    },
-
-    "su_27": {
-        "text": "Garnet: 'Wir naehern uns einer Entscheidung, die alles veraendert.'",
-        "choices": [
-            { "text": "Weiter", "next": "su_28" }
-        ]
-    },
-
-    "su_28": {
-        "text": "Steven vereint kurz die Energie aller Gems.",
-        "choices": [
-            { "text": "Unterstuetzen", "next": "su_29", "karma": 2 },
-            { "text": "Zweifeln", "next": "su_29", "karma": -2 }
-        ]
-    },
-
-    "su_29": {
-        "text": "Der Himmel ueber Beach City oeffnet einen rosa Nexus-Riss.",
-        "choices": [
-            { "text": "Beobachten", "next": "su_30" }
-        ]
-    },
-
-    "su_30": {
-        "text": "Alle Realitaeten der Gems beginnen sich zu ueberlagern. uebergang zu Kapitel 4 aktiviert.",
-        "choices": [
-            { "text": "Kapitel 4 starten", "next": "end" }
+            { "text": "Ende", "next": "end" }
         ]
     },
     "c3_sd_start": {
-        "text": "Die Mystery Inc. erreicht ein verlassenes Kuestenhotel. Die Tueren knarren, Nebel zieht durch die Lobby, und irgendwo faellt ein Bild von der Wand. Shaggy will sofort wieder gehen.",
+        "text": "Die Mystery Machine rollt mitten in einer stürmischen Nacht auf den Hof eines verlassenen, unheimlichen Vergnügungsparks. Plötzlich schlägt ein grüner Blitz in das alte Riesenrad ein, und eine lachende, schwebende Geister-Kreatur aus purem, neongrünem Schleim taucht auf! Velma verliert vor Schreck ihre Brille, Daphne weicht geschockt zurück, und Fred zückt sofort seine Pläne für eine Falle, während Scooby und Shaggy winselnd im Kofferraum Deckung suchen.",
+        "background": "./game_images/background_sd_amusement_park.png",
         "choices": [
-            { "text": "Fred folgen", "next": "sd_1", "karma": 1 },
-            { "text": "Velma folgen", "next": "sd_2" },
-            { "text": "Daphne folgen", "next": "sd_3", "karma": 1 },
-            { "text": "Scooby folgen", "next": "sd_4", "karma": -1 }
+            { "text": "Mit Velma nach logischen Hinweisen und Fußspuren suchen", "next": "c3_sd_1", "karma": 2 },
+            { "text": "Fred beim Aufbau einer komplexen Seilzug-Falle helfen", "next": "c3_sd_2", "karma": -1 },
+            { "text": "Mit Daphne das verlassene Spiegelkabinett untersuchen", "next": "c3_sd_3", "karma": 1 },
+            { "text": "Shaggy und Scooby mit Scooby-Snacks Mut machen", "next": "c3_sd_4", "karma": 3 }
         ]
     },
 
-    "sd_1": {
-        "text": "Fred untersucht die Eingangshalle: 'Jemand hat hier bewusst Fallen vorbereitet.'",
+    "c3_sd_1": {
+        "text": "Velma kniet im Schlamm und kriecht am Boden entlang. 'Jinkies! Dieser Geist hinterlässt keine echten Geisterspuren, sondern Abdrücke von schweren Gummistiefeln und... Batterien?' Sie tastet im Dunkeln herum und stößt gegen einen metallischen Gegenstand, der aus einer alten Werkzeugkiste ragt.",
+        "background": "./game_images/background_sd_park_grounds.png",
+        "character": "./game_images/character_sd_velma.png",
         "choices": [
-            { "text": "Fallen analysieren", "next": "sd_5" },
-            { "text": "Ignorieren und weiter", "next": "sd_6", "karma": -1 }
+            { "text": "Den High-Tech-UV-Spurensucher einstecken", "next": "sd_uv_tracker", "gain_item": "sd_uv_tracker" },
+            { "text": "Den Gegenstand ignorieren und die Taschenlampe reparieren", "next": "c3_sd_5", "karma": -2 }
         ]
     },
 
-    "sd_2": {
-        "text": "Velma findet alte Hotelakten: mehrere Gaeste sind ploetzlich verschwunden.",
+    "sd_uv_tracker": {
+        "text": "Du erhältst den UV-Spurensucher. Sein ultraviolettes Licht macht unsichtbare fluoreszierende Farben und Kabelgänge sichtbar.",
+        "background": "./game_images/background_sd_park_grounds.png",
+        "character": "./game_images/item_sd_uv_tracker.png",
         "choices": [
-            { "text": "Akten mitnehmen", "next": "sd_5", "gain_item": "hotel_files" },
-            { "text": "Weiter suchen", "next": "sd_7" }
+            { "text": "Mit dem Tracker den Boden absuchen", "next": "c3_sd_8" },
+            { "text": "Damit zurück zu Fred und seiner Falle laufen", "next": "c3_sd_6" }
         ]
     },
 
-    "sd_3": {
-        "text": "Daphne entdeckt eine versteckte Tuer hinter einem Spiegel.",
+    "c3_sd_2": {
+        "text": "Fred bindet gerade ein dickes Seil an einen alten Achterbahnpfeiler. 'Das wird meine beste Falle aller Zeiten! Sobald der Geist hier durchschwebt, löst dieses Netz aus!' Plötzlich taucht der Hexenmeister-Geist direkt hinter Fred auf und stößt ein markerschütterndes Heulen aus! Fred erschrickt so sehr, dass er eine schwere Nebelmaschine fallen lässt.",
+        "background": "./game_images/background_sd_rollercoaster.png",
+        "character": "./game_images/character_sd_fred.png",
         "choices": [
-            { "text": "oeffnen", "next": "sd_8" },
-            { "text": "Fred rufen", "next": "sd_6", "karma": 1 }
+            { "text": "Fred vor dem Geist retten und ihn wegziehen", "next": "c3_sd_6", "karma": 3 },
+            { "text": "Die fallengelassene Nebel-Steuerungsfernbedienung schnappen", "next": "sd_fog_remote", "gain_item": "sd_fog_remote", "karma": -1 }
         ]
     },
 
-    "sd_4": {
-        "text": "Scooby und Shaggy finden eine Kueche voller halb gegessener Sandwiches.",
+    "sd_fog_remote": {
+        "text": "Du erhältst die Nebel-Steuerungsfernbedienung. Sie kontrolliert die dichten künstlichen Rauchschwaden im gesamten Parkbereich.",
+        "background": "./game_images/background_sd_rollercoaster.png",
+        "character": "./game_images/item_sd_fog_remote.png",
         "choices": [
-            { "text": "Essen nehmen", "next": "sd_6", "gain_item": "sandwich_supply" },
-            { "text": "Wegrennen", "next": "sd_7", "karma": -1 }
+            { "text": "Den künstlichen Nebel aktivieren um den Geist zu verwirren", "next": "c3_sd_15" },
+            { "text": "Die Fernbedienung einstecken und zum Spiegelkabinett rennen", "next": "c3_sd_12" }
         ]
     },
 
-    "sd_5": {
-        "text": "Fred: 'Das ist kein Zufall. Jemand will, dass wir hier bleiben.'",
+    "c3_sd_3": {
+        "text": "Daphne begutachtet ihr Spiegelbild in den staubigen, verzerrten Gläsern des Kabinetts. 'Igitt, dieser Ort ist absolut staubig! Aber schau mal, dieser eine Spiegel steht schief!' Als sie daran zieht, öffnet sich eine geheime Wandklappe. Ein alter, schwerer Hauptschlüsselbund rutscht heraus.",
+        "background": "./game_images/background_sd_mirror_maze.png",
+        "character": "./game_images/character_sd_daphne.png",
         "choices": [
-            { "text": "Zustimmen", "next": "sd_9", "karma": 1 },
-            { "text": "Zweifeln", "next": "sd_6", "karma": -1 }
+            { "text": "Den Vorhang beiseiteschieben und weitergehen", "next": "c3_sd_7", "karma": -3 },
+            { "text": "Den alten Park-Hauptschlüsselbund einstecken", "next": "sd_park_keys", "gain_item": "sd_park_keys", "karma": 4 }
         ]
     },
 
-    "sd_6": {
-        "text": "Im Flur bewegen sich Schatten, obwohl niemand da ist.",
+    "sd_park_keys": {
+        "text": "Du erhältst den Park-Hauptschlüsselbund. Er öffnet jede verschlossene Tür und jeden Kontrollraum auf diesem Gelände.",
+        "background": "./game_images/background_sd_mirror_maze.png",
+        "character": "./game_images/item_sd_keys.png",
         "choices": [
-            { "text": "Weitergehen", "next": "sd_10" }
+            { "text": "Den Schlüsselbund nutzen um den Geheimgang zu öffnen", "next": "c3_sd_8" },
+            { "text": "Die Schlüssel zu Shaggy und Scooby bringen", "next": "c3_sd_22" }
         ]
     },
 
-    "sd_7": {
-        "text": "Scooby bellt vor einem Aufzug, der nicht aufhoeren will zu fahren.",
+    "c3_sd_4": {
+        "text": "Shaggy und Scooby zittern heftig unter einer Decke. 'N-N-Nein danke, Kumpel! Für kein Geld der Welt gehen wir da raus!' Erst als du ihnen eine extragroße Box Scooby-Snacks hinstreckst, fangen ihre Augen an zu leuchten. Sie schlingen die Kekse runter, gewinnen neuen Mut und springen heldenhaft aus dem Wagen – direkt in einen Haufen klebriger, lila Farbe.",
+        "background": "./game_images/background_sd_mystery_machine.png",
+        "character": "./game_images/character_sd_shaggy_scooby.png",
         "choices": [
-            { "text": "Aufzug untersuchen", "next": "sd_10" },
-            { "text": "Treppen nehmen", "next": "sd_9" }
+            { "text": "Die lila Farbe genauer untersuchen", "next": "c3_sd_11", "karma": 4 },
+            { "text": "Die beiden schnappen und hastig zum Riesenrad rennen", "next": "c3_sd_12", "karma": -2 }
         ]
     },
 
-    "sd_8": {
-        "text": "Hinter dem Spiegel ist ein Geheimgang mit Kratzspuren.",
+    "c3_sd_5": {
+        "text": "Beim Versuch, die Taschenlampe zu reparieren, rutscht Velma im Schlamm aus und bricht das Gehäuse komplett durch. Es wird stockfinster. Der schleimige Geist nutzt die Dunkelheit, stößt ein grausames Lachen aus und treibt euch in die Enge, während Shaggy und Scooby schreiend im Kreis rennen.",
+        "background": "./game_images/background_sd_park_grounds.png",
         "choices": [
-            { "text": "Reingehen", "next": "sd_11", "karma": 1 },
-            { "text": "Zurueckgehen", "next": "sd_9" }
+            { "text": "Freds Hilfe rufen um die Scheinwerfer der Mystery Machine einzuschalten", "next": "c3_sd_13", "karma": 3 },
+            { "text": "Velma an der Hand nehmen und blind ins Spiegelkabinett flüchten", "next": "c3_sd_14", "karma": 5 }
         ]
     },
 
-    "sd_9": {
-        "text": "Velma: 'Das Hotel ist aelter als es aussieht… viel aelter.'",
+    "c3_sd_6": {
+        "text": "Der Geist schwebt im Sturzflug auf euch zu! Fred zieht im falschen Moment am Seil, und das schwere Netz begräbt Fred, Daphne und Velma unter sich. Sie sitzen komplett in der Klemme! Der Geist baut sich drohend vor ihnen auf. Ihr müsst sofort handeln.",
+        "background": "./game_images/background_sd_rollercoaster.png",
         "choices": [
-            { "text": "Weiter untersuchen", "next": "sd_12" }
+            { "text": "Den UV-Spurensucher einschalten um die Projektionslinsen des Geistes zu blenden", "next": "c3_sd_26", "required_item": "sd_uv_tracker" },
+            { "text": "Einen direkten Ablenkungsangriff mit Shaggys Sandwich wagen", "next": "c3_sd_13", "karma": -4 }
         ]
     },
 
-    "sd_10": {
-        "text": "Ein 'Geist' erscheint und schreit durch das Hotel.",
+    "c3_sd_7": {
+        "text": "Der morsche Holzboden unter dem Vorhang gibt plötzlich nach! Daphne und Amethyst-lila Schleimklumpen stürzen in einen tiefen, dunklen Schacht unter dem Kabinett. Weit entfernt hört man das Surren von schweren Transformatoren und Generatoren.",
+        "background": "./game_images/background_sd_mirror_maze.png",
         "choices": [
-            { "text": "Verfolgen", "next": "sd_13" },
-            { "text": "Verstecken", "next": "sd_11", "karma": -1 }
+            { "text": "Hinterherklettern um Daphne aus dem Schacht zu retten", "next": "c3_sd_15", "karma": -2 },
+            { "text": "Oben bleiben und die Park-Schlüssel suchen", "next": "c3_sd_13", "karma": 4 }
         ]
     },
 
-    "sd_11": {
-        "text": "Du findest eine alte Taschenlampe mit schwacher Batterie.",
+    "c3_sd_8": {
+        "text": "Der leuchtende Geist schwebt direkt auf das alte Steuerhäuschen des Riesenrads zu. Er bereitet eine gewaltige Schockwelle vor, die die Mystery Machine lahmlegen soll. Velma kneift die Augen zusammen: 'Wenn dieser Geist das Stromnetz überlastet, verlieren wir alle Beweise!'",
+        "background": "./game_images/background_sd_amusement_park.png",
         "choices": [
-            { "text": "Nehmen", "next": "sd_12", "gain_item": "flashlight" }
+            { "text": "Die Stromzufuhr des Riesenrads mit dem UV-Spurensucher sabotieren", "next": "c3_sd_30", "required_item": "sd_uv_tracker" },
+            { "text": "Den Kontrollraum mit dem Hauptschlüsselbund verriegeln", "next": "c3_sd_30", "required_item": "sd_park_keys" }
         ]
     },
 
-    "sd_12": {
-        "text": "Fred baut improvisierte Seilfallen aus Hotelmaterial.",
+    "c3_sd_11": {
+        "text": "Shaggy schnuppert an der Farbe. 'Like, das riecht überhaupt nicht nach Grusel-Schleim, Kumpel! Das ist ganz normale Theaterfarbe!' Die Spur führt direkt zu einem versteckten, unterirdischen Tank hinter der Losbude, doch der Deckel ist mit einem schweren Vorhängeschloss gesichert.",
+        "background": "./game_images/background_sd_park_grounds.png",
+        "character": "./game_images/character_sd_shaggy_scooby.png",
         "choices": [
-            { "text": "Helfen", "next": "sd_14", "karma": 1 },
-            { "text": "Weitergehen", "next": "sd_13" }
+            { "text": "Das Schloss mit Velmas Haarnadel vorsichtig knacken", "next": "c3_sd_28", "karma": 4 },
+            { "text": "Scooby den schweren Tank mit Wucht umwerfen lassen", "next": "c3_sd_27", "karma": -5 }
         ]
     },
 
-    "sd_13": {
-        "text": "Shaggy schwoert, dass der Geist ihn beobachtet hat.",
+    "c3_sd_12": {
+        "text": "Ihr erreicht das Steuerzentrum des Parks, doch die schwere Eisentür ist komplett verriegelt. Drinnen hört man das laute Tippen einer Person. Der Geist taucht plötzlich hinter euch auf und seine Augen glühen bedrohlich rot! Fred versucht verzweifelt, die Tür aufzustoßen.",
+        "background": "./game_images/background_sd_park_grounds.png",
         "choices": [
-            { "text": "Beruhigen", "next": "sd_14", "karma": 1 },
-            { "text": "Zweifeln", "next": "sd_15", "karma": -1 }
+            { "text": "Die Tür mit dem Park-Hauptschlüsselbund blitzschnell öffnen", "next": "c3_sd_26", "required_item": "sd_park_keys" },
+            { "text": "Sich umdrehen und dem Geist mit erhobenen Fäusten entgegentreten", "next": "c3_sd_13", "karma": -4 }
         ]
     },
 
-    "sd_14": {
-        "text": "Velma entdeckt mechanische Teile hinter einer Wand.",
+    "c3_sd_13": {
+        "text": "Der überstürzte Plan geht völlig schief. Die Falle schnappt nach den falschen Leuten, der Geist entkommt im dichten Rauch, und Shaggy und Scooby landen kopfüber in einem riesigen Bottich voll mit klebriger Zuckerwatte. Das Monster lacht hämisch aus der Ferne, während die Mystery-Gang komplett handlungsunfähig im Zucker feststeckt.",
+        "background": "./game_images/background_sd_amusement_park.png",
         "choices": [
-            { "text": "Untersuchen", "next": "sd_16" },
-            { "text": "Ignorieren", "next": "sd_15", "karma": -1 }
+            { "text": "Fred beim Freischneiden helfen und die Verfolgung neu aufnehmen", "next": "c3_sd_28", "karma": 3 },
+            { "text": "Scooby die Zuckerwatte auffressen lassen um den Mechanismus freizulegen", "next": "c3_sd_27", "karma": -1 }
         ]
     },
 
-    "sd_15": {
-        "text": "Der 'Geist' erscheint erneut, diesmal naeher.",
+    "c3_sd_14": {
+        "text": "Im Spiegelkabinett findet Velma dank deiner Hilfe ihre Brille wieder! 'Jinkies! Schaut euch diese Spiegel an! Das Licht wird von Projektoren hinter den Wänden verzerrt!' Sie entdeckt ein freiliegendes Glasfaserkabel, das direkt zum geheimen Projektorraum des Parks führt.",
+        "background": "./game_images/background_sd_mirror_maze.png",
         "choices": [
-            { "text": "Fliehen", "next": "sd_17", "karma": -1 },
-            { "text": "Konfrontieren", "next": "sd_16", "karma": 1 }
+            { "text": "Den Hauptprojektor mit dem Nebel-Steuerungsfernbedienung lahmlegen", "next": "c3_sd_30", "required_item": "sd_fog_remote" },
+            { "text": "Das Kabel mit Freds Taschenmesser durchtrennen", "next": "c3_sd_27", "karma": -3 }
         ]
     },
 
-    "sd_16": {
-        "text": "Velma: 'Es ist ein Projektor-System. Jemand inszeniert das Ganze.'",
+    "c3_sd_15": {
+        "text": "Mithilfe deines Nebel-Reglers oder des UV-Trackers findet ihr die Schwachstelle des Geistes: Ein versteckter, kleiner Hologramm-Projektor, der an der Schiene der Achterbahn montiert ist. Doch der vermeintliche Geist steuert das Gerät direkt aus einer fahrbaren Lore.",
+        "background": "./game_images/background_sd_rollercoaster.png",
         "choices": [
-            { "text": "Beweise sammeln", "next": "sd_18", "gain_item": "projector_part" },
-            { "text": "Weiter suchen", "next": "sd_17" }
+            { "text": "Die Elektronik der Lore mit der Nebel-Fernbedienung überlasten", "next": "c3_sd_30", "required_item": "sd_fog_remote" },
+            { "text": "Shaggy ein langes Seil spannen lassen um die Lore aus den Schienen zu werfen", "next": "c3_sd_13", "karma": 2 }
         ]
     },
 
-    "sd_17": {
-        "text": "Scooby findet einen versteckten Kontrollraum.",
+    "c3_sd_22": {
+        "text": "Du bringst den Hauptschlüsselbund zu Shaggy und Scooby. Beim panischen Herumfuchteln rutscht Scooby aus, wirft die Schlüssel in die Luft, und sie landen exakt im Getriebe des großen Stromgenerators! Das Getriebe blockiert mit einem lauten Knirschen, und alle Spezialeffekte im Park fallen schlagartig aus.",
+        "background": "./game_images/background_sd_park_grounds.png",
+        "character": "./game_images/character_sd_shaggy_scooby.png",
         "choices": [
-            { "text": "Reingehen", "next": "sd_18" },
-            { "text": "Scooby zurueckhalten", "next": "sd_19", "karma": -1 }
+            { "text": "Den enttarnten Gauner im Kontrollraum stellen", "next": "c3_sd_30", "karma": 5 },
+            { "text": "Den Generator genauer untersuchen", "next": "c3_sd_13", "karma": -1 }
         ]
     },
 
-    "sd_18": {
-        "text": "Im Kontrollraum laufen Maschinen, die das 'Monster' steuern.",
+    "c3_sd_26": {
+        "text": "Durch den cleveren Einsatz deiner Gegenstände bricht die Illusion des Geistes komplett zusammen. Das neongrüne Leuchten verblasst zu einfachem Scheinwerferlicht und die unheimliche Heulmusik verwandelt sich in das Ächzen eines alten Tonbands.",
+        "background": "./game_images/background_sd_amusement_park.png",
         "choices": [
-            { "text": "Deaktivieren", "next": "sd_20", "karma": 2 },
-            { "text": "Beobachten", "next": "sd_19" }
+            { "text": "Den Gauner endgültig in die Falle locken", "next": "c3_sd_30" },
+            { "text": "Fred den Rest erledigen lassen", "next": "c3_sd_27", "karma": 2 }
         ]
     },
 
-    "sd_19": {
-        "text": "Der falsche Geist naehert sich der Gruppe erneut.",
+    "c3_sd_27": {
+        "text": "Die Apparatur fliegt mit einem lauten Knall in die Luft! Der Geist entkommt zwar unerkannt im dichten Rauch der Explosion, doch der Spuk im Park hat ein Ende. Die Mystery-Gang steht erschöpft im Schlamm und Fred seufzt: 'Wir haben den Fall gelöst, aber wir werden wohl nie erfahren, wer unter der Maske steckte...'",
+        "background": "./game_images/background_sd_amusement_park.png",
         "choices": [
-            { "text": "Fallen ausloesen", "next": "sd_21" },
-            { "text": "Fliehen", "next": "sd_20", "karma": -1 }
+            { "text": "end", "next": "end" }
         ]
     },
 
-    "sd_20": {
-        "text": "Fred: 'Jetzt oder nie, wir brauchen einen Plan.'",
+    "c3_sd_28": {
+        "text": "Shaggy und Scooby stolpern vor Schreck über das dicke Netzkabel des Projektors und reißen es komplett aus der Steckdose! Der Geist verschwindet augenblicklich und eine Gestalt im klobigen Taucheranzug stürzt fluchend aus der Steuerkabine mitten in Freds bereitstehendes Netz.",
+        "background": "./game_images/background_sd_amusement_park.png",
+        "character": "./game_images/character_sd_shaggy_scooby.png",
         "choices": [
-            { "text": "Plan ausfuehren", "next": "sd_22", "karma": 1 }
+            { "text": "Die Maske des Gauners feierlich abnehmen", "next": "c3_sd_30" }
         ]
     },
 
-    "sd_21": {
-        "text": "Die Falle faengt den 'Geist' teilweise ein.",
+    "c3_sd_30": {
+        "text": "Mit einem genialen Finale wird der Geist vollständig enttarnt! Fred tritt stolz vor und reißt der zappelnden Gestalt die schaurige Gummimaske vom Kopf. Zum Vorschein kommt... der alte Parkwächter Mr. Jenkins! Velma rückt ihre Brille zurecht: 'Genau wie ich vermutet hatte! Jenkins wollte den Geist nutzen, um den Wert des Parks zu senken und das Grundstück billig zu kaufen!' Mr. Jenkins fuchtelt wütend mit den Fäusten im Netz herum: 'Und ich wäre auch damit durchgekommen, wenn diese medizierenden Kinder und ihr dämlicher Hund nicht gewesen wären!' Shaggy und Scooby springen jubelnd in die Luft, schnappen sich ein riesiges Sandwich und Scooby ruft laut: 'Scooby-Dooby-Doo!!!'",
+        "background": "./game_images/background_sd_amusement_park.png",
+        "character": "./game_images/character_sd_shaggy_scooby.png",
         "choices": [
-            { "text": "Entlarven", "next": "sd_22", "karma": 2 }
+            { "text": "Ende", "next": "end" }
         ]
     },
 
-    "sd_22": {
-        "text": "Der Taeter wird sichtbar: ein Hotelmanager mit Fernsteuerung.",
-        "choices": [
-            { "text": "Konfrontieren", "next": "sd_23" },
-            { "text": "Beweise zeigen", "next": "sd_24", "karma": 1 }
-        ]
-    },
-
-    "sd_23": {
-        "text": "Der Manager versucht zu fliehen.",
-        "choices": [
-            { "text": "Stoppen", "next": "sd_24", "karma": 1 },
-            { "text": "Laufen lassen", "next": "sd_25", "karma": -2 }
-        ]
-    },
-
-    "sd_24": {
-        "text": "Velma: 'Wie immer war es kein echtes Monster.'",
-        "choices": [
-            { "text": "Weiter", "next": "sd_26" }
-        ]
-    },
-
-    "sd_25": {
-        "text": "Der Manager deaktiviert alle Beweise und verschwindet.",
-        "choices": [
-            { "text": "Akzeptieren", "next": "sd_26", "karma": -2 }
-        ]
-    },
-
-    "sd_26": {
-        "text": "Scooby und Shaggy finden eine geheime Schatzkarte im Hotel.",
-        "choices": [
-            { "text": "Mitnehmen", "next": "sd_27", "gain_item": "mystery_map" }
-        ]
-    },
-
-    "sd_27": {
-        "text": "Fred: 'Das hier ist groesser als nur dieses Hotel.'",
-        "choices": [
-            { "text": "Zustimmen", "next": "sd_28", "karma": 1 },
-            { "text": "Zweifeln", "next": "sd_28", "karma": -1 }
-        ]
-    },
-
-    "sd_28": {
-        "text": "Der Nebel draussen formt kurz eine unbekannte Silhouette.",
-        "choices": [
-            { "text": "Beobachten", "next": "sd_29" }
-        ]
-    },
-
-    "sd_29": {
-        "text": "Die Mystery Inc. erkennt: Dieses Hotel war nur ein Testfall.",
-        "choices": [
-            { "text": "Weiter untersuchen", "next": "sd_30" }
-        ]
-    },
-
-    "sd_30": {
-        "text": "Der Fall ist geloest, aber etwas Groesseres bleibt im Hintergrund aktiv. uebergang zu Kapitel 4 oeffnet sich.",
-        "choices": [
-            { "text": "Kapitel 4 starten", "next": "end" }
-        ]
-    },
     "c3_tmnt_start": {
-        "text": "Ein Stromausfall legt Teile von New York lahm. U-Bahn-Tunnel flackern in unregelmaessigen Abstaenden auf, als wuerde etwas darunter ‚atmen‘. In der Kanalisation tauchen ploetzlich alte Foot-Clan-Symbole auf, die niemand dort angebracht hat.",
+        "text": "In den dunklen Straßen von New York City bricht das Chaos aus. Eine Armee von mechanischen Mousern kriecht aus den Gullys und attackiert die Stromkästen. Plötzlich färbt sich der Nachthimmel violett, als ein riesiges Technodrom-Portal über dem Times Square aufreißt. Krang erscheint auf einem riesigen holografischen Bildschirm, während Leonardo, Raphael, Donatello und Michelangelo bereits ihre Waffen ziehen.",
+        "background": "./game_images/background_tmnt_streets.png",
         "choices": [
-            { "text": "Direkt zu den U-Bahn-Tunneln gehen", "next": "tmnt_underground_1" },
-            { "text": "Zur Turtle-Basis zurueckkehren", "next": "tmnt_lair_1" },
-            { "text": "Foot-Symbole untersuchen", "next": "tmnt_signs_1", "karma": 1 }
+            { "text": "Mit Leonardo den Times Square absichern", "next": "c3_tmnt_1", "karma": 1 },
+            { "text": "Mit Donatello die Mouser-Steuerung hacken", "next": "c3_tmnt_2", "karma": 2 },
+            { "text": "Mit Raphael direkt die Straßenschlucht stürmen", "next": "c3_tmnt_3", "karma": -1 },
+            { "text": "Michelangelo folgen, der einer Pizza-Spur in die Kanalisation nachgeht", "next": "c3_tmnt_4", "karma": 3 }
         ]
     },
 
-    "tmnt_underground_1": {
-        "text": "Im Tunnel hoerst du Metall auf Metall, aber kein Kampf ist sichtbar. Stattdessen bewegen sich Schatten entlang der Waende, die nicht zu den Lichtquellen passen.",
+    "c3_tmnt_1": {
+        "text": "Leonardo pariert die Angriffe der Foot-Clan-Ninja mit eiserner Disziplin. 'Das Portal zieht Energie aus dem Hauptkraftwerk! Wenn wir den Strom nicht kappen, bricht das Technodrom komplett in unsere Dimension durch!' Mitten im Gefecht verliert ein feindlicher Elite-Ninja ein seltsames Gerät.",
+        "background": "./game_images/background_tmnt_rooftop.png",
+        "character": "./game_images/character_tmnt_leonardo.png",
         "choices": [
-            { "text": "Dem Geraeusch folgen", "next": "tmnt_shadow_1" },
-            { "text": "Zur Oberflaeche zurueckziehen", "next": "tmnt_surface_1", "karma": -1 },
-            { "text": "Scanner aktivieren (falls vorhanden)", "next": "tmnt_scan_1", "required_item": "mutagen_sample" }
+            { "text": "Den kybernetischen Foot-Clan-Schlüssel einpacken", "next": "tmnt_foot_key", "gain_item": "tmnt_foot_key" },
+            { "text": "Das Gerät ignorieren und die Brücke verteidigen", "next": "c3_tmnt_5", "karma": -2 }
         ]
     },
 
-    "tmnt_lair_1": {
-        "text": "Die Turtle-Basis ist halb im Dunkeln. Donatello hat mehrere Monitore gleichzeitig laufen, aber keiner zeigt stabile Daten. Leonardo trainiert ohne Zielrichtung, als wuerde er etwas erwarten.",
+    "tmnt_foot_key": {
+        "text": "Du erhältst den Foot-Clan-Schlüssel. Er vibriert mit der Frequenz von Shredders Geheimbasis.",
+        "background": "./game_images/background_tmnt_rooftop.png",
+        "character": "./game_images/item_tmnt_foot_key.png",
         "choices": [
-            { "text": "Donatello unterstuetzen", "next": "tmnt_lab_1", "karma": 2 },
-            { "text": "Leonardo ansprechen", "next": "tmnt_leo_1" },
-            { "text": "Ausruestung nehmen und sofort rausgehen", "next": "tmnt_underground_1", "karma": -1 }
+            { "text": "Den Schlüssel an Donatellos Terminal testen", "next": "c3_tmnt_8" },
+            { "text": "Damit zu Raphaels Kampfschauplatz eilen", "next": "c3_tmnt_6" }
         ]
     },
 
-    "tmnt_signs_1": {
-        "text": "Die Symbole reagieren leicht auf deine Naehe. Nicht aktiv, aber auch nicht inaktiv. Als wuerden sie ‚warten‘.",
+    "c3_tmnt_2": {
+        "text": "Donatello tippt wild auf seinem tragbaren T-Phone herum. 'Diese Mouser werden nicht von Baxter Stockman gesteuert, sondern direkt aus der Dimension X! Ich brauche ein reines Mutagen-Signal, um ihren Code zu knacken!' Plötzlich bricht ein mutiertes Riesen-Wildschwein durch die Wand: Bebop!",
+        "background": "./game_images/background_tmnt_lab.png",
+        "character": "./game_images/character_tmnt_donatello.png",
         "choices": [
-            { "text": "Beruehren", "next": "tmnt_mark_1", "karma": -1 },
-            { "text": "Abzeichnen und mitnehmen", "next": "tmnt_lab_1", "gain_item": "foot_mark_copy" },
-            { "text": "Ignorieren und weitergehen", "next": "tmnt_surface_1" }
+            { "text": "Donatello vor Bebop beschützen", "next": "c3_tmnt_6", "karma": 3 },
+            { "text": "Bebops fallengelassenen Mutagen-Scanner schnappen", "next": "tmnt_mutagen_scanner", "gain_item": "tmnt_mutagen_scanner", "karma": -1 }
         ]
     },
 
-    "tmnt_shadow_1": {
-        "text": "Die Schatten loesen sich kurz vom Boden und formen eine unvollstaendige Silhouette eines humanoiden Kaempfers.",
+    "tmnt_mutagen_scanner": {
+        "text": "Du erhältst den Mutagen-Scanner. Er kann verborgene Ooze-Konzentrationen und außerirdische Portale orten.",
+        "background": "./game_images/background_tmnt_lab.png",
+        "character": "./game_images/item_tmnt_scanner.png",
         "choices": [
-            { "text": "Angreifen", "next": "tmnt_conflict_1", "karma": -1 },
-            { "text": "Beobachten", "next": "tmnt_scan_2" },
-            { "text": "Zurueckweichen", "next": "tmnt_surface_1", "karma": 1 }
+            { "text": "Mit dem Scanner nach dem Portal-Kern suchen", "next": "c3_tmnt_15" },
+            { "text": "Damit zu Meister Splinter in die Kanalisation flüchten", "next": "c3_tmnt_12" }
         ]
     },
 
-    "tmnt_lab_1": {
-        "text": "Donatello erkennt ein Muster in den Foot-Signalen: Sie sind nicht aus Befehlen aufgebaut, sondern aus Rueckkopplungsschleifen.",
+    "c3_tmnt_3": {
+        "text": "Raphael wirbelt seine Sais durch die Luft und drängt eine Gruppe von Rocksteady-Klonen zurück. 'Diese Blechbüchsen hören einfach nicht auf zu kommen!' Mitten im Chaos rutscht ein wertvoller, goldener Kampf-Greifhaken aus einer Kiste der Kraang-Invasoren.",
+        "background": "./game_images/background_tmnt_streets.png",
+        "character": "./game_images/character_tmnt_raphael.png",
         "choices": [
-            { "text": "Analyse fortsetzen", "next": "tmnt_core_hint_1" },
-            { "text": "System abschalten", "next": "tmnt_interference_1", "karma": 2 },
-            { "text": "Daten sichern und warten", "next": "tmnt_wait_1" }
+            { "text": "In die Seitengasse ausweichen und Deckung suchen", "next": "c3_tmnt_7", "karma": -3 },
+            { "text": "Den High-Tech-Ninja-Greifhaken einstecken", "next": "tmnt_grappling_hook", "gain_item": "tmnt_grappling_hook", "karma": 4 }
         ]
     },
 
-    "tmnt_leo_1": {
-        "text": "Leonardo sagt nichts sofort. Dann: 'Das hier fuehlt sich nicht wie ein Gegner an. Eher wie ein Test.'",
+    "tmnt_grappling_hook": {
+        "text": "Du erhältst den Ninja-Greifhaken. Er schießt ein mikro-verstärktes Titanseil über extreme Distanzen.",
+        "background": "./game_images/background_tmnt_streets.png",
+        "character": "./game_images/item_tmnt_hook.png",
         "choices": [
-            { "text": "Zustimmen und planen", "next": "tmnt_core_hint_1", "karma": 2 },
-            { "text": "Widersprechen und handeln", "next": "tmnt_conflict_1" },
-            { "text": "Abwarten", "next": "tmnt_wait_1", "karma": -1 }
+            { "text": "Den Haken nutzen, um auf das Dach des Kraftwerks zu gelangen", "next": "c3_tmnt_8" },
+            { "text": "Den Haken zu Michelangelo in die Kanalisation bringen", "next": "c3_tmnt_22" }
         ]
     },
 
-    "tmnt_scan_1": {
-        "text": "Der Scanner zeigt keine klare Quelle. Nur ueberlagerungen mehrerer Energieprofile.",
+    "c3_tmnt_4": {
+        "text": "Michelangelo schnaubt glücklich. 'Hey Kumpel, eine frische Marshmallow-Salami-Pizza! Das kann kein Zufall sein!' Doch als er zugreift, entpuppt sich die Pizza als Köder: Ein gigantischer Roboter-Krake bricht aus dem Abwasser und reißt Mikey mit sich! April O'Neil filmt die Szene geschockt von einer Leiter aus.",
+        "background": "./game_images/background_tmnt_sewer.png",
+        "character": "./game_images/character_tmnt_mikey.png",
         "choices": [
-            { "text": "Daten speichern", "next": "tmnt_lab_1", "gain_item": "scan_fragment" },
-            { "text": "Scanner abschalten", "next": "tmnt_surface_1" }
+            { "text": "April dabei helfen, das Beweismaterial zu sichern", "next": "c3_tmnt_11", "karma": 4 },
+            { "text": "Sofort hinterherringen und den Kraken attackieren", "next": "c3_tmnt_12", "karma": -2 }
         ]
     },
 
-    "tmnt_scan_2": {
-        "text": "Die Schatten reagieren auf Aufmerksamkeit. Je laenger du hinsiehst, desto klarer wird die Form.",
+    "c3_tmnt_5": {
+        "text": "Ohne den Schlüssel blockieren die elektronischen Barrieren das Vorankommen. Ein Rudel fliegender Kraang-Drohnen kesselt euch auf dem Dach ein. Sie laden ihre Plasma-Kanonen auf. Leonardo versucht verzweifelt, die Drohnen im Sprung zu erwischen, doch die Reichweite ist zu groß.",
+        "background": "./game_images/background_tmnt_rooftop.png",
         "choices": [
-            { "text": "Kontakt herstellen", "next": "tmnt_core_hint_1", "karma": 1 },
-            { "text": "Zerstoeren", "next": "tmnt_conflict_1", "karma": -2 }
+            { "text": "Casey Jones mit seinem Hockey-Schläger zur Hilfe rufen", "next": "c3_tmnt_13", "karma": 3 },
+            { "text": "Gemeinsam durch ein Lüftungsrohr ins Kraftwerk flüchten", "next": "c3_tmnt_14", "karma": 5 }
         ]
     },
 
-    "tmnt_core_hint_1": {
-        "text": "Donatello findet eine Koordinate tief unter Manhattan: etwas wirkt dort wie ein ‚Synchronisationskern‘ fuer alle Mutagen-Signale.",
+    "c3_tmnt_6": {
+        "text": "Shredder tritt persönlich aus den Schatten! Seine Klingen blitzen im fahlen Licht. 'Ihr Schildkröten habt mein Imperium oft genug gestört! Heute wird das Technodrom diese Stadt säubern!' Er holt zum finalen Schlag gegen die wehrlosen Turtles aus.",
+        "background": "./game_images/background_tmnt_streets.png",
+        "character": "./game_images/character_tmnt_shredder.png",
         "choices": [
-            { "text": "Koordinate verfolgen", "next": "tmnt_core_1" },
-            { "text": "Information teilen", "next": "tmnt_lair_2", "karma": 2 },
-            { "text": "Alleine hingehen", "next": "tmnt_core_1", "karma": -1 }
+            { "text": "Den Foot-Clan-Schlüssel nutzen, um Shredders Rüstung kurzzuschließen", "next": "c3_tmnt_26", "required_item": "tmnt_foot_key" },
+            { "text": "Sich schützend vor das Team werfen und den Schlag blocken", "next": "c3_tmnt_13", "karma": -4 }
         ]
     },
 
-    "tmnt_interference_1": {
-        "text": "Das System reagiert instabil. Fuer einen Moment werden alle Foot-Signale still.",
+    "c3_tmnt_7": {
+        "text": "Der Boden in der Seitengasse bricht durch das enorme Gewicht der Mouser ein! Du stürzt zusammen mit Trümmern in das uralte U-Bahn-Netzwerk unter New York. Weit entfernt hört man das bedrohliche Stampfen des Technodrom-Generators.",
+        "background": "./game_images/background_tmnt_sewer.png",
         "choices": [
-            { "text": "Abwarten", "next": "tmnt_wait_1" },
-            { "text": "Sofort nachsetzen", "next": "tmnt_core_1", "karma": 1 }
+            { "text": "Den Schienen folgen, um den Generator zu finden", "next": "c3_tmnt_15", "karma": -2 },
+            { "text": "Nach oben klettern und die Schildkröten suchen", "next": "c3_tmnt_13", "karma": 4 }
         ]
     },
 
-    "tmnt_wait_1": {
-        "text": "Die Stadt veraendert ihre Geraeuschkulisse. Etwas ist verschwunden, aber niemand weiss was.",
+    "c3_tmnt_8": {
+        "text": "Das Technodrom-Portal hat sich vollständig stabilisiert. Die metallische Festung schiebt sich langsam durch den Riss und droht, das gesamte Viertel zu zerquetschen. Krang lacht irre aus seiner Steuerkabine: 'Niemand kann die Dimension X aufhalten!'",
+        "background": "./game_images/background_tmnt_streets.png",
         "choices": [
-            { "text": "Weiter verfolgen", "next": "tmnt_core_1" }
+            { "text": "Den Portal-Kern mit dem Foot-Clan-Schlüssel manipulieren", "next": "c3_tmnt_30", "required_item": "tmnt_foot_key" },
+            { "text": "Den Generator mit dem Ninja-Greifhaken aus der Verankerung reißen", "next": "c3_tmnt_30", "required_item": "tmnt_grappling_hook" }
         ]
     },
 
-    "tmnt_surface_1": {
-        "text": "Auf der Oberflaeche sind die Lichter der Stadt leicht verzoegert. Bewegungen wirken minimal asynchron.",
+    "c3_tmnt_11": {
+        "text": "April analysiert das Video auf ihrem Laptop. 'Die Spur führt zu einem versteckten Labor in den Docks! Dort lagert Krang das gestohlene Ooze!' Der Eingang zu den Docks wird jedoch von einer schweren Stahltür versperrt.",
+        "background": "./game_images/background_tmnt_streets.png",
         "choices": [
-            { "text": "Zurueck in die Kanalisation", "next": "tmnt_underground_1" },
-            { "text": "Menschen warnen", "next": "tmnt_civ_1", "karma": 2 },
-            { "text": "Ignorieren und weitergehen", "next": "tmnt_core_1", "karma": -1 }
+            { "text": "Das Schloss mit Donatellos Laserschneider öffnen", "next": "c3_tmnt_28", "karma": 4 },
+            { "text": "Die Tür gewaltsam mit einer Mülltonne rammen", "next": "c3_tmnt_27", "karma": -5 }
         ]
     },
 
-    "tmnt_civ_1": {
-        "text": "Einige Menschen reagieren verwirrt, andere sehen nichts Ungewoehnliches.",
+    "c3_tmnt_12": {
+        "text": "Ihr erreicht das geheime Hauptquartier, doch Meister Splinter ist nirgends zu sehen. Stattdessen haben Kraang-Androiden das Versteck besetzt! Sie aktivieren ihre Schusswaffen und kesseln euch ein. Die Lage scheint absolut aussichtslos.",
+        "background": "./game_images/background_tmnt_sewer.png",
         "choices": [
-            { "text": "Weiter helfen", "next": "tmnt_lair_2", "karma": 2 },
-            { "text": "Abbrechen", "next": "tmnt_core_1" }
+            { "text": "Die Androiden mit dem Mutagen-Scanner überlasten", "next": "c3_tmnt_26", "required_item": "tmnt_mutagen_scanner" },
+            { "text": "Den Kampf im engen Abwasserkanal wagen", "next": "c3_tmnt_13", "karma": -4 }
         ]
     },
 
-    "tmnt_lair_2": {
-        "text": "Splinter: 'Zu viel Eingreifen kann ebenso gefaehrlich sein wie zu wenig.'",
+    "c3_tmnt_13": {
+        "text": "Der überstürzte Angriff scheitert. Die Waffen der Turtles werden beschädigt, das Technodrom-Portal dehnt sich weiter aus, und ihr werdet in einer Energiekapsel gefangen genommen. Das Krang-Imperium scheint gesiegt zu haben, doch plötzlich bricht Meister Splinter mit einem lauten Kampfschrei durch die Decke!",
+        "background": "./game_images/background_tmnt_sewer.png",
+        "character": "./game_images/character_tmnt_splinter.png",
         "choices": [
-            { "text": "Verstehen und abwaegen", "next": "tmnt_core_1", "karma": 2 },
-            { "text": "Ignorieren", "next": "tmnt_core_1", "karma": -2 }
+            { "text": "Splinters Gegenangriff unterstützen", "next": "c3_tmnt_28", "karma": 3 },
+            { "text": "Die Verwirrung zur Flucht in den Kontrollraum nutzen", "next": "c3_tmnt_27", "karma": -1 }
         ]
     },
 
-    "tmnt_core_1": {
-        "text": "Der Weg fuehrt tief unter die Stadt. Die Realitaet wirkt dort duenner, als wuerde sie auf etwas anderes aufliegen.",
+    "c3_tmnt_14": {
+        "text": "Im Inneren des Kraftwerks findet Donatello die Hauptstromleitung. 'Wenn wir diese Relais kappen, bricht die Verbindung zur Dimension X zusammen!' Plötzlich materialisiert sich eine Elite-Wache des Foot-Clans und schneidet das Kabel ab.",
+        "background": "./game_images/background_tmnt_lab.png",
         "choices": [
-            { "text": "Weiter", "next": "tmnt_final_1" }
+            { "text": "Die Notstromversorgung mit dem Mutagen-Scanner hacken", "next": "c3_tmnt_30", "required_item": "tmnt_mutagen_scanner" },
+            { "text": "Das Kabel manuell mit Leonardos Katanas verbinden", "next": "c3_tmnt_27", "karma": -3 }
         ]
     },
 
-    "tmnt_final_1": {
-        "text": "Der Synchronisationskern pulsiert unter Manhattan. Etwas reagiert auf eure Anwesenheit.",
+    "c3_tmnt_15": {
+        "text": "Mithilfe des Scanners findet ihr die Schwachstelle: Ein kleiner, ungeschützter Belüftungsschacht direkt über dem Technodrom-Hauptprozessor. Doch Baxter Stockman bewacht den Schacht in seiner mutierten Fliegenform.",
+        "background": "./game_images/background_tmnt_streets.png",
         "choices": [
-            { "text": "Annaehern", "next": "tmnt_ending_1" },
-            { "text": "Vorbereiten", "next": "tmnt_ending_1", "karma": 1 }
+            { "text": "Stockmans Flugbahnen mit dem Mutagen-Scanner berechnen", "next": "c3_tmnt_30", "required_item": "tmnt_mutagen_scanner" },
+            { "text": "Ihn mit Michelangelos Nunchakus aus der Luft holen", "next": "c3_tmnt_13", "karma": 2 }
         ]
     },
 
-    "tmnt_ending_1": {
-        "text": "Der Kern stabilisiert sich kurz – dann beginnt er, sich mit der Stadt zu verbinden. uebergang zu Kapitel 4 oeffnet sich.",
+    "c3_tmnt_22": {
+        "text": "Du wirfst Michelangelo den Ninja-Greifhaken zu. Er fängt ihn ab, wirbelt das Seil im Kreis und schleudert den Haken exakt in das Auge des Roboter-Kraken! Die Maschine erleidet einen Kurzschluss und gibt den Weg zum Hafen frei.",
+        "background": "./game_images/background_tmnt_sewer.png",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "end" }
+            { "text": "Dem flüchtenden Kraken folgen", "next": "c3_tmnt_30", "karma": 5 },
+            { "text": "Zurück an die Oberfläche kehren", "next": "c3_tmnt_13", "karma": -1 }
         ]
     },
+
+    "c3_tmnt_26": {
+        "text": "Durch den präzisen Einsatz deiner Gegenstände bricht die Barriere des Foot-Clans zusammen. Shredders Rüstung sprüht Funken und Krangs Portal verliert die nötige Stabilität, um die schweren Kriegsmaschinen zu transportieren.",
+        "background": "./game_images/background_tmnt_streets.png",
+        "choices": [
+            { "text": "Den finalen Angriff mit den Turtles starten", "next": "c3_tmnt_30" },
+            { "text": "Sich neu formieren", "next": "c3_tmnt_27", "karma": 2 }
+        ]
+    },
+
+    "c3_tmnt_27": {
+        "text": "Das Technodrom-Portal implodiert mit einem gewaltigen Knall! Shredder und Krang werden im letzten Moment zurück in die Dimension X geschleudert. New York City ist gerettet, doch die Straßen liegen voller Trümmer und die Turtles müssen sich schnell zurückziehen, bevor die Polizei eintrifft.",
+        "background": "./game_images/background_tmnt_streets.png",
+        "choices": [
+            { "text": "end", "next": "end" }
+        ]
+    },
+
+    "c3_tmnt_28": {
+        "text": "Meister Splinter schlägt die Foot-Ninja mit unnachahmlicher Eleganz in die Flucht, während Donatello das Portal-Terminal mit einem Code füttert. Das violette Leuchten am Himmel verblasst.",
+        "background": "./game_images/background_tmnt_streets.png",
+        "choices": [
+            { "text": "Den finalen Schlag ausführen", "next": "c3_tmnt_30" }
+        ]
+    },
+
+    "c3_tmnt_30": {
+        "text": "Mit einem furiosen Finale zerschmettern die Teenage Mutant Ninja Turtles – getragen von Leonardos Führung, Donatellos genialem Hack und dem präzisen Einsatz des Foot-Clan-Schlüssels – die Invasionspläne des Bösen. Das Technodrom-Portal schließt sich vollständig und hinterlässt nur einen klaren, friedlichen Sternenhimmel über Manhattan. Die Straßen sind wieder sicher. In ihrem Versteck stoßen die Turtles mit riesigen Stücken Peperoni-Pizza an. Meister Splinter nickt dir gütig zu: 'Ihr habt heute bewiesen, dass Mut und Loyalität die stärksten Waffen sind.' Mikey springt euphorisch hoch und ruft laut: 'COWABUNGA!!!'",
+        "background": "./game_images/background_tmnt_sewer.png",
+        "choices": [
+            { "text": "Ende", "next": "end" }
+        ]
+    },
+
     "c3_shs_start": {
-        "text": "Super Hero City ist in Aufruhr. Irgendetwas stoert die Heldenkommunikation weltweit. Iron Man verliert zeitweise Zugriff auf seine Systeme, waehrend Thor berichtet, dass der Himmel ‚falsch klingt‘. Captain America organisiert Evakuierungen, aber die Lage ist unklar.",
+        "text": "Alarm im Super Hero City Helicarrier! Doktor Doom hat seine bösartigen Lethal Legion Schurken ausgesandt, um die Stadt zu tyrannisieren. Auf den Monitoren flackert eine Warnung: Abominable und MODOK attackieren das Einkaufszentrum im Stadtzentrum, um einen mächtigen Infinity-Fraktal-Splitter zu rauben! Wenn sie das Fraktal in Dooms Hände übergeben, ist die Realität in Gefahr. Iron Man, Thor, Hulk, Wolverine, Falcon und Silver Surfer stehen kampfbereit in der Einsatzzentrale.",
+        "background": "./game_images/background_shs_helicarrier.png",
         "choices": [
-            { "text": "Avengers Tower untersuchen", "next": "shs_tower_1" },
-            { "text": "Asgardisches Signal verfolgen", "next": "shs_asgard_1", "karma": 1 },
-            { "text": "Hydra Aktivitaet pruefen", "next": "shs_hydra_1", "karma": -1 },
-            { "text": "Stadt retten helfen", "next": "shs_city_1", "karma": 2 }
+            { "text": "Mit Iron Man und Falcon die Flugbahn der Schurken analysieren", "next": "c3_shs_1", "karma": 2 },
+            { "text": "Mit Thor und Hulk direkt ins Einkaufszentrum stürmen", "next": "c3_shs_2", "karma": -1 },
+            { "text": "Mit Wolverine im Tresorraum nach SHIELD-Ausrüstung suchen", "next": "c3_shs_3", "karma": 1 },
+            { "text": "Mit Silver Surfer die kosmischen Wellen des Fraktals orten", "next": "c3_shs_4", "karma": 3 }
         ]
     },
 
-    "shs_tower_1": {
-        "text": "Im Avengers Tower laufen Systeme im Kreis. JARVIS antwortet, aber nicht konsistent. Iron Man wirkt genervt: 'Das ist kein Hack. Das ist eher... ein Widerspruch.'",
+    "c3_shs_1": {
+        "text": "Iron Man tippt hektisch auf den holografischen Holo-Screens seines Anzugs, während Falcon die Triebwerke checkt. 'Das Fraktal sendet eine wilde Welle aus! Es manipuliert die Schwerkraft im Einkaufszentrum, sodass die Regale schweben!' In diesem Moment bricht ein wichtiges, golden glühendes Stark-Tech-Bauteil aus der Konsole.",
+        "background": "./game_images/background_shs_helicarrier.png",
+        "character": "./game_images/character_shs_ironman.png",
         "choices": [
-            { "text": "System stabilisieren", "next": "shs_core_hint_1", "karma": 2 },
-            { "text": "Daten extrahieren", "next": "shs_item_1", "gain_item": "glitch_protocol" },
-            { "text": "Iron Man folgen", "next": "shs_lab_1" }
+            { "text": "Den Stark-Tech-Fraktal-Dämpfer einstecken", "next": "shs_fractal_dampener", "gain_item": "shs_fractal_dampener" },
+            { "text": "Die Konsole mit Falcons Flügeln manuell überbrücken", "next": "c3_shs_5", "karma": -2 }
         ]
     },
 
-    "shs_asgard_1": {
-        "text": "Thor hoert Stimmen im Himmel. Loki behauptet, er habe nichts damit zu tun – aber niemand glaubt ihm sofort.",
+    "shs_fractal_dampener": {
+        "text": "Du erhältst den Stark-Tech-Fraktal-Dämpfer. Er kann die instabilen Realitäts-Kräfte kosmischer Splitter vorübergehend einfrieren.",
+        "background": "./game_images/background_shs_helicarrier.png",
+        "character": "./game_images/item_shs_dampener.png",
         "choices": [
-            { "text": "Thor unterstuetzen", "next": "shs_asgard_2", "karma": 1 },
-            { "text": "Loki beobachten", "next": "shs_loki_1" },
-            { "text": "Portal untersuchen", "next": "shs_core_hint_1", "karma": -1 }
+            { "text": "Den Dämpfer am Triebwerk des Helicarriers testen", "next": "c3_shs_8" },
+            { "text": "Damit zu Thor und Hulk ins Einkaufszentrum fliegen", "next": "c3_shs_6" }
         ]
     },
 
-    "shs_hydra_1": {
-        "text": "Hydra-Agenten wirken verwirrt. Einige befolgen Befehle, die sich staendig aendern.",
+    "c3_shs_2": {
+        "text": "Thor schwingt seinen Hammer Mjolnir, während Hulk lautstark brüllt und Schaufenster zertrümmert. Doch das Einkaufszentrum ist voller schwebender Spielzeuge und mutierter Kaugummi-Automaten! MODOK schwebt in seinem riesigen Sessel heran und kichert hämisch: 'Ihr hirnlosen Helden! Mit diesem Fraktal werde ich, MODOK, eure alberne Squad intellektuell vernichten!'",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_modok.png",
         "choices": [
-            { "text": "Befragen", "next": "shs_hydra_2", "karma": 1 },
-            { "text": "Konfrontieren", "next": "shs_combat_1", "karma": -1 },
-            { "text": "Beobachten", "next": "shs_core_hint_1" }
+            { "text": "Hulk dabei helfen MODOKS Sessel zu rammen", "next": "c3_shs_6", "karma": 3 },
+            { "text": "Einen abgestürzten, außerirdischen Stark-Tech-Scanner vom Boden aufheben", "next": "shs_shield_tracker", "gain_item": "shs_shield_tracker", "karma": -1 }
         ]
     },
 
-    "shs_city_1": {
-        "text": "Spider-Man hilft Menschen, die ploetzlich durch feste Waende laufen koennen, als waeren sie halb real.",
+    "shs_shield_tracker": {
+        "text": "Du erhältst den SHIELD-Tracker. Er ortet hochenergetische Signaturen von Schurken und Fraktal-Energie im Umkreis.",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/item_shs_tracker.png",
         "choices": [
-            { "text": "Spider-Man helfen", "next": "shs_spidey_1", "karma": 2 },
-            { "text": "Phaenomen untersuchen", "next": "shs_core_hint_1" },
-            { "text": "Weiterziehen", "next": "shs_lab_1", "karma": -1 }
+            { "text": "Mit dem Tracker die genaue Position des Infinity-Fraktals bestimmen", "next": "c3_shs_15" },
+            { "text": "Damit zu Wolverine in den Tresorraum eilen", "next": "c3_shs_12" }
         ]
     },
 
-    "shs_lab_1": {
-        "text": "Bruce Banner erkennt ein Muster: 'Das ist kein Strahlungstyp. Es ist eher eine Systemueberlagerung.'",
+    "c3_shs_3": {
+        "text": "Wolverine fährt seine Krallen aus und durchsucht ungeduldig die Kisten im Shield-Lager des Helicarriers. 'Hier drin ist alles voller glitzerndem Kram! Such nach etwas, das Krämpfe verursacht!' Plötzlich droht eine schwere Stahlbox auf Reptils kostbares Dinosaurier-Fossil zu stürzen.",
+        "background": "./game_images/background_shs_armory.png",
+        "character": "./game_images/character_shs_wolverine.png",
         "choices": [
-            { "text": "Analysieren", "next": "shs_core_hint_1" },
-            { "text": "Abbrechen", "next": "shs_city_2", "karma": -2 }
+            { "text": "Die Stahlbox mit Wolverines Krallen zerschreddern", "next": "c3_shs_7", "karma": -3 },
+            { "text": "Das schwere, goldene Captain-America-Schild rechtzeitig auffangen", "next": "shs_cap_shield", "gain_item": "shs_cap_shield", "karma": 4 }
         ]
     },
 
-    "shs_loki_1": {
-        "text": "Loki laechelt: 'Wenn ich schuld waere, waere es viel eleganter.'",
+    "shs_cap_shield": {
+        "text": "Du fängst das legendäre Vibranium-Schild auf. Es reflektiert jeden Energiestrahl und fängt harte Schläge ab.",
+        "background": "./game_images/background_shs_armory.png",
+        "character": "./game_images/item_shs_shield.png",
         "choices": [
-            { "text": "Glauben", "next": "shs_asgard_2" },
-            { "text": "Misstrauen", "next": "shs_combat_1", "karma": -1 }
+            { "text": "Das Schild nutzen, um die Laser von MODOK abzuwehren", "next": "c3_shs_8" },
+            { "text": "Das Schild zu Iron Man in die Einsatzzentrale bringen", "next": "c3_shs_22" }
         ]
     },
 
-    "shs_asgard_2": {
-        "text": "Thor spuert eine Stoerung im Bifroest-System.",
+    "c3_shs_4": {
+        "text": "Silver Surfer schwebt majestätisch auf seinem Board im Helicarrier-Hangar. 'Die kosmischen Schwingungen dieses Fraktals sind völlig unharmonisch, Kumpel! Aber wenn wir die Energie bündeln, können wir Dooms Lethal Legion stoppen!' Plötzlich mutieren die SHIELD-Sicherheitsroboter durch die Strahlung zu fiesen Klonen.",
+        "background": "./game_images/background_shs_hangar.png",
+        "character": "./game_images/character_shs_surfer.png",
         "choices": [
-            { "text": "Reparieren helfen", "next": "shs_core_hint_1", "karma": 2 },
-            { "text": "Weiter beobachten", "next": "shs_city_2" }
+            { "text": "Den Hangar mit Silver Surfers kosmischen Kräften verteidigen", "next": "c3_shs_11", "karma": 4 },
+            { "text": "Wolverines Hilfe rufen und die Roboter frontal angreifen", "next": "c3_shs_12", "karma": -2 }
         ]
     },
 
-    "shs_hydra_2": {
-        "text": "Hydra spricht von 'fehlenden Befehlen', die sich selbst ersetzen.",
+    "c3_shs_5": {
+        "text": "Der Versuch, die Konsole manuell zu überbrücken, löst einen heftigen Energiestau aus! Die Türen des Ops-Rooms verriegeln sich automatisch und lila Blitze schießen aus den Deckenleuchten. Iron Man verliert kurz den Halt, während Falcon versucht, eine schützende Barriere mit seinen Flügeln zu formen.",
+        "background": "./game_images/background_shs_helicarrier.png",
+        "character": "./game_images/character_shs_ironman.png",
         "choices": [
-            { "text": "Information speichern", "next": "shs_item_2", "gain_item": "hydra_signal_map" },
-            { "text": "Zurueckziehen", "next": "shs_city_2" }
+            { "text": "Thor rufen, um die Tür mit Mjolnir einzuschlagen", "next": "c3_shs_13", "karma": 3 },
+            { "text": "Iron Man die Notfall-Überbrückung erklären", "next": "c3_shs_14", "karma": 5 }
         ]
     },
 
-    "shs_spidey_1": {
-        "text": "Spider-Man: 'Das fuehlt sich an wie mein Spider-Sense… aber ueberall gleichzeitig.'",
+    "c3_shs_6": {
+        "text": "MODOK feuert einen gigantischen Psycho-Strahl aus seiner Stirn und schleudert Thor mitten in die Schaufenster. Abominable nutzt die Verwirrung, schnappt sich den Infinity-Splitter und grinst dreckig. MODOK lacht laut: 'Die Super Hero Squad ist heute super-hilflos!'",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_modok.png",
         "choices": [
-            { "text": "Koordinieren", "next": "shs_core_hint_1", "karma": 2 },
-            { "text": "Alleine handeln", "next": "shs_city_2", "karma": -1 }
+            { "text": "Den Fraktal-Dämpfer nutzen, um MODOKS Sessel lahmzulegen", "next": "c3_shs_26", "required_item": "shs_fractal_dampener" },
+            { "text": "Thor und Hulk decken und einen wütenden Gegenangriff starten", "next": "c3_shs_13", "karma": -4 }
         ]
     },
 
-    "shs_city_2": {
-        "text": "Die Stadt beginnt leicht zu flackern, aber niemand ausser den Helden scheint es vollstaendig zu bemerken.",
+    "c3_shs_7": {
+        "text": "Wolverines Krallen zertrümmern die Box, lösen aber ein SHIELD-Sicherheitssystem aus! Kaltes Löschgas flutet den Tresorraum und blockiert die Sicht. Hulk stürzt plötzlich durch die Wand, verwechselt Wolverine mit einem Schurken und fängt an zu toben.",
+        "background": "./game_images/background_shs_armory.png",
+        "character": "./game_images/character_shs_wolverine.png",
         "choices": [
-            { "text": "Weiter untersuchen", "next": "shs_core_hint_1" }
+            { "text": "Auf Hulks Rücken springen und versuchen ihn zu beruhigen", "next": "c3_shs_15", "karma": -2 },
+            { "text": "Die restliche Ausrüstung trotz des Gases sichern", "next": "c3_shs_13", "karma": 4 }
         ]
     },
 
-    "shs_combat_1": {
-        "text": "Eine unbekannte Einheit greift kurz an und verschwindet wieder, bevor sie identifiziert werden kann.",
+    "c3_shs_8": {
+        "text": "MODOK und Abominable aktivieren das Fraktal mitten im Einkaufszentrum! Ein riesiger, bunter Energiesturm droht, das gesamte Gebäude in die Luft zu jagen und in eine riesige Doom-Statue zu verwandeln. Iron Man fliegt mutig voran: 'Squad, formiert euch! Helden sterben nie!'",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_ironman.png",
         "choices": [
-            { "text": "Verfolgen", "next": "shs_core_hint_1" },
-            { "text": "Abbrechen", "next": "shs_city_2", "karma": -2 }
+            { "text": "Das Fraktal mit dem Fraktal-Dämpfer einfrieren", "next": "c3_shs_30", "required_item": "shs_fractal_dampener" },
+            { "text": "Die Energiestrahlen mit Captain Americas Schild reflektieren", "next": "c3_shs_30", "required_item": "shs_cap_shield" }
         ]
     },
 
-    "shs_core_hint_1": {
-        "text": "Reed Richards entdeckt eine Koordinate unter der Stadt, die Signale aller Realitaetsbereiche synchronisiert.",
+    "c3_shs_11": {
+        "text": "Silver Surfer kanalisiert die kosmische Energie! Die mutierten Roboter explodieren in bunten Funken, doch die Belastung ist zu groß für den Hangar. Die Triebwerksplattform fängt an zu brennen und raucht heftig.",
+        "background": "./game_images/background_shs_hangar.png",
+        "character": "./game_images/character_shs_surfer.png",
         "choices": [
-            { "text": "Koordinate untersuchen", "next": "shs_core_1" },
-            { "text": "Team informieren", "next": "shs_team_1", "karma": 2 },
-            { "text": "Alleine gehen", "next": "shs_core_1", "karma": -1 }
+            { "text": "Den Brand mit Hulks gewaltigem Wind-Klatsch löschen", "next": "c3_shs_28", "karma": 4 },
+            { "text": "Den brennenden Bereich abkoppeln und MODOK jagen", "next": "c3_shs_27", "karma": -5 }
         ]
     },
 
-    "shs_item_1": {
-        "text": "Das Glitch-Protokoll enthaelt fragmentierte Befehle aus mehreren Dimensionen.",
+    "c3_shs_12": {
+        "text": "Ihr erreicht den Tresorraum, doch Dooms fiese Doombots haben das SHIELD-Lager bereits besetzt. Sie scannen nach Waffen. Wolverine knurrt wütend, während MODOKS Stimme über die Lautsprecher dröhnt.",
+        "background": "./game_images/background_shs_armory.png",
+        "character": "./game_images/character_shs_wolverine.png",
         "choices": [
-            { "text": "Nutzen", "next": "shs_core_hint_1", "gain_item": "protocol_key" }
+            { "text": "Die Doombots mit dem SHIELD-Tracker hacken", "next": "c3_shs_26", "required_item": "shs_shield_tracker" },
+            { "text": "In den direkten, wilden Nahkampf übergehen", "next": "c3_shs_13", "karma": -4 }
         ]
     },
 
-    "shs_item_2": {
-        "text": "Die Signalkarte zeigt sich nur teilweise stabil.",
+    "c3_shs_13": {
+        "text": "Der übereilte Angriff schlägt fehl! Die Waffen der Squad verlieren ihre Energie und die Schurken kesseln euch ein. Doom lacht triumphierend auf den Bildschirmen, doch plötzlich bricht Thor mit einem lauten 'HERO UP!' durch das Glasdach, um euch rauszuhauen!",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_ironman.png",
         "choices": [
-            { "text": "Speichern", "next": "shs_core_hint_1", "gain_item": "signal_fragment" }
+            { "text": "Thors mächtigen Blitzeinschlag unterstützen", "next": "c3_shs_28", "karma": 3 },
+            { "text": "Die Verwirrung nutzen, um MODOK das Fraktal zu klauen", "next": "c3_shs_27", "karma": -1 }
         ]
     },
 
-    "shs_team_1": {
-        "text": "Captain America entscheidet vorsichtig zu handeln: 'Wir wissen zu wenig.'",
+    "c3_shs_14": {
+        "text": "Iron Man behält die Nerven und reaktiviert die Systeme. Er projiziert eine Karte des Einkaufszentrums, die MODOKS Versteck direkt hinter der Spielwarenabteilung offenbart. Falcon fliegt begeistert los!",
+        "background": "./game_images/background_shs_helicarrier.png",
+        "character": "./game_images/character_shs_ironman.png",
         "choices": [
-            { "text": "Zustimmen", "next": "shs_core_1", "karma": 2 },
-            { "text": "Widersprechen", "next": "shs_core_1", "karma": -2 }
+            { "text": "MODOKS Sessel mit dem Fraktal-Dämpfer ausschalten", "next": "c3_shs_30", "required_item": "shs_fractal_dampener" },
+            { "text": "Den Sessel mit Wolverines Krallen zerfetzen", "next": "c3_shs_27", "karma": -3 }
         ]
     },
 
-    "shs_core_1": {
-        "text": "Unter Manhattan befindet sich ein kolossaler Synchronisationskern aus unbekannter Technologie.",
+    "c3_shs_15": {
+        "text": "Mithilfe des Trackers findet ihr das Fraktal: Es steckt direkt in MODOKS Stirn-Apparatur! Doch Abominable bewacht seinen Boss wütend mit zwei riesigen Spielzeug-Säulen in den Händen.",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_modok.png",
         "choices": [
-            { "text": "Annaehern", "next": "shs_final_1" },
-            { "text": "Vorbereiten", "next": "shs_final_1", "karma": 1 }
+            { "text": "MODOKS Frequenz mit dem SHIELD-Tracker stören", "next": "c3_shs_30", "required_item": "shs_shield_tracker" },
+            { "text": "Hulk das Fraktal mit roher Gewalt entreißen lassen", "next": "c3_shs_13", "karma": 2 }
         ]
     },
 
-    "shs_final_1": {
-        "text": "Der Kern reagiert auf die Anwesenheit der Helden. Mehrere Realitaetslayer beginnen sich zu ueberlagern.",
+    "c3_shs_22": {
+        "text": "Du bringst das Vibranium-Schild zu Iron Man. Als er es mit seiner Rüstung koppelt, entsteht ein riesiger Energie-Reflektor! Er fliegt zurück ins Einkaufszentrum und fängt MODOKS Psycho-Blitze perfekt ab.",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_ironman.png",
         "choices": [
-            { "text": "Stabilisieren versuchen", "next": "shs_end_1", "karma": 2 },
-            { "text": "Beobachten", "next": "shs_end_1", "karma": -1 }
+            { "text": "MODOK mit dem reflektierten Strahl wegpusten", "next": "c3_shs_30", "karma": 5 },
+            { "text": "Das Schild nutzen, um Abominable zu stoppen", "next": "c3_shs_13", "karma": -1 }
         ]
     },
 
-    "shs_end_1": {
-        "text": "Der Synchronisationskern aktiviert sich vollstaendig. Die Realitaet der Stadt beginnt sich neu zu strukturieren. uebergang zu Kapitel 4 oeffnet sich.",
+    "c3_shs_26": {
+        "text": "Durch den cleveren Einsatz deiner Gegenstände bricht MODOKS Energie-Barriere zusammen. Das Fraktal verliert seine lila Strahlung und Abominable rutscht tollpatschig auf schwebenden Skateboards aus.",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_modok.png",
         "choices": [
-            { "text": "Kapitel 4 starten", "next": "end" }
+            { "text": "Den finalen Rettungsschlag mit der Squad ausführen", "next": "c3_shs_30" },
+            { "text": "MODOK und Abominable verspotten", "next": "c3_shs_27", "karma": 2 }
+        ]
+    },
+
+    "c3_shs_27": {
+        "text": "Die Apparatur explodiert in einer riesigen, bunten Konfetti-Welle! MODOK und Abominable fliehen jammernd in einer kleinen Kapsel zu Doktor Doom. Das Einkaufszentrum ist zwar gerettet, liegt aber voller Spielzeugtrümmer und die Squad muss aufräumen.",
+        "background": "./game_images/background_shs_mall.png",
+        "choices": [
+            { "text": "end", "next": "end" }
+        ]
+    },
+
+    "c3_shs_28": {
+        "text": "Iron Man koppelt die Energie von Thors Blitzen mit seinem Unibeam und formt eine gewaltige Lichtwelle! Zusammen mit Hulk, Wolverine und Falcon stürmen sie die feindliche Position.",
+        "background": "./game_images/background_shs_mall.png",
+        "character": "./game_images/character_shs_ironman.png",
+        "choices": [
+            { "text": "Den finalen Schlag gegen MODOK führen", "next": "c3_shs_30" }
+        ]
+    },
+
+    "c3_shs_30": {
+        "text": "Mit einem bombastischen Finale zerschmettert die Super Hero Squad – getragen von Iron Mans Führung, Thors Blitzen, Hulks Smash-Kraft und dem präzisen Einsatz des Fraktal-Dämpfers – die Lethal Legion. Das Infinity-Fraktal zerspringt in harmlose, funkelnde Glitzerpartikel, die wie Konfetti zu Boden fallen. Das Einkaufszentrum erstrahlt wieder in sicherem Licht. Iron Man hebt den Daumen: 'Gute Arbeit, Squad! Zeit für eine Sieges-Pizza!' Hulk schnappt sich ein riesiges Stück, während Wolverine grinst und die Helden im Chor rufen: 'HERO UP!'",
+        "background": "./game_images/background_shs_mall.png",
+        "choices": [
+            { "text": "Ende", "next": "end" }
         ]
     },
     "c3_tdi_start": {
-        "text": "Die Camper werden mitten in der Nacht geweckt. Chris McLean kuendigt eine spontane neue Herausforderung an, ohne zu erklaeren, worum es wirklich geht. Chef Hatchet laedt alle in Boote am Pier, waehrend einige Kandidaten bereits misstrauisch sind.",
+        "text": "Es ist Mitternacht im Camp Wawanakwa. Chris McLean steht grinsend am Lagerfeuer und verkündet die nächste sadistische Herausforderung. 'Die heutige Challenge ist ein nächtlicher Orientierungslauf durch den verbotenen Wald von Wawanakwa! Aber aufgepasst: Es gibt Gerüchte über ein mutiertes Riesen-Wildschwein und eine verlorene, goldene Chris-Statue, die unschätzbare Immunität verleiht!' Gwen und Duncan checken genervt ihre Ausrüstung, während Heather bereits einen fiesen Plan schmiedet, und Owen panisch nach seinen Marshmallows sucht.",
+        "background": "./game_images/background_tdi_campfire.png",
         "choices": [
-            { "text": "Chris direkt befragen", "next": "tdi_1", "karma": 1 },
-            { "text": "Mit Gwen sprechen", "next": "tdi_2" },
-            { "text": "Mit Duncan mitgehen", "next": "tdi_3", "karma": -1 },
-            { "text": "Heather beobachten", "next": "tdi_4" },
-            { "text": "Ein Boot nehmen ohne Fragen", "next": "tdi_5", "karma": -2 }
+            { "text": "Mit Gwen und Trent der sicheren Kompass-Route folgen", "next": "c3_tdi_1", "karma": 2 },
+            { "text": "Mit Duncan und Geoff eine verbotene Abkürzung durch die Höhlen nehmen", "next": "c3_tdi_2", "karma": -1 },
+            { "text": "Mit Leshawna und Owen Heathers verdächtige Spuren verfolgen", "next": "c3_tdi_3", "karma": 1 },
+            { "text": "Chef Hatchets Küche nach geheimen Vorräten und Werkzeugen durchsuchen", "next": "c3_tdi_4", "karma": 3 }
         ]
     },
 
-    "tdi_1": {
-        "text": "Chris grinst: 'Je weniger ihr wisst, desto besser laeuft die Show.'",
+    "c3_tdi_1": {
+        "text": "Gwen starrt genervt auf die Karte, während Trent seine Gitarre schultert. 'Laut Chris' Notizen führt dieser Pfad direkt zur Lichtung der Immunität. Aber der Kompass dreht wegen einer magnetischen Störung völlig durch!' In diesem Moment bricht ein wichtiges, nützliches Werkzeug aus Gwens kaputter Taschenlampe.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Nachhaken", "next": "tdi_6", "karma": 1 },
-            { "text": "Zurueckziehen", "next": "tdi_5", "karma": -1 }
+            { "text": "Das modifizierte Taschenlampen-Multitool einstecken", "next": "tdi_multitool", "gain_item": "tdi_multitool" },
+            { "text": "Die Taschenlampe liegen lassen und im Mondlicht weiterwandern", "next": "c3_tdi_5", "karma": -2 }
         ]
     },
 
-    "tdi_2": {
-        "text": "Gwen: 'Das fuehlt sich nicht wie eine normale Challenge an... irgendwas ist off.'",
+    "tdi_multitool": {
+        "text": "Du erhältst das Wawanakwa-Multitool. Es enthält einen Schraubenzieher, eine Drahtschere und eine extrem helle Notleuchte.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/item_tdi_multitool.png",
         "choices": [
-            { "text": "Zustimmen und vorsichtig sein", "next": "tdi_7", "karma": 2 },
-            { "text": "Ignorieren und teilnehmen", "next": "tdi_5" },
-            { "text": "Andere warnen", "next": "tdi_6", "karma": 1 }
+            { "text": "Das Multitool an den alten Stromkästen im Wald testen", "next": "c3_tdi_8" },
+            { "text": "Damit zurück zu Duncan an die Klippe rennen", "next": "c3_tdi_6" }
         ]
     },
 
-    "tdi_3": {
-        "text": "Duncan: 'Wenn Chris uns nicht sagt, was los ist, ist es wahrscheinlich illegal.'",
+    "c3_tdi_2": {
+        "text": "Duncan knackt mit einer Haarnadel das Vorhängeschloss eines alten Minenschachts, während Geoff laut juchzt. Doch die Höhle ist voller aggressiver Fledermäuse und klebrigem Schleim! Heather tritt plötzlich aus einem Seitengang hervor und hält die echte, goldene Chris-Statue hoch. 'Ihr Looser kommt zu spät! Diese Immunität gehört mir!'",
+        "background": "./game_images/background_tdi_cave.png",
+        "character": "./game_images/character_tdi_heather.png",
         "choices": [
-            { "text": "Mitziehen", "next": "tdi_8" },
-            { "text": "Abstand halten", "next": "tdi_7", "karma": 1 }
+            { "text": "Duncan dabei helfen, Heather die Statue abzujagen", "next": "c3_tdi_6", "karma": 3 },
+            { "text": "Einen abgerissenen, offiziellen Camp-Lageplan vom Boden aufheben", "next": "tdi_camp_map", "gain_item": "tdi_camp_map", "karma": -1 }
         ]
     },
 
-    "tdi_4": {
-        "text": "Heather beobachtet die Gruppe, als wuerde sie bereits eine Strategie planen.",
+    "tdi_camp_map": {
+        "text": "Du erhältst den geheimen Camp-Lageplan. Er zeigt alle von Chef Hatchet installierten Fallen und geheimen Tunnel.",
+        "background": "./game_images/background_tdi_cave.png",
+        "character": "./game_images/item_tdi_map.png",
         "choices": [
-            { "text": "Konfrontieren", "next": "tdi_9", "karma": -1 },
-            { "text": "Beobachten zurueck", "next": "tdi_8" }
+            { "text": "Mit dem Plan den direkten Weg zur Marshmallow-Lichtung finden", "next": "c3_tdi_15" },
+            { "text": "Damit zu Leshawna und Owen in den Wald flüchten", "next": "c3_tdi_12" }
         ]
     },
 
-    "tdi_5": {
-        "text": "Die Boote fahren in Nebel hinaus. Die Insel ist nicht wie erwartet sichtbar.",
+    "c3_tdi_3": {
+        "text": "Leshawna stemmt die Hände in die Hüften und durchsucht wütend das Unterholz. 'Diese Ziege Heather führt uns doch im Kreis!' Owen jammert lautstark im Hintergrund, weil er schrecklichen Hunger hat. Plötzlich droht ein riesiger, morscher Baumstamm auf Lindsay und ihren teuren Kosmetikkoffer zu stürzen.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_leshawna.png",
         "choices": [
-            { "text": "Weiterfahren", "next": "tdi_beach_1" }
+            { "text": "Den Baumstamm mit vereinten Kräften wegrammen", "next": "c3_tdi_7", "karma": -3 },
+            { "text": "Chef Hatchets schwere, vergessene Bärenfalle rechtzeitig zuschnappen lassen", "next": "tdi_bear_trap", "gain_item": "tdi_bear_trap", "karma": 4 }
         ]
     },
 
-    "tdi_6": {
-        "text": "Chris wechselt das Thema und laechelt zu breit.",
+    "tdi_bear_trap": {
+        "text": "Du erhältst die rostige Bärenfalle. Sie schnappt mit enormer Wucht zu und kann unvorsichtige Kreaturen bombenfest fixieren.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/item_tdi_trap.png",
         "choices": [
-            { "text": "Akzeptieren", "next": "tdi_5" },
-            { "text": "Weiter Druck machen", "next": "tdi_beach_1", "karma": 1 }
+            { "text": "Die Falle auf Heathers Fluchtweg platzieren", "next": "c3_tdi_8" },
+            { "text": "Die Falle zu Gwen bringen, um das Wildschwein abzuwehren", "next": "c3_tdi_22" }
         ]
     },
 
-    "tdi_7": {
-        "text": "Die Gruppe beginnt sich zu spalten, bevor die Challenge ueberhaupt erklaert wurde.",
+    "c3_tdi_4": {
+        "text": "Chef Hatchet steht im klobigen Tarnanzug in der Küche und rührt in einem Topf mit undefinierbarem, grauem Schleim. 'Wer schleicht hier mitten in der Nacht rum?!' Bevor er dich erwischt, schnappst du dir ein Tauschobjekt vom Tresen, während draußen das mutierte Riesen-Wildschwein laut grunzend den Zaun durchbricht.",
+        "background": "./game_images/background_tdi_kitchen.png",
+        "character": "./game_images/character_tdi_chef.png",
         "choices": [
-            { "text": "Gruppen beobachten", "next": "tdi_beach_1" }
+            { "text": "Die Küche mit Chef Hatchets Suppenlöffel gegen das Schwein verteidigen", "next": "c3_tdi_11", "karma": 4 },
+            { "text": "Gwen um Hilfe rufen und panisch in den Wald rennen", "next": "c3_tdi_12", "karma": -2 }
         ]
     },
 
-    "tdi_8": {
-        "text": "Die Insel taucht ploetzlich auf – aber sie sieht anders aus als sonst.",
+    "c3_tdi_5": {
+        "text": "Ohne Licht stolpert Trent über eine dicke Wurzel und fällt krachend in eine von Chris installierten Schlammgruben! Gwen verliert vor Wut fast die Fassung, während fiese, mechanische Scheinwerfer aus den Bäumen fahren und euch blenden. Heather steht am Rand der Grube und kichert fies.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Anlegen", "next": "tdi_beach_1" }
+            { "text": "Duncan zur Hilfe rufen, damit er ein Seil wirft", "next": "c3_tdi_13", "karma": 3 },
+            { "text": "Gwen die Augen zuhalten und im Schlamm nach einem Hebel suchen", "next": "c3_tdi_14", "karma": 5 }
         ]
     },
 
-    "tdi_9": {
-        "text": "Heather laechelt: 'Du solltest nicht zu viel fragen, wenn du im Spiel bleiben willst.'",
+    "c3_tdi_6": {
+        "text": "Das mutierte Riesen-Wildschwein bricht plötzlich schnaubend durch das Dickicht und schleudert Duncan direkt in ein Dornengebüsch! Heather nutzt die Panik, klettert auf einen Felsen und lacht hysterisch. 'Die Immunität gehört mir, ihr Verlierer!'",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_heather.png",
         "choices": [
-            { "text": "Zurueckziehen", "next": "tdi_5", "karma": -1 },
-            { "text": "Weiter beobachten", "next": "tdi_beach_1" }
+            { "text": "Das Multitool nutzen, um die Scheinwerferkabel kurzzuschließen und Heather zu blenden", "next": "c3_tdi_26", "required_item": "tdi_multitool" },
+            { "text": "Gwen und Duncan zusammentrommeln und das Schwein frontal jagen", "next": "c3_tdi_13", "karma": -4 }
         ]
     },
 
-    "tdi_beach_1": {
-        "text": "Am Strand stehen bereits seltsame Kisten mit Nummern. Chris erklaert nicht, was sie bedeuten.",
+    "c3_tdi_7": {
+        "text": "Euer unüberlegter Stoß rammt den Baumstamm zur Seite, doch er reißt die Absperrung zum giftigen Biber-Teich ein! Stinkendes, grünes Wasser flutet den Pfad und blockiert die Sicht. Owen verwechselt im Chaos ein Gebüsch mit Heathers Versteck und stürzt sich wild hinein.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_leshawna.png",
         "choices": [
-            { "text": "Kiste oeffnen (Nr. 1)", "next": "tdi_item_1" },
-            { "text": "Kiste 2 waehlen", "next": "tdi_item_2" },
-            { "text": "Andere beobachten", "next": "tdi_social_1" }
+            { "text": "Auf Owens Rücken springen und versuchen ihn zu lenken", "next": "c3_tdi_15", "karma": -2 },
+            { "text": "Die goldene Statue trotz des giftigen Wassers suchen", "next": "c3_tdi_13", "karma": 4 }
         ]
     },
 
-    "tdi_item_1": {
-        "text": "Du findest ein improvisiertes Funksystem, das andere Teams abhoeren kann.",
+    "c3_tdi_8": {
+        "text": "Heather und das Wildschwein rasen direkt auf die offizielle Marshmallow-Lichtung zu! Chris McLean wartet dort bereits mit der Schale voller süßer Belohnungen auf den Gewinner der Challenge. Gwen läuft keuchend an vorderster Front: 'Wir lassen Heather nicht gewinnen!'",
+        "background": "./game_images/background_tdi_campfire.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Nutzen", "next": "tdi_social_2", "gain_item": "radio_bug" },
-            { "text": "Ignorieren", "next": "tdi_social_1" }
+            { "text": "Das Scheinwerfer-Terminal mit dem Multitool manipulieren", "next": "c3_tdi_30", "required_item": "tdi_multitool" },
+            { "text": "Heather mit der präzise platzierten Bärenfalle stoppen", "next": "c3_tdi_30", "required_item": "tdi_bear_trap" }
         ]
     },
 
-    "tdi_item_2": {
-        "text": "In der Kiste ist eine Karte der Insel – aber einige Orte sind markiert, die nicht existieren sollten.",
+    "c3_tdi_11": {
+        "text": "Chef Hatchet wirft eine Ladung seines ekligen Fraßes direkt vor das Wildschwein! Die Kreatur stoppt entsetzt, riecht an dem Schleim und flüchtet quiekend vor Ekel tief in den Wald. Die Küche ist gerettet, aber Chef Hatchets Herd explodiert plötzlich mit einer riesigen Rauchwolke.",
+        "background": "./game_images/background_tdi_kitchen.png",
         "choices": [
-            { "text": "Speichern", "next": "tdi_map_use", "gain_item": "false_map" }
+            { "text": "Das Feuer mit Owens gigantischem Atem auspusten", "next": "c3_tdi_28", "karma": 4 },
+            { "text": "Die brennende Küche ignorieren und Heather die Statue klauen", "next": "c3_tdi_27", "karma": -5 }
         ]
     },
 
-    "tdi_social_1": {
-        "text": "Die Camper beginnen sich in Gruppen zu organisieren. Alliances entstehen schnell.",
+    "c3_tdi_12": {
+        "text": "Ihr erreicht Heathers leeres Zelt, doch Chris' gemeine Praktikanten haben überall Stolperdrähte und Farbkanonen installiert. Gwen ballt die Fäuste, während Heathers spöttisches Lachen über die Lautsprecher des Camps dröhnt.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Mit Gwen und Leshawna zusammenarbeiten", "next": "tdi_team_good", "karma": 2 },
-            { "text": "Mit Duncan und Geoff gehen", "next": "tdi_team_risk", "karma": -1 },
-            { "text": "Alleine bleiben", "next": "tdi_alone_1" }
+            { "text": "Die Fallen der Praktikanten mit dem geheimen Lageplan umgehen", "next": "c3_tdi_26", "required_item": "tdi_camp_map" },
+            { "text": "Ignorieren und blind durch das Zeltlager stürmen", "next": "c3_tdi_13", "karma": -4 }
         ]
     },
 
-    "tdi_social_2": {
-        "text": "Du hoerst ein Team ueber eine versteckte Challenge sprechen.",
+    "c3_tdi_13": {
+        "text": "Die Challenge gerät völlig außer Kontrolle! Euer Team tappt mitten in eine Schlammfalle, Heather schnappt sich grinsend die Immunität, und Owen verliert seine gesamten Vorräte an Waschbären. Ihr steht komplett ohne Punkte da, doch plötzlich bricht Leshawna mit einem lauten Kampfschrei durch das Gebüsch, um euch rauszuhauen!",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_leshawna.png",
         "choices": [
-            { "text": "Abhoeren weiter", "next": "tdi_strategy_1" },
-            { "text": "Kontakt abbrechen", "next": "tdi_alone_1", "karma": -1 }
+            { "text": "Leshawnas wütenden Gegenangriff unterstützen", "next": "c3_tdi_28", "karma": 3 },
+            { "text": "Die Verwirrung nutzen, um Heather heimlich die Statue zu stibitzen", "next": "c3_tdi_27", "karma": -1 }
         ]
     },
 
-    "tdi_strategy_1": {
-        "text": "Es gibt offenbar eine zweite, geheime Wertung im Spiel.",
+    "c3_tdi_14": {
+        "text": "Gwen behält die Nerven und findet einen versteckten Sicherungskasten. Sie reißt die Klappe auf und offenbart das komplizierte Kabelsystem des Camps. Trent leuchtet ihr begeistert mit einem Streichholz.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Information teilen", "next": "tdi_team_good", "karma": 2 },
-            { "text": "Fuer sich behalten", "next": "tdi_team_risk" }
+            { "text": "Das Kabelsystem mit dem Multitool manipulieren", "next": "c3_tdi_30", "required_item": "tdi_multitool" },
+            { "text": "Die Kabel mit Duncans Taschenmesser blind durchtrennen", "next": "c3_tdi_27", "karma": -3 }
         ]
     },
 
-    "tdi_team_good": {
-        "text": "Die Gruppe arbeitet stabil, aber andere Teams beginnen euch zu misstrauen.",
+    "c3_tdi_15": {
+        "text": "Mithilfe des Lageplans findet ihr Heathers geheimes Versteck: Ein hohler Baumstumpf direkt hinter dem Plumpsklo! Doch Owen bewacht den Pfad unabsichtlich, weil er einen riesigen Bären für einen verkleideten Chris hält.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_leshawna.png",
         "choices": [
-            { "text": "Weiter kooperieren", "next": "tdi_challenge_1" }
+            { "text": "Den Bären auf Heathers Versteck lenken unter Nutzung des Lageplans", "next": "c3_tdi_30", "required_item": "tdi_camp_map" },
+            { "text": "Owen die Statue mit roher Gewalt entreißen", "next": "c3_tdi_13", "karma": 2 }
         ]
     },
 
-    "tdi_team_risk": {
-        "text": "Die Allianz ist effektiv, aber intern instabil.",
+    "c3_tdi_22": {
+        "text": "Du bringst die Bärenfalle zu Gwen. Als sie das schwere Eisenteil auf dem engen Wildschweinfad platziert, entsteht eine perfekte Barriere! Das Riesen-Schwein rennt direkt hinein, jault laut auf und gibt den Weg zur Lichtung frei.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Risiko eingehen", "next": "tdi_challenge_1", "karma": -1 }
+            { "text": "An dem gefangenen Schwein vorbeisprinten", "next": "c3_tdi_30", "karma": 5 },
+            { "text": "Heather die Falle als Drohung zeigen", "next": "c3_tdi_13", "karma": -1 }
         ]
     },
 
-    "tdi_alone_1": {
-        "text": "Alleine bist du schwerer zu verfolgen, aber auch leichter zu isolieren.",
+    "c3_tdi_26": {
+        "text": "Durch den cleveren Einsatz deiner Gegenstände bricht Heathers fieser Vorsprung zusammen. Die Praktikanten-Fallen gehen nach hinten los, Heather rutscht tollpatschig auf nassem Laub aus und die goldene Statue fliegt im hohen Bogen durch die Luft.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_heather.png",
         "choices": [
-            { "text": "Weiter erkunden", "next": "tdi_challenge_1" }
+            { "text": "Die fliegende Statue fangen und ins Ziel rennen", "next": "c3_tdi_30" },
+            { "text": "Heather im Schlamm liegen lassen", "next": "c3_tdi_27", "karma": 2 }
         ]
     },
 
-    "tdi_map_use": {
-        "text": "Die Karte zeigt Routen, die niemand offiziell erwaehnt hat.",
+    "c3_tdi_27": {
+        "text": "Die Challenge endet in einer absoluten Katastrophe! Heathers Sabotage-Akt bringt die hölzerne Aussichtsplattform zum Einsturz. Chris lacht hysterisch und bricht die Challenge ab. Niemand bekommt Immunität, das Camp ist völlig demoliert, und alle schlafen völlig verdreckt und wütend in ihren Hütten.",
+        "background": "./game_images/background_tdi_campfire.png",
         "choices": [
-            { "text": "Route nutzen", "next": "tdi_challenge_1" }
+            { "text": "Ende", "next": "end" }
         ]
     },
 
-    "tdi_challenge_1": {
-        "text": "Chris kuendigt eine erste echte Challenge an: ueberleben im ‚verbotenen Wald‘ der Insel.",
+    "c3_tdi_28": {
+        "text": "Gwen koppelt ihre Kräfte mit Leshawna und Duncan. Gemeinsam starten die drei Außenseiter einen koordinierten Sturmlauf durch das Dickicht, hängen die Praktikanten ab und jagen Heather bis ans Limit.",
+        "background": "./game_images/background_tdi_forest.png",
+        "character": "./game_images/character_tdi_gwen.png",
         "choices": [
-            { "text": "Vorbereiten", "next": "tdi_forest_1" },
-            { "text": "Sofort starten", "next": "tdi_forest_1", "karma": -1 }
+            { "text": "Den finalen Sprint gegen Heather gewinnen", "next": "c3_tdi_30" }
         ]
     },
 
-    "tdi_forest_1": {
-        "text": "Der Wald veraendert sich leicht, wenn niemand hinsieht. Geraeusche wiederholen sich falsch.",
+    "c3_tdi_30": {
+        "text": "Mit einem genialen Finale gewinnt das Team die Challenge! Getragen von Gwens Biss, Duncans Taktik und dem präzisen Einsatz des Wawanakwa-Multitools schnappt ihr Heather die goldene Chris-Statue haarscharf vor der Nase weg. Chris McLean klatscht begeistert in die Hände: 'Ein episches Drama! Genau das wollen die Einschaltquoten sehen!' Heather kocht vor Wut, während Owen jubelnd die gesamte Schale voller Marshmallows verschlingt. Gwen lächelt dich dankbar an, während Duncan dir anerkennend auf die Schulter klopft: 'Gute Arbeit, Kumpel. Heute fliegt keiner von uns nach Hause!'",
+        "background": "./game_images/background_tdi_campfire.png",
         "choices": [
-            { "text": "Weitergehen", "next": "tdi_forest_2" }
+            { "text": "Ende", "next": "end" }
         ]
     },
 
-    "tdi_forest_2": {
-        "text": "Ein verlorenes Camp-Equipment erscheint ploetzlich an einem falschen Ort.",
-        "choices": [
-            { "text": "Untersuchen", "next": "tdi_final_setup" },
-            { "text": "Ignorieren", "next": "tdi_final_setup", "karma": -1 }
-        ]
-    },
-
-    "tdi_final_setup": {
-        "text": "Chris: 'Die erste richtige Eliminierung steht kurz bevor... aber diesmal ist etwas anders.'",
-        "choices": [
-            { "text": "Vorbereiten", "next": "tdi_end_1", "karma": 1 },
-            { "text": "Abwarten", "next": "tdi_end_1" }
-        ]
-    },
-
-    "tdi_end_1": {
-        "text": "Die Insel scheint selbst Teil des Spiels zu werden. uebergang zu Kapitel 4 wird aktiviert.",
-        "choices": [
-            { "text": "Kapitel 4 starten", "next": "end" }
-        ]
-    },
     "ending_good": {
         "text": "Phaenomenal! Dein hohes Karma hat die Portale stabilisiert. Die Dimensionen harmonieren wieder miteinander und das Cartoon-Universum erstrahlt in sicherem, goldenem Glanz. Du bist ein wahrer Weltenwaechter!",
-        "background": "./images/ending_good_bg.png",
+        "background": "./game_images/ending_good_bg.png",
         "choices": [
             { "text": "Spiel neustarten", "next": "execute_reset" }
         ]
     },
     "ending_neutral": {
         "text": "Gute Arbeit. Die Welten kollidieren nicht mehr, aber die Portale bleiben instabil. Es herrscht ein bruechiger Frieden im Cartoon-Universum, der staendige Wachsamkeit erfordert.",
-        "background": "./images/ending_neutral_bg.png",
+        "background": "./game_images/ending_neutral_bg.png",
         "choices": [
             { "text": "Spiel neustarten", "next": "execute_reset" }
         ]
     },
     "ending_evil": {
         "text": "Das pure Chaos! Deine skrupellosen Entscheidungen haben den Nexus korrumpiert. Die Boesewichte haben die Macht uebernommen, Realitaeten zerfallen und das Cartoon-Universum versinkt in ewiger Dunkelheit.",
-        "background": "./images/ending_evil_bg.png",
+        "background": "./game_images/ending_evil_bg.png",
         "choices": [
             { "text": "Es noch einmal versuchen", "next": "execute_reset" }
         ]
     },
     "ending_chaos": {
-        "text": "Weder gut noch boese – deine unentschlossenen Taten haben ein unberechenbares Dimensions-Chaos ausgeloest. Die Welten sind wild miteinander verschmolzen. Ein voellig neues, verruecktes Universum ist entstanden.",
-        "background": "./images/ending_chaos_bg.png",
+        "text": "Das absolute Chaos! Deine Entscheidungen haben die Portale völlig destabilisiert. Die Dimensionen kollidieren unkontrollierbar, Charaktere und Orte vermischen sich zu einem surrealen Alptraum. Das Cartoon-Universum ist in einem endlosen Strudel aus Wahnsinn gefangen.",
+        "background": "./game_images/ending_chaos_bg.png",
         "choices": [
             { "text": "Anderen Pfad waehlen", "next": "execute_reset" }
         ]
-    },
-
-    "example": {
-        "text": "Beispiel Dialog",
-        "background": "./game_images/background.png",
-        "character": "./game_images/character.png",
-        "choices": [
-            { "text": "Man bekommt ein Item", "next": "exampleA", "gain_item": "example_item", "karma": 1 },
-            { "text": "Man braucht ein Item", "next": "exampleB", "require_item": "example_item", "karma": -1 }
-        ]
-    },
+    }
 };
